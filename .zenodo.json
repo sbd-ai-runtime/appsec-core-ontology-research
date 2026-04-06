@@ -1,6 +1,6 @@
 {
   "title": "Security by Design: Ontology-Grounded AI Runtime Research Release v1.0.0",
-  "version": "v1.0.0",
+  "version": "v1.0.3",
   "upload_type": "software",
   "access_right": "open",
   "license": "cc-by-4.0",
@@ -8,8 +8,10 @@
   "creators": [
     {
       "name": "Farinha, Pedro",
-      "affiliation": "Independent Researcher",
-      "type": "ProjectMember"
+      "affiliation": "Independent Researcher / Shiftleft - Secure Software Engineering, Lda.",
+      "type": "ProjectMember",
+      "openaire_id": "034131922484888",
+      "orcid": "0009-0001-0569-9020"
     }
   ],
   "contributors": [
