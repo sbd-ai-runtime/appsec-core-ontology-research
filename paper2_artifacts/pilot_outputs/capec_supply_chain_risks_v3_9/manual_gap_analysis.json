@@ -1,0 +1,528 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "capec_supply_chain_risks_v3_9",
+  "status": "pre_threat_surface_comparison_gap_read",
+  "summary": {
+    "items": 14,
+    "counts_by_coverage_status": {
+      "context_only": 1,
+      "covered": 5,
+      "partial": 5,
+      "indeterminate": 2,
+      "out_of_scope": 1
+    }
+  },
+  "notes": [
+    "manual_gap is intentionally deferred until direct comparison against the published manual threat surfaces.",
+    "covered here means the pilot currently appears strongly supported by the manual/core line, not that direct published threat-surface comparison is already complete."
+  ],
+  "items": [
+    {
+      "source_object_id": "CAPEC-VIEW-683",
+      "source_title": "CAPEC VIEW: Supply Chain Risks",
+      "normalization_status": "context_only",
+      "coverage_status": "context_only",
+      "comparison_readiness": "context_only",
+      "primary_core_anchor": null,
+      "secondary_core_anchors": [],
+      "nearest_core_anchors": [],
+      "semantic_tags": [],
+      "rationale": "The CAPEC supply-chain view is only contextual framing for the pilot and should not be treated as a discrete manual-gap candidate."
+    },
+    {
+      "source_object_id": "CAPEC-185",
+      "source_title": "CAPEC-185: Malicious Software Download",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-003",
+        "name": "Controlled Dependency And Image Sources",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-002",
+          "name": "Dependency Risk Evaluation And Policy Gating",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-001",
+          "name": "Dependency Inventory And SBOM Traceability",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        }
+      ],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "malicious_download",
+        "origin_validation",
+        "dependency_source_control"
+      ],
+      "rationale": "Malicious software download is already strongly adjacent to origin-control, allowlist and malicious-repository threat coverage in the manual."
+    },
+    {
+      "source_object_id": "CAPEC-186",
+      "source_title": "CAPEC-186: Malicious Software Update",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-RPR-002",
+        "name": "Verified Artifact Promotion",
+        "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-005",
+          "name": "Tested Rollback Readiness And Reversibility",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "corrective"
+        }
+      ],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "malicious_update",
+        "verified_promotion",
+        "rollback_readiness"
+      ],
+      "rationale": "Malicious software update appears strongly covered by signed provenance, verified promotion and safe deployment semantics."
+    },
+    {
+      "source_object_id": "CAPEC-206",
+      "source_title": "CAPEC-206: Signing Malicious Code",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-006",
+        "name": "Artifact Attestation And Provenance Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-002",
+          "name": "Verified Artifact Promotion",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-004",
+          "name": "Reproducible Security Test Evidence And Build Traceability",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        }
+      ],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "artifact_signing",
+        "provenance",
+        "verified_promotion"
+      ],
+      "rationale": "The manual already publishes signed artifact, provenance and verified promotion semantics strongly enough that this should enter threat-surface comparison as covered-until-proven-otherwise."
+    },
+    {
+      "source_object_id": "CAPEC-443",
+      "source_title": "CAPEC-443: Malicious Logic Inserted Into Product by Authorized Developer",
+      "normalization_status": "appsec_core_gap",
+      "coverage_status": "partial",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "primary_core_anchor": null,
+      "secondary_core_anchors": [],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TMR-004",
+          "name": "Threat Disposition, Risk Acceptance And Ownership",
+          "scope": "threat_modeling_risk_disposition_and_mitigation_traceability",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-IAT-001",
+          "name": "Authentication Strength And Identity Assurance",
+          "scope": "identity_access_and_session_trust",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ],
+      "semantic_tags": [
+        "insider_change_integrity",
+        "authorized_developer_abuse"
+      ],
+      "rationale": "Insider malicious insertion by an authorized developer has adjacent review, branch-protection and approved-commit semantics, but the current landing is not clean enough to assert direct published threat-surface support before comparison."
+    },
+    {
+      "source_object_id": "CAPEC-445",
+      "source_title": "CAPEC-445: Malicious Logic Insertion into Product Software via Configuration Management Manipulation",
+      "normalization_status": "mapped",
+      "coverage_status": "partial",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-002",
+          "name": "Verified Artifact Promotion",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-004",
+          "name": "Technical Segmentation And Sensitive Domain Isolation",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "config_management_integrity",
+        "build_tampering",
+        "update_tampering"
+      ],
+      "rationale": "Configuration-management manipulation appears strongly adjacent to pipeline-integrity, forged-build and unauthenticated-version threats, but the current row packaging is not yet one exact match."
+    },
+    {
+      "source_object_id": "CAPEC-446",
+      "source_title": "CAPEC-446: Malicious Logic Insertion into Product via Inclusion of Third-Party Component",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-001",
+        "name": "Dependency Inventory And SBOM Traceability",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "governance"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-002",
+          "name": "Dependency Risk Evaluation And Policy Gating",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-003",
+          "name": "Controlled Dependency And Image Sources",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "third_party_component_risk",
+        "dependency_integrity",
+        "origin_control"
+      ],
+      "rationale": "Malicious third-party component inclusion is already strongly represented through dependency-origin, malicious-repository and transitive-component threat semantics."
+    },
+    {
+      "source_object_id": "CAPEC-511",
+      "source_title": "CAPEC-511: Infiltration of Software Development Environment",
+      "normalization_status": "comparison_gap",
+      "coverage_status": "partial",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "primary_core_anchor": null,
+      "secondary_core_anchors": [],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-004",
+          "name": "Technical Segmentation And Sensitive Domain Isolation",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SPC-005",
+          "name": "Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces",
+          "scope": "secret_handling_protected_configuration_and_operational_identities",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ],
+      "semantic_tags": [
+        "development_environment_compromise",
+        "toolchain_compromise"
+      ],
+      "rationale": "Development-environment infiltration has strong adjacent semantics in CI/CD infrastructure compromise and runner isolation, but the current comparison line is still coarse."
+    },
+    {
+      "source_object_id": "CAPEC-523",
+      "source_title": "CAPEC-523: Malicious Software Implanted",
+      "normalization_status": "comparison_gap",
+      "coverage_status": "partial",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "primary_core_anchor": null,
+      "secondary_core_anchors": [],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-002",
+          "name": "Verified Artifact Promotion",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ],
+      "semantic_tags": [
+        "malware_implantation",
+        "build_or_update_compromise"
+      ],
+      "rationale": "Malicious software implantation is broader than one row, but the manual already publishes forged-build, malicious-tooling and unexpected-content semantics that appear materially adjacent."
+    },
+    {
+      "source_object_id": "CAPEC-536",
+      "source_title": "CAPEC-536: Data Injected During Configuration",
+      "normalization_status": "appsec_core_gap",
+      "coverage_status": "indeterminate",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "primary_core_anchor": null,
+      "secondary_core_anchors": [],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SPC-007",
+          "name": "Secret Handling And Operational Identity Integrity",
+          "scope": "secret_handling_protected_configuration_and_operational_identities",
+          "objective_kind": "composite",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-IVF-004",
+          "name": "Validation Before Internal Use And Trust Crossing",
+          "scope": "input_validation_safe_parsing_and_controlled_failure",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-004",
+          "name": "Technical Segmentation And Sensitive Domain Isolation",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ],
+      "semantic_tags": [
+        "unsafe_configuration_data",
+        "configuration_integrity"
+      ],
+      "rationale": "Unsafe data injected during configuration looks close to existing IaC and secure-configuration threats, but the current AppSec Core abstraction is still weak here, so premature coverage claims would be noisy."
+    },
+    {
+      "source_object_id": "CAPEC-669",
+      "source_title": "CAPEC-669: Alteration of a Software Update",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-RPR-002",
+        "name": "Verified Artifact Promotion",
+        "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-004",
+          "name": "End-to-End Deployment Traceability",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "detective"
+        }
+      ],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "software_update_integrity",
+        "verified_promotion",
+        "deployment_traceability"
+      ],
+      "rationale": "Software-update alteration is already strongly adjacent to verified artifact promotion, signed provenance and controlled deploy semantics."
+    },
+    {
+      "source_object_id": "CAPEC-691",
+      "source_title": "CAPEC-691: Spoof Open-Source Software Metadata",
+      "normalization_status": "mapped",
+      "coverage_status": "partial",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-003",
+        "name": "Controlled Dependency And Image Sources",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-001",
+          "name": "Dependency Inventory And SBOM Traceability",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-002",
+          "name": "Dependency Risk Evaluation And Policy Gating",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "open_source_metadata_spoofing",
+        "origin_validation",
+        "dependency_confusion_adjacent"
+      ],
+      "rationale": "Open-source metadata spoofing sits close to dependency-confusion and malicious-repository semantics, but the exact metadata-deception framing needs explicit comparison."
+    },
+    {
+      "source_object_id": "CAPEC-692",
+      "source_title": "CAPEC-692: Spoof Version Control System Commit Metadata",
+      "normalization_status": "comparison_gap",
+      "coverage_status": "indeterminate",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "primary_core_anchor": null,
+      "secondary_core_anchors": [],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-IAT-001",
+          "name": "Authentication Strength And Identity Assurance",
+          "scope": "identity_access_and_session_trust",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-004",
+          "name": "End-to-End Deployment Traceability",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "detective"
+        }
+      ],
+      "semantic_tags": [
+        "commit_metadata_spoofing",
+        "source_traceability"
+      ],
+      "rationale": "Commit-metadata spoofing has adjacent traceability and approved-commit semantics, but current comparison would overclaim if it asserted one clean published row before direct review."
+    },
+    {
+      "source_object_id": "CAPEC-693",
+      "source_title": "CAPEC-693: StarJacking",
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "coverage_status": "out_of_scope",
+      "comparison_readiness": "excluded_out_of_scope",
+      "primary_core_anchor": null,
+      "secondary_core_anchors": [],
+      "nearest_core_anchors": [],
+      "semantic_tags": [
+        "social_proof_manipulation",
+        "package_popularity_spoofing"
+      ],
+      "rationale": "StarJacking is primarily software-selection deception via social proof and is not a strong current-scope AppSec Core/manual threat-surface candidate."
+    }
+  ]
+}

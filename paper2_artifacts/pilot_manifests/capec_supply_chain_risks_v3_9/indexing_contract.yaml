@@ -1,0 +1,43 @@
+pilot_id: capec_supply_chain_risks_v3_9
+status: source_captured
+source_model: curated_capec_html_pages_with_attack_pattern_objects
+normalization_target: appsec_core_v0_plus_supporting_threat_semantics
+comparison_target: published_sbdtoe_manual_threat_surface_via_canon_50_ameacas_mitigadas
+classification_taxonomy:
+  normalization_status:
+    - mapped
+    - appsec_core_gap
+    - comparison_gap
+    - out_of_scope_for_appsec_core
+    - context_only
+  published_threat_surface_adjudication:
+    - not_manual_gap
+    - comparison_gap_not_manual_gap
+    - likely_appsec_core_gap_not_manual_gap
+    - out_of_scope_for_appsec_core
+    - context_only
+pipeline_steps:
+  - capture_source
+  - extract_source_inventory
+  - extract_source_objects
+  - normalize_to_appsec_core
+  - derive_precomparison_gap_read
+  - compare_against_published_manual_threat_surface
+scripts:
+  - scripts/extract_capec_source_objects.py
+  - scripts/normalize_capec_to_appsec_core.py
+  - scripts/derive_capec_manual_gap_analysis.py
+  - scripts/compare_against_published_manual_threat_surface.py
+planned_outputs:
+  - data/capec_supply_chain_risks_v3_9/stubs/source_retrieval_receipt.json
+  - data/capec_supply_chain_risks_v3_9/stubs/external_source_inventory.json
+  - data/capec_supply_chain_risks_v3_9/stubs/source_unit_inventory.json
+  - data/capec_supply_chain_risks_v3_9/stubs/source_object_inventory.json
+  - data/capec_supply_chain_risks_v3_9/stubs/appsec_core_normalization.json
+  - data/capec_supply_chain_risks_v3_9/stubs/manual_gap_analysis.json
+  - data/capec_supply_chain_risks_v3_9/stubs/manual_threat_surface_comparison.json
+  - data/capec_supply_chain_risks_v3_9/stubs/manual_threat_surface_comparison.md
+notes:
+  - This pilot compares against published threat surfaces, not against top-down traceability rows.
+  - literal CAPEC ID hits are informative but not sufficient; semantic published support is the real comparison target.
+  - manual_gap must not be asserted before explicit comparison against canon/50-ameacas-mitigadas.

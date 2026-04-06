@@ -1,0 +1,63 @@
+meta:
+  pilot_id: asvs_v5_0_0
+  status: source_captured
+  intended_use: requirements_oriented_external_source_for_appsec_core_normalization
+source_document:
+  source_document_id: SRC-OWASP-ASVS-V5_0_0
+  title: OWASP Application Security Verification Standard
+  subtitle: Version 5.0.0
+  publisher: OWASP Foundation
+  source_kind: verification_standard
+  framework_family: ASVS
+  version: '5.0.0'
+  revision: release
+  edition: current_release
+  publication_date: '2025-05-30'
+  language: en
+  format_candidates:
+    - flat_json
+    - csv
+    - pdf
+    - html
+  canonical_url: https://github.com/OWASP/ASVS/releases/tag/v5.0.0_release
+  origin_url: https://owasp.org/www-project-application-security-verification-standard/
+  release_page_url: https://github.com/OWASP/ASVS/releases/tag/v5.0.0_release
+  flat_json_url: https://github.com/OWASP/ASVS/releases/download/v5.0.0_release/OWASP_Application_Security_Verification_Standard_5.0.0_en.flat.json
+  csv_url: https://github.com/OWASP/ASVS/releases/download/v5.0.0_release/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv
+  pdf_url: https://github.com/OWASP/ASVS/releases/download/v5.0.0_release/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf
+  stability_reason: official_owasp_tagged_release_with_machine_readable_assets
+retrieval_policy:
+  preferred_artifact: flat_json
+  alternate_artifacts:
+    - csv
+    - pdf
+    - html
+  retrieval_mode: deterministic_capture_completed
+  local_snapshot_paths:
+    - sources/asvs_v5_0_0/release_page.html
+    - sources/asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.flat.json
+    - sources/asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv
+    - sources/asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf
+  signature_status: not_checked
+  captured_release_timestamp: '2025-05-30T09:35:31Z'
+provenance_policy:
+  record_source_url: true
+  record_publication_date: true
+  record_retrieval_timestamp: true
+  record_checksum: true
+  keep_document_version_explicit: true
+normalization_targets:
+  primary:
+    - ControlObjective
+    - Practice
+    - Mechanism
+  secondary:
+    - Artifact
+    - EvidencePattern
+manual_integration_targets:
+  outputs:
+    - manual_gap_analysis
+    - traceability_publication_candidates
+  note: >
+    The output of this pilot is comparison material, not direct mutation of the
+    current manual contract.

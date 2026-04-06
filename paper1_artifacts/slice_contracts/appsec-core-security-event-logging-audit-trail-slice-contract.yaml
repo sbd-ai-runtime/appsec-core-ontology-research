@@ -1,0 +1,168 @@
+meta:
+  name: AppSec Core Slice Contract
+  version: '0.1'
+  status: working_contract
+  scope: security_event_logging_audit_trail_and_centralized_logging
+  description: >
+    Consolidated contract for the tenth AppSec core slice. This file does not
+    replace the detailed drafts; it defines the current stable reading across
+    objectives, mapping rules, normalized components, confidence boundaries and
+    immediate continuation criteria.
+  related_artifacts:
+    objective_draft: ontology/appsec-core-security-event-logging-audit-trail-draft.yaml
+    mapping_draft: ontology/appsec-core-security-event-logging-audit-trail-mapping-draft.yaml
+    components_draft: ontology/appsec-core-security-event-logging-audit-trail-components-draft.yaml
+    slice_note: docs/project/working-notes/2026-04-03-appsec-core-slice-security-event-logging-audit-trail.md
+    candidate_evaluation: docs/project/working-notes/2026-04-03-appsec-core-slice-10-candidate-evaluation.md
+purpose:
+  current_goal: >
+    Stabilize a tenth reusable AppSec domain slice on a security-logging and
+    audit-trail surface centered on durable records, integrity, retention and
+    centralized availability before opening an eleventh slice or broadening
+    monitoring and response semantics prematurely.
+  non_goals:
+    - regulatory_overlay_expansion
+    - v3_audit_persistence
+    - source_provenance_transversal_layer
+    - full_monitoring_and_response_program
+    - alerting_correlation_and_ir_as_primary_center
+    - eleventh_appsec_slice
+module_position:
+  appsec_core:
+    included:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+    deferred_or_weak:
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    included:
+      - requirement_to_objective_mapping
+      - control_to_objective_mapping
+      - practice_to_normalized_practice_mapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM and SLSA stay out of this contract
+objective_set:
+  atomic_objectives:
+    - ACO-SLG-001
+    - ACO-SLG-002
+    - ACO-SLG-003
+    - ACO-SLG-004
+    - ACO-SLG-005
+    - ACO-SLG-006
+  composite_objectives:
+    - ACO-SLG-007
+  composite_rules:
+    ACO-SLG-007:
+      meaning: Composite landing zone for the broad current monitoring control as it applies to the reusable logging and audit-trail sub-surface
+      composed_of:
+        - ACO-SLG-001
+        - ACO-SLG-002
+        - ACO-SLG-003
+        - ACO-SLG-004
+        - ACO-SLG-005
+        - ACO-SLG-006
+      usage_rule: >
+        May remain a primary target for the broad monitoring control, but
+        requirement-level mappings should prefer atomic objectives when a
+        direct semantic fit exists.
+mapping_rules:
+  control_level:
+    rule: Broad monitoring controls may map primarily to the composite objective when they span logging, retention, ingestion and failure visibility at once
+    example:
+      source_control_id: CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+      primary_target: ACO-SLG-007
+  requirement_level:
+    rule: Requirement mappings should prefer atomic objectives when the requirement is semantically narrow
+    examples:
+      - source_requirement_id: LOG-001
+        primary_target: ACO-SLG-001
+      - source_requirement_id: LOG-003
+        primary_target: ACO-SLG-003
+      - source_requirement_id: OPS-004
+        primary_target: ACO-SLG-005
+  practice_level:
+    rule: >
+      Current logging practices are strong enough to support the slice, but
+      slice construction still begins from requirement and broad-control
+      decomposition rather than from the chapter practice set alone.
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+component_subset:
+  normalized_practices:
+    - ACP-SLG-001
+    - ACP-SLG-002
+    - ACP-SLG-003
+    - ACP-SLG-004
+    - ACP-SLG-005
+  normalized_mechanisms:
+    - ACM-SLG-001
+    - ACM-SLG-002
+    - ACM-SLG-003
+    - ACM-SLG-004
+  normalized_artifacts:
+    - ACA-SLG-001
+    - ACA-SLG-002
+evidence_pattern_position:
+  current_status: supporting_inside_slice
+  meaning: >
+    EvidencePattern stays inside the slice for now as supporting AppSec core
+    semantics that help deterministic review of event coverage, structured
+    records, retention and logging-pipeline health.
+  explicit_boundaries:
+    - it_is_not_the_v3_audit_layer
+    - it_is_not_the_primary_alerting_slice
+    - it_is_not_the_primary_incident_response_slice
+  revisit_trigger: >
+    Revisit only after this slice stabilizes and before opening any broader
+    alerting, observability or runtime-response capability.
+confidence_boundaries:
+  strong_inputs:
+    - ontology/sbdtoe-ontology.yaml
+    - data/entities/canonical_requirements_s7.json
+    - data/entities/canonical_controls.json
+    - data/entities/practices.json
+    - data/entities/artifact_catalog.json
+    - data/publish/semantic/mechanisms.jsonl
+  useful_but_adjacent_inputs:
+    - LOG-004
+    - LOG-007
+    - LOG-009
+    - OPS-005
+    - OPS-006
+    - OPS-007
+    - OPS-008
+    - OPS-009
+  weak_or_deferred_inputs:
+    - richer_logging_governance_artifact_taxonomy
+    - broader_runtime_response_semantics
+    - data/publish/semantic/signals.jsonl
+  adjacent_but_not_central:
+    - alert_policy_as_primary_alerting_center
+    - incident_reconstruction_as_primary_center
+    - behavioral_detection_as_primary_center
+  rule: >
+    Normalize this slice record-first, trust the strong logging requirements
+    and chapter `12` practice surface, but do not let alerting, correlation,
+    incident response or broader observability redefine the center.
+acceptance_read:
+  stable_enough_now:
+    - the tenth slice has a coherent objective set
+    - the objective set distinguishes atomic and composite semantics
+    - the mapping layer records alerting and response semantics as bridge-only
+    - a minimum component subset exists for practices, mechanisms and artifacts
+    - the slice records the durable-record boundary explicitly
+  not_stable_enough_yet:
+    - richer event-catalog and retention artifacts
+    - stronger reusable mechanism taxonomy for ingestion and tamper evidence
+    - signal-driven logging semantics
+    - external alignment for the slice
+next_step:
+  recommendation: >
+    Treat the first ten slices as the current reference set and review whether
+    the method invariants now need another explicit update before opening an
+    eleventh slice.

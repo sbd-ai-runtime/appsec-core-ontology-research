@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "defaults": {
+    "from": "markdown+smart+raw_attribute",
+    "standalone": true,
+    "pdf_engine": "xelatex",
+    "pandoc_args": [
+      "-V",
+      "fontsize=11pt",
+      "-V",
+      "mainfont=STIX Two Text",
+      "-V",
+      "mathfont=STIX Two Math",
+      "-V",
+      "monofont=Menlo",
+      "-V",
+      "geometry:margin=1in",
+      "-V",
+      "colorlinks=true",
+      "-V",
+      "urlcolor=blue",
+      "--include-in-header",
+      "styles/paper-preprint.tex"
+    ]
+  },
+  "documents": [
+    {
+      "id": "paper1",
+      "title": "Paper 1 V1",
+      "sources": [
+        "paper_sources/paper1_appsec_core.md"
+      ],
+      "output": "papers/paper1_appsec_core.pdf",
+      "metadata": {}
+    },
+    {
+      "id": "paper2",
+      "title": "Paper 2 V1",
+      "sources": [
+        "paper_sources/paper2_compilation.md"
+      ],
+      "output": "papers/paper2_compilation.pdf",
+      "metadata": {}
+    },
+    {
+      "id": "paper3",
+      "title": "Paper 3 V1",
+      "sources": [
+        "paper_sources/paper3_ontology_grounded_retrieval.md"
+      ],
+      "output": "papers/paper3_ontology_grounded_retrieval.pdf",
+      "metadata": {}
+    }
+  ]
+}

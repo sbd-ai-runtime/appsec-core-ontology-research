@@ -1,0 +1,149 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "capec_supply_chain_risks_v3_9",
+  "status": "captured",
+  "source_family": "MITRE_CAPEC",
+  "captured_at": "2026-04-03T20:50:31.975017Z",
+  "items": [
+    {
+      "source_document_id": "SRC-CAPEC-VIEW-683",
+      "origin_url": "https://capec.mitre.org/data/definitions/683.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-683-supply-chain-risks.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:07Z",
+      "sha256": "4b52432ae3c32338885ae424122d1e0626881d0dbd878446eb86c1ccfd41f948",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-185",
+      "origin_url": "https://capec.mitre.org/data/definitions/185.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-185.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:14Z",
+      "sha256": "82b5530e5a003e1892fb093300635320a96e23c6c2d33821e02b49b32ec1461e",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-186",
+      "origin_url": "https://capec.mitre.org/data/definitions/186.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-186.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:15Z",
+      "sha256": "0f51adcc44e5412218c757adb201ba88da58c3d5eb000a02a4e4320206694d82",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-206",
+      "origin_url": "https://capec.mitre.org/data/definitions/206.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-206.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:08Z",
+      "sha256": "cea6d77cbd0b62bb08985bfad63da9596266bd0ebd8fb2fa4446ecc9dd693b71",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-443",
+      "origin_url": "https://capec.mitre.org/data/definitions/443.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-443.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:08Z",
+      "sha256": "e211e69befce40bf54e32c5357ac93071e20ac1bf5dafd852d73af8cb5f35fac",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-445",
+      "origin_url": "https://capec.mitre.org/data/definitions/445.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-445.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:09Z",
+      "sha256": "ca7ecb9bbaa2909b798f90e58219f20fea2b1e30f4492be586005f154603f003",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-446",
+      "origin_url": "https://capec.mitre.org/data/definitions/446.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-446.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:10Z",
+      "sha256": "60b3daec6eeb8fc7228b88bac2133d6f8e2f1ecb5d07abfccc6f0415b25b4bd1",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-511",
+      "origin_url": "https://capec.mitre.org/data/definitions/511.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-511.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:10Z",
+      "sha256": "4a7e7eaf1efd22c05f9d7b97280d8bc3faa90ecc415ca22263f5695421196e16",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-523",
+      "origin_url": "https://capec.mitre.org/data/definitions/523.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-523.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:13Z",
+      "sha256": "6cd87542f5e0391eb26b2649da26de3c1ded0b6fe546ce4d22259e1012f72210",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-536",
+      "origin_url": "https://capec.mitre.org/data/definitions/536.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-536.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:14Z",
+      "sha256": "40b0aa55bd2b4c18218e19daba3c019d91b7d7030e83f778203343500bfd1c0b",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-669",
+      "origin_url": "https://capec.mitre.org/data/definitions/669.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-669.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:16Z",
+      "sha256": "c6d3ead96da7a144615265cbd33df5058246de41955faaaa090076c4062d0c70",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-691",
+      "origin_url": "https://capec.mitre.org/data/definitions/691.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-691.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:11Z",
+      "sha256": "635c0703e51bea07429b3b5e8b24c40b4af4936dd96c0961a3090e295c917844",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-692",
+      "origin_url": "https://capec.mitre.org/data/definitions/692.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-692.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:12Z",
+      "sha256": "a8ec6daac782dcf8f678d0261b899b88689384f29d250933e611e3868086dac7",
+      "format": "html",
+      "version": "3.9"
+    },
+    {
+      "source_document_id": "SRC-CAPEC-693",
+      "origin_url": "https://capec.mitre.org/data/definitions/693.html",
+      "local_path": "sources/capec_supply_chain_risks_v3_9/CAPEC-693.html",
+      "retrieved_at": "2026-04-03T20:50:31.975017Z",
+      "file_timestamp": "2026-04-03T20:25:12Z",
+      "sha256": "1ba094f395d1a2d04f745fbc5e13a160a31f4f644c302bf434bd07dc0e317968",
+      "format": "html",
+      "version": "3.9"
+    }
+  ]
+}

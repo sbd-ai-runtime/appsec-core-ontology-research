@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "cis_controls_v8_1",
+  "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+  "retrieved_at": "2026-04-04T09:14:53Z",
+  "published_at": "2024-06-26T04:00:00Z",
+  "captured_files": [
+    {
+      "filename": "cis-controls-v8-1.html",
+      "local_path": "sources/cis_controls_v8_1/cis-controls-v8-1.html",
+      "source_url": "https://www.cisecurity.org/controls/v8-1",
+      "format": "html",
+      "size_bytes": 255488,
+      "checksum_sha256": "50ac147282d3d0e23945adcccf60199889c04411a911d974c544134a71f2e361"
+    },
+    {
+      "filename": "cis-controls-list.html",
+      "local_path": "sources/cis_controls_v8_1/cis-controls-list.html",
+      "source_url": "https://www.cisecurity.org/controls/cis-controls-list",
+      "format": "html",
+      "size_bytes": 275672,
+      "checksum_sha256": "34195f4bf5ea6e4bbabd7faa01e654db315b77f5078a3c1bf91ce19826ede809"
+    }
+  ]
+}

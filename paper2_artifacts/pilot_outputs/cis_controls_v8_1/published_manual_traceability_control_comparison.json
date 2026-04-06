@@ -1,0 +1,160 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "cis_controls_v8_1",
+  "status": "published_traceability_surface_control_compared",
+  "comparison_scope": "conservative_control_level_review_against_published_traceability_surface",
+  "notes": [
+    "This comparison is intentionally control-level and conservative.",
+    "It does not claim direct manual gaps for CIS safeguards or enterprise-wide CIS scope.",
+    "CIS Control 4 is treated as a transversal enterprise control partially supported by the AppSec-oriented manual surface, not as proven absence from the manual."
+  ],
+  "summary": {
+    "items": 8,
+    "counts_by_adjudication": {
+      "comparison_gap_not_manual_gap": 4,
+      "transversal_enterprise_control_partially_supported_by_appsec_scope": 1,
+      "not_manual_gap": 3
+    },
+    "counts_by_traceability_surface_status": {
+      "published_surface_semantic_support": 4,
+      "published_traceability_no_explicit_hit_but_manual_semantics_present": 1,
+      "published_traceability_explicit": 3
+    }
+  },
+  "items": [
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-2",
+      "external_key": "CIS-2",
+      "label": "Inventory and Control of Software Assets",
+      "source_type": "cis_control",
+      "prior_coverage_status": "partial",
+      "prior_normalization_status": "comparison_gap",
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Software inventory and dependency visibility are already present in the manual, but CIS Control 2 bundles authorization and execution-control semantics across enterprise software assets more broadly than the current published AppSec traceability surface.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-4",
+      "external_key": "CIS-4",
+      "label": "Secure Configuration of Enterprise Assets and Software",
+      "source_type": "cis_control",
+      "prior_coverage_status": "appsec_core_gap",
+      "prior_normalization_status": "appsec_core_gap",
+      "traceability_surface_status": "published_traceability_no_explicit_hit_but_manual_semantics_present",
+      "adjudication": "transversal_enterprise_control_partially_supported_by_appsec_scope",
+      "reason": "Secure configuration and baseline integrity clearly have supporting manual semantics across architecture, IaC and secure deployment, but CIS Control 4 also spans enterprise hardening and ongoing IT-admin configuration management beyond the intended AppSec publication scope; this is partial AppSec support, not proven manual absence.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-5",
+      "external_key": "CIS-5",
+      "label": "Account Management",
+      "source_type": "cis_control",
+      "prior_coverage_status": "partial",
+      "prior_normalization_status": "comparison_gap",
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Account-management semantics are already present in requirements, secure execution and governance surfaces, but the broad CIS control is not yet emitted as one dedicated published AppSec family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-6",
+      "external_key": "CIS-6",
+      "label": "Access Control Management",
+      "source_type": "cis_control",
+      "prior_coverage_status": "covered",
+      "prior_normalization_status": "mapped",
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Access-control management is already explicit in the published manual surface through requirements and secure-execution traceability.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-7",
+      "external_key": "CIS-7",
+      "label": "Continuous Vulnerability Management",
+      "source_type": "cis_control",
+      "prior_coverage_status": "partial",
+      "prior_normalization_status": "comparison_gap",
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Continuous vulnerability management is already supported in dependency, testing and operational surfaces, but the CIS control remains broader than the current AppSec publication shape.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-8",
+      "external_key": "CIS-8",
+      "label": "Audit Log Management",
+      "source_type": "cis_control",
+      "prior_coverage_status": "covered",
+      "prior_normalization_status": "mapped",
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Audit-log management is already explicit in the published monitoring and operations traceability surface.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-16",
+      "external_key": "CIS-16",
+      "label": "Application Software Security",
+      "source_type": "cis_control",
+      "prior_coverage_status": "partial",
+      "prior_normalization_status": "comparison_gap",
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Application software security is clearly covered in substance, but CIS Control 16 bundles requirements, coding, testing, pipeline and deploy concerns more broadly than the current published AppSec packaging.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "cis_controls_v8_1",
+      "external_object_id": "CIS-18",
+      "external_key": "CIS-18",
+      "label": "Penetration Testing",
+      "source_type": "cis_control",
+      "prior_coverage_status": "covered",
+      "prior_normalization_status": "mapped",
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Penetration testing and security validation are already explicit in the published testing and monitoring surfaces.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    }
+  ]
+}

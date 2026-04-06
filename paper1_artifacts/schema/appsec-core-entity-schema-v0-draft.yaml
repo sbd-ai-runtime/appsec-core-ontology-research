@@ -1,0 +1,218 @@
+meta:
+  name: AppSec Core Entity Schema v0 Draft
+  version: '0.1'
+  status: working_draft
+  maturity: consolidation_entry
+  description: >
+    Shared entity schema extracted from the ten-slice AppSec Core reference
+    set. This draft turns the current consolidation read into a more explicit
+    schema shape for core entities and the manual-mapping layer.
+  related_artifacts:
+    core_v0_draft: ontology/appsec-core-v0-draft.yaml
+    cross_slice_vocabulary: ontology/appsec-core-cross-slice-vocabulary-v0-draft.yaml
+    manual_mapping_v0_draft: ontology/appsec-core-manual-mapping-v0-draft.yaml
+purpose:
+  current_goal: >
+    Provide one explicit schema shape for the future AppSec Core v0 without
+    forcing premature global enums for practice, mechanism or domain values.
+  non_goals:
+    - replacing_slice_specific_objective_sets
+    - forcing_one_global_practice_type_enum
+    - forcing_one_global_mechanism_type_enum
+    - introducing_external_alignment_or_v3_entities
+core_entities:
+  ControlObjective:
+    role: reusable_domain_constraint_or_assurance_goal
+    required_fields:
+      - objective_id
+      - name
+      - objective_kind
+      - objective_type
+      - domain_key
+      - statement
+      - expected_outcome
+      - verification_posture
+    enum_fields:
+      objective_kind:
+        allowed_values:
+          - atomic
+          - composite
+      objective_type:
+        allowed_values:
+          - governance
+          - preventive
+          - detective
+          - corrective
+    recommended_fields:
+      - slice_family
+      - current_manual_control_anchors
+      - current_manual_requirement_anchors
+      - expected_artifacts
+      - composed_of
+    rules:
+      - composite_objectives_must_reference_atomic_members_when_used
+      - requirement_level_mapping_should_prefer_atomic_targets
+  Practice:
+    role: reusable_human_or_process_practice_that_realizes_objectives
+    required_fields:
+      - practice_id
+      - name
+      - practice_family
+      - local_practice_type
+    recommended_fields:
+      - supports_objectives
+      - description
+      - source_practice_ids
+    rules:
+      - practice_family_is_cross_slice_and_low_granularity
+      - local_practice_type_may_remain_slice_specific
+  Mechanism:
+    role: concrete_technical_or_process_means_that_implements_practices_or_objectives
+    required_fields:
+      - mechanism_id
+      - name
+      - mechanism_family
+      - local_mechanism_type
+    recommended_fields:
+      - supports_practices
+      - source_semantic_ids
+      - note
+    rules:
+      - mechanism_family_is_cross_slice_and_low_granularity
+      - local_mechanism_type_may_remain_slice_specific
+  Artifact:
+    role: control_relevant_or_evidence_bearing_output_used_for_review_traceability_and_assurance
+    required_fields:
+      - artifact_id
+      - name
+      - canonical_role
+    recommended_fields:
+      - local_role
+      - supports_objectives
+      - source_artifact_id
+      - note
+    rules:
+      - canonical_role_should_prefer_the_cross_slice_vocabulary
+      - local_role_may_preserve_slice_specific_nuance_when_needed
+  EvidencePattern:
+    role: expected_evidence_shape_used_for_deterministic_review_support
+    required_fields:
+      - evidence_pattern_id
+      - canonical_evidence_kind
+      - expectation
+      - validation_method
+    recommended_fields:
+      - local_evidence_kind
+      - related_objectives
+      - related_artifacts
+      - detectable_in
+      - cadence_hint
+      - responsible_roles
+      - source_requirement_id
+      - source_control_id
+    rules:
+      - canonical_evidence_kind_should_reuse_artifact_canonical_roles_where_possible
+      - evidencepattern_remains_supporting_and_not_v3
+      - validation_method_describes_interpretation_not_execution_binding
+manual_mapping_entities:
+  RequirementMapping:
+    required_fields:
+      - source_requirement_id
+      - source_bundle
+      - source_requirement_name
+      - target_objectives
+    target_objective_shape:
+      required_fields:
+        - objective_id
+        - strength
+        - rationale
+    allowed_strengths:
+      - primary
+      - secondary
+  ControlMapping:
+    required_fields:
+      - source_control_id
+      - source_control_name
+      - target_objectives
+    target_objective_shape:
+      required_fields:
+        - objective_id
+        - strength
+        - rationale
+    allowed_strengths:
+      - primary
+      - secondary
+  BridgeObservation:
+    required_fields:
+      - source_reference
+      - note
+cross_slice_families:
+  practice_families:
+    - governance_and_review
+    - policy_and_gate_enforcement
+    - identity_and_trust_control
+    - validation_and_analysis
+    - integrity_traceability_and_records
+    - rollout_recovery_and_runtime_records
+  mechanism_families:
+    - governance_and_review
+    - policy_and_gate_enforcement
+    - identity_and_trust_control
+    - validation_and_analysis
+    - integrity_traceability_and_records
+    - rollout_recovery_and_runtime_records
+  canonical_artifact_roles:
+    - configuration
+    - governance_record
+    - review_record
+    - approval_record
+    - gate_record
+    - inventory
+    - attestation
+    - report
+    - evidence_package
+    - operational_record
+    - build_definition
+    - release_artifact
+    - model
+    - validation_output
+    - binding_record
+relation_schema:
+  stable_core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+  informative_but_not_yet_core_driving:
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+deferred_or_not_yet_stable:
+  entities:
+    - Threat
+    - Signal
+    - Capability
+    - Gap
+  enums:
+    - global_domain_enum
+    - global_practice_type_enum
+    - global_mechanism_type_enum
+    - final_traceability_record_hierarchy
+acceptance_read:
+  stable_enough_now:
+    - the_project_can_already_express_a_shared_controlobjective_shape
+    - artifact_and_evidence_roles_can_start_using_one_canonical_layer
+    - practice_and_mechanism_shapes_can_be_shared_without_forcing_one_final_enum
+    - the_manual_mapping_layer_has_one_shared_grammar
+  not_stable_enough_yet:
+    - one_merged_instance_set_for_all_entities
+    - one_final_cross_slice_domain_taxonomy
+    - one_final_cross_slice_record_hierarchy
+next_step:
+  recommendation: >
+    Use this entity schema draft to refactor slice-local drafts gradually
+    toward shared field names and canonical-role usage before deciding whether
+    more slices are needed.

@@ -1,0 +1,129 @@
+meta:
+  name: AppSec Core Slice Registry v0 Draft
+  version: '0.1'
+  status: working_draft
+  maturity: consolidation_entry
+  description: >
+    Compact registry of the ten slice contracts that currently define the
+    AppSec Core v0 reference set.
+  related_artifacts:
+    core_v0_draft: ontology/appsec-core-v0-draft.yaml
+    manual_mapping_v0_draft: ontology/appsec-core-manual-mapping-v0-draft.yaml
+    readiness_note: docs/project/working-notes/2026-04-03-appsec-core-v0-readiness.md
+purpose:
+  current_goal: >
+    Provide one compact consumer-facing registry of the AppSec Core slice
+    reference set without replacing the slice-local contracts.
+  non_goals:
+    - merging_all_slice_instances
+    - replacing_slice_contracts
+    - introducing_external_alignment
+    - introducing_v3_runtime_semantics
+registry:
+  count: 10
+  slices:
+    - slice_id: ASC-01
+      scope: supply_chain_and_build_integrity
+      objective_family: ACO-SCBI
+      composite_objective: ACO-SCBI-007
+      current_control_mode: multi_control_convergent_surface
+      primary_current_controls:
+        - CTRL-supply-chain-inventario-e-analise-de-dependencias-6b0fd9f7fb
+        - CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+        - CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+      contract: ontology/appsec-core-supply-chain-build-integrity-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-02
+      scope: identity_access_and_session_trust
+      objective_family: ACO-IAT
+      composite_objective: ACO-IAT-007
+      current_control_mode: single_broad_control_surface
+      primary_current_controls:
+        - CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af
+      contract: ontology/appsec-core-identity-access-session-trust-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-03
+      scope: architecture_and_trust_boundaries
+      objective_family: ACO-ATB
+      composite_objective: ACO-ATB-007
+      current_control_mode: dual_control_surface
+      primary_current_controls:
+        - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+        - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      contract: ontology/appsec-core-architecture-trust-boundaries-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-04
+      scope: testing_security_validation_and_empirical_assurance
+      objective_family: ACO-TSV
+      composite_objective: ACO-TSV-007
+      current_control_mode: single_broad_control_surface
+      primary_current_controls:
+        - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+      contract: ontology/appsec-core-testing-security-validation-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-05
+      scope: threat_modeling_risk_disposition_and_mitigation_traceability
+      objective_family: ACO-TMR
+      composite_objective: ACO-TMR-007
+      current_control_mode: single_broad_control_surface
+      primary_current_controls:
+        - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+      contract: ontology/appsec-core-threat-modeling-risk-disposition-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-06
+      scope: secret_handling_protected_configuration_and_operational_identities
+      objective_family: ACO-SPC
+      composite_objective: ACO-SPC-007
+      current_control_mode: single_broad_control_surface
+      primary_current_controls:
+        - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+      contract: ontology/appsec-core-secrets-protected-config-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-07
+      scope: input_validation_safe_parsing_and_controlled_failure
+      objective_family: ACO-IVF
+      composite_objective: ACO-IVF-007
+      current_control_mode: single_broad_control_surface
+      primary_current_controls:
+        - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+      contract: ontology/appsec-core-input-validation-safe-failure-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-08
+      scope: integration_trust_and_service_to_service_security
+      objective_family: ACO-ITS
+      composite_objective: ACO-ITS-007
+      current_control_mode: split_control_surface
+      primary_current_controls:
+        - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+        - CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af
+        - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+      contract: ontology/appsec-core-integration-trust-service-security-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-09
+      scope: release_promotion_controlled_rollout_and_rollback_readiness
+      objective_family: ACO-RPR
+      composite_objective: ACO-RPR-007
+      current_control_mode: split_control_surface
+      primary_current_controls:
+        - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+        - CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+        - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+      contract: ontology/appsec-core-release-promotion-controlled-rollout-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+    - slice_id: ASC-10
+      scope: security_event_logging_audit_trail_and_centralized_logging
+      objective_family: ACO-SLG
+      composite_objective: ACO-SLG-007
+      current_control_mode: single_broad_control_surface
+      primary_current_controls:
+        - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+      contract: ontology/appsec-core-security-event-logging-audit-trail-slice-contract.yaml
+      status: contract_complete_schema_aligned_mapping_aligned
+current_read:
+  stable_enough_now:
+    - the_reference_set_can_be_read_without_expanding_more_slices
+    - the_registry_makes_split_control_surfaces_explicit
+    - the_registry_supports_v0_packaging_without_hiding_slice_local_detail
+  not_stable_enough_yet:
+    - one_merged_instance_set_for_all_objectives
+    - one_final_public_packaging_shape_for_every_v0_consumer

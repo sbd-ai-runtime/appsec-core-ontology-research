@@ -1,0 +1,82 @@
+pilot_id: capec_supply_chain_risks_v3_9
+status: source_captured
+source_family: MITRE_CAPEC
+source_scope: CAPEC_View_683_plus_curated_supply_chain_attack_patterns
+version: '3.9'
+source_capture_policy:
+  format: versioned_html_snapshot
+  rationale: stable_published_html_pages_are_preferred_over_live_alias_resolution
+sources:
+  - source_document_id: SRC-CAPEC-VIEW-683
+    source_kind: view_page
+    title: CAPEC View 683 - Supply Chain Risks
+    origin_url: https://capec.mitre.org/data/definitions/683.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-683-supply-chain-risks.html
+  - source_document_id: SRC-CAPEC-206
+    source_kind: attack_pattern_page
+    title: CAPEC-206 - Signing Malicious Code
+    origin_url: https://capec.mitre.org/data/definitions/206.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-206.html
+  - source_document_id: SRC-CAPEC-443
+    source_kind: attack_pattern_page
+    title: CAPEC-443 - Malicious Logic Inserted Into Product by Authorized Developer
+    origin_url: https://capec.mitre.org/data/definitions/443.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-443.html
+  - source_document_id: SRC-CAPEC-445
+    source_kind: attack_pattern_page
+    title: CAPEC-445 - Malicious Logic Insertion into Product Software via Configuration Management Manipulation
+    origin_url: https://capec.mitre.org/data/definitions/445.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-445.html
+  - source_document_id: SRC-CAPEC-446
+    source_kind: attack_pattern_page
+    title: CAPEC-446 - Malicious Logic Insertion into Product via Inclusion of Third-Party Component
+    origin_url: https://capec.mitre.org/data/definitions/446.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-446.html
+  - source_document_id: SRC-CAPEC-511
+    source_kind: attack_pattern_page
+    title: CAPEC-511 - Infiltration of Software Development Environment
+    origin_url: https://capec.mitre.org/data/definitions/511.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-511.html
+  - source_document_id: SRC-CAPEC-691
+    source_kind: attack_pattern_page
+    title: CAPEC-691 - Spoof Open-Source Software Metadata
+    origin_url: https://capec.mitre.org/data/definitions/691.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-691.html
+  - source_document_id: SRC-CAPEC-692
+    source_kind: attack_pattern_page
+    title: CAPEC-692 - Spoof Version Control System Commit Metadata
+    origin_url: https://capec.mitre.org/data/definitions/692.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-692.html
+  - source_document_id: SRC-CAPEC-693
+    source_kind: attack_pattern_page
+    title: CAPEC-693 - StarJacking
+    origin_url: https://capec.mitre.org/data/definitions/693.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-693.html
+  - source_document_id: SRC-CAPEC-523
+    source_kind: attack_pattern_page
+    title: CAPEC-523 - Malicious Software Implanted
+    origin_url: https://capec.mitre.org/data/definitions/523.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-523.html
+  - source_document_id: SRC-CAPEC-536
+    source_kind: attack_pattern_page
+    title: CAPEC-536 - Data Injected During Configuration
+    origin_url: https://capec.mitre.org/data/definitions/536.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-536.html
+  - source_document_id: SRC-CAPEC-185
+    source_kind: attack_pattern_page
+    title: CAPEC-185 - Malicious Software Download
+    origin_url: https://capec.mitre.org/data/definitions/185.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-185.html
+  - source_document_id: SRC-CAPEC-186
+    source_kind: attack_pattern_page
+    title: CAPEC-186 - Malicious Software Update
+    origin_url: https://capec.mitre.org/data/definitions/186.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-186.html
+  - source_document_id: SRC-CAPEC-669
+    source_kind: attack_pattern_page
+    title: CAPEC-669 - Alteration of a Software Update
+    origin_url: https://capec.mitre.org/data/definitions/669.html
+    local_path: sources/capec_supply_chain_risks_v3_9/CAPEC-669.html
+notes:
+  - The curated set is intentionally software-focused and supply-chain oriented.
+  - This pilot is bottom-up and should remain separate from top-down traceability-comparison aggregates.

@@ -1,0 +1,258 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "capec_supply_chain_risks_v3_9",
+  "status": "published_manual_threat_surface_compared",
+  "comparison_target": "published_sbdtoe_manual_threat_surface_via_canon_50_ameacas_mitigadas",
+  "summary": {
+    "items": 14,
+    "counts_by_adjudication": {
+      "context_only": 1,
+      "not_manual_gap": 5,
+      "comparison_gap_not_manual_gap": 6,
+      "likely_appsec_core_gap_not_manual_gap": 1,
+      "out_of_scope_for_appsec_core": 1
+    }
+  },
+  "notes": [
+    "literal CAPEC hits are informative but not decisive; semantic published support is the real comparison target.",
+    "This pilot is intentionally bottom-up and should not be merged into the top-down cross_pilot traceability files."
+  ],
+  "items": [
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-VIEW-683",
+      "external_key": "CAPEC-VIEW-683",
+      "source_title": "CAPEC VIEW: Supply Chain Risks",
+      "normalization_status": "context_only",
+      "coverage_status": "context_only",
+      "comparison_readiness": "context_only",
+      "threat_surface_status": "context_only",
+      "adjudication": "context_only",
+      "reason": "The CAPEC supply-chain view is context for the pilot rather than a discrete threat row to compare against the manual.",
+      "explicit_manual_hits": [],
+      "evidence_files": []
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-185",
+      "external_key": "CAPEC-185",
+      "source_title": "CAPEC-185: Malicious Software Download",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "not_manual_gap",
+      "reason": "Malicious software download already aligns strongly with malicious-repository, origin-control and dependency-source restrictions in the manual.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-186",
+      "external_key": "CAPEC-186",
+      "source_title": "CAPEC-186: Malicious Software Update",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "not_manual_gap",
+      "reason": "Malicious software update is materially covered by controlled promotion, provenance verification and rollback-ready deploy semantics.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-206",
+      "external_key": "CAPEC-206",
+      "source_title": "CAPEC-206: Signing Malicious Code",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "not_manual_gap",
+      "reason": "The manual already publishes signed-artifact, provenance and verified-promotion semantics strongly across CI/CD, containers and deploy. Lack of literal CAPEC-206 does not indicate lack of mitigation coverage.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-443",
+      "external_key": "CAPEC-443",
+      "source_title": "CAPEC-443: Malicious Logic Inserted Into Product by Authorized Developer",
+      "normalization_status": "appsec_core_gap",
+      "coverage_status": "partial",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "The manual already publishes approved-commit, unauthorized-push and unaudited-code execution threats, but the exact insider-authorized-developer framing is not one explicit threat row today.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/03-threat-modeling/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-445",
+      "external_key": "CAPEC-445",
+      "source_title": "CAPEC-445: Malicious Logic Insertion into Product Software via Configuration Management Manipulation",
+      "normalization_status": "mapped",
+      "coverage_status": "partial",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Pipeline tampering, forged builds, unauthenticated versions and unsafe configuration-management effects are already materially covered, but the exact CAPEC-445 wording is broader than one published row.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-446",
+      "external_key": "CAPEC-446",
+      "source_title": "CAPEC-446: Malicious Logic Insertion into Product via Inclusion of Third-Party Component",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "not_manual_gap",
+      "reason": "Malicious third-party component inclusion is already strongly present through malicious repository, insecure component and transitive dependency threat coverage.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-511",
+      "external_key": "CAPEC-511",
+      "source_title": "CAPEC-511: Infiltration of Software Development Environment",
+      "normalization_status": "comparison_gap",
+      "coverage_status": "partial",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "The manual already publishes build-environment compromise, runner isolation and CI/CD threat-modeling semantics, but does not currently package them as one development-environment infiltration row.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/03-threat-modeling/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-523",
+      "external_key": "CAPEC-523",
+      "source_title": "CAPEC-523: Malicious Software Implanted",
+      "normalization_status": "comparison_gap",
+      "coverage_status": "partial",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Forged builds, malicious tooling and shadow execution semantics already exist in the manual, but the generic implanted-malware framing still spans multiple published rows.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-536",
+      "external_key": "CAPEC-536",
+      "source_title": "CAPEC-536: Data Injected During Configuration",
+      "normalization_status": "appsec_core_gap",
+      "coverage_status": "indeterminate",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "likely_appsec_core_gap_not_manual_gap",
+      "reason": "The manual already has unsafe-configuration and validation semantics in IaC and deploy, but AppSec Core v0 still lacks a cleaner reusable landing zone for configuration-data integrity as a bottom-up threat abstraction.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-669",
+      "external_key": "CAPEC-669",
+      "source_title": "CAPEC-669: Alteration of a Software Update",
+      "normalization_status": "mapped",
+      "coverage_status": "covered",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "not_manual_gap",
+      "reason": "Software-update alteration is already materially covered through signed provenance, verified promotion and controlled deploy semantics.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-691",
+      "external_key": "CAPEC-691",
+      "source_title": "CAPEC-691: Spoof Open-Source Software Metadata",
+      "normalization_status": "mapped",
+      "coverage_status": "partial",
+      "comparison_readiness": "ready_for_manual_threat_surface_comparison",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Metadata spoofing is close to malicious repository, dependency confusion and origin-validation semantics already published in the manual, but the exact metadata-deception wording is not one current threat row.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-692",
+      "external_key": "CAPEC-692",
+      "source_title": "CAPEC-692: Spoof Version Control System Commit Metadata",
+      "normalization_status": "comparison_gap",
+      "coverage_status": "indeterminate",
+      "comparison_readiness": "needs_careful_manual_threat_surface_review",
+      "threat_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "The manual already publishes commit-to-build traceability, approved-commit execution and source-control integrity semantics, but not yet as one explicit commit-metadata spoofing row.",
+      "explicit_manual_hits": [],
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md"
+      ]
+    },
+    {
+      "pilot_id": "capec_supply_chain_risks_v3_9",
+      "external_object_id": "CAPEC-693",
+      "external_key": "CAPEC-693",
+      "source_title": "CAPEC-693: StarJacking",
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "coverage_status": "out_of_scope",
+      "comparison_readiness": "excluded_out_of_scope",
+      "threat_surface_status": "out_of_scope_for_appsec_core",
+      "adjudication": "out_of_scope_for_appsec_core",
+      "reason": "StarJacking is primarily software-selection deception via reputation metadata. It should not be forced into the current manual/AppSec Core threat surfaces.",
+      "explicit_manual_hits": [],
+      "evidence_files": []
+    }
+  ]
+}

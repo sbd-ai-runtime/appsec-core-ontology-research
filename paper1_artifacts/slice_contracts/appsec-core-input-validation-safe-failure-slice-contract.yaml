@@ -1,0 +1,169 @@
+meta:
+  name: AppSec Core Slice Contract
+  version: '0.1'
+  status: working_contract
+  scope: input_validation_safe_parsing_and_controlled_failure
+  description: >
+    Consolidated contract for the seventh AppSec core slice. This file does not
+    replace the detailed drafts; it defines the current stable reading across
+    objectives, mapping rules, normalized components, confidence boundaries and
+    immediate continuation criteria.
+  related_artifacts:
+    objective_draft: ontology/appsec-core-input-validation-safe-failure-draft.yaml
+    mapping_draft: ontology/appsec-core-input-validation-safe-failure-mapping-draft.yaml
+    components_draft: ontology/appsec-core-input-validation-safe-failure-components-draft.yaml
+    slice_note: docs/project/working-notes/2026-04-03-appsec-core-slice-input-validation-safe-failure.md
+    candidate_evaluation: docs/project/working-notes/2026-04-03-appsec-core-slice-7-candidate-evaluation.md
+purpose:
+  current_goal: >
+    Stabilize a seventh reusable AppSec domain slice on a technical semantic
+    surface centered on input validation, safe parsing and controlled failure
+    before opening an eighth slice or broadening secure-development semantics
+    prematurely.
+  non_goals:
+    - regulatory_overlay_expansion
+    - v3_audit_persistence
+    - source_provenance_transversal_layer
+    - full_secure_development_domain_coverage
+    - eighth_appsec_slice
+module_position:
+  appsec_core:
+    included:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+    deferred_or_weak:
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    included:
+      - requirement_to_objective_mapping
+      - control_to_objective_mapping
+      - practice_to_normalized_practice_mapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM and SLSA stay out of this contract
+objective_set:
+  atomic_objectives:
+    - ACO-IVF-001
+    - ACO-IVF-002
+    - ACO-IVF-003
+    - ACO-IVF-004
+    - ACO-IVF-005
+    - ACO-IVF-006
+  composite_objectives:
+    - ACO-IVF-007
+  composite_rules:
+    ACO-IVF-007:
+      meaning: Composite landing zone for the broad manual secure-development and code-validation control surface as it applies to input handling and safe failure
+      composed_of:
+        - ACO-IVF-001
+        - ACO-IVF-002
+        - ACO-IVF-003
+        - ACO-IVF-004
+        - ACO-IVF-005
+        - ACO-IVF-006
+      usage_rule: >
+        May remain a primary target for the broad secure-development control,
+        but requirement-level mappings should prefer atomic objectives when a
+        direct semantic fit exists.
+mapping_rules:
+  control_level:
+    rule: Broad secure-development controls may map primarily to the composite objective when they span validation, dangerous-pattern exclusion, safe failure and governed error handling at once
+    example:
+      source_control_id: CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+      primary_target: ACO-IVF-007
+  requirement_level:
+    rule: Requirement mappings should prefer atomic objectives when the requirement is semantically narrow
+    examples:
+      - source_requirement_id: VAL-001
+        primary_target: ACO-IVF-001
+      - source_requirement_id: VAL-004
+        primary_target: ACO-IVF-003
+      - source_requirement_id: ERR-005
+        primary_target: ACO-IVF-006
+  practice_level:
+    rule: >
+      This slice is partly extracted from a broader secure-development practice
+      umbrella, but slice construction still begins from requirement and control
+      decomposition rather than from the chapter as a whole.
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+component_subset:
+  normalized_practices:
+    - ACP-IVF-001
+    - ACP-IVF-002
+    - ACP-IVF-003
+    - ACP-IVF-004
+    - ACP-IVF-005
+    - ACP-IVF-006
+  normalized_mechanisms:
+    - ACM-IVF-001
+    - ACM-IVF-002
+    - ACM-IVF-003
+    - ACM-IVF-004
+  normalized_artifacts:
+    - ACA-IVF-001
+    - ACA-IVF-002
+    - ACA-IVF-003
+    - ACA-IVF-004
+    - ACA-IVF-005
+    - ACA-IVF-006
+evidence_pattern_position:
+  current_status: supporting_inside_slice
+  meaning: >
+    EvidencePattern stays inside the slice for now as a supporting AppSec core
+    concept that helps deterministic review semantics around malformed-input
+    rejection, dangerous-pattern exclusion and safe error behavior.
+  explicit_boundaries:
+    - it_is_not_the_v3_audit_layer
+    - it_is_not_the_primary_testing_slice
+    - it_must_not_turn_into_runtime_observability_semantics
+  revisit_trigger: >
+    Revisit only after this slice stabilizes and before opening any broader
+    shared validation or observability capability.
+confidence_boundaries:
+  strong_inputs:
+    - ontology/sbdtoe-ontology.yaml
+    - data/entities/canonical_requirements_s7.json
+    - data/entities/canonical_controls.json
+    - data/entities/practices.json
+    - data/entities/artifact_catalog.json
+    - data/entities/evidence_patterns.json
+  useful_but_adjacent_inputs:
+    - 06-desenvolvimento-seguro
+    - 10-testes-seguranca
+    - ontology/appsec-core-testing-security-validation-slice-contract.yaml
+  weak_or_deferred_inputs:
+    - specialized_parser_mechanism_taxonomy
+    - data/publish/semantic/signals.jsonl
+    - broader_runtime_observability_semantics
+  adjacent_but_not_central:
+    - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    - INT-005
+    - INT-006
+  rule: >
+    Normalize this slice input-first, trust the current validation and error
+    requirement surface plus deterministic review support, but do not let the
+    slice drift into full secure-development coverage, testing governance or
+    runtime monitoring.
+acceptance_read:
+  stable_enough_now:
+    - the seventh slice has a coherent objective set
+    - the objective set distinguishes atomic and composite semantics
+    - the mapping layer encodes the main control-level composite rule
+    - a minimum component subset exists for practices, mechanisms and artifacts
+    - the slice records the boundary between reusable input-handling semantics and the broader secure-development umbrella explicitly
+  not_stable_enough_yet:
+    - richer schema and parser mechanism taxonomy
+    - richer artifact taxonomy for centralized error-handler policy
+    - signal-driven slice semantics
+    - external alignment for the slice
+next_step:
+  recommendation: >
+    Treat the first seven slices as the current reference set and review
+    whether the method invariants now need another explicit update before
+    opening an eighth slice.

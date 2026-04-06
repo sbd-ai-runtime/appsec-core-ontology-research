@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "ssdf_sp800_218_v1_1",
+  "status": "captured",
+  "source_document_id": "SRC-NIST-SP800-218-V1_1",
+  "captured_artifact": {
+    "format": "pdf",
+    "local_snapshot_path": "sources/ssdf_sp800_218_v1_1/NIST.SP.800-218.pdf",
+    "local_snapshot_size_bytes": 739891,
+    "retrieved_at": "2026-04-03T17:52:43Z",
+    "checksum_sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22"
+  },
+  "authoritative_urls": {
+    "canonical_url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+    "origin_url": "https://csrc.nist.gov/publications/detail/sp/800-218/final",
+    "pdf_url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+    "doi_url": "https://doi.org/10.6028/NIST.SP.800-218"
+  }
+}

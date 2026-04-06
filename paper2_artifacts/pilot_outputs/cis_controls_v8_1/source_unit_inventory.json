@@ -1,0 +1,213 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "cis_controls_v8_1",
+  "items": [
+    {
+      "unit_id": "UNIT-CIS-CONTEXT",
+      "unit_type": "context",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "title": "CIS Critical Security Controls Version 8.1",
+      "text": "CIS Critical Security Controls Version 8.1. The CIS Critical Security Controls help you to strengthen your enterprise's cybersecurity posture in a prioritized way. Download the latest version today!",
+      "normalized_text_hash": "eb8e547c20322ff44c61489f8ef59284a3de2f59e06d93798e073644d387381a",
+      "source_page": "version_page"
+    },
+    {
+      "unit_id": "UNIT-CIS-1",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-1",
+      "control_number": 1,
+      "title": "Inventory and Control of Enterprise Assets",
+      "text": "Inventory and Control of Enterprise Assets. Actively manage (inventory, track, and correct) all enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/Internet of Things (IoT) devices; and servers) connected to the infrastructure physically, virtually, remotely, and those within cloud environments to accurately know the totality of assets that need to be monitored and protected within the enterprise. This will also support identifying unauthorized and unmanaged assets to remove or remediate.",
+      "normalized_text_hash": "ee4d820dc8a56a5188602be9dfe570a75a058084606f841a48d19a69505622da",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-2",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-2",
+      "control_number": 2,
+      "title": "Inventory and Control of Software Assets",
+      "text": "Inventory and Control of Software Assets. Actively manage (inventory, track, and correct) all software (operating systems and applications) on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.",
+      "normalized_text_hash": "6e0fa63699fcb477b713aeaa052582502e655388600907dacf1f9664fa9d07dd",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-3",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-3",
+      "control_number": 3,
+      "title": "Data Protection",
+      "text": "Data Protection. Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.",
+      "normalized_text_hash": "aeaaff1246d032490e19f1876e383cbf20341375bda564a01fb612e1b67a9ac2",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-4",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-4",
+      "control_number": 4,
+      "title": "Secure Configuration of Enterprise Assets and Software",
+      "text": "Secure Configuration of Enterprise Assets and Software. Establish and maintain the secure configuration of enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/IoT devices; and servers) and software (operating systems and applications).",
+      "normalized_text_hash": "be6185bb1c8aef06de76e17e7821627fca674a7e89bcb8c50288c64c1535832c",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-5",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-5",
+      "control_number": 5,
+      "title": "Account Management",
+      "text": "Account Management. Use processes and tools to assign and manage authorization to credentials for user accounts, including administrator accounts, as well as service accounts, to enterprise assets and software.",
+      "normalized_text_hash": "dc0ba9e8c93417dbf72ccbd2d2eaa66f7c2d6fbed27c638dadbbb0697f82d2ab",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-6",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-6",
+      "control_number": 6,
+      "title": "Access Control Management",
+      "text": "Access Control Management. Use processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and software.",
+      "normalized_text_hash": "466ad8d0dac338d0351607dc663cb6b78913eab9402aec8ab4047535a76a7b84",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-7",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-7",
+      "control_number": 7,
+      "title": "Continuous Vulnerability Management",
+      "text": "Continuous Vulnerability Management. Develop a plan to continuously assess and track vulnerabilities on all enterprise assets within the enterprise\u2019s infrastructure, in order to remediate, and minimize, the window of opportunity for attackers. Monitor public and private industry sources for new threat and vulnerability information.",
+      "normalized_text_hash": "ab2a48b8c02ad9c40c7d8c3fc8b94b079307aa5774892ede2e6a19db3aea31aa",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-8",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-8",
+      "control_number": 8,
+      "title": "Audit Log Management",
+      "text": "Audit Log Management. Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack.",
+      "normalized_text_hash": "fbcd737abf881489c15bb5b6a7534d1218a5e945a6c3eec3af72c554b6c88491",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-9",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-9",
+      "control_number": 9,
+      "title": "Email and Web Browser Protections",
+      "text": "Email and Web Browser Protections. Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.",
+      "normalized_text_hash": "ca76c5a7a5e4a50ce46816ce1bd7c21143136e79252f94460c6679e0091279ba",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-10",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-10",
+      "control_number": 10,
+      "title": "Malware Defenses",
+      "text": "Malware Defenses. Prevent or control the installation, spread, and execution of malicious applications, code, or scripts on enterprise assets.",
+      "normalized_text_hash": "eaae5ab3d75ea95acc81a51b4f689351b20ddef20c1562218f2e973fbf09ab0d",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-11",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-11",
+      "control_number": 11,
+      "title": "Data Recovery",
+      "text": "Data Recovery. Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.",
+      "normalized_text_hash": "f58b8cd7ac0460b8fbe9fb44d53862cffa59e20843a2328b8f6e400c6ce01cc9",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-12",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-12",
+      "control_number": 12,
+      "title": "Network Infrastructure Management",
+      "text": "Network Infrastructure Management. Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.",
+      "normalized_text_hash": "c856ebc5a72e4d1dad5e56f90d4c0540c41dd729403c233c22d29183964ce4ce",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-13",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-13",
+      "control_number": 13,
+      "title": "Network Monitoring and Defense",
+      "text": "Network Monitoring and Defense. Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise\u2019s network infrastructure and user base.",
+      "normalized_text_hash": "562c5483476f37bbd0d78954ed4ceedd5cab1836e54a75c6733bda12e21a9e64",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-14",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-14",
+      "control_number": 14,
+      "title": "Security Awareness and Skills Training",
+      "text": "Security Awareness and Skills Training. Establish and maintain a security awareness program to influence behavior among the workforce to be security conscious and properly skilled to reduce cybersecurity risks to the enterprise.",
+      "normalized_text_hash": "166c090dc09ba22437de28c6005ef2222a2315f64fe2fd9f92a5f1e43b8c4c29",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-15",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-15",
+      "control_number": 15,
+      "title": "Service Provider Management",
+      "text": "Service Provider Management. Develop a process to evaluate service providers who hold sensitive data, or are responsible for an enterprise\u2019s critical IT platforms or processes, to ensure these providers are protecting those platforms and data appropriately.",
+      "normalized_text_hash": "4cde4cea3609f5a9070565eca082ecd6507587a62057f166393c035a3090fc9e",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-16",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-16",
+      "control_number": 16,
+      "title": "Application Software Security",
+      "text": "Application Software Security. Manage the security life cycle of in-house developed, hosted, or acquired software to prevent, detect, and remediate security weaknesses before they can impact the enterprise.",
+      "normalized_text_hash": "0585db8de5a3750b423a1b3c324e74eb1cc3899574233ec79f04f64fd557a9a4",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-17",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-17",
+      "control_number": 17,
+      "title": "Incident Response Management",
+      "text": "Incident Response Management. Establish a program to develop and maintain an incident response capability (e.g., policies, plans, procedures, defined roles, training, and communications) to prepare, detect, and quickly respond to an attack.",
+      "normalized_text_hash": "afaca08bda816cbf5ffaa0ff628079f501b03283241f0bb6da3e9be5bc55f9ad",
+      "source_page": "controls_list"
+    },
+    {
+      "unit_id": "UNIT-CIS-18",
+      "unit_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "control_id": "CIS-18",
+      "control_number": 18,
+      "title": "Penetration Testing",
+      "text": "Penetration Testing. Test the effectiveness and resiliency of enterprise assets through identifying and exploiting weaknesses in controls (people, processes, and technology), and simulating the objectives and actions of an attacker.",
+      "normalized_text_hash": "bd92cf89b07a94700699c252af2c2a566583edb03b130524fc194e4fe5b65469",
+      "source_page": "controls_list"
+    }
+  ]
+}

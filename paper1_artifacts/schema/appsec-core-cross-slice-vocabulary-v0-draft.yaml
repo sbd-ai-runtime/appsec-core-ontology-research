@@ -1,0 +1,229 @@
+meta:
+  name: AppSec Core Cross-Slice Vocabulary v0 Draft
+  version: '0.1'
+  status: working_draft
+  maturity: consolidation_entry
+  description: >
+    First shared vocabulary draft extracted from the ten AppSec Core slices.
+    This file focuses on the lowest-risk cross-slice vocabulary that already
+    behaves like common schema, plus a constrained set of promotion and alias
+    candidates for artifacts and evidence.
+  related_artifacts:
+    core_v0_draft: ontology/appsec-core-v0-draft.yaml
+    manual_mapping_v0_draft: ontology/appsec-core-manual-mapping-v0-draft.yaml
+    consolidation_note: docs/project/working-notes/2026-04-03-appsec-core-v0-consolidation.md
+purpose:
+  current_goal: >
+    Capture the shared vocabulary that can already be promoted across slices
+    without erasing slice-specific semantics too early.
+  non_goals:
+    - replacing_slice_specific_objective_vocabularies
+    - flattening_all_practice_types_into_one_global_enum
+    - flattening_all_mechanism_types_into_one_global_enum
+    - introducing_external_alignment_terms
+    - introducing_v3_runtime_terms
+stable_enums:
+  objective_kind:
+    values:
+      - atomic
+      - composite
+    meaning:
+      atomic: reusable_domain_meaning
+      composite: broad_manual_control_surface_landing_zone
+  objective_type:
+    values:
+      - governance
+      - preventive
+      - detective
+      - corrective
+    note: >
+      This objective-level enum is already stable enough across the ten slice
+      drafts, including the explicit corrective semantics needed for tested
+      rollback and recovery readiness.
+stable_relation_vocabulary:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+  informative_but_not_yet_core_driving:
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+artifact_and_evidence_vocabulary:
+  canonical_roles_stable_now:
+    - configuration
+    - governance_record
+    - review_record
+    - approval_record
+    - gate_record
+    - inventory
+    - attestation
+    - report
+    - evidence_package
+    - operational_record
+    - build_definition
+    - release_artifact
+    - model
+    - validation_output
+    - binding_record
+  alias_candidates_safe_enough_now:
+    - alias: pipeline_definition
+      canonical_role: build_definition
+      rationale: Both denote reviewed executable definition artifacts for controlled automation
+    - alias: decision_record
+      canonical_role: governance_record
+      rationale: The current distinction is too thin to justify a separate cross-slice role
+    - alias: log_record
+      canonical_role: operational_record
+      rationale: Durable security-log records are one subtype of operational records
+    - alias: audit_trail
+      canonical_role: operational_record
+      rationale: The current usage behaves as a durable operational record surface
+    - alias: policy_evidence
+      canonical_role: evidence_package
+      rationale: Current usage is evidentiary support, not a stable standalone role
+    - alias: authorization_binding
+      canonical_role: binding_record
+      rationale: The current usage is a specific identity-binding record shape
+  keep_distinct_for_now:
+    - checklist
+    - diagram
+    - baseline
+    - strategy
+    - register
+    - policy_record
+    - alert_policy
+    - traceability_record
+    - release_record
+    - deployment_record
+    - rollback_record
+    - guidance
+  evidence_kind_read:
+    rule: >
+      Evidence kinds currently mirror artifact roles closely enough that the
+      first v0 move should be to reuse canonical artifact-role vocabulary where
+      possible rather than invent a second unrelated evidence taxonomy.
+    still_open:
+      - workflow_record
+      - whether_traceability_record_should_absorb_release_deployment_and_rollback_records
+  detectable_surfaces_stable_now:
+    - ci_cd
+    - logs
+    - documentation
+    - config
+practice_and_mechanism_read:
+  current_state:
+    practice_and_mechanism_terms_are_too_slice_shaped_for_full_global_enums: true
+    safe_move_now: cluster_them_without_forcing_full_flattening
+  provisional_families:
+    governance_and_review:
+      practices:
+        - review
+        - boundary_review
+        - contract_review
+        - governance
+        - error_governance
+        - finding_governance
+        - methodology
+        - strategy
+        - release_decision
+      mechanisms:
+        - review
+        - review_gate
+        - governance_recording
+        - baseline
+    policy_and_gate_enforcement:
+      practices:
+        - approval
+        - approval_gate
+        - gating
+        - gateway_enforcement
+      mechanisms:
+        - approval_gate
+        - gate
+        - gate_policy
+        - policy
+        - policy_control
+        - policy_engine
+        - promotion_control
+    identity_and_trust_control:
+      practices:
+        - authentication
+        - authorization
+        - mutual_auth
+        - identity_binding
+        - session_management
+        - revocation
+      mechanisms:
+        - identity_protocol
+        - token_control
+        - mutual_auth
+        - gateway
+        - workload_identity
+        - short_lived_credential
+    validation_and_analysis:
+      practices:
+        - validation
+        - verification
+        - static_analysis
+        - dynamic_testing
+        - specialized_testing
+        - contract_validation
+        - schema_enforcement
+        - pattern_exclusion
+      mechanisms:
+        - scanner
+        - schema_validator
+        - parser_guard
+        - test_orchestrator
+        - automated_validation
+        - instrumentation
+    integrity_traceability_and_records:
+      practices:
+        - attestation
+        - traceability
+        - evidence_management
+        - inventory
+      mechanisms:
+        - attestation
+        - provenance_check
+        - traceability_control
+        - inventory
+        - versioning
+        - workflow
+    rollout_recovery_and_runtime_records:
+      practices:
+        - controlled_rollout
+        - rollback
+        - centralized_ingestion
+        - pipeline_health
+        - audit_logging
+      mechanisms:
+        - rollout_control
+        - rollback_control
+        - ingestion_control
+        - logging_control
+        - health_control
+current_read:
+  stable_enough_now:
+    - objective_kind_and_objective_type_are_cross_slice_stable
+    - the core_relation_set_is_cross_slice_stable
+    - a first canonical_artifact_role_layer_is_now_defensible
+    - evidence_kinds_can_partly_reuse_artifact_role_vocabulary
+    - one_low_granularity_detectable_surface_layer_is_now_defensible
+  not_stable_enough_yet:
+    - one_global_practice_type_enum
+    - one_global_mechanism_type_enum
+    - one_final_domain_enum_across_all_slice_families
+    - one_final_record_taxonomy_for_traceability_vs_operational_records
+next_step:
+  recommendation: >
+    Use this draft to refine the shared entity schema in `appsec-core-v0-draft`
+    before deciding whether any further slice expansion is still justified.

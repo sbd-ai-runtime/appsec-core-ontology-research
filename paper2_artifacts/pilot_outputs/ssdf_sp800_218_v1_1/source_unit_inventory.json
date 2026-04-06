@@ -1,0 +1,373 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "ssdf_sp800_218_v1_1",
+  "status": "extracted_from_pdf",
+  "source_document_id": "SRC-NIST-SP800-218-V1_1",
+  "extraction_mode": "PyPDF2_page_units",
+  "source_snapshot_path": "sources/ssdf_sp800_218_v1_1/NIST.SP.800-218.pdf",
+  "derived_text_path": "sources/ssdf_sp800_218_v1_1/NIST.SP.800-218.extracted.txt",
+  "extracted_at": "2026-04-03T18:09:54Z",
+  "page_count": 36,
+  "items": [
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P001",
+      "unit_type": "page",
+      "page_number": 1,
+      "heading_candidate": "NIST Special Publication 800 -218",
+      "char_count": 298,
+      "word_count": 37,
+      "normalized_text_hash": "1d0c40b3db5da7252dfa8c11140d2272d1fb74f7f8c6d7b21b1a094d8e87e994",
+      "preview": "NIST Special Publication 800 -218 Secure Software Development Framework (SSDF) Version 1.1:"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P002",
+      "unit_type": "page",
+      "page_number": 2,
+      "heading_candidate": "NIST Special Publication 800 -218",
+      "char_count": 784,
+      "word_count": 107,
+      "normalized_text_hash": "faad0fdd1e3d9a93eafc90b3d6565a87f24051bf5c9873881da00de17fca19b9",
+      "preview": "NIST Special Publication 800 -218 Secure Software Development Framework (SSDF) Version 1.1:"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P003",
+      "unit_type": "page",
+      "page_number": 3,
+      "heading_candidate": "Authority",
+      "char_count": 3028,
+      "word_count": 446,
+      "normalized_text_hash": "523eac4af7bcfe8d3707a8fd9d43d439a495303d06b07e44cfba07b755679f2b",
+      "preview": "Authority This publication has been developed by NIST in accordance with its statutory responsibilities under the Federal Information Security M odernization Act (FISMA) of 2014 , 44 U.S.C. § 355 1 et seq. , Public Law"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P004",
+      "unit_type": "page",
+      "page_number": 4,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 2354,
+      "word_count": 316,
+      "normalized_text_hash": "0b9d83a89562065edb4968576caab4bea395bcfc9842b5fcf2788405df6a92dd",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 ii This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P005",
+      "unit_type": "page",
+      "page_number": 5,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3137,
+      "word_count": 458,
+      "normalized_text_hash": "1e9d1bd2371aa70869d1701d97363baf2fdba104872c2d2c288592140df78cba",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 iii This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P006",
+      "unit_type": "page",
+      "page_number": 6,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 1524,
+      "word_count": 229,
+      "normalized_text_hash": "0533ccfa6748e958f8abd9932e9a86677f6f3fa3e6d6fce355f03a528a07f7cb",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 iv This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P007",
+      "unit_type": "page",
+      "page_number": 7,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 964,
+      "word_count": 162,
+      "normalized_text_hash": "2c4e830849db91043e8b807ef9cf3b35f8846b64a1fabee7637e61c0e38dee4f",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 v This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P008",
+      "unit_type": "page",
+      "page_number": 8,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 2351,
+      "word_count": 345,
+      "normalized_text_hash": "32c616139f0c219e37ef51264640f276364d754db3a40615090cc3858794d32b",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 vi This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P009",
+      "unit_type": "page",
+      "page_number": 9,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 1121,
+      "word_count": 83,
+      "normalized_text_hash": "599a300e6d0f61cc0963e0db98c4046c66be98e2f49d55ec2949421540e15c9e",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 vii This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P010",
+      "unit_type": "page",
+      "page_number": 10,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3443,
+      "word_count": 520,
+      "normalized_text_hash": "f34da13ab99b97a72b6944b6f3466994ee6e1fc0b30dce53e9094e0505f048d4",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 1 This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P011",
+      "unit_type": "page",
+      "page_number": 11,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3029,
+      "word_count": 434,
+      "normalized_text_hash": "07fe1b38aa24956389cfdf49e055ec9be02bd14e868a1c3204340a18eb40f9a9",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 2 This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P012",
+      "unit_type": "page",
+      "page_number": 12,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3711,
+      "word_count": 548,
+      "normalized_text_hash": "e0c3d4d7b2d33a6fce110ae485b0288fff6bbca2736342efe4462f9580b3f0c5",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 3 This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P013",
+      "unit_type": "page",
+      "page_number": 13,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3173,
+      "word_count": 496,
+      "normalized_text_hash": "dc5e941392a719938c80bd5d6953c9da3f0e7548dbd76e8b1a4edb7d2eb99b5b",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 4 This publication is available free of charge from: http s://doi.org/10.6028/ NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P014",
+      "unit_type": "page",
+      "page_number": 14,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 5748,
+      "word_count": 865,
+      "normalized_text_hash": "9f693e12893e0014b2b2a4d9192087e3068bf6709142fa61ca1108b9714cbcf9",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 5 Table 1: The Secure Software Development Framework (SSDF) Version 1.1 Practices Tasks Notional Implementation Examples References"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P015",
+      "unit_type": "page",
+      "page_number": 15,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 4166,
+      "word_count": 635,
+      "normalized_text_hash": "5b0693f6d72f5ab09a9d70eb4e65533c50f9d7c0e93e490c9745910186b267bc",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 6 Practices Tasks Notional Implementation Examples References Example 4 : Require third parties to provide provenance5 data and integrity"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P016",
+      "unit_type": "page",
+      "page_number": 16,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 5696,
+      "word_count": 806,
+      "normalized_text_hash": "8fab97d381cb808cad54ffdd16a890f058f635d4583b978794c0d66172105fba",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 7 Practices Tasks Notional Implementation Examples References PO.2.3 : Obtain upper management or authorizing"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P017",
+      "unit_type": "page",
+      "page_number": 17,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 5074,
+      "word_count": 743,
+      "normalized_text_hash": "29beacfcda784d03d820c08daa551aa4c11e6125a7c2d18f7ecc2967ce4c8b72",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 8 Practices Tasks Notional Implementation Examples References cannot generate. OWASPSAMM : PC3 -B"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P018",
+      "unit_type": "page",
+      "page_number": 18,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 4659,
+      "word_count": 689,
+      "normalized_text_hash": "313ccfa946e2f04b7212c5a588fbbbc8846d078a7b7ad7b3e9bd1548f09d69c0",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 9 Practices Tasks Notional Implementation Examples References from attempted and actual cyber incidents ."
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P019",
+      "unit_type": "page",
+      "page_number": 19,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3240,
+      "word_count": 479,
+      "normalized_text_hash": "4c8bca54da566fba2e637707dba0f7e8538d31dd54f07e352e71c7c963b4239c",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 10 Practices Tasks Notional Implementation Examples References Provide a Mechanism for Verifying Software"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P020",
+      "unit_type": "page",
+      "page_number": 20,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 4629,
+      "word_count": 699,
+      "normalized_text_hash": "e809939d0bc1295b8e062eb9de662ad2077f3fbc91bbeb075d0de303e25b83d7",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 11 Practices Tasks Notional Implementation Examples References Produce Well -Secured Software (PW)"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P021",
+      "unit_type": "page",
+      "page_number": 21,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 5465,
+      "word_count": 807,
+      "normalized_text_hash": "524d6dd21ad13bf91b6bfc19bcb414f84196f070a778a9dc6dc21ca52e120324",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 12 Practices Tasks Notional Implementation Examples References Review the Software Design to Verify"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P022",
+      "unit_type": "page",
+      "page_number": 22,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3939,
+      "word_count": 608,
+      "normalized_text_hash": "eb58aa1d429d050a7cdaa0afef3258fc00aeb35fb0c7f6f9eeac2082dae89dc0",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 13 Practices Tasks Notional Implementation Examples References PW.4.4: Verify that acquired commercial, open-source,"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P023",
+      "unit_type": "page",
+      "page_number": 23,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 5616,
+      "word_count": 857,
+      "normalized_text_hash": "5e7005698b02463b7da103bfadf157a3a5c611e3cf546f4a82e6acd11930c018",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 14 Practices Tasks Notional Implementation Examples References Configure the Compilation , Interpreter, and"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P024",
+      "unit_type": "page",
+      "page_number": 24,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 4509,
+      "word_count": 683,
+      "normalized_text_hash": "c40bba6d775ee0a3c87747570bbf4f5c19d438163d170b4b2f66d7be4fb870d5",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 15 Practices Tasks Notional Implementation Examples References Example 7: Identify and document the root cause s of discovered issue s."
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P025",
+      "unit_type": "page",
+      "page_number": 25,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 4331,
+      "word_count": 651,
+      "normalized_text_hash": "71f883ad99949a9a5d289ebf84d81db2b93b0b84fce012c9ccf8a2fe2a542d6e",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 16 Practices Tasks Notional Implementation Examples References Configure Software to Have Secure Settings"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P026",
+      "unit_type": "page",
+      "page_number": 26,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 2519,
+      "word_count": 377,
+      "normalized_text_hash": "b371eb06b4749458d3eb2f5f18a2cdf324927ae210a72737192590feda8b4258",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 17 Practices Tasks Notional Implementation Examples References ISO29147 : 6.4"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P027",
+      "unit_type": "page",
+      "page_number": 27,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 3892,
+      "word_count": 606,
+      "normalized_text_hash": "0929d696a3b0c251e627a055168aceba1129528ce8b19e377e4602c9581469c8",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 18 Practices Tasks Notional Implementation Examples References RV.2.2 : Plan and implement risk responses for"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P028",
+      "unit_type": "page",
+      "page_number": 28,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 224,
+      "word_count": 32,
+      "normalized_text_hash": "22980c8f29f2f0201f7ddab9b0cd03e071f3d94f586efe232444ebdc9b6756e5",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 19 Practices Tasks Notional Implementation Examples References PCISSLC : 2.6, 4.2"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P029",
+      "unit_type": "page",
+      "page_number": 29,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 2457,
+      "word_count": 292,
+      "normalized_text_hash": "36501dbbae2c5f4a67e424e4a3df1c2944f84d9791eb61d85d060cb663ca47b8",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 20 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P030",
+      "unit_type": "page",
+      "page_number": 30,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 2604,
+      "word_count": 278,
+      "normalized_text_hash": "87ce33d50ada097bfca73513884d900ca2795e924a1e2efaff7af19dc36cda24",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 21 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P031",
+      "unit_type": "page",
+      "page_number": 31,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 2327,
+      "word_count": 263,
+      "normalized_text_hash": "51b4d5c8774d8035b3bc8552e5ac323c20a24e740cbe572bc4f26d55b916a8cb",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 22 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P032",
+      "unit_type": "page",
+      "page_number": 32,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 1044,
+      "word_count": 132,
+      "normalized_text_hash": "0b17555931f6dc21c7cbb87ab7c33c05b3f76c5895accc5686395f63d928d0d1",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 23 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P033",
+      "unit_type": "page",
+      "page_number": 33,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 1966,
+      "word_count": 296,
+      "normalized_text_hash": "b1c6a3898b7c5e2f2f4aca816fd08f36b7e43b402fb094a2fd4499aa865ca928",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 24 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P034",
+      "unit_type": "page",
+      "page_number": 34,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 1599,
+      "word_count": 207,
+      "normalized_text_hash": "a95f3d2fb306dd229b0b47685841973aee05ab3db5d9786b0efbd297ccdc3fae",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 25 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P035",
+      "unit_type": "page",
+      "page_number": 35,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 205,
+      "word_count": 28,
+      "normalized_text_hash": "f2dbcb194514a9878b843a9dce6a632bc216db42705167d246a40704c9d5ba32",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 26 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    },
+    {
+      "unit_id": "SRC-NIST-SP800-218-V1_1:P036",
+      "unit_type": "page",
+      "page_number": 36,
+      "heading_candidate": "NIST SP 800-218 SSDF VERSION 1.1",
+      "char_count": 1546,
+      "word_count": 242,
+      "normalized_text_hash": "4bdb03c966681d3c3008cae69729c0f635af6ab1c36fcefb68e6618614a19a68",
+      "preview": "NIST SP 800-218 SSDF VERSION 1.1 27 This publication is available free of charge from: http s://doi.org/10.6 028/NIST.SP.800 -218"
+    }
+  ]
+}

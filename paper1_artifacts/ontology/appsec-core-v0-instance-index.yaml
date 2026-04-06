@@ -1,0 +1,197 @@
+meta:
+  name: AppSec Core v0 Instance Index
+  version: '0.1'
+  status: working_draft
+  maturity: consolidation_entry
+  description: >
+    Lightweight global instance index for AppSec Core v0. This index provides
+    one compact cross-slice navigation surface for normalized objectives,
+    practices, mechanisms and artifacts without forcing one fully merged
+    instance set too early.
+  related_artifacts:
+    core_v0_draft: ontology/appsec-core-v0-draft.yaml
+    surface_contract: ontology/appsec-core-v0-surface-contract.yaml
+    slice_registry: ontology/appsec-core-slice-registry-v0-draft.yaml
+    manual_mapping_contract: ontology/appsec-core-manual-mapping-v0-draft.yaml
+    readiness_note: docs/project/working-notes/2026-04-03-appsec-core-v0-readiness.md
+purpose:
+  current_goal: >
+    Provide one compact global index of first-pass AppSec Core instances that
+    is sufficient for v0 packaging and navigation.
+  non_goals:
+    - replacing_slice_local_instance_drafts
+    - flattening_every_slice_nuance
+    - publishing_global_threat_or_signal_instances
+    - publishing_global_evidencepattern_instances_before_they_exist_slice_locally
+instance_families:
+  indexed_now:
+    ControlObjective:
+      source: normalized_objectives_in_slice_drafts
+      total_count: 70
+    Practice:
+      source: normalized_practices_in_slice_component_drafts
+      total_count: 63
+    Mechanism:
+      source: normalized_mechanisms_in_slice_component_drafts
+      total_count: 48
+    Artifact:
+      source: normalized_artifacts_in_slice_component_drafts
+      total_count: 53
+  not_globally_indexed_yet:
+    EvidencePattern:
+      reason: >
+        EvidencePattern is first-class in the shared schema, but the current
+        slice drafts do not yet expose normalized evidence-pattern instance
+        sets in a consistent slice-local form.
+    Threat:
+      reason: informative_but_not_core_driving
+    Signal:
+      reason: informative_but_not_core_driving
+summary:
+  slices: 10
+  total_indexed_instances: 234
+  counts:
+    control_objectives: 70
+    practices: 63
+    mechanisms: 48
+    artifacts: 53
+slice_instances:
+  - slice_id: ASC-01
+    scope: supply_chain_and_build_integrity
+    objective_draft: ontology/appsec-core-supply-chain-build-integrity-draft.yaml
+    components_draft: ontology/appsec-core-supply-chain-build-integrity-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 7
+      mechanisms: 5
+      artifacts: 10
+    control_objectives: [ACO-SCBI-001, ACO-SCBI-002, ACO-SCBI-003, ACO-SCBI-004, ACO-SCBI-005, ACO-SCBI-006, ACO-SCBI-007]
+    practices: [ACP-SCBI-001, ACP-SCBI-002, ACP-SCBI-003, ACP-SCBI-004, ACP-SCBI-005, ACP-SCBI-006, ACP-SCBI-007]
+    mechanisms: [ACM-SCBI-001, ACM-SCBI-002, ACM-SCBI-003, ACM-SCBI-004, ACM-SCBI-005]
+    artifacts: [ACA-SCBI-001, ACA-SCBI-002, ACA-SCBI-003, ACA-SCBI-004, ACA-SCBI-005, ACA-SCBI-006, ACA-SCBI-007, ACA-SCBI-008, ACA-SCBI-009, ACA-SCBI-010]
+  - slice_id: ASC-02
+    scope: identity_access_and_session_trust
+    objective_draft: ontology/appsec-core-identity-access-session-trust-draft.yaml
+    components_draft: ontology/appsec-core-identity-access-session-trust-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 6
+      mechanisms: 6
+      artifacts: 6
+    control_objectives: [ACO-IAT-001, ACO-IAT-002, ACO-IAT-003, ACO-IAT-004, ACO-IAT-005, ACO-IAT-006, ACO-IAT-007]
+    practices: [ACP-IAT-001, ACP-IAT-002, ACP-IAT-003, ACP-IAT-004, ACP-IAT-005, ACP-IAT-006]
+    mechanisms: [ACM-IAT-001, ACM-IAT-002, ACM-IAT-003, ACM-IAT-004, ACM-IAT-005, ACM-IAT-006]
+    artifacts: [ACA-IAT-001, ACA-IAT-002, ACA-IAT-003, ACA-IAT-004, ACA-IAT-005, ACA-IAT-006]
+  - slice_id: ASC-03
+    scope: architecture_and_trust_boundaries
+    objective_draft: ontology/appsec-core-architecture-trust-boundaries-draft.yaml
+    components_draft: ontology/appsec-core-architecture-trust-boundaries-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 7
+      mechanisms: 5
+      artifacts: 4
+    control_objectives: [ACO-ATB-001, ACO-ATB-002, ACO-ATB-003, ACO-ATB-004, ACO-ATB-005, ACO-ATB-006, ACO-ATB-007]
+    practices: [ACP-ATB-001, ACP-ATB-002, ACP-ATB-003, ACP-ATB-004, ACP-ATB-005, ACP-ATB-006, ACP-ATB-007]
+    mechanisms: [ACM-ATB-001, ACM-ATB-002, ACM-ATB-003, ACM-ATB-004, ACM-ATB-005]
+    artifacts: [ACA-ATB-001, ACA-ATB-002, ACA-ATB-003, ACA-ATB-004]
+  - slice_id: ASC-04
+    scope: testing_security_validation_and_empirical_assurance
+    objective_draft: ontology/appsec-core-testing-security-validation-draft.yaml
+    components_draft: ontology/appsec-core-testing-security-validation-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 7
+      mechanisms: 5
+      artifacts: 6
+    control_objectives: [ACO-TSV-001, ACO-TSV-002, ACO-TSV-003, ACO-TSV-004, ACO-TSV-005, ACO-TSV-006, ACO-TSV-007]
+    practices: [ACP-TSV-001, ACP-TSV-002, ACP-TSV-003, ACP-TSV-004, ACP-TSV-005, ACP-TSV-006, ACP-TSV-007]
+    mechanisms: [ACM-TSV-001, ACM-TSV-002, ACM-TSV-003, ACM-TSV-004, ACM-TSV-005]
+    artifacts: [ACA-TSV-001, ACA-TSV-002, ACA-TSV-003, ACA-TSV-004, ACA-TSV-005, ACA-TSV-006]
+  - slice_id: ASC-05
+    scope: threat_modeling_risk_disposition_and_mitigation_traceability
+    objective_draft: ontology/appsec-core-threat-modeling-risk-disposition-draft.yaml
+    components_draft: ontology/appsec-core-threat-modeling-risk-disposition-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 7
+      mechanisms: 6
+      artifacts: 4
+    control_objectives: [ACO-TMR-001, ACO-TMR-002, ACO-TMR-003, ACO-TMR-004, ACO-TMR-005, ACO-TMR-006, ACO-TMR-007]
+    practices: [ACP-TMR-001, ACP-TMR-002, ACP-TMR-003, ACP-TMR-004, ACP-TMR-005, ACP-TMR-006, ACP-TMR-007]
+    mechanisms: [ACM-TMR-001, ACM-TMR-002, ACM-TMR-003, ACM-TMR-004, ACM-TMR-005, ACM-TMR-006]
+    artifacts: [ACA-TMR-001, ACA-TMR-002, ACA-TMR-003, ACA-TMR-004]
+  - slice_id: ASC-06
+    scope: secret_handling_protected_configuration_and_operational_identities
+    objective_draft: ontology/appsec-core-secrets-protected-config-draft.yaml
+    components_draft: ontology/appsec-core-secrets-protected-config-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 6
+      mechanisms: 4
+      artifacts: 2
+    control_objectives: [ACO-SPC-001, ACO-SPC-002, ACO-SPC-003, ACO-SPC-004, ACO-SPC-005, ACO-SPC-006, ACO-SPC-007]
+    practices: [ACP-SPC-001, ACP-SPC-002, ACP-SPC-003, ACP-SPC-004, ACP-SPC-005, ACP-SPC-006]
+    mechanisms: [ACM-SPC-001, ACM-SPC-002, ACM-SPC-003, ACM-SPC-004]
+    artifacts: [ACA-SPC-001, ACA-SPC-002]
+  - slice_id: ASC-07
+    scope: input_validation_safe_parsing_and_controlled_failure
+    objective_draft: ontology/appsec-core-input-validation-safe-failure-draft.yaml
+    components_draft: ontology/appsec-core-input-validation-safe-failure-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 6
+      mechanisms: 4
+      artifacts: 6
+    control_objectives: [ACO-IVF-001, ACO-IVF-002, ACO-IVF-003, ACO-IVF-004, ACO-IVF-005, ACO-IVF-006, ACO-IVF-007]
+    practices: [ACP-IVF-001, ACP-IVF-002, ACP-IVF-003, ACP-IVF-004, ACP-IVF-005, ACP-IVF-006]
+    mechanisms: [ACM-IVF-001, ACM-IVF-002, ACM-IVF-003, ACM-IVF-004]
+    artifacts: [ACA-IVF-001, ACA-IVF-002, ACA-IVF-003, ACA-IVF-004, ACA-IVF-005, ACA-IVF-006]
+  - slice_id: ASC-08
+    scope: integration_trust_and_service_to_service_security
+    objective_draft: ontology/appsec-core-integration-trust-service-security-draft.yaml
+    components_draft: ontology/appsec-core-integration-trust-service-security-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 6
+      mechanisms: 5
+      artifacts: 5
+    control_objectives: [ACO-ITS-001, ACO-ITS-002, ACO-ITS-003, ACO-ITS-004, ACO-ITS-005, ACO-ITS-006, ACO-ITS-007]
+    practices: [ACP-ITS-001, ACP-ITS-002, ACP-ITS-003, ACP-ITS-004, ACP-ITS-005, ACP-ITS-006]
+    mechanisms: [ACM-ITS-001, ACM-ITS-002, ACM-ITS-003, ACM-ITS-004, ACM-ITS-005]
+    artifacts: [ACA-ITS-001, ACA-ITS-002, ACA-ITS-003, ACA-ITS-004, ACA-ITS-005]
+  - slice_id: ASC-09
+    scope: release_promotion_controlled_rollout_and_rollback_readiness
+    objective_draft: ontology/appsec-core-release-promotion-controlled-rollout-draft.yaml
+    components_draft: ontology/appsec-core-release-promotion-controlled-rollout-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 6
+      mechanisms: 4
+      artifacts: 8
+    control_objectives: [ACO-RPR-001, ACO-RPR-002, ACO-RPR-003, ACO-RPR-004, ACO-RPR-005, ACO-RPR-006, ACO-RPR-007]
+    practices: [ACP-RPR-001, ACP-RPR-002, ACP-RPR-003, ACP-RPR-004, ACP-RPR-005, ACP-RPR-006]
+    mechanisms: [ACM-RPR-001, ACM-RPR-002, ACM-RPR-003, ACM-RPR-004]
+    artifacts: [ACA-RPR-001, ACA-RPR-002, ACA-RPR-003, ACA-RPR-004, ACA-RPR-005, ACA-RPR-006, ACA-RPR-007, ACA-RPR-008]
+  - slice_id: ASC-10
+    scope: security_event_logging_audit_trail_and_centralized_logging
+    objective_draft: ontology/appsec-core-security-event-logging-audit-trail-draft.yaml
+    components_draft: ontology/appsec-core-security-event-logging-audit-trail-components-draft.yaml
+    counts:
+      control_objectives: 7
+      practices: 5
+      mechanisms: 4
+      artifacts: 2
+    control_objectives: [ACO-SLG-001, ACO-SLG-002, ACO-SLG-003, ACO-SLG-004, ACO-SLG-005, ACO-SLG-006, ACO-SLG-007]
+    practices: [ACP-SLG-001, ACP-SLG-002, ACP-SLG-003, ACP-SLG-004, ACP-SLG-005]
+    mechanisms: [ACM-SLG-001, ACM-SLG-002, ACM-SLG-003, ACM-SLG-004]
+    artifacts: [ACA-SLG-001, ACA-SLG-002]
+current_read:
+  stable_enough_now:
+    - one_lightweight_global_instance_index_is_enough_for_first_v0_packaging
+    - the_index_makes_cross_slice_navigation_possible_without_forcing_full_merge
+    - the_index_confirms_that_v0_already_has_substantial_first_class_instance_coverage
+  not_stable_enough_yet:
+    - one_global_evidencepattern_instance_set
+    - one_global_threat_instance_set
+    - one_global_signal_instance_set

@@ -1,0 +1,560 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "slsa_spec_v1_0_build_track",
+  "status": "section_level_normalization_ready",
+  "normalization_target": "AppSec Core v0",
+  "normalization_scope": {
+    "primary_anchor_entity": "ControlObjective",
+    "source_object_model": "slsa_build_track_curated_sections",
+    "classification_taxonomy": [
+      "manual_gap",
+      "appsec_core_gap",
+      "comparison_gap",
+      "out_of_scope_for_appsec_core"
+    ]
+  },
+  "summary": {
+    "source_items": 14,
+    "counts_by_status": {
+      "mapped": 12,
+      "comparison_gap": 2
+    }
+  },
+  "notes": [
+    "This pilot uses curated section-level normalization from versioned SLSA HTML pages.",
+    "manual_gap is intentionally not asserted during normalization; that requires explicit comparison against the published manual traceability surface.",
+    "comparison_gap means the current AppSec Core and method have adjacent semantics but the objective-level projection remains too coarse to claim clean coverage."
+  ],
+  "items": [
+    {
+      "source_object_id": "SLSA-BUILD-L1",
+      "source_object_type": "control_surface",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-LEVELS"
+      ],
+      "source_title": "Build L1: Provenance exists",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "strong",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-LEVELS:build-l1-provenance-exists"
+      ],
+      "rationale": "Build L1 is directly about provenance existing and being distributable, which lands cleanly on artifact attestation and provenance integrity with secondary tie to reproducible traceability evidence.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-006",
+        "name": "Artifact Attestation And Provenance Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-004",
+          "name": "Reproducible Security Test Evidence And Build Traceability",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-BUILD-L2",
+      "source_object_type": "control_surface",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-LEVELS"
+      ],
+      "source_title": "Build L2: Hosted build platform",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "strong",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-LEVELS:build-l2-hosted-build-platform"
+      ],
+      "rationale": "Hosted build platform semantics primarily strengthen build execution integrity and provenance trustworthiness.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-BUILD-L3",
+      "source_object_type": "control_surface",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-LEVELS"
+      ],
+      "source_title": "Build L3: Hardened builds",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-LEVELS:build-l3-hardened-builds"
+      ],
+      "rationale": "Hardened builds combine stronger build execution integrity, provenance trust and isolation guarantees, so the landing remains bounded across supply-chain and segmentation semantics.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-004",
+          "name": "Technical Segmentation And Sensitive Domain Isolation",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-PRINCIPLE-TRUST-PLATFORMS",
+      "source_object_type": "principle",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-PRINCIPLES"
+      ],
+      "source_title": "Trust platforms, verify artifacts",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-PRINCIPLES:trust-platforms-verify-artifacts"
+      ],
+      "rationale": "Trusting platforms while verifying artifacts is primarily an attestation-and-verification posture, but it also depends on execution-integrity of the build platform itself.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-006",
+        "name": "Artifact Attestation And Provenance Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-004",
+          "name": "Reproducible Security Test Evidence And Build Traceability",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-PRINCIPLE-TRUST-CODE",
+      "source_object_type": "principle",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-PRINCIPLES"
+      ],
+      "source_title": "Trust code, not individuals",
+      "source_statement_kind": "substantive",
+      "normalization_status": "comparison_gap",
+      "landing_strength": "none",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "blocked_on_method_gap",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-PRINCIPLES:trust-code-not-individuals"
+      ],
+      "rationale": "Tracing trust to source code rather than individuals has adjacent semantics in controlled sources and provenance, but the current objective-level line does not capture this trust-transfer principle cleanly.",
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-003",
+          "name": "Controlled Dependency And Image Sources",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-PRINCIPLE-PREFER-ATTESTATIONS",
+      "source_object_type": "principle",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-PRINCIPLES"
+      ],
+      "source_title": "Prefer attestations over inferences",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "strong",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-PRINCIPLES:prefer-attestations-over-inferences"
+      ],
+      "rationale": "Explicit attestations over inferred trust maps directly to artifact attestation and provenance integrity, with reproducible evidence as secondary support.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-006",
+        "name": "Artifact Attestation And Provenance Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-004",
+          "name": "Reproducible Security Test Evidence And Build Traceability",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM",
+      "source_object_type": "producer_requirement",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS"
+      ],
+      "source_title": "Choose an appropriate build platform",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS:choose-an-appropriate-build-platform"
+      ],
+      "rationale": "Choosing a capable build platform is mostly a build-integrity concern, with platform isolation and environment segmentation as supporting context.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-004",
+          "name": "Technical Segmentation And Sensitive Domain Isolation",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-PRODUCER-CONSISTENT-BUILD",
+      "source_object_type": "producer_requirement",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS"
+      ],
+      "source_title": "Follow a consistent build process",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "strong",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS:follow-a-consistent-build-process"
+      ],
+      "rationale": "Consistent build processes land directly on build-definition and execution integrity with reproducible evidence as secondary support.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-004",
+          "name": "Reproducible Security Test Evidence And Build Traceability",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-PRODUCER-DISTRIBUTE-PROVENANCE",
+      "source_object_type": "producer_requirement",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS"
+      ],
+      "source_title": "Distribute provenance",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "strong",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS:distribute-provenance"
+      ],
+      "rationale": "Distributing provenance is directly an artifact-attestation concern with downstream deployment traceability as support.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-006",
+        "name": "Artifact Attestation And Provenance Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-004",
+          "name": "End-to-End Deployment Traceability",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "detective"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION",
+      "source_object_type": "platform_requirement",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS"
+      ],
+      "source_title": "Provenance generation",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "strong",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS:provenance-generation"
+      ],
+      "rationale": "Platform-side provenance generation directly anchors in artifact attestation and provenance integrity, with build execution integrity as supporting context.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-006",
+        "name": "Artifact Attestation And Provenance Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-BUILD-PLATFORM-ISOLATION",
+      "source_object_type": "platform_requirement",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS"
+      ],
+      "source_title": "Isolation strength",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-REQUIREMENTS:isolation-strength"
+      ],
+      "rationale": "Isolation strength is primarily a build execution integrity requirement, but it also touches technical segmentation and domain isolation semantics.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-004",
+          "name": "Technical Segmentation And Sensitive Domain Isolation",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-VERIFY-BUILD-LEVEL",
+      "source_object_type": "verification_surface",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-VERIFYING-ARTIFACTS"
+      ],
+      "source_title": "Step 1: Check SLSA Build level",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "strong",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-VERIFYING-ARTIFACTS:step-1-check-slsa-build-level"
+      ],
+      "rationale": "Checking build level is a verification and evidence-traceability discipline that depends on attestation integrity.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-TSV-004",
+        "name": "Reproducible Security Test Evidence And Build Traceability",
+        "scope": "testing_security_validation_and_empirical_assurance",
+        "objective_kind": "atomic",
+        "objective_type": "governance"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-VERIFY-EXPECTATIONS",
+      "source_object_type": "verification_surface",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-VERIFYING-ARTIFACTS"
+      ],
+      "source_title": "Step 2: Check expectations",
+      "source_statement_kind": "substantive",
+      "normalization_status": "comparison_gap",
+      "landing_strength": "none",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "blocked_on_method_gap",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-VERIFYING-ARTIFACTS:step-2-check-expectations"
+      ],
+      "rationale": "Expectation formation and checking sits across provenance verification, pre-promotion gating and policy expectations, but the current objective-level surface does not capture this compound verifier stance cleanly.",
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-004",
+          "name": "Reproducible Security Test Evidence And Build Traceability",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-RPR-003",
+          "name": "Pre-Promotion Security Gates And Staging Assurance",
+          "scope": "release_promotion_controlled_rollout_and_rollback_readiness",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-002",
+          "name": "Dependency Risk Evaluation And Policy Gating",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "source_object_id": "SLSA-VERIFY-DEPENDENCIES",
+      "source_object_type": "verification_surface",
+      "source_document_ids": [
+        "SRC-SLSA-V1_0-VERIFYING-ARTIFACTS"
+      ],
+      "source_title": "Step 3: (Optional) Check dependencies recursively",
+      "source_statement_kind": "substantive",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "normalization_mode": "curated_section_normalization",
+      "comparison_readiness": "ready_for_manual_projection",
+      "source_unit_ids": [
+        "SRC-SLSA-V1_0-VERIFYING-ARTIFACTS:step-3-optional-check-dependencies-recursively"
+      ],
+      "rationale": "Recursive dependency checking aligns to dependency inventory, risk evaluation and provenance support, but the section is still broader than a single exact objective.",
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-001",
+        "name": "Dependency Inventory And SBOM Traceability",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "governance"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-002",
+          "name": "Dependency Risk Evaluation And Policy Gating",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    }
+  ]
+}

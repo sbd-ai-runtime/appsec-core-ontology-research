@@ -1,0 +1,1031 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "asvs_v5_0_0",
+  "status": "published_traceability_surface_cluster_compared",
+  "comparison_scope": "constrained_cluster_level_review_against_published_traceability_surface",
+  "notes": [
+    "This comparison is intentionally cluster-level and conservative.",
+    "It does not claim direct manual gaps for individual ASVS requirements.",
+    "Families landing in likely_appsec_core_gap_or_traceability_gap remain pressure on AppSec Core or publication packaging, not proven absence from the manual."
+  ],
+  "summary": {
+    "clusters": 36,
+    "items_considered": 289,
+    "counts_by_adjudication": {
+      "comparison_gap_not_manual_gap": 28,
+      "not_manual_gap": 6,
+      "likely_appsec_core_gap_or_traceability_gap": 2
+    },
+    "counts_by_traceability_surface_status": {
+      "published_surface_semantic_support": 28,
+      "published_traceability_explicit": 6,
+      "published_traceability_no_explicit_hit_but_manual_semantics_present": 2
+    }
+  },
+  "items": [
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "anti_automation_projection_gap",
+      "label": "anti automation projection gap",
+      "item_count": 2,
+      "coverage_status_counts": {
+        "indeterminate": 2
+      },
+      "section_ids": [
+        "V2.4"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V2.4.1",
+        "ASVS-REQ-V2.4.2"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Anti-automation controls may exceed the current packaging style, but this is still comparison pressure rather than evidence of manual absence.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "api_protocol_specific_projection_gap",
+      "label": "api protocol specific projection gap",
+      "item_count": 6,
+      "coverage_status_counts": {
+        "indeterminate": 6
+      },
+      "section_ids": [
+        "V4.3",
+        "V4.4"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V4.3.1",
+        "ASVS-REQ-V4.3.2",
+        "ASVS-REQ-V4.4.1",
+        "ASVS-REQ-V4.4.2",
+        "ASVS-REQ-V4.4.3",
+        "ASVS-REQ-V4.4.4"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Protocol-specific API families such as GraphQL and WebSocket remain more granular than the current published manual packaging, but not proven absent.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "architecture_and_dependency_hardening_projection_gap",
+      "label": "architecture and dependency hardening projection gap",
+      "item_count": 5,
+      "coverage_status_counts": {
+        "indeterminate": 5
+      },
+      "section_ids": [
+        "V15.2"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V15.2.1",
+        "ASVS-REQ-V15.2.2",
+        "ASVS-REQ-V15.2.3",
+        "ASVS-REQ-V15.2.4",
+        "ASVS-REQ-V15.2.5"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Architecture hardening and dependency discipline are already supported, but the current top-down publication is broader than the ASVS section wording.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/05-dependencias-sbom-sca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "authentication_lifecycle_and_recovery",
+      "label": "authentication lifecycle and recovery",
+      "item_count": 6,
+      "coverage_status_counts": {
+        "partial": 6
+      },
+      "section_ids": [
+        "V6.4"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V6.4.1",
+        "ASVS-REQ-V6.4.2",
+        "ASVS-REQ-V6.4.3",
+        "ASVS-REQ-V6.4.4",
+        "ASVS-REQ-V6.4.5",
+        "ASVS-REQ-V6.4.6"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Lifecycle and recovery semantics for authentication exist in the manual, but the published rows remain broader than the ASVS family articulation.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/13-formacao-onboarding/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "authentication_strength_and_assurance",
+      "label": "authentication strength and assurance",
+      "item_count": 37,
+      "coverage_status_counts": {
+        "partial": 37
+      },
+      "section_ids": [
+        "V6.1",
+        "V6.2",
+        "V6.3",
+        "V6.5",
+        "V6.6",
+        "V6.7"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V6.1.1",
+        "ASVS-REQ-V6.1.2",
+        "ASVS-REQ-V6.1.3",
+        "ASVS-REQ-V6.2.1",
+        "ASVS-REQ-V6.2.2",
+        "ASVS-REQ-V6.2.3",
+        "ASVS-REQ-V6.2.4",
+        "ASVS-REQ-V6.2.5",
+        "ASVS-REQ-V6.2.6",
+        "ASVS-REQ-V6.2.7",
+        "ASVS-REQ-V6.2.8",
+        "ASVS-REQ-V6.2.9"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Authentication strength and assurance are supported by the published manual, but not yet packaged as one dedicated ASVS-style family for direct comparison.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/13-formacao-onboarding/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "authorization_and_least_privilege",
+      "label": "authorization and least privilege",
+      "item_count": 13,
+      "coverage_status_counts": {
+        "partial": 13
+      },
+      "section_ids": [
+        "V8.1",
+        "V8.2",
+        "V8.3",
+        "V8.4"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V8.1.1",
+        "ASVS-REQ-V8.1.2",
+        "ASVS-REQ-V8.1.3",
+        "ASVS-REQ-V8.1.4",
+        "ASVS-REQ-V8.2.1",
+        "ASVS-REQ-V8.2.2",
+        "ASVS-REQ-V8.2.3",
+        "ASVS-REQ-V8.2.4",
+        "ASVS-REQ-V8.3.1",
+        "ASVS-REQ-V8.3.2",
+        "ASVS-REQ-V8.3.3",
+        "ASVS-REQ-V8.4.1"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Authorization and least-privilege semantics are present, but not yet packaged as one dedicated published family for ASVS comparison.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "backend_component_authentication",
+      "label": "backend component authentication",
+      "item_count": 4,
+      "coverage_status_counts": {
+        "partial": 4
+      },
+      "section_ids": [
+        "V13.2"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V13.2.1",
+        "ASVS-REQ-V13.2.4",
+        "ASVS-REQ-V13.2.5",
+        "ASVS-REQ-V13.2.6"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Backend-component authentication is supported by architecture, infrastructure and deployment semantics, but not exposed as a dedicated published family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "backend_least_privilege",
+      "label": "backend least privilege",
+      "item_count": 1,
+      "coverage_status_counts": {
+        "partial": 1
+      },
+      "section_ids": [
+        "V13.2"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V13.2.2"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Backend least-privilege semantics are present, but the current published surface is broader than the ASVS requirement phrasing.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "business_logic_security_projection_gap",
+      "label": "business logic security projection gap",
+      "item_count": 5,
+      "coverage_status_counts": {
+        "indeterminate": 5
+      },
+      "section_ids": [
+        "V2.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V2.3.1",
+        "ASVS-REQ-V2.3.2",
+        "ASVS-REQ-V2.3.3",
+        "ASVS-REQ-V2.3.4",
+        "ASVS-REQ-V2.3.5"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Business-logic security is adjacent to requirements, architecture and threat-modeling semantics, but is not yet packaged as one direct published ASVS family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/03-threat-modeling/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "controlled_failure_and_non_revealing_errors",
+      "label": "controlled failure and non revealing errors",
+      "item_count": 1,
+      "coverage_status_counts": {
+        "covered": 1
+      },
+      "section_ids": [
+        "V16.5"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V16.5.1"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Controlled failure behavior is supported by secure-development and validation semantics, but not yet emitted as one direct ASVS family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "encoding_architecture_projection_gap",
+      "label": "encoding architecture projection gap",
+      "item_count": 2,
+      "coverage_status_counts": {
+        "indeterminate": 2
+      },
+      "section_ids": [
+        "V1.1"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V1.1.1",
+        "ASVS-REQ-V1.1.2"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Encoding and sanitization architecture is semantically supported through requirements, threat-modeling and secure-development links, but not yet published as one direct ASVS family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/03-threat-modeling/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "error_handling_and_sensitive_logging_hygiene",
+      "label": "error handling and sensitive logging hygiene",
+      "item_count": 3,
+      "coverage_status_counts": {
+        "partial": 3
+      },
+      "section_ids": [
+        "V16.5"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V16.5.2",
+        "ASVS-REQ-V16.5.3",
+        "ASVS-REQ-V16.5.4"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Error handling and sensitive-logging hygiene are already adjacent to secure-development, testing and monitoring semantics, but not yet a dedicated published family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "file_download_and_content_serving_projection_gap",
+      "label": "file download and content serving projection gap",
+      "item_count": 3,
+      "coverage_status_counts": {
+        "indeterminate": 3
+      },
+      "section_ids": [
+        "V5.4"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V5.4.1",
+        "ASVS-REQ-V5.4.2",
+        "ASVS-REQ-V5.4.3"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "File download and content-serving controls are adjacent to published validation and secure-development surfaces, but not yet emitted as a dedicated ASVS family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "file_handling_documentation_projection_gap",
+      "label": "file handling documentation projection gap",
+      "item_count": 1,
+      "coverage_status_counts": {
+        "indeterminate": 1
+      },
+      "section_ids": [
+        "V5.1"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V5.1.1"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "File-handling documentation is adjacent to secure-development and validation surfaces, but not yet expressed as one clean published family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "frontend_browser_security_projection_gap",
+      "label": "frontend browser security projection gap",
+      "item_count": 31,
+      "coverage_status_counts": {
+        "indeterminate": 31
+      },
+      "section_ids": [
+        "V3.1",
+        "V3.2",
+        "V3.3",
+        "V3.4",
+        "V3.5",
+        "V3.6",
+        "V3.7"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V3.1.1",
+        "ASVS-REQ-V3.2.1",
+        "ASVS-REQ-V3.2.2",
+        "ASVS-REQ-V3.2.3",
+        "ASVS-REQ-V3.3.1",
+        "ASVS-REQ-V3.3.2",
+        "ASVS-REQ-V3.3.3",
+        "ASVS-REQ-V3.3.4",
+        "ASVS-REQ-V3.3.5",
+        "ASVS-REQ-V3.4.1",
+        "ASVS-REQ-V3.4.2",
+        "ASVS-REQ-V3.4.3"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Frontend and browser-security semantics put pressure on scope and packaging, but the current state is still best read as comparison pressure rather than proven manual absence.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "identity_provider_and_federated_authentication",
+      "label": "identity provider and federated authentication",
+      "item_count": 4,
+      "coverage_status_counts": {
+        "partial": 4
+      },
+      "section_ids": [
+        "V6.8"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V6.8.1",
+        "ASVS-REQ-V6.8.2",
+        "ASVS-REQ-V6.8.3",
+        "ASVS-REQ-V6.8.4"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Federated authentication and identity-provider trust are semantically supported, but not yet emitted as a clean published comparison family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "injection_and_sanitization_discipline",
+      "label": "injection and sanitization discipline",
+      "item_count": 22,
+      "coverage_status_counts": {
+        "covered": 22
+      },
+      "section_ids": [
+        "V1.2",
+        "V1.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V1.2.1",
+        "ASVS-REQ-V1.2.2",
+        "ASVS-REQ-V1.2.3",
+        "ASVS-REQ-V1.2.4",
+        "ASVS-REQ-V1.2.5",
+        "ASVS-REQ-V1.2.6",
+        "ASVS-REQ-V1.2.7",
+        "ASVS-REQ-V1.2.8",
+        "ASVS-REQ-V1.2.9",
+        "ASVS-REQ-V1.2.10",
+        "ASVS-REQ-V1.3.1",
+        "ASVS-REQ-V1.3.2"
+      ],
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Injection prevention and sanitization are already explicit published manual semantics across requirements, secure development and testing surfaces.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "input_contract_validation",
+      "label": "input contract validation",
+      "item_count": 8,
+      "coverage_status_counts": {
+        "covered": 8
+      },
+      "section_ids": [
+        "V2.2",
+        "V4.2"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V2.2.1",
+        "ASVS-REQ-V2.2.2",
+        "ASVS-REQ-V2.2.3",
+        "ASVS-REQ-V4.2.1",
+        "ASVS-REQ-V4.2.2",
+        "ASVS-REQ-V4.2.3",
+        "ASVS-REQ-V4.2.4",
+        "ASVS-REQ-V4.2.5"
+      ],
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Structured input and message-contract validation already has explicit published support in requirements and secure-development surfaces.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "integration_contract_assurance",
+      "label": "integration contract assurance",
+      "item_count": 5,
+      "coverage_status_counts": {
+        "partial": 5
+      },
+      "section_ids": [
+        "V4.1"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V4.1.1",
+        "ASVS-REQ-V4.1.2",
+        "ASVS-REQ-V4.1.3",
+        "ASVS-REQ-V4.1.4",
+        "ASVS-REQ-V4.1.5"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Generic web-service assurance is already present in requirements and architecture semantics, but not emitted as one dedicated ASVS section family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "log_integrity_and_protection",
+      "label": "log integrity and protection",
+      "item_count": 3,
+      "coverage_status_counts": {
+        "covered": 3
+      },
+      "section_ids": [
+        "V16.4"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V16.4.1",
+        "ASVS-REQ-V16.4.2",
+        "ASVS-REQ-V16.4.3"
+      ],
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Log protection and auditability are already explicit published manual semantics.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "logging_documentation_projection_gap",
+      "label": "logging documentation projection gap",
+      "item_count": 1,
+      "coverage_status_counts": {
+        "indeterminate": 1
+      },
+      "section_ids": [
+        "V16.1"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V16.1.1"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Logging strategy and documentation are already implied by the published monitoring surface, but not yet separated as one direct family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "oauth_and_oidc_service_trust",
+      "label": "oauth and oidc service trust",
+      "item_count": 36,
+      "coverage_status_counts": {
+        "partial": 36
+      },
+      "section_ids": [
+        "V10.1",
+        "V10.2",
+        "V10.3",
+        "V10.4",
+        "V10.5",
+        "V10.6",
+        "V10.7"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V10.1.1",
+        "ASVS-REQ-V10.1.2",
+        "ASVS-REQ-V10.2.1",
+        "ASVS-REQ-V10.2.2",
+        "ASVS-REQ-V10.2.3",
+        "ASVS-REQ-V10.3.1",
+        "ASVS-REQ-V10.3.2",
+        "ASVS-REQ-V10.3.3",
+        "ASVS-REQ-V10.3.4",
+        "ASVS-REQ-V10.3.5",
+        "ASVS-REQ-V10.4.1",
+        "ASVS-REQ-V10.4.2"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "OAuth and OIDC trust semantics are present via architecture and secure execution surfaces, but not yet published as one dedicated ASVS family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "protected_secret_storage",
+      "label": "protected secret storage",
+      "item_count": 2,
+      "coverage_status_counts": {
+        "partial": 2
+      },
+      "section_ids": [
+        "V13.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V13.3.2",
+        "ASVS-REQ-V13.3.4"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Secret handling is already present in infrastructure and governance surfaces, but not as one dedicated ASVS comparison family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "secret_leak_prevention",
+      "label": "secret leak prevention",
+      "item_count": 1,
+      "coverage_status_counts": {
+        "partial": 1
+      },
+      "section_ids": [
+        "V13.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V13.3.1"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Secret leakage prevention is semantically supported, but the published rows remain broader than the ASVS statement shape.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "secret_usage_isolation",
+      "label": "secret usage isolation",
+      "item_count": 1,
+      "coverage_status_counts": {
+        "partial": 1
+      },
+      "section_ids": [
+        "V13.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V13.3.3"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Secret usage isolation is semantically present, but the current top-down publication does not isolate it as one clean ASVS family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "secure_coding_and_architecture_documentation_projection_gap",
+      "label": "secure coding and architecture documentation projection gap",
+      "item_count": 5,
+      "coverage_status_counts": {
+        "indeterminate": 5
+      },
+      "section_ids": [
+        "V15.1"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V15.1.1",
+        "ASVS-REQ-V15.1.2",
+        "ASVS-REQ-V15.1.3",
+        "ASVS-REQ-V15.1.4",
+        "ASVS-REQ-V15.1.5"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Secure coding and architecture documentation are present in the manual, but not yet emitted as one clean published ASVS-oriented family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "secure_coding_discipline_gap",
+      "label": "secure coding discipline gap",
+      "item_count": 7,
+      "coverage_status_counts": {
+        "appsec_core_gap": 7
+      },
+      "section_ids": [
+        "V15.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V15.3.1",
+        "ASVS-REQ-V15.3.2",
+        "ASVS-REQ-V15.3.3",
+        "ASVS-REQ-V15.3.4",
+        "ASVS-REQ-V15.3.5",
+        "ASVS-REQ-V15.3.6",
+        "ASVS-REQ-V15.3.7"
+      ],
+      "traceability_surface_status": "published_traceability_no_explicit_hit_but_manual_semantics_present",
+      "adjudication": "likely_appsec_core_gap_or_traceability_gap",
+      "reason": "Generic defensive coding discipline is clearly present in the manual, but it is not yet exposed as one reusable published family or clean core landing zone; treat it as AppSec Core or packaging pressure, not manual absence.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "secure_configuration_baseline_gap",
+      "label": "secure configuration baseline gap",
+      "item_count": 12,
+      "coverage_status_counts": {
+        "appsec_core_gap": 12
+      },
+      "section_ids": [
+        "V13.1",
+        "V13.2",
+        "V13.4"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V13.1.1",
+        "ASVS-REQ-V13.1.2",
+        "ASVS-REQ-V13.1.3",
+        "ASVS-REQ-V13.1.4",
+        "ASVS-REQ-V13.2.3",
+        "ASVS-REQ-V13.4.1",
+        "ASVS-REQ-V13.4.2",
+        "ASVS-REQ-V13.4.3",
+        "ASVS-REQ-V13.4.4",
+        "ASVS-REQ-V13.4.5",
+        "ASVS-REQ-V13.4.6",
+        "ASVS-REQ-V13.4.7"
+      ],
+      "traceability_surface_status": "published_traceability_no_explicit_hit_but_manual_semantics_present",
+      "adjudication": "likely_appsec_core_gap_or_traceability_gap",
+      "reason": "Secure configuration, unintended information leakage by configuration, and baseline integrity have supporting manual semantics, but no clean dedicated published family yet; this remains pressure on AppSec Core or traceability packaging, not proven manual absence.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/09-containers-imagens/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "secure_transport",
+      "label": "secure transport",
+      "item_count": 7,
+      "coverage_status_counts": {
+        "partial": 7
+      },
+      "section_ids": [
+        "V12.1",
+        "V12.2"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V12.1.1",
+        "ASVS-REQ-V12.1.2",
+        "ASVS-REQ-V12.1.3",
+        "ASVS-REQ-V12.1.4",
+        "ASVS-REQ-V12.1.5",
+        "ASVS-REQ-V12.2.1",
+        "ASVS-REQ-V12.2.2"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Secure transport semantics are adjacent to architecture, deploy and integration-trust controls, but not emitted as one ASVS-specific published family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "security_event_logging_coverage",
+      "label": "security event logging coverage",
+      "item_count": 4,
+      "coverage_status_counts": {
+        "covered": 4
+      },
+      "section_ids": [
+        "V16.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V16.3.1",
+        "ASVS-REQ-V16.3.2",
+        "ASVS-REQ-V16.3.3",
+        "ASVS-REQ-V16.3.4"
+      ],
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Security-event logging is already an explicit published surface in the monitoring chapter.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "self_contained_token_trust",
+      "label": "self contained token trust",
+      "item_count": 7,
+      "coverage_status_counts": {
+        "partial": 7
+      },
+      "section_ids": [
+        "V9.1",
+        "V9.2"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V9.1.1",
+        "ASVS-REQ-V9.1.2",
+        "ASVS-REQ-V9.1.3",
+        "ASVS-REQ-V9.2.1",
+        "ASVS-REQ-V9.2.2",
+        "ASVS-REQ-V9.2.3",
+        "ASVS-REQ-V9.2.4"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Token integrity and token-content trust are semantically supported, but the current published surface is broader than the ASVS token family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "service_to_service_auth_and_transport",
+      "label": "service to service auth and transport",
+      "item_count": 5,
+      "coverage_status_counts": {
+        "partial": 5
+      },
+      "section_ids": [
+        "V12.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V12.3.1",
+        "ASVS-REQ-V12.3.2",
+        "ASVS-REQ-V12.3.3",
+        "ASVS-REQ-V12.3.4",
+        "ASVS-REQ-V12.3.5"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Service-to-service trust is already semantically present, but the published traceability rows do not yet expose it as a clean ASVS-specific family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "session_and_token_trust",
+      "label": "session and token trust",
+      "item_count": 19,
+      "coverage_status_counts": {
+        "partial": 19
+      },
+      "section_ids": [
+        "V7.1",
+        "V7.2",
+        "V7.3",
+        "V7.4",
+        "V7.5",
+        "V7.6"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V7.1.1",
+        "ASVS-REQ-V7.1.2",
+        "ASVS-REQ-V7.1.3",
+        "ASVS-REQ-V7.2.1",
+        "ASVS-REQ-V7.2.2",
+        "ASVS-REQ-V7.2.3",
+        "ASVS-REQ-V7.2.4",
+        "ASVS-REQ-V7.3.1",
+        "ASVS-REQ-V7.3.2",
+        "ASVS-REQ-V7.4.1",
+        "ASVS-REQ-V7.4.2",
+        "ASVS-REQ-V7.4.3"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Session-management semantics are already present, but the published manual surface does not expose them as one dedicated ASVS-style family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "structured_logging_shape",
+      "label": "structured logging shape",
+      "item_count": 5,
+      "coverage_status_counts": {
+        "covered": 5
+      },
+      "section_ids": [
+        "V16.2"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V16.2.1",
+        "ASVS-REQ-V16.2.2",
+        "ASVS-REQ-V16.2.3",
+        "ASVS-REQ-V16.2.4",
+        "ASVS-REQ-V16.2.5"
+      ],
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "General logging structure is already an explicit published surface in monitoring and operational telemetry.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "validation_before_internal_use",
+      "label": "validation before internal use",
+      "item_count": 12,
+      "coverage_status_counts": {
+        "covered": 12
+      },
+      "section_ids": [
+        "V1.5",
+        "V5.2",
+        "V5.3"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V1.5.1",
+        "ASVS-REQ-V1.5.2",
+        "ASVS-REQ-V1.5.3",
+        "ASVS-REQ-V5.2.1",
+        "ASVS-REQ-V5.2.2",
+        "ASVS-REQ-V5.2.3",
+        "ASVS-REQ-V5.2.4",
+        "ASVS-REQ-V5.2.5",
+        "ASVS-REQ-V5.2.6",
+        "ASVS-REQ-V5.3.1",
+        "ASVS-REQ-V5.3.2",
+        "ASVS-REQ-V5.3.3"
+      ],
+      "traceability_surface_status": "published_traceability_explicit",
+      "adjudication": "not_manual_gap",
+      "reason": "Validation before deserialization, upload handling and internal file use is already explicit in published validation and secure-development surfaces.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md"
+      ]
+    },
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "cluster_id": "validation_documentation_projection_gap",
+      "label": "validation documentation projection gap",
+      "item_count": 3,
+      "coverage_status_counts": {
+        "indeterminate": 3
+      },
+      "section_ids": [
+        "V2.1"
+      ],
+      "example_source_object_ids": [
+        "ASVS-REQ-V2.1.1",
+        "ASVS-REQ-V2.1.2",
+        "ASVS-REQ-V2.1.3"
+      ],
+      "traceability_surface_status": "published_surface_semantic_support",
+      "adjudication": "comparison_gap_not_manual_gap",
+      "reason": "Validation documentation and validation strategy are already supported, but the published manual surface does not emit them as one ASVS-specific family.",
+      "evidence_files": [
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+        "data/source/SbD-ToE-Manual/manuals_src/docs/sbd-toe/010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md"
+      ]
+    }
+  ]
+}

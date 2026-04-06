@@ -1,0 +1,277 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "cis_controls_v8_1",
+  "status": "normalized_first_pass_ready",
+  "notes": [
+    "This pilot is intentionally control-level and broad.",
+    "The first pass is meant to test AppSec Core signal versus enterprise-scope noise, not to force clean traceability too early."
+  ],
+  "summary": {
+    "items": 19,
+    "counts_by_normalization_status": {
+      "context_only": 1,
+      "out_of_scope_for_appsec_core": 10,
+      "comparison_gap": 4,
+      "appsec_core_gap": 1,
+      "mapped": 3
+    }
+  },
+  "items": [
+    {
+      "source_object_id": "CIS-CONTEXT-V8_1",
+      "source_title": "CIS Critical Security Controls Version 8.1",
+      "control_id": null,
+      "normalization_status": "context_only",
+      "comparison_readiness": "not_direct_comparison_target",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "context_only",
+      "rationale": "This item is retained as pilot context only and is not a direct comparison target."
+    },
+    {
+      "source_object_id": "CIS-1",
+      "source_title": "Inventory and Control of Enterprise Assets",
+      "control_id": "CIS-1",
+      "control_number": 1,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "enterprise_asset_inventory_out_of_scope",
+      "rationale": "Enterprise asset inventory is broader than the intended AppSec Core and does not land cleanly on an application-security slice."
+    },
+    {
+      "source_object_id": "CIS-2",
+      "source_title": "Inventory and Control of Software Assets",
+      "control_id": "CIS-2",
+      "control_number": 2,
+      "normalization_status": "comparison_gap",
+      "comparison_readiness": "comparison_method_backlog_candidate",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [
+        "ACO-SCBI-001",
+        "ACO-SCBI-007"
+      ],
+      "matched_rule_id": "software_inventory_broad_surface",
+      "rationale": "Software asset inventory is adjacent to dependency and build-integrity semantics, but the CIS control is broader than the current AppSec Core packaging."
+    },
+    {
+      "source_object_id": "CIS-3",
+      "source_title": "Data Protection",
+      "control_id": "CIS-3",
+      "control_number": 3,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "data_protection_out_of_scope",
+      "rationale": "General data protection is broader than the current AppSec Core boundary and is not treated as a first-pass AppSec control family here."
+    },
+    {
+      "source_object_id": "CIS-4",
+      "source_title": "Secure Configuration of Enterprise Assets and Software",
+      "control_id": "CIS-4",
+      "control_number": 4,
+      "normalization_status": "appsec_core_gap",
+      "comparison_readiness": "appsec_core_gap_candidate",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [
+        "ACO-SPC-007",
+        "ACO-IVF-007"
+      ],
+      "matched_rule_id": "secure_configuration_baseline_gap",
+      "rationale": "Secure configuration is clearly relevant to AppSec, but the current reusable core still lacks a clean dedicated baseline-integrity landing zone."
+    },
+    {
+      "source_object_id": "CIS-5",
+      "source_title": "Account Management",
+      "control_id": "CIS-5",
+      "control_number": 5,
+      "normalization_status": "comparison_gap",
+      "comparison_readiness": "comparison_method_backlog_candidate",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [
+        "ACO-IAT-007",
+        "ACO-ITS-007"
+      ],
+      "matched_rule_id": "account_management_broad_identity_surface",
+      "rationale": "Account management is strongly identity-related, but the CIS control remains broader than the current AppSec Core identity packaging."
+    },
+    {
+      "source_object_id": "CIS-6",
+      "source_title": "Access Control Management",
+      "control_id": "CIS-6",
+      "control_number": 6,
+      "normalization_status": "mapped",
+      "comparison_readiness": "direct_comparison_candidate",
+      "primary_core_anchor": "ACO-IAT-007",
+      "nearest_core_anchors": [
+        "ACO-IAT-003",
+        "ACO-IAT-004",
+        "ACO-ITS-007"
+      ],
+      "matched_rule_id": "identity_access_control_management",
+      "rationale": "Access control management lands cleanly enough on the identity/access/session trust slice, using the broad-control-to-composite rule."
+    },
+    {
+      "source_object_id": "CIS-7",
+      "source_title": "Continuous Vulnerability Management",
+      "control_id": "CIS-7",
+      "control_number": 7,
+      "normalization_status": "comparison_gap",
+      "comparison_readiness": "comparison_method_backlog_candidate",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [
+        "ACO-TSV-007",
+        "ACO-TMR-007"
+      ],
+      "matched_rule_id": "continuous_vulnerability_management_broad_validation_surface",
+      "rationale": "Continuous vulnerability management is adjacent to testing and risk-disposition semantics, but broader than the current AppSec Core surfaces."
+    },
+    {
+      "source_object_id": "CIS-8",
+      "source_title": "Audit Log Management",
+      "control_id": "CIS-8",
+      "control_number": 8,
+      "normalization_status": "mapped",
+      "comparison_readiness": "direct_comparison_candidate",
+      "primary_core_anchor": "ACO-SLG-007",
+      "nearest_core_anchors": [
+        "ACO-SLG-002",
+        "ACO-SLG-003",
+        "ACO-SLG-004"
+      ],
+      "matched_rule_id": "security_event_logging_coverage",
+      "rationale": "Audit log management aligns well with the security-event logging and audit-trail slice."
+    },
+    {
+      "source_object_id": "CIS-9",
+      "source_title": "Email and Web Browser Protections",
+      "control_id": "CIS-9",
+      "control_number": 9,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "email_browser_protection_out_of_scope",
+      "rationale": "Email and browser protections are broader enterprise controls and exceed the intended AppSec Core boundary for this first pass."
+    },
+    {
+      "source_object_id": "CIS-10",
+      "source_title": "Malware Defenses",
+      "control_id": "CIS-10",
+      "control_number": 10,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "malware_defenses_out_of_scope",
+      "rationale": "Malware defenses are a broad endpoint and platform concern, not a first-pass AppSec Core surface."
+    },
+    {
+      "source_object_id": "CIS-11",
+      "source_title": "Data Recovery",
+      "control_id": "CIS-11",
+      "control_number": 11,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "data_recovery_out_of_scope",
+      "rationale": "Data recovery is operational resilience rather than AppSec Core semantics in this line."
+    },
+    {
+      "source_object_id": "CIS-12",
+      "source_title": "Network Infrastructure Management",
+      "control_id": "CIS-12",
+      "control_number": 12,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "network_infrastructure_out_of_scope",
+      "rationale": "Network infrastructure management is broader than the current application-security core boundary."
+    },
+    {
+      "source_object_id": "CIS-13",
+      "source_title": "Network Monitoring and Defense",
+      "control_id": "CIS-13",
+      "control_number": 13,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "network_monitoring_and_defense_out_of_scope",
+      "rationale": "Network monitoring and defense are security-operations controls that exceed the intended AppSec Core surface for this first pass."
+    },
+    {
+      "source_object_id": "CIS-14",
+      "source_title": "Security Awareness and Skills Training",
+      "control_id": "CIS-14",
+      "control_number": 14,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "security_awareness_out_of_scope",
+      "rationale": "Security awareness and skills training are organizational controls and remain outside the current AppSec Core boundary."
+    },
+    {
+      "source_object_id": "CIS-15",
+      "source_title": "Service Provider Management",
+      "control_id": "CIS-15",
+      "control_number": 15,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "service_provider_management_out_of_scope",
+      "rationale": "Service provider management is a governance and supplier-management control, not a first-pass AppSec Core landing zone."
+    },
+    {
+      "source_object_id": "CIS-16",
+      "source_title": "Application Software Security",
+      "control_id": "CIS-16",
+      "control_number": 16,
+      "normalization_status": "comparison_gap",
+      "comparison_readiness": "comparison_method_backlog_candidate",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [
+        "ACO-IVF-007",
+        "ACO-TSV-007",
+        "ACO-IAT-007",
+        "ACO-ATB-007"
+      ],
+      "matched_rule_id": "application_software_security_bundled_surface",
+      "rationale": "Application software security clearly belongs in scope, but CIS Control 16 bundles several AppSec concerns more broadly than the current slice packaging."
+    },
+    {
+      "source_object_id": "CIS-17",
+      "source_title": "Incident Response Management",
+      "control_id": "CIS-17",
+      "control_number": 17,
+      "normalization_status": "out_of_scope_for_appsec_core",
+      "comparison_readiness": "scope_boundary_marker",
+      "primary_core_anchor": null,
+      "nearest_core_anchors": [],
+      "matched_rule_id": "incident_response_out_of_scope",
+      "rationale": "Incident response management is broader operational security and is not treated as a first-pass AppSec Core surface here."
+    },
+    {
+      "source_object_id": "CIS-18",
+      "source_title": "Penetration Testing",
+      "control_id": "CIS-18",
+      "control_number": 18,
+      "normalization_status": "mapped",
+      "comparison_readiness": "direct_comparison_candidate",
+      "primary_core_anchor": "ACO-TSV-007",
+      "nearest_core_anchors": [
+        "ACO-TSV-004",
+        "ACO-TSV-005",
+        "ACO-TSV-006"
+      ],
+      "matched_rule_id": "penetration_testing_and_security_validation",
+      "rationale": "Penetration testing lands cleanly enough on the testing and empirical-validation slice using the broad-control-to-composite rule."
+    }
+  ]
+}

@@ -1,0 +1,1595 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "ssdf_sp800_218_v1_1",
+  "status": "source_objects_extracted",
+  "source_document_id": "SRC-NIST-SP800-218-V1_1",
+  "object_model": "ssdf_practice_and_task_inventory",
+  "extraction_mode": "ssdf_practice_task_parser_v1",
+  "source_snapshot_path": "sources/ssdf_sp800_218_v1_1/NIST.SP.800-218.extracted.txt",
+  "counts": {
+    "practices": 20,
+    "tasks": 47,
+    "total": 67
+  },
+  "notes": [
+    "This is a SSDF-specific extraction layer, not yet a generalized external source parser.",
+    "Practice titles are curated from the SSDF v1.1 publication to avoid brittle OCR/text-extraction drift.",
+    "Practice and task statements are extracted deterministically from the normalized PDF text snapshot.",
+    "Redirect-style SSDF objects such as Moved to ... are preserved explicitly instead of being collapsed away."
+  ],
+  "items": [
+    {
+      "object_id": "SSDF-PRACTICE-PO.1",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "group_title": "Prepare the Organization",
+      "ssdf_code": "PO.1",
+      "title": "Define Security Requirements for Software Development",
+      "statement": "Ensure that security requirements for software development are known at all times so that they can be taken into account throughout the SDLC and duplication of effort can be minimized because the requirements information can be collected once and shared. This includes requirements from internal sources (e.g., the organization\u2019s policies, business objectives, and risk management strategy) and external sources (e.g., applicable laws and regulations).",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        14,
+        21,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "acb4cf096262f80d55537c2dab787c43c36290fb89ae2ca072ef0e78f0ad7297",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PO.2",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "group_title": "Prepare the Organization",
+      "ssdf_code": "PO.2",
+      "title": "Implement Roles and Responsibilities",
+      "statement": "Ensure that everyone inside and outside of the organization involved in the SDLC is prepared to perform their SDLC -related roles and responsibilities throughout the SDLC.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        15,
+        16
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P015",
+        "SRC-NIST-SP800-218-V1_1:P016"
+      ],
+      "normalized_text_hash": "2107967fdc6bda1115576dd42a9787cf86c0338036f904712aca4ea6b80d6370",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PO.3",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "group_title": "Prepare the Organization",
+      "ssdf_code": "PO.3",
+      "title": "Implement Supporting Toolchains",
+      "statement": "Use automation to reduce human effort and improve the accuracy, reproduc ibility, usability, and comprehensiveness of security practices throughout the SDLC, as well as provide a way to document and demonstrate the use of these practices. Toolchains and tools may be used at different levels of the organization, such as organization-wide or project -specific, and may address a particular part of the SDLC, like a build pipeline.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        16,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P016",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "a8bcad817b7d630b52fbe339872793a0058c7e001c36b3b7a590352dd22d6890",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PO.4",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "group_title": "Prepare the Organization",
+      "ssdf_code": "PO.4",
+      "title": "Define and Use Criteria for Software Security Checks",
+      "statement": "Help ensure that the software resulting from the SDLC meets the organization\u2019s expectations by defining and using criteria for checking the software\u2019s security during development.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        17,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P017",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "e481c423458d4418565e3281056a59125e175f6eb84c6a342bc83175dc097faa",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PO.5",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "group_title": "Prepare the Organization",
+      "ssdf_code": "PO.5",
+      "title": "Implement and Maintain Secure Environments for Software Development",
+      "statement": "Ensure that all components of the environments for software development are strongly protected from internal and external threats to prevent compromises of the environments or the software being developed or maintained within them. Examples of environments for softwar e development include development, build, test, and distribution environments.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        17,
+        18,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P017",
+        "SRC-NIST-SP800-218-V1_1:P018",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "fb638110bb28178e7c4bc48eb23b7a465c56e04ebe17765ceff92f26dc6c7de0",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PS.1",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PS",
+      "group_title": "Protect the Software",
+      "ssdf_code": "PS.1",
+      "title": "Protect All Forms of Code from Unauthorized Access and Tampering",
+      "statement": "Help prevent unauthorized changes to code, both inadvertent and intentional, which could circumvent or negate the intended security characteristics of the software. For code that is not intended to be publicly accessible, this helps prevent theft of the software and may make it more difficult or time-consuming for attackers to find vulnerabilities in the software.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        18,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P018",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "369467c0b07621cb4ba7311db9a3ad9f93c5a405f7a3eeb96f40646735069a1f",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PS.2",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PS",
+      "group_title": "Protect the Software",
+      "ssdf_code": "PS.2",
+      "title": "Provide a Mechanism for Verifying Software Release Integrity",
+      "statement": "Help software acquirers ensure that the software they acquire is legitimate and has not been tampered with.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        19,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P019",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "32807badf80b59bef4644ad49e15e7133465d7a7f066ee080ff2450afd999787",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PS.3",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PS",
+      "group_title": "Protect the Software",
+      "ssdf_code": "PS.3",
+      "title": "Archive and Protect Each Software Release",
+      "statement": "Preserve software releases in order to help identify, analyze, and eliminate vulnerabilities discovered in the software after release.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        19,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P019",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "bfd0a2573146c885a0e3123a66442c85f8da52655454c73f85b504f3552ea3db",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.1",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.1",
+      "title": "Design Software to Meet Security Requirements and Mitigate Security Risks",
+      "statement": "Identify and evaluate the security requirements for the software; determine what security risks the software is likely to face during operation and how the software\u2019s design and architecture should mitigate those risks; and justify any cases where risk -based analysis indicates that security requirements should be relaxed or waived. Addressing security requirements and risks during software design (secure by design) is key for improving software security and also helps improve development efficiency.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        20,
+        21,
+        27,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P020",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "409452252d798a4fb2ed93c9ea7d8e75c909427a42c2ea736fa1729d1818c92f",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.2",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.2",
+      "title": "Review the Software Design to Verify Compliance with Security Requirements and Risk Information",
+      "statement": "Help ensure that the software will meet the security requirements and satisfactorily address the identified risk information.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        21,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "30833a77a3ed64682232112fbe76ba682237b1eefd270a4d567c2c08cd27855d",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.3",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.3",
+      "title": "Verify Third-Party Software Complies with Security Requirements",
+      "statement": "Moved to PW.4",
+      "statement_kind": "redirect",
+      "source_page_numbers": [
+        14,
+        21,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "78b7995f57faa9abbc457a063e3ed77db864de9e3f11530d7a1e6c85dfc2790d",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text",
+      "redirect_target_codes": [
+        "PW.4"
+      ]
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.4",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.4",
+      "title": "Reuse Existing, Well-Secured Software When Feasible Instead of Duplicating Functionality",
+      "statement": "Lower the costs of software development, expedite software development, and decrease the likelihood of introducing additional security vulnerabilities into the softw are by reusing software modules and services that have already had their security posture checked. This is particularly important for software that implements security functionality, such as cryptographic modules and protocols.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        20,
+        21,
+        22,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P020",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "442dbf3ad6456ba2036d3a38df75fd55814596ba92771028c772adf950f1db13",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.5",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.5",
+      "title": "Create Source Code by Adhering to Secure Coding Practices",
+      "statement": "Decrease the number of security vulnerabilities in the software, and reduce costs by minimiz ing vulnerabilities introduced during source code creation that meet or exceed organization- defined vulnerability severity criteria.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        22,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "7c612f063471228db1fd76413a382f12354acd45e5ab9cc95291d592ee02208a",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.6",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.6",
+      "title": "Configure the Compilation, Interpreter, and Build Processes to Improve Executable Security",
+      "statement": "Decrease the number of security vulnerabilities in the software and reduce costs by eliminating vulnerabilities before testing occurs.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        23,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P023",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "0c728f23ab59b48088c05f61ee77dd40675beae4a797b4ab72ddc47929136dbf",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.7",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.7",
+      "title": "Review and/or Analyze Human-Readable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements",
+      "statement": "Help identify vulnerabilities so that they can be corrected before the software is released to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities. Human-readable code includes source code, scripts, and any other form of code that an organization deems human- readable.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        23,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P023",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "f3926959c8a05ef0be654794764542da974e53e7bc4b7d52d5829a2eb3111eb8",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.8",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.8",
+      "title": "Test Executable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements",
+      "statement": "Help identify vulnerabilities so that they can be corrected before the software is released in order to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities and improves traceability and repeatability . Executable code includes binaries, directly executed bytecode and source code, and any other form of code that an organization deems executable.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        24,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P024",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "0272d23028efbeb2f279ee916dcd6585e0de244c1c1d91a5a9a225f5b81c2219",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-PW.9",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "group_title": "Produce Well-Secured Software",
+      "ssdf_code": "PW.9",
+      "title": "Configure Software to Have Secure Settings by Default",
+      "statement": "Help improve the security of the softwar e at the time of installation to reduce the likelihood of the software being deployed with weak security settings , putting it at greater risk of compromise.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        25,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P025",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "3bc1922e6e88b5526ca7ea0a5e044914383302aab4911cede189a39ea1415c86",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-RV.1",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "group_title": "Respond to Vulnerabilities",
+      "ssdf_code": "RV.1",
+      "title": "Identify and Confirm Vulnerabilities on an Ongoing Basis",
+      "statement": "Help ensure that vulnerabilities are identified more quickly so that they can be remediated more quickly in accordance with risk , reducing the window of opportunity for attackers.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        25,
+        26,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P025",
+        "SRC-NIST-SP800-218-V1_1:P026",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "32fd6a1d3cced1ebb4646b6727db68892449ee087fba92f5acad5105106f2274",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-RV.2",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "group_title": "Respond to Vulnerabilities",
+      "ssdf_code": "RV.2",
+      "title": "Assess, Prioritize, and Remediate Vulnerabilities",
+      "statement": "Help ensure that vulnerabilities are remediated in accordance with risk to reduc e the window of opportunity for attackers.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        26,
+        27,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P026",
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "d2c30f3f8708abf71fe65dfb82896c01833ec69eb824c1154e1beddd6cff5841",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-PRACTICE-RV.3",
+      "object_type": "practice",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "group_title": "Respond to Vulnerabilities",
+      "ssdf_code": "RV.3",
+      "title": "Analyze Vulnerabilities to Identify Their Root Causes",
+      "statement": "Help reduce the frequency of vulnerabilities in the future.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        27,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "a3d1be051499ca0e9ccc9fbb79ad114a7c17eddbc7812de85f133ef220d59996",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "title_mode": "curated_ssdf_v1_1_practice_title_map",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.1.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.1",
+      "ssdf_code": "PO.1.1",
+      "statement": "Identify and document all security requirements for the organization\u2019s software development infrastructures and processes, and maintain the requirements over time.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        14
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014"
+      ],
+      "normalized_text_hash": "7af2d5100bea4aa968a0b1982c064745252f6e1ad183860dfcf9f1cfc3635639",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.1.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.1",
+      "ssdf_code": "PO.1.2",
+      "statement": "Identify and document all security requirements for organization -developed software to meet, and maintain the requirements over time.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        14,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "188bf741b71d12d2385f49ae9cacb69602cd7586aaa4b0037947fe1033221094",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.1.3",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.1",
+      "ssdf_code": "PO.1.3",
+      "statement": "Communicate requirements to all third parties who will provide commercial software components to the organization for reuse by the organization\u2019s own software. [Formerly PW.3.1]",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        14,
+        21,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "83269ae8229eaef55634e563d1fe68a6e0bad476a1ae0a0554c8508b99eb32b3",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.2.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.2",
+      "ssdf_code": "PO.2.1",
+      "statement": "Create new roles and alter responsibilities for existing roles as needed to encompass all parts of the SDLC . Periodical ly review and maintain the defined roles and responsibilities, updating them as needed.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        15
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P015"
+      ],
+      "normalized_text_hash": "5b6f3c2eea79d28a6462fe27105f9c751ddb8113e90c18f6dc09e0ee623757ed",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.2.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.2",
+      "ssdf_code": "PO.2.2",
+      "statement": "Provide role- based training for all personnel with responsibilities that contribute to secure development. Periodically review personnel proficiency and role-based training, and update the training as needed.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        15
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P015"
+      ],
+      "normalized_text_hash": "eee8771822aebcd9ed720bcc2e35a189dca2017e966da385d7ec260108067e72",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.2.3",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.2",
+      "ssdf_code": "PO.2.3",
+      "statement": "Obtain upper management or authorizing official commitment to secure development, and convey that commitment to all with development - related roles and responsibilities.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        16
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P016"
+      ],
+      "normalized_text_hash": "40892f2c954d714f594e454d2b74774d3c082f7426470aa7aaa50f0270c79d7d",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.3.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.3",
+      "ssdf_code": "PO.3.1",
+      "statement": "Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are t o be integrated with each other.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        16,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P016",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "9a44fac7901e7087ffd384f2688fda2c23e2280fca9ab955d3dd815b57f65bf4",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.3.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.3",
+      "ssdf_code": "PO.3.2",
+      "statement": "Follow recommended security practices to deploy , operate, and maintain tools and toolchains.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        16,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P016",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "918809c69c6cf3dc0a42a26b31321b2cc4cd5a0cfa2b9745313b68fa210db124",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.3.3",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.3",
+      "ssdf_code": "PO.3.3",
+      "statement": "Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        16,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P016",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "5fa760719b4b4cc0ecfcb12e1fa865c437f5477a5ad28c467ed3326fe5e514ec",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.4.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.4",
+      "ssdf_code": "PO.4.1",
+      "statement": "Define criteria for software security checks and track throughout t he SDLC.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        17,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P017",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "daa7c00839b5b8626ad4bf3e25a0caad76c54ad4df5df5ba1d41b57dde24e3f3",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.4.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.4",
+      "ssdf_code": "PO.4.2",
+      "statement": "Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        17,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P017",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "d021a3c5ff2e191a1caab3ea2a7d537e2e9ce12fd0686b556e5f7680782bec8c",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.5.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.5",
+      "ssdf_code": "PO.5.1",
+      "statement": "Separate and protect each environment involved in software development.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        17,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P017",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "6f03722f7b5cf043824a55610a174947b56aeb0d42e2a5bf835a3fa79eac2bd0",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PO.5.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PO",
+      "parent_object_id": "SSDF-PRACTICE-PO.5",
+      "ssdf_code": "PO.5.2",
+      "statement": "Secure and harden development endpoints (i.e., endpoints for software designers, developers, testers, builders, etc. ) to perform development -related tasks using a risk-based approach.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        18,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P018",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "b656c2731043840db1f23d7750d7b78afb98483e03792f387b93d583e17f2364",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PS.1.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PS",
+      "parent_object_id": "SSDF-PRACTICE-PS.1",
+      "ssdf_code": "PS.1.1",
+      "statement": "Store all forms of code \u2013 including source code, executable code, and configuration- as-code \u2013 based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        18,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P018",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "0049e3486e2893f5bbddcc97ea0d8bc80d3e69b388d981543570592fe1647133",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PS.2.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PS",
+      "parent_object_id": "SSDF-PRACTICE-PS.2",
+      "ssdf_code": "PS.2.1",
+      "statement": "Make software integrity verification information available to software acquirers .",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        19,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P019",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "54108b6a6bb376c695c0e6a7cface0330d3b60d355ae9b4ed847c440a3970b4e",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PS.3.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PS",
+      "parent_object_id": "SSDF-PRACTICE-PS.3",
+      "ssdf_code": "PS.3.1",
+      "statement": "Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance da ta) to be retained for each software release.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        19,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P019",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "020e358a5d6d04beffe1c7be4a6577e1ead11ce86e7db288496fe41149362d17",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PS.3.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PS",
+      "parent_object_id": "SSDF-PRACTICE-PS.3",
+      "ssdf_code": "PS.3.2",
+      "statement": "Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials [SBOM]).",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        19,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P019",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "3fa60dfc29202da14a11950879fc59981a28c264bfb384b79c707dae98ec6a9e",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.1.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.1",
+      "ssdf_code": "PW.1.1",
+      "statement": "Use forms of risk modeling \u2013 such as threat modeling, attack modeling, or attack surface mapping \u2013 to help assess the security risk for the software.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        20
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P020"
+      ],
+      "normalized_text_hash": "0ffdf708c975402e8f5c983fe5ffe20345658e0900d9d694930a642639c6da51",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.1.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.1",
+      "ssdf_code": "PW.1.2",
+      "statement": "Track and maintain the software\u2019s security requirements, risks, and design decisions.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        20,
+        27,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P020",
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "5fafdc20b32400feca38580d1f63d3899523972a0d8986d38665a42cbb79a425",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.1.3",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.1",
+      "ssdf_code": "PW.1.3",
+      "statement": "Where appropriate, build in support for using standardized security features and services (e.g., enabling software to integrate with existing log management, identity management, access control, and vulnerability management systems) instead of creating pr oprietary implementations of security features and services. [Formerly PW.4.3]",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        20,
+        21,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P020",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "5656477356e485425baafd60be1d1168092094ccc402c2a93c1c4c9cc69fa6bd",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.2.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.2",
+      "ssdf_code": "PW.2.1",
+      "statement": "Have 1) a qualified person (or people) who were not involved with the design and/ or 2) automated processes instantiated in the toolchain review the software design to confirm and enforce that it meets all of the security requirements and satisfactorily addresses the identified risk information.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        21,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "d6024cc051233d9a2acf48c3031949ef415318b03624ae52d6992930dae0d607",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.3.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.3",
+      "ssdf_code": "PW.3.1",
+      "statement": "Moved to PO.1.3",
+      "statement_kind": "redirect",
+      "source_page_numbers": [
+        14,
+        21,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "203c739155412792eecbb3e4be98b6171209a966d28125759265d08cd409c0db",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text",
+      "redirect_target_codes": [
+        "PO.1.3"
+      ]
+    },
+    {
+      "object_id": "SSDF-TASK-PW.3.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.3",
+      "ssdf_code": "PW.3.2",
+      "statement": "Moved to PW.4.4 Reuse Existing, Well-Secured Software When Feasible Instead of Duplicating Functionality (PW.4): Lower the costs of software development, expedite software development, and decrease the likelihood of introducing additional security vulnerabilities into the softw are by reusing software modules and services that have already had their security posture checked. This is particularly important for software that implements security functionality, such as cryptographic modules and protocols.",
+      "statement_kind": "redirect",
+      "source_page_numbers": [
+        21,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "67e0b30c76bcc0bbf9a894ef7aa767f2ceeea1c8deb8e5155383c4d011f717fe",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text",
+      "redirect_target_codes": [
+        "PW.4.4",
+        "PW.4"
+      ]
+    },
+    {
+      "object_id": "SSDF-TASK-PW.4.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.4",
+      "ssdf_code": "PW.4.1",
+      "statement": "Acquire and maintain well-secured software components (e.g., software libraries, modules, middleware, frameworks) from commercial, open- source, and other third- party developers for use by the organization\u2019s software.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        21,
+        22,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "439972e8742d94d5fe28a6c01c5115b483b5307c678d6339ecac4ff3ebaeaeb7",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.4.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.4",
+      "ssdf_code": "PW.4.2",
+      "statement": "Create and maintain well -secured software components in -house following SDLC processes to meet common internal software development needs that cannot be better met by third-party software components.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        21
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P021"
+      ],
+      "normalized_text_hash": "627e80c9d2e9efcd3a2440bb4d3ff88b3d8883fe581c412a3acba86254409f9a",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.4.3",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.4",
+      "ssdf_code": "PW.4.3",
+      "statement": "Moved to PW.1.3 --- PAGE 22 --- NIST SP 800-218 SSDF VERSION 1.1 13 Practices Tasks Notional Implementation Examples",
+      "statement_kind": "redirect",
+      "source_page_numbers": [
+        20,
+        21,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P020",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "9bc90580b7cec37d8f8846489f7596005dff0fc1f6c44090d6dcd34f6e26825e",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text",
+      "redirect_target_codes": [
+        "PW.1.3"
+      ]
+    },
+    {
+      "object_id": "SSDF-TASK-PW.4.4",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.4",
+      "ssdf_code": "PW.4.4",
+      "statement": "Verify that acquired commercial, open-source, and all other third-party software components comply with the requirements , as defined by the organization, throughout their life cycle s.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        21,
+        22,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "007131091ffdaf39623124fec0e2a153658b2d71c5bec4ee194c74303575ccc9",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.4.5",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.4",
+      "ssdf_code": "PW.4.5",
+      "statement": "Moved to PW.4.1 and PW.4.4 Create Source Code by Adhering to Secure Coding Practices (PW.5): Decrease the number of security vulnerabilities in the software, and reduce costs by minimiz ing vulnerabilities introduced during source code creation that meet or exceed organization- defined vulnerability severity criteria.",
+      "statement_kind": "redirect",
+      "source_page_numbers": [
+        22,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "110cfc64ffde011c125cb3f2b8c460017555bea307c12539bf021448d111341e",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text",
+      "redirect_target_codes": [
+        "PW.4.1",
+        "PW.4.4",
+        "PW.5"
+      ]
+    },
+    {
+      "object_id": "SSDF-TASK-PW.5.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.5",
+      "ssdf_code": "PW.5.1",
+      "statement": "Follow all secure coding practices that are appropriate to the development languages and environment to meet the or ganization\u2019s requirements.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        22,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "4bdf8c85afe7dc34e53528a2800865e93fa724df122dc95d0336a025245a21b4",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.5.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.5",
+      "ssdf_code": "PW.5.2",
+      "statement": "Moved to PW.5.1 as example --- PAGE 23 --- NIST SP 800-218 SSDF VERSION 1.1 14 Practices Tasks Notional Implementation Examples",
+      "statement_kind": "redirect",
+      "source_page_numbers": [
+        22,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "normalized_text_hash": "3a1bfcacf5de8058815846ac4acc500bc0e92e988051e7d38c4e37fce6b7c7a8",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text",
+      "redirect_target_codes": [
+        "PW.5.1"
+      ]
+    },
+    {
+      "object_id": "SSDF-TASK-PW.6.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.6",
+      "ssdf_code": "PW.6.1",
+      "statement": "Use compiler , interpreter, and build tools that offer features to improve executable security.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        23,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P023",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "fa2558c2735dd85b53125194f07c2793fc4d5a01fd6d1f6ec1cd2a2292bec465",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.6.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.6",
+      "ssdf_code": "PW.6.2",
+      "statement": "Determine which compiler, interpreter, and build tool features should be used and how each should be configured, then implement and use the approved configurations.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        23,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P023",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "e227b5f8c5f4dc9fe79db6932e219fc498cfe21b7fca05dc34cae1628fa9295c",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.7.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.7",
+      "ssdf_code": "PW.7.1",
+      "statement": "Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a person) should be used, as defined by the organization.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        23,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P023",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "e7615819e35062b7c7c268786d18259c5584b91ae2b9aed0b5fc3aa67a4949e5",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.7.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.7",
+      "ssdf_code": "PW.7.2",
+      "statement": "Perform the code review and/or code analysis based on the organization\u2019s secure coding standards, and record and triage all discovered issues and recommended remediations in the development team\u2019s workflow or issue tracking system.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        23,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P023",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "61af2d4008234b88ec9781bca47ea225354fe18f7e5d309d5f80284995fbd696",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.8.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.8",
+      "ssdf_code": "PW.8.1",
+      "statement": "Determine whether executable code testing should be performed to find vulnerabilities not identified by previous reviews, analysis, or testing and, if so, which types of testing should be used.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        24
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P024"
+      ],
+      "normalized_text_hash": "13218f01f606be3945a2eeef2d4af93f7a88ab44818d493854480d2a76e3b12a",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.8.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.8",
+      "ssdf_code": "PW.8.2",
+      "statement": "Scope the testing, d esign the tests, perform the testing, and document the results, including record ing and triaging all discovered issues and recommended remediations in the development team\u2019s workflow or issue tracking system.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        24,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P024",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "546c97890314624dec2e1837b7aebbaa5ae6731a70e9e155684ec29c85031a26",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.9.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.9",
+      "ssdf_code": "PW.9.1",
+      "statement": "Define a secure baseline by determining how to configure each setting that has an effect on security or a security -related setting so that the default settings are secure and do not weaken the security functions provided by the platform, network infrastructure, or services.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        25,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P025",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "4ada8dad189e20169e6f10474c3d5fb37c292dc26b461382ee80d5b011330caf",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-PW.9.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "PW",
+      "parent_object_id": "SSDF-PRACTICE-PW.9",
+      "ssdf_code": "PW.9.2",
+      "statement": "Implement the default settings (or groups of default settings, if applicable), and document each setting for software administrators.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        25,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P025",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "a54d777e58b6c3597311e9505019d8c892e39f83134309c10aaf62de3a67c1d5",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.1.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.1",
+      "ssdf_code": "RV.1.1",
+      "statement": "Gather information from software acquirers , users , and public sources on potential vulnerabilities in the software and third- party components that the software uses, and investigate all credible reports.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        25,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P025",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "d519a62a5ca382b3c2a62ae8e8415af89884cc1baaaa0b9626e6d12bab15ae47",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.1.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.1",
+      "ssdf_code": "RV.1.2",
+      "statement": "Review, analyze, and/or test the software\u2019s code to identify or confirm the presence of previously undetected vulnerabilities.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        25,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P025",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "7abc6f20aa32bad2075abb6ae2dbeffa4caa7b3cff20012a427672d2160b8817",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.1.3",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.1",
+      "ssdf_code": "RV.1.3",
+      "statement": "Have a policy that addresses vulnerability disclosure and remediation, and implement the roles, responsibilities, and processes needed to support that policy.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        26,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P026",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "43d152499804acc639b4016b47c2c64e8139b0bc6800315abd6e108218035b20",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.2.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.2",
+      "ssdf_code": "RV.2.1",
+      "statement": "Analyze each vulnerability to gather sufficient information about risk to plan its remediation or other risk response .",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        26,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P026",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "cc4e5e4e1caf6110045e35f43572090b7ef2cf7f7b2013a32871d0e6e9c86514",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.2.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.2",
+      "ssdf_code": "RV.2.2",
+      "statement": "Plan and implement risk responses for vulnerabilities .",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        27,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "8d195078a1d502ae7c08552a9f6d0845e09b132add5830d45df736748998da1e",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.3.1",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.3",
+      "ssdf_code": "RV.3.1",
+      "statement": "Analyze identified vulnerabilities to determine their root causes.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        27
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P027"
+      ],
+      "normalized_text_hash": "160587539265ac74253082c5dda84c1e291f3ec780a9f50ca54c595b0c326da7",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.3.2",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.3",
+      "ssdf_code": "RV.3.2",
+      "statement": "Analyze the root causes over time to identify patterns, such as a particular secure coding practice not being followed consistently.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        27
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P027"
+      ],
+      "normalized_text_hash": "340e1ffb64e1f572c7afaad15198a8fa73b3e6b93c16893a7332cf8b6f4d90e7",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.3.3",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.3",
+      "ssdf_code": "RV.3.3",
+      "statement": "Review the software for similar vulnerabilities to eradicate a c lass of vulnerabilities , and proactively fix them rather than waiting for external reports.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        27,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "normalized_text_hash": "21a519275522b0da635b4fe794aa45ce243f2585bc714d30a60dcfc59594c165",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    },
+    {
+      "object_id": "SSDF-TASK-RV.3.4",
+      "object_type": "task",
+      "source_document_id": "SRC-NIST-SP800-218-V1_1",
+      "framework_family": "SSDF",
+      "group_code": "RV",
+      "parent_object_id": "SSDF-PRACTICE-RV.3",
+      "ssdf_code": "RV.3.4",
+      "statement": "Review the SDLC process, and update it if appropriate to prevent (or reduce the likelihood of) the root cause recurring in updates to the software or in new software that is created.",
+      "statement_kind": "substantive",
+      "source_page_numbers": [
+        27
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P027"
+      ],
+      "normalized_text_hash": "7c94e16d6edc012a4127fc61f52d1033457b4d5a08a57d73c78cc619383b1a9b",
+      "extraction_mode": "ssdf_practice_task_parser_v1",
+      "statement_mode": "deterministic_regex_from_pdf_text"
+    }
+  ]
+}

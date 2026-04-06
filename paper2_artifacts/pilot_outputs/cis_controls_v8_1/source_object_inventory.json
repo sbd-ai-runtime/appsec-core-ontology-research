@@ -1,0 +1,308 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "cis_controls_v8_1",
+  "items": [
+    {
+      "object_id": "CIS-CONTEXT-V8_1",
+      "object_type": "context_view",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "title": "CIS Critical Security Controls Version 8.1",
+      "statement": "CIS Critical Security Controls Version 8.1. The CIS Critical Security Controls help you to strengthen your enterprise's cybersecurity posture in a prioritized way. Download the latest version today!",
+      "statement_kind": "context_only",
+      "source_unit_ids": [
+        "UNIT-CIS-CONTEXT"
+      ],
+      "normalized_text_hash": "eb8e547c20322ff44c61489f8ef59284a3de2f59e06d93798e073644d387381a",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-1",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-1",
+      "control_number": 1,
+      "title": "Inventory and Control of Enterprise Assets",
+      "statement": "Actively manage (inventory, track, and correct) all enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/Internet of Things (IoT) devices; and servers) connected to the infrastructure physically, virtually, remotely, and those within cloud environments to accurately know the totality of assets that need to be monitored and protected within the enterprise. This will also support identifying unauthorized and unmanaged assets to remove or remediate.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-1"
+      ],
+      "normalized_text_hash": "ee4d820dc8a56a5188602be9dfe570a75a058084606f841a48d19a69505622da",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-2",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-2",
+      "control_number": 2,
+      "title": "Inventory and Control of Software Assets",
+      "statement": "Actively manage (inventory, track, and correct) all software (operating systems and applications) on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-2"
+      ],
+      "normalized_text_hash": "6e0fa63699fcb477b713aeaa052582502e655388600907dacf1f9664fa9d07dd",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-3",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-3",
+      "control_number": 3,
+      "title": "Data Protection",
+      "statement": "Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-3"
+      ],
+      "normalized_text_hash": "aeaaff1246d032490e19f1876e383cbf20341375bda564a01fb612e1b67a9ac2",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-4",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-4",
+      "control_number": 4,
+      "title": "Secure Configuration of Enterprise Assets and Software",
+      "statement": "Establish and maintain the secure configuration of enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/IoT devices; and servers) and software (operating systems and applications).",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-4"
+      ],
+      "normalized_text_hash": "be6185bb1c8aef06de76e17e7821627fca674a7e89bcb8c50288c64c1535832c",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-5",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-5",
+      "control_number": 5,
+      "title": "Account Management",
+      "statement": "Use processes and tools to assign and manage authorization to credentials for user accounts, including administrator accounts, as well as service accounts, to enterprise assets and software.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-5"
+      ],
+      "normalized_text_hash": "dc0ba9e8c93417dbf72ccbd2d2eaa66f7c2d6fbed27c638dadbbb0697f82d2ab",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-6",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-6",
+      "control_number": 6,
+      "title": "Access Control Management",
+      "statement": "Use processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and software.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-6"
+      ],
+      "normalized_text_hash": "466ad8d0dac338d0351607dc663cb6b78913eab9402aec8ab4047535a76a7b84",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-7",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-7",
+      "control_number": 7,
+      "title": "Continuous Vulnerability Management",
+      "statement": "Develop a plan to continuously assess and track vulnerabilities on all enterprise assets within the enterprise\u2019s infrastructure, in order to remediate, and minimize, the window of opportunity for attackers. Monitor public and private industry sources for new threat and vulnerability information.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-7"
+      ],
+      "normalized_text_hash": "ab2a48b8c02ad9c40c7d8c3fc8b94b079307aa5774892ede2e6a19db3aea31aa",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-8",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-8",
+      "control_number": 8,
+      "title": "Audit Log Management",
+      "statement": "Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-8"
+      ],
+      "normalized_text_hash": "fbcd737abf881489c15bb5b6a7534d1218a5e945a6c3eec3af72c554b6c88491",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-9",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-9",
+      "control_number": 9,
+      "title": "Email and Web Browser Protections",
+      "statement": "Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-9"
+      ],
+      "normalized_text_hash": "ca76c5a7a5e4a50ce46816ce1bd7c21143136e79252f94460c6679e0091279ba",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-10",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-10",
+      "control_number": 10,
+      "title": "Malware Defenses",
+      "statement": "Prevent or control the installation, spread, and execution of malicious applications, code, or scripts on enterprise assets.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-10"
+      ],
+      "normalized_text_hash": "eaae5ab3d75ea95acc81a51b4f689351b20ddef20c1562218f2e973fbf09ab0d",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-11",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-11",
+      "control_number": 11,
+      "title": "Data Recovery",
+      "statement": "Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-11"
+      ],
+      "normalized_text_hash": "f58b8cd7ac0460b8fbe9fb44d53862cffa59e20843a2328b8f6e400c6ce01cc9",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-12",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-12",
+      "control_number": 12,
+      "title": "Network Infrastructure Management",
+      "statement": "Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-12"
+      ],
+      "normalized_text_hash": "c856ebc5a72e4d1dad5e56f90d4c0540c41dd729403c233c22d29183964ce4ce",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-13",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-13",
+      "control_number": 13,
+      "title": "Network Monitoring and Defense",
+      "statement": "Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise\u2019s network infrastructure and user base.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-13"
+      ],
+      "normalized_text_hash": "562c5483476f37bbd0d78954ed4ceedd5cab1836e54a75c6733bda12e21a9e64",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-14",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-14",
+      "control_number": 14,
+      "title": "Security Awareness and Skills Training",
+      "statement": "Establish and maintain a security awareness program to influence behavior among the workforce to be security conscious and properly skilled to reduce cybersecurity risks to the enterprise.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-14"
+      ],
+      "normalized_text_hash": "166c090dc09ba22437de28c6005ef2222a2315f64fe2fd9f92a5f1e43b8c4c29",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-15",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-15",
+      "control_number": 15,
+      "title": "Service Provider Management",
+      "statement": "Develop a process to evaluate service providers who hold sensitive data, or are responsible for an enterprise\u2019s critical IT platforms or processes, to ensure these providers are protecting those platforms and data appropriately.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-15"
+      ],
+      "normalized_text_hash": "4cde4cea3609f5a9070565eca082ecd6507587a62057f166393c035a3090fc9e",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-16",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-16",
+      "control_number": 16,
+      "title": "Application Software Security",
+      "statement": "Manage the security life cycle of in-house developed, hosted, or acquired software to prevent, detect, and remediate security weaknesses before they can impact the enterprise.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-16"
+      ],
+      "normalized_text_hash": "0585db8de5a3750b423a1b3c324e74eb1cc3899574233ec79f04f64fd557a9a4",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-17",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-17",
+      "control_number": 17,
+      "title": "Incident Response Management",
+      "statement": "Establish a program to develop and maintain an incident response capability (e.g., policies, plans, procedures, defined roles, training, and communications) to prepare, detect, and quickly respond to an attack.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-17"
+      ],
+      "normalized_text_hash": "afaca08bda816cbf5ffaa0ff628079f501b03283241f0bb6da3e9be5bc55f9ad",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    },
+    {
+      "object_id": "CIS-18",
+      "object_type": "control",
+      "source_document_id": "SRC-CIS-CONTROLS-V8_1",
+      "framework_family": "CIS",
+      "control_id": "CIS-18",
+      "control_number": 18,
+      "title": "Penetration Testing",
+      "statement": "Test the effectiveness and resiliency of enterprise assets through identifying and exploiting weaknesses in controls (people, processes, and technology), and simulating the objectives and actions of an attacker.",
+      "statement_kind": "substantive",
+      "source_unit_ids": [
+        "UNIT-CIS-18"
+      ],
+      "normalized_text_hash": "bd92cf89b07a94700699c252af2c2a566583edb03b130524fc194e4fe5b65469",
+      "extraction_mode": "cis_controls_public_html_parser_v1"
+    }
+  ]
+}

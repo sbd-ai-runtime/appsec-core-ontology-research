@@ -1,0 +1,122 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "capec_supply_chain_risks_v3_9",
+  "status": "source_units_ready",
+  "summary": {
+    "source_units": 14
+  },
+  "items": [
+    {
+      "unit_id": "UNIT-SRC-CAPEC-VIEW-683",
+      "source_document_id": "SRC-CAPEC-VIEW-683",
+      "unit_kind": "view_summary",
+      "heading_id": "capec-view-683",
+      "heading_title": "CAPEC VIEW: Supply Chain Risks",
+      "raw_text": "CAPEC VIEW: Supply Chain Risks\nMembers: CAPEC-684, CAPEC-447, CAPEC-517, CAPEC-518, CAPEC-519, CAPEC-521, CAPEC-671, CAPEC-674, CAPEC-685, CAPEC-444, CAPEC-206, CAPEC-443, CAPEC-445, CAPEC-446, CAPEC-511, CAPEC-516, CAPEC-520, CAPEC-532, CAPEC-537, CAPEC-538, CAPEC-539, CAPEC-670, CAPEC-672, CAPEC-673, CAPEC-678, CAPEC-690, CAPEC-691, CAPEC-692, CAPEC-693, CAPEC-686, CAPEC-439, CAPEC-522, CAPEC-523, CAPEC-524, CAPEC-687, CAPEC-536, CAPEC-688, CAPEC-184, CAPEC-185, CAPEC-186, CAPEC-187, CAPEC-533, CAPEC-657, CAPEC-663, CAPEC-696, CAPEC-669, CAPEC-440, CAPEC-401, CAPEC-402, CAPEC-534, CAPEC-531, CAPEC-530, CAPEC-535, CAPEC-677, CAPEC-689, CAPEC-675"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-185",
+      "source_document_id": "SRC-CAPEC-185",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-185",
+      "heading_title": "CAPEC-185: Malicious Software Download",
+      "raw_text": "CAPEC-185: Malicious Software Download\nAn attacker uses deceptive methods to cause a user or an automated process to download and install dangerous code that originates from an attacker controlled source. There are several variations to this strategy of attack."
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-186",
+      "source_document_id": "SRC-CAPEC-186",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-186",
+      "heading_title": "CAPEC-186: Malicious Software Update",
+      "raw_text": "CAPEC-186: Malicious Software Update\nAn adversary uses deceptive methods to cause a user or an automated process to download and install dangerous code believed to be a valid update that originates from an adversary controlled source.\nMitigations: Validate software updates before installing.\nATTACK: 1195.002 Supply Chain Compromise: Compromise Software Supply Chain"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-206",
+      "source_document_id": "SRC-CAPEC-206",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-206",
+      "heading_title": "CAPEC-206: Signing Malicious Code",
+      "raw_text": "CAPEC-206: Signing Malicious Code\nThe adversary extracts credentials used for code signing from a production environment and then uses these credentials to sign malicious content with the developer's key. Many developers use signing keys to sign code or hashes of code. When users or applications verify the signatures are accurate they are led to believe that the code came from the owner of the signing key and that the code has not been modified since the signature was applied. If the adversary has extracted the signing credentials then they can use those credentials to sign their own code bundles. Users or tools that verify the signatures attached to the code will likely assume the code came from the legitimate developer and install or run the code, effectively allowing the adversary to execute arbitrary code on the victim's computer. This differs from CAPEC-673 , because the adversary is performing the code signing.\nPrerequisites: The targeted developer must use a signing key to sign code bundles. (Note that not doing this is not a defense - it only means that the adversary does not need to steal the signing key before forging code bundles in the developer's name.)\nMitigations: Ensure digital certificates are protected and inaccessible by unauthorized uses. | If a digital certificate has been compromised it should be revoked and regenerated. | Even if a piece of software has a valid and trusted digital signature, it should be assessed for any weaknesses and vulnerabilities.\nATTACK: 1553.002 Subvert Trust Controls:Code Signing"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-443",
+      "source_document_id": "SRC-CAPEC-443",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-443",
+      "heading_title": "CAPEC-443: Malicious Logic Inserted Into Product by Authorized Developer",
+      "raw_text": "CAPEC-443: Malicious Logic Inserted Into Product by Authorized Developer\nAn adversary uses their privileged position within an authorized development organization to inject malicious logic into a codebase or product.\nPrerequisites: Access to the product during the initial or continuous development.\nMitigations: Assess software and hardware during development and prior to deployment to ensure that it functions as intended and without any malicious functionality. This includes both initial development, as well as updates propagated to the product after deployment.\nATTACK: 1195.002 Supply Chain Compromise: Compromise Software Supply Chain | 1195.003 Supply Chain Compromise: Compromise Hardware Supply Chain"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-445",
+      "source_document_id": "SRC-CAPEC-445",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-445",
+      "heading_title": "CAPEC-445: Malicious Logic Insertion into Product Software via Configuration Management Manipulation",
+      "raw_text": "CAPEC-445: Malicious Logic Insertion into Product Software via Configuration Management Manipulation\nAn adversary exploits a configuration management system so that malicious logic is inserted into a software products build, update or deployed environment. If an adversary can control the elements included in a product's configuration management for build they can potentially replace, modify or insert code files containing malicious logic. If an adversary can control elements of a product's ongoing operational configuration management baseline they can potentially force clients receiving updates from the system to install insecure software when receiving updates from the server.\nPrerequisites: Access to the configuration management system during deployment or currently deployed at a victim location. This access is often obtained via insider access or by leveraging another attack pattern to gain permissions that the adversary wouldn't normally have.\nMitigations: Assess software during development and prior to deployment to ensure that it functions as intended and without any malicious functionality. | Leverage anti-virus products to detect and quarantine software with known virus.\nATTACK: 1195.001 Supply Chain Compromise: Compromise Software Dependencies and Development Tools"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-446",
+      "source_document_id": "SRC-CAPEC-446",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-446",
+      "heading_title": "CAPEC-446: Malicious Logic Insertion into Product via Inclusion of Third-Party Component",
+      "raw_text": "CAPEC-446: Malicious Logic Insertion into Product via Inclusion of Third-Party Component\nAn adversary conducts supply chain attacks by the inclusion of insecure third-party components into a technology, product, or code-base, possibly packaging a malicious driver or component along with the product before shipping it to the consumer or acquirer.\nPrerequisites: Access to the product during the initial or continuous development. This access is often obtained via insider access to include the third-party component after deployment.\nMitigations: Assess software and hardware during development and prior to deployment to ensure that it functions as intended and without any malicious functionality. This includes both initial development, as well as updates propagated to the product after deployment. | Don't assume popular third-party components are free from malware or vulnerabilities. For software, assess for malicious functionality via update/commit reviews or automated static/dynamic analysis prior to including the component within the application and deploying in a production environment.\nATTACK: 1195 Supply Chain Compromise"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-511",
+      "source_document_id": "SRC-CAPEC-511",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-511",
+      "heading_title": "CAPEC-511: Infiltration of Software Development Environment",
+      "raw_text": "CAPEC-511: Infiltration of Software Development Environment\nAn attacker uses common delivery mechanisms such as email attachments or removable media to infiltrate the IDE (Integrated Development Environment) of a victim manufacturer with the intent of implanting malware allowing for attack control of the victim IDE environment. The attack then uses this access to exfiltrate sensitive data or information, manipulate said data or information, and conceal these actions. This will allow and aid the attack to meet the goal of future compromise of a recipient of the victim's manufactured product further down in the supply chain.\nPrerequisites: The victim must use email or removable media from systems running the IDE (or systems adjacent to the IDE systems). | The victim must have a system running exploitable applications and/or a vulnerable configuration to allow for initial infiltration. | The attacker must have working knowledge of some if not all of the components involved in the IDE system as well as the infrastructure.\nMitigations: Avoid the common delivery mechanisms of adversaries, such as email attachments, which could introduce the malware.\nATTACK: 1195.001 Supply Chain Compromise: Compromise Software Dependencies and Development Tools"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-523",
+      "source_document_id": "SRC-CAPEC-523",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-523",
+      "heading_title": "CAPEC-523: Malicious Software Implanted",
+      "raw_text": "CAPEC-523: Malicious Software Implanted\nAn attacker implants malicious software into the system in the supply chain distribution channel, with purpose of causing malicious disruption or allowing for additional compromise when the system is deployed.\nPrerequisites: Physical access to the system after it has left the manufacturer but before it is deployed at the victim location.\nMitigations: Deploy strong code integrity policies to allow only authorized apps to run. | Use endpoint detection and response solutions that can automaticalkly detect and remediate suspicious activities. | Maintain a highly secure build and update infrastructure by immediately applying security patches for OS and software, implementing mandatory integrity controls to ensure only trusted tools run, and requiring multi-factor authentication for admins. | Require SSL for update channels and implement certificate transparency based verification. | Sign everything, including configuration files, XML files and packages. | Develop an incident response process, disclose supply chain incidents and notify customers with accurate and timely information."
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-536",
+      "source_document_id": "SRC-CAPEC-536",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-536",
+      "heading_title": "CAPEC-536: Data Injected During Configuration",
+      "raw_text": "CAPEC-536: Data Injected During Configuration\nAn attacker with access to data files and processes on a victim's system injects malicious data into critical operational data during configuration or recalibration, causing the victim's system to perform in a suboptimal manner that benefits the adversary.\nPrerequisites: The attacker must have previously compromised the victim's systems or have physical access to the victim's systems. | Advanced knowledge of software and hardware capabilities of a manufacturer's product.\nMitigations: Ensure that proper access control is implemented on all systems to prevent unauthorized access to system files and processes."
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-669",
+      "source_document_id": "SRC-CAPEC-669",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-669",
+      "heading_title": "CAPEC-669: Alteration of a Software Update",
+      "raw_text": "CAPEC-669: Alteration of a Software Update\nAn adversary with access to an organization\u2019s software update infrastructure inserts malware into the content of an outgoing update to fielded systems where a wide range of malicious effects are possible. With the same level of access, the adversary can alter a software update to perform specific malicious acts including granting the adversary control over the software\u2019s normal functionality.\nPrerequisites: An adversary would need to have penetrated an organization\u2019s software update infrastructure including gaining access to components supporting the configuration management of software versions and updates related to the software maintenance of customer systems.\nMitigations: Have a Software Assurance Plan that includes maintaining strict configuration management control of source code, object code and software development, build and distribution tools; manual code reviews and static code analysis for developmental software; and tracking of all storage and movement of code. | Require elevated privileges for distribution of software and software updates.\nATTACK: 1195.002 Supply Chain Compromise: Compromise Software Supply Chain"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-691",
+      "source_document_id": "SRC-CAPEC-691",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-691",
+      "heading_title": "CAPEC-691: Spoof Open-Source Software Metadata",
+      "raw_text": "CAPEC-691: Spoof Open-Source Software Metadata\nAn adversary spoofs open-source software metadata in an attempt to masquerade malicious software as popular, maintained, and trusted.\nPrerequisites: Identification of a popular open-source component whose metadata is to be spoofed.\nMitigations: Before downloading open-source software, perform precursory metadata checks to determine the author(s), frequency of updates, when the software was last updated, and if the software is widely leveraged. | Within package managers, look for conflicting or non-unique repository references to determine if multiple packages share the same repository reference. | Reference vulnerability databases to determine if the software contains known vulnerabilities. | Only download open-source software from reputable hosting sites or package managers. | Only download open-source software that has been adequately signed by the developer(s). For repository commits/tags, look for the \"Verified\" status and for developers leveraging \"Vigilant Mode\" (GitHub) or similar modes. | After downloading open-source software, ensure integrity values have not changed. | Before executing or incorporating the software, leverage automated testing techniques (e.g., static and dynamic analysis) to determine if the software behaves maliciously.\nATTACK: 1195.001 Supply Chain Compromise: Compromise Software Dependencies and Development Tools | 1195.002 Supply Chain Compromise: Compromise Software Supply Chain"
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-692",
+      "source_document_id": "SRC-CAPEC-692",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-692",
+      "heading_title": "CAPEC-692: Spoof Version Control System Commit Metadata",
+      "raw_text": "CAPEC-692: Spoof Version Control System Commit Metadata\nAn adversary spoofs metadata pertaining to a Version Control System (VCS) (e.g., Git) repository's commits to deceive users into believing that the maliciously provided software is frequently maintained and originates from a trusted source.\nPrerequisites: Identification of a popular open-source repository whose metadata is to be spoofed.\nMitigations: Before downloading open-source software, perform precursory metadata checks to determine the author(s), frequency of updates, when the software was last updated, and if the software is widely leveraged. | Reference vulnerability databases to determine if the software contains known vulnerabilities. | Only download open-source software from reputable hosting sites or package managers. | Only download open-source software that has been adequately signed by the developer(s). For repository commits/tags, look for the \"Verified\" status and for developers leveraging \"Vigilant Mode\" (GitHub) or similar modes. | After downloading open-source software, ensure integrity values have not changed. | Before executing or incorporating the software, leverage automated testing techniques (e.g., static and dynamic analysis) to determine if the software behaves maliciously."
+    },
+    {
+      "unit_id": "UNIT-SRC-CAPEC-693",
+      "source_document_id": "SRC-CAPEC-693",
+      "unit_kind": "page_summary",
+      "heading_id": "capec-693",
+      "heading_title": "CAPEC-693: StarJacking",
+      "raw_text": "CAPEC-693: StarJacking\nAn adversary spoofs software popularity metadata to deceive users into believing that a maliciously provided package is widely used and originates from a trusted source.\nPrerequisites: Identification of a popular open-source package whose popularity metadata is to be used for the malicious package.\nMitigations: Before downloading open-source packages, perform precursory metadata checks to determine the author(s), frequency of updates, when the software was last updated, and if the software is widely leveraged. | Look for conflicting or non-unique repository references to determine if multiple packages share the same repository reference. | Reference vulnerability databases to determine if the software contains known vulnerabilities. | Only download open-source packages from reputable package managers. | After downloading open-source packages, ensure integrity values have not changed. | Before executing or incorporating the package, leverage automated testing techniques (e.g., static and dynamic analysis) to determine if the software behaves maliciously."
+    }
+  ]
+}

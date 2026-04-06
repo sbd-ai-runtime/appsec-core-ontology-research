@@ -1,0 +1,53 @@
+meta:
+  pilot_id: cis_controls_v8_1
+  status: source_captured
+  intended_use: broad_control_oriented_external_source_for_appsec_core_boundary_testing
+source_document:
+  source_document_id: SRC-CIS-CONTROLS-V8_1
+  title: CIS Critical Security Controls
+  subtitle: Version 8.1
+  publisher: Center for Internet Security
+  source_kind: control_catalog
+  framework_family: CIS
+  version: '8.1'
+  revision: current_public_release
+  edition: current_public_release
+  publication_date: '2024-06-26'
+  language: en
+  format_candidates:
+    - html
+  canonical_url: https://www.cisecurity.org/controls/cis-controls-list
+  origin_url: https://www.cisecurity.org/controls/v8-1
+  version_page_url: https://www.cisecurity.org/controls/v8-1
+  controls_list_url: https://www.cisecurity.org/controls/cis-controls-list
+  stability_reason: official_cis_public_version_page_and_public_controls_list
+retrieval_policy:
+  preferred_artifact: controls_list_html
+  alternate_artifacts:
+    - version_page_html
+  retrieval_mode: deterministic_capture_completed
+  local_snapshot_paths:
+    - sources/cis_controls_v8_1/cis-controls-v8-1.html
+    - sources/cis_controls_v8_1/cis-controls-list.html
+  signature_status: not_checked
+  captured_version_publication_date: '2024-06-26'
+provenance_policy:
+  record_source_url: true
+  record_publication_date: true
+  record_retrieval_timestamp: true
+  record_checksum: true
+  keep_document_version_explicit: true
+normalization_targets:
+  primary:
+    - ControlObjective
+    - Practice
+  secondary:
+    - Mechanism
+    - Artifact
+manual_integration_targets:
+  outputs:
+    - manual_gap_analysis
+    - traceability_publication_candidates
+  note: >
+    This pilot first tests control-level scope pressure and AppSec signal before any
+    published-traceability comparison is asserted.

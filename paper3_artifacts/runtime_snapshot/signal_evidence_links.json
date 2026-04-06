@@ -1,0 +1,282 @@
+{
+  "artifact_type": "deterministic_runtime_snapshot",
+  "count": 8,
+  "entity_type": "SignalEvidenceLink",
+  "items": [
+    {
+      "bundle_ids": [
+        "13-formacao-onboarding"
+      ],
+      "confidence": 0.66,
+      "evidence_unit_ids": [
+        "010-sbd-manual-13-formacao-onboarding-aplicacao-lifecycle--aplicacao-de-formacao-e-capacitacao-no-ciclo-de-vida--recomendacoes-finais"
+      ],
+      "justification": [
+        "alias_match",
+        "bundle_grounding",
+        "expected_artifact_bridge"
+      ],
+      "link_id": "sem:signal:checklist-completo|supports_evidence|EP-TRN-003",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "expected_artifact",
+      "matched_pattern_text": "Onboarding Checklist",
+      "score_components": {
+        "bundle_overlap": [
+          "13-formacao-onboarding"
+        ],
+        "shared_salient_tokens": [
+          "checklist"
+        ],
+        "token_similarity": 0.3333
+      },
+      "source_id": "sem:signal:checklist-completo",
+      "source_label": "Checklist Completo",
+      "source_type": "Signal",
+      "target_id": "EP-TRN-003",
+      "target_label": "A conclusão do onboarding é verificada com critério objectivo — quiz, exercício prático ou outra forma de avaliação com taxa de aceitação mínima definida; o resultado é registado e rastreável ao colaborador e à versão do conteúdo administrada; resultados abaixo do limiar têm caminho de remediação definido.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    },
+    {
+      "bundle_ids": [
+        "14-governanca-contratacao"
+      ],
+      "confidence": 0.66,
+      "evidence_unit_ids": [
+        "010-sbd-manual-14-governanca-contratacao-intro--governanca-contratacao--rastreabilidade-organizacional"
+      ],
+      "justification": [
+        "alias_match",
+        "bundle_grounding",
+        "expected_artifact_bridge"
+      ],
+      "link_id": "sem:signal:kpis-consolidados|supports_evidence|EP-GOV-011",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "expected_artifact",
+      "matched_pattern_text": "Governance Kpi",
+      "score_components": {
+        "bundle_overlap": [
+          "14-governanca-contratacao"
+        ],
+        "shared_salient_tokens": [
+          "kpi"
+        ],
+        "token_similarity": 0.3333
+      },
+      "source_id": "sem:signal:kpis-consolidados",
+      "source_label": "KPIs consolidados",
+      "source_type": "Signal",
+      "target_id": "EP-GOV-011",
+      "target_label": "KPIs de governação estão definidos, são recolhidos periodicamente e reportados à gestão; desvios face a thresholds definidos geram acção correctiva; KPIs incluem pelo menos: excepções activas por domínio, % aplicações com owner atribuído, % contratos com cláusulas de segurança.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    },
+    {
+      "bundle_ids": [
+        "13-formacao-onboarding"
+      ],
+      "confidence": 0.7,
+      "evidence_unit_ids": [
+        "010-sbd-manual-13-formacao-onboarding-aplicacao-lifecycle--aplicacao-de-formacao-e-capacitacao-no-ciclo-de-vida--recomendacoes-finais"
+      ],
+      "justification": [
+        "alias_match",
+        "bundle_grounding"
+      ],
+      "link_id": "sem:signal:kpis-de-formacao|supports_evidence|EP-TRN-009",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "requirement_name",
+      "matched_pattern_text": "KPIs de formação definidos, recolhidos e accionados",
+      "score_components": {
+        "bundle_overlap": [
+          "13-formacao-onboarding"
+        ],
+        "shared_salient_tokens": [
+          "formacao",
+          "kpi"
+        ],
+        "token_similarity": 0.4
+      },
+      "source_id": "sem:signal:kpis-de-formacao",
+      "source_label": "KPIs de Formação",
+      "source_type": "Signal",
+      "target_id": "EP-TRN-009",
+      "target_label": "KPIs de eficácia formativa são definidos, recolhidos periodicamente e analisados — incluindo pelo menos: % cobertura de onboarding por equipa, taxa de aprovação em validações objectivas, tempo médio de onboarding e taxa de actualização de conteúdo; desvios face a thresholds definidos geram acção correctiva com owner e prazo.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    },
+    {
+      "bundle_ids": [
+        "14-governanca-contratacao"
+      ],
+      "confidence": 0.7,
+      "evidence_unit_ids": [
+        "010-sbd-manual-14-governanca-contratacao-intro--governanca-contratacao"
+      ],
+      "justification": [
+        "alias_match",
+        "bundle_grounding"
+      ],
+      "link_id": "sem:signal:kpis-de-governacao|supports_evidence|EP-GOV-011",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "requirement_name",
+      "matched_pattern_text": "KPIs de governação definidos, recolhidos e reportados",
+      "score_components": {
+        "bundle_overlap": [
+          "14-governanca-contratacao"
+        ],
+        "shared_salient_tokens": [
+          "governacao",
+          "kpi"
+        ],
+        "token_similarity": 0.4
+      },
+      "source_id": "sem:signal:kpis-de-governacao",
+      "source_label": "KPIs de governação",
+      "source_type": "Signal",
+      "target_id": "EP-GOV-011",
+      "target_label": "KPIs de governação estão definidos, são recolhidos periodicamente e reportados à gestão; desvios face a thresholds definidos geram acção correctiva; KPIs incluem pelo menos: excepções activas por domínio, % aplicações com owner atribuído, % contratos com cláusulas de segurança.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    },
+    {
+      "bundle_ids": [
+        "12-monitorizacao-operacoes"
+      ],
+      "confidence": 0.74,
+      "evidence_unit_ids": [
+        "010-sbd-manual-12-monitorizacao-operacoes-intro--monitorizacao-operacoes"
+      ],
+      "justification": [
+        "alias_match",
+        "bundle_grounding",
+        "expected_artifact_bridge"
+      ],
+      "link_id": "sem:signal:logs|supports_evidence|EP-OPS-001",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "expected_artifact",
+      "matched_pattern_text": "Log Stream",
+      "score_components": {
+        "bundle_overlap": [
+          "12-monitorizacao-operacoes"
+        ],
+        "shared_salient_tokens": [
+          "log"
+        ],
+        "token_similarity": 0.5
+      },
+      "source_id": "sem:signal:logs",
+      "source_label": "Logs",
+      "source_type": "Signal",
+      "target_id": "EP-OPS-001",
+      "target_label": "Logs de todos os componentes em produção em formato estruturado (JSON, CEF ou equivalente); persistidos fora da instância (não apenas locais); acessíveis sem acesso directo ao host; cobertura verificável por inventário.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    },
+    {
+      "bundle_ids": [
+        "12-monitorizacao-operacoes"
+      ],
+      "confidence": 0.74,
+      "evidence_unit_ids": [
+        "010-sbd-manual-12-monitorizacao-operacoes-intro--monitorizacao-operacoes"
+      ],
+      "justification": [
+        "alias_match",
+        "bundle_grounding",
+        "expected_artifact_bridge"
+      ],
+      "link_id": "sem:signal:logs|supports_evidence|EP-OPS-003",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "expected_artifact",
+      "matched_pattern_text": "Log Stream",
+      "score_components": {
+        "bundle_overlap": [
+          "12-monitorizacao-operacoes"
+        ],
+        "shared_salient_tokens": [
+          "log"
+        ],
+        "token_similarity": 0.5
+      },
+      "source_id": "sem:signal:logs",
+      "source_label": "Logs",
+      "source_type": "Signal",
+      "target_id": "EP-OPS-003",
+      "target_label": "Política de retenção documentada por tipo de log e contexto regulatório aplicável; logs retidos pelo período mínimo obrigatório; processo de arquivo e purga documentado e auditável; evidência de cumprimento disponível.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    },
+    {
+      "bundle_ids": [
+        "12-monitorizacao-operacoes"
+      ],
+      "confidence": 0.66,
+      "evidence_unit_ids": [
+        "010-sbd-manual-12-monitorizacao-operacoes-aplicacao-lifecycle--aplicacao-de-monitorizacao-operacoes-no-ciclo-de-vida--recomendacoes-finais"
+      ],
+      "justification": [
+        "alias_match",
+        "bundle_grounding",
+        "expected_artifact_bridge"
+      ],
+      "link_id": "sem:signal:metricas-mttd-mttr|supports_evidence|EP-OPS-007",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "expected_artifact",
+      "matched_pattern_text": "Incident Metrics",
+      "score_components": {
+        "bundle_overlap": [
+          "12-monitorizacao-operacoes"
+        ],
+        "shared_salient_tokens": [
+          "metrica"
+        ],
+        "token_similarity": 0.3333
+      },
+      "source_id": "sem:signal:metricas-mttd-mttr",
+      "source_label": "Métricas MTTD/MTTR",
+      "source_type": "Signal",
+      "target_id": "EP-OPS-007",
+      "target_label": "Runbooks ou playbooks de resposta definidos para tipos de alerta críticos; integração entre sistema de alertas e sistema de gestão de incidentes; evidência de activação em incidente real ou exercício documentado no último ciclo.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    },
+    {
+      "bundle_ids": [
+        "14-governanca-contratacao"
+      ],
+      "confidence": 0.66,
+      "evidence_unit_ids": [
+        "010-sbd-manual-14-governanca-contratacao-intro--governanca-contratacao"
+      ],
+      "justification": [
+        "alias_match",
+        "artifact_to_pattern_bridge",
+        "bundle_grounding",
+        "signal_type_match"
+      ],
+      "link_id": "sem:signal:registo-e-aprovacao-de-excecoes|supports_evidence|EP-GOV-004",
+      "link_type": "supports_evidence",
+      "matched_pattern_field": "evidence_expectation",
+      "matched_pattern_text": "Existe processo formal de excepções documentado e em uso; toda a não-aplicação de um controlo é registada com justificação, compensação, aprovador e prazo; excepções sem registo são tratadas como não conformidade activa; o processo cobre a cadeia de autoridade completa.",
+      "score_components": {
+        "bundle_overlap": [
+          "14-governanca-contratacao"
+        ],
+        "shared_salient_tokens": [],
+        "token_similarity": 0.0345
+      },
+      "source_id": "sem:signal:registo-e-aprovacao-de-excecoes",
+      "source_label": "registo e aprovação de exceções",
+      "source_type": "Signal",
+      "target_id": "EP-GOV-004",
+      "target_label": "Existe processo formal de excepções documentado e em uso; toda a não-aplicação de um controlo é registada com justificação, compensação, aprovador e prazo; excepções sem registo são tratadas como não conformidade activa; o processo cobre a cadeia de autoridade completa.",
+      "target_source_basis": "evidence_pattern",
+      "target_type": "EvidencePattern"
+    }
+  ],
+  "profiles": [
+    "review"
+  ],
+  "source_artifact": "data/publish/semantic/signal_evidence_links.jsonl"
+}

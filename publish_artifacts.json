@@ -1,0 +1,421 @@
+{
+  "version": 1,
+  "source_roots": {
+    "knowledge_graph": "../sbd-toe-knowledge-graph",
+    "external_sources_inventory": "../ExternalSourcesInventory"
+  },
+  "bundles": [
+    {
+      "id": "paper1",
+      "description": "AppSec Core ontology and slice-contract artifact set for the current V1 ontology paper.",
+      "files": [
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-v0-consolidated.yaml",
+          "dest": "paper1_artifacts/ontology/appsec-core-v0-consolidated.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-v0-surface-contract.yaml",
+          "dest": "paper1_artifacts/ontology/appsec-core-v0-surface-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-v0-instance-index.yaml",
+          "dest": "paper1_artifacts/ontology/appsec-core-v0-instance-index.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-slice-registry-v0-draft.yaml",
+          "dest": "paper1_artifacts/schema/appsec-core-slice-registry-v0-draft.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-entity-schema-v0-draft.yaml",
+          "dest": "paper1_artifacts/schema/appsec-core-entity-schema-v0-draft.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-cross-slice-vocabulary-v0-draft.yaml",
+          "dest": "paper1_artifacts/schema/appsec-core-cross-slice-vocabulary-v0-draft.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-secrets-protected-config-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-secrets-protected-config-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-identity-access-session-trust-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-identity-access-session-trust-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-input-validation-safe-failure-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-input-validation-safe-failure-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-architecture-trust-boundaries-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-architecture-trust-boundaries-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-supply-chain-build-integrity-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-supply-chain-build-integrity-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-release-promotion-controlled-rollout-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-release-promotion-controlled-rollout-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-integration-trust-service-security-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-integration-trust-service-security-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-testing-security-validation-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-testing-security-validation-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-threat-modeling-risk-disposition-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-threat-modeling-risk-disposition-slice-contract.yaml"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "ontology/appsec-core-security-event-logging-audit-trail-slice-contract.yaml",
+          "dest": "paper1_artifacts/slice_contracts/appsec-core-security-event-logging-audit-trail-slice-contract.yaml"
+        }
+      ]
+    },
+    {
+      "id": "paper2",
+      "description": "First-wave pilot manifests and outputs for the current V1 knowledge-compilation paper.",
+      "files": [
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/ssdf_sp800_218_v1_1/brief.md",
+          "dest": "paper2_artifacts/pilot_manifests/ssdf_sp800_218_v1_1/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/ssdf_sp800_218_v1_1/source_manifest.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/ssdf_sp800_218_v1_1/source_manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/ssdf_sp800_218_v1_1/indexing_contract.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/ssdf_sp800_218_v1_1/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/source_retrieval_receipt.json",
+          "dest": "paper2_artifacts/pilot_outputs/ssdf_sp800_218_v1_1/source_retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/source_unit_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/ssdf_sp800_218_v1_1/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/source_object_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/ssdf_sp800_218_v1_1/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/appsec_core_normalization.json",
+          "dest": "paper2_artifacts/pilot_outputs/ssdf_sp800_218_v1_1/appsec_core_normalization.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/manual_gap_analysis.json",
+          "dest": "paper2_artifacts/pilot_outputs/ssdf_sp800_218_v1_1/manual_gap_analysis.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/traceability_publication_candidates.json",
+          "dest": "paper2_artifacts/pilot_outputs/ssdf_sp800_218_v1_1/traceability_publication_candidates.json"
+        },
+
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/asvs_v5_0_0/brief.md",
+          "dest": "paper2_artifacts/pilot_manifests/asvs_v5_0_0/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/asvs_v5_0_0/source_manifest.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/asvs_v5_0_0/source_manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/asvs_v5_0_0/indexing_contract.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/asvs_v5_0_0/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/source_retrieval_receipt.json",
+          "dest": "paper2_artifacts/pilot_outputs/asvs_v5_0_0/source_retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/source_unit_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/asvs_v5_0_0/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/source_object_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/asvs_v5_0_0/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/appsec_core_normalization.json",
+          "dest": "paper2_artifacts/pilot_outputs/asvs_v5_0_0/appsec_core_normalization.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/manual_gap_analysis.json",
+          "dest": "paper2_artifacts/pilot_outputs/asvs_v5_0_0/manual_gap_analysis.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/published_manual_traceability_cluster_comparison.json",
+          "dest": "paper2_artifacts/pilot_outputs/asvs_v5_0_0/published_manual_traceability_cluster_comparison.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/published_manual_traceability_cluster_comparison.md",
+          "dest": "paper2_artifacts/pilot_outputs/asvs_v5_0_0/published_manual_traceability_cluster_comparison.md"
+        },
+
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/slsa_spec_v1_0_build_track/brief.md",
+          "dest": "paper2_artifacts/pilot_manifests/slsa_spec_v1_0_build_track/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/slsa_spec_v1_0_build_track/source_manifest.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/slsa_spec_v1_0_build_track/source_manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/slsa_spec_v1_0_build_track/indexing_contract.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/slsa_spec_v1_0_build_track/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/source_retrieval_receipt.json",
+          "dest": "paper2_artifacts/pilot_outputs/slsa_spec_v1_0_build_track/source_retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/source_unit_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/slsa_spec_v1_0_build_track/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/source_object_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/slsa_spec_v1_0_build_track/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/appsec_core_normalization.json",
+          "dest": "paper2_artifacts/pilot_outputs/slsa_spec_v1_0_build_track/appsec_core_normalization.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/manual_gap_analysis.json",
+          "dest": "paper2_artifacts/pilot_outputs/slsa_spec_v1_0_build_track/manual_gap_analysis.json"
+        },
+
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/cis_controls_v8_1/brief.md",
+          "dest": "paper2_artifacts/pilot_manifests/cis_controls_v8_1/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/cis_controls_v8_1/source_manifest.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/cis_controls_v8_1/source_manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/cis_controls_v8_1/indexing_contract.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/cis_controls_v8_1/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1/stubs/source_retrieval_receipt.json",
+          "dest": "paper2_artifacts/pilot_outputs/cis_controls_v8_1/source_retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1/stubs/source_unit_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/cis_controls_v8_1/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1/stubs/source_object_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/cis_controls_v8_1/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1/stubs/appsec_core_normalization.json",
+          "dest": "paper2_artifacts/pilot_outputs/cis_controls_v8_1/appsec_core_normalization.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1/stubs/manual_gap_analysis.json",
+          "dest": "paper2_artifacts/pilot_outputs/cis_controls_v8_1/manual_gap_analysis.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1/stubs/published_manual_traceability_control_comparison.json",
+          "dest": "paper2_artifacts/pilot_outputs/cis_controls_v8_1/published_manual_traceability_control_comparison.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1/stubs/published_manual_traceability_control_comparison.md",
+          "dest": "paper2_artifacts/pilot_outputs/cis_controls_v8_1/published_manual_traceability_control_comparison.md"
+        },
+
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/capec_supply_chain_risks_v3_9/brief.md",
+          "dest": "paper2_artifacts/pilot_manifests/capec_supply_chain_risks_v3_9/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/capec_supply_chain_risks_v3_9/source_manifest.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/capec_supply_chain_risks_v3_9/source_manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/capec_supply_chain_risks_v3_9/indexing_contract.yaml",
+          "dest": "paper2_artifacts/pilot_manifests/capec_supply_chain_risks_v3_9/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_supply_chain_risks_v3_9/stubs/source_retrieval_receipt.json",
+          "dest": "paper2_artifacts/pilot_outputs/capec_supply_chain_risks_v3_9/source_retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_supply_chain_risks_v3_9/stubs/source_unit_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/capec_supply_chain_risks_v3_9/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_supply_chain_risks_v3_9/stubs/source_object_inventory.json",
+          "dest": "paper2_artifacts/pilot_outputs/capec_supply_chain_risks_v3_9/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_supply_chain_risks_v3_9/stubs/appsec_core_normalization.json",
+          "dest": "paper2_artifacts/pilot_outputs/capec_supply_chain_risks_v3_9/appsec_core_normalization.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_supply_chain_risks_v3_9/stubs/manual_gap_analysis.json",
+          "dest": "paper2_artifacts/pilot_outputs/capec_supply_chain_risks_v3_9/manual_gap_analysis.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_supply_chain_risks_v3_9/stubs/manual_threat_surface_comparison.json",
+          "dest": "paper2_artifacts/pilot_outputs/capec_supply_chain_risks_v3_9/manual_threat_surface_comparison.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_supply_chain_risks_v3_9/stubs/manual_threat_surface_comparison.md",
+          "dest": "paper2_artifacts/pilot_outputs/capec_supply_chain_risks_v3_9/manual_threat_surface_comparison.md"
+        }
+      ]
+    },
+    {
+      "id": "paper3",
+      "description": "Minimal retrieval-paper support artifacts for the current V1 retrieval paper.",
+      "files": [
+        {
+          "source_repo": "knowledge_graph",
+          "source": "docs/operations/consumer_contract.md",
+          "dest": "paper3_artifacts/retrieval_contract/consumer_contract.md"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "docs/operations/output_policy.md",
+          "dest": "paper3_artifacts/retrieval_contract/output_policy.md"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/deterministic_manifest.json",
+          "dest": "paper3_artifacts/runtime_snapshot/deterministic_manifest.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/requirements.json",
+          "dest": "paper3_artifacts/runtime_snapshot/requirements.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/controls.json",
+          "dest": "paper3_artifacts/runtime_snapshot/controls.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/practices.json",
+          "dest": "paper3_artifacts/runtime_snapshot/practices.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/artifacts.json",
+          "dest": "paper3_artifacts/runtime_snapshot/artifacts.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/threats.json",
+          "dest": "paper3_artifacts/runtime_snapshot/threats.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/evidence_patterns.json",
+          "dest": "paper3_artifacts/runtime_snapshot/evidence_patterns.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/signals.json",
+          "dest": "paper3_artifacts/runtime_snapshot/signals.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/requirement_control_links.json",
+          "dest": "paper3_artifacts/runtime_snapshot/requirement_control_links.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/signal_evidence_links.json",
+          "dest": "paper3_artifacts/runtime_snapshot/signal_evidence_links.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/antipatterns.json",
+          "dest": "paper3_artifacts/runtime_snapshot/antipatterns.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/antipattern_requirement_links.json",
+          "dest": "paper3_artifacts/runtime_snapshot/antipattern_requirement_links.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/antipattern_threat_links.json",
+          "dest": "paper3_artifacts/runtime_snapshot/antipattern_threat_links.json"
+        }
+      ]
+    }
+  ]
+}

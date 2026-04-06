@@ -1,0 +1,151 @@
+meta:
+  name: AppSec Core Slice Contract
+  version: '0.1'
+  status: working_contract
+  scope: supply_chain_and_build_integrity
+  description: >
+    Consolidated contract for the first AppSec core slice. This file does not
+    replace the detailed drafts; it defines the current stable reading across
+    objectives, mapping rules, normalized components, confidence boundaries and
+    immediate continuation criteria.
+  related_artifacts:
+    objective_draft: ontology/appsec-core-supply-chain-build-integrity-draft.yaml
+    mapping_draft: ontology/appsec-core-supply-chain-build-integrity-mapping-draft.yaml
+    components_draft: ontology/appsec-core-supply-chain-build-integrity-components-draft.yaml
+    slice_note: docs/project/working-notes/2026-04-02-appsec-core-slice-supply-chain-build-integrity.md
+    evidence_handoff: docs/project/working-notes/2026-04-03-evidence-pattern-supply-chain-status.md
+    objective_review: docs/project/working-notes/2026-04-03-appsec-core-slice-objective-review.md
+purpose:
+  current_goal: >
+    Stabilize one reusable AppSec domain slice before opening additional slices
+    or bringing in external alignment frameworks.
+  non_goals:
+    - regulatory_overlay_expansion
+    - v3_audit_persistence
+    - source_provenance_transversal_layer
+    - second_appsec_slice
+module_position:
+  appsec_core:
+    included:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+    deferred_or_weak:
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    included:
+      - requirement_to_objective_mapping
+      - control_to_objective_mapping
+      - practice_to_normalized_practice_mapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM and SLSA stay out of this contract
+objective_set:
+  atomic_objectives:
+    - ACO-SCBI-001
+    - ACO-SCBI-002
+    - ACO-SCBI-003
+    - ACO-SCBI-004
+    - ACO-SCBI-005
+    - ACO-SCBI-006
+  composite_objectives:
+    - ACO-SCBI-007
+  composite_rules:
+    ACO-SCBI-007:
+      meaning: Composite landing zone for the wide image/container supply-chain control surface
+      composed_of:
+        - ACO-SCBI-001
+        - ACO-SCBI-002
+        - ACO-SCBI-003
+        - ACO-SCBI-006
+      usage_rule: >
+        May remain a primary target for broad manual controls, but requirement-level
+        mappings should prefer atomic objectives when a direct semantic fit exists.
+mapping_rules:
+  control_level:
+    rule: Broad manual controls may map primarily to composite objectives when they span multiple atomic concerns
+    example:
+      source_control_id: CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+      primary_target: ACO-SCBI-007
+  requirement_level:
+    rule: Requirement mappings should prefer atomic objectives when the requirement is semantically narrow
+    example:
+      source_requirement_id: CNT-001
+      primary_target: ACO-SCBI-003
+      secondary_target: ACO-SCBI-007
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+component_subset:
+  normalized_practices:
+    - ACP-SCBI-001
+    - ACP-SCBI-002
+    - ACP-SCBI-003
+    - ACP-SCBI-004
+    - ACP-SCBI-005
+    - ACP-SCBI-006
+    - ACP-SCBI-007
+  normalized_mechanisms:
+    - ACM-SCBI-001
+    - ACM-SCBI-002
+    - ACM-SCBI-003
+    - ACM-SCBI-004
+    - ACM-SCBI-005
+  normalized_artifacts:
+    - ACA-SCBI-001
+    - ACA-SCBI-002
+    - ACA-SCBI-003
+    - ACA-SCBI-004
+    - ACA-SCBI-005
+    - ACA-SCBI-006
+    - ACA-SCBI-007
+    - ACA-SCBI-008
+    - ACA-SCBI-009
+    - ACA-SCBI-010
+evidence_pattern_position:
+  current_status: supporting_inside_slice
+  meaning: >
+    EvidencePattern stays inside the slice for now as a supporting AppSec core
+    concept that helps deterministic review semantics.
+  explicit_boundaries:
+    - it_is_not_the_v3_audit_layer
+    - it_is_not_yet_split_into_a_separate_verification_module
+    - it_is_useful_enough_to_keep_in_the_first_slice_contract
+  revisit_trigger: >
+    Revisit only after this slice stabilizes and before opening broader
+    cross-slice verification semantics.
+confidence_boundaries:
+  strong_inputs:
+    - ontology/sbdtoe-ontology.yaml
+    - data/entities/canonical_requirements_s7.json
+    - data/entities/canonical_controls.json
+    - data/entities/practices.json
+    - data/entities/artifact_catalog.json
+    - data/publish/semantic/mechanism_control_links.jsonl
+    - data/publish/semantic/pattern_control_links.jsonl
+    - data/publish/runtime/evidence_patterns.json
+  weak_or_deferred_inputs:
+    - data/entities/mitigated_threats.json
+    - data/publish/semantic/signals.jsonl
+  rule: >
+    Threat and signal material is informative but not strong enough yet to drive
+    first-class normalization for this slice, especially where the underlying
+    source grounding still depends heavily on canon material.
+acceptance_read:
+  stable_enough_now:
+    - the first slice has a coherent objective set
+    - the objective set now distinguishes atomic and composite semantics
+    - the mapping layer encodes the main atomic/composite rule
+    - a minimum component subset exists for practices, mechanisms and artifacts
+  not_stable_enough_yet:
+    - threat modeling for this slice
+    - signal-driven slice semantics
+    - external alignment for the slice
+    - second-slice expansion
+next_step:
+  recommendation: >
+    Treat this slice as the current reference slice and use it to review whether
+    the objective/component vocabulary is good enough to generalize before
+    opening a second slice.

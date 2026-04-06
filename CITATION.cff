@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: "AppSec Core Research: Curated Papers and Reproducibility Artifacts"
+message: "If you use this repository, please cite the repository release and the relevant paper."
+type: software
+authors:
+  - family-names: "Research Team"
+    given-names: "SbD-ToE"
+repository-code: "https://github.com/<org>/appsec-core-research"
+url: "https://github.com/<org>/appsec-core-research"
+license: "CC-BY-4.0"
+version: "v1.0.0"
+date-released: 2026-04-05
+abstract: >
+  Curated public repository for the current V1 AppSec Core research paper set,
+  including papers and release-grade artifacts supporting ontology
+  normalization, coverage-preserving knowledge compilation, and
+  ontology-grounded retrieval.
+keywords:
+  - application security
+  - ontology
+  - knowledge compilation
+  - retrieval
+  - reproducibility
+  - AppSec Core
+preferred-citation:
+  type: generic
+  title: "AppSec Core Research: Curated Papers and Reproducibility Artifacts"
+  authors:
+    - family-names: "Research Team"
+      given-names: "SbD-ToE"
+  version: "v1.0.0"
+  date-released: 2026-04-05
+  url: "https://github.com/<org>/appsec-core-research"
+
+# Before public release, replace:
+# - <org>
+# - author metadata
+# - release date if needed
+# - version if needed

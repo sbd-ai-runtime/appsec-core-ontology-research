@@ -1,0 +1,463 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "ssdf_sp800_218_v1_1",
+  "status": "editorial_candidates_ready",
+  "intended_target": "publishable_traceability_surface",
+  "candidate_target_surface": "manual_publishable_traceability_reedit",
+  "policy": {
+    "mode": "editorial_candidates_only",
+    "auto_apply": false
+  },
+  "candidate_types": [
+    "manual_addition",
+    "traceability_repair",
+    "canon_reconciliation"
+  ],
+  "summary": {
+    "total_candidates": 10,
+    "counts_by_type": {
+      "manual_addition": 4,
+      "traceability_repair": 5,
+      "canon_reconciliation": 1
+    }
+  },
+  "notes": [
+    "These candidates are derived from first-pass SSDF normalization and practice-level manual gap analysis.",
+    "They are editorial prompts only and must not be auto-applied to the manual or canon publication surfaces.",
+    "Manual-addition candidates may still reflect AppSec Core v0 anchor gaps, so they require semantic review before any traceability publication work."
+  ],
+  "items": [
+    {
+      "candidate_id": "TCAND-SSDF-PO_1",
+      "candidate_type": "manual_addition",
+      "priority": "high",
+      "source_ssdf_code": "PO.1",
+      "source_title": "Define Security Requirements for Software Development",
+      "coverage_status": "ambiguous",
+      "normalization_status": "core_gap",
+      "landing_strength": "none",
+      "proposed_action": "Review whether the manual needs an explicit addition or whether AppSec Core first needs a cleaner landing zone before any traceability claim is published.",
+      "coverage_rationale": "The external practice does not yet have a clean AppSec Core landing zone, so current manual coverage cannot be asserted with confidence.",
+      "normalization_rationale": "Current AppSec Core v0 has no dedicated slice for cross-SDLC security requirements governance; the nearest landing zones remain too broad to claim a clean objective-level normalization.",
+      "source_page_numbers": [
+        14,
+        21,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TMR-007",
+          "name": "Threat Modeling And Risk Governance Integrity",
+          "scope": "threat_modeling_risk_disposition_and_mitigation_traceability",
+          "objective_kind": "composite",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-007",
+          "name": "Secure Architecture Governance And Boundary Integrity",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "composite",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PO_2",
+      "candidate_type": "manual_addition",
+      "priority": "high",
+      "source_ssdf_code": "PO.2",
+      "source_title": "Implement Roles and Responsibilities",
+      "coverage_status": "ambiguous",
+      "normalization_status": "core_gap",
+      "landing_strength": "none",
+      "proposed_action": "Review whether the manual needs an explicit addition or whether AppSec Core first needs a cleaner landing zone before any traceability claim is published.",
+      "coverage_rationale": "The external practice does not yet have a clean AppSec Core landing zone, so current manual coverage cannot be asserted with confidence.",
+      "normalization_rationale": "Role and responsibility semantics are intentionally under-modeled in AppSec Core v0, so this SSDF practice is preserved as a core-gap rather than forced into an access-control or ownership objective.",
+      "source_page_numbers": [
+        15,
+        16
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P015",
+        "SRC-NIST-SP800-218-V1_1:P016"
+      ],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TMR-004",
+          "name": "Threat Disposition, Risk Acceptance And Ownership",
+          "scope": "threat_modeling_risk_disposition_and_mitigation_traceability",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-IAT-007",
+          "name": "Identity And Access Control Integrity",
+          "scope": "identity_access_and_session_trust",
+          "objective_kind": "composite",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PO_3",
+      "candidate_type": "traceability_repair",
+      "priority": "medium",
+      "source_ssdf_code": "PO.3",
+      "source_title": "Implement Supporting Toolchains",
+      "coverage_status": "partial",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "proposed_action": "Review current manual traceability around the mapped objective and add narrower, more explicit links if the manual already covers the substance.",
+      "coverage_rationale": "A defensible AppSec Core landing zone exists, but the current landing is broader or more composite than the external practice and should be treated as partial coverage.",
+      "normalization_rationale": "Supporting toolchains are primarily a build-execution integrity concern, with secondary alignment to reproducible validation evidence and centralized source accountability.",
+      "source_page_numbers": [
+        16,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P016",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-004",
+          "name": "Reproducible Security Test Evidence And Build Traceability",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SLG-005",
+          "name": "Centralized Log Ingestion And Source Accountability",
+          "scope": "security_event_logging_audit_trail_and_centralized_logging",
+          "objective_kind": "atomic",
+          "objective_type": "detective"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PO_5",
+      "candidate_type": "traceability_repair",
+      "priority": "medium",
+      "source_ssdf_code": "PO.5",
+      "source_title": "Implement and Maintain Secure Environments for Software Development",
+      "coverage_status": "partial",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "proposed_action": "Review current manual traceability around the mapped objective and add narrower, more explicit links if the manual already covers the substance.",
+      "coverage_rationale": "A defensible AppSec Core landing zone exists, but the current landing is broader or more composite than the external practice and should be treated as partial coverage.",
+      "normalization_rationale": "Secure development environments are closest to build-definition and execution integrity, with supporting ties to provenance integrity and protected operational identity.",
+      "source_page_numbers": [
+        17,
+        18,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P017",
+        "SRC-NIST-SP800-218-V1_1:P018",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-004",
+        "name": "Build Definition And Execution Integrity",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-006",
+          "name": "Artifact Attestation And Provenance Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SPC-007",
+          "name": "Secret Handling And Operational Identity Integrity",
+          "scope": "secret_handling_protected_configuration_and_operational_identities",
+          "objective_kind": "composite",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PS_1",
+      "candidate_type": "traceability_repair",
+      "priority": "medium",
+      "source_ssdf_code": "PS.1",
+      "source_title": "Protect All Forms of Code from Unauthorized Access and Tampering",
+      "coverage_status": "partial",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "proposed_action": "Review current manual traceability around the mapped objective and add narrower, more explicit links if the manual already covers the substance.",
+      "coverage_rationale": "A defensible AppSec Core landing zone exists, but the current landing is broader or more composite than the external practice and should be treated as partial coverage.",
+      "normalization_rationale": "Protecting all forms of code is primarily an identity-and-access integrity concern, but it also supports trusted build-definition control.",
+      "source_page_numbers": [
+        18,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P018",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-IAT-007",
+        "name": "Identity And Access Control Integrity",
+        "scope": "identity_access_and_session_trust",
+        "objective_kind": "composite",
+        "objective_type": "governance"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-004",
+          "name": "Build Definition And Execution Integrity",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PW_1",
+      "candidate_type": "traceability_repair",
+      "priority": "medium",
+      "source_ssdf_code": "PW.1",
+      "source_title": "Design Software to Meet Security Requirements and Mitigate Security Risks",
+      "coverage_status": "partial",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "proposed_action": "Review current manual traceability around the mapped objective and add narrower, more explicit links if the manual already covers the substance.",
+      "coverage_rationale": "A defensible AppSec Core landing zone exists, but the current landing is broader or more composite than the external practice and should be treated as partial coverage.",
+      "normalization_rationale": "Designing software to meet security requirements and mitigate risk spans both threat/risk governance and secure architecture governance, so the landing remains deliberately bounded.",
+      "source_page_numbers": [
+        20,
+        21,
+        27,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P020",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-TMR-007",
+        "name": "Threat Modeling And Risk Governance Integrity",
+        "scope": "threat_modeling_risk_disposition_and_mitigation_traceability",
+        "objective_kind": "composite",
+        "objective_type": "governance"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-007",
+          "name": "Secure Architecture Governance And Boundary Integrity",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "composite",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PW_5",
+      "candidate_type": "manual_addition",
+      "priority": "high",
+      "source_ssdf_code": "PW.5",
+      "source_title": "Create Source Code by Adhering to Secure Coding Practices",
+      "coverage_status": "ambiguous",
+      "normalization_status": "core_gap",
+      "landing_strength": "none",
+      "proposed_action": "Review whether the manual needs an explicit addition or whether AppSec Core first needs a cleaner landing zone before any traceability claim is published.",
+      "coverage_rationale": "The external practice does not yet have a clean AppSec Core landing zone, so current manual coverage cannot be asserted with confidence.",
+      "normalization_rationale": "Secure coding is broader than the current input-validation and service-integration slices; AppSec Core v0 does not yet expose a clean generic secure-coding landing zone.",
+      "source_page_numbers": [
+        22,
+        33,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P022",
+        "SRC-NIST-SP800-218-V1_1:P033",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-IVF-007",
+          "name": "Input Validation And Safe Failure Integrity",
+          "scope": "input_validation_safe_parsing_and_controlled_failure",
+          "objective_kind": "composite",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ITS-007",
+          "name": "Integration Trust And Service Interaction Assurance",
+          "scope": "integration_trust_and_service_to_service_security",
+          "objective_kind": "composite",
+          "objective_type": "preventive"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PW_9",
+      "candidate_type": "manual_addition",
+      "priority": "high",
+      "source_ssdf_code": "PW.9",
+      "source_title": "Configure Software to Have Secure Settings by Default",
+      "coverage_status": "ambiguous",
+      "normalization_status": "core_gap",
+      "landing_strength": "none",
+      "proposed_action": "Review whether the manual needs an explicit addition or whether AppSec Core first needs a cleaner landing zone before any traceability claim is published.",
+      "coverage_rationale": "The external practice does not yet have a clean AppSec Core landing zone, so current manual coverage cannot be asserted with confidence.",
+      "normalization_rationale": "Secure-by-default configuration remains broader than the current AppSec Core v0 slices; the nearest architecture and protected-configuration anchors are still too indirect for a clean normalization.",
+      "source_page_numbers": [
+        25,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P025",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "nearest_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-002",
+          "name": "Trust Boundary Clarity And Protected Data Flows",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SPC-007",
+          "name": "Secret Handling And Operational Identity Integrity",
+          "scope": "secret_handling_protected_configuration_and_operational_identities",
+          "objective_kind": "composite",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-RV_3",
+      "candidate_type": "traceability_repair",
+      "priority": "medium",
+      "source_ssdf_code": "RV.3",
+      "source_title": "Analyze Vulnerabilities to Identify Their Root Causes",
+      "coverage_status": "partial",
+      "normalization_status": "mapped",
+      "landing_strength": "bounded",
+      "proposed_action": "Review current manual traceability around the mapped objective and add narrower, more explicit links if the manual already covers the substance.",
+      "coverage_rationale": "A defensible AppSec Core landing zone exists, but the current landing is broader or more composite than the external practice and should be treated as partial coverage.",
+      "normalization_rationale": "Root-cause analysis is best represented as lifecycle governance of threat and vulnerability learning, but it still spans architecture review and finding correction.",
+      "source_page_numbers": [
+        27,
+        33
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P027",
+        "SRC-NIST-SP800-218-V1_1:P033"
+      ],
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-TMR-006",
+        "name": "Independent Review And Threat Model Lifecycle Governance",
+        "scope": "threat_modeling_risk_disposition_and_mitigation_traceability",
+        "objective_kind": "atomic",
+        "objective_type": "governance"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-ATB-005",
+          "name": "Architecture Review And Change Trigger Discipline",
+          "scope": "architecture_and_trust_boundaries",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        },
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-TSV-003",
+          "name": "Security Finding Triage And Correction Closure",
+          "scope": "testing_security_validation_and_empirical_assurance",
+          "objective_kind": "atomic",
+          "objective_type": "governance"
+        }
+      ]
+    },
+    {
+      "candidate_id": "TCAND-SSDF-PW_3",
+      "candidate_type": "canon_reconciliation",
+      "priority": "low",
+      "source_ssdf_code": "PW.3",
+      "source_title": "Verify Third-Party Software Complies with Security Requirements",
+      "coverage_status": "bridge_only",
+      "normalization_status": "redirect_inherited",
+      "landing_strength": "strong",
+      "proposed_action": "Preserve redirect semantics and reconcile canonical/public traceability so the redirected SSDF object is not treated as a standalone semantic unit.",
+      "coverage_rationale": "This SSDF object is a redirect surface and should not be read as an independent source of manual coverage.",
+      "normalization_rationale": "This SSDF object is a redirect surface and inherits its AppSec Core landing zone from the moved-to target rather than claiming independent semantics.",
+      "source_page_numbers": [
+        14,
+        21,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-NIST-SP800-218-V1_1:P014",
+        "SRC-NIST-SP800-218-V1_1:P021",
+        "SRC-NIST-SP800-218-V1_1:P036"
+      ],
+      "primary_core_anchor": {
+        "entity_type": "ControlObjective",
+        "object_id": "ACO-SCBI-003",
+        "name": "Controlled Dependency And Image Sources",
+        "scope": "supply_chain_and_build_integrity",
+        "objective_kind": "atomic",
+        "objective_type": "preventive"
+      },
+      "secondary_core_anchors": [
+        {
+          "entity_type": "ControlObjective",
+          "object_id": "ACO-SCBI-002",
+          "name": "Dependency Risk Evaluation And Policy Gating",
+          "scope": "supply_chain_and_build_integrity",
+          "objective_kind": "atomic",
+          "objective_type": "preventive"
+        }
+      ]
+    }
+  ]
+}

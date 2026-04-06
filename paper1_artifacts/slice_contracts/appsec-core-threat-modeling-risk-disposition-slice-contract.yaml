@@ -1,0 +1,166 @@
+meta:
+  name: AppSec Core Slice Contract
+  version: '0.1'
+  status: working_contract
+  scope: threat_modeling_risk_disposition_and_mitigation_traceability
+  description: >
+    Consolidated contract for the fifth AppSec core slice. This file does not
+    replace the detailed drafts; it defines the current stable reading across
+    objectives, mapping rules, normalized components, confidence boundaries and
+    immediate continuation criteria.
+  related_artifacts:
+    objective_draft: ontology/appsec-core-threat-modeling-risk-disposition-draft.yaml
+    mapping_draft: ontology/appsec-core-threat-modeling-risk-disposition-mapping-draft.yaml
+    components_draft: ontology/appsec-core-threat-modeling-risk-disposition-components-draft.yaml
+    slice_note: docs/project/working-notes/2026-04-03-appsec-core-slice-threat-modeling-risk-disposition.md
+    candidate_evaluation: docs/project/working-notes/2026-04-03-appsec-core-slice-5-candidate-evaluation.md
+purpose:
+  current_goal: >
+    Stabilize a fifth reusable AppSec domain slice on a threat-modeling
+    semantic surface centered on scope, grounded representation, risk
+    disposition, mitigation traceability and independent review before opening a
+    sixth slice or pulling in external-alignment frameworks.
+  non_goals:
+    - regulatory_overlay_expansion
+    - v3_audit_persistence
+    - source_provenance_transversal_layer
+    - normalized_global_threat_catalog
+    - sixth_appsec_slice
+module_position:
+  appsec_core:
+    included:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+    deferred_or_weak:
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    included:
+      - requirement_to_objective_mapping
+      - control_to_objective_mapping
+      - practice_to_normalized_practice_mapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM and SLSA stay out of this contract
+objective_set:
+  atomic_objectives:
+    - ACO-TMR-001
+    - ACO-TMR-002
+    - ACO-TMR-003
+    - ACO-TMR-004
+    - ACO-TMR-005
+    - ACO-TMR-006
+  composite_objectives:
+    - ACO-TMR-007
+  composite_rules:
+    ACO-TMR-007:
+      meaning: Composite landing zone for the broad manual threat-modeling governance surface
+      composed_of:
+        - ACO-TMR-001
+        - ACO-TMR-002
+        - ACO-TMR-003
+        - ACO-TMR-004
+        - ACO-TMR-005
+        - ACO-TMR-006
+      usage_rule: >
+        May remain a primary target for the broad threat-modeling control, but
+        requirement-level mappings should prefer atomic objectives when a direct
+        semantic fit exists.
+mapping_rules:
+  control_level:
+    rule: Broad threat-governance controls may map primarily to composite objectives when they span scope, method, disposition, traceability and review concerns at once
+    example:
+      source_control_id: CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+      primary_target: ACO-TMR-007
+  requirement_level:
+    rule: Requirement mappings should prefer atomic objectives when the requirement is semantically narrow
+    examples:
+      - source_requirement_id: THR-004
+        primary_target: ACO-TMR-004
+      - source_requirement_id: THR-006
+        primary_target: ACO-TMR-006
+        secondary_target: ACO-TMR-001
+  practice_level:
+    rule: >
+      The `03-threat-modeling` chapter already provides a strong enough
+      practice surface to support normalization, but slice construction still
+      begins from requirement and control decomposition.
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+component_subset:
+  normalized_practices:
+    - ACP-TMR-001
+    - ACP-TMR-002
+    - ACP-TMR-003
+    - ACP-TMR-004
+    - ACP-TMR-005
+    - ACP-TMR-006
+    - ACP-TMR-007
+  normalized_mechanisms:
+    - ACM-TMR-001
+    - ACM-TMR-002
+    - ACM-TMR-003
+    - ACM-TMR-004
+    - ACM-TMR-005
+    - ACM-TMR-006
+  normalized_artifacts:
+    - ACA-TMR-001
+    - ACA-TMR-002
+    - ACA-TMR-003
+    - ACA-TMR-004
+evidence_pattern_position:
+  current_status: supporting_inside_slice
+  meaning: >
+    EvidencePattern stays inside the slice for now as a supporting AppSec core
+    concept that helps deterministic review semantics around threat-model
+    evidence, accepted-risk records and mitigation traceability.
+  explicit_boundaries:
+    - it_is_not_the_v3_audit_layer
+    - it_is_not_a_normalized_global_threat_catalog
+    - it_must_not_turn_into_runtime_incident_response_semantics
+  revisit_trigger: >
+    Revisit only after this slice stabilizes and before opening broader
+    cross-slice risk or review semantics.
+confidence_boundaries:
+  strong_inputs:
+    - ontology/sbdtoe-ontology.yaml
+    - data/entities/canonical_requirements_s7.json
+    - data/entities/canonical_controls.json
+    - data/entities/practices.json
+    - data/entities/artifact_catalog.json
+    - data/publish/semantic/mechanisms.jsonl
+  useful_but_adjacent_inputs:
+    - 04-arquitetura-segura
+    - 10-testes-seguranca
+  weak_or_deferred_inputs:
+    - data/entities/mitigated_threats.json
+    - data/publish/semantic/signals.jsonl
+  adjacent_but_not_central:
+    - ARC-005
+    - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    - TST-008
+  rule: >
+    Normalize this slice threat-modeling-first, trust the strong `THR`
+    requirement and `03-threat-modeling` practice surfaces, but do not let the
+    slice drift into architecture-governance replay, testing replay or weak
+    canon-driven threat normalization.
+acceptance_read:
+  stable_enough_now:
+    - the fifth slice has a coherent objective set
+    - the objective set distinguishes atomic and composite semantics
+    - the mapping layer encodes the main control-level composite rule
+    - a minimum component subset exists for practices, mechanisms and artifacts
+    - the slice records the boundary between threat-model governance and reusable threat catalogs explicitly
+  not_stable_enough_yet:
+    - reusable threat-instance taxonomy
+    - final review-record artifact taxonomy
+    - signal-driven slice semantics
+    - external alignment for the slice
+next_step:
+  recommendation: >
+    Treat the first five slices as the current reference set and review whether
+    the method invariants now need another explicit update before opening a
+    sixth slice.

@@ -1,0 +1,60 @@
+meta:
+  pilot_id: asvs_v5_0_0
+  status: published_traceability_surface_cluster_compared
+input_contract:
+  source_manifest: pilots/asvs_v5_0_0/source_manifest.yaml
+  accepted_source_artifacts:
+    - html_snapshot
+    - flat_json_snapshot
+    - csv_snapshot
+    - pdf_snapshot
+  required_provenance_fields:
+    - source_document_id
+    - canonical_url
+    - publication_date
+    - retrieved_at
+    - checksum_sha256
+stage_outputs:
+  source_retrieval_receipt:
+    path: data/asvs_v5_0_0/stubs/source_retrieval_receipt.json
+  source_inventory:
+    path: data/asvs_v5_0_0/stubs/external_source_inventory.json
+  source_unit_inventory:
+    path: data/asvs_v5_0_0/stubs/source_unit_inventory.json
+  source_object_inventory:
+    path: data/asvs_v5_0_0/stubs/source_object_inventory.json
+  normalized_core_objects:
+    path: data/asvs_v5_0_0/stubs/appsec_core_normalization.json
+  manual_gap_analysis:
+    path: data/asvs_v5_0_0/stubs/manual_gap_analysis.json
+  traceability_candidates:
+    path: data/asvs_v5_0_0/stubs/traceability_publication_candidates.json
+  published_traceability_cluster_comparison_json:
+    path: data/asvs_v5_0_0/stubs/published_manual_traceability_cluster_comparison.json
+  published_traceability_cluster_comparison_markdown:
+    path: data/asvs_v5_0_0/stubs/published_manual_traceability_cluster_comparison.md
+pipeline_scripts:
+  source_object_extraction:
+    path: scripts/extract_asvs_source_objects.py
+  appsec_core_normalization:
+    path: scripts/normalize_asvs_to_appsec_core.py
+  manual_gap_analysis:
+    path: scripts/derive_asvs_manual_gap_analysis.py
+  published_traceability_comparison:
+    path: scripts/compare_asvs_clusters_against_published_manual_traceability_surface.py
+normalization_rules:
+  - external_objects_land_in_appsec_core_before_any_manual_comparison
+  - asvs_requirements_are_requirement_level_pressure_not_direct_manual_edits
+  - source_scope_stays_within_the_tagged_release_not_the_live_project_head
+  - rationale_for_core_mapping_must_be_preserved
+  - chapter_and_section_context_may_be_retained_without_forcing_one_to_one_manual_rows
+comparison_rules:
+  status_labels:
+    - covered
+    - partial
+    - bridge_only
+    - ambiguous
+    - manual_gap
+    - appsec_core_gap
+    - comparison_gap
+    - out_of_scope_for_appsec_core
