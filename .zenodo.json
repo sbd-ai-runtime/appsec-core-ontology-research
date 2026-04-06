@@ -1,10 +1,10 @@
 {
-  "title": "Security by Design: Ontology-Grounded AI Runtime Research Release v1.0.0",
+  "title": "AppSec Core Ontology Research: Curated Research Program Release v1.0.3",
   "version": "v1.0.3",
   "upload_type": "software",
   "access_right": "open",
   "license": "cc-by-4.0",
-  "description": "<p>Research program release v1.0.0 for the SbD-AI Runtime / AppSec Core line. This curated release includes code, dataset-grade research artifacts, and three related papers covering ontology design, coverage-preserving normalization of public sources, and ontology-grounded retrieval.</p><p>Homepage: <a href=\"https://www.securitybydesign.dev\">https://www.securitybydesign.dev</a><br>Published manual: <a href=\"https://www.securitybydesign.dev/sbd-toe/sbd-manual/\">https://www.securitybydesign.dev/sbd-toe/sbd-manual/</a></p>",
+  "description": "<p>Curated research program release v1.0.3 for the AppSec Core Ontology Research line. This release includes three related papers and release-grade artifacts covering application security ontology design, coverage-preserving knowledge compilation, and ontology-grounded retrieval for LLM-assisted security workflows.</p><p>Homepage: <a href=\"https://www.securitybydesign.dev\">https://www.securitybydesign.dev</a><br>Published manual: <a href=\"https://www.securitybydesign.dev/sbd-toe/sbd-manual/\">https://www.securitybydesign.dev/sbd-toe/sbd-manual/</a></p>",
   "creators": [
     {
       "name": "Farinha, Pedro",
@@ -31,12 +31,19 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "https://github.com/sbd-ai-runtime/appsec-core-ontology-research",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
       "identifier": "https://www.securitybydesign.dev",
-      "relation": "isDocumentedBy"
+      "relation": "isDocumentedBy",
+      "scheme": "url"
     },
     {
       "identifier": "https://www.securitybydesign.dev/sbd-toe/sbd-manual/",
-      "relation": "isDocumentedBy"
+      "relation": "isDocumentedBy",
+      "scheme": "url"
     }
   ]
 }
