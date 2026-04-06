@@ -70,11 +70,11 @@ Knowledge compilation — transforming dispersed knowledge into a unified, query
 
 ### 2.3 Requirements Traceability
 
-Goknil et al. [7] formalized trace relation semantics for requirements models. Our work introduces an additional dimension: **epistemic weight** — different document types carry different authority, and coverage analysis must account for this stratification. A normative requirement (strong weight) and an operational addon (medium weight) both contribute to coverage, but differently.
+Ramesh and Jarke [8] established reference models for requirements traceability, identifying pre-requirements, requirements, and design as distinct traceability layers. Goknil et al. [7] further formalized trace relation semantics for requirements models. Our work introduces an additional dimension to this literature: **epistemic weight** — different document types carry different authority, and coverage analysis must account for this stratification. A normative requirement (strong weight) and an operational addon (medium weight) both contribute to coverage, but differently.
 
 ### 2.4 Gap Analysis in Security
 
-Gap analysis in security compliance typically compares an organization's documented controls against a framework's requirements. The standard approach treats absence of documentation as absence of practice. We show that this assumption is often wrong: in mature security programs, content frequently exists but is not visible in the traceability surface — a phenomenon we formalize as *claim gaps*.
+Gap analysis in security compliance typically compares an organization's documented controls against a framework's requirements. Without a structured corpus index, a common working assumption is that absence of documentation implies absence of practice. Empirical studies of traceability practice show that this assumption frequently fails: practitioners omit or defer explicit traceability links for reasons unrelated to content absence [9]. We show a specific instantiation of this failure in the security compliance context: content frequently exists but is not visible in the traceability surface — a phenomenon we formalize as *claim gaps*.
 
 ---
 
@@ -102,7 +102,7 @@ This annotation enables **stratified analysis**: coverage assessment can query t
 
 ### 3.3 The Integration Substrate
 
-Both knowledge types are mapped to a shared ontological layer: AppSec Core [1]. AppSec Core provides 10 domain slices with 234 typed instances (ControlObjective, Practice, Mechanism, Artifact). The normalization works as follows:
+Both knowledge types are mapped to a shared ontological layer: AppSec Core v0 [1]. AppSec Core v0 provides 10 domain slices with 234 typed instances (ControlObjective, Practice, Mechanism, Artifact). The normalization works as follows:
 
 - **Normative requirements** map to AppSec Core control objectives (what must be achieved)
 - **Empirical content** maps to AppSec Core objectives, practices, mechanisms, and artifacts (the full type spectrum)
@@ -136,6 +136,8 @@ The pilot follows the mapping protocol defined in [1]: each requirement is mappe
 ### 4.3 Stage 2: Empirical Indexing
 
 The practitioner corpus is decomposed into structural units using automated indexing. In our case study, 4,139 units were extracted from a 15-chapter manual, each annotated with `document_role`, `normative_weight`, and `heading_path`. The distribution of document roles provides the empirical corpus structure:
+
+**Table 1.** Distribution of document roles in the SbD-ToE empirical corpus (4,139 structural units).
 
 ```{=latex}
 \begin{longtable}{@{}L{4.2cm}R{1.6cm}R{1.8cm}L{2cm}@{}}
@@ -235,9 +237,11 @@ Coverage preservation thus depends on the correctness of the normalization ontol
 
 ### 5.1 The Empirical Corpus
 
-The case study uses the **SbD-ToE** (Security by Design — Theory of Everything) manual: a practitioner-authored security reference covering the full SDLC in 15 chapters. The manual was developed over 10+ years of hands-on AppSec engineering across multiple organizations.
+The case study uses the **SbD-ToE** (Security by Design — Theory of Everything) manual: a practitioner-authored security reference covering the full SDLC in 15 chapters. The manual was developed over 10+ years of hands-on AppSec engineering across multiple organizations. The manual was authored in Portuguese; field names, document identifiers, and heading paths throughout this paper reflect the corpus's original naming.
 
 Each chapter follows a canonical structure with four document types:
+
+**Table 2.** SbD-ToE corpus chapter structure: four document types per chapter.
 
 ```{=latex}
 \begin{longtable}{@{}L{3.55cm}L{7.2cm}L{1.8cm}@{}}
@@ -265,6 +269,8 @@ The corpus was decomposed into 4,139 structural units (Section 4.3).
 ### 5.2 The Normative Surface
 
 Five external frameworks were compiled against the corpus:
+
+**Table 3.** External frameworks compiled against the SbD-ToE corpus.
 
 ```{=latex}
 \begin{longtable}{@{}L{4.6cm}R{1.4cm}L{4.4cm}@{}}
@@ -299,7 +305,7 @@ The compilation was conducted in three passes of increasing rigor:
 
 **Pass 3 — Systematic index verification.** For each remaining gap, the structural unit index was queried programmatically: filter by chapter, document role, and content; record the matching source as a `(document_role, normative_weight, heading_path)` triple.
 
-An LLM (Claude) was used as an **assisted query interface** — formulating filter queries and surfacing candidate units from 4,139 entries. All coverage decisions were made by human inspection against Definition 1. The structural unit index was the source of truth.
+An LLM (Claude Sonnet, Anthropic, 2025) was used as an **assisted query interface** — formulating filter queries and surfacing candidate units from 4,139 entries. All coverage decisions were made by human inspection against Definition 1. The structural unit index was the source of truth. The LLM was not used for any text generation in this paper.
 
 ---
 
@@ -361,7 +367,7 @@ CAPEC v3.9 & 13 & 10 & 2 & 1 & 0 \\
 \end{longtable}
 ```
 
-After resolving claim gaps (traceability repairs), effective coverage rises to **84 of 88 in-scope items (95%)**.
+After resolving claim gaps (traceability repairs), effective coverage rises to **84 of 88 in-scope items (95%)** — within this case study, under the author-evaluated coverage protocol described in §5.3.
 
 ### 6.3 Content Gaps (Genuine)
 
@@ -445,7 +451,7 @@ The corpus improved not by writing new security content but by **using the compi
 
 The case study demonstrates that a mature practitioner corpus covers 95% of the normative surface (after claim gap resolution) while containing substantial content not captured by any framework. This suggests that:
 
-- Frameworks **lag** practice: practitioners encounter and document security concerns before frameworks formalize them (e.g., CFG-001→007 documented in 2023; ASVS `secure_configuration_baseline` formalized in 2025)
+- Frameworks **lag** practice: practitioners encounter and document security concerns before frameworks formalize them (e.g., CFG-001→007 documented in the internal corpus in 2023, based on corpus commit history; ASVS `secure_configuration_baseline` formalized in 2025)
 - Frameworks **abstract** practice: they specify *what* but not *how*, leaving the operational layer to practitioners
 - Empirical knowledge is not a luxury — it is the **implementation substance** that frameworks assume but do not provide
 
@@ -455,7 +461,7 @@ A compilation method that captures only normative knowledge loses this substance
 
 The predominance of claim gaps (22 of 36 apparent gaps) has a structural cause. The corpus's traceability surface (`canon/` directory) systematically references strong-weight units (requirements_catalog, aplicacao_lifecycle) but under-references medium-weight units (addons). Since addons constitute 34.8% of the corpus and contain the richest operational content, any analysis that reads only the traceability surface misses them.
 
-This is not a flaw of this specific corpus — it is a structural consequence of **epistemic stratification**: when documentation is organized by authority level, the traceability layer tends to index the normative layer while the operational layer remains invisible. The claim gap phenomenon is therefore expected to manifest in any similarly stratified corpus.
+This is not a flaw of this specific corpus — it is a structural consequence of **epistemic stratification**: when documentation is organized by authority level, the traceability layer tends to index the normative layer while the operational layer remains invisible. We conjecture that the claim gap phenomenon generalizes to other similarly stratified corpora, given the structural cause identified — but cross-organizational validation is needed to test this claim (see §8).
 
 ### 7.3 Coverage Adequacy, Not Completeness
 
@@ -506,9 +512,15 @@ Knowledge compilation for security is not a one-time alignment exercise. It is a
 
 ---
 
+## 10. Artifact Availability
+
+Curated supporting artifacts for this paper are available in the companion public repository at <https://github.com/sbd-ai-runtime/appsec-core-ontology-research>. For this paper, the relevant materials are organized under `papers/02-coverage-preserving-knowledge-compilation/artifacts/`, notably `papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/` and `papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/`, which contain the released first-wave pilot manifests and comparison outputs supporting the case-study surface. The same repository also contains this paper's curated source under `papers/02-coverage-preserving-knowledge-compilation/source/` and its public PDF under `papers/02-coverage-preserving-knowledge-compilation/pdf/`.
+
+---
+
 ## References
 
-[1] [Companion paper] AppSec Core: A normalized ontology for security requirements across heterogeneous frameworks. 2026.
+[1] P. Farinha, "AppSec Core: A normalized ontology for security requirements across heterogeneous frameworks," preprint, 2026. [arXiv ID: TBD — submitted as companion preprint]
 
 [2] NIST. Secure Software Development Framework (SSDF) Version 1.1. SP 800-218. 2022.
 
@@ -521,3 +533,7 @@ Knowledge compilation for security is not a one-time alignment exercise. It is a
 [6] V. R. Basili, F. Shull, and F. Lanubile, "Building knowledge through families of experiments," *IEEE Trans. Software Eng.*, vol. 25, no. 4, pp. 456–473, Jul./Aug. 1999, doi: 10.1109/32.799939.
 
 [7] A. Goknil, I. Kurtev, K. van den Berg, and J.-W. Veldhuis, "Semantics of trace relations in requirements models for consistency checking and inferencing," *Software & Systems Modeling*, vol. 10, no. 1, pp. 31–54, 2011, doi: 10.1007/s10270-009-0142-3.
+
+[8] B. Ramesh and M. Jarke, "Toward reference models for requirements traceability," *IEEE Trans. Software Eng.*, vol. 27, no. 1, pp. 58–93, Jan. 2001, doi: 10.1109/32.895989.
+
+[9] P. Mäder and J. Cleland-Huang, "Why don't we trace? A study on the barriers to software traceability in practice," *Requirements Engineering*, 2023, doi: 10.1007/s00766-023-00408-9.

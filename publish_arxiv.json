@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "defaults": {
+    "from": "markdown+smart+raw_attribute",
+    "tex_engine": "xelatex",
+    "verify_passes": 2,
+    "pandoc_args": [
+      "--include-in-header",
+      "styles/paper-arxiv.tex"
+    ]
+  },
+  "documents": [
+    {
+      "id": "paper1",
+      "title": "AppSec Core: A Normalized Ontology for Security Requirements Across Heterogeneous Frameworks",
+      "source": "papers/01-appsec-core-normalized-ontology/source/manuscript.md",
+      "output_dir": "papers/01-appsec-core-normalized-ontology/arxiv",
+      "archive_name": "appsec_core_normalized_ontology-arxiv.tar.gz"
+    },
+    {
+      "id": "paper2",
+      "title": "Coverage-Preserving Compilation of Normative and Empirical Security Knowledge",
+      "source": "papers/02-coverage-preserving-knowledge-compilation/source/manuscript.md",
+      "output_dir": "papers/02-coverage-preserving-knowledge-compilation/arxiv",
+      "archive_name": "coverage_preserving_knowledge_compilation-arxiv.tar.gz"
+    },
+    {
+      "id": "paper3",
+      "title": "Ontology-Grounded Retrieval for Auditable LLM-Assisted Secure Code Generation",
+      "source": "papers/03-ontology-grounded-retrieval/source/manuscript.md",
+      "output_dir": "papers/03-ontology-grounded-retrieval/arxiv",
+      "archive_name": "ontology_grounded_retrieval-arxiv.tar.gz"
+    }
+  ]
+}

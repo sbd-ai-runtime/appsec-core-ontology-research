@@ -11,11 +11,11 @@ _Supported by Shiftleft - Secure Software Engineering, lda._
 
 ## Abstract
 
-The application security (AppSec) landscape is served by an expanding set of frameworks, standards, and regulations, each using its own vocabulary, granularity, and structural conventions. Organizations that must demonstrate alignment with multiple sources simultaneously face a quadratic mapping problem with no shared semantic model to mediate it. The empirical normalization evidence reported in this paper is limited to a first-wave framework set comprising NIST SSDF, OWASP ASVS, SLSA, and CIS Controls.
+The application security (AppSec) landscape is served by an expanding set of frameworks, standards, and regulations, each using its own vocabulary, granularity, and structural conventions. Organizations that must demonstrate alignment with multiple sources simultaneously face a quadratic mapping problem with no shared semantic model to mediate it.
 
 We propose **AppSec Core**, a normalized ontology for application security comprising 10 domain slices and 234 typed instances. The ontology defines four entity types — ControlObjective, Practice, Mechanism, and Artifact — connected by a stable set of relations (`implements`, `realizes`, `evidences`) that are structurally invariant across all slices. Each slice is governed by a formal contract specifying scope, boundaries, and non-goals. The ontology was derived from practitioner semantics accumulated over a decade of AppSec engineering, not from any single external framework.
 
-We present evidence that AppSec Core can function as a **semantic normalization layer** through canonical reduction: requirements from SSDF, ASVS, and SLSA — expressed in incompatible vocabularies — are reduced to shared ControlObjectives and their associated operational chains within the ontology, after which downstream coverage analysis operates on the normalized objective layer independently of framework vocabulary. We report on mapping exercises covering three framework pairs and show that the 10-slice model accommodates every requirement analyzed without structural extension.
+We present evidence that AppSec Core can function as a **semantic normalization layer** through canonical reduction: requirements from a first-wave set of five sources (SSDF, ASVS, SLSA, CIS Controls, and CAPEC) — expressed in incompatible vocabularies — are reduced to shared ControlObjectives and their associated operational chains within the ontology, after which downstream coverage analysis operates on the normalized objective layer independently of framework vocabulary. Mapping exercises across three presented slices show that 79% of analyzed ControlObjectives are mapped by at least two frameworks, and the 10-slice model accommodates every requirement analyzed under the stated inclusion protocol without structural extension.
 
 We contribute: (1) the AppSec Core ontology as a reusable domain model; (2) the four-type instance schema with explicit traceability relations; (3) empirical evidence of semantic normalization through canonical reduction — heterogeneous framework requirements are reduced to shared ControlObjectives, after which downstream coverage analysis is independent of framework vocabulary; and (4) a contract-based governance model that supports principled extension.
 
@@ -25,7 +25,7 @@ We contribute: (1) the AppSec Core ontology as a reusable domain model; (2) the 
 
 ## 1. Introduction
 
-Organizations developing software in regulated or security-sensitive environments must align their practices with multiple external frameworks. NIST's Secure Software Development Framework (SSDF) [1] prescribes 20 practices across the secure development lifecycle. OWASP's Application Security Verification Standard (ASVS) v5.0 [2] defines 443 verification requirements organized in 36 thematic clusters. Supply-chain Levels for Software Artifacts (SLSA) [3] specifies 14 build integrity requirements across three maturity levels. CIS Controls v8.1 [4] addresses 18 enterprise security controls. Regulatory instruments such as the EU's DORA [5] and NIS2 [6] add further obligations, but the normalization evidence reported in this paper is limited to SSDF, ASVS, SLSA, and CIS Controls.
+Organizations developing software in regulated or security-sensitive environments must align their practices with multiple external frameworks. NIST's Secure Software Development Framework (SSDF) [1] prescribes 20 practices across the secure development lifecycle. OWASP's Application Security Verification Standard (ASVS) v5.0 [2] defines 443 verification requirements organized in 36 thematic clusters. Supply-chain Levels for Software Artifacts (SLSA) [3] specifies 14 build integrity requirements across three maturity levels. CIS Controls v8.1 [4] addresses 18 enterprise security controls. Regulatory instruments such as the EU's DORA [5] and NIS2 [6] add further obligations; their specific mapping to AppSec Core is outside the evidentiary scope of this paper (see Scope, below).
 
 Each of these sources uses its own terminology, structural conventions, and level of granularity. SSDF speaks of *practices* organized in four families (Prepare, Protect, Produce, Respond). ASVS speaks of *verification requirements* grouped by thematic cluster. SLSA speaks of *build levels* with specific provenance and isolation properties. These are not interchangeable vocabularies: they partition the same underlying domain differently.
 
@@ -66,9 +66,9 @@ SSDF [1], ASVS [2], SLSA [3], and CIS Controls [4] each provide comprehensive gu
 
 ### 2.2 Security Ontologies
 
-Several ontologies have been proposed for information security. Herzog et al. [7] proposed a general security ontology covering assets, threats, and countermeasures. Blanco et al. [8] developed an ontology for security requirements engineering and provided a systematic comparison of security ontologies available at the time. More recent work has explored ontology-based approaches for security knowledge management, though primarily at the information security rather than application security level. These works operate at the broad information security level; AppSec Core is scoped specifically to **application security practices** — what development teams do to build secure software — a narrower but more operationally precise domain.
+Several ontologies have been proposed for information security. Herzog et al. [7] proposed a general security ontology covering assets, threats, and countermeasures. Blanco et al. [8] developed an ontology for security requirements engineering and provided a systematic comparison of security ontologies available at the time. These works operate at the broad information security level; AppSec Core is scoped specifically to **application security practices** — what development teams do to build secure software — a narrower but more operationally precise domain.
 
-CWE [9] and CAPEC [10] model the **problem space** (what can go wrong). AppSec Core models the **solution space** (what practitioners do to prevent it). This distinction is relevant: coverage analysis requires a solution-space model.
+CWE [9] and CAPEC [10] model the **problem space** (what can go wrong). AppSec Core models the **solution space** (what practitioners do to prevent it). This distinction is relevant: coverage analysis requires a solution-space model. CAPEC is included in the normalization mapping (Section 5) as a problem-space cross-reference: its attack patterns validate AppSec Core solution-space objectives rather than prescribe practices, and it is treated as a complementary adversarial source rather than a normative framework equivalent to SSDF or ASVS.
 
 ### 2.3 Maturity Models
 
@@ -162,14 +162,16 @@ The ontology defines four core entity types and one supporting type (EvidencePat
 
 **Artifact.** A control-relevant or evidence-bearing output used for review, traceability, and assurance. Required fields: `artifact_id`, `name`, `canonical_role`. Canonical roles are cross-slice: `configuration`, `governance_record`, `review_record`, `approval_record`, `gate_record`, `inventory`, `attestation`, `report`, `evidence_package`, `operational_record`, `build_definition`, `release_artifact`, `model`, `validation_output`, `binding_record`.
 
-**EvidencePattern.** An expected evidence shape for deterministic review support (supporting entity, not core-driving in v0). Required fields: `evidence_pattern_id`, `canonical_evidence_kind`, `expectation`, `validation_method`.
+**EvidencePattern.** An expected evidence shape for deterministic review support. Required fields: `evidence_pattern_id`, `canonical_evidence_kind`, `expectation`, `validation_method`. EvidencePattern is defined and participates in the artifact traceability chain (`artifact_supports_evidence_pattern`) but is not instantiated as a first-class retrieval type in AppSec Core v0. It is instantiated in the runtime layer described in companion work.
 
 #### Relations
 
-The following relations are stable across all slices:
+**Table 2.** Relation types in AppSec Core v0, stable across all slices and referenced consistently across all three companion papers. Prose shorthand (*realizes*, *implements*, *evidences*) appears in narrative descriptions as aliases for these identifiers; the canonical form is the relation name in the table below.
 
 ```{=latex}
-\begin{longtable}{@{}L{4.35cm}L{2.6cm}L{2.35cm}L{4.1cm}@{}}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{5.0cm}L{3.0cm}L{2.7cm}L{3.9cm}@{}}
 \toprule
 \textbf{Relation} & \textbf{From} & \textbf{To} & \textbf{Meaning} \\
 \midrule
@@ -182,26 +184,22 @@ The following relations are stable across all slices:
 \endfoot
 \bottomrule
 \endlastfoot
-\texttt{objective\_realized\_by\_practice} & ControlObjective & Practice & The practice operationalizes the objective \\
-\texttt{objective\_implemented\_by\_mechanism} & ControlObjective & Mechanism & The mechanism technically implements the objective \\
-\texttt{objective\_expects\_artifact} & ControlObjective & Artifact & The artifact evidences achievement of the objective \\
-\texttt{objective\_verified\_by\_evidence\_pattern} & ControlObjective & EvidencePattern & The pattern defines how to verify the objective \\
-\texttt{artifact\_supports\_evidence\_pattern} & Artifact & EvidencePattern & The artifact feeds the evidence pattern \\
-\texttt{manual\_requirement\_maps\_to\_objective} & ExternalRequirement & ControlObjective & Cross-framework mapping relation \\
+\codeid{objective_realized_}\newline\codeid{by_practice} & ControlObjective & Practice & The practice operationalizes the objective \\
+\codeid{objective_implemented_}\newline\codeid{by_mechanism} & ControlObjective & Mechanism & The mechanism technically implements the objective \\
+\codeid{objective_expects_}\newline\codeid{artifact} & ControlObjective & Artifact & The artifact evidences achievement of the objective \\
+\codeid{objective_verified_by_}\newline\codeid{evidence_pattern} & ControlObjective & EvidencePattern & The pattern defines how to verify the objective \\
+\codeid{artifact_supports_}\newline\codeid{evidence_pattern} & Artifact & EvidencePattern & The artifact feeds the evidence pattern \\
+\codeid{manual_requirement_}\newline\codeid{maps_to_objective} & ExternalRequirement & ControlObjective & Cross-framework mapping relation \\
 \end{longtable}
+\normalsize
+\setlength{\tabcolsep}{4pt}
 ```
 
 #### Traceability Chain
 
-The relations form a traceability chain from normative to evidentiary (using active voice; the relation table above uses the equivalent passive form):
+The relations form a traceability chain from normative to evidentiary (using active voice; the relation table above uses the equivalent passive form). A `ControlObjective` is realized through `Practice`, implemented through `Mechanism`, and evidenced through `Artifact`; the associated `EvidencePattern` specifies how that evidence is to be verified.
 
-```
-ControlObjective  ──realized_by──→  Practice
-ControlObjective  ──implemented_by──→  Mechanism
-ControlObjective  ──expects──→  Artifact  ──supports──→  EvidencePattern
-```
-
-This chain ensures that every security concern is represented from *what must be done* through *how* and *with what* to *how to prove it*.
+This chain ensures that each security concern is represented from normative objective, through operational realization and technical implementation, to evidentiary verification.
 
 #### Instance Identifiers
 
@@ -260,7 +258,7 @@ A shared vocabulary applies uniformly across all slices:
 
 - **6 practice families** (governance_and_review, policy_and_gate_enforcement, identity_and_trust_control, validation_and_analysis, integrity_traceability_and_records, rollout_recovery_and_runtime_records)
 - **15 canonical artifact roles** (configuration, governance_record, review_record, approval_record, gate_record, inventory, attestation, report, evidence_package, operational_record, build_definition, release_artifact, model, validation_output, binding_record)
-- **5 stable relations** connecting entity types
+- **6 stable relations** connecting entity types
 
 This shared vocabulary enables cross-slice queries and uniform analysis. A tool that queries practices in one slice uses the same vocabulary and structure in all slices.
 
@@ -306,12 +304,7 @@ Once mapped, downstream reasoning operates on the **normalized objective layer**
 - **implementation reasoning** — the practice and mechanism chains associated with the objective apply regardless of which framework motivated the requirement
 - **verification reasoning** — the evidence patterns and artifacts are determined by the objective, not by the originating framework
 
-The canonical chain is:
-
-```
-ExternalRequirement → ControlObjective → Practice → Mechanism
-                              └──→ Artifact → EvidencePattern
-```
+The canonical traceability structure is as follows: an `ExternalRequirement` maps to a `ControlObjective`; that objective is operationalized through `Practice` and `Mechanism`, and it is evidenced through `Artifact` and `EvidencePattern`.
 
 This is the property that distinguishes normalization from classification. A taxonomy assigns items to categories but preserves framework-specific identity. Normalization performs **canonical reduction**: requirements addressing the same security concern are reduced to a shared operational representation anchored on common objectives, and subsequent coverage analysis operates on that representation. The framework origin becomes provenance metadata, not an input to reasoning.
 
@@ -498,7 +491,7 @@ CAPEC v3.9 (View 683) & Attack patterns & 13 & 4 & 0 \\
 \end{longtable}
 ```
 
-Every external requirement mapped to at least one AppSec Core slice. No requirement fell outside the 10-slice model. This provides evidence — not proof — of *framework coverage*: the model accommodates these frameworks' requirements.
+Every external requirement mapped to at least one AppSec Core slice. No requirement fell outside the 10-slice model under the stated inclusion rules and mapping protocol (Section 4.2). This provides evidence — not proof — of *framework coverage*: the model accommodates these frameworks' requirements.
 
 We distinguish this from *domain coverage* — whether AppSec Core captures all relevant AppSec concerns. The latter would require validation against a broader set of practitioners, organizations, and domains (e.g., embedded systems, ML pipeline security), which is future work. The evidence here supports framework coverage for the analyzed sources; domain coverage remains an open question.
 
@@ -531,7 +524,7 @@ The contract-based model enables principled extension. New slices can be defined
 - **Not a replacement for frameworks**: organizations still use SSDF, ASVS, etc. for their specific purposes. AppSec Core provides the normalization layer for cross-framework analysis.
 - **Not a maturity model**: it does not assess how well practices are performed.
 - **Not a vulnerability taxonomy**: it models the solution space, not the problem space.
-- **Not a formal ontology** in the OWL/description-logic sense: it is a typed semantic model with explicit relations, optimized for practitioner use and tooling integration.
+- **Not a formal ontology** in the OWL/description-logic sense [16, 17, 19]: it is a typed semantic model with explicit relations, optimized for practitioner use and tooling integration. The informal use of *ontology* follows Gruber's sense of "a specification of a conceptualization" [16].
 
 ---
 
@@ -554,7 +547,7 @@ AppSec Core is proposed as a **candidate** for standardization, not as a finishe
 1. **Multi-organization derivation**: the current ontology reflects one team's experience. Cross-organizational validation would test whether the 10-slice model generalizes.
 2. **Requirement-level alignment**: v0 maps at the practice/cluster level. A standard would require finer-grained alignment.
 3. **Community governance**: slice contracts are designed to support community-driven extension, but this has not been tested.
-4. **Formal specification**: the current YAML representation may need formalization (e.g., SHACL, OWL) for interoperability, though accessibility must be weighed against formality.
+4. **Formal specification**: the current YAML representation may need formalization (e.g., SHACL [18], OWL [17]) for interoperability, though accessibility must be weighed against formality.
 
 ### 7.3 Practical Benefits
 
@@ -600,6 +593,12 @@ To our knowledge, the application security domain lacks a shared semantic model 
 
 ---
 
+## 10. Artifact Availability
+
+Curated supporting artifacts for this paper are available in the companion public repository at <https://github.com/sbd-ai-runtime/appsec-core-ontology-research>. For this paper, the relevant materials are organized under `papers/01-appsec-core-normalized-ontology/artifacts/`, notably `papers/01-appsec-core-normalized-ontology/artifacts/ontology/`, `papers/01-appsec-core-normalized-ontology/artifacts/schema/`, and `papers/01-appsec-core-normalized-ontology/artifacts/slice_contracts/`. The same repository also contains this paper's curated source under `papers/01-appsec-core-normalized-ontology/source/` and its public PDF under `papers/01-appsec-core-normalized-ontology/pdf/`.
+
+---
+
 ## References
 
 [1] NIST. Secure Software Development Framework (SSDF) Version 1.1. SP 800-218. 2022.
@@ -618,9 +617,9 @@ To our knowledge, the application security domain lacks a shared semantic model 
 
 [8] C. Blanco, J. Lasheras, R. Valencia-García, E. Fernández-Medina, A. Toval, and M. Piattini, "A systematic review and comparison of security ontologies," in *Proc. 3rd Int. Conf. Availability, Reliability and Security (ARES)*, 2008, pp. 813–820, doi: 10.1109/ARES.2008.33.
 
-[9] MITRE. Common Weakness Enumeration (CWE). Available: https://cwe.mitre.org
+[9] MITRE. Common Weakness Enumeration (CWE). Available: https://cwe.mitre.org (accessed: 2026-04-06).
 
-[10] MITRE. Common Attack Pattern Enumeration and Classification (CAPEC). Available: https://capec.mitre.org
+[10] MITRE. Common Attack Pattern Enumeration and Classification (CAPEC). Available: https://capec.mitre.org (accessed: 2026-04-06).
 
 [11] OWASP. Software Assurance Maturity Model (SAMM) v2.1. 2024.
 
@@ -631,3 +630,11 @@ To our knowledge, the application security domain lacks a shared semantic model 
 [14] B. Fabian, S. Gürses, M. Heisel, T. Santen, and H. Schmidt, "A comparison of security requirements engineering methods," *Requirements Engineering*, vol. 15, no. 1, pp. 7–40, 2010, doi: 10.1007/s00766-009-0092-x.
 
 [15] A. Goknil, I. Kurtev, K. van den Berg, and J.-W. Veldhuis, "Semantics of trace relations in requirements models for consistency checking and inferencing," *Software & Systems Modeling*, vol. 10, no. 1, pp. 31–54, 2011, doi: 10.1007/s10270-009-0142-3.
+
+[16] T. R. Gruber, "A translation approach to portable ontology specifications," *Knowledge Acquisition*, vol. 5, no. 2, pp. 199–220, 1993, doi: 10.1006/knac.1993.1008.
+
+[17] W3C. OWL 2 Web Ontology Language: Document Overview (Second Edition). W3C Recommendation, 2012. Available: https://www.w3.org/TR/owl2-overview/ (accessed: 2026-04-06).
+
+[18] W3C. Shapes Constraint Language (SHACL). W3C Recommendation, 2017. Available: https://www.w3.org/TR/shacl/ (accessed: 2026-04-06).
+
+[19] F. Baader, I. Horrocks, and U. Sattler, "An introduction to description logics," in *The Description Logic Handbook: Theory, Implementation and Applications*, F. Baader, D. Calvanese, D. McGuinness, D. Nardi, and P. F. Patel-Schneider, Eds. Cambridge University Press, 2003, ch. 1, pp. 1–44.

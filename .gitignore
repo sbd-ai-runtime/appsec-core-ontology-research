@@ -1,0 +1,19 @@
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# LaTeX transient build outputs
+*.aux
+*.log
+*.out
+*.toc
+*.xdv
+*.synctex.gz
+
+# arXiv preview outputs
+papers/*/arxiv/main.pdf
+
+# Keep distributable arXiv bundles under version control
+!papers/*/arxiv/*.tar.gz

@@ -1,0 +1,1107 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{newunicodechar}
+
+\newunicodechar{✓}{$\checkmark$}
+\newunicodechar{∈}{$\in$}
+\newunicodechar{∃}{$\exists$}
+\newunicodechar{≠}{$\neq$}
+\newunicodechar{≤}{$\le$}
+\newunicodechar{≥}{$\ge$}
+\newunicodechar{→}{$\rightarrow$}
+\newunicodechar{₁}{$_1$}
+\newunicodechar{₂}{$_2$}
+\newunicodechar{ₖ}{$_k$}
+\newunicodechar{─}{-}
+\newunicodechar{└}{+}
+\newunicodechar{├}{+}
+\newunicodechar{│}{|}
+
+\setstretch{1.03}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{3em}
+
+\titleformat{\section}{\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection.}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection.}{0.6em}{}
+
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.3em}
+
+\setlength{\LTpre}{0.35em}
+\setlength{\LTpost}{0.35em}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\AtBeginEnvironment{longtable}{\small}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+\captionsetup[table]{skip=4pt}
+\captionsetup[figure]{skip=4pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+
+\newcommand{\codeid}[1]{{\small\begingroup\urlstyle{tt}\nolinkurl{#1}\endgroup}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Coverage-Preserving Compilation of Normative and Empirical
+Security
+Knowledge}\label{coverage-preserving-compilation-of-normative-and-empirical-security-knowledge}
+
+\textbf{Pedro Farinha}\\
+Independent Researcher\\
+\href{mailto:pedro.farinha@shiftleft.pt}{\nolinkurl{pedro.farinha@shiftleft.pt}}\\
+\href{https://github.com/pedrofarinhaatshiftleftpt}{github.com/pedrofarinhaatshiftleftpt}
+
+\emph{Supported by Shiftleft - Secure Software Engineering, lda.}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Abstract}\label{abstract}
+
+Application security knowledge exists in two forms that are rarely
+integrated: \textbf{normative knowledge} (what frameworks prescribe) and
+\textbf{empirical knowledge} (what practitioners have learned).
+Frameworks such as SSDF, ASVS, and SLSA define requirements but cannot
+capture implementation specifics, organizational context, or practices
+that predate formalization. Practitioner documentation captures these
+but lacks cross-framework traceability and coverage awareness.
+
+We present a method for \textbf{compiling} both knowledge types into a
+unified, coverage-aware model. The method uses a normalized ontology
+(AppSec Core {[}1{]}) as the integration substrate: normative
+requirements from external frameworks and empirical content from a
+practitioner corpus are independently mapped to a shared set of control
+objectives, then compared to assess coverage, identify gaps, and detect
+empirical extensions (content that exists in practice but is not
+required by any framework).
+
+We apply the method to a case study: a 15-chapter practitioner-authored
+security manual (4,139 structural units) compiled against 5 external
+frameworks (91 mapped items). The compilation reveals: (a) 78\% direct
+observed coverage, rising to 95\% of in-scope items after claim-gap
+resolution --- with only 4 genuine content gaps; (b) a \textbf{claim
+gap} phenomenon --- most apparent gaps are traceability failures rather
+than content deficiencies; and (c) measurable \textbf{empirical delta}
+--- the practitioner corpus contains content that extends beyond
+framework requirements, particularly in operational mechanisms and
+evidence patterns.
+
+We contribute: (1) a dual-source knowledge compilation method with
+explicit coverage semantics; (2) the formal distinction between
+\emph{claim gaps}, \emph{content gaps}, and \emph{cross-reference gaps};
+(3) empirical evidence that practitioner knowledge substantially covers
+and extends normative frameworks; and (4) the \emph{ontology-driven
+refinement loop}, where compilation outputs improve the source corpus.
+
+\textbf{Keywords:} knowledge compilation, application security,
+normative knowledge, empirical knowledge, coverage analysis, security
+requirements, ontology
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Introduction}\label{introduction}
+
+Organizations building application security programs draw on two
+distinct knowledge sources. \textbf{Normative knowledge} --- what
+external frameworks prescribe --- provides structured requirements: NIST
+SSDF {[}2{]} defines 20 development practices, OWASP ASVS {[}3{]}
+specifies 443 verification requirements, SLSA {[}4{]} mandates build
+integrity properties. \textbf{Empirical knowledge} --- what
+practitioners have learned --- provides operational depth: coding
+guidelines, CI/CD security configurations, container hardening
+procedures, threat modeling patterns, and training curricula accumulated
+through real engagements.
+
+These two knowledge types are complementary but rarely integrated.
+Frameworks provide breadth and regulatory alignment; practitioner
+documentation provides depth and operational specificity. Neither alone
+is sufficient:
+
+\begin{itemize}
+\tightlist
+\item
+  Frameworks without empirical grounding produce compliance checklists
+  disconnected from implementation reality
+\item
+  Practitioner knowledge without framework alignment produces
+  operationally rich documentation with no coverage assurance
+\end{itemize}
+
+The challenge is to \textbf{compile} both into a unified model that
+preserves the coverage properties of frameworks while retaining the
+operational richness of practitioner knowledge --- and to do so with
+measurable, auditable properties.
+
+\subsubsection{The Compilation Problem}\label{the-compilation-problem}
+
+Knowledge compilation in this context is not simple merging. It
+requires:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Normalization}: projecting heterogeneous frameworks and
+  practitioner content into a shared canonical representation where
+  semantic equivalence can be evaluated
+\item
+  \textbf{Deduplication}: recognizing when a framework requirement and a
+  practitioner practice address the same concern
+\item
+  \textbf{Coverage assessment}: determining which normative requirements
+  are satisfied by the empirical corpus
+\item
+  \textbf{Gap identification}: distinguishing genuine content gaps
+  (nothing exists) from visibility gaps (content exists but is not
+  exposed)
+\item
+  \textbf{Delta detection}: identifying empirical content that extends
+  beyond what any framework requires
+\end{enumerate}
+
+This paper presents a method that addresses all five, using a normalized
+ontology (AppSec Core {[}1{]}) as the integration substrate.
+
+\subsubsection{Contributions}\label{contributions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{A dual-source compilation method} that integrates normative
+  and empirical security knowledge through a shared ontological layer,
+  with explicit coverage semantics.
+\item
+  \textbf{The formal distinction between claim gaps, content gaps, and
+  cross-reference gaps} --- three categories of apparent non-coverage
+  with different remediation strategies.
+\item
+  \textbf{Empirical evidence} from a case study (15-chapter manual,
+  4,139 units, 5 frameworks, 91 mapped items) showing that practitioner
+  knowledge substantially covers and extends normative frameworks.
+\item
+  \textbf{The ontology-driven refinement loop}: compilation outputs (gap
+  classifications, source references) feed back into the empirical
+  corpus, improving its traceability surface.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Related Work}\label{related-work}
+
+\subsubsection{2.1 Security Framework
+Alignment}\label{security-framework-alignment}
+
+Organizations typically align practices with frameworks through manual
+mapping: reading each framework's requirements and determining whether
+internal documentation addresses them. Several tools and methodologies
+support this (e.g., NIST SP 800-53 overlays {[}5{]}, compliance
+matrices). These operate on a per-framework basis with no shared
+semantic model across frameworks --- the quadratic mapping problem
+identified in {[}1{]}.
+
+\subsubsection{2.2 Knowledge Compilation in
+SE}\label{knowledge-compilation-in-se}
+
+Knowledge compilation --- transforming dispersed knowledge into a
+unified, queryable representation --- has been studied in software
+engineering through experience factories {[}6{]} and knowledge
+management frameworks. Basili et al.~{[}6{]} established the paradigm of
+accumulating and packaging practitioner experience. Our work extends
+this by adding \emph{coverage-aware} compilation: the unified
+representation not only stores knowledge but enables coverage assessment
+against external reference sets.
+
+\subsubsection{2.3 Requirements
+Traceability}\label{requirements-traceability}
+
+Ramesh and Jarke {[}8{]} established reference models for requirements
+traceability, identifying pre-requirements, requirements, and design as
+distinct traceability layers. Goknil et al.~{[}7{]} further formalized
+trace relation semantics for requirements models. Our work introduces an
+additional dimension to this literature: \textbf{epistemic weight} ---
+different document types carry different authority, and coverage
+analysis must account for this stratification. A normative requirement
+(strong weight) and an operational addon (medium weight) both contribute
+to coverage, but differently.
+
+\subsubsection{2.4 Gap Analysis in
+Security}\label{gap-analysis-in-security}
+
+Gap analysis in security compliance typically compares an organization's
+documented controls against a framework's requirements. Without a
+structured corpus index, a common working assumption is that absence of
+documentation implies absence of practice. Empirical studies of
+traceability practice show that this assumption frequently fails:
+practitioners omit or defer explicit traceability links for reasons
+unrelated to content absence {[}9{]}. We show a specific instantiation
+of this failure in the security compliance context: content frequently
+exists but is not visible in the traceability surface --- a phenomenon
+we formalize as \emph{claim gaps}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Dual-Source Knowledge
+Model}\label{dual-source-knowledge-model}
+
+\subsubsection{3.1 Normative Knowledge}\label{normative-knowledge}
+
+Normative knowledge originates from external frameworks, standards, and
+regulations. In our model, it consists of \textbf{external requirements}
+--- prescriptive statements that define what must be done, verified, or
+evidenced. Each requirement has:
+
+\begin{itemize}
+\tightlist
+\item
+  An \textbf{identifier} within its source framework (e.g., SSDF PW.5,
+  ASVS \texttt{injection\_and\_sanitization})
+\item
+  A \textbf{scope} (what security concern it addresses)
+\item
+  A \textbf{granularity level} (practice-level, requirement-level, or
+  control-level)
+\end{itemize}
+
+Normative knowledge is authoritative but incomplete: it specifies
+\emph{what} but rarely \emph{how}, and it cannot capture practices that
+predate the framework's publication.
+
+\subsubsection{3.2 Empirical Knowledge}\label{empirical-knowledge}
+
+Empirical knowledge originates from practitioner documentation: security
+manuals, coding guidelines, pipeline configurations, deployment
+procedures, training materials. In our model, the empirical corpus is
+decomposed into \textbf{structural units} --- section-level segments,
+each annotated with:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{document\_role}: the type of document (requirements catalog,
+  operational addon, lifecycle user story, etc.)
+\item
+  \texttt{normative\_weight}: the epistemic authority (strong, medium,
+  low)
+\item
+  \texttt{heading\_path}: the hierarchical position within the corpus
+\end{itemize}
+
+This annotation enables \textbf{stratified analysis}: coverage
+assessment can query the full corpus while distinguishing normative
+requirements (strong weight) from operational guidance (medium weight)
+from structural content (low weight/high authority).
+
+\subsubsection{3.3 The Integration
+Substrate}\label{the-integration-substrate}
+
+Both knowledge types are mapped to a shared ontological layer: AppSec
+Core v0 {[}1{]}. AppSec Core v0 provides 10 domain slices with 234 typed
+instances (ControlObjective, Practice, Mechanism, Artifact). The
+normalization works as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Normative requirements} map to AppSec Core control objectives
+  (what must be achieved)
+\item
+  \textbf{Empirical content} maps to AppSec Core objectives, practices,
+  mechanisms, and artifacts (the full type spectrum)
+\end{itemize}
+
+The richer mapping of empirical content is expected: practitioners
+document not only \emph{what} they do (objectives) but \emph{how} they
+do it (practices), \emph{with what} (mechanisms), and \emph{how they
+prove it} (artifacts). Frameworks typically prescribe only the first.
+
+AppSec Core is not merely a mapping target --- it is the
+\textbf{semantic comparison space}. Without a shared canonical layer,
+the normative mapping and the empirical mapping would not be
+commensurable: one would be expressed in SSDF/ASVS vocabulary and the
+other in the corpus's internal terminology. AppSec Core makes them
+comparable by reducing both to the same set of typed objectives,
+enabling the coverage analysis in Stage 4.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Compilation Method}\label{compilation-method}
+
+\subsubsection{4.1 Overview}\label{overview}
+
+The compilation proceeds in five stages:
+
+\begin{verbatim}
+Stage 1: Normative indexing     — register framework requirements
+Stage 2: Empirical indexing     — decompose practitioner corpus into structural units
+Stage 3: Dual mapping           — map both to AppSec Core independently
+Stage 4: Coverage analysis      — compare normative surface against empirical projection
+Stage 5: Editorial feedback     — feed results back into the corpus
+\end{verbatim}
+
+\subsubsection{4.2 Stage 1: Normative
+Indexing}\label{stage-1-normative-indexing}
+
+Each external framework undergoes a formal \textbf{pilot} --- a
+systematic registration of its requirements into the compilation model.
+For each requirement, the pilot records: source framework, identifier,
+description, scope, and the AppSec Core slice(s) and objective(s) it
+maps to.
+
+The pilot follows the mapping protocol defined in {[}1{]}: each
+requirement is mapped with a strength indicator (\texttt{primary} or
+\texttt{secondary}) and a human-authored rationale.
+
+\subsubsection{4.3 Stage 2: Empirical
+Indexing}\label{stage-2-empirical-indexing}
+
+The practitioner corpus is decomposed into structural units using
+automated indexing. In our case study, 4,139 units were extracted from a
+15-chapter manual, each annotated with \texttt{document\_role},
+\texttt{normative\_weight}, and \texttt{heading\_path}. The distribution
+of document roles provides the empirical corpus structure:
+
+\textbf{Table 1.} Distribution of document roles in the SbD-ToE
+empirical corpus (4,139 structural units).
+
+\begin{longtable}{@{}L{4.2cm}R{1.6cm}R{1.8cm}L{2cm}@{}}
+\toprule
+\textbf{Document role} & \textbf{Units} & \textbf{Share} & \textbf{Weight} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Document role} & \textbf{Units} & \textbf{Share} & \textbf{Weight} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+addon & 1,441 & 34.8\% & medium \\
+instantiated\_policy & 660 & 15.9\% & medium \\
+supporting\_reference & 483 & 11.7\% & low \\
+legacy\_canon & 321 & 7.8\% & authority \\
+aplicacao\_lifecycle & 316 & 7.6\% & strong \\
+intro & 267 & 6.5\% & low \\
+kpi\_catalog & 186 & 4.5\% & medium \\
+maturity & 156 & 3.8\% & medium \\
+advanced & 130 & 3.1\% & medium \\
+policy\_reference & 109 & 2.6\% & medium \\
+requirements\_catalog & 68 & 1.6\% & strong \\
+Other & 2 & <0.1\% & --- \\
+\textbf{Total} & \textbf{4,139} &  &  \\
+\end{longtable}
+
+The empirical corpus is substantially larger and more diverse than the
+normative surface. Strong-weight units (requirements\_catalog +
+aplicacao\_lifecycle) constitute only 9.3\% of the corpus; the remaining
+90.7\% is operational and contextual content --- the ``long tail'' of
+empirical knowledge that frameworks do not capture.
+
+\subsubsection{4.4 Stage 3: Dual Mapping}\label{stage-3-dual-mapping}
+
+Both normative requirements and empirical units are independently mapped
+to AppSec Core:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Normative → Core}: each framework requirement maps to one or
+  more control objectives (the normative surface)
+\item
+  \textbf{Empirical → Core}: each chapter of the practitioner corpus
+  maps to one or more slices (primary + secondary); individual
+  structural units are projected to objectives, practices, mechanisms,
+  and artifacts (the empirical projection)
+\end{itemize}
+
+The two mappings are independent --- neither influences the other. This
+independence is important: it prevents the empirical corpus from being
+shaped to fit frameworks, and vice versa.
+
+\subsubsection{4.5 Stage 4: Coverage
+Analysis}\label{stage-4-coverage-analysis}
+
+For each normative requirement \emph{r}, the compilation assesses
+whether the empirical projection contains a structural unit \emph{u}
+that satisfies three criteria:
+
+\begin{quote}
+\textbf{Definition 1 (Coverage).} A normative requirement \emph{r} is
+\textbf{covered} by the empirical corpus \emph{C} if there exists a unit
+\emph{u ∈ C} such that: (i) \emph{u.content} addresses the same security
+concern as \emph{r} (scope overlap); (ii) \emph{u} provides prescriptive
+or operational guidance, not merely a mention (actionability); (iii)
+\emph{u.normative\_weight} is strong or medium (authority).
+\end{quote}
+
+When coverage assessment reveals a gap, it is classified:
+
+\begin{quote}
+\textbf{Definition 2 (Content Gap).} A normative requirement \emph{r}
+has a \textbf{content gap} if no unit \emph{u ∈ C} satisfies
+\emph{covers(u, r)}. The concern is genuinely absent from the empirical
+corpus.
+\end{quote}
+
+\begin{quote}
+\textbf{Definition 3 (Claim Gap).} A normative requirement \emph{r} has
+a \textbf{claim gap} if \emph{∃ u ∈ C} with \emph{covers(u, r) = true},
+but the corpus's traceability surface \emph{T} does not expose this
+coverage: \emph{¬∃ t ∈ T} such that \emph{maps(t, r)}. The content
+exists but is not visible.
+\end{quote}
+
+\begin{quote}
+\textbf{Definition 4 (Cross-reference Gap).} A normative requirement
+\emph{r} has a \textbf{cross-reference gap} if a covering unit exists
+but in a different chapter than expected: \emph{u.bundle\_id ≠
+b\_expected}.
+\end{quote}
+
+The distinction between these gap types has practical consequences:
+content gaps require authoring; claim gaps require traceability repair;
+cross-reference gaps require navigation links. Conflating them leads to
+unnecessary authoring effort.
+
+Critically, coverage assessment (Definition 1) is performed in the
+\textbf{normalized objective space} defined by AppSec Core {[}1{]}, not
+directly between framework text and empirical text. The ``same security
+concern'' in criterion (i) is mediated by shared ControlObjectives: a
+framework requirement and an empirical unit both map to the same
+objective, and it is the objective-level match that establishes
+coverage. This ensures that coverage evaluation is independent of
+framework-specific vocabulary.
+
+\subsubsection{4.6 Stage 5: Editorial
+Feedback}\label{stage-5-editorial-feedback}
+
+The compilation's gap classifications feed back into the empirical
+corpus:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Claim gaps} → traceability table corrections (add source
+  reference)
+\item
+  \textbf{Cross-reference gaps} → inter-chapter links
+\item
+  \textbf{Content gaps} → authoring candidates
+\end{itemize}
+
+This feedback produces an improved version of the corpus (\emph{C → C'})
+with better traceability. Subsequent compilation operates on the
+improved surface, reducing false gap reports. We term this the
+\textbf{ontology-driven refinement loop}.
+
+\subsubsection{4.7 Hard Rules}\label{hard-rules}
+
+The compilation enforces three invariants:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{do\_not\_treat\_canon\_as\_ground\_truth} --- the traceability
+  tables in the corpus are editorial claims, not verified facts;
+  verification is against the structural unit index
+\item
+  \texttt{do\_not\_write\_directly\_from\_framework\_into\_manual} ---
+  framework requirements are normalized through AppSec Core, not copied
+  into the corpus
+\item
+  \texttt{analysis\_outputs\_are\_editorial\_candidates\_not\_automatic\_updates}
+  --- all changes require human review
+\end{enumerate}
+
+\subsubsection{4.8 Coverage Preservation
+Property}\label{coverage-preservation-property}
+
+We define the property that gives the method its name:
+
+\begin{quote}
+Let \emph{r} be a normative requirement, and let \emph{normalize(r)} =
+\{\emph{o₁, o₂, \ldots, oₖ}\} be the set of AppSec Core
+ControlObjectives to which \emph{r} maps (at the granularity and mapping
+semantics of the source framework).
+
+The compilation is \textbf{coverage-preserving} if the coverage status
+assigned to \emph{r} is determined by evaluating its normalized
+objective projection --- that is, by assessing whether the empirical
+corpus satisfies the ControlObjectives in \emph{normalize(r)} --- rather
+than by direct comparison between framework wording and empirical text.
+\end{quote}
+
+In practice, coverage is assessed through mapped ControlObjectives
+according to the granularity of the source framework: SSDF maps at
+practice level, ASVS at thematic cluster level, SLSA at requirement
+level. The method does not require strict satisfaction of every mapped
+objective; it requires that the coverage \emph{determination} operates
+in the normalized space.
+
+Coverage preservation thus depends on the correctness of the
+normalization ontology (AppSec Core {[}1{]}): if the mapping from
+\emph{r} to \emph{normalize(r)} is wrong, coverage assessment is wrong
+regardless of the empirical content. This dependency is a strength (it
+makes evaluation principled and auditable) and a limitation (it makes
+the method only as good as the normalization layer).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Case Study}\label{case-study}
+
+\subsubsection{5.1 The Empirical Corpus}\label{the-empirical-corpus}
+
+The case study uses the \textbf{SbD-ToE} (Security by Design --- Theory
+of Everything) manual: a practitioner-authored security reference
+covering the full SDLC in 15 chapters. The manual was developed over 10+
+years of hands-on AppSec engineering across multiple organizations. The
+manual was authored in Portuguese; field names, document identifiers,
+and heading paths throughout this paper reflect the corpus's original
+naming.
+
+Each chapter follows a canonical structure with four document types:
+
+\textbf{Table 2.} SbD-ToE corpus chapter structure: four document types
+per chapter.
+
+\begin{longtable}{@{}L{3.55cm}L{7.2cm}L{1.8cm}@{}}
+\toprule
+\textbf{Type} & \textbf{Role} & \textbf{Weight} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Type} & \textbf{Role} & \textbf{Weight} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+\texttt{requirements\_catalog} & Typed requirement families (VAL, ERR, CFG, AUT, ACC, LOG, \ldots) & Strong \\
+\texttt{aplicacao-lifecycle.md} & User stories operationalizing the chapter & Strong \\
+\texttt{addon/} & Technical detail, operational guidance, examples & Medium \\
+\texttt{canon/} & Normative structure, traceability tables & Authority \\
+\end{longtable}
+
+The corpus was decomposed into 4,139 structural units (Section 4.3).
+
+\subsubsection{5.2 The Normative Surface}\label{the-normative-surface}
+
+Five external frameworks were compiled against the corpus:
+
+\textbf{Table 3.} External frameworks compiled against the SbD-ToE
+corpus.
+
+\begin{longtable}{@{}L{4.6cm}R{1.4cm}L{4.4cm}@{}}
+\toprule
+\textbf{Framework} & \textbf{Items} & \textbf{Granularity} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Framework} & \textbf{Items} & \textbf{Granularity} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+NIST SSDF v1.1 & 20 & Practices \\
+OWASP ASVS v5.0 & 36 & Thematic clusters \\
+SLSA Build Track v1.0 & 14 & Requirements \\
+CIS Controls v8.1 (AppSec scope) & 8 & Controls \\
+CAPEC v3.9 (View 683) & 13 & Attack patterns \\
+\textbf{Total} & \textbf{91} &  \\
+\end{longtable}
+
+\subsubsection{5.3 Methodology: Three
+Passes}\label{methodology-three-passes}
+
+The compilation was conducted in three passes of increasing rigor:
+
+\textbf{Pass 1 --- Editorial baseline.} The corpus's traceability tables
+(\texttt{25-rastreabilidade.md} in each chapter) were read as proxies
+for content. This identified 36 apparent gaps across all frameworks.
+
+\textbf{Pass 2 --- Direct reading.} The actual addon files for the four
+most-pressured chapters (Security Requirements, Secure Development, IaC,
+Secure Deploy) were read directly. Many apparent gaps had substantive
+content in addons not cited in the traceability tables. This motivated
+the claim gap / content gap distinction.
+
+\textbf{Pass 3 --- Systematic index verification.} For each remaining
+gap, the structural unit index was queried programmatically: filter by
+chapter, document role, and content; record the matching source as a
+\texttt{(document\_role,\ normative\_weight,\ heading\_path)} triple.
+
+An LLM (Claude Sonnet, Anthropic, 2025) was used as an \textbf{assisted
+query interface} --- formulating filter queries and surfacing candidate
+units from 4,139 entries. All coverage decisions were made by human
+inspection against Definition 1. The structural unit index was the
+source of truth. The LLM was not used for any text generation in this
+paper.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Results}\label{results}
+
+\subsubsection{6.1 Gap Classification}\label{gap-classification}
+
+After three passes, the 36 initial apparent gaps were reclassified:
+
+\textbf{Table 4.} Gap classification after compilation.
+
+\begin{longtable}{@{}L{3.35cm}R{1.5cm}R{1.8cm}L{5.15cm}@{}}
+\toprule
+\textbf{Gap type} & \textbf{Count} & \textbf{Share (approx.)} & \textbf{Remediation} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Gap type} & \textbf{Count} & \textbf{Share (approx.)} & \textbf{Remediation} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Claim gap & 22 & 61\% & Traceability repair \\
+Cross-reference gap & 7 & 19\% & Navigation links \\
+Content gap & 4 & 11\% & Authoring needed \\
+Scope exclusion & 3 & 8\% & None (deliberate) \\
+\end{longtable}
+
+\textbf{Central finding}: most apparent gaps were not content
+deficiencies but failures of the traceability surface to represent
+content that already existed in the corpus. The compilation method
+detected this because it operates on the full structural unit index
+(4,139 units), not on the traceability surface alone (approximately 15
+traceability tables).
+
+\subsubsection{6.2 Framework Coverage}\label{framework-coverage}
+
+\textbf{Table 5.} Per-framework coverage after three-pass compilation.
+
+\begin{longtable}{@{}L{3.8cm}R{1.2cm}R{1.6cm}R{1.6cm}R{1.8cm}R{1.8cm}@{}}
+\toprule
+\textbf{Framework} & \textbf{Items} & \textbf{Covered} & \textbf{Claim gap} & \textbf{Content gap} & \textbf{Scope excl.} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Framework} & \textbf{Items} & \textbf{Covered} & \textbf{Claim gap} & \textbf{Content gap} & \textbf{Scope excl.} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+SSDF v1.1 & 20 & 16 & 2 & 1 & 1 \\
+ASVS v5.0 (clusters) & 36 & 28 & 6 & 2 & 0 \\
+SLSA v1.0 & 14 & 11 & 2 & 0 & 1 \\
+CIS v8.1 (AppSec) & 8 & 6 & 1 & 0 & 1 \\
+CAPEC v3.9 & 13 & 10 & 2 & 1 & 0 \\
+\textbf{Total} & \textbf{91} & \textbf{71 (78\%)} & \textbf{13 (14\%)} & \textbf{4 (4\%)} & \textbf{3 (3\%)} \\
+\end{longtable}
+
+After resolving claim gaps (traceability repairs), effective coverage
+rises to \textbf{84 of 88 in-scope items (95\%)} --- within this case
+study, under the author-evaluated coverage protocol described in §5.3.
+
+\subsubsection{6.3 Content Gaps (Genuine)}\label{content-gaps-genuine}
+
+Only four genuine content gaps were confirmed:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{SLSA L3 hardened builds} --- the corpus covers L1/L2 but lacks
+  hermetic/reproducible build specifics
+\item
+  \textbf{CAPEC-691 (dependency metadata spoofing)} --- dependency
+  confusion addressed; metadata spoofing not
+\item
+  \textbf{CAPEC-443 (insider developer threat)} --- branch protection
+  present; authorized-insider threat not distinct
+\item
+  \textbf{SSDF PW.6 (compilation/interpreter security)} --- partially
+  covered; compiler flags and interpreter hardening lack dedicated
+  treatment
+\end{enumerate}
+
+These represent genuine authoring needs not resolvable by traceability
+improvements.
+
+\subsubsection{6.4 Representative Claim Gap
+Reclassifications}\label{representative-claim-gap-reclassifications}
+
+\textbf{SSDF PO.2 --- Roles \& Responsibilities.} Appeared as a gap in
+three chapters. Content found in
+\texttt{00-fundamentos/roles-responsabilidades/} --- 13 security roles
+with per-chapter responsibilities. Invisible because the chapter had no
+traceability table. Resolution: create traceability entry (no content
+authoring).
+
+\textbf{ASVS \texttt{secure\_configuration\_baseline}.} Appeared as a
+gap in four chapters. Content found in: Cap. 02 \texttt{addon/07}
+(CFG-001→007: debug off, env separation, vault, drift); Cap. 08 IaC
+principles addon (OPA policies, privilege minimum); Cap. 09 OPA/Kyverno
+admission addon. Three independently authored addons, never
+cross-referenced.
+
+\textbf{SSDF PW.7 --- Code Review.} Classified as ``partial --- not read
+in full, assumed partial.'' Verified as covered:
+\texttt{aplicacao\_lifecycle\ (strong):\ US-02\ Revisão\ de\ Código\ Segura}
+--- structured review with criteria and traceability.
+
+\subsubsection{6.5 Empirical Delta}\label{empirical-delta}
+
+The compilation reveals empirical content that \textbf{extends beyond}
+what the five frameworks require:
+
+\begin{longtable}{@{}L{3.35cm}L{4.85cm}L{4.8cm}@{}}
+\toprule
+\textbf{Category} & \textbf{Example} & \textbf{Framework status} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Category} & \textbf{Example} & \textbf{Framework status} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Operational mechanisms & OPA/Kyverno admission policies, securityContext enforcement & Not prescribed by SSDF or ASVS \\
+Evidence patterns & Requirement-linked test suites, validation coverage reports & Not required at this granularity \\
+Role-based training curricula & Per-chapter training paths with knowledge validation & CIS-14 partially addresses; SSDF does not \\
+Proportional application & Risk-level-dependent requirement activation (L1/L2/L3) & No framework specifies proportionality \\
+Exception governance & Formal exception process with lifecycle, audit trail & Not prescribed at this operational level \\
+\end{longtable}
+
+This delta is the empirical knowledge that practitioners have
+accumulated but that normative frameworks have not (yet) formalized. It
+represents the value that empirical knowledge adds beyond framework
+compliance.
+
+\subsubsection{6.6 Refinement Loop
+Results}\label{refinement-loop-results}
+
+The compilation directly produced editorial corrections to the corpus:
+
+\begin{longtable}{@{}L{5.2cm}R{1.2cm}L{5.85cm}@{}}
+\toprule
+\textbf{Correction type} & \textbf{Count} & \textbf{Effect} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Correction type} & \textbf{Count} & \textbf{Effect} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Traceability table status reclassifications & 22 & Partial -> semantic \\
+Source reference additions (\texttt{Fonte verificada} column) & 29 & Each cites a specific \texttt{(role, weight, path)} triple \\
+Cross-chapter navigation links & 7 & Content now reachable from expected chapter \\
+New traceability table created & 1 & Cap. 00 had no \texttt{canon/} directory \\
+\end{longtable}
+
+The corpus improved not by writing new security content but by
+\textbf{using the compilation to make existing content visible}. This is
+the refinement loop in action.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Discussion}\label{discussion}
+
+\subsubsection{7.1 Why Empirical Knowledge
+Matters}\label{why-empirical-knowledge-matters}
+
+The case study demonstrates that a mature practitioner corpus covers
+95\% of the normative surface (after claim gap resolution) while
+containing substantial content not captured by any framework. This
+suggests that:
+
+\begin{itemize}
+\tightlist
+\item
+  Frameworks \textbf{lag} practice: practitioners encounter and document
+  security concerns before frameworks formalize them (e.g., CFG-001→007
+  documented in the internal corpus in 2023, based on corpus commit
+  history; ASVS \texttt{secure\_configuration\_baseline} formalized in
+  2025)
+\item
+  Frameworks \textbf{abstract} practice: they specify \emph{what} but
+  not \emph{how}, leaving the operational layer to practitioners
+\item
+  Empirical knowledge is not a luxury --- it is the
+  \textbf{implementation substance} that frameworks assume but do not
+  provide
+\end{itemize}
+
+A compilation method that captures only normative knowledge loses this
+substance. A method that captures only empirical knowledge lacks
+coverage assurance. The dual-source model captures both.
+
+\subsubsection{7.2 The Claim Gap
+Phenomenon}\label{the-claim-gap-phenomenon}
+
+The predominance of claim gaps (22 of 36 apparent gaps) has a structural
+cause. The corpus's traceability surface (\texttt{canon/} directory)
+systematically references strong-weight units (requirements\_catalog,
+aplicacao\_lifecycle) but under-references medium-weight units (addons).
+Since addons constitute 34.8\% of the corpus and contain the richest
+operational content, any analysis that reads only the traceability
+surface misses them.
+
+This is not a flaw of this specific corpus --- it is a structural
+consequence of \textbf{epistemic stratification}: when documentation is
+organized by authority level, the traceability layer tends to index the
+normative layer while the operational layer remains invisible. We
+conjecture that the claim gap phenomenon generalizes to other similarly
+stratified corpora, given the structural cause identified --- but
+cross-organizational validation is needed to test this claim (see §8).
+
+\subsubsection{7.3 Coverage Adequacy, Not
+Completeness}\label{coverage-adequacy-not-completeness}
+
+The method assesses \textbf{coverage adequacy} --- whether the empirical
+corpus addresses specific normative requirements --- not \textbf{domain
+completeness} --- whether the corpus captures all possible AppSec
+concerns. These are different properties:
+
+\begin{itemize}
+\tightlist
+\item
+  Coverage adequacy is measurable against a reference set (the
+  frameworks)
+\item
+  Domain completeness is not finitely verifiable
+\end{itemize}
+
+Our results (95\% framework coverage, 4 content gaps) speak to the
+former. The latter would require validation against a broader set of
+practitioners and domains.
+
+\subsubsection{7.4 Generalizability}\label{generalizability}
+
+The compilation method is general: it requires (a) a normalization
+ontology, (b) a decomposed empirical corpus with role/weight
+annotations, and (c) an indexed normative surface. The specific ontology
+(AppSec Core), corpus (SbD-ToE), and frameworks (SSDF, ASVS, etc.) are
+instances. The method transfers to any domain with heterogeneous
+normative sources and practitioner documentation --- though we have
+validated it only in the AppSec domain.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Limitations}\label{limitations}
+
+\textbf{Single empirical corpus.} The case study uses one organization's
+manual. Coverage rates and claim gap prevalence may differ for other
+organizations. We argue for structural transferability of the claim gap
+phenomenon but have not validated it cross-organizationally.
+
+\textbf{Author-evaluated coverage.} The \texttt{covers(u,\ r)} function
+was evaluated by the paper's authors. Inter-rater reliability was not
+measured. We partially mitigate this by releasing a curated artifact set
+containing the first-wave pilot manifests, normalization outputs, and
+terminal comparison artifacts that support the reported case-study
+surface. The full internal structural unit index and all coverage
+decisions are not part of the public \texttt{v1.0.0} package.
+
+\textbf{Practice/cluster-level granularity.} Coverage assessment
+operates at SSDF practice level and ASVS cluster level, not at
+individual requirement level. Finer-grained assessment would increase
+precision but also evaluation cost.
+
+\textbf{Temporal snapshot.} Framework versions are captured as of early
+2026. New versions require re-compilation.
+
+\textbf{Empirical delta not independently validated.} The delta analysis
+(Section 6.5) identifies content extending beyond frameworks but does
+not verify whether this content is valuable or correct --- only that it
+exists.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Conclusion}\label{conclusion}
+
+We have presented a method for compiling normative and empirical
+security knowledge into a unified, coverage-aware model. The method uses
+a normalized ontology as the integration substrate, enabling independent
+mapping of framework requirements and practitioner content to a shared
+semantic space.
+
+The case study reveals three findings:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Claim gaps dominate apparent non-coverage.} 22 of 36 apparent
+  gaps were traceability failures rather than content deficiencies.
+  Compilation against the full indexed corpus --- rather than the
+  traceability surface alone --- is necessary to distinguish the two.
+\item
+  \textbf{Empirical knowledge substantially covers normative
+  requirements.} After claim gap resolution, 95\% of in-scope framework
+  requirements were covered, with only 4 genuine content gaps across 91
+  mapped items.
+\item
+  \textbf{Empirical knowledge extends beyond frameworks.} The
+  practitioner corpus contains operational mechanisms, evidence
+  patterns, proportional application models, and governance processes
+  that no analyzed framework prescribes --- the empirical delta.
+\end{enumerate}
+
+The compilation method produces a measurable, auditable integration of
+both knowledge types. The ontology-driven refinement loop ensures that
+compilation outputs improve the source corpus, creating a virtuous
+cycle: the more the corpus is compiled against frameworks, the better
+its traceability becomes.
+
+The method is coverage-preserving with respect to the normalized
+objective model: both knowledge sources --- normative and empirical ---
+are projected into the same canonical objective layer, and coverage is
+determined by evaluating that projection rather than by direct
+framework-to-text comparison. The preservation property (Section 4.8)
+depends on the correctness of the normalization ontology and the
+granularity of the mapping; it is only as reliable as the underlying
+normalization layer. This is a principled dependency: it makes the
+assumptions explicit and the evaluation auditable.
+
+Knowledge compilation for security is not a one-time alignment exercise.
+It is an ongoing process in which normative frameworks provide coverage
+targets, empirical knowledge provides implementation substance, and a
+shared ontological layer enables the two to be systematically compared,
+integrated, and improved.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{10. Artifact Availability}\label{artifact-availability}
+
+Curated supporting artifacts for this paper are available in the
+companion public repository at
+\url{https://github.com/sbd-ai-runtime/appsec-core-ontology-research}.
+For this paper, the relevant materials are organized under
+\texttt{papers/02-coverage-preserving-knowledge-compilation/artifacts/},
+notably
+\texttt{papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot\_manifests/}
+and
+\texttt{papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot\_outputs/},
+which contain the released first-wave pilot manifests and comparison
+outputs supporting the case-study surface. The same repository also
+contains this paper's curated source under
+\texttt{papers/02-coverage-preserving-knowledge-compilation/source/} and
+its public PDF under
+\texttt{papers/02-coverage-preserving-knowledge-compilation/pdf/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{References}\label{references}
+
+{[}1{]} P. Farinha, ``AppSec Core: A normalized ontology for security
+requirements across heterogeneous frameworks,'' preprint, 2026. {[}arXiv
+ID: TBD --- submitted as companion preprint{]}
+
+{[}2{]} NIST. Secure Software Development Framework (SSDF) Version 1.1.
+SP 800-218. 2022.
+
+{[}3{]} OWASP. Application Security Verification Standard (ASVS) v5.0.0.
+2025.
+
+{[}4{]} SLSA. Supply-chain Levels for Software Artifacts. Build Track
+v1.0. 2023.
+
+{[}5{]} NIST. Security and Privacy Controls for Information Systems and
+Organizations. SP 800-53 Rev.~5. 2020.
+
+{[}6{]} V. R. Basili, F. Shull, and F. Lanubile, ``Building knowledge
+through families of experiments,'' \emph{IEEE Trans. Software Eng.},
+vol.~25, no. 4, pp.~456--473, Jul./Aug.~1999, doi: 10.1109/32.799939.
+
+{[}7{]} A. Goknil, I. Kurtev, K. van den Berg, and J.-W. Veldhuis,
+``Semantics of trace relations in requirements models for consistency
+checking and inferencing,'' \emph{Software \& Systems Modeling},
+vol.~10, no. 1, pp.~31--54, 2011, doi: 10.1007/s10270-009-0142-3.
+
+{[}8{]} B. Ramesh and M. Jarke, ``Toward reference models for
+requirements traceability,'' \emph{IEEE Trans. Software Eng.}, vol.~27,
+no. 1, pp.~58--93, Jan.~2001, doi: 10.1109/32.895989.
+
+{[}9{]} P. Mäder and J. Cleland-Huang, ``Why don't we trace? A study on
+the barriers to software traceability in practice,'' \emph{Requirements
+Engineering}, 2023, doi: 10.1007/s00766-023-00408-9.
+
+\end{document}

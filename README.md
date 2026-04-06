@@ -121,29 +121,47 @@ appsec-core-research/
   MANIFEST-v1.0.md
   docs/
     RELEASE-TO-ZENODO.md
-  paper_sources/
-    paper1_appsec_core.md
-    paper2_compilation.md
-    paper3_ontology_grounded_retrieval.md
   papers/
-    appsec_core_normalized_ontology.pdf
-    coverage_preserving_knowledge_compilation.pdf
-    ontology_grounded_retrieval.pdf
-  paper1_artifacts/
-    ontology/
-    schema/
-    slice_contracts/
-    normalized_examples/
-  paper2_artifacts/
-    pilot_manifests/
-    pilot_outputs/
-    cross_pilot/
-    method_notes/
-  paper3_artifacts/
-    retrieval_contract/
-    runtime_snapshot/
-    worked_examples/
-    verification_examples/
+    README.md
+    appsec-core-normalized-ontology/
+      source/
+        manuscript.md
+      pdf/
+        appsec_core_normalized_ontology.pdf
+      arxiv/
+        main.tex
+        appsec_core_normalized_ontology-arxiv.tar.gz
+      artifacts/
+        ontology/
+        schema/
+        slice_contracts/
+        normalized_examples/
+    coverage-preserving-knowledge-compilation/
+      source/
+        manuscript.md
+      pdf/
+        coverage_preserving_knowledge_compilation.pdf
+      arxiv/
+        main.tex
+        coverage_preserving_knowledge_compilation-arxiv.tar.gz
+      artifacts/
+        pilot_manifests/
+        pilot_outputs/
+        cross_pilot/
+        method_notes/
+    ontology-grounded-retrieval/
+      source/
+        manuscript.md
+      pdf/
+        ontology_grounded_retrieval.pdf
+      arxiv/
+        main.tex
+        ontology_grounded_retrieval-arxiv.tar.gz
+      artifacts/
+        retrieval_contract/
+        runtime_snapshot/
+        worked_examples/
+        verification_examples/
 ```
 
 ## Mapping from Current Internal Repositories
@@ -190,9 +208,9 @@ The detailed selection is defined in [MANIFEST-v1.0.md](./MANIFEST-v1.0.md).
 
 The ontology paper should be supported by:
 
-- `paper1_artifacts/ontology/`
-- `paper1_artifacts/schema/`
-- `paper1_artifacts/slice_contracts/`
+- `papers/01-appsec-core-normalized-ontology/artifacts/ontology/`
+- `papers/01-appsec-core-normalized-ontology/artifacts/schema/`
+- `papers/01-appsec-core-normalized-ontology/artifacts/slice_contracts/`
 - selected normalized examples only if curated as reviewer-friendly supplements
 
 ### Paper 2 → Normalization
@@ -271,7 +289,7 @@ If the paper source Markdown files are available locally, the repository can gen
 python3 scripts/create_pdf.py
 ```
 
-The script reads the document manifest from `publish_docs.json`, resolves paths relative to the repository root, and invokes `pandoc`. The manifest supports per-document metadata, output paths, source lists, optional per-document `pandoc_args`, and global defaults. In the current curated `v1` package, the manifest points to repository-local paper sources so the PDF build does not depend on the private paper-writing repository.
+The script reads the document manifest from `publish_docs.json`, resolves paths relative to the repository root, and invokes `pandoc`. The manifest supports per-document metadata, output paths, source lists, optional per-document `pandoc_args`, and global defaults. In the current curated `v1` package, the manifest points to the paper-centric repository-local `source/` directories so the PDF build does not depend on the private paper-writing repository.
 
 If you later need to draft against external paper sources during internal writing, keep that as a temporary internal workflow and switch the manifest back to repository-local sources before publishing a release.
 

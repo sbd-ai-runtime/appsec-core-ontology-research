@@ -1,0 +1,1052 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{newunicodechar}
+
+\newunicodechar{✓}{$\checkmark$}
+\newunicodechar{∈}{$\in$}
+\newunicodechar{∃}{$\exists$}
+\newunicodechar{≠}{$\neq$}
+\newunicodechar{≤}{$\le$}
+\newunicodechar{≥}{$\ge$}
+\newunicodechar{→}{$\rightarrow$}
+\newunicodechar{₁}{$_1$}
+\newunicodechar{₂}{$_2$}
+\newunicodechar{ₖ}{$_k$}
+\newunicodechar{─}{-}
+\newunicodechar{└}{+}
+\newunicodechar{├}{+}
+\newunicodechar{│}{|}
+
+\setstretch{1.03}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{3em}
+
+\titleformat{\section}{\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection.}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection.}{0.6em}{}
+
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.3em}
+
+\setlength{\LTpre}{0.35em}
+\setlength{\LTpost}{0.35em}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\AtBeginEnvironment{longtable}{\small}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+\captionsetup[table]{skip=4pt}
+\captionsetup[figure]{skip=4pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+
+\newcommand{\codeid}[1]{{\small\begingroup\urlstyle{tt}\nolinkurl{#1}\endgroup}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Ontology-Grounded Retrieval for Auditable LLM-Assisted Secure
+Code
+Generation}\label{ontology-grounded-retrieval-for-auditable-llm-assisted-secure-code-generation}
+
+\textbf{Pedro Farinha}\\
+Independent Researcher\\
+\href{mailto:pedro.farinha@shiftleft.pt}{\nolinkurl{pedro.farinha@shiftleft.pt}}\\
+\href{https://github.com/pedrofarinhaatshiftleftpt}{github.com/pedrofarinhaatshiftleftpt}
+
+\emph{Supported by Shiftleft - Secure Software Engineering, lda.}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Abstract}\label{abstract}
+
+Large language models (LLMs) generate code with security vulnerabilities
+at significant rates {[}1, 2, 3{]}. Recent work shows that
+security-focused prompting can reduce vulnerability rates {[}4{]},
+suggesting that LLMs can produce more secure code \emph{when given
+structured security context} --- but current retrieval approaches lack
+the requirement-level grounding needed to do this systematically.
+
+We propose \textbf{ontology-grounded retrieval}, a method for providing
+LLMs with typed, weighted, and provenanced security knowledge drawn from
+a normalized domain ontology. Unlike plain vector-similarity RAG ---
+which retrieves relevant text without provenance, epistemic weight, or
+completeness guarantees --- ontology-grounded retrieval operates through
+structured queries against a typed knowledge graph, producing a
+retrieval result with six formally distinguishable properties:
+first-class provenance, explicit typing, epistemic weighting,
+reproducible grounding, assessable completeness, and verifiability
+against the same index.
+
+We define a \textbf{retrieval contract} with completeness and provenance
+invariants, present a \textbf{verification taxonomy} (syntactic,
+semantic, human) that makes automation boundaries explicit, and
+illustrate the method through three compact scenarios. The validation is
+methodological, not experimental; a controlled evaluation is identified
+as future work.
+
+The method does not make LLM output secure. It makes the grounding
+\textbf{auditable}: for any generated code, one can determine which
+security requirements informed it, at what authority level, and whether
+all applicable requirements were addressed.
+
+\textbf{Keywords:} LLM, code generation, application security, ontology,
+retrieval-augmented generation, structured retrieval, requirements
+traceability, verification
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Introduction}\label{introduction}
+
+LLM-assisted code generation has achieved wide adoption {[}5{]}, but the
+security properties of generated code remain uncontrolled. Evaluations
+across multiple models and languages show vulnerability rates of
+25--40\% {[}1, 2, 3{]}, spanning injection, authentication,
+cryptographic misuse, and configuration errors.
+
+A natural mitigation is to inject security documentation into the LLM's
+context via retrieval-augmented generation (RAG) {[}6{]}. If the LLM has
+access to relevant security guidelines, it should produce more secure
+code. In practice, however, this approach provides security context
+through vector similarity search --- a mechanism that is probabilistic,
+untyped, and provenance-free. The LLM receives text that is similar to
+the query but has no structured understanding of:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Which requirement} the text represents
+\item
+  \textbf{At what authority level} --- mandatory requirement or
+  informational example?
+\item
+  \textbf{Whether all relevant requirements} were retrieved ---
+  similarity has no concept of domain coverage
+\item
+  \textbf{How to verify} that the output satisfies the retrieved
+  requirements
+\end{itemize}
+
+This paper proposes \textbf{ontology-grounded retrieval} as a
+methodological alternative. The method uses a normalized security
+ontology as the retrieval substrate, producing typed, weighted,
+provenanced context that enables a closed verification loop. The method
+is general: it requires a typed ontology with explicit relations, a
+stratified structural index, and a delivery protocol. We instantiate it
+using AppSec Core {[}7{]} (a normalization ontology for application
+security) and the Model Context Protocol (MCP) {[}8{]}, but the method
+is not bound to these specific components.
+
+\subsubsection{Research Question}\label{research-question}
+
+\textbf{How can structured, ontology-based retrieval improve
+reproducibility, completeness, and traceability in LLM-assisted secure
+code generation --- compared to plain vector-similarity retrieval?}
+
+\subsubsection{Contributions}\label{contributions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Ontology-grounded retrieval as a method}: a five-stage
+  pipeline (intent parsing → structured retrieval → context assembly →
+  grounded generation → verification) with formally distinguishable
+  properties.
+\item
+  \textbf{A retrieval contract} with completeness and provenance
+  invariants that make grounding testable.
+\item
+  \textbf{A six-property comparison} between plain vector-similarity RAG
+  and ontology-grounded retrieval (provenance, typing, weighting,
+  reproducibility, completeness, verifiability).
+\item
+  \textbf{A three-class verification taxonomy} (syntactic, semantic
+  approximation, human judgment) that makes automation boundaries
+  explicit.
+\item
+  \textbf{Three compact illustrative scenarios} showing how the audit
+  trail is intended to operate from prompt through verification.
+\end{enumerate}
+
+\subsubsection{Scope}\label{scope}
+
+This paper describes a \textbf{method, its contract properties, and its
+AppSec-specific instantiation}. We do not claim empirical superiority
+over alternative retrieval architectures; we claim that the proposed
+structure makes grounding auditable and its completeness properties
+assessable. The method is general in structure but validated here only
+in an AppSec instantiation using AppSec Core {[}7{]} and MCP {[}8{]}.
+Generality beyond this domain is argued, not demonstrated. A controlled
+evaluation is future work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Background and Related
+Work}\label{background-and-related-work}
+
+\subsubsection{2.1 LLM Code Generation and
+Security}\label{llm-code-generation-and-security}
+
+Modern LLMs generate syntactically and often semantically correct code
+{[}2, 5{]}, but optimize for functional correctness, not security.
+Pearce et al.~{[}1{]} found that \textasciitilde40\% of
+Copilot-generated programs contained vulnerabilities. Tihanyi et
+al.~{[}2{]} confirmed this at scale across 9 LLMs and 331,000 programs.
+Tony et al.~{[}3{]} developed LLMSecEval as a standardized security
+benchmark.
+
+Tony et al.~{[}4{]} demonstrated that security-focused prompting
+(recursive criticism, chain-of-thought with security examples) can
+reduce vulnerability rates by up to 75\% on some tasks. This is a key
+observation: \textbf{LLMs can produce more secure code when given
+appropriate security context}. The question is how to provide that
+context systematically, completely, and auditably.
+
+\subsubsection{2.2 Retrieval-Augmented
+Generation}\label{retrieval-augmented-generation}
+
+Lewis et al.~{[}6{]} introduced RAG for grounding LLM outputs in
+external knowledge. RAG is a family of architectures; our critique
+targets specifically \emph{plain vector-similarity retrieval without
+structured metadata}. Hybrid systems with metadata filtering,
+re-ranking, or graph-based retrieval {[}9{]} address some limitations.
+Ontology-grounded retrieval can be understood as a strict, typed,
+auditable subclass of the broader RAG family --- not a rejection of the
+paradigm.
+
+\subsubsection{2.3 Security Ontologies and AppSec
+Core}\label{security-ontologies-and-appsec-core}
+
+Several ontologies have been proposed for security knowledge
+representation. CWE {[}11{]} and CAPEC {[}12{]} model the \emph{problem
+space} (what can go wrong); AppSec Core {[}7{]} models the
+\emph{solution space} (what practitioners do to prevent it). This
+distinction is relevant for code generation: a developer needs to know
+what to \emph{do}, not what can go \emph{wrong}. OWASP's Secure Coding
+Practices {[}13{]} provides an unstructured checklist lacking the typed,
+weighted structure needed for reproducible retrieval and verification.
+
+AppSec Core v0 {[}7{]} provides a normalization ontology for application
+security: 10 domain slices, 234 typed instances (ControlObjective,
+Practice, Mechanism, Artifact), with structural invariance across all
+slices. The companion paper {[}7{]} demonstrates that heterogeneous
+framework requirements (SSDF, ASVS, SLSA, CIS Controls, and CAPEC)
+converge on shared objectives within this ontology.
+
+The ontology is supported by a structural index of 4,139 units, each
+annotated with \texttt{document\_role}, \texttt{normative\_weight}, and
+\texttt{heading\_path}. This metadata is what makes ontology-grounded
+retrieval possible --- and what plain RAG lacks.
+
+\subsubsection{2.4 Model Context Protocol}\label{model-context-protocol}
+
+MCP {[}8{]} provides a standardized interface for LLM agents to access
+external tools and knowledge sources. In this work, MCP is the
+\textbf{delivery mechanism}, not the contribution. The contribution is
+the ontological structure of the knowledge being delivered and the
+retrieval method that produces auditable context.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. The Problem: Six Missing Properties in Plain
+Retrieval}\label{the-problem-six-missing-properties-in-plain-retrieval}
+
+This section identifies six properties that security-critical code
+generation requires and that plain vector-similarity RAG does not
+provide. The critique is scoped to retrieval without structured
+metadata.
+
+\subsubsection{3.1 No First-Class
+Provenance}\label{no-first-class-provenance}
+
+Vector-similarity RAG retrieves text chunks ranked by similarity. The
+LLM receives content but not the identity of the requirement it
+represents. Post-hoc, there is no structured mechanism to determine
+which specific requirement influenced the generated code. For security
+compliance, where audit trails require traceable links between
+requirements and implementations, this is insufficient.
+
+\subsubsection{3.2 No Explicit Typing}\label{no-explicit-typing}
+
+Plain RAG treats all retrieved chunks as equivalent: a normative
+requirement, an operational practice, an implementation mechanism, and
+an anti-pattern are delivered to the LLM as undifferentiated text. There
+is no structural distinction between a mandatory constraint (``input
+MUST be validated by allowlist'') and an informational example
+(``consider using JSON Schema at the API gateway''). The LLM cannot
+determine from the chunk alone whether to treat content as a
+non-negotiable requirement or optional guidance.
+
+\subsubsection{3.3 No Epistemic Weight}\label{no-epistemic-weight}
+
+Related but distinct from typing, epistemic weight concerns the
+\emph{authority level} of a unit, not its ontological category. Plain
+RAG has no mechanism to signal that one chunk carries mandatory
+normative force (strong weight) while another is operational guidance
+(medium weight). Security knowledge is heterogeneous in this dimension:
+a ControlObjective, a Practice, and a Mechanism may all be topically
+relevant, but only the ControlObjective is non-negotiable. Without
+explicit weighting, the LLM has no basis to prioritize accordingly.
+
+\subsubsection{3.4 No Reproducible
+Grounding}\label{no-reproducible-grounding}
+
+The same prompt may retrieve different chunks depending on the embedding
+model version, index state, or similarity threshold. The security
+grounding of code generation is therefore non-reproducible: two runs may
+produce code grounded in different requirement subsets. For functional
+code this is acceptable; for security, where the question is ``were all
+applicable requirements considered?'', it undermines the audit trail.
+
+\subsubsection{3.5 No Completeness
+Guarantee}\label{no-completeness-guarantee}
+
+Vector similarity retrieves the \emph{most similar} chunks, not
+\emph{all relevant} ones. If a knowledge base contains seven input
+validation requirements (VAL-001→007), RAG may retrieve three or four,
+missing the rest. There is no mechanism to verify that the full
+requirement family was considered.
+
+This retrieval incompleteness is structurally analogous to the
+\emph{claim gap} phenomenon in compliance knowledge management {[}10{]}:
+in both cases, a partial surface is mistaken for the applicable
+knowledge base.
+
+\subsubsection{3.6 No Verification Against
+Grounding}\label{no-verification-against-grounding}
+
+Plain RAG provides no way to verify generated code against the same
+requirements that grounded it. The retrieved chunks are consumed by the
+LLM and discarded; there is no structured record of what was provided,
+and no mechanism to check whether the output satisfies it.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Method: Ontology-Grounded
+Retrieval}\label{method-ontology-grounded-retrieval}
+
+\subsubsection{4.1 Overview}\label{overview}
+
+Ontology-grounded retrieval replaces the embed-search-inject pipeline
+with a five-stage structured query pipeline:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Intent parsing}: the prompt is analyzed to identify relevant
+  ontology slices
+\item
+  \textbf{Structured retrieval}: the knowledge graph is queried with
+  slice, risk level, and document role filters, returning typed units
+  --- not similarity-ranked chunks
+\item
+  \textbf{Context assembly}: retrieved units are ordered by epistemic
+  weight (strong requirements first, then practices, then mechanisms),
+  each with an explicit provenance header
+\item
+  \textbf{Grounded generation}: the LLM generates code with instructions
+  to cite which requirements it satisfies
+\item
+  \textbf{Verification}: the same structured index is queried to verify
+  the output
+\end{enumerate}
+
+The method is general: it requires (a) a typed ontology with explicit
+relations, (b) a structural index with role and weight annotations, and
+(c) a delivery protocol. We instantiate it with AppSec Core {[}7{]} and
+MCP {[}8{]}, but the method is not bound to these components.
+
+\subsubsection{4.2 Six Distinguishing
+Properties}\label{six-distinguishing-properties}
+
+\textbf{Table 1.} Property comparison: plain vector-similarity RAG
+vs.~ontology-grounded retrieval.
+
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{2.55cm}>{\RaggedRight\arraybackslash}p{5.2cm}>{\RaggedRight\arraybackslash}p{5.2cm}@{}}
+\toprule
+\textbf{Property} & \textbf{Vector-similarity RAG} & \textbf{Ontology-grounded} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Property} & \textbf{Vector-similarity RAG} & \textbf{Ontology-grounded} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{Provenance} & Implicit (chunk ID, opaque) & Explicit and first-class (\texttt{document\_role} + \texttt{heading\_path}) \\
+\textbf{Typing} & Absent or weak; all chunks treated equivalently & Explicit: ControlObjective, Practice, Mechanism, Artifact (AppSec Core v0); AntiPattern, Requirement, Signal (runtime layer) \\
+\textbf{Weighting} & Absent; no epistemic differentiation & First-class: \texttt{normative\_weight} (strong / medium / low) \\
+\textbf{Reproducibility} & Non-reproducible (embedding-dependent) & Reproducible given fixed classification and index version \\
+\textbf{Completeness} & Not assessable (similarity $\neq$ coverage) & Assessable via retrieval contract invariants \\
+\textbf{Verifiability} & Not against grounding (no structured record) & Same structured index for generation and verification \\
+\end{longtable}
+
+These properties are not binary (RAG has none / ontology has all). They
+represent a spectrum; Table 1 describes the \emph{baseline} forms of
+each approach.
+
+\subsubsection{4.3 Reproducible Grounding}\label{reproducible-grounding}
+
+The retrieval path has two stages with different reproducibility
+properties. First, the prompt is classified into a slice set; this stage
+is probabilistic because it depends on the intent parser. Second, the
+activated slice set is used to issue a structured query over the index;
+given the same classification, ontology version, and index version, this
+retrieval stage is reproducible.
+
+We distinguish \textbf{classification uncertainty} (mapping a prompt to
+ontology slices --- non-deterministic) from \textbf{retrieval
+reproducibility} (querying the structural index with fixed filters ---
+fully reproducible). Given the same classification, ontology version,
+and index version, the same requirements are retrieved.
+
+We use the term \textbf{reproducible grounding} rather than
+``deterministic.'' The retrieval is reproducible \emph{conditioned on a
+fixed classification}. The classification step introduces uncertainty
+analyzed in Section 7.2.
+
+\subsubsection{4.4 Typed Context Delivery}\label{typed-context-delivery}
+
+Each unit delivered to the LLM carries its ontological type. The first
+four types belong to the AppSec Core v0 ontology layer {[}7{]};
+AntiPattern belongs to the runtime layer of the SbD-ToE knowledge graph,
+which is projected through AppSec Core objectives:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ControlObjective} (strong): non-negotiable requirements
+\item
+  \textbf{Practice} (strong): operational approaches implementing
+  objectives
+\item
+  \textbf{Mechanism} (medium): technical implementation patterns (LLM
+  may choose alternatives)
+\item
+  \textbf{Artifact} (medium): evidence requirements (output should be
+  testable)
+\item
+  \textbf{AntiPattern} (medium): explicit prohibitions (runtime layer)
+\end{itemize}
+
+The following structured context envelope illustrates what the LLM
+receives for one requirement:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{slice}\KeywordTok{:}\AttributeTok{ ACO{-}IVF}
+\FunctionTok{risk\_level}\KeywordTok{:}\AttributeTok{ L2}
+\FunctionTok{requirement}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ VAL{-}003}
+\AttributeTok{  }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ ControlObjective}
+\AttributeTok{  }\FunctionTok{weight}\KeywordTok{:}\AttributeTok{ strong}
+\AttributeTok{  }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Schema validation before deserialization"}
+\AttributeTok{  }\FunctionTok{validation\_method}\KeywordTok{:}\AttributeTok{ }\StringTok{"Verify typed model or JSON Schema at API entry point"}
+\AttributeTok{  }\FunctionTok{expected\_evidence}\KeywordTok{:}\AttributeTok{ }\StringTok{"Test suite with malformed payload cases"}
+\AttributeTok{  }\FunctionTok{provenance}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{document\_role}\KeywordTok{:}\AttributeTok{ requirements\_catalog}
+\AttributeTok{    }\FunctionTok{normative\_weight}\KeywordTok{:}\AttributeTok{ strong}
+\AttributeTok{    }\FunctionTok{heading\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{"Validação de Requisitos \textgreater{} VAL{-}003"}
+\end{Highlighting}
+\end{Shaded}
+
+Two identifier namespaces appear in this envelope. \texttt{ACO-IVF} is
+an AppSec Core v0 slice identifier; \texttt{ACO-IVF-*} would be the
+native AppSec Core objective IDs. \texttt{VAL-003} is a corpus-level
+requirement-family identifier from the SbD-ToE manual layer --- it is
+the provenance ID of the requirement as it exists in the structural
+index, mapped to the AppSec Core objective space through the projection
+layer. The \texttt{heading\_path} field similarly carries corpus
+provenance. This distinction matters for the verification loop:
+completeness is assessed against AppSec Core ControlObjectives; corpus
+IDs provide the traceable source reference.
+
+This envelope enables the LLM to: (a) treat the requirement as
+non-negotiable; (b) cite it in output (\texttt{//\ VAL-003}); (c) know
+that evidence (test suite) should accompany the implementation. The same
+envelope is available to the verification loop.
+
+\subsubsection{4.5 The Retrieval Contract}\label{the-retrieval-contract}
+
+We formalize the retrieval as a contract:
+
+\begin{quote}
+\textbf{Definition (Retrieval Contract).}
+
+\emph{Input:} prompt \emph{p}, risk level \emph{l} ∈ \{L1, L2, L3\},
+optional explicit slice hints \emph{H}
+
+\emph{Output:} retrieved requirement set \emph{R} = \{(\emph{id},
+\emph{type}, \emph{weight}, \emph{provenance})\}
+
+\emph{Completeness invariant (conditional):} for every activated slice
+\emph{s} and every ControlObjective \emph{co} ∈ \emph{s} where
+\emph{co.risk\_level} ≤ \emph{l}: \emph{co} ∈ \emph{R}. All mandatory
+requirements for activated slices at the requested risk level must be
+returned. This invariant is conditional on correct slice activation;
+completeness is guaranteed with respect to the activated ontology
+region, not with respect to the user prompt in an unrestricted sense.
+
+\emph{Provenance invariant:} every element of \emph{R} carries a
+\texttt{(document\_role,\ normative\_weight,\ heading\_path)} triple
+traceable to the structural index.
+\end{quote}
+
+The completeness invariant is testable: given a slice activation and
+risk level, one can enumerate expected ControlObjectives and verify the
+retrieval returned all of them. This is not possible with
+similarity-ranked retrieval, where ``enough'' is undefined.
+
+The completeness invariant is scoped to \textbf{ControlObjectives}
+within activated slices. The richer payload delivered to the LLM ---
+Practices, Mechanisms, AntiPatterns, and corpus-level identifiers --- is
+auxiliary delivery around an objective-complete core. This auxiliary
+content does not expand the completeness guarantee; it enriches the
+grounding context for generation and verification without altering the
+invariant's scope.
+
+\subsubsection{4.6 Proportional
+Application}\label{proportional-application}
+
+Risk level is a retrieval parameter, not a post-hoc filter:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{L1 (low risk):} L1-mandatory requirements only
+\item
+  \textbf{L2 (standard):} L1 + L2-mandatory requirements
+\item
+  \textbf{L3 (high risk):} all requirements including L3-specific and
+  recommended practices
+\end{itemize}
+
+This prevents over-engineering low-risk components and ensures high-risk
+components receive full treatment.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Worked Examples}\label{worked-examples}
+
+The following examples are \textbf{illustrative demonstrations of
+traceability properties}, not comparative evaluations or standalone
+reproducibility packages. Each traces the intended pipeline from prompt
+to verification in compact form. Failure modes are discussed in Section
+7.
+
+For contrast, a plain vector-similarity RAG pipeline proceeds from
+prompt to embedding, similarity-ranked chunks, and then generation,
+without a structured record linking the output back to specific
+requirements. The ontology-grounded pipeline instead proceeds from
+prompt to slice classification, structured retrieval, typed requirement
+delivery, generation, and verification against the same index, thereby
+preserving a closed audit trail.
+
+\subsubsection{5.1 API Input Validation}\label{api-input-validation}
+
+\textbf{Prompt:} ``Write a Python API endpoint that accepts a JSON
+payload with user profile data.''
+
+\textbf{Retrieval:} ACO-IVF slice at L2. Returns (IDs of the form
+\texttt{VAL-*}, \texttt{ERR-*} are corpus requirement-family identifiers
+from the SbD-ToE runtime layer; \texttt{ACO-IVF} is the AppSec Core v0
+slice):
+
+\begin{longtable}{@{}L{3.1cm}L{1.35cm}L{1.55cm}L{6.95cm}@{}}
+\toprule
+\textbf{Type} & \textbf{Weight} & \textbf{ID} & \textbf{Requirement} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Type} & \textbf{Weight} & \textbf{ID} & \textbf{Requirement} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+ControlObjective & strong & VAL-001 & All input validated by allowlist \\
+ControlObjective & strong & VAL-003 & Schema validation before deserialization \\
+ControlObjective & strong & VAL-005 & Validation before internal use \\
+ControlObjective & strong & ERR-001 & Fail-safe; reject invalid input without revealing internals \\
+Practice & medium & --- & Use typed model at API entry point \\
+Mechanism & medium & --- & \texttt{pydantic BaseModel} with \texttt{strict=True} \\
+AntiPattern & medium & --- & Never use \texttt{eval()} / \texttt{exec()} on user input \\
+\end{longtable}
+
+\textbf{Generated code} (with requirement citations):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ pydantic }\ImportTok{import}\NormalTok{ BaseModel, ConfigDict}
+
+\KeywordTok{class}\NormalTok{ UserProfile(BaseModel):}
+\NormalTok{    model\_config }\OperatorTok{=}\NormalTok{ ConfigDict(strict}\OperatorTok{=}\VariableTok{True}\NormalTok{)  }\CommentTok{\# VAL{-}003: schema before deserialization}
+\NormalTok{    name: }\BuiltInTok{str}
+\NormalTok{    email: }\BuiltInTok{str}
+\NormalTok{    age: }\BuiltInTok{int}
+
+\AttributeTok{@app.post}\NormalTok{(}\StringTok{"/profile"}\NormalTok{)}
+\ControlFlowTok{async} \KeywordTok{def}\NormalTok{ create\_profile(profile: UserProfile):}
+    \CommentTok{\# VAL{-}001: allowlist validation via typed model fields}
+    \CommentTok{\# VAL{-}005: validated before any internal use}
+    \CommentTok{\# ERR{-}001: pydantic returns 422 without exposing internals}
+    \ControlFlowTok{return} \ControlFlowTok{await}\NormalTok{ save\_profile(profile)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Verification:} VAL-001 ✓, VAL-003 ✓, VAL-005 ✓, ERR-001 ✓,
+AntiPattern (no \texttt{eval}) ✓. All retrieved requirements addressed.
+Audit trail complete.
+
+\subsubsection{5.2 Kubernetes Container
+Hardening}\label{kubernetes-container-hardening}
+
+\textbf{Prompt:} ``Write a Kubernetes deployment manifest for a web
+application.''
+
+\textbf{Retrieval:} ACO-SPC + ACO-RPR at L2. Returns CFG-001 (no debug),
+CFG-003 (no hardcoded credentials), securityContext practices, and
+\texttt{privileged:\ true} anti-pattern.
+
+\textbf{Generated manifest} includes: \texttt{runAsNonRoot:\ true},
+\texttt{allowPrivilegeEscalation:\ false},
+\texttt{readOnlyRootFilesystem:\ true}, credentials from
+\texttt{secretKeyRef}, no debug ports exposed. Each security property
+traceable to a retrieved requirement.
+
+\subsubsection{5.3 CI/CD Pipeline
+Security}\label{cicd-pipeline-security}
+
+\textbf{Prompt:} ``Write a GitHub Actions workflow for building and
+deploying a container image.''
+
+\textbf{Retrieval:} ACO-SCBI + ACO-RPR at L2. Returns provenance
+attestation, artifact signing, runner isolation, secret injection, and
+branch protection requirements.
+
+\textbf{Generated workflow} includes: attestation generation, cosign
+signing, \texttt{secrets.*} only, image reference by digest, and
+approval gate for production. Each step traceable to retrieved
+requirements.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. The Verification Loop}\label{the-verification-loop}
+
+The verification loop closes the audit trail. We organize verification
+into three classes by automation level.
+
+\subsubsection{6.1 Syntactic Verification (Fully
+Automatable)}\label{syntactic-verification-fully-automatable}
+
+Checks on presence or absence of concrete constructs: anti-pattern
+absence (\texttt{eval()}, \texttt{privileged:\ true}), configuration
+presence (\texttt{runAsNonRoot:\ true}), citation validity (does
+\texttt{//\ VAL-003} exist in the knowledge graph and in the retrieved
+set?). These are deterministic.
+
+\subsubsection{6.2 Semantic Approximation
+(Semi-Automatable)}\label{semantic-approximation-semi-automatable}
+
+Checks requiring limited static analysis: data flow (does user input
+pass through validation before a database query?), schema enforcement
+(is strict mode enabled?), citation plausibility (does code near
+\texttt{//\ VAL-003} actually perform schema validation?). Approximable
+with SAST tools configured from the same requirement families.
+
+\subsubsection{6.3 Human Judgment
+Required}\label{human-judgment-required}
+
+Checks requiring human review: architectural adequacy (least
+privilege?), business logic constraints (appropriate fail-safe?),
+defense completeness (all attack surfaces?). The structured audit trail
+makes human review tractable but not automatable.
+
+\subsubsection{6.4 The Closed Loop}\label{the-closed-loop}
+
+Generation and verification use the \textbf{same structured index}:
+
+\begin{itemize}
+\tightlist
+\item
+  No requirements lost in translation between grounding and verification
+\item
+  Verification scoped to exactly the relevant requirements
+\item
+  Audit trail complete from prompt, through slice selection and
+  retrieved requirements, to generated code and verification results
+\end{itemize}
+
+This closed loop is not achievable with plain RAG, where retrieved
+chunks are consumed without structured record.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Discussion}\label{discussion}
+
+\subsubsection{7.1 What is Reproducible, What is
+Not}\label{what-is-reproducible-what-is-not}
+
+Ontology-grounded retrieval makes the \emph{grounding} reproducible, not
+the \emph{output}. Once slice activation is fixed, the same query yields
+the same requirements. The LLM's generation remains probabilistic. But
+the security contract is fixed: same requirements, same verification
+criteria, same audit trail.
+
+\subsubsection{7.2 The Intent Parser: Primary Source of
+Uncertainty}\label{the-intent-parser-primary-source-of-uncertainty}
+
+The intent parser --- mapping a prompt to ontology slices --- is the
+primary source of uncertainty. If it assigns wrong slices, retrieval is
+reproducible but \emph{reproducibly wrong}: the completeness invariant
+holds for activated slices, but the slices themselves may be incorrect.
+
+Mitigation strategies (in order of robustness):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Explicit tagging} (\texttt{@ACO-IVF}) --- bypasses the parser;
+  most reliable, least ergonomic
+\item
+  \textbf{Conservative over-retrieval} (top-3 slices) --- trades context
+  space for coverage safety
+\item
+  \textbf{Confidence thresholding} --- low-confidence slices trigger
+  fallback to tagging or over-retrieval
+\end{enumerate}
+
+Empirical characterization of parser accuracy is future work.
+
+\subsubsection{7.3 Cost and
+Generalizability}\label{cost-and-generalizability}
+
+Ontology-grounded retrieval requires a maintained, typed knowledge graph
+--- a non-trivial investment compared to indexing unstructured
+documentation for RAG. The cost is justified when security verification
+properties are required. For non-security contexts, standard RAG may
+suffice.
+
+The method is general in structure: it requires a typed ontology, a
+stratified index, and a delivery protocol. We instantiate it for AppSec
+with AppSec Core and MCP. The pattern is in principle applicable to
+other domains where structured, verifiable grounding is needed ---
+regulatory compliance, medical guidelines, safety-critical engineering
+--- but this broader applicability remains a methodological claim, not a
+demonstrated result.
+
+\subsubsection{7.4 Relationship to Static
+Analysis}\label{relationship-to-static-analysis}
+
+Ontology-grounded retrieval is complementary to SAST:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Requirement families → SAST rule selection}: activating a
+  slice enables the corresponding rule sets
+\item
+  \textbf{AntiPatterns → lint rules}: each prohibition translates to a
+  static analysis check
+\item
+  \textbf{Validation methods → test templates}: each requirement's
+  \texttt{validation\_method} seeds test generation
+\end{itemize}
+
+Both generation and verification operate from the same structured
+requirements, ensuring consistency.
+
+\subsubsection{7.5 Illustrative Property
+Snapshot}\label{illustrative-property-snapshot}
+
+We report a small illustrative comparison of retrieval properties for
+the three prompts in Section 5. This is not a controlled evaluation and
+should not be read as evidence of superiority in code quality or
+security outcomes; it serves only to make the contract properties
+operationally concrete. The baseline shown here is a single illustrative
+instantiation using one embedding model over the same corpus without
+structured metadata:
+
+\textbf{Table 2.} Illustrative retrieval property snapshot for worked
+examples (Section 5). Not a controlled evaluation --- see §8.
+
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{4.5cm}>{\RaggedRight\arraybackslash}p{4.1cm}>{\RaggedRight\arraybackslash}p{4.6cm}@{}}
+\toprule
+\textbf{Metric} & \textbf{Vector-similarity RAG} & \textbf{Ontology-grounded} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Metric} & \textbf{Vector-similarity RAG} & \textbf{Ontology-grounded} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Requirements retrieved (of applicable¹) & 3--5 of 7 (varies) & 7 of 7 (stable) \\
+Requirements with explicit ID in context & 0 & 7 \\
+Epistemic weight attached & No & Yes (strong/medium) \\
+Verification checks executable post-gen & 0 (no record) & 5--7 (syntactic + semantic) \\
+Audit trail constructible & No & Yes \\
+\end{longtable}
+
+¹ ``Applicable'' = all ControlObjectives in activated slices with
+\texttt{risk\_level} ≤ selected level (per retrieval contract, Section
+4.5).
+
+This snapshot compares \emph{retrieval properties} of a single baseline
+instantiation, not code quality or security outcomes. A rigorous
+evaluation with multiple models, prompts, annotators, and statistical
+controls is future work.
+
+\subsubsection{7.6 What This is Not}\label{what-this-is-not}
+
+This method does not claim that LLMs should write security-critical code
+autonomously. Human review remains essential. What ontology-grounded
+retrieval provides is \textbf{structure for that review}: reviewers see
+exactly which requirements grounded the generation and can verify each
+one.
+
+Nor does it guarantee secure code. The claim is narrower:
+ontology-grounded retrieval produces \textbf{auditable,
+requirement-traceable grounding}. The security of the output depends on
+the requirements' quality, the LLM's adherence, and the verification
+loop's thoroughness.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Limitations}\label{limitations}
+
+\textbf{No controlled experiment.} The validation is methodological
+(compact illustrative scenarios making the contract properties
+concrete), not experimental. A comparative study measuring vulnerability
+rates and requirement coverage across grounding modes is future work.
+
+\textbf{Intent parser uncharacterized.} The primary source of
+uncertainty has no accuracy data. Future work should measure
+classification precision and recall per slice across prompt types.
+
+\textbf{Single instantiation.} The method is demonstrated with AppSec
+Core and MCP. Generalization to other ontologies and delivery mechanisms
+is argued but not validated.
+
+\textbf{Worked examples are happy paths.} Failure modes (wrong slice,
+incomplete retrieval, LLM non-compliance) are discussed but not
+systematically characterized.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Conclusion}\label{conclusion}
+
+We have presented ontology-grounded retrieval as a method for auditable
+LLM-assisted secure code generation. The method replaces probabilistic
+vector similarity with reproducible structured queries against a typed
+security knowledge graph, providing six properties that plain RAG does
+not inherently offer: first-class provenance, explicit typing, epistemic
+weighting, reproducible grounding, completeness assessment, and
+verifiability against the same index.
+
+The retrieval contract formalizes completeness and provenance invariants
+that make grounding testable. The three-class verification taxonomy
+makes automation boundaries explicit. The closed verification loop ---
+where the same index grounds generation and verifies output --- closes
+the audit trail.
+
+The method does not make LLM-generated code secure. It makes the
+grounding auditable: requirements are explicit, provenance is traceable,
+verification is reproducible. The method is general in structure but
+validated here only in an AppSec-specific instantiation; its broader
+applicability remains a methodological claim to be tested empirically in
+future work.
+
+In a landscape where LLMs generate increasing volumes of code, the
+ability to say ``this code was grounded in these specific requirements,
+and here is the evidence'' is a meaningful step toward responsible
+adoption.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{10. Artifact Availability}\label{artifact-availability}
+
+Curated supporting artifacts for this paper are available in the
+companion public repository at
+\url{https://github.com/sbd-ai-runtime/appsec-core-ontology-research}.
+For this paper, the relevant materials are organized under
+\texttt{papers/03-ontology-grounded-retrieval/artifacts/}, notably
+\texttt{papers/03-ontology-grounded-retrieval/artifacts/retrieval\_contract/}
+and
+\texttt{papers/03-ontology-grounded-retrieval/artifacts/runtime\_snapshot/},
+which provide the released retrieval contract and runtime-grounding
+snapshot referenced by the method. The same repository also contains
+this paper's curated source under
+\texttt{papers/03-ontology-grounded-retrieval/source/} and its public
+PDF under \texttt{papers/03-ontology-grounded-retrieval/pdf/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{References}\label{references}
+
+{[}1{]} H. Pearce, B. Ahmad, B. Tan, B. Dolan-Gavitt, and R. Karri,
+``Asleep at the keyboard? Assessing the security of GitHub Copilot's
+code contributions,'' in \emph{Proc. 43rd IEEE S\&P}, 2022,
+pp.~754--768, doi: 10.1109/SP46214.2022.9833571.
+
+{[}2{]} N. Tihanyi, T. Bisztray, M. A. Ferrag, R. Jain, and L. C.
+Cordeiro, ``How secure is AI-generated code: A large-scale comparison of
+large language models,'' \emph{Empirical Softw. Eng.}, vol.~30, art. 47,
+2025, doi: 10.1007/s10664-024-10590-1.
+
+{[}3{]} C. Tony, M. Mutas, N. Díaz Ferreyra, and R. Scandariato,
+``LLMSecEval: A dataset for security evaluation of LLM code
+suggestions,'' in \emph{Proc. MSR}, 2023, pp.~588--592, doi:
+10.1109/MSR59073.2023.00084.
+
+{[}4{]} C. Tony, N. E. Díaz Ferreyra, M. Mutas, S. Dhif, and R.
+Scandariato, ``Prompting techniques for secure code generation: A
+systematic investigation,'' \emph{ACM Trans. Softw. Eng. Methodol.},
+vol.~34, no. 8, art. 225, 2025, doi: 10.1145/3722108.
+
+{[}5{]} M. Chen et al., ``Evaluating large language models trained on
+code,'' arXiv:2107.03374, 2021.
+
+{[}6{]} P. Lewis et al., ``Retrieval-augmented generation for
+knowledge-intensive NLP tasks,'' in \emph{NeurIPS}, vol.~33, 2020,
+pp.~9459--9474.
+
+{[}7{]} P. Farinha, ``AppSec Core: A normalized ontology for security
+requirements across heterogeneous frameworks,'' preprint, 2026. {[}arXiv
+ID: TBD --- submitted as companion preprint{]}
+
+{[}8{]} Anthropic, ``Model Context Protocol specification,'' version
+2024-11-05, 2024. GitHub:
+https://github.com/modelcontextprotocol/modelcontextprotocol/releases
+(accessed: 2026-04-06).
+
+{[}9{]} B. Peng et al., ``Graph retrieval-augmented generation: A
+survey,'' \emph{ACM Trans. Inf. Syst.}, 2025, doi: 10.1145/3777378.
+{[}DOI to be verified against published record{]}
+
+{[}10{]} P. Farinha, ``Coverage-preserving compilation of normative and
+empirical security knowledge,'' preprint, 2026. {[}arXiv ID: TBD ---
+submitted as companion preprint{]}
+
+{[}11{]} MITRE. Common Weakness Enumeration (CWE). Available:
+https://cwe.mitre.org
+
+{[}12{]} MITRE. Common Attack Pattern Enumeration and Classification
+(CAPEC). Available: https://capec.mitre.org
+
+{[}13{]} OWASP. Secure Coding Practices Quick Reference Guide, 2010.
+
+\end{document}

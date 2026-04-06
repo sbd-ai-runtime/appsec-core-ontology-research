@@ -34,29 +34,47 @@ appsec-core-research/
   MANIFEST-v1.0.md
   docs/
     RELEASE-TO-ZENODO.md
-  paper_sources/
-    paper1_appsec_core.md
-    paper2_compilation.md
-    paper3_ontology_grounded_retrieval.md
   papers/
-    appsec_core_normalized_ontology.pdf
-    coverage_preserving_knowledge_compilation.pdf
-    ontology_grounded_retrieval.pdf
-  paper1_artifacts/
-    ontology/
-    schema/
-    slice_contracts/
-    normalized_examples/
-  paper2_artifacts/
-    pilot_manifests/
-    pilot_outputs/
-    cross_pilot/
-    method_notes/
-  paper3_artifacts/
-    retrieval_contract/
-    runtime_snapshot/
-    worked_examples/
-    verification_examples/
+    README.md
+    appsec-core-normalized-ontology/
+      source/
+        manuscript.md
+      pdf/
+        appsec_core_normalized_ontology.pdf
+      arxiv/
+        main.tex
+        appsec_core_normalized_ontology-arxiv.tar.gz
+      artifacts/
+        ontology/
+        schema/
+        slice_contracts/
+        normalized_examples/
+    coverage-preserving-knowledge-compilation/
+      source/
+        manuscript.md
+      pdf/
+        coverage_preserving_knowledge_compilation.pdf
+      arxiv/
+        main.tex
+        coverage_preserving_knowledge_compilation-arxiv.tar.gz
+      artifacts/
+        pilot_manifests/
+        pilot_outputs/
+        cross_pilot/
+        method_notes/
+    ontology-grounded-retrieval/
+      source/
+        manuscript.md
+      pdf/
+        ontology_grounded_retrieval.pdf
+      arxiv/
+        main.tex
+        ontology_grounded_retrieval-arxiv.tar.gz
+      artifacts/
+        retrieval_contract/
+        runtime_snapshot/
+        worked_examples/
+        verification_examples/
 ```
 
 ## 3. Mandatory Content for `v1.0.0`
@@ -98,11 +116,11 @@ Mandatory selections:
 
 Destination mapping:
 
-- `paper1_artifacts/ontology/`
-- `paper1_artifacts/schema/`
-- `paper1_artifacts/slice_contracts/`
+- `papers/01-appsec-core-normalized-ontology/artifacts/ontology/`
+- `papers/01-appsec-core-normalized-ontology/artifacts/schema/`
+- `papers/01-appsec-core-normalized-ontology/artifacts/slice_contracts/`
 
-For `v1.0.0`, no extra Paper 1 supplement is mandatory beyond these ontology and contract files. If reviewer-friendly example extracts are later prepared, place them in `paper1_artifacts/normalized_examples/`.
+For `v1.0.0`, no extra Paper 1 supplement is mandatory beyond these ontology and contract files. If reviewer-friendly example extracts are later prepared, place them in `papers/01-appsec-core-normalized-ontology/artifacts/normalized_examples/`.
 
 ### Paper 2 Artifacts
 
@@ -130,8 +148,8 @@ For each mandatory pilot, include:
 
 Destination mapping:
 
-- `paper2_artifacts/pilot_manifests/`
-- `paper2_artifacts/pilot_outputs/`
+- `papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/`
+- `papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/`
 
 ### Paper 3 Artifacts
 

@@ -1,0 +1,1389 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{newunicodechar}
+
+\newunicodechar{✓}{$\checkmark$}
+\newunicodechar{∈}{$\in$}
+\newunicodechar{∃}{$\exists$}
+\newunicodechar{≠}{$\neq$}
+\newunicodechar{≤}{$\le$}
+\newunicodechar{≥}{$\ge$}
+\newunicodechar{→}{$\rightarrow$}
+\newunicodechar{₁}{$_1$}
+\newunicodechar{₂}{$_2$}
+\newunicodechar{ₖ}{$_k$}
+\newunicodechar{─}{-}
+\newunicodechar{└}{+}
+\newunicodechar{├}{+}
+\newunicodechar{│}{|}
+
+\setstretch{1.03}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{3em}
+
+\titleformat{\section}{\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection.}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection.}{0.6em}{}
+
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.3em}
+
+\setlength{\LTpre}{0.35em}
+\setlength{\LTpost}{0.35em}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\AtBeginEnvironment{longtable}{\small}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+\captionsetup[table]{skip=4pt}
+\captionsetup[figure]{skip=4pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+
+\newcommand{\codeid}[1]{{\small\begingroup\urlstyle{tt}\nolinkurl{#1}\endgroup}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{AppSec Core: A Normalized Ontology for Security Requirements
+Across Heterogeneous
+Frameworks}\label{appsec-core-a-normalized-ontology-for-security-requirements-across-heterogeneous-frameworks}
+
+\textbf{Pedro Farinha}\\
+Independent Researcher\\
+\href{mailto:pedro.farinha@shiftleft.pt}{\nolinkurl{pedro.farinha@shiftleft.pt}}\\
+\href{https://github.com/pedrofarinhaatshiftleftpt}{github.com/pedrofarinhaatshiftleftpt}
+
+\emph{Supported by Shiftleft - Secure Software Engineering, lda.}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Abstract}\label{abstract}
+
+The application security (AppSec) landscape is served by an expanding
+set of frameworks, standards, and regulations, each using its own
+vocabulary, granularity, and structural conventions. Organizations that
+must demonstrate alignment with multiple sources simultaneously face a
+quadratic mapping problem with no shared semantic model to mediate it.
+
+We propose \textbf{AppSec Core}, a normalized ontology for application
+security comprising 10 domain slices and 234 typed instances. The
+ontology defines four entity types --- ControlObjective, Practice,
+Mechanism, and Artifact --- connected by a stable set of relations
+(\texttt{implements}, \texttt{realizes}, \texttt{evidences}) that are
+structurally invariant across all slices. Each slice is governed by a
+formal contract specifying scope, boundaries, and non-goals. The
+ontology was derived from practitioner semantics accumulated over a
+decade of AppSec engineering, not from any single external framework.
+
+We present evidence that AppSec Core can function as a \textbf{semantic
+normalization layer} through canonical reduction: requirements from a
+first-wave set of five sources (SSDF, ASVS, SLSA, CIS Controls, and
+CAPEC) --- expressed in incompatible vocabularies --- are reduced to
+shared ControlObjectives and their associated operational chains within
+the ontology, after which downstream coverage analysis operates on the
+normalized objective layer independently of framework vocabulary.
+Mapping exercises across three presented slices show that 79\% of
+analyzed ControlObjectives are mapped by at least two frameworks, and
+the 10-slice model accommodates every requirement analyzed under the
+stated inclusion protocol without structural extension.
+
+We contribute: (1) the AppSec Core ontology as a reusable domain model;
+(2) the four-type instance schema with explicit traceability relations;
+(3) empirical evidence of semantic normalization through canonical
+reduction --- heterogeneous framework requirements are reduced to shared
+ControlObjectives, after which downstream coverage analysis is
+independent of framework vocabulary; and (4) a contract-based governance
+model that supports principled extension.
+
+\textbf{Keywords:} ontology, application security, normalization,
+security frameworks, SSDF, ASVS, SLSA, knowledge representation
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Introduction}\label{introduction}
+
+Organizations developing software in regulated or security-sensitive
+environments must align their practices with multiple external
+frameworks. NIST's Secure Software Development Framework (SSDF) {[}1{]}
+prescribes 20 practices across the secure development lifecycle. OWASP's
+Application Security Verification Standard (ASVS) v5.0 {[}2{]} defines
+443 verification requirements organized in 36 thematic clusters.
+Supply-chain Levels for Software Artifacts (SLSA) {[}3{]} specifies 14
+build integrity requirements across three maturity levels. CIS Controls
+v8.1 {[}4{]} addresses 18 enterprise security controls. Regulatory
+instruments such as the EU's DORA {[}5{]} and NIS2 {[}6{]} add further
+obligations; their specific mapping to AppSec Core is outside the
+evidentiary scope of this paper (see Scope, below).
+
+Each of these sources uses its own terminology, structural conventions,
+and level of granularity. SSDF speaks of \emph{practices} organized in
+four families (Prepare, Protect, Produce, Respond). ASVS speaks of
+\emph{verification requirements} grouped by thematic cluster. SLSA
+speaks of \emph{build levels} with specific provenance and isolation
+properties. These are not interchangeable vocabularies: they partition
+the same underlying domain differently.
+
+For any single framework, alignment is manageable. The problem emerges
+at the intersection: \textbf{when an organization must assess coverage
+against multiple frameworks simultaneously}, the mapping effort scales
+as N internal practices × M external requirements, terminology conflicts
+accumulate, and there is no principled way to determine whether two
+requirements from different frameworks address the same underlying
+security concern.
+
+\subsubsection{The Missing Layer}\label{the-missing-layer}
+
+What is missing is a \textbf{normalization layer} --- a shared semantic
+model into which requirements from heterogeneous frameworks can be
+mapped, enabling:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Semantic deduplication}: recognizing that SSDF PW.9 (``secure
+  settings by default''), ASVS \texttt{secure\_configuration\_baseline},
+  and CIS-4 (``secure configuration'') address the same concern
+\item
+  \textbf{Unified coverage analysis}: determining whether an
+  organization's practices cover a requirement \emph{once}, regardless
+  of how many frameworks express it
+\item
+  \textbf{Framework-version resilience}: when ASVS v6.0 is published,
+  the mapping to the normalization layer is updated --- downstream
+  analysis does not change
+\item
+  \textbf{Cross-framework gap detection}: identifying requirements
+  covered by one framework but not another, through the shared model
+\end{itemize}
+
+This paper proposes \textbf{AppSec Core} as this normalization layer.
+AppSec Core is an ontology of 10 domain slices with 234 typed instances,
+derived from practitioner semantics rather than from any single external
+framework.
+
+\subsubsection{Contributions}\label{contributions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{The AppSec Core ontology}: 10 slices covering the application
+  security domain, each with typed instances (ControlObjective,
+  Practice, Mechanism, Artifact) connected by explicit relations.
+\item
+  \textbf{A four-type instance model} with structural invariance across
+  all slices, providing a reusable schema for security knowledge
+  representation.
+\item
+  \textbf{Empirical evidence of semantic normalization through canonical
+  reduction}: we show through concrete mapping examples that
+  requirements from SSDF, ASVS, and SLSA are reduced to shared AppSec
+  Core ControlObjectives, producing a canonical representation in which
+  framework-specific vocabulary is no longer required for downstream
+  coverage analysis.
+\item
+  \textbf{A contract-based governance model} for ontology extension,
+  where each slice is governed by a formal contract specifying scope,
+  non-goals, and boundary conditions.
+\end{enumerate}
+
+\subsubsection{Scope}\label{scope}
+
+This paper is about \textbf{representation}. It does not address
+retrieval pipelines, LLM grounding, or experimental evaluation --- those
+are treated in companion work. The empirical mapping evidence reported
+here is restricted to the first-wave framework set described above;
+later maturity and regulatory waves are outside the evidentiary scope of
+this paper. The SbD-ToE manual, from which the ontology was empirically
+derived, is referenced as context for the derivation process but is not
+the subject of the paper.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Related Work}\label{related-work}
+
+\subsubsection{2.1 Application Security
+Frameworks}\label{application-security-frameworks}
+
+SSDF {[}1{]}, ASVS {[}2{]}, SLSA {[}3{]}, and CIS Controls {[}4{]} each
+provide comprehensive guidance within their respective scopes. They are
+designed as \textbf{consumption endpoints} --- organizations implement
+against them --- not as normalization layers. Each defines its own
+vocabulary and structure. Cross-framework alignment is left to the
+consumer.
+
+\subsubsection{2.2 Security Ontologies}\label{security-ontologies}
+
+Several ontologies have been proposed for information security. Herzog
+et al.~{[}7{]} proposed a general security ontology covering assets,
+threats, and countermeasures. Blanco et al.~{[}8{]} developed an
+ontology for security requirements engineering and provided a systematic
+comparison of security ontologies available at the time. These works
+operate at the broad information security level; AppSec Core is scoped
+specifically to \textbf{application security practices} --- what
+development teams do to build secure software --- a narrower but more
+operationally precise domain.
+
+CWE {[}9{]} and CAPEC {[}10{]} model the \textbf{problem space} (what
+can go wrong). AppSec Core models the \textbf{solution space} (what
+practitioners do to prevent it). This distinction is relevant: coverage
+analysis requires a solution-space model. CAPEC is included in the
+normalization mapping (Section 5) as a problem-space cross-reference:
+its attack patterns validate AppSec Core solution-space objectives
+rather than prescribe practices, and it is treated as a complementary
+adversarial source rather than a normative framework equivalent to SSDF
+or ASVS.
+
+\subsubsection{2.3 Maturity Models}\label{maturity-models}
+
+OWASP SAMM {[}11{]} and BSIMM {[}12{]} assess \textbf{how well} an
+organization performs security activities at varying maturity levels.
+They are complementary to AppSec Core: SAMM/BSIMM assess maturity;
+AppSec Core models \textbf{what the activities are}. An organization
+could use AppSec Core for coverage analysis and SAMM for maturity
+assessment over the same underlying practices.
+
+\subsubsection{2.4 Requirements
+Normalization}\label{requirements-normalization}
+
+The NIST SP 800-53 overlay methodology {[}13{]} provides a mechanism for
+customizing security control baselines. Fabian et al.~{[}14{]} compare
+security requirements engineering methods including SQUARE and SREP.
+Goknil et al.~{[}15{]} formalize trace relation semantics for
+requirements models. AppSec Core differs from these in providing a
+\textbf{semantic normalization layer} with typed instances and explicit
+relations, rather than a methodology or a single framework's
+customization mechanism.
+
+\subsubsection{2.5 Gap}\label{gap}
+
+To our knowledge, no existing model provides a typed, structurally
+invariant, framework-independent semantic layer at the application
+security practice level that supports cross-framework normalization.
+AppSec Core is designed to address this gap.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. The AppSec Core Ontology}\label{the-appsec-core-ontology}
+
+\subsubsection{3.1 Design Principles}\label{design-principles}
+
+AppSec Core was designed to satisfy four principles:
+
+\textbf{P1 --- Practitioner fidelity.} The ontology reflects how
+practitioners organize and reason about application security. It was
+derived bottom-up from 10+ years of hands-on AppSec engineering, not
+from the categories of any specific framework.
+
+\textbf{P2 --- Framework independence.} The ontology is designed to be
+stable as external frameworks evolve. Adding a new framework requires
+mapping its requirements to existing slices, not restructuring the
+ontology.
+
+\textbf{P3 --- Structural invariance.} Every slice uses the same entity
+types, the same relation model, and the same contract structure. This
+enables uniform tooling and analysis without per-slice customization.
+
+\textbf{P4 --- Contract-based governance.} Each slice is governed by a
+formal contract specifying scope, non-goals, and boundary conditions,
+enabling principled extension without scope creep.
+
+\subsubsection{3.2 Derivation Process}\label{derivation-process}
+
+The ontology was derived empirically from a practitioner-authored
+security manual (SbD-ToE) covering 15 chapters of the secure development
+lifecycle. The derivation was not a top-down design exercise; it
+proceeded as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Corpus analysis}: 4,139 structural units from the manual were
+  indexed with document role and normative weight annotations
+\item
+  \textbf{Concern clustering}: recurring security concerns were
+  identified across chapters and grouped into coherent subdomains
+\item
+  \textbf{Objective extraction}: for each subdomain, control objectives
+  were formulated as atomic normative statements
+\item
+  \textbf{Practice/mechanism/artifact identification}: operational,
+  technical, and evidentiary instances were extracted from the corpus
+  and linked to objectives
+\item
+  \textbf{Contract formalization}: each subdomain was stabilized as a
+  slice with an explicit contract
+\end{enumerate}
+
+The manual served as the empirical corpus; the ontology is the
+abstraction. The ontology is \textbf{not} a description of the manual
+--- it is a domain model that the manual's content instantiates.
+Evidence for this independence is provided in Section 7.4, where we show
+that several ontology concepts were documented by practitioners before
+the corresponding framework requirements were published.
+
+\subsubsection{3.3 The Ten Domain Slices}\label{the-ten-domain-slices}
+
+AppSec Core organizes the application security domain into 10 slices.
+Table 1 lists each slice with its scope and instance counts.
+
+\textbf{Table 1.} AppSec Core v0 slices.
+
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{1.15cm}>{\RaggedRight\arraybackslash}p{4.25cm}>{\RaggedRight\arraybackslash}p{5.45cm}cccc@{}}
+\toprule
+\textbf{ID} & \textbf{Slice Name} & \textbf{Scope} & \textbf{CO} & \textbf{Pr} & \textbf{Me} & \textbf{Ar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Slice Name} & \textbf{Scope} & \textbf{CO} & \textbf{Pr} & \textbf{Me} & \textbf{Ar} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+ASC-01 & Supply Chain \& Build Integrity & Dependencies, provenance, build security, artifact signing & 7 & 7 & 5 & 10 \\
+ASC-02 & Identity, Access \& Session Trust & Authentication, authorization, session management, credentials & 7 & 6 & 6 & 6 \\
+ASC-03 & Architecture \& Trust Boundaries & Secure design, trust zones, boundary controls, design review & 7 & 7 & 5 & 4 \\
+ASC-04 & Testing, Security Validation \& Empirical Assurance & Testing strategy, risk-proportional criteria, evidence & 7 & 7 & 5 & 6 \\
+ASC-05 & Threat Modeling, Risk Disposition \& Mitigation Traceability & Threat analysis, risk treatment, mitigation tracking & 7 & 7 & 6 & 4 \\
+ASC-06 & Secret Handling, Protected Configuration \& Operational Identities & Secrets, secure config baselines, machine identity, drift & 7 & 6 & 4 & 2 \\
+ASC-07 & Input Validation, Safe Parsing \& Controlled Failure & Input handling, injection prevention, fail-safe, error management & 7 & 6 & 4 & 6 \\
+ASC-08 & Integration Trust \& Service-to-Service Security & API security, service mesh, inter-service authentication, contracts & 7 & 6 & 5 & 5 \\
+ASC-09 & Release Promotion, Controlled Rollout \& Rollback Readiness & Release gates, progressive deployment, canary, rollback & 7 & 6 & 4 & 8 \\
+ASC-10 & Security Event Logging, Audit Trail \& Centralized Logging & Security logging, audit trails, log integrity, observability & 7 & 5 & 4 & 2 \\
+ & \textbf{Total} &  & \textbf{70} & \textbf{63} & \textbf{48} & \textbf{53} \\
+\end{longtable}
+
+\emph{CO = ControlObjective, Pr = Practice, Me = Mechanism, Ar =
+Artifact. Total: 234 instances.}
+
+Each slice contains exactly 7 control objectives (6 atomic + 1
+composite). This regularity is a \textbf{methodological choice} for
+uniformity in v0, explicitly declared as non-ontological: future
+versions may use different cardinalities if the domain requires it.
+
+\subsubsection{3.4 Entity Types and
+Relations}\label{entity-types-and-relations}
+
+The ontology defines four core entity types and one supporting type
+(EvidencePattern, not core-driving in v0), connected by a stable set of
+relations.
+
+\paragraph{Entity Types}\label{entity-types}
+
+\textbf{ControlObjective.} A reusable domain constraint or assurance
+goal. Required fields: \texttt{objective\_id}, \texttt{name},
+\texttt{objective\_kind} (atomic \textbar{} composite),
+\texttt{objective\_type} (governance \textbar{} preventive \textbar{}
+detective \textbar{} corrective), \texttt{domain\_key},
+\texttt{statement}, \texttt{expected\_outcome},
+\texttt{verification\_posture}. Control objectives are the normative
+anchors of the ontology --- the ``what must be achieved.''
+
+\textbf{Practice.} A reusable human or process discipline that realizes
+objectives, independent of specific tools. Required fields:
+\texttt{practice\_id}, \texttt{name}, \texttt{practice\_family},
+\texttt{local\_practice\_type}. Practice families are cross-slice:
+\texttt{governance\_and\_review},
+\texttt{policy\_and\_gate\_enforcement},
+\texttt{identity\_and\_trust\_control},
+\texttt{validation\_and\_analysis},
+\texttt{integrity\_traceability\_and\_records},
+\texttt{rollout\_recovery\_and\_runtime\_records}.
+
+\textbf{Mechanism.} A concrete technical or enforceable means that
+implements practices or directly realizes objectives. Required fields:
+\texttt{mechanism\_id}, \texttt{name}, \texttt{mechanism\_family},
+\texttt{local\_mechanism\_type}.
+
+\textbf{Artifact.} A control-relevant or evidence-bearing output used
+for review, traceability, and assurance. Required fields:
+\texttt{artifact\_id}, \texttt{name}, \texttt{canonical\_role}.
+Canonical roles are cross-slice: \texttt{configuration},
+\texttt{governance\_record}, \texttt{review\_record},
+\texttt{approval\_record}, \texttt{gate\_record}, \texttt{inventory},
+\texttt{attestation}, \texttt{report}, \texttt{evidence\_package},
+\texttt{operational\_record}, \texttt{build\_definition},
+\texttt{release\_artifact}, \texttt{model}, \texttt{validation\_output},
+\texttt{binding\_record}.
+
+\textbf{EvidencePattern.} An expected evidence shape for deterministic
+review support. Required fields: \texttt{evidence\_pattern\_id},
+\texttt{canonical\_evidence\_kind}, \texttt{expectation},
+\texttt{validation\_method}. EvidencePattern is defined and participates
+in the artifact traceability chain
+(\texttt{artifact\_supports\_evidence\_pattern}) but is not instantiated
+as a first-class retrieval type in AppSec Core v0. It is instantiated in
+the runtime layer described in companion work.
+
+\paragraph{Relations}\label{relations}
+
+\textbf{Table 2.} Relation types in AppSec Core v0, stable across all
+slices and referenced consistently across all three companion papers.
+Prose shorthand (\emph{realizes}, \emph{implements}, \emph{evidences})
+appears in narrative descriptions as aliases for these identifiers; the
+canonical form is the relation name in the table below.
+
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}L{5.0cm}L{3.0cm}L{2.7cm}L{3.9cm}@{}}
+\toprule
+\textbf{Relation} & \textbf{From} & \textbf{To} & \textbf{Meaning} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Relation} & \textbf{From} & \textbf{To} & \textbf{Meaning} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+\codeid{objective_realized_}\newline\codeid{by_practice} & ControlObjective & Practice & The practice operationalizes the objective \\
+\codeid{objective_implemented_}\newline\codeid{by_mechanism} & ControlObjective & Mechanism & The mechanism technically implements the objective \\
+\codeid{objective_expects_}\newline\codeid{artifact} & ControlObjective & Artifact & The artifact evidences achievement of the objective \\
+\codeid{objective_verified_by_}\newline\codeid{evidence_pattern} & ControlObjective & EvidencePattern & The pattern defines how to verify the objective \\
+\codeid{artifact_supports_}\newline\codeid{evidence_pattern} & Artifact & EvidencePattern & The artifact feeds the evidence pattern \\
+\codeid{manual_requirement_}\newline\codeid{maps_to_objective} & ExternalRequirement & ControlObjective & Cross-framework mapping relation \\
+\end{longtable}
+\normalsize
+\setlength{\tabcolsep}{4pt}
+
+\paragraph{Traceability Chain}\label{traceability-chain}
+
+The relations form a traceability chain from normative to evidentiary
+(using active voice; the relation table above uses the equivalent
+passive form). A \texttt{ControlObjective} is realized through
+\texttt{Practice}, implemented through \texttt{Mechanism}, and evidenced
+through \texttt{Artifact}; the associated \texttt{EvidencePattern}
+specifies how that evidence is to be verified.
+
+This chain ensures that each security concern is represented from
+normative objective, through operational realization and technical
+implementation, to evidentiary verification.
+
+\paragraph{Instance Identifiers}\label{instance-identifiers}
+
+Instance IDs follow a consistent prefix convention: \texttt{ACO-}
+(ControlObjective), \texttt{ACP-} (Practice), \texttt{ACM-} (Mechanism),
+\texttt{ACA-} (Artifact), followed by the slice abbreviation and a
+sequence number. For example, \texttt{ACO-IVF-003} is the third control
+objective in the Input Validation slice; \texttt{ACP-IVF-003} is the
+corresponding practice.
+
+\paragraph{Instance Example}\label{instance-example}
+
+The following excerpt from slice ACO-IVF (Input Validation) illustrates
+the four types and their relations:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ControlObjective}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ ACO{-}IVF{-}003}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ Schema Validation Before Deserialization}
+\AttributeTok{  }\FunctionTok{objective\_kind}\KeywordTok{:}\AttributeTok{ atomic}
+\AttributeTok{  }\FunctionTok{objective\_type}\KeywordTok{:}\AttributeTok{ preventive}
+\AttributeTok{  }\FunctionTok{statement}\KeywordTok{:}\AttributeTok{ }\StringTok{"All structured input must be validated against an explicit schema}
+\StringTok{              before deserialization or internal processing"}
+\AttributeTok{  }\FunctionTok{verification\_posture}\KeywordTok{:}\AttributeTok{ }\StringTok{"Verify typed model or JSON Schema at API entry point"}
+
+\FunctionTok{Practice}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ ACP{-}IVF{-}003}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ Typed Model Validation At Entry Point}
+\AttributeTok{  }\FunctionTok{practice\_family}\KeywordTok{:}\AttributeTok{ validation\_and\_analysis}
+\AttributeTok{  }\FunctionTok{supports\_objectives}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{ACO{-}IVF}\DecValTok{{-}003}\KeywordTok{]}
+
+\FunctionTok{Mechanism}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ ACM{-}IVF{-}003}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ Strict Typed Model Enforcement}
+\AttributeTok{  }\FunctionTok{mechanism\_family}\KeywordTok{:}\AttributeTok{ validation\_and\_analysis}
+\AttributeTok{  }\FunctionTok{supports\_practices}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{ACP{-}IVF}\DecValTok{{-}003}\KeywordTok{]}
+\AttributeTok{  }\FunctionTok{note}\KeywordTok{:}\AttributeTok{ }\StringTok{"e.g., pydantic BaseModel with strict=True"}
+
+\FunctionTok{Artifact}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ ACA{-}IVF{-}003}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ Schema Validation Test Suite}
+\AttributeTok{  }\FunctionTok{canonical\_role}\KeywordTok{:}\AttributeTok{ validation\_output}
+\AttributeTok{  }\FunctionTok{supports\_objectives}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{ACO{-}IVF}\DecValTok{{-}003}\KeywordTok{]}
+\AttributeTok{  }\FunctionTok{note}\KeywordTok{:}\AttributeTok{ }\StringTok{"Test suite with malformed payload cases and schema coverage"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{3.5 Slice Contracts}\label{slice-contracts}
+
+Each slice is governed by a formal contract. A contract specifies:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Scope}: what security concerns the slice covers
+\item
+  \textbf{Non-goals}: what is explicitly excluded (e.g., ASC-06 covers
+  secret handling but not full cryptography; ASC-07 covers input
+  handling but not runtime observability)
+\item
+  \textbf{Objective set}: the 7 control objectives with their
+  \texttt{objective\_kind} and composite rules
+\item
+  \textbf{Module position}: which entity types are first-class (CO,
+  Practice, Mechanism, Artifact, EvidencePattern), which are deferred
+  (Threat, Signal)
+\item
+  \textbf{External alignment status}: explicitly deferred in v0
+\end{itemize}
+
+Contracts serve two functions: they \textbf{prevent scope creep} within
+existing slices, and they \textbf{enable principled extension} ---
+adding a new slice requires defining a contract, not modifying existing
+ones.
+
+\subsubsection{3.6 Cross-Slice Vocabulary}\label{cross-slice-vocabulary}
+
+A shared vocabulary applies uniformly across all slices:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{6 practice families} (governance\_and\_review,
+  policy\_and\_gate\_enforcement, identity\_and\_trust\_control,
+  validation\_and\_analysis, integrity\_traceability\_and\_records,
+  rollout\_recovery\_and\_runtime\_records)
+\item
+  \textbf{15 canonical artifact roles} (configuration,
+  governance\_record, review\_record, approval\_record, gate\_record,
+  inventory, attestation, report, evidence\_package,
+  operational\_record, build\_definition, release\_artifact, model,
+  validation\_output, binding\_record)
+\item
+  \textbf{6 stable relations} connecting entity types
+\end{itemize}
+
+This shared vocabulary enables cross-slice queries and uniform analysis.
+A tool that queries practices in one slice uses the same vocabulary and
+structure in all slices.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Normalization Approach}\label{normalization-approach}
+
+\subsubsection{4.1 The Normalization
+Problem}\label{the-normalization-problem}
+
+Given two external requirements \emph{r\_1} ∈ Framework A and
+\emph{r\_2} ∈ Framework B, the normalization question is: \textbf{do
+\emph{r\_1} and \emph{r\_2} address the same security concern?} Without
+a shared semantic model, this question can only be answered by reading
+both requirements and making a human judgment --- a process that does
+not scale.
+
+AppSec Core provides a principled answer: \emph{r\_1} and \emph{r\_2}
+address the same concern if they map to the same AppSec Core control
+objective(s). The ontology is the \textbf{tertium comparationis} --- the
+shared reference point that makes cross-framework comparison possible.
+
+\subsubsection{4.2 Mapping Protocol}\label{mapping-protocol}
+
+For each external framework, the mapping proceeds as:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Slice assignment}: each external requirement is assigned to
+  one or more AppSec Core slices based on semantic scope
+\item
+  \textbf{Objective mapping}: within each slice, the requirement is
+  mapped to specific control objectives with an explicit strength
+  indicator:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{primary}: the objective is the main semantic anchor for this
+    requirement
+  \item
+    \texttt{secondary}: the objective is materially relevant but not the
+    best primary anchor
+  \end{itemize}
+\item
+  \textbf{Rationale recording}: each mapping includes a human-authored
+  rationale explaining the semantic link
+\end{enumerate}
+
+Mappings are \texttt{many-to-one} and \texttt{one-to-many}: a single
+framework requirement may map to multiple objectives, and a single
+objective may be the target of multiple framework requirements. This is
+expected --- normalization is not a bijection.
+
+In this study, mappings were performed by the ontology's authors (a
+limitation we acknowledge in Section 8). The unit of analysis varied by
+framework: SSDF practices (N=20), ASVS thematic clusters (N=36), SLSA
+requirements (N=14), CIS controls (N=8 of 18), CAPEC patterns (N=13 of
+View 683). For CIS and CAPEC, whose scope extends beyond application
+security, we applied an explicit inclusion rule: an item was included if
+it directly affects how software is specified, developed, built, tested,
+deployed, or monitored. Items addressing enterprise IT administration,
+physical security, network infrastructure, or non-software-operational
+concerns were excluded. This rule yielded 8 CIS controls (e.g., CIS-4
+Secure Configuration, CIS-16 Application Software Security) and 13 CAPEC
+patterns (the supply chain attack view). SSDF, ASVS, and SLSA were
+included in full, as their scope is inherently within the AppSec
+boundary.
+
+A requirement was considered to match an objective if it addressed the
+same security concern at a comparable level of abstraction (scope
+overlap) and the mapping was operationally meaningful --- not merely
+topically adjacent.
+
+\subsubsection{4.3 Semantic Convergence}\label{semantic-convergence}
+
+When requirements from different frameworks map to the same objective,
+we observe \textbf{semantic convergence}: distinct vocabularies
+describing the same underlying concern. This convergence is the
+empirical signature of normalization.
+
+\subsubsection{4.4 The Normalization
+Property}\label{the-normalization-property}
+
+We define normalization precisely:
+
+\begin{quote}
+Two external requirements \emph{r₁ ∈ F\_A} and \emph{r₂ ∈ F\_B} are
+\textbf{normalized-equivalent with respect to a concern} if they share
+at least one primary ControlObjective mapping within the same AppSec
+Core slice. They may additionally overlap on secondary objectives; the
+primary mapping anchors the normalized concern.
+\end{quote}
+
+Once mapped, downstream reasoning operates on the \textbf{normalized
+objective layer}, not on framework-specific vocabulary:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{coverage analysis} --- coverage is assessed against the
+  objective set; a requirement is covered when its primary objective(s)
+  are satisfied
+\item
+  \textbf{implementation reasoning} --- the practice and mechanism
+  chains associated with the objective apply regardless of which
+  framework motivated the requirement
+\item
+  \textbf{verification reasoning} --- the evidence patterns and
+  artifacts are determined by the objective, not by the originating
+  framework
+\end{itemize}
+
+The canonical traceability structure is as follows: an
+\texttt{ExternalRequirement} maps to a \texttt{ControlObjective}; that
+objective is operationalized through \texttt{Practice} and
+\texttt{Mechanism}, and it is evidenced through \texttt{Artifact} and
+\texttt{EvidencePattern}.
+
+This is the property that distinguishes normalization from
+classification. A taxonomy assigns items to categories but preserves
+framework-specific identity. Normalization performs \textbf{canonical
+reduction}: requirements addressing the same security concern are
+reduced to a shared operational representation anchored on common
+objectives, and subsequent coverage analysis operates on that
+representation. The framework origin becomes provenance metadata, not an
+input to reasoning.
+
+The reduction is not strict set equality --- different frameworks may
+cover different subsets of a slice's objectives (as shown in Section
+5.1). What is shared is the \textbf{normalized concern}: the primary
+objective(s) and their associated operational chains. This is sufficient
+for unified coverage analysis while honestly reflecting the granularity
+differences between frameworks.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Mapping Examples}\label{mapping-examples}
+
+\subsubsection{5.1 Configuration Security: ASVS, SSDF, and
+CIS}\label{configuration-security-asvs-ssdf-and-cis}
+
+Three frameworks address configuration and secret security:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ASVS v5.0}: cluster \texttt{secure\_configuration\_baseline}
+  --- verification of secure defaults, secret externalization
+\item
+  \textbf{SSDF PW.9}: \emph{``Configure Software to Have Secure Settings
+  by Default''}
+\item
+  \textbf{CIS-4}: \emph{``Secure Configuration of Enterprise Assets and
+  Software''}
+\end{itemize}
+
+All three converge on slice \textbf{ACO-SPC} (Secret Handling, Protected
+Configuration \& Operational Identities):
+
+\begin{longtable}{@{}L{2.25cm}L{7.2cm}C{1cm}C{1cm}C{1cm}@{}}
+\toprule
+\textbf{Objective} & \textbf{Description} & \textbf{ASVS} & \textbf{SSDF} & \textbf{CIS} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Objective} & \textbf{Description} & \textbf{ASVS} & \textbf{SSDF} & \textbf{CIS} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+ACO-SPC-001 & Secret leak prevention (anti-hardcoding, scanning) & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+ACO-SPC-002 & Vault-backed protected storage and controlled retrieval & $\checkmark$ & $\checkmark$ & --- \\
+ACO-SPC-003 & Rotation and renewal discipline & $\checkmark$ & --- & --- \\
+ACO-SPC-004 & Operational identity binding (OIDC, short-lived credentials) & --- & --- & $\checkmark$ \\
+\end{longtable}
+
+The convergence is not uniform: ASVS provides the most granular
+decomposition; SSDF operates at practice level; CIS includes enterprise
+concerns beyond AppSec scope. Yet all three reduce to the same
+normalized concern within ACO-SPC, anchored by overlapping
+ControlObjectives.
+
+The operational representation is shared:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ACP{-}SPC{-}001}\KeywordTok{:}\CommentTok{  \# Practice}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ Secret Leak Prevention In Source And Pipeline}
+\AttributeTok{  }\FunctionTok{supports\_objectives}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{ACO{-}SPC}\DecValTok{{-}001}\KeywordTok{]}
+
+\FunctionTok{ACP{-}SPC{-}002}\KeywordTok{:}\CommentTok{  \# Practice}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ Vault{-}Backed Secret Storage}
+\AttributeTok{  }\FunctionTok{supports\_objectives}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{ACO{-}SPC}\DecValTok{{-}002}\KeywordTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+Requirements from the manual's \texttt{requirements\_catalog} (CFG-003:
+no hardcoded parameters; CFG-004: externalized configuration; ENC-006:
+secret exposure detection; ENC-007: key rotation) also map to these same
+objectives --- demonstrating that practitioner-derived requirements and
+framework requirements converge on the same representation.
+
+This example illustrates the normalization property (Section 4.4): ASVS,
+SSDF, and CIS requirements share primary objectives within ACO-SPC
+(notably ACO-SPC-001), providing a shared operational basis for the
+normalized concern of configuration security. Coverage is assessed once
+at the objective level: an organization that satisfies the mapped
+objectives addresses the underlying concern expressed by all three
+frameworks --- subject to the correctness and granularity of the
+mapping. After the mapping step, downstream coverage analysis operates
+on the normalized objective layer, not on three separate
+framework-specific vocabularies.
+
+\subsubsection{5.2 Input Validation: ASVS, SSDF, and
+CAPEC}\label{input-validation-asvs-ssdf-and-capec}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ASVS v5.0}: clusters \texttt{injection\_and\_sanitization},
+  \texttt{input\_contract\_validation},
+  \texttt{validation\_before\_internal\_use}
+\item
+  \textbf{SSDF PW.5}: \emph{``Create Source Code by Adhering to Secure
+  Coding Practices''}
+\item
+  \textbf{CAPEC-536}: \emph{``Data Injected During Configuration''}
+\end{itemize}
+
+All three converge on slice \textbf{ACO-IVF} (Input Validation, Safe
+Parsing \& Controlled Failure):
+
+\begin{longtable}{@{}L{2.25cm}L{7.2cm}C{1cm}C{1cm}C{1cm}@{}}
+\toprule
+\textbf{Objective} & \textbf{Description} & \textbf{ASVS} & \textbf{SSDF} & \textbf{CAPEC} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Objective} & \textbf{Description} & \textbf{ASVS} & \textbf{SSDF} & \textbf{CAPEC} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+ACO-IVF-001 & Entry-point input contract validation & $\checkmark$ & $\checkmark$ & --- \\
+ACO-IVF-002 & Schema, type, and allowlist discipline & $\checkmark$ & $\checkmark$ & --- \\
+ACO-IVF-003 & Dangerous-pattern exclusion & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+ACO-IVF-004 & Validation before internal use & $\checkmark$ & --- & $\checkmark$ \\
+\end{longtable}
+
+ASVS provides the most granular decomposition. SSDF provides a broader
+practice-level mapping. CAPEC provides an attack-pattern perspective on
+the same concerns. AppSec Core absorbs all three into the same
+normalized concern, represented by overlapping objectives within the
+slice.
+
+\subsubsection{5.3 Supply Chain: SLSA, SSDF, and
+CAPEC}\label{supply-chain-slsa-ssdf-and-capec}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SLSA Build Track}: provenance, build integrity, platform
+  isolation
+\item
+  \textbf{SSDF PW.3 / PS.2}: verify third-party software, verify release
+  integrity
+\item
+  \textbf{CAPEC-185/446/206}: malicious download, malicious component,
+  signing attack
+\end{itemize}
+
+All three converge on slice \textbf{ACO-SCBI} (Supply Chain \& Build
+Integrity):
+
+\begin{longtable}{@{}L{2.5cm}L{6.95cm}C{0.9cm}C{0.9cm}C{1cm}@{}}
+\toprule
+\textbf{Objective} & \textbf{Description} & \textbf{SLSA} & \textbf{SSDF} & \textbf{CAPEC} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Objective} & \textbf{Description} & \textbf{SLSA} & \textbf{SSDF} & \textbf{CAPEC} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+ACO-SCBI-001 & Dependency inventory and SBOM traceability & $\checkmark$ & $\checkmark$ & --- \\
+ACO-SCBI-002 & Dependency risk analysis and policy gating & --- & $\checkmark$ & $\checkmark$ \\
+ACO-SCBI-003 & Approved source and registry governance & $\checkmark$ & --- & $\checkmark$ \\
+ACO-SCBI-004 & Trusted build definition and execution integrity & $\checkmark$ & --- & --- \\
+ACO-SCBI-005 & Promotion gates and approval governance & $\checkmark$ & $\checkmark$ & --- \\
+ACO-SCBI-006 & Artifact provenance and signature integrity & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\end{longtable}
+
+This is the most convergent slice: all three frameworks contribute to 4+
+of 6 atomic objectives, despite originating from different domains
+(build integrity, development practices, attack patterns).
+
+\subsubsection{5.4 Convergence Metrics}\label{convergence-metrics}
+
+Table 3 aggregates the convergence data from the three presented slices.
+
+\textbf{Table 3.} Cross-framework convergence per slice (based on
+presented mapping tables).
+
+\begin{longtable}{@{}L{2.2cm}C{2.3cm}C{2.8cm}C{2.8cm}C{2cm}@{}}
+\toprule
+\textbf{Slice} & \textbf{Objectives shown} & \textbf{$\geq$ 2 frameworks} & \textbf{$\geq$ 3 frameworks} & \textbf{Max overlap} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Slice} & \textbf{Objectives shown} & \textbf{$\geq$ 2 frameworks} & \textbf{$\geq$ 3 frameworks} & \textbf{Max overlap} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+ACO-SPC & 4 & 2 (50\%) & 1 (25\%) & 3 \\
+ACO-IVF & 4 & 4 (100\%) & 1 (25\%) & 3 \\
+ACO-SCBI & 6 & 5 (83\%) & 1 (17\%) & 3 \\
+\textbf{Total} & \textbf{14} & \textbf{11 (79\%)} & \textbf{3 (21\%)} & \textbf{3} \\
+\end{longtable}
+
+Across the 14 objectives analyzed, 79\% are mapped by at least two
+frameworks, and each slice contains at least one objective mapped by all
+three frameworks in its group. The triple-convergence points ---
+ACO-SPC-001 (secret leak prevention), ACO-IVF-003 (dangerous-pattern
+exclusion), ACO-SCBI-006 (artifact provenance) --- represent core
+concerns where framework agreement is strongest and where canonical
+reduction provides the greatest value.
+
+Single-framework objectives (3 of 14, 21\%) occur at specialization
+edges: rotation discipline (ASVS only), operational identity binding
+(CIS only), trusted build definition (SLSA only). The ontology
+accommodates these framework-specific extensions alongside the shared
+core --- it does not force convergence where the domain is genuinely
+specialized.
+
+We note that these three slices were selected for highest
+cross-framework overlap; convergence rates for the remaining seven
+slices may be lower. The metrics above should be read as evidence of
+convergence on core concerns, not as a claim about the full ontology.
+
+\subsubsection{5.5 Coverage Summary}\label{coverage-summary}
+
+We present mapping examples for three slices (ACO-SPC, ACO-IVF,
+ACO-SCBI). The remaining seven slices have been validated through
+internal mapping exercises but are not presented here for space reasons.
+
+Table 4 summarizes framework coverage across the full mapping exercise.
+
+\textbf{Table 4.} Framework coverage summary.
+
+\begin{longtable}{@{}L{3.55cm}L{3.15cm}C{2cm}C{1.8cm}C{2.05cm}@{}}
+\toprule
+\textbf{Framework} & \textbf{Unit of analysis} & \textbf{Items mapped} & \textbf{Slices used} & \textbf{Items outside model} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Framework} & \textbf{Unit of analysis} & \textbf{Items mapped} & \textbf{Slices used} & \textbf{Items outside model} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+SSDF v1.1 & Practices & 20 & 8 & 0 \\
+ASVS v5.0 & Thematic clusters & 36 & 10 & 0 \\
+SLSA v1.0 & Requirements & 14 & 3 & 0 \\
+CIS v8.1 (AppSec scope) & Controls & 8 & 6 & 0 \\
+CAPEC v3.9 (View 683) & Attack patterns & 13 & 4 & 0 \\
+\textbf{Total} &  & \textbf{91} & \textbf{10} & \textbf{0} \\
+\end{longtable}
+
+Every external requirement mapped to at least one AppSec Core slice. No
+requirement fell outside the 10-slice model under the stated inclusion
+rules and mapping protocol (Section 4.2). This provides evidence --- not
+proof --- of \emph{framework coverage}: the model accommodates these
+frameworks' requirements.
+
+We distinguish this from \emph{domain coverage} --- whether AppSec Core
+captures all relevant AppSec concerns. The latter would require
+validation against a broader set of practitioners, organizations, and
+domains (e.g., embedded systems, ML pipeline security), which is future
+work. The evidence here supports framework coverage for the analyzed
+sources; domain coverage remains an open question.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Structural Properties}\label{structural-properties}
+
+\subsubsection{6.1 Structural Invariance}\label{structural-invariance}
+
+Every slice exhibits the same structure: 7 objectives, practices linked
+via \texttt{objective\_realized\_by\_practice}, mechanisms linked via
+\texttt{objective\_implemented\_by\_mechanism}, artifacts linked via
+\texttt{objective\_expects\_artifact}, and a governing contract. This
+invariance has practical consequences:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Tooling reuse}: a tool that analyzes one slice works on all
+  slices unchanged
+\item
+  \textbf{Uniform coverage analysis}: the same algorithm determines
+  coverage for any domain
+\item
+  \textbf{Predictable extension}: new slices follow the same template
+\end{itemize}
+
+\subsubsection{6.2 Framework Independence}\label{framework-independence}
+
+AppSec Core was derived from practitioner semantics. This means:
+
+\begin{itemize}
+\tightlist
+\item
+  Adding a new framework (e.g., ASVS v6.0) requires mapping its
+  requirements to existing objectives, not restructuring slices
+\item
+  The 10-slice model reflects what practitioners do; framework
+  vocabulary is absorbed, not adopted
+\item
+  Security concerns evolve slowly; framework vocabularies evolve
+  rapidly. The ontology models the former.
+\end{itemize}
+
+\subsubsection{6.3 Extensibility}\label{extensibility}
+
+The contract-based model enables principled extension. New slices can be
+defined when the domain requires it --- the current count of 10 is
+methodological, not ontological. Existing contracts prevent scope creep.
+The cross-slice vocabulary ensures new slices integrate cleanly.
+
+\subsubsection{6.4 What AppSec Core is
+Not}\label{what-appsec-core-is-not}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Not a replacement for frameworks}: organizations still use
+  SSDF, ASVS, etc. for their specific purposes. AppSec Core provides the
+  normalization layer for cross-framework analysis.
+\item
+  \textbf{Not a maturity model}: it does not assess how well practices
+  are performed.
+\item
+  \textbf{Not a vulnerability taxonomy}: it models the solution space,
+  not the problem space.
+\item
+  \textbf{Not a formal ontology} in the OWL/description-logic sense
+  {[}16, 17, 19{]}: it is a typed semantic model with explicit
+  relations, optimized for practitioner use and tooling integration. The
+  informal use of \emph{ontology} follows Gruber's sense of ``a
+  specification of a conceptualization'' {[}16{]}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Discussion}\label{discussion}
+
+\subsubsection{7.1 Normalization
+vs.~Classification}\label{normalization-vs.-classification}
+
+The distinction is precise:
+
+\begin{itemize}
+\item
+  \textbf{Classification} assigns requirements to categories. Each
+  requirement retains its framework-specific identity; the categories
+  provide grouping but not reduction. Analysis still requires reading
+  each framework's vocabulary.
+\item
+  \textbf{Normalization} performs \textbf{canonical reduction}:
+  requirements from different frameworks that address the same security
+  concern are reduced to shared ControlObjectives and their associated
+  operational chains --- shared practices, shared mechanisms, shared
+  evidence --- such that they become operationally equivalent for
+  coverage analysis. The framework of origin becomes provenance
+  metadata, not an input to downstream reasoning.
+\end{itemize}
+
+The evidence in Section 5 supports that AppSec Core performs
+normalization, not merely classification. SSDF PW.9, ASVS
+\texttt{secure\_configuration\_baseline}, and CIS-4 are three distinct
+vocabulary entries that, after mapping, resolve to the same normalized
+concern within ACO-SPC, anchored by overlapping ControlObjectives and
+shared operational chains. Downstream coverage analysis operates on the
+canonical chain --- not on three separate framework-specific
+assessments. This is canonical reduction, not grouping.
+
+\subsubsection{7.2 Towards
+Standardization}\label{towards-standardization}
+
+AppSec Core is proposed as a \textbf{candidate} for standardization, not
+as a finished standard. The path would require:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Multi-organization derivation}: the current ontology reflects
+  one team's experience. Cross-organizational validation would test
+  whether the 10-slice model generalizes.
+\item
+  \textbf{Requirement-level alignment}: v0 maps at the practice/cluster
+  level. A standard would require finer-grained alignment.
+\item
+  \textbf{Community governance}: slice contracts are designed to support
+  community-driven extension, but this has not been tested.
+\item
+  \textbf{Formal specification}: the current YAML representation may
+  need formalization (e.g., SHACL {[}18{]}, OWL {[}17{]}) for
+  interoperability, though accessibility must be weighed against
+  formality.
+\end{enumerate}
+
+\subsubsection{7.3 Practical Benefits}\label{practical-benefits}
+
+If AppSec Core or a similar model were adopted:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Unified compliance surface}: one coverage analysis for N
+  frameworks
+\item
+  \textbf{Version resilience}: framework updates require re-mapping, not
+  restructuring
+\item
+  \textbf{Tool interoperability}: security tools could align on shared
+  identifiers
+\item
+  \textbf{Cross-organization comparison}: organizations using the same
+  normalization layer could compare coverage without exposing
+  proprietary documentation
+\end{itemize}
+
+\subsubsection{7.4 The Practitioner-Derived
+Argument}\label{the-practitioner-derived-argument}
+
+A normalization ontology must be independent of the frameworks it
+normalizes; otherwise it is a biased projection. AppSec Core avoids this
+by being derived from what practitioners actually do --- documented
+before many of the frameworks it now normalizes. Secure configuration
+baselines (CFG-001→007) were documented in 2023; ASVS v5.0 formalized
+\texttt{secure\_configuration\_baseline} in 2025. Container admission
+policies were implemented in 2022; SLSA formalized build platform
+isolation in 2023. This temporal precedence supports the independence
+claim.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Limitations}\label{limitations}
+
+\textbf{Single-team derivation.} The ontology reflects one team's 10+
+years of experience. The 10-slice structure may not capture concerns
+unique to domains not encountered by this team (e.g., embedded systems,
+ML pipeline security, mobile-native development). We argue for
+structural transferability --- the typed schema is domain-independent;
+the slices may need adjustment --- but this has not been validated.
+
+\textbf{V0 granularity.} External alignment operates at the
+practice/cluster level, not at individual requirement level. The
+convergence evidence in Section 5 uses this granularity.
+
+\textbf{No formal specification.} The ontology is represented in YAML
+with explicit types and relations. This is a deliberate trade-off
+between practitioner accessibility and formal interoperability. A formal
+OWL or SHACL representation is future work.
+
+\textbf{Evaluator subjectivity.} The mapping exercise was performed by
+the ontology's authors. Inter-rater reliability with independent
+evaluators was not measured.
+
+\textbf{Temporal specificity.} The framework landscape is captured as of
+early 2026.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Conclusion}\label{conclusion}
+
+We have presented AppSec Core, a normalized ontology for application
+security with 10 domain slices and 234 typed instances. The ontology
+provides:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Measured cross-framework convergence}: in the presented
+  slices, 79\% of analyzed ControlObjectives are mapped by at least two
+  frameworks, supporting the claim that core AppSec concerns can be
+  reduced into shared objectives despite vocabulary differences
+\item
+  \textbf{Structural invariance}: every slice uses the same four-type
+  schema and relation model
+\item
+  \textbf{Framework independence}: derived from practitioner semantics,
+  stable as frameworks evolve
+\item
+  \textbf{Contract-based governance}: each slice governed by a formal
+  contract supporting extension
+\end{itemize}
+
+The evidence supports that AppSec Core functions as a normalization
+layer, not merely a taxonomy. It provides a \textbf{canonical reduction
+layer}: heterogeneous framework requirements addressing the same
+security concerns are reduced to shared ControlObjectives and their
+associated operational chains. Downstream coverage analysis operates on
+this normalized objective layer independently of framework vocabulary.
+This is canonical reduction --- the defining property of normalization
+--- not grouping or alignment. The reduction does not claim full
+normative equivalence between frameworks; it claims a shared operational
+basis sufficient for unified coverage analysis.
+
+To our knowledge, the application security domain lacks a shared
+semantic model for cross-framework normalization. AppSec Core is our
+proposal for this model. It is not a replacement for existing frameworks
+--- it is a candidate for the canonical layer between them.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{10. Artifact Availability}\label{artifact-availability}
+
+Curated supporting artifacts for this paper are available in the
+companion public repository at
+\url{https://github.com/sbd-ai-runtime/appsec-core-ontology-research}.
+For this paper, the relevant materials are organized under
+\texttt{papers/01-appsec-core-normalized-ontology/artifacts/}, notably
+\texttt{papers/01-appsec-core-normalized-ontology/artifacts/ontology/},
+\texttt{papers/01-appsec-core-normalized-ontology/artifacts/schema/},
+and
+\texttt{papers/01-appsec-core-normalized-ontology/artifacts/slice\_contracts/}.
+The same repository also contains this paper's curated source under
+\texttt{papers/01-appsec-core-normalized-ontology/source/} and its
+public PDF under
+\texttt{papers/01-appsec-core-normalized-ontology/pdf/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{References}\label{references}
+
+{[}1{]} NIST. Secure Software Development Framework (SSDF) Version 1.1.
+SP 800-218. 2022.
+
+{[}2{]} OWASP. Application Security Verification Standard (ASVS) v5.0.0.
+2025.
+
+{[}3{]} SLSA. Supply-chain Levels for Software Artifacts. Build Track
+v1.0. 2023.
+
+{[}4{]} CIS. Center for Internet Security Controls v8.1. 2024.
+
+{[}5{]} European Union. Digital Operational Resilience Act (DORA).
+Regulation (EU) 2022/2554. 2022.
+
+{[}6{]} European Union. Network and Information Security Directive
+(NIS2). Directive (EU) 2022/2555. 2022.
+
+{[}7{]} A. Herzog, N. Shahmehri, and C. Duma, ``An ontology of
+information security,'' \emph{Int. J. Inf. Security and Privacy},
+vol.~1, no. 4, pp.~1--23, 2007.
+
+{[}8{]} C. Blanco, J. Lasheras, R. Valencia-García, E. Fernández-Medina,
+A. Toval, and M. Piattini, ``A systematic review and comparison of
+security ontologies,'' in \emph{Proc. 3rd Int. Conf. Availability,
+Reliability and Security (ARES)}, 2008, pp.~813--820, doi:
+10.1109/ARES.2008.33.
+
+{[}9{]} MITRE. Common Weakness Enumeration (CWE). Available:
+https://cwe.mitre.org (accessed: 2026-04-06).
+
+{[}10{]} MITRE. Common Attack Pattern Enumeration and Classification
+(CAPEC). Available: https://capec.mitre.org (accessed: 2026-04-06).
+
+{[}11{]} OWASP. Software Assurance Maturity Model (SAMM) v2.1. 2024.
+
+{[}12{]} Synopsys. Building Security In Maturity Model (BSIMM) 13. 2023.
+
+{[}13{]} NIST. Security and Privacy Controls for Information Systems and
+Organizations. SP 800-53 Rev.~5. 2020.
+
+{[}14{]} B. Fabian, S. Gürses, M. Heisel, T. Santen, and H. Schmidt, ``A
+comparison of security requirements engineering methods,''
+\emph{Requirements Engineering}, vol.~15, no. 1, pp.~7--40, 2010, doi:
+10.1007/s00766-009-0092-x.
+
+{[}15{]} A. Goknil, I. Kurtev, K. van den Berg, and J.-W. Veldhuis,
+``Semantics of trace relations in requirements models for consistency
+checking and inferencing,'' \emph{Software \& Systems Modeling},
+vol.~10, no. 1, pp.~31--54, 2011, doi: 10.1007/s10270-009-0142-3.
+
+{[}16{]} T. R. Gruber, ``A translation approach to portable ontology
+specifications,'' \emph{Knowledge Acquisition}, vol.~5, no. 2,
+pp.~199--220, 1993, doi: 10.1006/knac.1993.1008.
+
+{[}17{]} W3C. OWL 2 Web Ontology Language: Document Overview (Second
+Edition). W3C Recommendation, 2012. Available:
+https://www.w3.org/TR/owl2-overview/ (accessed: 2026-04-06).
+
+{[}18{]} W3C. Shapes Constraint Language (SHACL). W3C Recommendation,
+2017. Available: https://www.w3.org/TR/shacl/ (accessed: 2026-04-06).
+
+{[}19{]} F. Baader, I. Horrocks, and U. Sattler, ``An introduction to
+description logics,'' in \emph{The Description Logic Handbook: Theory,
+Implementation and Applications}, F. Baader, D. Calvanese, D.
+McGuinness, D. Nardi, and P. F. Patel-Schneider, Eds. Cambridge
+University Press, 2003, ch.~1, pp.~1--44.
+
+\end{document}
