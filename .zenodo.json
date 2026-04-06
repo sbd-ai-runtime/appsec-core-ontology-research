@@ -1,0 +1,40 @@
+{
+  "title": "Security by Design: Ontology-Grounded AI Runtime Research Release v1.0.0",
+  "version": "v1.0.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "description": "<p>Research program release v1.0.0 for the SbD-AI Runtime / AppSec Core line. This curated release includes code, dataset-grade research artifacts, and three related papers covering ontology design, coverage-preserving normalization of public sources, and ontology-grounded retrieval.</p><p>Homepage: <a href=\"https://www.securitybydesign.dev\">https://www.securitybydesign.dev</a><br>Published manual: <a href=\"https://www.securitybydesign.dev/sbd-toe/sbd-manual/\">https://www.securitybydesign.dev/sbd-toe/sbd-manual/</a></p>",
+  "creators": [
+    {
+      "name": "Farinha, Pedro",
+      "affiliation": "Independent Researcher",
+      "type": "ProjectMember"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Shiftleft - Secure Software Engineering, lda.",
+      "type": "Sponsor"
+    }
+  ],
+  "keywords": [
+    "application security",
+    "ontology",
+    "knowledge compilation",
+    "grounded retrieval",
+    "research program",
+    "SbD-AI Runtime",
+    "AppSec Core"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.securitybydesign.dev",
+      "relation": "isDocumentedBy"
+    },
+    {
+      "identifier": "https://www.securitybydesign.dev/sbd-toe/sbd-manual/",
+      "relation": "isDocumentedBy"
+    }
+  ]
+}

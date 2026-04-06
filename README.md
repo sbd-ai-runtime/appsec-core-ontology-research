@@ -10,6 +10,8 @@ This repository is intentionally **not** the internal development repository. It
 - GitHub release management
 - Zenodo archival and DOI minting
 
+This repository should be read as a **research program release (`v1.0.0`)**: one curated versioned object containing three tightly related papers plus the minimum artifact surface needed to support them.
+
 ## What This Repository Is
 
 This repository is the **public, curated publication surface** for a small set of research outputs in:
@@ -53,6 +55,15 @@ In short:
 - private repos = laboratory
 - public GitHub repo = curated research surface
 - Zenodo = canonical archival snapshot
+
+## DOI Model
+
+For `v1.0.0`, the publication model is:
+
+- **one Zenodo DOI for the repository release**
+- **three papers inside that release**
+
+The DOI resolves to the curated repository snapshot as a whole, not to three separate Zenodo records. Each paper is part of the same research-program release and should cite the shared repository release alongside any paper-specific bibliographic reference.
 
 ## Current Repository Topology Decision
 
@@ -115,9 +126,9 @@ appsec-core-research/
     paper2_compilation.md
     paper3_ontology_grounded_retrieval.md
   papers/
-    paper1_appsec_core.pdf
-    paper2_compilation.pdf
-    paper3_ontology_grounded_retrieval.pdf
+    appsec_core_normalized_ontology.pdf
+    coverage_preserving_knowledge_compilation.pdf
+    ontology_grounded_retrieval.pdf
   paper1_artifacts/
     ontology/
     schema/
@@ -175,7 +186,7 @@ The detailed selection is defined in [MANIFEST-v1.0.md](./MANIFEST-v1.0.md).
 
 ## Relationship to the Papers
 
-### Paper 1
+### Paper 1 → Ontology
 
 The ontology paper should be supported by:
 
@@ -184,7 +195,7 @@ The ontology paper should be supported by:
 - `paper1_artifacts/slice_contracts/`
 - selected normalized examples only if curated as reviewer-friendly supplements
 
-### Paper 2
+### Paper 2 → Normalization
 
 The knowledge-compilation paper should be supported by:
 
@@ -193,7 +204,7 @@ The knowledge-compilation paper should be supported by:
 - selected gap and comparison outputs
 - method notes only where directly supportive of the released `V1` paper text
 
-### Paper 3
+### Paper 3 → Grounded Retrieval
 
 The retrieval paper should be supported by:
 
@@ -217,6 +228,20 @@ If the richer Paper 3 artifacts are not ready, the safest option is:
 - include the retrieval contract
 - include the minimal runtime snapshot
 - defer richer examples to a later full release
+
+## Citation Guidance
+
+For `v1.0.0`, cite:
+
+1. the relevant paper, when referring to a specific argument or method
+2. the shared Zenodo-backed repository release, when referring to the released artifact package
+
+This keeps the citation model aligned with the actual publication structure:
+
+- one release
+- one DOI
+- three related papers
+- one coherent artifact surface
 
 ## Citation
 

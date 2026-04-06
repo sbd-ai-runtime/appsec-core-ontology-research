@@ -30,7 +30,7 @@
       "sources": [
         "paper_sources/paper1_appsec_core.md"
       ],
-      "output": "papers/paper1_appsec_core.pdf",
+      "output": "papers/appsec_core_normalized_ontology.pdf",
       "metadata": {}
     },
     {
@@ -39,7 +39,7 @@
       "sources": [
         "paper_sources/paper2_compilation.md"
       ],
-      "output": "papers/paper2_compilation.pdf",
+      "output": "papers/coverage_preserving_knowledge_compilation.pdf",
       "metadata": {}
     },
     {
@@ -48,7 +48,7 @@
       "sources": [
         "paper_sources/paper3_ontology_grounded_retrieval.md"
       ],
-      "output": "papers/paper3_ontology_grounded_retrieval.pdf",
+      "output": "papers/ontology_grounded_retrieval.pdf",
       "metadata": {}
     }
   ]

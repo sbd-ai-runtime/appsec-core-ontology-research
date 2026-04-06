@@ -39,9 +39,9 @@ appsec-core-research/
     paper2_compilation.md
     paper3_ontology_grounded_retrieval.md
   papers/
-    paper1_appsec_core.pdf
-    paper2_compilation.pdf
-    paper3_ontology_grounded_retrieval.pdf
+    appsec_core_normalized_ontology.pdf
+    coverage_preserving_knowledge_compilation.pdf
+    ontology_grounded_retrieval.pdf
   paper1_artifacts/
     ontology/
     schema/

@@ -13,13 +13,19 @@ This release is designed for:
 
 This release is intentionally limited to the artifact surface that supports the current `V1` paper set. It is **not** a bundle of later `V2` work, later pilot waves, or broader internal program outputs.
 
+This release is a **research program release**:
+
+- one curated repository snapshot
+- one Zenodo-backed release DOI
+- three related papers within the same release surface
+
 ## Included Scope
 
 ### Papers
 
-- `paper1_appsec_core.pdf`
-- `paper2_compilation.pdf`
-- `paper3_ontology_grounded_retrieval.pdf`
+- `appsec_core_normalized_ontology.pdf`
+- `coverage_preserving_knowledge_compilation.pdf`
+- `ontology_grounded_retrieval.pdf`
 
 ### Paper 1 artifacts
 
