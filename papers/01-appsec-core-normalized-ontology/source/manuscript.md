@@ -100,13 +100,17 @@ AppSec Core was designed to satisfy four principles:
 
 ### 3.2 Derivation Process
 
-The ontology was derived empirically from a practitioner-authored security manual (SbD-ToE) covering 15 chapters of the secure development lifecycle. The derivation was not a top-down design exercise; it proceeded as follows:
+The ontology was derived through an iterative, manual-first, qualitative normalization process over the SbD-ToE manual corpus. The derivation was not a top-down design exercise, nor was it driven by unsupervised clustering or topic modelling. No statistical clustering algorithm was used to define ontology boundaries or slice membership. Ontology boundaries, slice contracts, and objective atomicity were established by expert qualitative analysis of requirements and broad control surfaces across chapters.
 
-1. **Corpus analysis**: 4,139 structural units from the manual were indexed with document role and normative weight annotations
-2. **Concern clustering**: recurring security concerns were identified across chapters and grouped into coherent subdomains
-3. **Objective extraction**: for each subdomain, control objectives were formulated as atomic normative statements
-4. **Practice/mechanism/artifact identification**: operational, technical, and evidentiary instances were extracted from the corpus and linked to objectives
-5. **Contract formalization**: each subdomain was stabilized as a slice with an explicit contract
+The derivation proceeded as follows:
+
+1. **Corpus analysis**: 4,139 structural units from the manual were indexed with document role and normative weight annotations, providing a structured surface for qualitative reading
+2. **Concern clustering**: recurring security concerns were identified by expert reading of requirements and broad control surfaces across chapters, then grouped into candidate subdomains by semantic judgment — not by co-occurrence analysis or embedding-based clustering
+3. **Objective extraction**: each candidate subdomain was opened serially as a slice; within each slice, ControlObjectives were formulated atomic-first — each objective as a single, normatively coherent statement before practices or mechanisms were added
+4. **Practice/mechanism/artifact identification**: operational, technical, and evidentiary instances were extracted from the corpus and linked to objectives only after the objective layer was coherent
+5. **Contract formalization**: each slice advanced only when it reached an explicit contract state specifying scope, non-goals, and boundary conditions
+
+This method was chosen because the derivation goal was normative, not descriptive: AppSec Core is not a statistical reflection of the corpus but a normalization layer with principled boundaries, atomic objectives, and explicit contracts. Unsupervised methods capture lexical proximity and semantic similarity, but do not determine what constitutes an atomic objective, where a legitimate slice boundary lies, or what should remain outside the core. These are judgment-dependent decisions that require interpretive expertise, not statistical inference. Future work may use embedding-based clustering or topic modelling as a post-hoc triangulation layer for coherence and coverage verification — but not as the primary derivation mechanism.
 
 The manual served as the empirical corpus; the ontology is the abstraction. The ontology is **not** a description of the manual — it is a domain model that the manual's content instantiates. Evidence for this independence is provided in Section 7.4, where we show that several ontology concepts were documented by practitioners before the corresponding framework requirements were published.
 
