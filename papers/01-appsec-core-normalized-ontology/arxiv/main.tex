@@ -396,31 +396,56 @@ enabling principled extension without scope creep.
 
 \subsubsection{3.2 Derivation Process}\label{derivation-process}
 
-The ontology was derived empirically from a practitioner-authored
-security manual (SbD-ToE) covering 15 chapters of the secure development
-lifecycle. The derivation was not a top-down design exercise; it
-proceeded as follows:
+The ontology was derived through an iterative, manual-first, qualitative
+normalization process over the SbD-ToE manual corpus. The derivation was
+not a top-down design exercise, nor was it driven by unsupervised
+clustering or topic modelling. No statistical clustering algorithm was
+used to define ontology boundaries or slice membership. Ontology
+boundaries, slice contracts, and objective atomicity were established by
+expert qualitative analysis of requirements and broad control surfaces
+across chapters.
+
+The derivation proceeded as follows:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
   \textbf{Corpus analysis}: 4,139 structural units from the manual were
-  indexed with document role and normative weight annotations
+  indexed with document role and normative weight annotations, providing
+  a structured surface for qualitative reading
 \item
   \textbf{Concern clustering}: recurring security concerns were
-  identified across chapters and grouped into coherent subdomains
+  identified by expert reading of requirements and broad control
+  surfaces across chapters, then grouped into candidate subdomains by
+  semantic judgment --- not by co-occurrence analysis or embedding-based
+  clustering
 \item
-  \textbf{Objective extraction}: for each subdomain, control objectives
-  were formulated as atomic normative statements
+  \textbf{Objective extraction}: each candidate subdomain was opened
+  serially as a slice; within each slice, ControlObjectives were
+  formulated atomic-first --- each objective as a single, normatively
+  coherent statement before practices or mechanisms were added
 \item
   \textbf{Practice/mechanism/artifact identification}: operational,
   technical, and evidentiary instances were extracted from the corpus
-  and linked to objectives
+  and linked to objectives only after the objective layer was coherent
 \item
-  \textbf{Contract formalization}: each subdomain was stabilized as a
-  slice with an explicit contract
+  \textbf{Contract formalization}: each slice advanced only when it
+  reached an explicit contract state specifying scope, non-goals, and
+  boundary conditions
 \end{enumerate}
+
+This method was chosen because the derivation goal was normative, not
+descriptive: AppSec Core is not a statistical reflection of the corpus
+but a normalization layer with principled boundaries, atomic objectives,
+and explicit contracts. Unsupervised methods capture lexical proximity
+and semantic similarity, but do not determine what constitutes an atomic
+objective, where a legitimate slice boundary lies, or what should remain
+outside the core. These are judgment-dependent decisions that require
+interpretive expertise, not statistical inference. Future work may use
+embedding-based clustering or topic modelling as a post-hoc
+triangulation layer for coherence and coverage verification --- but not
+as the primary derivation mechanism.
 
 The manual served as the empirical corpus; the ontology is the
 abstraction. The ontology is \textbf{not} a description of the manual
@@ -1221,12 +1246,31 @@ Argument}\label{the-practitioner-derived-argument}
 A normalization ontology must be independent of the frameworks it
 normalizes; otherwise it is a biased projection. AppSec Core avoids this
 by being derived from what practitioners actually do --- documented
-before many of the frameworks it now normalizes. Secure configuration
-baselines (CFG-001→007) were documented in 2023; ASVS v5.0 formalized
+before many of the frameworks it now normalizes.
+
+The SbD-ToE corpus draws on a prescriptive Security by Design framework
+first documented in practitioner deployment in 2018 {[}19{]}, predating
+the publication of SSDF v1.0 (2021), SLSA v1.0 (2021), and CIS Controls
+v8 (2021). Several concerns now formalised in those frameworks ---
+including risk-proportional requirement selection and multi-framework
+normalisation into a unified prescriptive activity model --- were
+already operationalised and documented in client-facing practice from
+that period. This does not predate the underlying security domain
+knowledge; it predates the formal framework publications. The frameworks
+codified concerns that practitioners had already identified and
+implemented.
+
+More recent examples corroborate the same pattern at the
+individual-concept level: secure configuration baselines (CFG-001→007)
+were documented in the corpus in 2023; ASVS v5.0 formalised
 \texttt{secure\_configuration\_baseline} in 2025. Container admission
-policies were implemented in 2022; SLSA formalized build platform
-isolation in 2023. This temporal precedence supports the independence
-claim.
+policies were implemented in practice in 2022; SLSA formalised build
+platform isolation in 2023.
+
+This temporal precedence supports the independence claim: AppSec Core
+was not reverse-engineered from frameworks to fit their structure. It
+was abstracted from operational practice, and the frameworks
+independently converged on the same domain concerns.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1380,7 +1424,11 @@ https://www.w3.org/TR/owl2-overview/ (accessed: 2026-04-06).
 {[}18{]} W3C. Shapes Constraint Language (SHACL). W3C Recommendation,
 2017. Available: https://www.w3.org/TR/shacl/ (accessed: 2026-04-06).
 
-{[}19{]} F. Baader, I. Horrocks, and U. Sattler, ``An introduction to
+{[}19{]} P. Farinha, ``Framework Shiftleft --- Security by Design,''
+Shiftleft internal technical documentation, 2018. Multiple client
+deployment instances. Available from the authors upon request.
+
+{[}20{]} F. Baader, I. Horrocks, and U. Sattler, ``An introduction to
 description logics,'' in \emph{The Description Logic Handbook: Theory,
 Implementation and Applications}, F. Baader, D. Calvanese, D.
 McGuinness, D. Nardi, and P. F. Patel-Schneider, Eds. Cambridge
