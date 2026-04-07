@@ -564,7 +564,13 @@ If AppSec Core or a similar model were adopted:
 
 ### 7.4 The Practitioner-Derived Argument
 
-A normalization ontology must be independent of the frameworks it normalizes; otherwise it is a biased projection. AppSec Core avoids this by being derived from what practitioners actually do — documented before many of the frameworks it now normalizes. Secure configuration baselines (CFG-001→007) were documented in 2023; ASVS v5.0 formalized `secure_configuration_baseline` in 2025. Container admission policies were implemented in 2022; SLSA formalized build platform isolation in 2023. This temporal precedence supports the independence claim.
+A normalization ontology must be independent of the frameworks it normalizes; otherwise it is a biased projection. AppSec Core avoids this by being derived from what practitioners actually do — documented before many of the frameworks it now normalizes.
+
+The SbD-ToE corpus draws on a practitioner framework for Security by Design first operationalised by Shiftleft in 2018 [19], predating the publication of SSDF v1.0 (2021), SLSA v1.0 (2021), and CIS Controls v8 (2021). Several concepts now formalised in those frameworks — including risk-proportional requirement selection and multi-framework normalisation into a unified prescriptive activity model — appear in Shiftleft internal documentation from that period. This does not predate the underlying security domain knowledge; it predates the formal framework publications. The frameworks formalised concerns that practitioners had already operationalised.
+
+More recent examples corroborate the same pattern at the individual-concept level: secure configuration baselines (CFG-001→007) were documented in the corpus in 2023; ASVS v5.0 formalised `secure_configuration_baseline` in 2025. Container admission policies were implemented in practice in 2022; SLSA formalised build platform isolation in 2023.
+
+This temporal precedence supports the independence claim: AppSec Core was not reverse-engineered from frameworks to fit their structure. It was abstracted from operational practice, and the frameworks independently converged on the same domain concerns.
 
 ---
 
@@ -641,4 +647,6 @@ Curated supporting artifacts for this paper are available in the companion publi
 
 [18] W3C. Shapes Constraint Language (SHACL). W3C Recommendation, 2017. Available: https://www.w3.org/TR/shacl/ (accessed: 2026-04-06).
 
-[19] F. Baader, I. Horrocks, and U. Sattler, "An introduction to description logics," in *The Description Logic Handbook: Theory, Implementation and Applications*, F. Baader, D. Calvanese, D. McGuinness, D. Nardi, and P. F. Patel-Schneider, Eds. Cambridge University Press, 2003, ch. 1, pp. 1–44.
+[19] P. Farinha, "Framework Shiftleft — Security by Design," Shiftleft internal technical documentation, 2018. Multiple client deployment instances. Available from the authors upon request.
+
+[20] F. Baader, I. Horrocks, and U. Sattler, "An introduction to description logics," in *The Description Logic Handbook: Theory, Implementation and Applications*, F. Baader, D. Calvanese, D. McGuinness, D. Nardi, and P. F. Patel-Schneider, Eds. Cambridge University Press, 2003, ch. 1, pp. 1–44.
