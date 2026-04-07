@@ -217,6 +217,16 @@ def write_archive(bundle_dir: Path, archive_path: Path) -> None:
             archive.add(path, arcname=path.name)
 
 
+def write_preview(bundle_dir: Path, preview_path: Path) -> None:
+    compiled_pdf = bundle_dir / "main.pdf"
+    if not compiled_pdf.exists():
+        raise FileNotFoundError(
+            f"Compiled PDF not found at {compiled_pdf}. Run without --skip-verify to produce it."
+        )
+    preview_path.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(compiled_pdf, preview_path)
+
+
 def cleanup_bundle(bundle_dir: Path) -> None:
     for path in bundle_dir.iterdir():
         if path.suffix in {".aux", ".log", ".out", ".pdf", ".toc", ".xdv"}:
@@ -246,6 +256,11 @@ def main() -> int:
         "--write-archive",
         action="store_true",
         help="Also write a .tar.gz upload bundle inside each paper folder.",
+    )
+    parser.add_argument(
+        "--write-preview",
+        action="store_true",
+        help="Copy the compiled PDF to arxiv_preview/ alongside the arxiv/ folder.",
     )
     parser.add_argument("--list", action="store_true", help="List the configured document ids and exit.")
     parser.add_argument("--skip-verify", action="store_true", help="Generate bundles without TeX compilation checks.")
@@ -278,6 +293,10 @@ def main() -> int:
             )
             if not args.skip_verify:
                 verify_tex(main_tex.parent, defaults)
+            if args.write_preview:
+                preview_name = entry.archive_name.replace("-arxiv.tar.gz", "-arxiv-preview.pdf")
+                preview_path = main_tex.parent.parent / "arxiv_preview" / preview_name
+                write_preview(main_tex.parent, preview_path)
             if args.write_archive:
                 archive_path = main_tex.parent / entry.archive_name
                 write_archive(main_tex.parent, archive_path)
