@@ -15,7 +15,7 @@ Large language models (LLMs) generate code with security vulnerabilities at sign
 
 We propose **ontology-grounded retrieval**, a method for providing LLMs with typed, weighted, and provenanced security knowledge drawn from a normalized domain ontology. Unlike plain vector-similarity RAG — which retrieves relevant text without provenance, epistemic weight, or completeness guarantees — ontology-grounded retrieval operates through structured queries against a typed knowledge graph, producing a retrieval result with six formally distinguishable properties: first-class provenance, explicit typing, epistemic weighting, reproducible grounding, assessable completeness, and verifiability against the same index.
 
-We define a **retrieval contract** with completeness and provenance invariants, present a **verification taxonomy** (syntactic, semantic, human) that makes automation boundaries explicit, and illustrate the method through three compact scenarios. The validation is methodological, not experimental; a controlled evaluation is identified as future work.
+We define a **retrieval contract** with completeness and provenance invariants, present a **verification taxonomy** (syntactic, semantic, human) that makes automation boundaries explicit, and illustrate the method through three compact scenarios. The validation is methodological, not experimental; a controlled evaluation is reported in the companion empirical study (Paper 4, pre-registered: https://doi.org/10.17605/OSF.IO/H5AJE).
 
 The method does not make LLM output secure. It makes the grounding **auditable**: for any generated code, one can determine which security requirements informed it, at what authority level, and whether all applicable requirements were addressed.
 
@@ -408,7 +408,7 @@ Nor does it guarantee secure code. The claim is narrower: ontology-grounded retr
 
 ## 8. Limitations
 
-**No controlled experiment.** The validation is methodological (compact illustrative scenarios making the contract properties concrete), not experimental. A comparative study measuring vulnerability rates and requirement coverage across grounding modes is future work.
+**No controlled experiment.** The validation is methodological (compact illustrative scenarios making the contract properties concrete), not experimental. A comparative study measuring vulnerability rates and requirement coverage across grounding modes is reported in the companion empirical study (Paper 4, pre-registered: https://doi.org/10.17605/OSF.IO/H5AJE).
 
 **Intent parser uncharacterized.** The primary source of uncertainty has no accuracy data. Future work should measure classification precision and recall per slice across prompt types.
 

@@ -305,7 +305,7 @@ The compilation was conducted in three passes of increasing rigor:
 
 **Pass 3 — Systematic index verification.** For each remaining gap, the structural unit index was queried programmatically: filter by chapter, document role, and content; record the matching source as a `(document_role, normative_weight, heading_path)` triple.
 
-An LLM (Claude Sonnet, Anthropic, 2025) was used as an **assisted query interface** — formulating filter queries and surfacing candidate units from 4,139 entries. All coverage decisions were made by human inspection against Definition 1. The structural unit index was the source of truth. The LLM was not used for any text generation in this paper.
+An LLM (Claude Sonnet, Anthropic, 2025) was used as an **assisted query interface** — formulating filter queries and surfacing candidate units from 4,139 entries. All coverage decisions were made by human inspection against Definition 1. The structural unit index was the source of truth.
 
 ---
 
