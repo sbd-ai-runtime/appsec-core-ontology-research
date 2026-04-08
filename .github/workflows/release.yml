@@ -1,0 +1,65 @@
+name: Release and Publish to Zenodo
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set version
+        id: version
+        run: echo "version=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Find release notes
+        id: notes
+        run: |
+          MINOR="${GITHUB_REF_NAME%.*}"
+          FILE="RELEASE-NOTES-${MINOR}.md"
+          if [ -f "$FILE" ]; then
+            echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          else
+            echo "file=CHANGELOG.md" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Package repository
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          zip -r "appsec-core-ontology-research-${VERSION}.zip" . \
+            -x ".git/*" -x ".github/*" -x "*.pyc" -x "__pycache__/*"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          gh release create "$VERSION" \
+            --title "AppSec Core Ontology Research ${VERSION}" \
+            --notes-file "${{ steps.notes.outputs.file }}" \
+            "appsec-core-ontology-research-${VERSION}.zip"
+
+      - name: Install Python deps
+        run: pip install requests
+
+      - name: Publish to Zenodo
+        id: zenodo
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_CONCEPT_RECORD_ID: ${{ secrets.ZENODO_CONCEPT_RECORD_ID }}
+          VERSION: ${{ steps.version.outputs.version }}
+          ARCHIVE: appsec-core-ontology-research-${{ steps.version.outputs.version }}.zip
+        run: python3 scripts/zenodo_publish.py
+
+      - name: Summary
+        run: |
+          echo "### Published to Zenodo" >> "$GITHUB_STEP_SUMMARY"
+          echo "- DOI: ${{ steps.zenodo.outputs.doi }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- URL: ${{ steps.zenodo.outputs.doi_url }}" >> "$GITHUB_STEP_SUMMARY"
