@@ -18,7 +18,8 @@ import re
 import sys
 import requests
 
-ZENODO_API = "https://zenodo.org/api"
+ZENODO_SANDBOX = os.environ.get("ZENODO_SANDBOX", "").strip().lower() in ("1", "true", "yes")
+ZENODO_API = "https://sandbox.zenodo.org/api" if ZENODO_SANDBOX else "https://zenodo.org/api"
 
 TOKEN = os.environ["ZENODO_TOKEN"]
 VERSION = os.environ["VERSION"]
@@ -29,11 +30,19 @@ params = {"access_token": TOKEN}
 json_headers = {"Content-Type": "application/json"}
 
 
+CREATOR_ALLOWED = {"name", "affiliation", "orcid", "gnd"}
+
+
 def load_metadata():
     with open(".zenodo.json") as f:
         meta = json.load(f)
     meta["version"] = VERSION
     meta["title"] = re.sub(r"v\d+\.\d+\.\d+", VERSION, meta["title"])
+    # Strip fields not accepted by the deposit API in creators
+    meta["creators"] = [
+        {k: v for k, v in c.items() if k in CREATOR_ALLOWED}
+        for c in meta.get("creators", [])
+    ]
     return meta
 
 
@@ -109,6 +118,8 @@ def publish(dep_id):
         f"{ZENODO_API}/deposit/depositions/{dep_id}/actions/publish",
         params=params,
     )
+    if not r.ok:
+        print(f"Zenodo error {r.status_code}: {r.text}")
     r.raise_for_status()
     return r.json()
 
