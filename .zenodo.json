@@ -1,6 +1,6 @@
 {
-  "title": "AppSec Core Ontology Research: Curated Research Program Release v1.0.3",
-  "version": "v1.0.3",
+  "title": "AppSec Core Ontology Research: Curated Research Program Release v1.0.0",
+  "version": "v1.0.0",
   "upload_type": "software",
   "access_right": "open",
   "license": "cc-by-4.0",
@@ -44,6 +44,11 @@
       "identifier": "https://www.securitybydesign.dev/sbd-toe/sbd-manual/",
       "relation": "isDocumentedBy",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/H5AJE",
+      "relation": "references",
+      "scheme": "doi"
     }
   ]
 }

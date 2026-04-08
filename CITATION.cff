@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "AppSec Core Ontology Research v1.0.3: Curated Research Program Release"
+title: "AppSec Core Ontology Research v1.0.0: Curated Research Program Release"
 message: "If you use this repository, please cite the repository release DOI and the relevant paper."
 type: software
 authors:
@@ -11,7 +11,7 @@ authors:
 repository-code: "https://github.com/sbd-ai-runtime/appsec-core-ontology-research"
 url: "https://github.com/sbd-ai-runtime/appsec-core-ontology-research"
 license: "CC-BY-4.0"
-version: "v1.0.3"
+version: "v1.0.0"
 date-released: 2026-04-06
 abstract: >
   Curated public repository for the AppSec Core v1.0.0 research-program
@@ -28,11 +28,11 @@ keywords:
   - research program
 preferred-citation:
   type: generic
-  title: "AppSec Core Ontology Research v1.0.3: Curated Research Program Release"
+  title: "AppSec Core Ontology Research v1.0.0: Curated Research Program Release"
   authors:
     - family-names: "Farinha"
       given-names: "Pedro"
       orcid: "https://orcid.org/0009-0001-0569-9020"
-  version: "v1.0.3"
+  version: "v1.0.0"
   date-released: 2026-04-06
   url: "https://github.com/sbd-ai-runtime/appsec-core-ontology-research"
