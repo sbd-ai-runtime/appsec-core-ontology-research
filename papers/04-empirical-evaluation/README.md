@@ -56,6 +56,32 @@ The drift document remains visible and accessible in the authoring repository
 for transparency. Reviewers and replicators who need the full corrections
 record can request access.
 
+## Verification
+
+The mirror files are frozen at the SHA-256 hashes below. To verify that a
+local copy matches this exact mirror version, run:
+
+```bash
+shasum -a 256 DESIGN-empirical-evaluation-v1.pdf header.tex source/DESIGN-empirical-evaluation-v1.md
+```
+
+The output must match these values exactly:
+
+| File | SHA-256 |
+|------|---------|
+| `DESIGN-empirical-evaluation-v1.pdf` | `3880c8bd056ddae7b819137a3a45015e2a8c360bc198a6082f6e811e83ab457d` |
+| `header.tex` | `6a9025c6da3a00d2b711a9ad03f25fb33fd90a4f157a204840532abaff5da5f6` |
+| `source/DESIGN-empirical-evaluation-v1.md` | `45c5542176cfd8146b798881efb3a6cc7d40661f933886031ab51b350f448e19` |
+
+**Frozen as of**: 2026-04-10
+
+If any local file's hash differs from the value above, the file has been
+modified — either by accident or by an unauthorized sync. Compare against
+the OSF canonical version at https://osf.io/h5aje and restore from there.
+
+The same SHA-256 hashes are also recorded in `MOVED-TO-PUBLISH-LOG.md` in
+the authoring repository, providing a cross-repository verification chain.
+
 ## Sync workflow
 
 This folder is updated only when:
