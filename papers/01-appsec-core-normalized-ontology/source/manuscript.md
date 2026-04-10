@@ -66,7 +66,7 @@ SSDF [1], ASVS [2], SLSA [3], and CIS Controls [4] each provide comprehensive gu
 
 ### 2.2 Security Ontologies
 
-Several ontologies have been proposed for information security. Herzog et al. [7] proposed a general security ontology covering assets, threats, and countermeasures. Blanco et al. [8] developed an ontology for security requirements engineering and provided a systematic comparison of security ontologies available at the time. These works operate at the broad information security level; AppSec Core is scoped specifically to **application security practices** — what development teams do to build secure software — a narrower but more operationally precise domain.
+Several ontologies have been proposed for information security. Herzog et al. [7] proposed a general security ontology covering assets, threats, and countermeasures. Blanco et al. [8] carried out a systematic review and formal comparison of security ontologies, deriving the basis for a more integrated security ontology. These works operate at the broad information security level; AppSec Core is scoped specifically to **application security practices** — what development teams do to build secure software — a narrower but more operationally precise domain.
 
 CWE [9] and CAPEC [10] model the **problem space** (what can go wrong). AppSec Core models the **solution space** (what practitioners do to prevent it). This distinction is relevant: coverage analysis requires a solution-space model. CAPEC is included in the normalization mapping (Section 5) as a problem-space cross-reference: its attack patterns validate AppSec Core solution-space objectives rather than prescribe practices, and it is treated as a complementary adversarial source rather than a normative framework equivalent to SSDF or ASVS.
 
@@ -625,7 +625,7 @@ Curated supporting artifacts for this paper are available in the companion publi
 
 [7] A. Herzog, N. Shahmehri, and C. Duma, "An ontology of information security," *Int. J. Inf. Security and Privacy*, vol. 1, no. 4, pp. 1–23, 2007.
 
-[8] C. Blanco, J. Lasheras, R. Valencia-García, E. Fernández-Medina, A. Toval, and M. Piattini, "A systematic review and comparison of security ontologies," in *Proc. 3rd Int. Conf. Availability, Reliability and Security (ARES)*, 2008, pp. 813–820, doi: 10.1109/ARES.2008.33.
+[8] C. Blanco, J. Lasheras, E. Fernández-Medina, R. Valencia-García, and A. Toval, "Basis for an integrated security ontology according to a systematic review of existing proposals," *Computer Standards & Interfaces*, vol. 33, no. 4, pp. 372–388, 2011, doi: 10.1016/j.csi.2010.12.002.
 
 [9] MITRE. Common Weakness Enumeration (CWE). Available: https://cwe.mitre.org (accessed: 2026-04-06).
 
@@ -648,5 +648,3 @@ Curated supporting artifacts for this paper are available in the companion publi
 [18] W3C. Shapes Constraint Language (SHACL). W3C Recommendation, 2017. Available: https://www.w3.org/TR/shacl/ (accessed: 2026-04-06).
 
 [19] P. Farinha, "Framework Shiftleft — Security by Design," Shiftleft internal technical documentation, 2018. Multiple client deployment instances. Available from the authors upon request.
-
-[20] F. Baader, I. Horrocks, and U. Sattler, "An introduction to description logics," in *The Description Logic Handbook: Theory, Implementation and Applications*, F. Baader, D. Calvanese, D. McGuinness, D. Nardi, and P. F. Patel-Schneider, Eds. Cambridge University Press, 2003, ch. 1, pp. 1–44.
