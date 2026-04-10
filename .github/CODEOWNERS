@@ -1,2 +1,7 @@
 # All files require approval from admin
 * @pedrofarinhaatshiftleftpt
+
+# OSF mirrors — frozen reference, never edit
+# Canonical version lives on OSF; these are read-only mirrors for citation,
+# backup, and offline access. Any change requires explicit human review.
+papers/04-empirical-evaluation/** @pedrofarinhaatshiftleftpt

@@ -303,6 +303,19 @@ python3 scripts/sync_artifacts.py
 
 The sync manifest lives in [publish_artifacts.json](./publish_artifacts.json). It defines the exact `V1` artifact set to copy into this repository from sibling source repositories such as `../sbd-toe-knowledge-graph` and `../ExternalSourcesInventory`.
 
+## AI-Assisted Authoring and Execution
+
+This research programme used AI-assisted tools (Claude by Anthropic, and Codex
+by OpenAI) during manuscript preparation and as components of the experimental
+apparatus described in Paper 5. All such uses are documented in detail in
+[AI-USE-DISCLOSURE.md](./AI-USE-DISCLOSURE.md), including the tools used, how
+they were used, what constraints applied, and how authorship and accountability
+are preserved.
+
+The author retains full scientific responsibility for all content, claims, and
+conclusions. AI tools are not credited as authors, in line with ACM, IEEE,
+SIGSOFT, Springer-Nature, Elsevier, and ICMJE policies on AI in scholarly publishing.
+
 ## License
 
 For this first artifact-first release, the recommended default license is **CC BY 4.0** for the curated papers and research artifacts in this repository.

@@ -47,15 +47,52 @@ def load_metadata():
 
 
 def get_latest_deposit_id(concept_id):
+    # Strategy 1: deposit API with all_versions=true
+    # Without all_versions, published older versions are not returned.
     r = requests.get(
         f"{ZENODO_API}/deposit/depositions",
-        params={**params, "q": f"conceptrecid:{concept_id}", "sort": "mostrecent", "size": 1},
+        params={
+            **params,
+            "q": f"conceptrecid:{concept_id}",
+            "all_versions": "true",
+            "sort": "mostrecent",
+            "size": 1,
+        },
     )
     r.raise_for_status()
     hits = r.json()
-    if not hits:
-        raise SystemExit(f"No depositions found for concept record {concept_id}")
-    return hits[0]["id"]
+    if hits:
+        print(f"Found latest deposition via deposit API: id={hits[0]['id']}")
+        return hits[0]["id"]
+
+    # Strategy 2: fallback to records API
+    # The records API indexes published versions; we use the record id
+    # of the latest published version as the source for newversion action.
+    print(
+        f"Deposit API returned no hits for concept {concept_id}; "
+        f"falling back to records API..."
+    )
+    r = requests.get(
+        f"{ZENODO_API}/records",
+        params={
+            "q": f"conceptrecid:{concept_id}",
+            "all_versions": "true",
+            "sort": "mostrecent",
+            "size": 1,
+            "access_token": TOKEN,
+        },
+    )
+    r.raise_for_status()
+    payload = r.json()
+    record_hits = payload.get("hits", {}).get("hits", [])
+    if not record_hits:
+        raise SystemExit(
+            f"No depositions or published records found for concept record {concept_id}. "
+            f"Verify the concept record id is correct and the token has access to it."
+        )
+    record_id = record_hits[0]["id"]
+    print(f"Found latest published version via records API: id={record_id}")
+    return record_id
 
 
 def create_new_version(concept_id):
