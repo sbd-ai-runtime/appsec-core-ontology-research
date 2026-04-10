@@ -66,9 +66,13 @@ Modern LLMs generate syntactically and often semantically correct code [2, 5], b
 
 Tony et al. [4] demonstrated that security-focused prompting (recursive criticism, chain-of-thought with security examples) can reduce vulnerability rates by up to 75% on some tasks. This is a key observation: **LLMs can produce more secure code when given appropriate security context**. The question is how to provide that context systematically, completely, and auditably.
 
-### 2.2 Retrieval-Augmented Generation
+### 2.2 Retrieval-Augmented Generation and Structured Alternatives
 
-Lewis et al. [6] introduced RAG for grounding LLM outputs in external knowledge. RAG is a family of architectures; our critique targets specifically *plain vector-similarity retrieval without structured metadata*. Hybrid systems with metadata filtering, re-ranking, or graph-based retrieval [9] address some limitations. Ontology-grounded retrieval can be understood as a strict, typed, auditable subclass of the broader RAG family — not a rejection of the paradigm.
+Lewis et al. [6] introduced retrieval-augmented generation (RAG) as the dominant paradigm for grounding LLM outputs in external knowledge, and a substantial body of subsequent work has extended this paradigm with structured retrieval mechanisms. **GraphRAG** approaches [9, 14] augment vector retrieval with knowledge-graph traversal, recovering some of the structural relationships between retrieved units. **Tool-grounded LLM frameworks** [15, 16] expose external knowledge sources as callable tools that the model invokes during generation. **Schema-guided and constrained generation** [17] enforce structural constraints on the output rather than on the input. **Neuro-symbolic approaches** [18] combine learned representations with explicit symbolic reasoning. Each of these families improves on plain vector similarity along one dimension or another — graph structure, tool invocation discipline, output validity, or formal reasoning — and each constitutes a meaningful advance.
+
+What none of these families provide, however, is a **formal guarantee of completeness with respect to a domain-specific requirement set**. GraphRAG retrieves the most relevant subgraph; it does not guarantee that all requirements applicable to a given context are returned. Tool-grounded LLMs invoke tools that the model judges relevant; they do not guarantee that every applicable requirement is consulted. Schema-guided generation constrains *how* the output is structured; it does not constrain *which* domain requirements must be addressed. Neuro-symbolic systems reason over symbolic premises that the system itself selects; they do not commit to a closed requirement set drawn from an external normative source. In each case, the quality of grounding is *heuristic* — judged by similarity, relevance, or learned policy — rather than guaranteed by a formal property.
+
+Our contribution is a **paradigm shift from heuristic grounding to a formal retrieval contract**. Ontology-grounded retrieval, instantiated as the contract specified in Section 4.5, defines two formal invariants — *completeness* (all ControlObjectives applicable to the activated security context at the requested risk level are returned) and *provenance* (every retrieved unit carries a traceable source triple) — and treats the retrieval as a closed property of the structured index, not a learned approximation of relevance. Ontology-grounded retrieval can therefore be understood as a strict, typed, auditable subclass of the broader RAG family — not a rejection of the paradigm, but its discipline under formal constraints. Where other structured retrieval families improve coverage *in expectation*, the retrieval contract improves coverage *by construction*.
 
 ### 2.3 Security Ontologies and AppSec Core
 
@@ -463,3 +467,13 @@ Curated supporting artifacts for this paper are available in the companion publi
 [12] MITRE. Common Attack Pattern Enumeration and Classification (CAPEC). Available: https://capec.mitre.org
 
 [13] OWASP. Secure Coding Practices Quick Reference Guide, 2010.
+
+[14] D. Edge, H. Trinh, N. Cheng, J. Bradley, A. Chao, A. Mody, S. Truitt, and J. Larson, "From local to global: A graph RAG approach to query-focused summarization," arXiv:2404.16130, 2024.
+
+[15] T. Schick, J. Dwivedi-Yu, R. Dessì, R. Raileanu, M. Lomeli, L. Zettlemoyer, N. Cancedda, and T. Scialom, "Toolformer: Language models can teach themselves to use tools," in *Proc. NeurIPS*, 2024 (preprint: arXiv:2302.04761, 2023).
+
+[16] S. G. Patil, T. Zhang, X. Wang, and J. E. Gonzalez, "Gorilla: Large language model connected with massive APIs," arXiv:2305.15334, 2023.
+
+[17] S. Geng, M. Josifoski, M. Peyrard, and R. West, "Grammar-constrained decoding for structured NLP tasks without finetuning," in *Proc. EMNLP*, 2023 (preprint: arXiv:2305.13971).
+
+[18] A. d'Avila Garcez and L. C. Lamb, "Neurosymbolic AI: The 3rd wave," *Artif. Intell. Rev.*, vol. 56, pp. 12387–12406, 2023, doi: 10.1007/s10462-023-10448-w.
