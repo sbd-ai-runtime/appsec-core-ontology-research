@@ -1,0 +1,79 @@
+name: Freeze Guard
+
+# Block modifications to OSF mirrors and other frozen content.
+#
+# Some paths in this repository are frozen mirrors of canonical sources
+# that live elsewhere (typically on OSF or in external publications).
+# Those mirrors must not be modified directly here — any change requires
+# manual sync from the canonical source, performed only with explicit
+# human review and recorded in MOVED-TO-PUBLISH-LOG.md (in the authoring
+# repository).
+#
+# This workflow runs on pull requests that touch the protected paths
+# and fails the CI check, preventing accidental drift between the
+# mirror and its canonical source.
+#
+# To make this guard binding, mark the "freeze-check" status check
+# as required in the branch protection rules for main.
+#
+# To add a new frozen path:
+#   1. Add the path to the `paths` filter below
+#   2. Update the message in the freeze-check step to mention the new path
+#   3. Update MOVED-TO-PUBLISH-LOG.md in the authoring repo
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'papers/04-empirical-evaluation/**'
+      # Future frozen paths (uncomment when added):
+      # - 'papers/05-mcp-se-engineering/**'
+
+permissions:
+  pull-requests: read
+  contents: read
+
+jobs:
+  freeze-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reject modification of frozen paths
+        run: |
+          cat <<'EOF'
+          ============================================================
+          FREEZE GUARD — MODIFICATION REJECTED
+          ============================================================
+
+          This pull request modifies files under a frozen path:
+
+            papers/04-empirical-evaluation/**
+
+          This path is a frozen mirror of an external canonical
+          source. The canonical version lives at:
+
+            OSF DOI 10.17605/OSF.IO/H5AJE
+            https://osf.io/h5aje
+            OSF Project: https://osf.io/yxvmh
+
+          Modifications to this mirror are NOT permitted via normal
+          pull requests. If a sync from the canonical source is
+          genuinely needed:
+
+          1. Verify the change matches the OSF canonical version exactly
+          2. Get explicit admin approval
+          3. Push directly with admin override (or temporarily disable
+             this check in branch protection)
+          4. Update the README sync date in papers/04-empirical-evaluation/
+          5. Update MOVED-TO-PUBLISH-LOG.md in the authoring repo
+
+          For all other purposes, this path is read-only.
+
+          See:
+            - papers/04-empirical-evaluation/README.md (mirror policy)
+            - .github/CODEOWNERS (admin approval rule)
+            - DevelopmentGovernance/docs/streams/academia/publication-procedures.md
+              (full OSF Mirror Policy)
+
+          ============================================================
+          EOF
+          exit 1
