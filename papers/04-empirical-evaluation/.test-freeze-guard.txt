@@ -1,0 +1,1 @@
+This file exists only to trigger the freeze-guard workflow on PR. It is not intended to be merged. The PR should fail the freeze-check status check, after which it will be closed without merging.
