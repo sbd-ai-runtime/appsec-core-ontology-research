@@ -10,7 +10,7 @@ This repository is intentionally **not** the internal development repository. It
 - GitHub release management
 - Zenodo archival and DOI minting
 
-This repository should be read as a **research program release (`v1.0.0`)**: one curated versioned object containing three tightly related papers plus the minimum artifact surface needed to support them.
+This repository should be read as a **research program release (`v1.0.0`)**: one curated versioned object containing a three-paper core release with additional frozen design mirrors for companion study artifacts, plus the minimum artifact surface needed to support that surface.
 
 ## What This Repository Is
 
@@ -61,9 +61,9 @@ In short:
 For `v1.0.0`, the publication model is:
 
 - **one Zenodo DOI for the repository release**
-- **three papers inside that release**
+- **a three-paper core release with additional frozen design mirrors for companion study artifacts**
 
-The DOI resolves to the curated repository snapshot as a whole, not to three separate Zenodo records. Each paper is part of the same research-program release and should cite the shared repository release alongside any paper-specific bibliographic reference.
+The DOI resolves to the curated repository snapshot as a whole, not to separate Zenodo records per paper or mirror artifact. The three core papers and any additional frozen design mirrors in the release are part of the same research-program release and should cite the shared repository release alongside any paper-specific bibliographic reference.
 
 ## Current Repository Topology Decision
 
@@ -108,6 +108,10 @@ This means:
 - exclude later pilot waves unless the released `V1` text explicitly depends on them
 - exclude `V2` prompt packs, delta notes, and editor material
 - treat a later `V2` as a **complete later release**, not as an incremental add-on mixed into `v1.0.0`
+
+In addition to the three core papers, the public `v1` tree may carry frozen
+companion mirrors for study-supporting artifacts. In the current tree these are
+the Paper 4 study-design mirror and the Paper 5 apparatus-specification mirror.
 
 ## Proposed Structure
 
@@ -162,6 +166,21 @@ appsec-core-research/
         runtime_snapshot/
         worked_examples/
         verification_examples/
+    04-empirical-evaluation/
+      source/
+        DESIGN-empirical-evaluation-v1.md
+      DESIGN-empirical-evaluation-v1.pdf
+      header.tex
+      README.md
+    05-mcp-se-engineering/
+      source/
+        PAPER-mcp-instrument-specification-v1.md
+        images/
+          figure-1-g2-pipeline.svg
+          figure-1-g2-pipeline.dot
+      PAPER-mcp-instrument-specification-v1.pdf
+      header.tex
+      README.md
 ```
 
 ## Mapping from Current Internal Repositories
@@ -258,7 +277,7 @@ This keeps the citation model aligned with the actual publication structure:
 
 - one release
 - one DOI
-- three related papers
+- a three-paper core release with additional frozen design mirrors for companion study artifacts
 - one coherent artifact surface
 
 ## Citation

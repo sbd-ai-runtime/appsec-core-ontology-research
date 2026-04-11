@@ -1,8 +1,8 @@
 {
   "version": 1,
   "source_roots": {
-    "knowledge_graph": "../sbd-toe-knowledge-graph",
-    "external_sources_inventory": "../ExternalSourcesInventory"
+    "knowledge_graph": "../../SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph",
+    "external_sources_inventory": "../../SecurityByDesign-TheoryOfEverything/ExternalSourcesInventory"
   },
   "bundles": [
     {

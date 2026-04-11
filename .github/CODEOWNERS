@@ -5,3 +5,6 @@
 # Canonical version lives on OSF; these are read-only mirrors for citation,
 # backup, and offline access. Any change requires explicit human review.
 papers/04-empirical-evaluation/** @pedrofarinhaatshiftleftpt
+
+# Frozen companion mirror — Paper 5 apparatus specification
+papers/05-mcp-se-engineering/** @pedrofarinhaatshiftleftpt

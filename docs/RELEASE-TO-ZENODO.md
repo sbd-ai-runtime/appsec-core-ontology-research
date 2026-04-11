@@ -31,17 +31,26 @@ Before creating the first public release:
 
 ## Recommended Metadata Approach
 
-For the first release:
+The current repository already contains both:
 
-- use `CITATION.cff`
-- do **not** add `.zenodo.json` unless you need metadata fields that `CITATION.cff` cannot express cleanly
+- `CITATION.cff`
+- `.zenodo.json`
+
+For this repository, treat the metadata policy as follows:
+
+- `CITATION.cff` remains the general citation file for humans and tooling that reads CFF
+- `.zenodo.json` is the authoritative Zenodo-ingestion metadata file for GitHub release archival
 
 Important Zenodo note:
 
 - Zenodo supports both `CITATION.cff` and `.zenodo.json`
 - if both are present, Zenodo uses `.zenodo.json` and ignores `CITATION.cff` for GitHub release archiving
 
-For a simple first release, keeping only `CITATION.cff` is the cleaner option.
+Therefore, before the release:
+
+- keep `CITATION.cff` and `.zenodo.json` aligned
+- verify that `.zenodo.json` reflects the intended public `v1` scope
+- do not assume that Zenodo will ingest `CITATION.cff` fields when `.zenodo.json` is present
 
 ## GitHub -> Zenodo Flow
 

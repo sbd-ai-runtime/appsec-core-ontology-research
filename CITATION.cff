@@ -15,7 +15,8 @@ version: "v1.0.0"
 date-released: 2026-04-06
 abstract: >
   Curated public repository for the AppSec Core v1.0.0 research-program
-  release, including three related papers and release-grade artifacts
+  release, structured as a three-paper core release with additional frozen
+  design mirrors for companion study artifacts, plus release-grade artifacts
   supporting ontology design, coverage-preserving knowledge compilation,
   and ontology-grounded retrieval.
 keywords:

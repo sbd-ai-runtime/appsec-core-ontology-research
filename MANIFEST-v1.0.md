@@ -75,6 +75,21 @@ appsec-core-research/
         runtime_snapshot/
         worked_examples/
         verification_examples/
+    04-empirical-evaluation/
+      source/
+        DESIGN-empirical-evaluation-v1.md
+      DESIGN-empirical-evaluation-v1.pdf
+      header.tex
+      README.md
+    05-mcp-se-engineering/
+      source/
+        PAPER-mcp-instrument-specification-v1.md
+        images/
+          figure-1-g2-pipeline.svg
+          figure-1-g2-pipeline.dot
+      PAPER-mcp-instrument-specification-v1.pdf
+      header.tex
+      README.md
 ```
 
 ## 3. Mandatory Content for `v1.0.0`

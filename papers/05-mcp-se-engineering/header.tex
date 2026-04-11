@@ -1,0 +1,76 @@
+% =============================================================================
+% FROZEN COMPANION MIRROR — DO NOT EDIT
+% =============================================================================
+% Canonical working source: private authoring repository
+% Source document:         styles/paper-preprint.tex
+% Mirror sync:             2026-04-11
+% Mirror type:             Frozen companion mirror
+%
+% This file records the LaTeX header used to render the frozen Paper 5 mirror
+% PDF in this public repository. The public mirror is read-only by convention
+% and by CODEOWNERS protection. Future authoring revisions do not retroactively
+% modify this copy; public changes require an explicit re-sync.
+%
+% See ./README.md for full mirror policy.
+% =============================================================================
+
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{newunicodechar}
+
+\newunicodechar{✓}{$\checkmark$}
+\newunicodechar{∈}{$\in$}
+\newunicodechar{∃}{$\exists$}
+\newunicodechar{≠}{$\neq$}
+\newunicodechar{≤}{$\le$}
+\newunicodechar{≥}{$\ge$}
+\newunicodechar{≈}{$\approx$}
+\newunicodechar{∩}{$\cap$}
+\newunicodechar{→}{$\rightarrow$}
+\newunicodechar{₁}{$_1$}
+\newunicodechar{₂}{$_2$}
+\newunicodechar{ₖ}{$_k$}
+
+\setstretch{1.03}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{3em}
+
+\titleformat{\section}{\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection.}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection.}{0.6em}{}
+
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.3em}
+
+\setlength{\LTpre}{0.35em}
+\setlength{\LTpost}{0.35em}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\AtBeginEnvironment{longtable}{\small}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+\captionsetup[table]{skip=4pt}
+\captionsetup[figure]{skip=4pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+
+\newcommand{\codeid}[1]{{\small\begingroup\urlstyle{tt}\nolinkurl{#1}\endgroup}}

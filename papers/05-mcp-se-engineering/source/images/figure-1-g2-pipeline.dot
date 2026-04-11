@@ -1,0 +1,70 @@
+// Figure 1: G2 retrieval pipeline (Section 5.3 of Paper 5)
+// Render: dot -Tsvg figure-1-g2-pipeline.dot -o figure-1-g2-pipeline.svg
+//         dot -Tpdf figure-1-g2-pipeline.dot -o figure-1-g2-pipeline.pdf
+
+digraph G2Pipeline {
+    rankdir=LR;
+    fontname="STIX Two Text";
+    fontsize=11;
+    bgcolor="white";
+    pad=0.3;
+    nodesep=0.35;
+    ranksep=0.55;
+
+    node [
+        shape=box,
+        style="rounded,filled",
+        fillcolor="#f4f4f8",
+        color="#2c3e50",
+        fontname="STIX Two Text",
+        fontsize=10,
+        margin="0.18,0.12"
+    ];
+
+    edge [
+        fontname="STIX Two Text",
+        fontsize=9,
+        color="#2c3e50",
+        arrowsize=0.7
+    ];
+
+    // Input
+    input [
+        label="Task prompt + metadata",
+        shape=plaintext,
+        fillcolor=none,
+        fontsize=10
+    ];
+
+    // Pipeline stages
+    activator [
+        label=<<B>Slice Activator</B><BR/><FONT POINT-SIZE="9"><I>(deterministic)</I><BR/>From task metadata.<BR/>In Paper 4: pre-annotated.</FONT>>
+    ];
+
+    traversal [
+        label=<<B>Graph Traversal</B><BR/><FONT POINT-SIZE="9"><I>(deterministic)</I><BR/>All ControlObjectives at L2.<BR/>Expand to Practices, Mechanisms,<BR/>Artifacts, AntiPatterns.</FONT>>
+    ];
+
+    assembly [
+        label=<<B>Context Assembly</B><BR/><FONT POINT-SIZE="9"><I>(deterministic)</I><BR/>Order by epistemic weight.<BR/>Attach provenance + citation<BR/>templates. Respect token budget.</FONT>>
+    ];
+
+    delivery [
+        label=<<B>Delivery</B><BR/><FONT POINT-SIZE="9"><I>(deterministic)</I><BR/>Inject structured context<BR/>into LLM prompt via MCP.</FONT>>
+    ];
+
+    // LLM (terminal)
+    llm [
+        label="LLM (Claude Sonnet 4.6)",
+        shape=plaintext,
+        fillcolor=none,
+        fontsize=10
+    ];
+
+    // Edges
+    input -> activator;
+    activator -> traversal [label="activated\nslices,\nL2"];
+    traversal -> assembly [label="typed\nunits"];
+    assembly -> delivery [label="structured\ncontext"];
+    delivery -> llm;
+}

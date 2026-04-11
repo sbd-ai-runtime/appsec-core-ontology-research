@@ -17,7 +17,7 @@ This release is a **research program release**:
 
 - one curated repository snapshot
 - one Zenodo-backed release DOI
-- three related papers within the same release surface
+- a three-paper core release with additional frozen design mirrors for companion study artifacts
 
 ## Included Scope
 
@@ -26,6 +26,11 @@ This release is a **research program release**:
 - `appsec_core_normalized_ontology.pdf`
 - `coverage_preserving_knowledge_compilation.pdf`
 - `ontology_grounded_retrieval.pdf`
+
+### Additional frozen design mirrors
+
+- `papers/04-empirical-evaluation/` — frozen OSF-authoritative design mirror
+- `papers/05-mcp-se-engineering/` — frozen companion apparatus mirror
 
 ### Paper 1 artifacts
 
