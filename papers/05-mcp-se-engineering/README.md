@@ -94,9 +94,9 @@ The output must match these values exactly:
 
 | File | SHA-256 |
 |------|---------|
-| `PAPER-mcp-instrument-specification-v1.pdf` | `fe34566c22d151c12f5e4a8d11a43de415dcace8594073108295f1cfe3f95a49` |
+| `PAPER-mcp-instrument-specification-v1.pdf` | `c674402d4b919fdc1524345d0515dbbd45f51d043634ac42e26705ea1640d8b5` |
 | `header.tex` | `655ae0a07296d16e09e43248c9f2e38ad9eff090f5243c7efc044edb7f5a6a96` |
-| `source/PAPER-mcp-instrument-specification-v1.md` | `00818dd66fabf3c4e393948f32dda8f545187521e874b42cf7816813ffcc80bf` |
+| `source/PAPER-mcp-instrument-specification-v1.md` | `f5bda8e333286cdde918c4612f12931c61d53a66aba26962629130dc3650ff97` |
 | `source/images/figure-1-g2-pipeline.svg` | `a8dae78a2b2f9bcc32639e02da5352c01acb795ca2951882d22e02a121625307` |
 | `source/images/figure-1-g2-pipeline.dot` | `846fbd23be926883ffcf7f94144fe42eab4b943bd591e86c7f8d7c7789125d95` |
 

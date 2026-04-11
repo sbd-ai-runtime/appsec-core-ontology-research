@@ -537,15 +537,26 @@ The following factors are **identical** across G0, G1, and G2:
 
 The following factors **differ** between conditions and constitute the experimental manipulation. To keep the table readable, longer specifications are abbreviated; full specifications are in Sections 5.2 (G1) and 5.3 (G2).
 
-| # | Factor | G0 | G1 | G2 | Classification |
-|---|--------|----|----|----|----------------|
-| V1 | **Retrieval method** | None | Vector similarity | Graph traversal | Core independent variable |
-| V2 | **Context structure** | None | Flat chunks | Typed units | Structural difference |
-| V3 | **Completeness guarantee** | None | None | Invariant | Formal property |
-| V4 | **Citation mechanism** | None | None | Templates + instructions | Auditability |
-| V5 | **Epistemic weight** | None | None | strong/medium/low | Prioritisation signal |
-| V6 | **Context ordering** | N/A | Similarity rank | Weight rank | Ordering rationale |
-| V7 | **Determinism** | N/A | Near-deterministic | Fully deterministic | Reproducibility |
+```{=latex}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}L{0.05\textwidth} L{0.20\textwidth} L{0.08\textwidth} L{0.14\textwidth} L{0.13\textwidth} L{0.26\textwidth}@{}}
+\toprule
+\# & Factor & G0 & G1 & G2 & Classification \\
+\midrule
+\endhead
+V1 & Retrieval method & None & Vector similarity & Graph traversal & Core independent variable \\
+V2 & Context structure & None & Flat chunks & Typed units & Structural difference \\
+V3 & Completeness guarantee & None & None & Invariant & Formal property \\
+V4 & Citation mechanism & None & None & Templates + instructions & Auditability \\
+V5 & Epistemic weight & None & None & strong/medium/low & Prioritisation signal \\
+V6 & Context ordering & N/A & Similarity rank & Weight rank & Ordering rationale \\
+V7 & Determinism & N/A & Near-deterministic & Fully deterministic & Reproducibility \\
+\bottomrule
+\end{longtable}
+\setlength{\tabcolsep}{6pt}
+\normalsize
+```
 
 Expansion of each row:
 
@@ -575,21 +586,30 @@ The two preceding subsections enumerate ten controlled factors (Section 6.1) and
 
 **Factor summary across the three experimental conditions.** The five rows above the *variable line* show the factors that are held constant across G0, G1, and G2 (controlled factors C1–C10, condensed for the summary). The seven rows below show the factors that differ — the experimental manipulation (variable factors V1–V7). The companion evaluation tests whether the manipulation below the variable line produces a measurable effect on M_SbD.
 
-|     | **Factor**          | **G0**  | **G1**          | **G2**           |
-|-----|---------------------|---------|-----------------|------------------|
-| C1  | Prompt              | same    | same            | same             |
-| C3  | Model               | same    | same            | same             |
-| C4  | Decoding            | same    | same            | same             |
-| C5  | Token budget        | N/A     | same            | same             |
-| C6  | Corpus content      | N/A     | same            | same             |
-|     | *— variable line: factors below differ between conditions —* | | | |
-| V1  | Retrieval method    | None    | Similarity      | **Graph**        |
-| V2  | Context structure   | None    | Flat chunks     | **Typed units**  |
-| V3  | Completeness        | None    | Top-k           | **Invariant**    |
-| V4  | Citation mechanism  | None    | None            | **Templates**    |
-| V5  | Epistemic weight    | None    | None            | **Explicit**     |
-| V6  | Context ordering    | N/A     | Similarity      | **Weight**       |
-| V7  | Determinism         | N/A     | Near            | **Full**         |
+```{=latex}
+\begin{longtable}{@{}L{0.08\textwidth} L{0.30\textwidth} L{0.14\textwidth} L{0.16\textwidth} L{0.16\textwidth}@{}}
+\toprule
+ & \textbf{Factor} & \textbf{G0} & \textbf{G1} & \textbf{G2} \\
+\midrule
+\endhead
+C1 & Prompt & same & same & same \\
+C3 & Model & same & same & same \\
+C4 & Decoding & same & same & same \\
+C5 & Token budget & N/A & same & same \\
+C6 & Corpus content & N/A & same & same \\
+\midrule
+\multicolumn{5}{@{}c@{}}{\emph{variable line: factors below differ between conditions}} \\
+\midrule
+V1 & Retrieval method & None & Similarity & \textbf{Graph} \\
+V2 & Context structure & None & Flat chunks & \textbf{Typed units} \\
+V3 & Completeness & None & Top-k & \textbf{Invariant} \\
+V4 & Citation mechanism & None & None & \textbf{Templates} \\
+V5 & Epistemic weight & None & None & \textbf{Explicit} \\
+V6 & Context ordering & N/A & Similarity & \textbf{Weight} \\
+V7 & Determinism & N/A & Near & \textbf{Full} \\
+\bottomrule
+\end{longtable}
+```
 
 Everything above the variable line is controlled. Everything below is the experimental manipulation. Paper 4 measures whether the manipulation below the line produces a measurable effect on M_SbD.
 
@@ -605,15 +625,22 @@ This subsection answers the bundling question in three parts: first, we name the
 
 We acknowledge this directly: **G2 is a bundled intervention**, not a single-factor manipulation. The bundle consists of:
 
-| Dimension | What G2 adds | Hypothesised contribution to M_SbD |
-|-----------|--------------|-----------------------------------|
-| **B1 — Retrieval method** | Graph traversal replacing similarity ranking | Coverage: ensures the right requirements are *retrieved* |
-| **B2 — Completeness invariant** | All ControlObjectives in activated slices returned | Coverage: ensures *no* requirement is missed |
-| **B3 — Typed structure** | Entity types (ControlObjective, Practice, Mechanism, Artifact) | Salience: ensures the LLM distinguishes mandatory from informational |
-| **B4 — Epistemic weighting** | normative_weight (strong/medium/low) | Prioritisation: ensures the LLM allocates attention proportionally |
-| **B5 — Provenance headers** | (document_role, normative_weight, heading_path) per unit | Traceability: enables M_audit |
-| **B6 — Citation instructions** | Explicit citation templates per requirement | Compliance signal: gives the LLM an action to perform per requirement |
-| **B7 — Determinism** | Reproducible retrieval across repetitions | Variance reduction: isolates LLM variance from retrieval variance |
+```{=latex}
+\begin{longtable}{@{}L{0.31\textwidth} L{0.23\textwidth} L{0.36\textwidth}@{}}
+\toprule
+Dimension & What G2 adds & Hypothesised contribution to $M_{SbD}$ \\
+\midrule
+\endhead
+\textbf{B1 --- Retrieval method} & Graph traversal replacing similarity ranking & Coverage: ensures the right requirements are \emph{retrieved} \\
+\textbf{B2 --- Completeness invariant} & All ControlObjectives in activated slices returned & Coverage: ensures \emph{no} requirement is missed \\
+\textbf{B3 --- Typed structure} & Entity types (ControlObjective, Practice, Mechanism, Artifact) & Salience: ensures the LLM distinguishes mandatory from informational \\
+\textbf{B4 --- Epistemic weighting} & normative\_weight (strong/medium/low) & Prioritisation: ensures the LLM allocates attention proportionally \\
+\textbf{B5 --- Provenance headers} & (document\_role, normative\_weight, heading\_path) per unit & Traceability: enables $M_{audit}$ \\
+\textbf{B6 --- Citation instructions} & Explicit citation templates per requirement & Compliance signal: gives the LLM an action to perform per requirement \\
+\textbf{B7 --- Determinism} & Reproducible retrieval across repetitions & Variance reduction: isolates LLM variance from retrieval variance \\
+\bottomrule
+\end{longtable}
+```
 
 Phase 1 of Paper 4 cannot isolate the contribution of each dimension. It tests the bundle as a whole. This is **deliberate, not accidental**, for three reasons:
 
@@ -639,12 +666,19 @@ We respond to this in three steps:
 
 #### Bundling Risk Matrix
 
-| Risk | Severity if confirmed | Mitigation |
-|------|----------------------|------------|
-| Bundle effect dominated by B6 (citation instructions) | High — would suggest "tell the LLM to cite sources" suffices | Phase 2 ablation G2b (no requirement IDs) |
-| Bundle effect dominated by B2 (completeness) without B3–B5 contributing | Medium — would suggest typing/weighting are decorative | Phase 2 ablation G2a (no epistemic weight) |
-| Bundle effect dominated by B7 (determinism) reducing variance rather than raising mean | Low — would still be a methodological contribution | Reported per-task M_SbD distributions, not just means |
-| Bundle effect partially explained by an unmeasured dimension | Medium — would be a confound | Comprehensive logging (Section 11) enables post-hoc identification |
+```{=latex}
+\begin{longtable}{L{0.36\textwidth} L{0.20\textwidth} L{0.34\textwidth}}
+\toprule
+Risk & Severity if confirmed & Mitigation \\
+\midrule
+\endhead
+Bundle effect dominated by B6 (citation instructions) & High --- would suggest "tell the LLM to cite sources" suffices & Phase 2 ablation G2b (no requirement IDs) \\
+Bundle effect dominated by B2 (completeness) without B3--B5 contributing & Medium --- would suggest typing/weighting are decorative & Phase 2 ablation G2a (no epistemic weight) \\
+Bundle effect dominated by B7 (determinism) reducing variance rather than raising mean & Low --- would still be a methodological contribution & Reported per-task $M_{SbD}$ distributions, not just means \\
+Bundle effect partially explained by an unmeasured dimension & Medium --- would be a confound & Comprehensive logging (Section 11) enables post-hoc identification \\
+\bottomrule
+\end{longtable}
+```
 
 The bundling acknowledgement is not an admission of weakness. It is a precise statement of what Phase 1 does and does not claim, and a commitment to systematic decomposition in Phase 2. Reviewers who reject Phase 1 results on bundling grounds would also have to reject the standard practice of testing main effects before ablation studies.
 
@@ -851,25 +885,32 @@ This taxonomy is *exhaustive within the studied pipeline*. Failure modes that oc
 
 For every (task, condition, repetition), the instrument logs:
 
-| Field | Source | Connects to |
-|-------|--------|------------|
-| `condition` | Orchestrator | Experimental design |
-| `task_id` | Task metadata | Paper 4 task set |
-| `repetition` | Orchestrator | Within-task repeated measures |
-| `timestamp_start` | System clock | Latency measurement |
-| `timestamp_retrieval_complete` | Retrieval pipeline | Retrieval latency |
-| `timestamp_generation_complete` | LLM API response | Generation latency |
-| `tokens_prompt` | LLM API | Cost model (T_ctx) |
-| `tokens_context` | Context assembler | Cost model (T_ctx) |
-| `tokens_completion` | LLM API | Cost model |
-| `retrieved_ids` | Retrieval pipeline | M_recall computation |
-| `delivered_context` | Context assembler (full text) | Post-hoc confound analysis |
-| `delivered_context_token_count` | Tokenizer | Budget verification |
-| `truncated_units` | Budget manager | Degradation monitoring |
-| `generated_output` | LLM API (full text) | M_SbD, M_func, M_audit scoring |
-| `m_recall` | Computed (retrieved ∩ ground_truth / ground_truth) | H1a validation |
-| `mcp_calls` | MCP client (G2 only) | Cost model (N_mcp) |
-| `mcp_tokens_per_call` | MCP client (G2 only) | Cost model (T_mcp) |
+```{=latex}
+\begin{longtable}{L{0.24\textwidth} L{0.28\textwidth} L{0.38\textwidth}}
+\toprule
+Field & Source & Connects to \\
+\midrule
+\endhead
+\codeid{condition} & Orchestrator & Experimental design \\
+\codeid{task_id} & Task metadata & Paper 4 task set \\
+\codeid{repetition} & Orchestrator & Within-task repeated measures \\
+\codeid{timestamp_start} & System clock & Latency measurement \\
+\codeid{timestamp_retrieval_complete} & Retrieval pipeline & Retrieval latency \\
+\codeid{timestamp_generation_complete} & LLM API response & Generation latency \\
+\codeid{tokens_prompt} & LLM API & Cost model ($T_{ctx}$) \\
+\codeid{tokens_context} & Context assembler & Cost model ($T_{ctx}$) \\
+\codeid{tokens_completion} & LLM API & Cost model \\
+\codeid{retrieved_ids} & Retrieval pipeline & $M_{recall}$ computation \\
+\codeid{delivered_context} & Context assembler (full text) & Post-hoc confound analysis \\
+\codeid{delivered_context_token_count} & Tokenizer & Budget verification \\
+\codeid{truncated_units} & Budget manager & Degradation monitoring \\
+\codeid{generated_output} & LLM API (full text) & $M_{SbD}$, $M_{func}$, $M_{audit}$ scoring \\
+\codeid{m_recall} & Computed (retrieved $\cap$ ground truth / ground truth) & H1a validation \\
+\codeid{mcp_calls} & MCP client (G2 only) & Cost model ($N_{mcp}$) \\
+\codeid{mcp_tokens_per_call} & MCP client (G2 only) & Cost model ($T_{mcp}$) \\
+\bottomrule
+\end{longtable}
+```
 
 ### 11.2 Connection to Paper 3 Audit Trail
 
@@ -1350,24 +1391,24 @@ The current public `v1` release is organized paper-by-paper. It is not a public 
 | Retrieval contract | `papers/03-ontology-grounded-retrieval/artifacts/retrieval_contract/` |
 | Minimal runtime snapshot | `papers/03-ontology-grounded-retrieval/artifacts/runtime_snapshot/` |
 
-Authoring provenance for the artifacts above is maintained in canonical internal repositories; the public release surface listed above is the citable artifact set for this paper.
+The public release locations above are the citable artifact anchors for this paper.
 
-### Instrument logging schema
+### Instrument support files
 
-The per-request log specified in Section 11.1 is expected to be accompanied by a JSON Schema and worked examples if and when `Paper 5` is promoted into the public release tree as a frozen companion mirror. In this manuscript version, those support files are not yet part of the public `v1` repository tree and no public release path is assigned to them yet.
+The per-request logging schema referenced in Section 11.1, together with worked log examples, is not part of the current public `v1` release.
 
 ### Reproduction notes
 
-This manuscript is reviewable now and reproducibility-ready in design. End-to-end independent reproduction depends on the curated public release artifacts already exposed through Papers 1–3 together with additional support artifacts that are not yet part of the current public `v1` tree.
+This manuscript is reviewable now and reproducibility-ready in design. End-to-end independent reproduction depends on the public Paper 1–3 artifacts listed above together with a future public release of the remaining Paper 5 support files.
 
-A reader wishing to reproduce the instrument once those support materials are publicly released should:
+Once those support files are released, reproducing the instrument requires:
 
 1. Obtain the curated AppSec Core and retrieval-support artifacts from the public `v1` release surface described above.
 2. Compile the runtime knowledge graph using the Paper 2 compilation method and the supporting public artifacts cited above.
 3. Implement the four-stage retrieval pipeline of Section 5.3 against that compiled graph, satisfying the controlled and variable factors of Section 6 and the validation criteria of Section 13.
-4. Apply the per-request logging schema of Section 11.1 once that support material is publicly released with the `P5` mirror or a later companion bundle.
+4. Apply the per-request logging schema of Section 11.1 together with the later public support files that document the run-level log format.
 
-The reproduction does not require access to the implementation that produced the companion evaluation, but it does require public access to the remaining support artifacts not yet exposed in the current `v1` release tree.
+Until those support files are released, the paper should be read as an apparatus specification rather than as a complete execution bundle.
 
 ---
 
