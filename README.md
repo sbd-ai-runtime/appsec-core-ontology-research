@@ -65,6 +65,11 @@ For `v1.0.0`, the publication model is:
 
 The DOI resolves to the curated repository snapshot as a whole, not to separate Zenodo records per paper or mirror artifact. The three core papers and any additional frozen design mirrors in the release are part of the same research-program release and should cite the shared repository release alongside any paper-specific bibliographic reference.
 
+For the current public mirrors:
+
+- Paper 4 study design: cite the OSF registration DOI `10.17605/OSF.IO/H5AJE` when referring to the registered study design
+- Paper 5 apparatus companion: cite the OSF component DOI `10.17605/OSF.IO/KH8Y7` when referring to the frozen apparatus-specification companion
+
 ## Current Repository Topology Decision
 
 For `v1.0.0`, the best option is:

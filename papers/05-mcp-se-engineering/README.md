@@ -2,6 +2,7 @@
 
 > **Companion role**: apparatus-specification companion to the Paper 4 study
 > **Paper 4 OSF DOI**: [10.17605/OSF.IO/H5AJE](https://doi.org/10.17605/OSF.IO/H5AJE)
+> **Paper 5 OSF component DOI**: [10.17605/OSF.IO/KH8Y7](https://doi.org/10.17605/OSF.IO/KH8Y7)
 > **Public repository**: https://github.com/sbd-ai-runtime/appsec-core-ontology-research
 >
 > **This folder**: Frozen companion mirror for citation convenience, backup, reviewer support, and offline access.
@@ -120,11 +121,11 @@ Automatic sync from the authoring repository is **not** permitted.
 
 ## Citation
 
-Until a separate paper-specific archival identifier exists, cite:
+For this frozen companion manuscript, cite:
 
-1. the manuscript title as it appears in this folder
-2. the shared repository release DOI once minted
-3. the Paper 4 OSF DOI when referring to the companion registered study design
+1. the Paper 5 OSF component DOI `10.17605/OSF.IO/KH8Y7` when referring to the apparatus-specification companion itself
+2. the shared repository release DOI once minted when referring to the broader curated `v1.0.0` release surface
+3. the Paper 4 OSF DOI `10.17605/OSF.IO/H5AJE` when referring to the companion registered study design
 
-This keeps study registration, apparatus specification, and repository-release
+This keeps study registration, apparatus companion, and repository-release
 citations clearly separated.
