@@ -1,0 +1,6 @@
+This file exists only to trigger the freeze-guard workflow on PR and to
+validate that the extended path filter (papers/05-mcp-se-engineering/**)
+correctly blocks modifications to the Paper 5 frozen companion mirror.
+
+It is not intended to be merged. The PR should fail the freeze-check
+status check, after which it will be closed without merging.
