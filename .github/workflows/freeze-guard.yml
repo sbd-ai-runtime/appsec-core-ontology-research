@@ -16,18 +16,25 @@ name: Freeze Guard
 # To make this guard binding, mark the "freeze-check" status check
 # as required in the branch protection rules for main.
 #
+# Currently protected frozen paths:
+#   - papers/04-empirical-evaluation/** (Paper 4 OSF mirror, DOI 10.17605/OSF.IO/H5AJE)
+#   - papers/05-mcp-se-engineering/**   (Paper 5 OSF companion mirror, DOI 10.17605/OSF.IO/KH8Y7)
+#
 # To add a new frozen path:
 #   1. Add the path to the `paths` filter below
-#   2. Update the message in the freeze-check step to mention the new path
-#   3. Update MOVED-TO-PUBLISH-LOG.md in the authoring repo
+#   2. Update the rejection message to include the new path and its
+#      canonical OSF DOI (or other canonical source reference)
+#   3. Update this comment block with the new path
+#   4. Update MOVED-TO-PUBLISH-LOG.md in the authoring repo
 
 on:
   pull_request:
     branches: [main]
     paths:
       - 'papers/04-empirical-evaluation/**'
-      # Future frozen paths (uncomment when added):
-      # - 'papers/05-mcp-se-engineering/**'
+      - 'papers/05-mcp-se-engineering/**'
+      # Future frozen paths: add here with a corresponding entry in the
+      # rejection message below.
 
 permissions:
   pull-requests: read
@@ -44,32 +51,45 @@ jobs:
           FREEZE GUARD — MODIFICATION REJECTED
           ============================================================
 
-          This pull request modifies files under a frozen path:
+          This pull request modifies files under one or more frozen paths:
 
-            papers/04-empirical-evaluation/**
+            papers/04-empirical-evaluation/**   (Paper 4 OSF mirror)
+            papers/05-mcp-se-engineering/**     (Paper 5 OSF companion mirror)
 
-          This path is a frozen mirror of an external canonical
-          source. The canonical version lives at:
+          These paths are frozen mirrors of canonical sources that live
+          outside this repository. They must not be modified directly here.
 
-            OSF DOI 10.17605/OSF.IO/H5AJE
-            https://osf.io/h5aje
-            OSF Project: https://osf.io/yxvmh
+          Canonical sources:
 
-          Modifications to this mirror are NOT permitted via normal
-          pull requests. If a sync from the canonical source is
-          genuinely needed:
+            Paper 4 — Experimental Design (pre-registered):
+              OSF DOI   10.17605/OSF.IO/H5AJE
+              OSF URL   https://osf.io/h5aje
+
+            Paper 5 — Instrument Specification (companion component):
+              OSF DOI   10.17605/OSF.IO/KH8Y7
+              OSF URL   https://osf.io/yxvmh (component)
+
+            Shared OSF project: https://osf.io/yxvmh
+
+          Modifications to these mirrors are NOT permitted via normal
+          pull requests. If a sync from a canonical source is genuinely
+          needed:
 
           1. Verify the change matches the OSF canonical version exactly
           2. Get explicit admin approval
           3. Push directly with admin override (or temporarily disable
              this check in branch protection)
-          4. Update the README sync date in papers/04-empirical-evaluation/
-          5. Update MOVED-TO-PUBLISH-LOG.md in the authoring repo
+          4. Update the README sync date in the affected mirror folder
+          5. Regenerate SHA-256 hashes in both the mirror README and
+             MOVED-TO-PUBLISH-LOG.md in the authoring repository
+          6. Update MOVED-TO-PUBLISH-LOG.md in the authoring repo with
+             a new dated entry describing the sync
 
-          For all other purposes, this path is read-only.
+          For all other purposes, these paths are read-only.
 
           See:
-            - papers/04-empirical-evaluation/README.md (mirror policy)
+            - papers/04-empirical-evaluation/README.md (Paper 4 mirror policy)
+            - papers/05-mcp-se-engineering/README.md (Paper 5 mirror policy)
             - .github/CODEOWNERS (admin approval rule)
             - DevelopmentGovernance/docs/streams/academia/publication-procedures.md
               (full OSF Mirror Policy)
