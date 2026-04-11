@@ -1,0 +1,17 @@
+Control PR test for the freeze-guard required check gotcha.
+
+This file is at the repository root — OUTSIDE the frozen paths:
+- papers/04-empirical-evaluation/** (not touched)
+- papers/05-mcp-se-engineering/** (not touched)
+
+Expected behavior: the freeze-guard workflow should NOT trigger because the
+paths filter does not match. The question is whether the required status
+check (freeze-check) blocks this PR or allows it.
+
+If this PR is blocked: GitHub's strict interpretation applies → workflow
+must be restructured to always run (Strategy B).
+
+If this PR passes: GitHub's lenient interpretation applies → current
+workflow design is fine and no changes needed.
+
+This file is not intended to be merged.
