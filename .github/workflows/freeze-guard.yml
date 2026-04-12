@@ -17,6 +17,7 @@ name: Freeze Guard
 # as required in the branch protection rules for main.
 #
 # Currently protected frozen paths:
+#   - papers/00-research-programme-statement/** (Paper 0 programme prospectus, OSF DOI pending)
 #   - papers/04-empirical-evaluation/** (Paper 4 OSF mirror, DOI 10.17605/OSF.IO/H5AJE)
 #   - papers/05-mcp-se-engineering/**   (Paper 5 OSF companion mirror, DOI 10.17605/OSF.IO/KH8Y7)
 #
@@ -31,10 +32,9 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - 'papers/00-research-programme-statement/**'
       - 'papers/04-empirical-evaluation/**'
       - 'papers/05-mcp-se-engineering/**'
-      # Future frozen paths: add here with a corresponding entry in the
-      # rejection message below.
 
 permissions:
   pull-requests: read
@@ -53,13 +53,18 @@ jobs:
 
           This pull request modifies files under one or more frozen paths:
 
-            papers/04-empirical-evaluation/**   (Paper 4 OSF mirror)
-            papers/05-mcp-se-engineering/**     (Paper 5 OSF companion mirror)
+            papers/00-research-programme-statement/**  (Paper 0 programme prospectus)
+            papers/04-empirical-evaluation/**          (Paper 4 OSF mirror)
+            papers/05-mcp-se-engineering/**            (Paper 5 OSF companion mirror)
 
           These paths are frozen mirrors of canonical sources that live
           outside this repository. They must not be modified directly here.
 
           Canonical sources:
+
+            Paper 0 — Research Programme Prospectus:
+              OSF DOI   pending (to be minted upon OSF publication)
+              OSF URL   https://osf.io/yxvmh (umbrella project)
 
             Paper 4 — Experimental Design (pre-registered):
               OSF DOI   10.17605/OSF.IO/H5AJE
@@ -88,6 +93,7 @@ jobs:
           For all other purposes, these paths are read-only.
 
           See:
+            - papers/00-research-programme-statement/README.md (Paper 0 mirror policy)
             - papers/04-empirical-evaluation/README.md (Paper 4 mirror policy)
             - papers/05-mcp-se-engineering/README.md (Paper 5 mirror policy)
             - .github/CODEOWNERS (admin approval rule)

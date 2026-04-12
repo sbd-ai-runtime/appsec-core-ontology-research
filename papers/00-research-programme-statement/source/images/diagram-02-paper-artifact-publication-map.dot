@@ -1,0 +1,130 @@
+// Diagram 2 — Paper / artifact / publication map
+//
+// Visualizes the many-to-many relation between the programme's papers/tasks
+// and the artifact classes defined in §7, using a bipartite cluster layout.
+// Left cluster: papers (P1-P5 + companions). Right cluster: artifact classes
+// per §7.1-§7.5. Arrows carry relation labels (produces / formalizes /
+// extends / specifies / registered-at / published-on / mirrored-on /
+// requires) to make the non-linearity explicit — a paper can contribute to
+// multiple artifact classes, and an artifact class can receive contributions
+// from multiple papers.
+//
+// Color continuity with Figure 1: papers and artifact classes share the
+// paradigm color palette declared in §2.3 — blue for Ontology Engineering,
+// green for DSR, pink for SIGSOFT/evidence, cream for knowledge organisation,
+// gray for publication surfaces.
+//
+// Source for Figure 2 in P0 §7. Regenerate the SVG with:
+//   dot -Tsvg diagram-02-paper-artifact-publication-map.dot -o diagram-02-paper-artifact-publication-map.svg
+
+digraph paper_artifact_map {
+    rankdir=LR;
+    bgcolor="transparent";
+    nodesep=0.25;
+    ranksep=1.2;
+    newrank=true;
+
+    node [
+        shape=box,
+        style="rounded,filled",
+        fontname="Helvetica",
+        fontsize=10,
+        margin="0.18,0.10",
+        penwidth=1.1
+    ];
+
+    edge [
+        fontname="Helvetica",
+        fontsize=8,
+        arrowsize=0.6,
+        penwidth=0.9,
+        color="#555555"
+    ];
+
+    // ============================================================
+    // LEFT CLUSTER — papers & tasks
+    // ============================================================
+    subgraph cluster_papers {
+        label=<<B>Papers &amp; tasks</B>>;
+        labelloc="t";
+        labeljust="l";
+        fontname="Helvetica";
+        fontsize=12;
+        style="rounded,filled";
+        fillcolor="#FAFAFA";
+        color="#BBBBBB";
+        margin=12;
+
+        P1 [label=<<B>P1</B><BR/>AppSec Core<BR/>normalized ontology>, fillcolor="#E6F2FF", color="#1F4E79"];
+        P1c [label=<<B>P1 companion</B><BR/>structural resilience<BR/><FONT POINT-SIZE="8">(not yet drafted)</FONT>>, fillcolor="#E6F2FF", color="#1F4E79", style="rounded,filled,dashed"];
+        P2 [label=<<B>P2</B><BR/>coverage-preserving<BR/>compilation>, fillcolor="#E8F5E8", color="#2E7D32"];
+        P2v2 [label=<<B>P2-v2</B><BR/>residual classification<BR/><FONT POINT-SIZE="8">(not yet drafted)</FONT>>, fillcolor="#E8F5E8", color="#2E7D32", style="rounded,filled,dashed"];
+        P3 [label=<<B>P3</B><BR/>ontology-grounded<BR/>retrieval>, fillcolor="#E8F5E8", color="#2E7D32"];
+        P5 [label=<<B>P5</B><BR/>apparatus-definition<BR/>companion<BR/><FONT POINT-SIZE="8">FROZEN · OSF KH8Y7</FONT>>, fillcolor="#FFE6E6", color="#B22222"];
+        P4 [label=<<B>P4</B><BR/>empirical evaluation<BR/>design<BR/><FONT POINT-SIZE="8">REGISTERED · OSF H5AJE</FONT>>, fillcolor="#FFE6E6", color="#B22222"];
+    }
+
+    // ============================================================
+    // RIGHT CLUSTER — artifact classes per §7
+    // ============================================================
+    subgraph cluster_artifacts {
+        label=<<B>Artifact classes (§7)</B>>;
+        labelloc="t";
+        labeljust="l";
+        fontname="Helvetica";
+        fontsize=12;
+        style="rounded,filled";
+        fillcolor="#FAFAFA";
+        color="#BBBBBB";
+        margin=12;
+
+        A71 [label=<<B>§7.1 Canonical knowledge</B><BR/><FONT POINT-SIZE="9">SbD-ToE manual corpus<BR/>AppSec Core v0 YAML + slices<BR/>compiled knowledge graph<BR/>frozen manual snapshot <I>(expected)</I></FONT>>, fillcolor="#FFF8DC", color="#B8860B"];
+
+        A72 [label=<<B>§7.2 Formal companions</B><BR/><FONT POINT-SIZE="9">AppSec Core v0 OWL 2/Turtle<BR/>SHACL shapes<BR/>conformance reports<BR/>visualization outputs</FONT>>, fillcolor="#E6F2FF", color="#1F4E79"];
+
+        A73 [label=<<B>§7.3 Retrieval &amp; runtime</B><BR/><FONT POINT-SIZE="9">retrieval contract<BR/>runtime snapshots<BR/>context-assembly rules<BR/>typed delivery envelopes<BR/>versioned runtime surface</FONT>>, fillcolor="#E8F5E8", color="#2E7D32"];
+
+        A74 [label=<<B>§7.4 Apparatus</B><BR/><FONT POINT-SIZE="9">MCP delivery tooling/server<BR/>build manifest<BR/>validation protocol<BR/>logging schema<BR/>execution-support package</FONT>>, fillcolor="#FFE6E6", color="#B22222"];
+
+        A75 [label=<<B>§7.5 Publication surfaces</B><BR/><FONT POINT-SIZE="9">appsec-core-ontology-research repo<BR/>OSF components (P4, P5)<BR/>www.securitybydesign.dev<BR/>sbd-toe-manual public repo<BR/>IGAC 949/2025<BR/>Zenodo <I>(planned)</I></FONT>>, fillcolor="#EEEEEE", color="#666666"];
+    }
+
+    // ============================================================
+    // RELATIONS — papers → artifact classes
+    // ============================================================
+
+    // P1 contributes AppSec Core v0 to canonical knowledge,
+    // publishes on the curated repo
+    P1 -> A71 [label="produces", fontcolor="#1F4E79"];
+    P1 -> A75 [label="published on"];
+
+    // P1 companion formalizes AppSec Core v0 into OWL2/SHACL,
+    // publishes on the curated repo (future)
+    P1c -> A72 [label="formalizes", fontcolor="#1F4E79"];
+    P1c -> A75 [label="published on", style=dashed];
+
+    // P2 extends canonical knowledge via coverage-preserving compilation,
+    // publishes on the curated repo
+    P2 -> A71 [label="extends", fontcolor="#2E7D32"];
+    P2 -> A75 [label="published on"];
+
+    // P2-v2 defines the frozen manual snapshot (canonical knowledge extension),
+    // publishes on the curated repo (future)
+    P2v2 -> A71 [label="defines snapshot", style=dashed, fontcolor="#2E7D32"];
+    P2v2 -> A75 [label="published on", style=dashed];
+
+    // P3 defines the retrieval contract,
+    // publishes on the curated repo
+    P3 -> A73 [label="defines", fontcolor="#2E7D32"];
+    P3 -> A75 [label="published on"];
+
+    // P5 specifies the apparatus, is frozen and registered on OSF,
+    // mirrored to the curated repo
+    P5 -> A74 [label="specifies", fontcolor="#B22222"];
+    P5 -> A75 [label="registered on"];
+
+    // P4 consumes the apparatus for the controlled study,
+    // is registered on OSF and mirrored to the curated repo
+    P4 -> A74 [label="consumes", style=dotted, fontcolor="#B22222"];
+    P4 -> A75 [label="registered on"];
+}

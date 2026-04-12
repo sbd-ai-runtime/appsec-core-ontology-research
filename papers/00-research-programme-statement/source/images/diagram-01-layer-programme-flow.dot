@@ -1,0 +1,77 @@
+// Diagram 1 — Programme layer flow
+//
+// Visualizes the six conceptual layers of the SbD-ToE / AppSec Core research
+// programme as a top-to-bottom dependency chain, with the anchoring papers
+// (P1-P5 + companions) annotated inside each layer and the methodological
+// paradigm tagged where §2.3 assigns one. Colored fills group layers by
+// role: practical substrate (gray), knowledge organisation (cream), ontology
+// engineering (blue), DSR artifact construction (green), and empirical
+// evaluation (red/pink).
+//
+// Source for Figure 1 in P0 §4. Regenerate the SVG with:
+//   dot -Tsvg diagram-01-layer-programme-flow.dot -o diagram-01-layer-programme-flow.svg
+
+digraph layer_flow {
+    rankdir=TB;
+    bgcolor="transparent";
+    nodesep=0.35;
+    ranksep=0.45;
+
+    node [
+        shape=box,
+        style="rounded,filled",
+        fontname="Helvetica",
+        fontsize=11,
+        margin="0.25,0.15",
+        penwidth=1.2
+    ];
+
+    edge [
+        fontname="Helvetica",
+        fontsize=9,
+        penwidth=1.2,
+        arrowsize=0.8
+    ];
+
+    layer1 [
+        label=<<B>Layer 1 &#8212; Human framework &amp; manual</B><BR ALIGN="CENTER"/><FONT POINT-SIZE="10"><I>source-grounded authoring discipline</I></FONT><BR ALIGN="CENTER"/><BR ALIGN="CENTER"/><FONT POINT-SIZE="9">artifact: SbD-ToE manual corpus<BR ALIGN="CENTER"/>CC BY-SA 4.0 &#183; IGAC 949/2025</FONT>>,
+        fillcolor="#EEEEEE",
+        color="#888888"
+    ];
+
+    layer2 [
+        label=<<B>Layer 2 &#8212; SbD-ToE</B><BR ALIGN="CENTER"/><FONT POINT-SIZE="10"><I>prescriptive manual + knowledge organisation</I></FONT><BR ALIGN="CENTER"/><BR ALIGN="CENTER"/><FONT POINT-SIZE="9">public surface: www.securitybydesign.dev</FONT>>,
+        fillcolor="#FFF8DC",
+        color="#B8860B"
+    ];
+
+    layer3 [
+        label=<<B>Layer 3 &#8212; AppSec Core</B><BR ALIGN="CENTER"/><FONT POINT-SIZE="10"><I>normalized ontology for application-security requirements</I></FONT><BR ALIGN="CENTER"/><BR ALIGN="CENTER"/><FONT POINT-SIZE="9"><B>P1</B> &#183; <B>P1 companion</B>&nbsp;&nbsp;&nbsp;&nbsp;<FONT COLOR="#1F4E79">[Ontology Engineering]</FONT></FONT>>,
+        fillcolor="#E6F2FF",
+        color="#1F4E79"
+    ];
+
+    layer4 [
+        label=<<B>Layer 4 &#8212; Compilation</B><BR ALIGN="CENTER"/><FONT POINT-SIZE="10"><I>coverage-preserving transformation into the normalized layer</I></FONT><BR ALIGN="CENTER"/><BR ALIGN="CENTER"/><FONT POINT-SIZE="9"><B>P2</B> &#183; <B>P2-v2</B>&nbsp;&nbsp;&nbsp;&nbsp;<FONT COLOR="#2E7D32">[DSR]</FONT></FONT>>,
+        fillcolor="#E8F5E8",
+        color="#2E7D32"
+    ];
+
+    layer5 [
+        label=<<B>Layer 5 &#8212; Retrieval &amp; machine use</B><BR ALIGN="CENTER"/><FONT POINT-SIZE="10"><I>ontology-grounded delivery contract (MCP-based)</I></FONT><BR ALIGN="CENTER"/><BR ALIGN="CENTER"/><FONT POINT-SIZE="9"><B>P3</B>&nbsp;&nbsp;&nbsp;&nbsp;<FONT COLOR="#2E7D32">[DSR]</FONT></FONT>>,
+        fillcolor="#E8F5E8",
+        color="#2E7D32"
+    ];
+
+    layer6 [
+        label=<<B>Layer 6 &#8212; Apparatus &amp; evaluation</B><BR ALIGN="CENTER"/><FONT POINT-SIZE="10"><I>evidence layer: transparency spec + empirical design</I></FONT><BR ALIGN="CENTER"/><BR ALIGN="CENTER"/><FONT POINT-SIZE="9"><B>P5</B> (apparatus, frozen) &#183; <B>P4</B> (empirical design, registered)<BR ALIGN="CENTER"/><FONT COLOR="#B22222">[ACM SIGSOFT Empirical Standards]</FONT></FONT>>,
+        fillcolor="#FFE6E6",
+        color="#B22222"
+    ];
+
+    layer1 -> layer2;
+    layer2 -> layer3;
+    layer3 -> layer4;
+    layer4 -> layer5;
+    layer5 -> layer6;
+}
