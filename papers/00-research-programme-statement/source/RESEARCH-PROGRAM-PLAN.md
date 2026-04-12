@@ -1159,7 +1159,7 @@ This document (P0) is intended to be citable as a programme-level research prosp
 
 In plain text (IEEE-like numbered convention, consistent with P1-P3):
 
-> P. Farinha, *"Security-by-Design Research Programme: Methodological Architecture, Artifact Model, and Validation Strategy,"* Research Programme Prospectus (P0), SbD-ToE / AppSec Core, 2026. Available: `https://osf.io/yxvmh` (umbrella project; P0 component DOI to be assigned upon OSF publication).
+> P. Farinha, *"Security-by-Design Research Programme: Methodological Architecture, Artifact Model, and Validation Strategy,"* Research Programme Prospectus (P0), SbD-ToE / AppSec Core, 2026. DOI: `10.17605/OSF.IO/7T849`. Available: `https://osf.io/7t849` (accessed: 2026-04-12).
 
 ### 13.2 BibTeX
 
@@ -1172,7 +1172,8 @@ In plain text (IEEE-like numbered convention, consistent with P1-P3):
   number      = {P0},
   institution = {SbD-ToE / AppSec Core Research Programme},
   year        = {2026},
-  note        = {DOI to be assigned upon OSF publication},
+  doi         = {10.17605/OSF.IO/7T849},
+  url         = {https://osf.io/7t849},
   url         = {https://osf.io/yxvmh},
   note        = {Programme-level public component; not a preregistration.
                  Does not amend the registered P4 empirical design.}
@@ -1187,7 +1188,7 @@ For inline references within P1-P5 or external documents, the short form is:
 
 or, when an identifier is expected:
 
-> [P0] — Farinha 2026 (DOI pending OSF publication).
+> [P0] — Farinha 2026 (DOI `10.17605/OSF.IO/7T849` OSF publication).
 
 ### 13.4 Citing the programme versus citing individual papers
 
@@ -1209,7 +1210,7 @@ When the reference is to a **specific artifact or finding** — the normalized o
 | Ontology-grounded retrieval contract | P3 | see P3 manuscript / repository |
 | Empirical evaluation design (registered) | P4 | `10.17605/OSF.IO/H5AJE` |
 | Apparatus-definition companion (frozen) | P5 | `10.17605/OSF.IO/KH8Y7` |
-| Programme-level prospectus | P0 | DOI pending (this document) |
+| Programme-level prospectus | P0 | DOI `10.17605/OSF.IO/7T849` (this document) |
 
 Citing P0 in place of P1-P5 for an artifact-level claim is not correct; P0 is the binding architecture, not the source of the artifact-level result. Citing P1-P5 in place of P0 for a programme-level claim (methodological architecture, validation strategy, contribution enumeration) is also not correct; those claims are established here, not in the papers they bind.
 

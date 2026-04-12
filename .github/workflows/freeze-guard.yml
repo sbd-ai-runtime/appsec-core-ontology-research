@@ -17,7 +17,7 @@ name: Freeze Guard
 # as required in the branch protection rules for main.
 #
 # Currently protected frozen paths:
-#   - papers/00-research-programme-statement/** (Paper 0 programme prospectus, OSF DOI pending)
+#   - papers/00-research-programme-statement/** (Paper 0 programme prospectus, OSF DOI 10.17605/OSF.IO/7T849)
 #   - papers/04-empirical-evaluation/** (Paper 4 OSF mirror, DOI 10.17605/OSF.IO/H5AJE)
 #   - papers/05-mcp-se-engineering/**   (Paper 5 OSF companion mirror, DOI 10.17605/OSF.IO/KH8Y7)
 #
@@ -63,7 +63,7 @@ jobs:
           Canonical sources:
 
             Paper 0 — Research Programme Prospectus:
-              OSF DOI   pending (to be minted upon OSF publication)
+              OSF DOI   10.17605/OSF.IO/7T849
               OSF URL   https://osf.io/yxvmh (umbrella project)
 
             Paper 4 — Experimental Design (pre-registered):

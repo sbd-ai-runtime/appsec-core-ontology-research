@@ -1,6 +1,6 @@
 # Paper 0 — Research Programme Prospectus (Public Mirror)
 
-> **Canonical version**: OSF component DOI pending (to be minted upon OSF publication)
+> **Canonical version**: OSF DOI [10.17605/OSF.IO/7T849](https://doi.org/10.17605/OSF.IO/7T849)
 > **OSF Project**: https://osf.io/yxvmh
 >
 > **This folder**: Frozen mirror for citation convenience, backup, and offline access.
@@ -75,7 +75,7 @@ ded4e6a9dcef0976ac13f55430c598ce7c3247c0c6b4ce930f1091cfccae0868  RESEARCH-PROGR
 
 | Object | Identifier | Status |
 |--------|-----------|--------|
-| P0 OSF component | DOI pending | Not yet created |
+| P0 OSF component | [10.17605/OSF.IO/7T849](https://doi.org/10.17605/OSF.IO/7T849) | Not yet created |
 | P4 Empirical Design | [10.17605/OSF.IO/H5AJE](https://doi.org/10.17605/OSF.IO/H5AJE) | Registered |
 | P5 Apparatus Companion | [10.17605/OSF.IO/KH8Y7](https://doi.org/10.17605/OSF.IO/KH8Y7) | Frozen |
 | OSF Umbrella Project | [osf.io/yxvmh](https://osf.io/yxvmh) | Active |
