@@ -60,7 +60,7 @@ In short:
 
 For `v1.0.0`, the publication model is:
 
-- **one Zenodo DOI for the repository release**
+- **one Zenodo DOI for the repository release** *(pending — Zenodo archival in progress)*
 - **a three-paper core release with additional frozen design mirrors for companion study artifacts**
 
 The DOI resolves to the curated repository snapshot as a whole, not to separate Zenodo records per paper or mirror artifact. The three core papers and any additional frozen design mirrors in the release are part of the same research-program release and should cite the shared repository release alongside any paper-specific bibliographic reference.
@@ -69,6 +69,14 @@ For the current public mirrors:
 
 - Paper 4 study design: cite the OSF registration DOI `10.17605/OSF.IO/H5AJE` when referring to the registered study design
 - Paper 5 apparatus companion: cite the OSF component DOI `10.17605/OSF.IO/KH8Y7` when referring to the frozen apparatus-specification companion
+
+Individual paper preprint DOIs (OSF, citable now):
+
+- Paper 1 — AppSec Core ontology: `10.17605/OSF.IO/WG8PV`
+- Paper 2 — Coverage-preserving compilation: `10.17605/OSF.IO/A6ZFJ`
+- Paper 3 — Ontology-grounded retrieval: `10.17605/OSF.IO/S3HET`
+- Paper 4 — Empirical evaluation design (registered): `10.17605/OSF.IO/H5AJE`
+- Paper 5 — Apparatus specification (frozen): `10.17605/OSF.IO/KH8Y7`
 
 ## Current Repository Topology Decision
 
@@ -276,7 +284,7 @@ If the richer Paper 3 artifacts are not ready, the safest option is:
 For `v1.0.0`, cite:
 
 1. the relevant paper, when referring to a specific argument or method
-2. the shared Zenodo-backed repository release, when referring to the released artifact package
+2. the individual paper OSF DOI (see DOI Model above) until the Zenodo repository release DOI is available
 
 This keeps the citation model aligned with the actual publication structure:
 
@@ -290,7 +298,7 @@ This keeps the citation model aligned with the actual publication structure:
 Please cite:
 
 1. the specific paper you used
-2. the versioned repository release archived in Zenodo
+2. the individual paper OSF DOI (see DOI Model section) until the Zenodo repository release DOI is available
 
 Repository-level citation metadata is provided in [CITATION.cff](./CITATION.cff).
 
@@ -351,7 +359,7 @@ If executable code is later added as a maintained public surface, a split licens
 
 ## Status
 
-This staging package is a **publication plan and skeleton**, not yet the final public release repository.
+`v1.0.0` is the current public release. Papers 1–3 are final with OSF preprint DOIs. Papers 4–5 are registered/frozen on OSF. Zenodo archival is pending. The checklist below reflects remaining operational steps before Zenodo ingestion.
 
 Before public release:
 

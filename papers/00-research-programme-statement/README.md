@@ -4,7 +4,7 @@
 > **OSF Project**: https://osf.io/yxvmh
 >
 > **This folder**: Frozen mirror for citation convenience, backup, and offline access.
-> **Last sync**: 2026-04-12
+> **Last sync**: 2026-04-16
 > **Status**: Programme-level public component; NOT a preregistration; does NOT amend the registered P4 empirical design.
 
 ## What this is
@@ -63,8 +63,9 @@ shasum -a 256 RESEARCH-PROGRAM-PLAN.pdf source/RESEARCH-PROGRAM-PLAN.md source/i
 Expected output:
 
 ```
-ded4e6a9dcef0976ac13f55430c598ce7c3247c0c6b4ce930f1091cfccae0868  RESEARCH-PROGRAM-PLAN.pdf
-7b9c942bc71ea3f884a21c270645bebbdac019547afd487026a47eaa5be57991  source/RESEARCH-PROGRAM-PLAN.md
+89a799d0b20b4cb85ef27c78f03657ce76f4436c4398d1aabd3999fa88dde01b  RESEARCH-PROGRAM-PLAN.pdf
+cb8ed2bead87f81e8c7bbfe42fe106109b51193d3911d6ff48de2db4e35e234a  source/RESEARCH-PROGRAM-PLAN.md
+# DOIs de P1, P2, P3 adicionados à tabela §13.4 — correcção editorial, sem alteração de conteúdo científico
 491a5ea9d3a6d671add01b95394a2a6b8f50a4e271b7322201cea141e6d85288  source/images/diagram-01-layer-programme-flow.dot
 4286a286c17ef71ebbf4bb59dfec7124eae7651566196d46db4b134467246ab0  source/images/diagram-02-paper-artifact-publication-map.dot
 58f19d58b28e16d81fae8124ba624321b081d5dd5909c79dc2e77dfa0de084c9  source/images/diagram-01-layer-programme-flow.svg

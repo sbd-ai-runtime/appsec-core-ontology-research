@@ -1205,9 +1205,9 @@ When the reference is to a **specific artifact or finding** — the normalized o
 
 | Artifact | Paper | Identifier |
 |----------|-------|------------|
-| Normalized ontology baseline (*AppSec Core v0*) | P1 | see P1 manuscript / repository |
-| Coverage-preserving knowledge compilation | P2 | see P2 manuscript / repository |
-| Ontology-grounded retrieval contract | P3 | see P3 manuscript / repository |
+| Normalized ontology baseline (*AppSec Core v0*) | P1 | `10.17605/OSF.IO/WG8PV` |
+| Coverage-preserving knowledge compilation | P2 | `10.17605/OSF.IO/A6ZFJ` |
+| Ontology-grounded retrieval contract | P3 | `10.17605/OSF.IO/S3HET` |
 | Empirical evaluation design (registered) | P4 | `10.17605/OSF.IO/H5AJE` |
 | Apparatus-definition companion (frozen) | P5 | `10.17605/OSF.IO/KH8Y7` |
 | Programme-level prospectus | P0 | DOI `10.17605/OSF.IO/7T849` (this document) |

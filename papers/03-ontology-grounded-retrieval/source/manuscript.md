@@ -454,13 +454,13 @@ Curated supporting artifacts for this paper are available in the companion publi
 
 [6] P. Lewis et al., "Retrieval-augmented generation for knowledge-intensive NLP tasks," in *NeurIPS*, vol. 33, 2020, pp. 9459–9474.
 
-[7] P. Farinha, "AppSec Core: A normalized ontology for security requirements across heterogeneous frameworks," preprint, 2026. [arXiv ID: TBD — submitted as companion preprint]
+[7] P. Farinha, "AppSec Core: A normalized ontology for security requirements across heterogeneous frameworks," preprint, 2026, doi: 10.17605/OSF.IO/WG8PV.
 
 [8] Anthropic, "Model Context Protocol specification," version 2024-11-05, 2024. GitHub: https://github.com/modelcontextprotocol/modelcontextprotocol/releases (accessed: 2026-04-06).
 
-[9] B. Peng et al., "Graph retrieval-augmented generation: A survey," *ACM Trans. Inf. Syst.*, 2025, doi: 10.1145/3777378. [DOI to be verified against published record]
+[9] B. Peng et al., "Graph retrieval-augmented generation: A survey," *ACM Trans. Inf. Syst.*, 2025, doi: 10.1145/3777378.
 
-[10] P. Farinha, "Coverage-preserving compilation of normative and empirical security knowledge," preprint, 2026. [arXiv ID: TBD — submitted as companion preprint]
+[10] P. Farinha, "Coverage-preserving compilation of normative and empirical security knowledge," preprint, 2026, doi: 10.17605/OSF.IO/A6ZFJ.
 
 [11] MITRE. Common Weakness Enumeration (CWE). Available: https://cwe.mitre.org
 

@@ -520,7 +520,7 @@ Curated supporting artifacts for this paper are available in the companion publi
 
 ## References
 
-[1] P. Farinha, "AppSec Core: A normalized ontology for security requirements across heterogeneous frameworks," preprint, 2026. [arXiv ID: TBD — submitted as companion preprint]
+[1] P. Farinha, "AppSec Core: A normalized ontology for security requirements across heterogeneous frameworks," preprint, 2026, doi: 10.17605/OSF.IO/WG8PV.
 
 [2] NIST. Secure Software Development Framework (SSDF) Version 1.1. SP 800-218. 2022.
 
