@@ -81,7 +81,7 @@ Individual paper preprint DOIs (OSF, citable now):
 Repository archive DOIs:
 
 - figshare (v1.0.0): 10.6084/m9.figshare.32043771
-- B2SHARE: pending
+- B2SHARE (v1.0.1): 10.23728/b2share.b2wc1-tf049
 - Zenodo: pending
 
 ## Current Repository Topology Decision
