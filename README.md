@@ -78,6 +78,12 @@ Individual paper preprint DOIs (OSF, citable now):
 - Paper 4 — Empirical evaluation design (registered): `10.17605/OSF.IO/H5AJE`
 - Paper 5 — Apparatus specification (frozen): `10.17605/OSF.IO/KH8Y7`
 
+Repository archive DOIs:
+
+- figshare (v1.0.0): 10.6084/m9.figshare.32043771
+- B2SHARE: pending
+- Zenodo: pending
+
 ## Current Repository Topology Decision
 
 For `v1.0.0`, the best option is:
