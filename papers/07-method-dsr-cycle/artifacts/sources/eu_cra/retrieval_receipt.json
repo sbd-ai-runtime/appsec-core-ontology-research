@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "eu_cra",
+  "status": "captured",
+  "source_family": "EU_REGULATION",
+  "captured_at": "2026-05-09T10:55:37Z",
+  "iteration": "Cycle A retroactive provenance reinforcement",
+  "iteration_authority": "programme-lead Pedro Farinha 2026-05-09",
+  "celex_id": "32024R2847",
+  "items": [
+    {
+      "artifact_id": "ART-EU-CRA-PDF",
+      "source_document_id": "SRC-EU-CRA",
+      "source_kind": "regulation_pdf",
+      "title": "Cyber Resilience Act (CRA) — Regulation (EU) 2024/2847",
+      "origin_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R2847",
+      "celex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+      "celex_id": "32024R2847",
+      "publisher": "European Union (EUR-Lex)",
+      "publication_date": "2024-11-20",
+      "language": "en",
+      "local_path": "sources/eu_cra/eu_cra.pdf",
+      "retrieved_at": "2026-05-09T10:55:37Z",
+      "format": "pdf",
+      "size_bytes": 1782351,
+      "sha256": "e3ecaabddf6e321fa04097d15dfcccc7309d0fe5896240ab7625a27d74ab1b0a",
+      "version": "OJ L 2024/2847 (consolidated text)",
+      "license": "EU public sector reuse policy (Commission Decision 2011/833/EU)"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+meta:
+  pilot_id: eu_rgpd
+  status: source_captured_from_kg_synthesis
+source_document:
+  canonical_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
+  eu_reference: Regulation (EU) 2016/679
+  framework_family: GDPR
+  note: Articles extracted from knowledge-graph synthesis notes (2026-04-05 regulatory
+    wave). Article-by-article validation against SbD-ToE manual already completed.
+  publisher: European Union
+  source_document_id: SRC-EU-RGPD
+  source_kind: regulatory
+  title: General Data Protection Regulation (GDPR)
+  year: '2016'

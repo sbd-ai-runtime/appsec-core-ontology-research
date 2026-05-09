@@ -1,0 +1,24 @@
+{
+  "pilot_id": "nist_ai_rmf_1_0",
+  "n_inventory_items": 56,
+  "n_lifted_rows": 68,
+  "atomicity_ratio": 1.214,
+  "decomposition_method_distribution": {
+    "heuristic_split": 68
+  },
+  "governance_fraction_estimate": 0.265,
+  "duplicate_fraction": 0.0,
+  "n_unique_texts": 68,
+  "contextualised_text_length": {
+    "p50": 308,
+    "p90": 1813,
+    "min": 57,
+    "max": 19262
+  },
+  "chain_depth_distribution": {
+    "1": 28,
+    "2": 40
+  },
+  "flags": [],
+  "verdict": "PROCEED"
+}

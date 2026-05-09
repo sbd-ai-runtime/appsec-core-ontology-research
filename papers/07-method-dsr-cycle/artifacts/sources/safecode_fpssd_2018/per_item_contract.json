@@ -1,0 +1,1896 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "safecode_fpssd_2018",
+  "is_iteration_3_pilot": false,
+  "n_items": 17,
+  "items": [
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-SECURITY-CONTROLS",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-SECURITY-CONTROLS",
+      "source_text": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000001",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5717005729675293,
+          "disambiguation_margin": 0.15398359298706055,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000002",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5528347492218018,
+          "disambiguation_margin": 0.14113518595695496,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000003",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACM_TMR_003",
+          "target_id": "ACM-TMR-003",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5141677856445312,
+          "disambiguation_margin": 0.09102308750152588,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000004",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.49914979934692383,
+          "disambiguation_margin": 0.12908503413200378,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000005",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4712154269218445,
+          "disambiguation_margin": 0.13102370500564575,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000006",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4649178981781006,
+          "disambiguation_margin": 0.1467943787574768,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000007",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4354844093322754,
+          "disambiguation_margin": 0.05698922276496887,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000008",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4223700165748596,
+          "disambiguation_margin": 0.1308223009109497,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000009",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00001",
+          "item_ref": "SCFPSSD-SECURITY-CONTROLS",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4120118021965027,
+          "disambiguation_margin": 0.05123448371887207,
+          "rationale_snippet": "Actively Manage Application Security Controls. Application security control definition and active management throughout lifecycle",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-DESIGN-PRINCIPLES",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-DESIGN-PRINCIPLES",
+      "source_text": "Secure Design Principles. Foundational secure design principles for software architecture",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000010",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00002",
+          "item_ref": "SCFPSSD-DESIGN-PRINCIPLES",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.6523851156234741,
+          "disambiguation_margin": 0.24398493766784668,
+          "rationale_snippet": "Secure Design Principles. Foundational secure design principles for software architecture",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000011",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00002",
+          "item_ref": "SCFPSSD-DESIGN-PRINCIPLES",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5298908948898315,
+          "disambiguation_margin": 0.05293828248977661,
+          "rationale_snippet": "Secure Design Principles. Foundational secure design principles for software architecture",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000012",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00002",
+          "item_ref": "SCFPSSD-DESIGN-PRINCIPLES",
+          "target_core_entity": "ac:ACM_ATB_002",
+          "target_id": "ACM-ATB-002",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4994265139102936,
+          "disambiguation_margin": 0.08209502696990967,
+          "rationale_snippet": "Secure Design Principles. Foundational secure design principles for software architecture",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000013",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00002",
+          "item_ref": "SCFPSSD-DESIGN-PRINCIPLES",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.480691134929657,
+          "disambiguation_margin": 0.05604177713394165,
+          "rationale_snippet": "Secure Design Principles. Foundational secure design principles for software architecture",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000014",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00002",
+          "item_ref": "SCFPSSD-DESIGN-PRINCIPLES",
+          "target_core_entity": "ac:ACP_RPR_008",
+          "target_id": "ACP-RPR-008",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.46778541803359985,
+          "disambiguation_margin": 0.07868891954421997,
+          "rationale_snippet": "Secure Design Principles. Foundational secure design principles for software architecture",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000015",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00002",
+          "item_ref": "SCFPSSD-DESIGN-PRINCIPLES",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4641611576080322,
+          "disambiguation_margin": 0.09131598472595215,
+          "rationale_snippet": "Secure Design Principles. Foundational secure design principles for software architecture",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000016",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00002",
+          "item_ref": "SCFPSSD-DESIGN-PRINCIPLES",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.43629592657089233,
+          "disambiguation_margin": 0.05685493350028992,
+          "rationale_snippet": "Secure Design Principles. Foundational secure design principles for software architecture",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-THREAT-MODELING",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-THREAT-MODELING",
+      "source_text": "Threat Modeling. Systematic identification and assessment of threats to software design",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000017",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACM_TMR_002",
+          "target_id": "ACM-TMR-002",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.602874219417572,
+          "disambiguation_margin": 0.04973858594894409,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000018",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACP_IVF_003",
+          "target_id": "ACP-IVF-003",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.46964019536972046,
+          "disambiguation_margin": 0.09356766939163208,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000019",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACO_TSV_006",
+          "target_id": "ACO-TSV-006",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4619966149330139,
+          "disambiguation_margin": 0.0678224265575409,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000020",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.44143491983413696,
+          "disambiguation_margin": 0.04872041940689087,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000021",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.43838435411453247,
+          "disambiguation_margin": 0.06059718132019043,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000022",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4367102384567261,
+          "disambiguation_margin": 0.08486944437026978,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000023",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4356118142604828,
+          "disambiguation_margin": 0.12516137957572937,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000024",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACM_ATB_002",
+          "target_id": "ACM-ATB-002",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4308253228664398,
+          "disambiguation_margin": 0.06488034129142761,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000025",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00003",
+          "item_ref": "SCFPSSD-THREAT-MODELING",
+          "target_core_entity": "ac:ACP_ATB_003",
+          "target_id": "ACP-ATB-003",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4177749752998352,
+          "disambiguation_margin": 0.06575196981430054,
+          "rationale_snippet": "Threat Modeling. Systematic identification and assessment of threats to software design",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-ENCRYPTION",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-ENCRYPTION",
+      "source_text": "Develop an Encryption Strategy. Strategy for cryptographic protection of data at rest and in transit",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000026",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00004",
+          "item_ref": "SCFPSSD-ENCRYPTION",
+          "target_core_entity": "ac:ACP_SPC_002",
+          "target_id": "ACP-SPC-002",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4903729259967804,
+          "disambiguation_margin": 0.20351570844650269,
+          "rationale_snippet": "Develop an Encryption Strategy. Strategy for cryptographic protection of data at rest and in transit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000027",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00004",
+          "item_ref": "SCFPSSD-ENCRYPTION",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4758743643760681,
+          "disambiguation_margin": 0.06306624412536621,
+          "rationale_snippet": "Develop an Encryption Strategy. Strategy for cryptographic protection of data at rest and in transit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000028",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00004",
+          "item_ref": "SCFPSSD-ENCRYPTION",
+          "target_core_entity": "ac:ACO_ITS_002",
+          "target_id": "ACO-ITS-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.43465322256088257,
+          "disambiguation_margin": 0.13862058520317078,
+          "rationale_snippet": "Develop an Encryption Strategy. Strategy for cryptographic protection of data at rest and in transit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000029",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00004",
+          "item_ref": "SCFPSSD-ENCRYPTION",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.41329777240753174,
+          "disambiguation_margin": 0.17651492357254028,
+          "rationale_snippet": "Develop an Encryption Strategy. Strategy for cryptographic protection of data at rest and in transit",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-IAM",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-IAM",
+      "source_text": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000030",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00005",
+          "item_ref": "SCFPSSD-IAM",
+          "target_core_entity": "ac:ACO_IAT_007",
+          "target_id": "ACO-IAT-007",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5724269151687622,
+          "disambiguation_margin": 0.051038384437561035,
+          "rationale_snippet": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000031",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00005",
+          "item_ref": "SCFPSSD-IAM",
+          "target_core_entity": "ac:ACP_SPC_004",
+          "target_id": "ACP-SPC-004",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5137508511543274,
+          "disambiguation_margin": 0.12228316068649292,
+          "rationale_snippet": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000032",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00005",
+          "item_ref": "SCFPSSD-IAM",
+          "target_core_entity": "ac:ACM_SPC_002",
+          "target_id": "ACM-SPC-002",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5056450366973877,
+          "disambiguation_margin": 0.10935959219932556,
+          "rationale_snippet": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000033",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00005",
+          "item_ref": "SCFPSSD-IAM",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4916844367980957,
+          "disambiguation_margin": 0.07137012481689453,
+          "rationale_snippet": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000034",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00005",
+          "item_ref": "SCFPSSD-IAM",
+          "target_core_entity": "ac:ACO_SPC_004",
+          "target_id": "ACO-SPC-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4672930836677551,
+          "disambiguation_margin": 0.06734609603881836,
+          "rationale_snippet": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000035",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00005",
+          "item_ref": "SCFPSSD-IAM",
+          "target_core_entity": "ac:ACO_IVF_006",
+          "target_id": "ACO-IVF-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.45637351274490356,
+          "disambiguation_margin": 0.25485745072364807,
+          "rationale_snippet": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000036",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00005",
+          "item_ref": "SCFPSSD-IAM",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.44735103845596313,
+          "disambiguation_margin": 0.05549260973930359,
+          "rationale_snippet": "Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-LOGGING",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-LOGGING",
+      "source_text": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000037",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.7119343280792236,
+          "disambiguation_margin": 0.050008177757263184,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000038",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.6811043620109558,
+          "disambiguation_margin": 0.07466083765029907,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000039",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.6507306098937988,
+          "disambiguation_margin": 0.3303379416465759,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000040",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.6287894248962402,
+          "disambiguation_margin": 0.19108641147613525,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000041",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACP_ITS_006",
+          "target_id": "ACP-ITS-006",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.6205720901489258,
+          "disambiguation_margin": 0.24197405576705933,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000042",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACO_IVF_006",
+          "target_id": "ACO-IVF-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.539751410484314,
+          "disambiguation_margin": 0.20142969489097595,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000043",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACM_ITS_005",
+          "target_id": "ACM-ITS-005",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5265990495681763,
+          "disambiguation_margin": 0.10229760408401489,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000044",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACP_RPR_010",
+          "target_id": "ACP-RPR-010",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5199365615844727,
+          "disambiguation_margin": 0.06632682681083679,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000045",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACM_RPR_005",
+          "target_id": "ACM-RPR-005",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5197027921676636,
+          "disambiguation_margin": 0.06422138214111328,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000046",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4956314265727997,
+          "disambiguation_margin": 0.06991949677467346,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000047",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACO_TSV_004",
+          "target_id": "ACO-TSV-004",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.47559118270874023,
+          "disambiguation_margin": 0.05709803104400635,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000048",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACP_TSV_004",
+          "target_id": "ACP-TSV-004",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4753292202949524,
+          "disambiguation_margin": 0.11351931095123291,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000049",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACP_IVF_006",
+          "target_id": "ACP-IVF-006",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4729654788970947,
+          "disambiguation_margin": 0.08175396919250488,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000050",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.46934884786605835,
+          "disambiguation_margin": 0.15704071521759033,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000051",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46024876832962036,
+          "disambiguation_margin": 0.11072033643722534,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000052",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACO_ITS_006",
+          "target_id": "ACO-ITS-006",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4546077847480774,
+          "disambiguation_margin": 0.12311455607414246,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000053",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACP_ATB_002",
+          "target_id": "ACP-ATB-002",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.41922152042388916,
+          "disambiguation_margin": 0.10525378584861755,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000054",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00006",
+          "item_ref": "SCFPSSD-LOGGING",
+          "target_core_entity": "ac:ACO_SPC_006",
+          "target_id": "ACO-SPC-006",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.41675621271133423,
+          "disambiguation_margin": 0.07559424638748169,
+          "rationale_snippet": "Establish Log Requirements and Audit Practices. Security logging requirements and audit trail practices for software",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-CODING-STANDARDS",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-CODING-STANDARDS",
+      "source_text": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000055",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5562041401863098,
+          "disambiguation_margin": 0.09143590927124023,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000056",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5023589134216309,
+          "disambiguation_margin": 0.061994194984436035,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000057",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4828985631465912,
+          "disambiguation_margin": 0.14995837211608887,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000058",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.46556055545806885,
+          "disambiguation_margin": 0.11260354518890381,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000059",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4521549344062805,
+          "disambiguation_margin": 0.12067627906799316,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000060",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44251322746276855,
+          "disambiguation_margin": 0.04657977819442749,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000061",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4365580677986145,
+          "disambiguation_margin": 0.09066855907440186,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000062",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACO_IVF_006",
+          "target_id": "ACO-IVF-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.43168503046035767,
+          "disambiguation_margin": 0.11187911033630371,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000063",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.42946600914001465,
+          "disambiguation_margin": 0.07814580202102661,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000064",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00007",
+          "item_ref": "SCFPSSD-CODING-STANDARDS",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4217402935028076,
+          "disambiguation_margin": 0.1199498176574707,
+          "rationale_snippet": "Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-DATA-HANDLING",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-DATA-HANDLING",
+      "source_text": "Handle Data Safely. Safe data handling practices including input validation, output encoding, parameterized queries",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000065",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00008",
+          "item_ref": "SCFPSSD-DATA-HANDLING",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5846775770187378,
+          "disambiguation_margin": 0.08630290627479553,
+          "rationale_snippet": "Handle Data Safely. Safe data handling practices including input validation, output encoding, parameterized queries",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000066",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00008",
+          "item_ref": "SCFPSSD-DATA-HANDLING",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4499948024749756,
+          "disambiguation_margin": 0.19403871893882751,
+          "rationale_snippet": "Handle Data Safely. Safe data handling practices including input validation, output encoding, parameterized queries",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000067",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00008",
+          "item_ref": "SCFPSSD-DATA-HANDLING",
+          "target_core_entity": "ac:ACM_TMR_005",
+          "target_id": "ACM-TMR-005",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.427481472492218,
+          "disambiguation_margin": 0.14326512813568115,
+          "rationale_snippet": "Handle Data Safely. Safe data handling practices including input validation, output encoding, parameterized queries",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000068",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00008",
+          "item_ref": "SCFPSSD-DATA-HANDLING",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4178653955459595,
+          "disambiguation_margin": 0.09119445085525513,
+          "rationale_snippet": "Handle Data Safely. Safe data handling practices including input validation, output encoding, parameterized queries",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-THIRD-PARTY",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-THIRD-PARTY",
+      "source_text": "Manage Security Risk Inherent in the Use of Third-party Components. Risk management for third-party and open source components including monitoring vulnerabilities",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000069",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00009",
+          "item_ref": "SCFPSSD-THIRD-PARTY",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.48596906661987305,
+          "disambiguation_margin": 0.10510596632957458,
+          "rationale_snippet": "Manage Security Risk Inherent in the Use of Third-party Components. Risk management for third-party and open source components including monitoring vulnerabilities",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000070",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00009",
+          "item_ref": "SCFPSSD-THIRD-PARTY",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.48374781012535095,
+          "disambiguation_margin": 0.09149330854415894,
+          "rationale_snippet": "Manage Security Risk Inherent in the Use of Third-party Components. Risk management for third-party and open source components including monitoring vulnerabilities",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000071",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00009",
+          "item_ref": "SCFPSSD-THIRD-PARTY",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4404836893081665,
+          "disambiguation_margin": 0.11015331745147705,
+          "rationale_snippet": "Manage Security Risk Inherent in the Use of Third-party Components. Risk management for third-party and open source components including monitoring vulnerabilities",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-TESTING",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-TESTING",
+      "source_text": "Testing and Validation (Automated and Manual). Automated testing (SAST, DAST, fuzzing) and manual testing (pen testing, code review) practices",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000072",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00010",
+          "item_ref": "SCFPSSD-TESTING",
+          "target_core_entity": "ac:ACP_TSV_006",
+          "target_id": "ACP-TSV-006",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.6291482448577881,
+          "disambiguation_margin": 0.1851125955581665,
+          "rationale_snippet": "Testing and Validation (Automated and Manual). Automated testing (SAST, DAST, fuzzing) and manual testing (pen testing, code review) practices",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000073",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00010",
+          "item_ref": "SCFPSSD-TESTING",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4606315493583679,
+          "disambiguation_margin": 0.11793482303619385,
+          "rationale_snippet": "Testing and Validation (Automated and Manual). Automated testing (SAST, DAST, fuzzing) and manual testing (pen testing, code review) practices",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000074",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00010",
+          "item_ref": "SCFPSSD-TESTING",
+          "target_core_entity": "ac:ACP_RPR_005",
+          "target_id": "ACP-RPR-005",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4450022578239441,
+          "disambiguation_margin": 0.12139087915420532,
+          "rationale_snippet": "Testing and Validation (Automated and Manual). Automated testing (SAST, DAST, fuzzing) and manual testing (pen testing, code review) practices",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000075",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00010",
+          "item_ref": "SCFPSSD-TESTING",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.44330891966819763,
+          "disambiguation_margin": 0.05725160241127014,
+          "rationale_snippet": "Testing and Validation (Automated and Manual). Automated testing (SAST, DAST, fuzzing) and manual testing (pen testing, code review) practices",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000076",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00010",
+          "item_ref": "SCFPSSD-TESTING",
+          "target_core_entity": "ac:ACM_ATB_005",
+          "target_id": "ACM-ATB-005",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4326058030128479,
+          "disambiguation_margin": 0.16733163595199585,
+          "rationale_snippet": "Testing and Validation (Automated and Manual). Automated testing (SAST, DAST, fuzzing) and manual testing (pen testing, code review) practices",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-FINDINGS",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-FINDINGS",
+      "source_text": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00011"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000077",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5296790599822998,
+          "disambiguation_margin": 0.06377077102661133,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000078",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5263556838035583,
+          "disambiguation_margin": 0.051509737968444824,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000079",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACM_TMR_002",
+          "target_id": "ACM-TMR-002",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5117721557617188,
+          "disambiguation_margin": 0.04879182577133179,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000080",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5100106596946716,
+          "disambiguation_margin": 0.07901927828788757,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000081",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.48965704441070557,
+          "disambiguation_margin": 0.08843451738357544,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000082",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACM_SLG_005",
+          "target_id": "ACM-SLG-005",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4635929763317108,
+          "disambiguation_margin": 0.09189215302467346,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000083",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.45826148986816406,
+          "disambiguation_margin": 0.07552450895309448,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000084",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.446061909198761,
+          "disambiguation_margin": 0.095245361328125,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000085",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.43895018100738525,
+          "disambiguation_margin": 0.047327518463134766,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000086",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00011",
+          "item_ref": "SCFPSSD-FINDINGS",
+          "target_core_entity": "ac:ACM_ITS_002",
+          "target_id": "ACM-ITS-002",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.412273645401001,
+          "disambiguation_margin": 0.09261417388916016,
+          "rationale_snippet": "Manage Security Findings. Security finding severity definition and risk acceptance process",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-VULN-RESPONSE",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-VULN-RESPONSE",
+      "source_text": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00012"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000087",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACM_IVF_004",
+          "target_id": "ACM-IVF-004",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5142089128494263,
+          "disambiguation_margin": 0.08890950679779053,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000088",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5134139060974121,
+          "disambiguation_margin": 0.13392043113708496,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000089",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACO_TSV_003",
+          "target_id": "ACO-TSV-003",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5096813440322876,
+          "disambiguation_margin": 0.05986231565475464,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000090",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.49291908740997314,
+          "disambiguation_margin": 0.04864770174026489,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000091",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4865723252296448,
+          "disambiguation_margin": 0.059767842292785645,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000092",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4825342893600464,
+          "disambiguation_margin": 0.07152557373046875,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000093",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46304458379745483,
+          "disambiguation_margin": 0.09884783625602722,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000094",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4529710114002228,
+          "disambiguation_margin": 0.05104115605354309,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000095",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4411516785621643,
+          "disambiguation_margin": 0.11816424131393433,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000096",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00012",
+          "item_ref": "SCFPSSD-VULN-RESPONSE",
+          "target_core_entity": "ac:ACP_ITS_006",
+          "target_id": "ACP-ITS-006",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4184255003929138,
+          "disambiguation_margin": 0.0859258770942688,
+          "rationale_snippet": "Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-FIX-VULN",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-FIX-VULN",
+      "source_text": "Fix the Vulnerability. Process for fixing identified vulnerabilities and providing patches",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00013"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000097",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00013",
+          "item_ref": "SCFPSSD-FIX-VULN",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42886099219322205,
+          "disambiguation_margin": 0.09712013602256775,
+          "rationale_snippet": "Fix the Vulnerability. Process for fixing identified vulnerabilities and providing patches",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-MITIGATIONS",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-MITIGATIONS",
+      "source_text": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00014"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000098",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACM_TSV_004",
+          "target_id": "ACM-TSV-004",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5229219794273376,
+          "disambiguation_margin": 0.11641469597816467,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000099",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACM_RPR_004",
+          "target_id": "ACM-RPR-004",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.49571770429611206,
+          "disambiguation_margin": 0.11179578304290771,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000100",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACM_TMR_008",
+          "target_id": "ACM-TMR-008",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4948824346065521,
+          "disambiguation_margin": 0.07344898581504822,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000101",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACP_TMR_009",
+          "target_id": "ACP-TMR-009",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4938753843307495,
+          "disambiguation_margin": 0.07897305488586426,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000102",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACO_RPR_010",
+          "target_id": "ACO-RPR-010",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.472694993019104,
+          "disambiguation_margin": 0.06700390577316284,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000103",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACP_TSV_003",
+          "target_id": "ACP-TSV-003",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.46248483657836914,
+          "disambiguation_margin": 0.1543065905570984,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000104",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACM_IVF_004",
+          "target_id": "ACM-IVF-004",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.452735960483551,
+          "disambiguation_margin": 0.054901719093322754,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000105",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACM_SCBI_001",
+          "target_id": "ACM-SCBI-001",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.45102208852767944,
+          "disambiguation_margin": 0.09037396311759949,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000106",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.441882848739624,
+          "disambiguation_margin": 0.06788033246994019,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000107",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACP_ATB_002",
+          "target_id": "ACP-ATB-002",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.42117562890052795,
+          "disambiguation_margin": 0.065009206533432,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000108",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00014",
+          "item_ref": "SCFPSSD-MITIGATIONS",
+          "target_core_entity": "ac:ACM_SLG_004",
+          "target_id": "ACM-SLG-004",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4201042652130127,
+          "disambiguation_margin": 0.10486310720443726,
+          "rationale_snippet": "Identify Mitigating Factors or Workarounds. When fixes unavailable, identify mitigations and workarounds for stakeholders",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-LIFECYCLE-FEEDBACK",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-LIFECYCLE-FEEDBACK",
+      "source_text": "Secure Development Lifecycle Feedback. Root cause analysis feedback loop into SDLC improvement",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00015"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000109",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00015",
+          "item_ref": "SCFPSSD-LIFECYCLE-FEEDBACK",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5056146383285522,
+          "disambiguation_margin": 0.1175011694431305,
+          "rationale_snippet": "Secure Development Lifecycle Feedback. Root cause analysis feedback loop into SDLC improvement",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000110",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00015",
+          "item_ref": "SCFPSSD-LIFECYCLE-FEEDBACK",
+          "target_core_entity": "ac:ACM_TSV_003",
+          "target_id": "ACM-TSV-003",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.45401811599731445,
+          "disambiguation_margin": 0.05461585521697998,
+          "rationale_snippet": "Secure Development Lifecycle Feedback. Root cause analysis feedback loop into SDLC improvement",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000111",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00015",
+          "item_ref": "SCFPSSD-LIFECYCLE-FEEDBACK",
+          "target_core_entity": "ac:ACM_SCBI_001",
+          "target_id": "ACM-SCBI-001",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4489024877548218,
+          "disambiguation_margin": 0.07896798849105835,
+          "rationale_snippet": "Secure Development Lifecycle Feedback. Root cause analysis feedback loop into SDLC improvement",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000112",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00015",
+          "item_ref": "SCFPSSD-LIFECYCLE-FEEDBACK",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44127917289733887,
+          "disambiguation_margin": 0.09476542472839355,
+          "rationale_snippet": "Secure Development Lifecycle Feedback. Root cause analysis feedback loop into SDLC improvement",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000113",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00015",
+          "item_ref": "SCFPSSD-LIFECYCLE-FEEDBACK",
+          "target_core_entity": "ac:ACP_TSV_005",
+          "target_id": "ACP-TSV-005",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.43829581141471863,
+          "disambiguation_margin": 0.05054628849029541,
+          "rationale_snippet": "Secure Development Lifecycle Feedback. Root cause analysis feedback loop into SDLC improvement",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-PLANNING",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-PLANNING",
+      "source_text": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00016"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000114",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5487142205238342,
+          "disambiguation_margin": 0.11650499701499939,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000115",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACP_TSV_001",
+          "target_id": "ACP-TSV-001",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.47266313433647156,
+          "disambiguation_margin": 0.07556530833244324,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000116",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.45938605070114136,
+          "disambiguation_margin": 0.06968075037002563,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000117",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACO_TSV_007",
+          "target_id": "ACO-TSV-007",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4555444121360779,
+          "disambiguation_margin": 0.06113708019256592,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000118",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4551537036895752,
+          "disambiguation_margin": 0.04572895169258118,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000119",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACP_ATB_003",
+          "target_id": "ACP-ATB-003",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.44906172156333923,
+          "disambiguation_margin": 0.09526988863945007,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000120",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACM_ATB_002",
+          "target_id": "ACM-ATB-002",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4465111196041107,
+          "disambiguation_margin": 0.05623328685760498,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000121",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00016",
+          "item_ref": "SCFPSSD-PLANNING",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.41057515144348145,
+          "disambiguation_margin": 0.1208164393901825,
+          "rationale_snippet": "Planning the Implementation and Deployment of Secure Development Practices. Organizational culture, expertise, deployment scope, stakeholder management, compliance measurement, SDL process health",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_fpssd_2018/SCFPSSD-COMPILER",
+      "source": "safecode_fpssd_2018",
+      "source_object_id": "SCFPSSD-COMPILER",
+      "source_text": "Use Current Compiler and Toolchain Versions and Secure Compiler Options. Current compiler/toolchain versions with security-enhancing compiler options enabled",
+      "source_lifted_rows": [
+        "SAFECODE_FPSSD_2018-LIFTED-00017"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000122",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00017",
+          "item_ref": "SCFPSSD-COMPILER",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4696078300476074,
+          "disambiguation_margin": 0.06841206550598145,
+          "rationale_snippet": "Use Current Compiler and Toolchain Versions and Secure Compiler Options. Current compiler/toolchain versions with security-enhancing compiler options enabled",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_FPSSD_2018-CLAIM-000123",
+          "lifted_row_ref": "SAFECODE_FPSSD_2018-LIFTED-00017",
+          "item_ref": "SCFPSSD-COMPILER",
+          "target_core_entity": "ac:ACM_TMR_003",
+          "target_id": "ACM-TMR-003",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.41547471284866333,
+          "disambiguation_margin": 0.09912902116775513,
+          "rationale_snippet": "Use Current Compiler and Toolchain Versions and Secure Compiler Options. Current compiler/toolchain versions with security-enhancing compiler options enabled",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

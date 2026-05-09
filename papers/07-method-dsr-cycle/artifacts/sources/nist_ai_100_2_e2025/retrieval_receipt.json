@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "nist_ai_100_2_e2025",
+  "status": "captured",
+  "source_family": "NIST_AI",
+  "mapping_direction": "mixed",
+  "captured_at": "2026-05-07T17:04:26Z",
+  "iteration": "Cycle A Iteration 3",
+  "iteration_authority": "programme-lead Pedro Farinha 2026-05-06",
+  "items": [
+    {
+      "artifact_id": "ART-NIST-AI-100-2-E2025-PDF",
+      "source_document_id": "SRC-NIST-AI-100-2-E2025",
+      "source_kind": "publication_pdf",
+      "origin_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf",
+      "doi": "https://doi.org/10.6028/NIST.AI.100-2e2025",
+      "publication_page": "https://csrc.nist.gov/pubs/ai/100/2/e2025/final",
+      "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+      "release_date": "2025-03-24",
+      "local_path": "sources/nist_ai_100_2_e2025/NIST.AI.100-2e2025.pdf",
+      "retrieved_at": "2026-05-07T17:04:26Z",
+      "file_timestamp": "2026-05-07T17:02:59Z",
+      "format": "pdf",
+      "size_bytes": 1964469,
+      "sha256": "4811fb6ad73f9c9121843ab77e029b5adc6f2c86d33c2fc5b2099ef133847646",
+      "version": "AI 100-2 E2025"
+    }
+  ]
+}

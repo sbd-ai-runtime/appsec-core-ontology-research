@@ -1,0 +1,37 @@
+pilot_id: owasp_dsomm
+status: published_traceability_surface_compared
+source_model: generated_model_yaml_plus_official_project_pages_and_frozen_data_repo_snapshot
+comparison_target: sbdtoe_manual_v2_via_appsec_core_v0
+classification_taxonomy:
+  - manual_gap
+  - appsec_core_gap
+  - comparison_gap
+  - out_of_scope_for_appsec_core
+pipeline_steps:
+  - confirm_frozen_source_cut
+  - capture_source
+  - extract_source_units
+  - extract_source_objects
+  - normalize_domain_semantics_to_appsec_core
+  - separate_maturity_and_capability_pressure
+  - classify_gap_kind
+  - compare_against_manual_traceability_surface
+  - review_against_chapter_achievable_maturity_claims
+planned_outputs:
+  - data/owasp_dsomm/stubs/source_retrieval_receipt.json
+  - data/owasp_dsomm/stubs/external_source_inventory.json
+  - data/owasp_dsomm/stubs/source_unit_inventory.json
+  - data/owasp_dsomm/stubs/source_object_inventory.json
+  - data/owasp_dsomm/stubs/appsec_core_normalization.json
+  - data/owasp_dsomm/stubs/manual_gap_analysis.json
+  - data/owasp_dsomm/stubs/chapter_maturity_claim_review.json
+  - data/owasp_dsomm/stubs/chapter_maturity_claim_review.md
+  - data/owasp_dsomm/stubs/published_manual_traceability_comparison.json
+  - data/owasp_dsomm/stubs/published_manual_traceability_comparison.md
+notes:
+  - This pilot is intentionally opened before any decision to create a separate maturity or capability model beside the AppSec Core.
+  - The first question was whether current core semantics absorb most DSOMM domain content cleanly enough.
+  - The second question was whether the residual pressure is domain pressure or maturity-layer pressure.
+  - The current frozen source cut is DSOMM generated model `4.2.0` plus `DevSecOps-MaturityModel-data` commit `fda3b250ae9325b8c10f23318c9f0768eaa60b98`.
+  - No direct manual_gap is asserted after comparison against the published manual surface.
+  - The sharpest residual pressure remains `Application Hardening`, while most other DSOMM tension now reads as traceability repair, comparison-method pressure or scope boundary.

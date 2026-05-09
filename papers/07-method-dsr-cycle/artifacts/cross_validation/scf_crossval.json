@@ -1,0 +1,401 @@
+{
+  "schema": "scf_crossval_v7/1.0",
+  "substrate": "v7 (post-AI/ML Iteration 3)",
+  "substrate_supplier_path": "data/p7_olir_audit/p7_v2_corrected/v7/SUPPLIER_v7_0.json",
+  "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+  "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+  "ontology_tag": "ontology-v1-next-acr004-promoted",
+  "scf_version": "2026.1",
+  "methodology": {
+    "oracle_path": "SCF 2026.1 STRM published cross-references (10 pilots; data/p7_olir_audit/scf_audit/scf_strm_extracted/)",
+    "pair_counting_variant": "B (GROUNDED both sides)",
+    "primary_anchor_derivation": "CO-level-preferred (highest-similarity CO-level claim if any; else highest claim overall)",
+    "strict_definition": "exact_co match between substrate-v7 primary CO of item A and primary CO of item B, where (A, B) is a cross-pilot pair sharing an SCF control reference",
+    "adjusted_definition": "strict + same-slice match counted as convergent (slice-bridge)",
+    "pair_generation": "for each SCF control with \u22652 pilots referencing it: cross-pilot product of normalized substrate-v7 source_object_ids that resolve to GROUNDED items",
+    "level_treatment": "all pilot items are at comparable abstraction levels in v7 (no SSDF-style process\u2192implementation hierarchy distinction); no separate cross-level bucket",
+    "pilots_with_strm_extracts": [
+      "nist_sp800_53_rev5",
+      "cis_controls_v8_1_2",
+      "ssdf_sp800_218_v1_1",
+      "pci_dss_v4_0_1",
+      "owasp_top_10_2021",
+      "hipaa_security_rule",
+      "eu_cra",
+      "eu_dora",
+      "eu_nis2",
+      "eu_rgpd"
+    ],
+    "version_drift_caveats": [
+      "owasp_top_10_2021: SCF references 'A01:2025' \u2014 corpus has 2021. Category code (A01) used as primary key; year mismatch tolerated.",
+      "Other pilots: direct version match per scf_strm_extracted/<pilot>_scf_strm_mappings.json `version_match: exact` field."
+    ]
+  },
+  "totals": {
+    "n_total_pairs_variant_a": 5652,
+    "n_decidable_variant_b": 5652,
+    "n_strict": 566,
+    "n_same_slice": 388,
+    "n_different_slice": 4698
+  },
+  "convergence_rates": {
+    "strict_pct": 10.01,
+    "adjusted_pct": 16.88
+  },
+  "per_pilot_resolution": {
+    "resolved": {
+      "cis_controls_v8_1_2": 389,
+      "eu_cra": 22,
+      "eu_dora": 183,
+      "eu_nis2": 146,
+      "eu_rgpd": 31,
+      "hipaa_security_rule": 98,
+      "nist_sp800_53_rev5": 988,
+      "owasp_top_10_2021": 279,
+      "pci_dss_v4_0_1": 1140,
+      "ssdf_sp800_218_v1_1": 164
+    },
+    "unresolved": {
+      "cis_controls_v8_1_2": 40,
+      "eu_cra": 38,
+      "eu_dora": 259,
+      "eu_rgpd": 210,
+      "hipaa_security_rule": 127,
+      "nist_sp800_53_rev5": 129,
+      "owasp_top_10_2021": 21,
+      "pci_dss_v4_0_1": 78
+    }
+  },
+  "per_pilot_pair_counts": {
+    "nist_sp800_53_rev5 \u00d7 pci_dss_v4_0_1": 1064,
+    "cis_controls_v8_1_2 \u00d7 nist_sp800_53_rev5": 529,
+    "cis_controls_v8_1_2 \u00d7 pci_dss_v4_0_1": 475,
+    "owasp_top_10_2021 \u00d7 ssdf_sp800_218_v1_1": 419,
+    "nist_sp800_53_rev5 \u00d7 owasp_top_10_2021": 356,
+    "cis_controls_v8_1_2 \u00d7 owasp_top_10_2021": 322,
+    "hipaa_security_rule \u00d7 nist_sp800_53_rev5": 314,
+    "hipaa_security_rule \u00d7 pci_dss_v4_0_1": 288,
+    "owasp_top_10_2021 \u00d7 pci_dss_v4_0_1": 260,
+    "cis_controls_v8_1_2 \u00d7 ssdf_sp800_218_v1_1": 164,
+    "eu_dora \u00d7 pci_dss_v4_0_1": 142,
+    "pci_dss_v4_0_1 \u00d7 ssdf_sp800_218_v1_1": 136,
+    "eu_dora \u00d7 nist_sp800_53_rev5": 125,
+    "nist_sp800_53_rev5 \u00d7 ssdf_sp800_218_v1_1": 123,
+    "eu_nis2 \u00d7 nist_sp800_53_rev5": 118,
+    "cis_controls_v8_1_2 \u00d7 eu_nis2": 105,
+    "cis_controls_v8_1_2 \u00d7 hipaa_security_rule": 104,
+    "eu_nis2 \u00d7 pci_dss_v4_0_1": 93,
+    "cis_controls_v8_1_2 \u00d7 eu_dora": 80,
+    "eu_nis2 \u00d7 owasp_top_10_2021": 67,
+    "eu_dora \u00d7 hipaa_security_rule": 48,
+    "hipaa_security_rule \u00d7 owasp_top_10_2021": 46,
+    "eu_nis2 \u00d7 hipaa_security_rule": 36,
+    "eu_dora \u00d7 owasp_top_10_2021": 35,
+    "eu_dora \u00d7 eu_nis2": 25,
+    "eu_dora \u00d7 ssdf_sp800_218_v1_1": 25,
+    "eu_rgpd \u00d7 pci_dss_v4_0_1": 25,
+    "eu_rgpd \u00d7 nist_sp800_53_rev5": 22,
+    "eu_nis2 \u00d7 ssdf_sp800_218_v1_1": 18,
+    "eu_cra \u00d7 owasp_top_10_2021": 18,
+    "eu_cra \u00d7 ssdf_sp800_218_v1_1": 18,
+    "hipaa_security_rule \u00d7 ssdf_sp800_218_v1_1": 14,
+    "cis_controls_v8_1_2 \u00d7 eu_rgpd": 11,
+    "eu_rgpd \u00d7 hipaa_security_rule": 7,
+    "cis_controls_v8_1_2 \u00d7 eu_cra": 4,
+    "eu_cra \u00d7 pci_dss_v4_0_1": 4,
+    "eu_dora \u00d7 eu_rgpd": 3,
+    "eu_nis2 \u00d7 eu_rgpd": 3,
+    "eu_rgpd \u00d7 owasp_top_10_2021": 2,
+    "eu_cra \u00d7 eu_dora": 2,
+    "eu_cra \u00d7 nist_sp800_53_rev5": 1,
+    "eu_rgpd \u00d7 ssdf_sp800_218_v1_1": 1
+  },
+  "per_pilot_pair_outcomes": {
+    "cis_controls_v8_1_2 \u00d7 eu_nis2": {
+      "different_slice": 82,
+      "strict": 15,
+      "same_slice": 8
+    },
+    "cis_controls_v8_1_2 \u00d7 nist_sp800_53_rev5": {
+      "different_slice": 437,
+      "strict": 63,
+      "same_slice": 29
+    },
+    "cis_controls_v8_1_2 \u00d7 pci_dss_v4_0_1": {
+      "different_slice": 391,
+      "same_slice": 33,
+      "strict": 51
+    },
+    "eu_nis2 \u00d7 nist_sp800_53_rev5": {
+      "different_slice": 95,
+      "strict": 10,
+      "same_slice": 13
+    },
+    "eu_nis2 \u00d7 pci_dss_v4_0_1": {
+      "different_slice": 77,
+      "strict": 11,
+      "same_slice": 5
+    },
+    "nist_sp800_53_rev5 \u00d7 pci_dss_v4_0_1": {
+      "different_slice": 881,
+      "strict": 93,
+      "same_slice": 90
+    },
+    "cis_controls_v8_1_2 \u00d7 eu_dora": {
+      "different_slice": 72,
+      "same_slice": 4,
+      "strict": 4
+    },
+    "cis_controls_v8_1_2 \u00d7 eu_rgpd": {
+      "different_slice": 11
+    },
+    "eu_dora \u00d7 eu_nis2": {
+      "same_slice": 6,
+      "different_slice": 19
+    },
+    "eu_dora \u00d7 eu_rgpd": {
+      "different_slice": 2,
+      "same_slice": 1
+    },
+    "eu_dora \u00d7 nist_sp800_53_rev5": {
+      "different_slice": 111,
+      "same_slice": 9,
+      "strict": 5
+    },
+    "eu_nis2 \u00d7 eu_rgpd": {
+      "different_slice": 3
+    },
+    "eu_rgpd \u00d7 nist_sp800_53_rev5": {
+      "different_slice": 21,
+      "same_slice": 1
+    },
+    "eu_dora \u00d7 pci_dss_v4_0_1": {
+      "different_slice": 101,
+      "same_slice": 19,
+      "strict": 22
+    },
+    "cis_controls_v8_1_2 \u00d7 hipaa_security_rule": {
+      "different_slice": 79,
+      "strict": 14,
+      "same_slice": 11
+    },
+    "cis_controls_v8_1_2 \u00d7 owasp_top_10_2021": {
+      "different_slice": 279,
+      "strict": 38,
+      "same_slice": 5
+    },
+    "eu_dora \u00d7 hipaa_security_rule": {
+      "strict": 4,
+      "different_slice": 40,
+      "same_slice": 4
+    },
+    "eu_dora \u00d7 owasp_top_10_2021": {
+      "different_slice": 35
+    },
+    "hipaa_security_rule \u00d7 nist_sp800_53_rev5": {
+      "different_slice": 255,
+      "same_slice": 41,
+      "strict": 18
+    },
+    "hipaa_security_rule \u00d7 owasp_top_10_2021": {
+      "different_slice": 41,
+      "strict": 1,
+      "same_slice": 4
+    },
+    "hipaa_security_rule \u00d7 pci_dss_v4_0_1": {
+      "different_slice": 231,
+      "same_slice": 38,
+      "strict": 19
+    },
+    "nist_sp800_53_rev5 \u00d7 owasp_top_10_2021": {
+      "strict": 19,
+      "different_slice": 318,
+      "same_slice": 19
+    },
+    "owasp_top_10_2021 \u00d7 pci_dss_v4_0_1": {
+      "strict": 28,
+      "different_slice": 232
+    },
+    "cis_controls_v8_1_2 \u00d7 ssdf_sp800_218_v1_1": {
+      "strict": 23,
+      "different_slice": 136,
+      "same_slice": 5
+    },
+    "eu_dora \u00d7 ssdf_sp800_218_v1_1": {
+      "different_slice": 12,
+      "same_slice": 10,
+      "strict": 3
+    },
+    "eu_nis2 \u00d7 hipaa_security_rule": {
+      "different_slice": 32,
+      "same_slice": 3,
+      "strict": 1
+    },
+    "eu_nis2 \u00d7 owasp_top_10_2021": {
+      "different_slice": 45,
+      "strict": 22
+    },
+    "eu_nis2 \u00d7 ssdf_sp800_218_v1_1": {
+      "strict": 3,
+      "different_slice": 15
+    },
+    "hipaa_security_rule \u00d7 ssdf_sp800_218_v1_1": {
+      "different_slice": 13,
+      "strict": 1
+    },
+    "nist_sp800_53_rev5 \u00d7 ssdf_sp800_218_v1_1": {
+      "strict": 38,
+      "different_slice": 72,
+      "same_slice": 13
+    },
+    "owasp_top_10_2021 \u00d7 ssdf_sp800_218_v1_1": {
+      "different_slice": 405,
+      "strict": 12,
+      "same_slice": 2
+    },
+    "pci_dss_v4_0_1 \u00d7 ssdf_sp800_218_v1_1": {
+      "strict": 48,
+      "different_slice": 80,
+      "same_slice": 8
+    },
+    "eu_rgpd \u00d7 owasp_top_10_2021": {
+      "different_slice": 2
+    },
+    "eu_rgpd \u00d7 pci_dss_v4_0_1": {
+      "different_slice": 22,
+      "same_slice": 3
+    },
+    "cis_controls_v8_1_2 \u00d7 eu_cra": {
+      "different_slice": 4
+    },
+    "eu_cra \u00d7 nist_sp800_53_rev5": {
+      "different_slice": 1
+    },
+    "eu_cra \u00d7 pci_dss_v4_0_1": {
+      "same_slice": 1,
+      "different_slice": 3
+    },
+    "eu_rgpd \u00d7 hipaa_security_rule": {
+      "different_slice": 4,
+      "same_slice": 3
+    },
+    "eu_cra \u00d7 eu_dora": {
+      "different_slice": 2
+    },
+    "eu_cra \u00d7 owasp_top_10_2021": {
+      "different_slice": 18
+    },
+    "eu_cra \u00d7 ssdf_sp800_218_v1_1": {
+      "different_slice": 18
+    },
+    "eu_rgpd \u00d7 ssdf_sp800_218_v1_1": {
+      "different_slice": 1
+    }
+  },
+  "pair_examples": {
+    "strict": [
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-2",
+        "right": "nist_sp800_53_rev5/SP800-53-PM-5",
+        "co": "ACO-SCBI-001",
+        "slice": "ACO-SCBI"
+      },
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-2.1",
+        "right": "nist_sp800_53_rev5/SP800-53-PM-5",
+        "co": "ACO-SCBI-001",
+        "slice": "ACO-SCBI"
+      },
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-2.2",
+        "right": "pci_dss_v4_0_1/PCI-REQ-9",
+        "co": "ACO-IAT-002",
+        "slice": "ACO-IAT"
+      },
+      {
+        "scf_id": "AST-02",
+        "left": "cis_controls_v8_1_2/CIS-6.6",
+        "right": "eu_nis2/NIS2-ART-21",
+        "co": "ACO-RPR-009",
+        "slice": "ACO-RPR"
+      },
+      {
+        "scf_id": "AST-02",
+        "left": "cis_controls_v8_1_2/CIS-1.1",
+        "right": "nist_sp800_53_rev5/SP800-53-PM-5",
+        "co": "ACO-SCBI-001",
+        "slice": "ACO-SCBI"
+      }
+    ],
+    "same_slice": [
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-1 \u2192 ACO-SLG-005",
+        "right": "pci_dss_v4_0_1/PCI-REQ-11 \u2192 ACO-SLG-001",
+        "slice": "ACO-SLG"
+      },
+      {
+        "scf_id": "AST-02",
+        "left": "cis_controls_v8_1_2/CIS-1 \u2192 ACO-SLG-005",
+        "right": "pci_dss_v4_0_1/PCI-REQ-11 \u2192 ACO-SLG-001",
+        "slice": "ACO-SLG"
+      },
+      {
+        "scf_id": "AST-03.2",
+        "left": "cis_controls_v8_1_2/CIS-16.5 \u2192 ACO-RPR-009",
+        "right": "nist_sp800_53_rev5/SP800-53-SR-4 \u2192 ACO-RPR-002",
+        "slice": "ACO-RPR"
+      },
+      {
+        "scf_id": "AST-04",
+        "left": "cis_controls_v8_1_2/CIS-3.8 \u2192 ACO-ATB-002",
+        "right": "nist_sp800_53_rev5/SP800-53-PL-2 \u2192 ACO-ATB-007",
+        "slice": "ACO-ATB"
+      },
+      {
+        "scf_id": "AST-04",
+        "left": "cis_controls_v8_1_2/CIS-12.4 \u2192 ACM-ATB-001",
+        "right": "nist_sp800_53_rev5/SP800-53-PL-2 \u2192 ACO-ATB-007",
+        "slice": "ACO-ATB"
+      }
+    ],
+    "different_slice": [
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-1 \u2192 ACO-SLG-005 (ACO-SLG)",
+        "right": "eu_nis2/NIS2-ART-21 \u2192 ACO-RPR-009 (ACO-RPR)"
+      },
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-2 \u2192 ACO-SCBI-001 (ACO-SCBI)",
+        "right": "eu_nis2/NIS2-ART-21 \u2192 ACO-RPR-009 (ACO-RPR)"
+      },
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-2.1 \u2192 ACO-SCBI-001 (ACO-SCBI)",
+        "right": "eu_nis2/NIS2-ART-21 \u2192 ACO-RPR-009 (ACO-RPR)"
+      },
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-2.2 \u2192 ACO-IAT-002 (ACO-IAT)",
+        "right": "eu_nis2/NIS2-ART-21 \u2192 ACO-RPR-009 (ACO-RPR)"
+      },
+      {
+        "scf_id": "AST-01",
+        "left": "cis_controls_v8_1_2/CIS-1 \u2192 ACO-SLG-005 (ACO-SLG)",
+        "right": "nist_sp800_53_rev5/SP800-53-PM-5 \u2192 ACO-SCBI-001 (ACO-SCBI)"
+      }
+    ]
+  },
+  "comparison_to_v4_2_era": {
+    "v4_2_strict_pct": 38.46,
+    "v4_2_adjusted_pct": 56.14,
+    "v4_2_n_decidable": 442,
+    "v4_2_n_total_pairs": 504,
+    "v4_2_methodology": "curated SCF-domain \u2192 AC-slice map; per-item convergence assessment (NOT direct pair matching)",
+    "note": "v4.2 numbers used a DIFFERENT methodology than v7 forward-direction pair matching. Both methodologies disclose explicitly; v7 is forward-direction (primary anchor on both sides)."
+  }
+}

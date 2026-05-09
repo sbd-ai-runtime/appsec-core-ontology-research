@@ -1,0 +1,25 @@
+meta:
+  intended_use: stress_test_appsec_core_normalization_and_p2_coverage
+  pilot_id: nist_sp800_53_rev5
+  status: source_captured
+retrieval_policy:
+  checksum_sha256: cc4ad0c9e759328b953d6fc4ad81884df43106f904e01ebc1508d4167c0a8543
+  local_snapshot_path: sources/nist_sp800_53_rev5/NIST_SP-800-53_rev5_catalog.json
+  preferred_artifact: json_oscal
+  retrieval_mode: deterministic_capture_from_nist_oscal_github
+  retrieved_at: '2026-04-12T23:07:12.701515Z'
+source_document:
+  canonical_url: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final
+  doi_url: https://doi.org/10.6028/NIST.SP.800-53r5
+  framework_family: NIST-800-53
+  json_source_url: https://github.com/usnistgov/oscal-content
+  language: en
+  publication_date: '2020-09-23'
+  publisher: NIST
+  revision: 5.1.1
+  source_document_id: SRC-NIST-SP800-53-REV5
+  source_kind: control_catalog
+  stability_reason: official_nist_final_publication
+  title: Security and Privacy Controls for Information Systems and Organizations
+  update_date: '2023-12-10'
+  version: Rev 5

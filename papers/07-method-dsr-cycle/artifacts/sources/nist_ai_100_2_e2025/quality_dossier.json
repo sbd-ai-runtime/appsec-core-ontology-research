@@ -1,0 +1,24 @@
+{
+  "pilot_id": "nist_ai_100_2_e2025",
+  "n_inventory_items": 58,
+  "n_lifted_rows": 66,
+  "atomicity_ratio": 1.138,
+  "decomposition_method_distribution": {
+    "heuristic_split": 66
+  },
+  "governance_fraction_estimate": 0.045,
+  "duplicate_fraction": 0.0,
+  "n_unique_texts": 66,
+  "contextualised_text_length": {
+    "p50": 1900,
+    "p90": 5078,
+    "min": 47,
+    "max": 5090
+  },
+  "chain_depth_distribution": {
+    "1": 18,
+    "2": 48
+  },
+  "flags": [],
+  "verdict": "PROCEED"
+}

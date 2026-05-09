@@ -1,0 +1,288 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "nist_ai_rmf_1_0",
+  "captured_at": "2026-05-07T17:42:39.222562+00:00",
+  "n_units": 56,
+  "units": [
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-1",
+      "kind": "category",
+      "text": "Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- practices across the grated into organizational policies, processes, procedures, and organization related practices. to the mapping,"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-1.3",
+      "kind": "subcategory",
+      "text": "measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in place, transparent, and GOVERN 1.4: The risk management process and its outcomes are implemented established through transparent policies, procedures, and other effectively. controls based on organizational risk priorities. Continued on next page Page 22 Table 1: Categories and subcategories for the GOVERN function. (Continued) Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-1.5",
+      "kind": "subcategory",
+      "text": "risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency of periodic review."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-1.6",
+      "kind": "subcategory",
+      "text": "and are resourced according to organizational risk priorities."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-1.7",
+      "kind": "subcategory",
+      "text": "missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-2",
+      "kind": "category",
+      "text": "Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals and teams throughout place so that the the organization. appropriate teams GOVERN 2.2: The organization\u2019s personnel and partners receive and individuals are AI risk management training to enable them to perform their du- empowered, ties and responsibilities consistent with related policies, proce- responsible, and dures, and agreements. trained for mapping,"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-2.3",
+      "kind": "subcategory",
+      "text": "measuring, and sponsibility for decisions about risks associated with AI system managing AI risks. development and deployment."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-3",
+      "kind": "category",
+      "text": "Workforce diversity, and managing AI risks throughout the lifecycle is informed by a equity, inclusion, diverse team (e.g., diversity of demographics, disciplines, expe- and accessibility rience, expertise, and backgrounds). processes are"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-3.2",
+      "kind": "subcategory",
+      "text": "prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. managing of AI risks throughout the lifecycle."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-4",
+      "kind": "category",
+      "text": "Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and uses of AI systems to minimize to a culture potential negative impacts. Continued on next page Page 23 Table 1: Categories and subcategories for the GOVERN function. (Continued) Categories Subcategories that considers and GOVERN 4.2: Organizational teams document the risks and po- communicates AI tential impacts of the AI technology they design, develop, deploy, risk. evaluate, and use, and they communicate about the impacts more broadly."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-4.3",
+      "kind": "subcategory",
+      "text": "testing, identification of incidents, and information sharing."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-5",
+      "kind": "category",
+      "text": "Processes are in to collect, consider, prioritize, and integrate feedback from those place for robust external to the team that developed or deployed the AI system engagement with regarding the potential individual and societal impacts related to relevant AI actors. AI risks."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-5.2",
+      "kind": "subcategory",
+      "text": "that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-GOVERN-6",
+      "kind": "category",
+      "text": "and procedures are AI risks associated with third-party entities, including risks of in- in place to address fringement of a third-party\u2019s intellectual property or other rights. AI risks and benefits GOVERN 6.2: Contingency processes are in place to handle arising from failures or incidents in third-party data or AI systems deemed to third-party software be high-risk. and data and other supply chain issues. 5.2 Map The MAP function establishes the context to frame risks related to an AI system. The AI lifecycle consists of many interdependent activities involving a diverse set of actors (See Figure 3). In practice, AI actors in charge of one part of the process often do not have full visibility or control over other parts and their associated contexts. The interdependencies between these activities, and among the relevant AI actors, can make it difficult to reliably anticipate impacts of AI systems. For example, early decisions in identifying purposes and objectives of an AI system can alter its behavior and capabilities, and the dynamics of de- ployment setting (such as end users or impacted individuals) can shape the impacts of AI system decisions. As a result, the best intentions within one dimension of the AI lifecycle can be undermined via interactions with decisions and conditions in other, later activities. Page 24 This complexity and varying levels of visibility can introduce uncertainty into risk man- agement practices. Anticipating, assessing, and otherwise addressing potential sources of negative risk can mitigate this uncertainty and enhance the integrity of the decision process. The information gathered while carrying out the MAP function enables negative risk pre- vention and informs decisions for processes such as model management, as well as an initial decision about appropriateness or the need for an AI solution. Outcomes in the MAP function are the basis for the MEASURE and MANAGE functions. Without contex- tual knowledge, and awareness of risks within the identified contexts, risk management is difficult to perform. The MAP function is intended to enhance an organization\u2019s ability to identify risks and broader contributing factors. Implementation of this function is enhanced by incorporating perspectives from a diverse internal team and engagement with those external to the team that developed or deployed the AI system. Engagement with external collaborators, end users, potentially impacted communities, and others may vary based on the risk level of a particular AI system, the makeup of the internal team, and organizational policies. Gathering such broad perspec- tives can help organizations proactively prevent negative risks and develop more trustwor- thy AI systems by: \u2022 improving their capacity for understanding contexts; \u2022 checking their assumptions about context of use; \u2022 enabling recognition of when systems are not functional within or out of their in- tended context; \u2022 identifying positive and beneficial uses of their existing AI systems; \u2022 improving understanding of limitations in AI and ML processes; \u2022 identifying constraints in real-world applications that may lead to negative impacts; \u2022 identifying known and foreseeable negative impacts related to intended use of AI systems; and \u2022 anticipating risks of the use of AI systems beyond intended use. After completing the MAP function, Framework users should have sufficient contextual knowledge about AI system impacts to inform an initial go/no-go decision about whether to design, develop, or deploy an AI system. If a decision is made to proceed, organizations should utilize the MEASURE and MANAGE functions along with policies and procedures put into place in the GOVERN function to assist in AI risk management efforts. It is incum- bent on Framework users to continue applying the MAP function to AI systems as context, capabilities, risks, benefits, and potential impacts evolve over time. Practices related to mapping AI risks are described in the NIST AI RMF Playbook. Table 2 lists the MAP function\u2019s categories and subcategories. Page 25 Table 2: Categories and subcategories for the MAP function. Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-1",
+      "kind": "category",
+      "text": "established and specific laws, norms and expectations, and prospective settings in understood. which the AI system will be deployed are understood and docu- mented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative im- pacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-1.2",
+      "kind": "subcategory",
+      "text": "capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their par- ticipation is documented. Opportunities for interdisciplinary col- laboration are prioritized."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-1.3",
+      "kind": "subcategory",
+      "text": "technology are understood and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-1.4",
+      "kind": "subcategory",
+      "text": "clearly defined or \u2013 in the case of assessing existing AI systems \u2013 re-evaluated."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-1.5",
+      "kind": "subcategory",
+      "text": "documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-1.6",
+      "kind": "subcategory",
+      "text": "the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into account to address AI risks."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-2",
+      "kind": "category",
+      "text": "Categorization of tasks that the AI system will support are defined (e.g., classifiers, the AI system is generative models, recommenders). performed. MAP 2.2: Information about the AI system\u2019s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions. Continued on next page Page 26 Table 2: Categories and subcategories for the MAP function. (Continued) Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-2.3",
+      "kind": "subcategory",
+      "text": "tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, suitability), system trustworthiness, and construct validation."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-3",
+      "kind": "category",
+      "text": "capabilities, targeted and performance are examined and documented. usage, goals, and MAP 3.2: Potential costs, including non-monetary costs, which expected benefits result from expected or realized AI errors or system functionality and costs compared and trustworthiness \u2013 as connected to organizational risk toler- with appropriate ance \u2013 are examined and documented. benchmarks are"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-3.3",
+      "kind": "subcategory",
+      "text": "understood. mented based on the system\u2019s capability, established context, and AI system categorization."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-3.4",
+      "kind": "subcategory",
+      "text": "with AI system performance and trustworthiness \u2013 and relevant technical standards and certifications \u2013 are defined, assessed, and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-3.5",
+      "kind": "subcategory",
+      "text": "and documented in accordance with organizational policies from the GOVERN function."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-4",
+      "kind": "category",
+      "text": "benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are in place, followed, and documented, as are risks of in- of the AI system fringement of a third party\u2019s intellectual property or other rights. including third-party MAP 4.2: Internal risk controls for components of the AI sys- software and data. tem, including third-party AI technologies, are identified and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-5",
+      "kind": "category",
+      "text": "individuals, groups, (both potentially beneficial and harmful) based on expected use, communities, past uses of AI systems in similar contexts, public incident re- organizations, and ports, feedback from those external to the team that developed society are or deployed the AI system, or other data are identified and characterized. documented. Continued on next page Page 27 Table 2: Categories and subcategories for the MAP function. (Continued) Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MAP-5.2",
+      "kind": "subcategory",
+      "text": "gagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented. 5.3 Measure The MEASURE function employs quantitative, qualitative, or mixed-method tools, tech- niques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts. It uses knowledge relevant to AI risks identified in the MAP function and informs the MANAGE function. AI systems should be tested before their deployment and regu- larly while in operation. AI risk measurements include documenting aspects of systems\u2019 functionality and trustworthiness. Measuring AI risks includes tracking metrics for trustworthy characteristics, social impact, and human-AI configurations. Processes developed or adopted in the MEASURE function should include rigorous software testing and performance assessment methodologies with associated measures of uncertainty, comparisons to performance benchmarks, and formal- ized reporting and documentation of results. Processes for independent review can improve the effectiveness of testing and can mitigate internal biases and potential conflicts of inter- est. Where tradeoffs among the trustworthy characteristics arise, measurement provides a trace- able basis to inform management decisions. Options may include recalibration, impact mitigation, or removal of the system from design, development, production, or use, as well as a range of compensating, detective, deterrent, directive, and recovery controls. After completing the MEASURE function, objective, repeatable, or scalable test, evaluation, verification, and validation (TEVV) processes including metrics, methods, and methodolo- gies are in place, followed, and documented. Metrics and measurement methodologies should adhere to scientific, legal, and ethical norms and be carried out in an open and trans- parent process. New types of measurement, qualitative and quantitative, may need to be developed. The degree to which each measurement type provides unique and meaningful information to the assessment of AI risks should be considered. Framework users will en- hance their capacity to comprehensively evaluate system trustworthiness, identify and track existing and emergent risks, and verify efficacy of the metrics. Measurement outcomes will be utilized in the MANAGE function to assist risk monitoring and response efforts. It is in- cumbent on Framework users to continue applying the MEASURE function to AI systems as knowledge, methodologies, risks, and impacts evolve over time. Page 28 Practices related to measuring AI risks are described in the NIST AI RMF Playbook. Table 3 lists the MEASURE function\u2019s categories and subcategories. Table 3: Categories and subcategories for the MEASURE function. Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-1",
+      "kind": "category",
+      "text": "Appropriate risks enumerated during the MAP function are selected for imple- methods and metrics mentation starting with the most significant AI risks. The risks are identified and or trustworthiness characteristics that will not \u2013 or cannot \u2013 be applied. measured are properly documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-1.2",
+      "kind": "subcategory",
+      "text": "of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-1.3",
+      "kind": "subcategory",
+      "text": "developers for the system and/or independent assessors are in- volved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2",
+      "kind": "category",
+      "text": "systems are during TEVV are documented. evaluated for MEASURE 2.2: Evaluations involving human subjects meet ap- trustworthy plicable requirements (including human subject protection) and characteristics. are representative of the relevant population."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.3",
+      "kind": "subcategory",
+      "text": "are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.4",
+      "kind": "subcategory",
+      "text": "tem and its components \u2013 as identified in the MAP function \u2013 are monitored when in production."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.5",
+      "kind": "subcategory",
+      "text": "to be valid and reliable. Limitations of the generalizability be- yond the conditions under which the technology was developed are documented. Continued on next page Page 29 Table 3: Categories and subcategories for the MEASURE function. (Continued) Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.6",
+      "kind": "subcategory",
+      "text": "risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics re- flect system reliability and robustness, real-time monitoring, and response times for AI system failures."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.7",
+      "kind": "subcategory",
+      "text": "in the MAP function \u2013 are evaluated and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.8",
+      "kind": "subcategory",
+      "text": "ability \u2013 as identified in the MAP function \u2013 are examined and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.9",
+      "kind": "subcategory",
+      "text": "mented, and AI system output is interpreted within its context \u2013 as identified in the MAP function \u2013 to inform responsible use and governance."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.10",
+      "kind": "subcategory",
+      "text": "the MAP function \u2013 is examined and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.11",
+      "kind": "subcategory",
+      "text": "function \u2013 are evaluated and results are documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.12",
+      "kind": "subcategory",
+      "text": "model training and management activities \u2013 as identified in the MAP function \u2013 are assessed and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-2.13",
+      "kind": "subcategory",
+      "text": "rics and processes in the MEASURE function are evaluated and documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-3",
+      "kind": "category",
+      "text": "Mechanisms for in place to regularly identify and track existing, unanticipated, tracking identified and emergent AI risks based on factors such as intended and ac- AI risks over time tual performance in deployed contexts. are in place. MEASURE 3.2: Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available. Continued on next page Page 30 Table 3: Categories and subcategories for the MEASURE function. (Continued) Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-3.3",
+      "kind": "subcategory",
+      "text": "communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-4",
+      "kind": "category",
+      "text": "Feedback about are connected to deployment context(s) and informed through efficacy of consultation with domain experts and other end users. Ap- measurement is proaches are documented. gathered and MEASURE 4.2: Measurement results regarding AI system trust- assessed. worthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI ac- tors to validate whether the system is performing consistently as intended. Results are documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MEASURE-4.3",
+      "kind": "subcategory",
+      "text": "clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness characteristics are identified and documented. 5.4 Manage The MANAGE function entails allocating risk resources to mapped and measured risks on a regular basis and as defined by the GOVERN function. Risk treatment comprises plans to respond to, recover from, and communicate about incidents or events. Contextual information gleaned from expert consultation and input from relevant AI actors \u2013 established in GOVERN and carried out in MAP \u2013 is utilized in this function to decrease the likelihood of system failures and negative impacts. Systematic documentation practices established in GOVERN and utilized in MAP and MEASURE bolster AI risk management efforts and increase transparency and accountability. Processes for assessing emergent risks are in place, along with mechanisms for continual improvement. After completing the MANAGE function, plans for prioritizing risk and regular monitoring and improvement will be in place. Framework users will have enhanced capacity to man- age the risks of deployed AI systems and to allocate risk management resources based on assessed and prioritized risks. It is incumbent on Framework users to continue to apply the MANAGE function to deployed AI systems as methods, contexts, risks, and needs or expectations from relevant AI actors evolve over time. Page 31 Practices related to managing AI risks are described in the NIST AI RMF Playbook. Table 4 lists the MANAGE function\u2019s categories and subcategories. Table 4: Categories and subcategories for the MANAGE function. Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-1",
+      "kind": "category",
+      "text": "risks based on system achieves its intended purposes and stated objectives and assessments and whether its development or deployment should proceed. other analytical MANAGE 1.2: Treatment of documented AI risks is prioritized output from the based on impact, likelihood, and available resources or methods. MAP and MEASURE"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-1.3",
+      "kind": "subcategory",
+      "text": "functions are identified by the MAP function, are developed, planned, and doc- prioritized, umented. Risk response options can include mitigating, transfer- responded to, and ring, avoiding, or accepting. managed."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-1.4",
+      "kind": "subcategory",
+      "text": "unmitigated risks) to both downstream acquirers of AI systems and end users are documented."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-2",
+      "kind": "category",
+      "text": "Strategies to into account \u2013 along with viable non-AI alternative systems, ap- maximize AI proaches, or methods \u2013 to reduce the magnitude or likelihood of benefits and potential impacts. minimize negative MANAGE 2.2: Mechanisms are in place and applied to sustain impacts are planned, the value of deployed AI systems. prepared,"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-2.3",
+      "kind": "subcategory",
+      "text": "implemented, from a previously unknown risk when it is identified. documented, and informed by input MANAGE 2.4: Mechanisms are in place and applied, and respon- from relevant AI sibilities are assigned and understood, to supersede, disengage, or actors. deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use."
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-3",
+      "kind": "category",
+      "text": "risks and benefits are regularly monitored, and risk controls are applied and from third-party documented. entities are MANAGE 3.2: Pre-trained models which are used for develop- managed. ment are monitored as part of AI system regular monitoring and maintenance. Continued on next page Page 32 Table 4: Categories and subcategories for the MANAGE function. (Continued) Categories Subcategories"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-4",
+      "kind": "category",
+      "text": "treatments, are implemented, including mechanisms for capturing and eval- including response uating input from users and other relevant AI actors, appeal and recovery, and and override, decommissioning, incident response, recovery, and communication change management. plans for the MANAGE 4.2: Measurable activities for continual improvements identified and are integrated into AI system updates and include regular engage- measured AI risks ment with interested parties, including relevant AI actors. are documented and"
+    },
+    {
+      "unit_id": "SRC-NIST-AI-RMF-1-0:NIST-AI-RMF-MANAGE-4.3",
+      "kind": "subcategory",
+      "text": "monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are followed and documented. 6. AI RMF Profiles AI RMF use-case profiles are implementations of the AI RMF functions, categories, and subcategories for a specific setting or application based on the requirements, risk tolerance, and resources of the Framework user: for example, an AI RMF hiring profile or an AI RMF fair housing profile. Profiles may illustrate and offer insights into how risk can be managed at various stages of the AI lifecycle or in specific sector, technology, or end-use applications. AI RMF profiles assist organizations in deciding how they might best manage AI risk that is well-aligned with their goals, considers legal/regulatory requirements and best practices, and reflects risk management priorities. AI RMF temporal profiles are descriptions of either the current state or the desired, target state of specific AI risk management activities within a given sector, industry, organization, or application context. An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals. Comparing Current and Target Profiles likely reveals gaps to be addressed to meet AI risk management objectives. Action plans can be developed to address these gaps to fulfill outcomes in a given category or subcategory. Prioritization of gap mitigation is driven by the user\u2019s needs and risk management processes. This risk-based approach also enables Framework users to compare their approaches with other approaches and to gauge the resources needed (e.g., staffing, funding) to achieve AI risk management goals in a cost- effective, prioritized manner. Page 33 AI RMF cross-sectoral profiles cover risks of models or applications that can be used across use cases or sectors. Cross-sectoral profiles can also cover how to govern, map, measure, and manage risks for activities or business processes common across sectors such as the use of large language models, cloud-based services or acquisition. This Framework does not prescribe profile templates, allowing for flexibility in implemen- tation. Page 34 Appendix A: Descriptions of AI Actor Tasks from Figures 2 and 3 AI Design tasks are performed during the Application Context and Data and Input phases of the AI lifecycle in Figure 2. AI Design actors create the concept and objectives of AI systems and are responsible for the planning, design, and data collection and processing tasks of the AI system so that the AI system is lawful and fit-for-purpose. Tasks include ar- ticulating and documenting the system\u2019s concept and objectives, underlying assumptions, context, and requirements; gathering and cleaning data; and documenting the metadata and characteristics of the dataset. AI actors in this category include data scientists, do- main experts, socio-cultural analysts, experts in the field of diversity, equity, inclusion, and accessibility, members of impacted communities, human factors experts (e.g., UX/UI design), governance experts, data engineers, data providers, system funders, product man- agers, third-party entities, evaluators, and legal and privacy governance. AI Development tasks are performed during the AI Model phase of the lifecycle in Figure 2. AI Development actors provide the initial infrastructure of AI systems and are responsi- ble for model building and interpretation tasks, which involve the creation, selection, cali- bration, training, and/or testing of models or algorithms. AI actors in this category include machine learning experts, data scientists, developers, third-party entities, legal and privacy governance experts, and experts in the socio-cultural and contextual factors associated with the deployment setting. AI Deployment tasks are performed during the Task and Output phase of the lifecycle in Figure 2. AI Deployment actors are responsible for contextual decisions relating to how the AI system is used to assure deployment of the system into production. Related tasks include piloting the system, checking compatibility with legacy systems, ensuring regu- latory compliance, managing organizational change, and evaluating user experience. AI actors in this category include system integrators, software developers, end users, oper- ators and practitioners, evaluators, and domain experts with expertise in human factors, socio-cultural analysis, and governance. Operation and Monitoring tasks are performed in the Application Context/Operate and Monitor phase of the lifecycle in Figure 2. These tasks are carried out by AI actors who are responsible for operating the AI system and working with others to regularly assess system output and impacts. AI actors in this category include system operators, domain experts, AI designers, users who interpret or incorp"
+    }
+  ]
+}

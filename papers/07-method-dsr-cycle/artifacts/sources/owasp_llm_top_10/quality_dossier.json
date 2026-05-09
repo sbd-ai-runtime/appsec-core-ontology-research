@@ -1,0 +1,26 @@
+{
+  "pilot_id": "owasp_llm_top_10",
+  "n_inventory_items": 10,
+  "n_lifted_rows": 64,
+  "atomicity_ratio": 6.4,
+  "decomposition_method_distribution": {
+    "multiplicity_triggered": 62,
+    "passthrough": 2
+  },
+  "governance_fraction_estimate": 0.031,
+  "duplicate_fraction": 0.0,
+  "n_unique_texts": 64,
+  "contextualised_text_length": {
+    "p50": 61,
+    "p90": 3463,
+    "min": 7,
+    "max": 6515
+  },
+  "chain_depth_distribution": {
+    "0": 64
+  },
+  "flags": [
+    "HIGH_DECOMPOSITION_RATIO"
+  ],
+  "verdict": "FLAG_FOR_JOINT_REVIEW"
+}

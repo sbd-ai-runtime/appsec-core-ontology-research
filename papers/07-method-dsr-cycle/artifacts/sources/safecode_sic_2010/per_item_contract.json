@@ -1,0 +1,1291 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "safecode_sic_2010",
+  "is_iteration_3_pilot": false,
+  "n_items": 12,
+  "items": [
+    {
+      "item_id": "safecode_sic_2010/SCSIC-SOURCING",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-SOURCING",
+      "source_text": "Vendor Sourcing Integrity Controls. Controls for vendor sourcing process: contractual integrity, defined expectations, ownership, vulnerability response, security training, OSS management",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000001",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00001",
+          "item_ref": "SCSIC-SOURCING",
+          "target_core_entity": "ac:ACM_RPR_001",
+          "target_id": "ACM-RPR-001",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5055984258651733,
+          "disambiguation_margin": 0.08891516923904419,
+          "rationale_snippet": "Vendor Sourcing Integrity Controls. Controls for vendor sourcing process: contractual integrity, defined expectations, ownership, vulnerability response, security training, OSS management",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000002",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00001",
+          "item_ref": "SCSIC-SOURCING",
+          "target_core_entity": "ac:ACP_SCBI_003",
+          "target_id": "ACP-SCBI-003",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.47143909335136414,
+          "disambiguation_margin": 0.04832848906517029,
+          "rationale_snippet": "Vendor Sourcing Integrity Controls. Controls for vendor sourcing process: contractual integrity, defined expectations, ownership, vulnerability response, security training, OSS management",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000003",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00001",
+          "item_ref": "SCSIC-SOURCING",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4414280951023102,
+          "disambiguation_margin": 0.11480376124382019,
+          "rationale_snippet": "Vendor Sourcing Integrity Controls. Controls for vendor sourcing process: contractual integrity, defined expectations, ownership, vulnerability response, security training, OSS management",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000004",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00001",
+          "item_ref": "SCSIC-SOURCING",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.43034934997558594,
+          "disambiguation_margin": 0.04446840286254883,
+          "rationale_snippet": "Vendor Sourcing Integrity Controls. Controls for vendor sourcing process: contractual integrity, defined expectations, ownership, vulnerability response, security training, OSS management",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-SOURCING-CONTRACT",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-SOURCING-CONTRACT",
+      "source_text": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000005",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00002",
+          "item_ref": "SCSIC-SOURCING-CONTRACT",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5088821053504944,
+          "disambiguation_margin": 0.12536293268203735,
+          "rationale_snippet": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000006",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00002",
+          "item_ref": "SCSIC-SOURCING-CONTRACT",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.48085105419158936,
+          "disambiguation_margin": 0.13608002662658691,
+          "rationale_snippet": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000007",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00002",
+          "item_ref": "SCSIC-SOURCING-CONTRACT",
+          "target_core_entity": "ac:ACO_SCBI_006",
+          "target_id": "ACO-SCBI-006",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.47641322016716003,
+          "disambiguation_margin": 0.0651540756225586,
+          "rationale_snippet": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000008",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00002",
+          "item_ref": "SCSIC-SOURCING-CONTRACT",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.46187248826026917,
+          "disambiguation_margin": 0.05410778522491455,
+          "rationale_snippet": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000009",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00002",
+          "item_ref": "SCSIC-SOURCING-CONTRACT",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.44115641713142395,
+          "disambiguation_margin": 0.13489577174186707,
+          "rationale_snippet": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000010",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00002",
+          "item_ref": "SCSIC-SOURCING-CONTRACT",
+          "target_core_entity": "ac:ACP_ATB_003",
+          "target_id": "ACP-ATB-003",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4234071373939514,
+          "disambiguation_margin": 0.08852130174636841,
+          "rationale_snippet": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000011",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00002",
+          "item_ref": "SCSIC-SOURCING-CONTRACT",
+          "target_core_entity": "ac:ACO_IVF_001",
+          "target_id": "ACO-IVF-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.41344979405403137,
+          "disambiguation_margin": 0.0684296190738678,
+          "rationale_snippet": "Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments. SOURCING",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-SOURCING-OSS",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-SOURCING-OSS",
+      "source_text": "Open Source Software Sourcing Controls. Evaluate reputation and release practices of OSS communities; validate packages and distribution sites; vulnerability monitoring and patching strategy",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000012",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00003",
+          "item_ref": "SCSIC-SOURCING-OSS",
+          "target_core_entity": "ac:ACP_SCBI_003",
+          "target_id": "ACP-SCBI-003",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5019028186798096,
+          "disambiguation_margin": 0.12759613990783691,
+          "rationale_snippet": "Open Source Software Sourcing Controls. Evaluate reputation and release practices of OSS communities; validate packages and distribution sites; vulnerability monitoring and patching strategy. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000013",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00003",
+          "item_ref": "SCSIC-SOURCING-OSS",
+          "target_core_entity": "ac:ACO_RPR_002",
+          "target_id": "ACO-RPR-002",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.45841184258461,
+          "disambiguation_margin": 0.06012263894081116,
+          "rationale_snippet": "Open Source Software Sourcing Controls. Evaluate reputation and release practices of OSS communities; validate packages and distribution sites; vulnerability monitoring and patching strategy. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000014",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00003",
+          "item_ref": "SCSIC-SOURCING-OSS",
+          "target_core_entity": "ac:ACM_SCBI_006",
+          "target_id": "ACM-SCBI-006",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.43395936489105225,
+          "disambiguation_margin": 0.04864835739135742,
+          "rationale_snippet": "Open Source Software Sourcing Controls. Evaluate reputation and release practices of OSS communities; validate packages and distribution sites; vulnerability monitoring and patching strategy. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000015",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00003",
+          "item_ref": "SCSIC-SOURCING-OSS",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4280521869659424,
+          "disambiguation_margin": 0.1010788083076477,
+          "rationale_snippet": "Open Source Software Sourcing Controls. Evaluate reputation and release practices of OSS communities; validate packages and distribution sites; vulnerability monitoring and patching strategy. SOURCING",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-SOURCING-TRANSFER",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-SOURCING-TRANSFER",
+      "source_text": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000016",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.530768096446991,
+          "disambiguation_margin": 0.07357954978942871,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000017",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5170877575874329,
+          "disambiguation_margin": 0.04930472373962402,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000018",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5153372883796692,
+          "disambiguation_margin": 0.13633477687835693,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000019",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.49997997283935547,
+          "disambiguation_margin": 0.10301211476325989,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000020",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACO_IAT_007",
+          "target_id": "ACO-IAT-007",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.47821635007858276,
+          "disambiguation_margin": 0.06794366240501404,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000021",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACM_IVF_004",
+          "target_id": "ACM-IVF-004",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4771609306335449,
+          "disambiguation_margin": 0.07883483171463013,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000022",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.46080511808395386,
+          "disambiguation_margin": 0.05904167890548706,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000023",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACP_ATB_003",
+          "target_id": "ACP-ATB-003",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.44721370935440063,
+          "disambiguation_margin": 0.11495280265808105,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000024",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACP_RPR_002",
+          "target_id": "ACP-RPR-002",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.44303005933761597,
+          "disambiguation_margin": 0.06693515181541443,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000025",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00004",
+          "item_ref": "SCSIC-SOURCING-TRANSFER",
+          "target_core_entity": "ac:ACO_SLG_007",
+          "target_id": "ACO-SLG-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.41487860679626465,
+          "disambiguation_margin": 0.05323117971420288,
+          "rationale_snippet": "Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes. SOURCING",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DEVELOPMENT",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DEVELOPMENT",
+      "source_text": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security testing",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000026",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5801652669906616,
+          "disambiguation_margin": 0.10763192176818848,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000027",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5276865363121033,
+          "disambiguation_margin": 0.14397239685058594,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000028",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACO_TSV_007",
+          "target_id": "ACO-TSV-007",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5143820643424988,
+          "disambiguation_margin": 0.07824403047561646,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000029",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4845987558364868,
+          "disambiguation_margin": 0.05324724316596985,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000030",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.48418474197387695,
+          "disambiguation_margin": 0.0660158097743988,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000031",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACP_ATB_003",
+          "target_id": "ACP-ATB-003",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.46717581152915955,
+          "disambiguation_margin": 0.05340695381164551,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000032",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4579851031303406,
+          "disambiguation_margin": 0.1561991572380066,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000033",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACP_SCBI_003",
+          "target_id": "ACP-SCBI-003",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.45625025033950806,
+          "disambiguation_margin": 0.0501788854598999,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000034",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACP_ITS_004",
+          "target_id": "ACP-ITS-004",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4311668872833252,
+          "disambiguation_margin": 0.05916285514831543,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000035",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00005",
+          "item_ref": "SCSIC-DEVELOPMENT",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.42185521125793457,
+          "disambiguation_margin": 0.0503421425819397,
+          "rationale_snippet": "Vendor Software Development Integrity Controls. Controls for development phase: people security, physical security, network security, code repository security, build environment, peer review, security",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DEV-REPO",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DEV-REPO",
+      "source_text": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000036",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5346008539199829,
+          "disambiguation_margin": 0.07447981834411621,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000037",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5119501352310181,
+          "disambiguation_margin": 0.053768157958984375,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000038",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5097966194152832,
+          "disambiguation_margin": 0.13385435938835144,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000039",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACO_SPC_001",
+          "target_id": "ACO-SPC-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5087893009185791,
+          "disambiguation_margin": 0.043600261211395264,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000040",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.49786099791526794,
+          "disambiguation_margin": 0.1384923756122589,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000041",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4814698100090027,
+          "disambiguation_margin": 0.10813102126121521,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000042",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4516282379627228,
+          "disambiguation_margin": 0.15063539147377014,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000043",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACP_IAT_002",
+          "target_id": "ACP-IAT-002",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4496529996395111,
+          "disambiguation_margin": 0.10048463940620422,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000044",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACO_IAT_002",
+          "target_id": "ACO-IAT-002",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4484669864177704,
+          "disambiguation_margin": 0.05490875244140625,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000045",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACP_SCBI_003",
+          "target_id": "ACP-SCBI-003",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4466102123260498,
+          "disambiguation_margin": 0.12112033367156982,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000046",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.41990426182746887,
+          "disambiguation_margin": 0.08631721138954163,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000047",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00006",
+          "item_ref": "SCSIC-DEV-REPO",
+          "target_core_entity": "ac:ACM_SCBI_006",
+          "target_id": "ACM-SCBI-006",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.40897834300994873,
+          "disambiguation_margin": 0.05911746621131897,
+          "rationale_snippet": "Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege. DEV",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DEV-BUILD",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DEV-BUILD",
+      "source_text": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000048",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.62674880027771,
+          "disambiguation_margin": 0.2148846983909607,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000049",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACP_RPR_004",
+          "target_id": "ACP-RPR-004",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5943065285682678,
+          "disambiguation_margin": 0.1427236795425415,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000050",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACM_RPR_005",
+          "target_id": "ACM-RPR-005",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5303070545196533,
+          "disambiguation_margin": 0.16594815254211426,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000051",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACO_TSV_004",
+          "target_id": "ACO-TSV-004",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5137465596199036,
+          "disambiguation_margin": 0.1012236475944519,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000052",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACM_TMR_007",
+          "target_id": "ACM-TMR-007",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.507551372051239,
+          "disambiguation_margin": 0.09456807374954224,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000053",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACP_SPC_005",
+          "target_id": "ACP-SPC-005",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5026171207427979,
+          "disambiguation_margin": 0.05933845043182373,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000054",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4864221215248108,
+          "disambiguation_margin": 0.09174233675003052,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000055",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00007",
+          "item_ref": "SCSIC-DEV-BUILD",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4763103723526001,
+          "disambiguation_margin": 0.11576157808303833,
+          "rationale_snippet": "Build Environment Security. Automated builds, minimal human access, build scripts as code assets, service accounts traceable, build traceability to individuals. DEV",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DEV-DEFAULTS",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DEV-DEFAULTS",
+      "source_text": "Secure Defaults Configuration. Out of the box defaults must be examined and configured to be secure by default; least necessary privileges; disabled unnecessary services",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000056",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00008",
+          "item_ref": "SCSIC-DEV-DEFAULTS",
+          "target_core_entity": "ac:ACO_IAT_002",
+          "target_id": "ACO-IAT-002",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.437746524810791,
+          "disambiguation_margin": 0.0656057596206665,
+          "rationale_snippet": "Secure Defaults Configuration. Out of the box defaults must be examined and configured to be secure by default; least necessary privileges; disabled unnecessary services. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000057",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00008",
+          "item_ref": "SCSIC-DEV-DEFAULTS",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.43110817670822144,
+          "disambiguation_margin": 0.07705086469650269,
+          "rationale_snippet": "Secure Defaults Configuration. Out of the box defaults must be examined and configured to be secure by default; least necessary privileges; disabled unnecessary services. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000058",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00008",
+          "item_ref": "SCSIC-DEV-DEFAULTS",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4231064021587372,
+          "disambiguation_margin": 0.07828524708747864,
+          "rationale_snippet": "Secure Defaults Configuration. Out of the box defaults must be examined and configured to be secure by default; least necessary privileges; disabled unnecessary services. DEV",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DEV-TESTING",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DEV-TESTING",
+      "source_text": "Peer Reviews and Security Testing. SAST, DAST, binary analysis, malware detection, compliance validation, code coverage; peer review for both security and integrity",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000059",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00009",
+          "item_ref": "SCSIC-DEV-TESTING",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5313828587532043,
+          "disambiguation_margin": 0.07656818628311157,
+          "rationale_snippet": "Peer Reviews and Security Testing. SAST, DAST, binary analysis, malware detection, compliance validation, code coverage; peer review for both security and integrity. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000060",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00009",
+          "item_ref": "SCSIC-DEV-TESTING",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.47278475761413574,
+          "disambiguation_margin": 0.14994117617607117,
+          "rationale_snippet": "Peer Reviews and Security Testing. SAST, DAST, binary analysis, malware detection, compliance validation, code coverage; peer review for both security and integrity. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000061",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00009",
+          "item_ref": "SCSIC-DEV-TESTING",
+          "target_core_entity": "ac:ACM_SLG_005",
+          "target_id": "ACM-SLG-005",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4502069354057312,
+          "disambiguation_margin": 0.10207170248031616,
+          "rationale_snippet": "Peer Reviews and Security Testing. SAST, DAST, binary analysis, malware detection, compliance validation, code coverage; peer review for both security and integrity. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000062",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00009",
+          "item_ref": "SCSIC-DEV-TESTING",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4485166668891907,
+          "disambiguation_margin": 0.09722328186035156,
+          "rationale_snippet": "Peer Reviews and Security Testing. SAST, DAST, binary analysis, malware detection, compliance validation, code coverage; peer review for both security and integrity. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000063",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00009",
+          "item_ref": "SCSIC-DEV-TESTING",
+          "target_core_entity": "ac:ACO_ITS_003",
+          "target_id": "ACO-ITS-003",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4306277632713318,
+          "disambiguation_margin": 0.054068684577941895,
+          "rationale_snippet": "Peer Reviews and Security Testing. SAST, DAST, binary analysis, malware detection, compliance validation, code coverage; peer review for both security and integrity. DEV",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000064",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00009",
+          "item_ref": "SCSIC-DEV-TESTING",
+          "target_core_entity": "ac:ACP_ITS_004",
+          "target_id": "ACP-ITS-004",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4207746386528015,
+          "disambiguation_margin": 0.07070350646972656,
+          "rationale_snippet": "Peer Reviews and Security Testing. SAST, DAST, binary analysis, malware detection, compliance validation, code coverage; peer review for both security and integrity. DEV",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DELIVERY",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DELIVERY",
+      "source_text": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000065",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00010",
+          "item_ref": "SCSIC-DELIVERY",
+          "target_core_entity": "ac:ACM_ITS_004",
+          "target_id": "ACM-ITS-004",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5476230382919312,
+          "disambiguation_margin": 0.06902796030044556,
+          "rationale_snippet": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000066",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00010",
+          "item_ref": "SCSIC-DELIVERY",
+          "target_core_entity": "ac:ACP_SCBI_003",
+          "target_id": "ACP-SCBI-003",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5132445096969604,
+          "disambiguation_margin": 0.050215840339660645,
+          "rationale_snippet": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000067",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00010",
+          "item_ref": "SCSIC-DELIVERY",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.47378936409950256,
+          "disambiguation_margin": 0.1193419098854065,
+          "rationale_snippet": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000068",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00010",
+          "item_ref": "SCSIC-DELIVERY",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4577166438102722,
+          "disambiguation_margin": 0.06775838136672974,
+          "rationale_snippet": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000069",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00010",
+          "item_ref": "SCSIC-DELIVERY",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.44762229919433594,
+          "disambiguation_margin": 0.1339634656906128,
+          "rationale_snippet": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000070",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00010",
+          "item_ref": "SCSIC-DELIVERY",
+          "target_core_entity": "ac:ACO_ITS_003",
+          "target_id": "ACO-ITS-003",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.44027581810951233,
+          "disambiguation_margin": 0.05192062258720398,
+          "rationale_snippet": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000071",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00010",
+          "item_ref": "SCSIC-DELIVERY",
+          "target_core_entity": "ac:ACM_TSV_003",
+          "target_id": "ACM-TSV-003",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.43919020891189575,
+          "disambiguation_margin": 0.08145120739936829,
+          "rationale_snippet": "Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DELIVERY-SIGNING",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DELIVERY-SIGNING",
+      "source_text": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00011"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000072",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACM_SCBI_004",
+          "target_id": "ACM-SCBI-004",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.6118186712265015,
+          "disambiguation_margin": 0.17314639687538147,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000073",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACM_RPR_003",
+          "target_id": "ACM-RPR-003",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5747169256210327,
+          "disambiguation_margin": 0.20528104901313782,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000074",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACP_RPR_002",
+          "target_id": "ACP-RPR-002",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5726674795150757,
+          "disambiguation_margin": 0.19536802172660828,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000075",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACP_SCBI_006",
+          "target_id": "ACP-SCBI-006",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5600218772888184,
+          "disambiguation_margin": 0.18317362666130066,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000076",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACP_ITS_004",
+          "target_id": "ACP-ITS-004",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.556015133857727,
+          "disambiguation_margin": 0.0832640528678894,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000077",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACO_RPR_002",
+          "target_id": "ACO-RPR-002",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5430982112884521,
+          "disambiguation_margin": 0.16002047061920166,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000078",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACM_ITS_004",
+          "target_id": "ACM-ITS-004",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4992316961288452,
+          "disambiguation_margin": 0.11547666788101196,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000079",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4810975193977356,
+          "disambiguation_margin": 0.15652787685394287,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000080",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44105350971221924,
+          "disambiguation_margin": 0.07316404581069946,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000081",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4229438900947571,
+          "disambiguation_margin": 0.08376568555831909,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000082",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00011",
+          "item_ref": "SCSIC-DELIVERY-SIGNING",
+          "target_core_entity": "ac:ACO_SLG_007",
+          "target_id": "ACO-SLG-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.41116899251937866,
+          "disambiguation_margin": 0.07671025395393372,
+          "rationale_snippet": "Code Signing and Cryptographic Verification. Products digitally marked with vendor identity; checksums and hashes for component verification; integrity verification during installation and execution. ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_sic_2010/SCSIC-DEV-MANIFEST",
+      "source": "safecode_sic_2010",
+      "source_object_id": "SCSIC-DEV-MANIFEST",
+      "source_text": "Software Bill of Materials / Manifest. Manifest of all code assets contributing to a product, including in-house and third party components, similar to BOM in manufacturing",
+      "source_lifted_rows": [
+        "SAFECODE_SIC_2010-LIFTED-00012"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_SIC_2010-CLAIM-000083",
+          "lifted_row_ref": "SAFECODE_SIC_2010-LIFTED-00012",
+          "item_ref": "SCSIC-DEV-MANIFEST",
+          "target_core_entity": "ac:ACO_SCBI_001",
+          "target_id": "ACO-SCBI-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.41219672560691833,
+          "disambiguation_margin": 0.1288210153579712,
+          "rationale_snippet": "Software Bill of Materials / Manifest. Manifest of all code assets contributing to a product, including in-house and third party components, similar to BOM in manufacturing. DEV",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "pilot_id": "owasp_ml_top_10",
+  "n_inventory_items": 10,
+  "n_lifted_rows": 23,
+  "atomicity_ratio": 2.3,
+  "decomposition_method_distribution": {
+    "passthrough": 7,
+    "multiplicity_triggered": 16
+  },
+  "governance_fraction_estimate": 0.043,
+  "duplicate_fraction": 0.0,
+  "n_unique_texts": 23,
+  "contextualised_text_length": {
+    "p50": 89,
+    "p90": 2793,
+    "min": 14,
+    "max": 3832
+  },
+  "chain_depth_distribution": {
+    "0": 23
+  },
+  "flags": [],
+  "verdict": "PROCEED"
+}

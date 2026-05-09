@@ -1,0 +1,261 @@
+{
+  "validator": "Python jsonschema 4.25.1 (Draft 4)",
+  "schema_id": "https://csrc.nist.gov/1.1/olir_reference_document_json_1.1.schema",
+  "schema_source": "https://www.nist.gov/document/olirschema (archived locally)",
+  "submission_date": "2026-05-09",
+  "n_pilots": 31,
+  "n_pass": 31,
+  "n_fail": 0,
+  "n_relationships_total": 16490,
+  "n_relationships_dropped_unspecified": 0,
+  "per_pilot": [
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/asvs_v5_0_0_olir_v1_1.json",
+      "n_relationships": 1025,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "capec_v3_9",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/capec_v3_9_olir_v1_1.json",
+      "n_relationships": 1342,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "cis_controls_v8_1_2",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/cis_controls_v8_1_2_olir_v1_1.json",
+      "n_relationships": 928,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "cwe_software_development_view_v4_19_1",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/cwe_software_development_view_v4_19_1_olir_v1_1.json",
+      "n_relationships": 582,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/enisa_multilayer_ai_cybersecurity_practices_2023_olir_v1_1.json",
+      "n_relationships": 7,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "eu_cra",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_cra_olir_v1_1.json",
+      "n_relationships": 25,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "eu_dora",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_dora_olir_v1_1.json",
+      "n_relationships": 30,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "eu_nis2",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_nis2_olir_v1_1.json",
+      "n_relationships": 49,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "eu_rgpd",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_rgpd_olir_v1_1.json",
+      "n_relationships": 43,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "hipaa_security_rule",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/hipaa_security_rule_olir_v1_1.json",
+      "n_relationships": 133,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/mcp_official_security_foundations_2025_olir_v1_1.json",
+      "n_relationships": 21,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "mitre_atlas",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/mitre_atlas_olir_v1_1.json",
+      "n_relationships": 592,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "nist_ai_100_2_e2025",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/nist_ai_100_2_e2025_olir_v1_1.json",
+      "n_relationships": 180,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "nist_ai_rmf_1_0",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/nist_ai_rmf_1_0_olir_v1_1.json",
+      "n_relationships": 102,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "nist_sp800_53_rev5",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/nist_sp800_53_rev5_olir_v1_1.json",
+      "n_relationships": 6581,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_dsomm",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_dsomm_olir_v1_1.json",
+      "n_relationships": 808,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_llm_top_10",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_llm_top_10_olir_v1_1.json",
+      "n_relationships": 130,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_mcp_secure_server_development_v1_0_olir_v1_1.json",
+      "n_relationships": 60,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_mcp_third_party_servers_v1_0_olir_v1_1.json",
+      "n_relationships": 30,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_mcp_top_10_v0_1_2025_beta_olir_v1_1.json",
+      "n_relationships": 48,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_ml_top_10",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_ml_top_10_olir_v1_1.json",
+      "n_relationships": 96,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_proactive_controls_2018",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_proactive_controls_2018_olir_v1_1.json",
+      "n_relationships": 68,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_samm_v2_1",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_samm_v2_1_olir_v1_1.json",
+      "n_relationships": 1079,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "owasp_top_10_2021",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_top_10_2021_olir_v1_1.json",
+      "n_relationships": 46,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "pci_dss_v4_0_1",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/pci_dss_v4_0_1_olir_v1_1.json",
+      "n_relationships": 1384,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "pci_sslc_v1_1",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/pci_sslc_v1_1_olir_v1_1.json",
+      "n_relationships": 253,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "safecode_agile_2012",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/safecode_agile_2012_olir_v1_1.json",
+      "n_relationships": 135,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "safecode_fpssd_2018",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/safecode_fpssd_2018_olir_v1_1.json",
+      "n_relationships": 123,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "safecode_sic_2010",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/safecode_sic_2010_olir_v1_1.json",
+      "n_relationships": 83,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "slsa_spec_v1_0_build_track",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/slsa_spec_v1_0_build_track_olir_v1_1.json",
+      "n_relationships": 92,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    },
+    {
+      "pilot_id": "ssdf_sp800_218_v1_1",
+      "out_path": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/ssdf_sp800_218_v1_1_olir_v1_1.json",
+      "n_relationships": 415,
+      "n_dropped_unspecified": 0,
+      "validator_errors": [],
+      "valid": true
+    }
+  ]
+}

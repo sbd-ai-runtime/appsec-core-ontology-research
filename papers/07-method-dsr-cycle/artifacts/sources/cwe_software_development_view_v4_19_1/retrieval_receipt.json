@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "cwe_software_development_view_v4_19_1",
+  "status": "captured",
+  "source_family": "MITRE_CWE",
+  "captured_at": "2026-04-03T23:10:53.111727Z",
+  "items": [
+    {
+      "artifact_id": "ART-CWE-DOWNLOADS-HTML",
+      "source_document_id": "SRC-CWE-DOWNLOADS-V4_19_1",
+      "source_kind": "downloads_page",
+      "origin_url": "https://cwe.mitre.org/data/downloads.html",
+      "local_path": "sources/cwe_software_development_view_v4_19_1/cwe-downloads.html",
+      "retrieved_at": "2026-04-03T23:10:53.111727Z",
+      "file_timestamp": "2026-04-03T23:06:28Z",
+      "format": "html",
+      "size_bytes": 45448,
+      "sha256": "ac28f1ddf07bebc33ee3478affa008d220006bc985b0d483fe69b0c3af7ded82",
+      "version": "4.19.1"
+    },
+    {
+      "artifact_id": "ART-CWE-VIEW-699-HTML",
+      "source_document_id": "SRC-CWE-VIEW-699-V4_19_1",
+      "source_kind": "weakness_view_html",
+      "origin_url": "https://cwe.mitre.org/data/slices/699.html",
+      "local_path": "sources/cwe_software_development_view_v4_19_1/cwe-view-699.html",
+      "retrieved_at": "2026-04-03T23:10:53.111727Z",
+      "file_timestamp": "2026-04-03T23:06:36Z",
+      "format": "html",
+      "size_bytes": 38898227,
+      "sha256": "edf0582a6eac08435197dbb4461f1c1a5fca7232ee0228769d9f5ca49b4722f5",
+      "version": "4.19.1"
+    },
+    {
+      "artifact_id": "ART-CWE-VIEW-699-CSV",
+      "source_document_id": "SRC-CWE-VIEW-699-V4_19_1",
+      "source_kind": "weakness_view_csv_zip",
+      "origin_url": "https://cwe.mitre.org/data/csv/699.csv.zip",
+      "local_path": "sources/cwe_software_development_view_v4_19_1/cwe-view-699.csv.zip",
+      "retrieved_at": "2026-04-03T23:10:53.111727Z",
+      "file_timestamp": "2026-04-03T23:06:38Z",
+      "format": "csv_zip",
+      "size_bytes": 295113,
+      "sha256": "ea74eca522f02bbac27d34645da3110e5367d5a9ee68b4309ba9e013d126f326",
+      "version": "4.19.1"
+    },
+    {
+      "artifact_id": "ART-CWE-VIEW-699-XML",
+      "source_document_id": "SRC-CWE-VIEW-699-V4_19_1",
+      "source_kind": "weakness_view_xml_zip",
+      "origin_url": "https://cwe.mitre.org/data/xml/views/699.xml.zip",
+      "local_path": "sources/cwe_software_development_view_v4_19_1/cwe-view-699.xml.zip",
+      "retrieved_at": "2026-04-03T23:10:53.111727Z",
+      "file_timestamp": "2026-04-03T23:06:39Z",
+      "format": "xml_zip",
+      "size_bytes": 775353,
+      "sha256": "ee5b970b852783776dbcd3c8d3b131b011116096894ebc04334b26257a6f53da",
+      "version": "4.19.1"
+    }
+  ]
+}

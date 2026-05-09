@@ -1,0 +1,182 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "ENISA Multilayer Framework for Good Cybersecurity Practices for AI \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "ENISA Multilayer Framework for Good Cybersecurity Practices for AI",
+        "version": "2023 (June)",
+        "url": "https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai",
+        "author": "European Union Agency for Cybersecurity (ENISA)",
+        "release_date": "2023-06",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "mixed",
+        "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 5,
+      "items_grounded": 4,
+      "items_lab_depth_pending": 1,
+      "olir_pairs_emitted": 7,
+      "primary_pairs": 4,
+      "secondary_pairs": 3,
+      "relationship_type_distribution": {
+        "equal": 0,
+        "intersects-with": 7,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ENISA-AI-FAICP-LAYER-II",
+          "description": "Layer II - AI-specific cybersecurity practices and controls. A multilayer framework for good cybersecurity practices for AI June 2023 14 \u2022 AI assets and p rocedures \u2022 AI threat assessment \u2022 AI securi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-007",
+          "description": "Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture s\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000001 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ENISA-AI-FAICP-LAYER-III",
+          "description": "Layer III - Sector-specific cybersecurity good practices for AI. A multilayer framework for good cybersecurity practices for AI June 2023 23 and trustworthy AI. \u2022 ALLAI73 is an independent Dutch orga\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.44,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.440; threshold mapping \u2192 intersects-with. Claim ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000002 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ENISA-AI-FAICP-SURVEY",
+          "description": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.466,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.466; threshold mapping \u2192 intersects-with. Claim ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000003 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ENISA-AI-FAICP-SURVEY",
+          "description": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.446,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.446; threshold mapping \u2192 intersects-with. Claim ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000004 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ENISA-AI-FAICP-SURVEY",
+          "description": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-009",
+          "description": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.437,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.437; threshold mapping \u2192 intersects-with. Claim ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000005 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ENISA-AI-FAICP-SURVEY",
+          "description": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-001",
+          "description": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.412,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.412; threshold mapping \u2192 intersects-with. Claim ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000006 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ENISA-AI-FAICP-CONCLUSIONS",
+          "description": "Conclusions and way forward for AI cybersecurity practices. A multilayer framework for good cybersecurity practices for AI June 2023 36 4. CONCLUSIONS AND THE WAY FORWARD The report provide s a frame\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-009",
+          "description": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000007 at Practice level. Primary anchor (item highest-similarity claim)."
+      }
+    ]
+  }
+}

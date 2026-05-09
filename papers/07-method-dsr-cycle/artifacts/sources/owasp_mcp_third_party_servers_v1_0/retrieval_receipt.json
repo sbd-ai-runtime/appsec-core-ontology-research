@@ -1,0 +1,19 @@
+{
+  "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+  "status": "source_captured",
+  "retrieved_at": "2026-04-04T14:09:17Z",
+  "artifacts": [
+    {
+      "kind": "html_landing_page",
+      "path": "/Users/pedrofarinha/Shared-Projs/SecurityByDesign-TheoryOfEverything/ExternalSourcesInventory/sources/owasp_mcp_third_party_servers_v1_0/landing_page.html",
+      "source_url": "https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/",
+      "sha256": "694452661fcc6668fd421c02b1f07810ff9d3dc188e24c3d9a12d85dee32147a"
+    },
+    {
+      "kind": "pdf_download",
+      "path": "/Users/pedrofarinha/Shared-Projs/SecurityByDesign-TheoryOfEverything/ExternalSourcesInventory/sources/owasp_mcp_third_party_servers_v1_0/A_Practical_Guide_for_Securely_Using_Third-Party_MCP_Servers_v1_0.pdf",
+      "source_url": "https://genai.owasp.org/download/51928/",
+      "sha256": "4a0c877803ec174a518187872dc7ef3af5f5e5bca2ba00cc6e689b2f85b4a9fa"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+meta:
+  pilot_id: enisa_multilayer_ai_cybersecurity_practices_2023
+  status: published_traceability_surface_compared
+input_contract:
+  source_manifest: pilots/enisa_multilayer_ai_cybersecurity_practices_2023/source_manifest.yaml
+  accepted_source_artifacts:
+    - html_snapshot
+    - pdf_snapshot
+  required_provenance_fields:
+    - source_document_id
+    - canonical_url
+    - publication_date
+    - retrieved_at
+    - checksum_sha256
+stage_outputs:
+  source_retrieval_receipt:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/source_retrieval_receipt.json
+  source_inventory:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/external_source_inventory.json
+  source_unit_inventory:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/source_unit_inventory.json
+  source_object_inventory:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/source_object_inventory.json
+  normalized_core_objects:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/appsec_core_normalization.json
+  manual_gap_analysis:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/manual_gap_analysis.json
+  published_traceability_comparison_json:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/published_manual_traceability_comparison.json
+  published_traceability_comparison_markdown:
+    path: data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/published_manual_traceability_comparison.md
+pipeline_scripts:
+  source_unit_extraction:
+    path: scripts/extract_pdf_page_units.py
+  source_object_extraction:
+    path: scripts/extract_enisa_ai_practices_source_objects.py
+  appsec_core_normalization:
+    path: scripts/normalize_enisa_ai_practices_to_appsec_core.py
+  manual_gap_analysis:
+    path: scripts/derive_enisa_ai_practices_manual_gap_analysis.py
+  published_traceability_comparison:
+    path: scripts/compare_enisa_ai_practices_against_published_manual_traceability_surface.py
+normalization_rules:
+  - external_objects_land_in_appsec_core_before_any_manual_comparison
+  - enisa_ai_practices_should_be_read_as_a_framework_surface_not_as_direct_manual_edits
+  - source_scope_stays_within_the_2023_enisa_report_not_live_ai_policy_changes
+  - rationale_for_core_mapping_must_be_preserved
+comparison_rules:
+  status_labels:
+    - covered
+    - partial
+    - bridge_only
+    - ambiguous
+    - manual_gap
+    - appsec_core_gap
+    - comparison_gap
+    - out_of_scope_for_appsec_core
+notes:
+  - No direct manual_gap is asserted in this pilot.
+  - Layer I is treated as a transversal enterprise control only partially supported by the AppSec-oriented manual surface.
+  - Layer II and Layer III are treated as framework or scope-extension pressure rather than editorial absence.

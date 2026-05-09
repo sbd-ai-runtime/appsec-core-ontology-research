@@ -1,0 +1,21 @@
+pilot_id: owasp_mcp_secure_server_development_v1_0
+source_id: OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0
+status: source_captured
+source_type: pdf_guide
+publisher: OWASP Gen AI Security Project
+title: A Practical Guide for Secure MCP Server Development
+version: '1.0'
+publication_date: '2026-02-16'
+landing_page_url: https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/
+download_url: https://genai.owasp.org/download/52676/?tmstv=1771286427
+local_files:
+  landing_page: sources/owasp_mcp_secure_server_development_v1_0/landing_page.html
+  pdf: sources/owasp_mcp_secure_server_development_v1_0/A_Practical_Guide_for_Secure_MCP_Server_Development_v1_0.pdf
+retrieval:
+  retrieved_at: '2026-04-03T18:55:51Z'
+  checksum_sha256: 'e0681dc7f64074f9dfceedda90533cf6db1cc3566508d28f77c69cc3cc2307b0'
+  size_bytes:   637801
+license: CC BY-SA 4.0
+notes:
+  - Chosen instead of OWASP MCP Top 10 because this source is closer to secure engineering guidance than to risk-list packaging.
+  - This pilot should help reveal whether the current AppSec Core lacks landing zones for MCP-specific security guidance or whether the manual traceability surface is genuinely incomplete.

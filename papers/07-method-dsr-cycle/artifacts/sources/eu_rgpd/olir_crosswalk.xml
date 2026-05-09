@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olir-concept-crosswalk xmlns="https://www.nist.gov/olir/v1" version="1.0">
+  <metadata>
+    <title>EU General Data Protection Regulation (GDPR, selected articles) → AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)</title>
+    <submission-version>1.0</submission-version>
+    <submission-author>Pedro Farinha (programme lead) — SbD-ToE Programme</submission-author>
+    <submission-date>2026-05-08</submission-date>
+    <programme-doi>10.17605/OSF.IO/7T849</programme-doi>
+    <schema-basis>NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model</schema-basis>
+    <source-document strm-resource-type="DocumentaryImpl">
+      <title>EU General Data Protection Regulation (GDPR, selected articles)</title>
+      <version>Regulation (EU) 2016/679</version>
+      <url>https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679</url>
+      <author>European Union</author>
+      <release-date>2016</release-date>
+      <mapping-direction>solution_space_direct</mapping-direction>
+      <pilot-id>eu_rgpd</pilot-id>
+    </source-document>
+    <reference-document strm-resource-type="Reference Document">
+      <title>AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)</title>
+      <version>V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)</version>
+      <url>https://osf.io/7t849/</url>
+      <author>SbD-ToE Programme — AppSec Core ontology project</author>
+    </reference-document>
+    <methodology>
+      Threshold-based continuous→categorical translation: sim≥0.6 → equal; 0.4≤sim&lt;0.6 → intersects-with; sim&lt;0.4 → unspecified.
+      Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target.
+      is-primary="true" marks item overall highest-similarity claim&apos;s target.
+      subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work).
+      STRM resource model: pilot doc → DocumentaryImpl; source-item → ConcreteImpl; AppSec Core V1 → Reference Document; Core entity → Concept.
+    </methodology>
+    <substrate-supplier-sha256>596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04</substrate-supplier-sha256>
+    <substrate-tag>substrate-v7-iter-3-ai-ml-incorporated</substrate-tag>
+    <ontology-tag>ontology-v1-next-acr004-promoted</ontology-tag>
+    <cycle-a-frozen-tag>cycle-a-frozen-2026-05-08</cycle-a-frozen-tag>
+  </metadata>
+  <stats>
+    <items-total>6</items-total>
+    <items-grounded>3</items-grounded>
+    <olir-pairs-emitted>43</olir-pairs-emitted>
+    <primary-pairs>3</primary-pairs>
+    <secondary-pairs>40</secondary-pairs>
+    <relationship-type-distribution>
+      <equal>0</equal>
+      <intersects-with>43</intersects-with>
+      <unspecified>0</unspecified>
+    </relationship-type-distribution>
+  </stats>
+  <mappings>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.568</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.568; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000010 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-005</id>
+        <description>Release Promotion And Human Approval Integrity. Promotion between environments must respect explicit gates, including human approval for irreversible actions. Promotion gates are enforced and irrever…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.544</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.544; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000011 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.544</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.544; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000012 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.528</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.528; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000013 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.496</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.496; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000014 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.493</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.493; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000015 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-002</id>
+        <description>Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.462</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.462; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000016 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-004</id>
+        <description>Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.458</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.458; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000017 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-003</id>
+        <description>Release Promotion Gates. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. policy</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000018 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-010</id>
+        <description>Record And Periodically Review Exceptions Against The Intended Baseline. Record approved deviations and periodically review whether the current baseline still matches intended security posture. integ…</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.453</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.453; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000004 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-002</id>
+        <description>Schema And Allowlist Enforcement. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. validation and analysis. schema enforcement</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.444</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.444; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000002 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-002</id>
+        <description>Protected Secret Storage And Controlled Retrieval. Store secret material only in protected secret-management surfaces and retrieve it through controlled mechanisms rather than through embedded or bro…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.440</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.440; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000005 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-004</id>
+        <description>Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.437</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.437; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000003 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-003</id>
+        <description>Security Finding Triage And Correction Closure. Security-test findings must be triaged, tracked to correction, constrained by severity-based closure targets and revalidated or formally excepted when …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.435</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.435; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000019 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-5</id>
+        <description>GDPR Article 5. Article 5 (Principles relating to processing of personal data) requires that personal data shall be:</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-002</id>
+        <description>Vault-Backed Secret Storage. Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code. identity and trust control. storage</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.433</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.433; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000007 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.586</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.586; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000038 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.569</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.569; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000023 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-010</id>
+        <description>Record And Periodically Review Exceptions Against The Intended Baseline. Record approved deviations and periodically review whether the current baseline still matches intended security posture. integ…</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.566</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.566; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000039 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.562</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.562; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000024 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-007</id>
+        <description>Security Logging And Audit Trail Assurance. Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.562</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.562; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000040 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-007</id>
+        <description>Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.540</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.540; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000043 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-008</id>
+        <description>Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.522</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.522; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000044 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-006</id>
+        <description>Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.521</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.521; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000045 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-003</id>
+        <description>Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.508</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.508; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000026 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-004</id>
+        <description>Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.507</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.507; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000046 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-002</id>
+        <description>Vault-Backed Secret Storage. Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code. identity and trust control. storage</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.504</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.504; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000027 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-010</id>
+        <description>Change Review Control For Security-Relevant Baseline Deviations. Record approved deviations and periodically review whether the current baseline still matches intended security posture. Change review…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.503</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.503; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000047 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-008</id>
+        <description>Compliance Monitoring And Regulatory Change Feeds. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring exter…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.502</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.502; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000048 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.499</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.499; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000028 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-004</id>
+        <description>Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.499</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.499; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000029 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.496</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.496; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000030 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.487</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.487; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000049 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-004</id>
+        <description>Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/d…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.486</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.486; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000031 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.483</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.483; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000032 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.476</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.476; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000035 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-008</id>
+        <description>Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.469</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.469; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000020 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-010</id>
+        <description>Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.467</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.467; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000051 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-002</id>
+        <description>Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.466</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.466; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000052 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.450</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.450; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000053 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-001</id>
+        <description>Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.444</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.444; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000054 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-32</id>
+        <description>GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.415</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.415; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000022 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-35</id>
+        <description>GDPR Article 35. Article 35 (Data protection impact assessment) requires that where a type of processing in particular using new technologies, and taking into account the nature, scope, context and p…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-004</id>
+        <description>Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.440</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.440; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000055 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>GDPR-ART-35</id>
+        <description>GDPR Article 35. Article 35 (Data protection impact assessment) requires that where a type of processing in particular using new technologies, and taking into account the nature, scope, context and p…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-002</id>
+        <description>Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.425</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.425; threshold mapping → intersects-with. Claim EU_RGPD-CLAIM-000056 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+  </mappings>
+</olir-concept-crosswalk>

@@ -1,0 +1,19 @@
+meta:
+  pilot_id: mcp_official_security_foundations_2025
+  status: source_captured
+  source_family: mcp_official_security_docs
+documents:
+- source_document_id: MCP-AUTHORIZATION-2025_11_25
+  title: MCP Authorization
+  canonical_url: https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization
+  publication_date: '2025-11-25'
+  document_kind: official_spec_html
+  local_source_path: sources/mcp_official_security_foundations_2025/authorization_2025-11-25.html
+  checksum_sha256: f24df721f88425ab8bd6defae87b0c3343c47f1697f893fc99eff14b84492380
+- source_document_id: MCP-SECURITY-BEST-PRACTICES-2025_06_18
+  title: MCP Security Best Practices
+  canonical_url: https://modelcontextprotocol.io/specification/2025-06-18/basic/security_best_practices
+  publication_date: '2025-06-18'
+  document_kind: official_spec_html
+  local_source_path: sources/mcp_official_security_foundations_2025/security_best_practices_2025-06-18.html
+  checksum_sha256: ce6923153bb24dc9a9afeb38b9ddf7e7fd9a725ed22722fc6b6fbeaf93db3e64

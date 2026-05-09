@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.2",
+  "pilot_id": "owasp_proactive_controls_2018",
+  "status": "source_objects_extracted",
+  "extracted_at": "2026-04-12T23:34:58.211500Z",
+  "counts": {
+    "total": 10
+  },
+  "items": [
+    {
+      "source_object_id": "OPC-C1",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C1",
+      "title": "Define Security Requirements",
+      "statement": "A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security requirements are derived from industry standards, applicable laws, and a history of past vulnerabilities. Security requirements define new features or additions to existing features to solve a specific security problem or eliminate a potential vulnerability.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "e4dfcb74274f6a24b458e777eb1e59f89afe2f8d76f23142c7207b2fe307c0bc"
+    },
+    {
+      "source_object_id": "OPC-C2",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C2",
+      "title": "Leverage Security Frameworks and Libraries",
+      "statement": "Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation flaws. A developer writing an application from scratch might not have sufficient knowledge, time, or budget to properly implement or maintain security features. Leveraging security frameworks helps accomplish security goals more efficiently and accurately.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "512f84ff2b6dbd21bbd056d4a9f618c0600eb34504761d0136ac50c5b061d08b"
+    },
+    {
+      "source_object_id": "OPC-C3",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C3",
+      "title": "Secure Database Access",
+      "statement": "This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of database connections, secure authentication to databases, and secure communication with databases.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "5d9b9d8f8a76f98a09ab9328a5271d1633135db1c865a61bbb6a01eff21bd971"
+    },
+    {
+      "source_object_id": "OPC-C4",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C4",
+      "title": "Encode and Escape Data",
+      "statement": "Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some different but equivalent form that is no longer dangerous in the target interpreter. Escaping involves adding a special character before the character/string to avoid it being misinterpreted.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "7fb95bdf8f00de6d26180242844a642be2bc1badf9ae4a91d6d6830e8fd830f7"
+    },
+    {
+      "source_object_id": "OPC-C5",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C5",
+      "title": "Validate All Inputs",
+      "statement": "Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of structured fields (e.g., SSN, date, currency symbol). Semantic validation should enforce correctness of their values in the specific business context (e.g., start date is before end date, price is within expected range).",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "0c61827af521a9775c2f815ae98789b4160f6662cb51958c6f808fa333e3c592"
+    },
+    {
+      "source_object_id": "OPC-C6",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C6",
+      "title": "Implement Digital Identity",
+      "statement": "Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an individual or entity is who they claim to be. Session management is a process by which a server maintains the state of the users authentication so that the user may continue to use the system without re-authenticating.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "6f18f3f3c1b8e2bca4f20c56066555f727bab9eac8e3ecdb7c38c96f6a993332"
+    },
+    {
+      "source_object_id": "OPC-C7",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C7",
+      "title": "Enforce Access Controls",
+      "statement": "Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting and revoking those privileges. Access control functionality often spans many areas of software depending on the complexity of the access control system.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "e5a78dda4731264d3a5dddb9f580fa13186d766438b6ec245dba547b0d405529"
+    },
+    {
+      "source_object_id": "OPC-C8",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C8",
+      "title": "Protect Data Everywhere",
+      "statement": "Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws (EU General Data Protection Regulation GDPR), financial data protection rules such as PCI Data Security Standard (PCI DSS) or other regulations. Attackers can steal data from web and webservice applications in a number of ways.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "65be0a202b8266b78826a5ea7cda76bc426afbb2493083e6049c401c25bc7b4f"
+    },
+    {
+      "source_object_id": "OPC-C9",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C9",
+      "title": "Implement Security Logging and Monitoring",
+      "statement": "Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security information during the runtime operation of an application. Monitoring is the live review of application and security logs using various forms of automation. The same tools and patterns can be used for operations, debugging and security purposes.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "6dccf89818bec04d2932923acaaac6c331bc8808d2d9aef1ef0cb3608d6eb6b2"
+    },
+    {
+      "source_object_id": "OPC-C10",
+      "object_type": "proactive_control",
+      "source_document_id": "SRC-OWASP-PROACTIVE-2018",
+      "framework_family": "OWASP-PROACTIVE",
+      "control_id": "C10",
+      "title": "Handle All Errors and Exceptions",
+      "statement": "Exception handling is a programming concept that allows an application to respond to different error states (like network down, or database connection failed, etc) in various ways. Handling exceptions and errors correctly is critical to making your code reliable and secure.",
+      "statement_kind": "substantive",
+      "normalized_text_hash": "47dcc0a62f63a3e660f6b21d69dd09d7de83fda8d80b24af288a14c482093cf6"
+    }
+  ]
+}

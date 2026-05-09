@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "owasp_dsomm",
+  "source_document_id": "SRC-OWASP-DSOMM-V4_2_0",
+  "retrieved_at": "2026-04-05T10:24:19Z",
+  "data_repo_head_commit": "fda3b250ae9325b8c10f23318c9f0768eaa60b98",
+  "captured_files": [
+    {
+      "filename": "project_page.html",
+      "local_path": "sources/owasp_dsomm/project_page.html",
+      "source_url": "https://devsecops.owasp.org/",
+      "format": "html",
+      "size_bytes": 33358,
+      "checksum_sha256": "e365b0f08af8bc9b8ba142225e652c763135ca2723ea219c17e8b99355a583d4"
+    },
+    {
+      "filename": "dsomm_site.html",
+      "local_path": "sources/owasp_dsomm/dsomm_site.html",
+      "source_url": "https://dsomm.owasp.org/",
+      "format": "html",
+      "size_bytes": 17808,
+      "checksum_sha256": "9b0d05aca6d9932718ce963d8e067a0a9ed912002db3d7da9bb8d84ee37a1baa"
+    },
+    {
+      "filename": "data_repo_HEAD.txt",
+      "local_path": "sources/owasp_dsomm/data_repo_HEAD.txt",
+      "source_url": "https://github.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/tree/fda3b250ae9325b8c10f23318c9f0768eaa60b98",
+      "format": "text",
+      "size_bytes": 41,
+      "checksum_sha256": "35cb67094b8417e0d8ba944a43b93702f840cfb42fd05c1fbad2b3e9b116c5c0"
+    },
+    {
+      "filename": "model_fda3b250ae9325b8c10f23318c9f0768eaa60b98.yaml",
+      "local_path": "sources/owasp_dsomm/model_fda3b250ae9325b8c10f23318c9f0768eaa60b98.yaml",
+      "source_url": "https://raw.githubusercontent.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/fda3b250ae9325b8c10f23318c9f0768eaa60b98/generated/model.yaml",
+      "format": "yaml",
+      "size_bytes": 338134,
+      "checksum_sha256": "d93a478625a5efe20894cd63841cc0dd2f04e12bf107ddc3b8084b0807789252"
+    },
+    {
+      "filename": "data_fda3b250ae9325b8c10f23318c9f0768eaa60b98.zip",
+      "local_path": "sources/owasp_dsomm/data_fda3b250ae9325b8c10f23318c9f0768eaa60b98.zip",
+      "source_url": "https://codeload.github.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data/zip/fda3b250ae9325b8c10f23318c9f0768eaa60b98",
+      "format": "zip",
+      "size_bytes": 196772,
+      "checksum_sha256": "ca439a9950eab3d149c534ca4a5d1fb8e5c48712e4dd55c2fd08d8a59e747c9d"
+    }
+  ]
+}

@@ -1,0 +1,2337 @@
+{
+  "iteration": "Cycle A Iteration 3",
+  "substrate": "v7 (post-AI/ML expansion)",
+  "n_total_items": 3861,
+  "n_ldp_items": 988,
+  "n_grounded_items": 2873,
+  "ldp_pct": 25.59,
+  "clustering": {
+    "method": "agglomerative average-linkage on cosine distance",
+    "encoder": "all-MiniLM-L6-v2 @ c9745ed1 (augmentation symmetry \u00a7F)",
+    "granularities": {
+      "tight": {
+        "distance_threshold": 0.55,
+        "n_clusters": 382
+      },
+      "broad": {
+        "distance_threshold": 0.65,
+        "n_clusters": 201
+      },
+      "coarse": {
+        "distance_threshold": 0.75,
+        "n_clusters": 77
+      }
+    },
+    "coarse_used_for_analysis": true
+  },
+  "categorization_summary": {
+    "n_clusters": 77,
+    "n_singletons": 10,
+    "n_size_ge_5": 40,
+    "n_strong_3_plus_families": 27,
+    "n_moderate_2_families": 22,
+    "n_ai_ml_inflected_clusters": 14
+  },
+  "strong_clusters": [
+    {
+      "cluster_id": "CID7-011",
+      "size": 118,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3224,
+      "med_top1": 0.3399,
+      "top3_target_entities": [
+        [
+          "ACO-IVF-005",
+          29
+        ],
+        [
+          "ACO-IVF-003",
+          17
+        ],
+        [
+          "ACO-IVF-002",
+          4
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 82,
+        "Mechanism": 17,
+        "Practice": 19
+      },
+      "sources_distribution": {
+        "cwe_software_development_view_v4_19_1": 116,
+        "capec_v3_9": 1,
+        "owasp_dsomm": 1
+      },
+      "families_distribution": {
+        "MITRE_CWE": 116,
+        "MITRE_CAPEC": 1,
+        "OWASP_DSOMM": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "capec_v3_9/CAPEC-228",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "DTD Injection. DTD Injection. An attacker injects malicious content into an application's DTD in an attempt to produce a negative technical impact. DTDs are used to describe how XM",
+          "top1_target": "ACO-IVF-003",
+          "top1_score": 0.4391098618507385
+        },
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-1024",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Comparison of Incompatible Types. The product performs a comparison between two entities, but the entities are of different, incompatible types that cannot be guaranteed to provide",
+          "top1_target": "ACO-IVF-003",
+          "top1_score": 0.3155924677848816
+        },
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-1025",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Comparison Using Wrong Factors. The code performs a comparison between two entities, but the comparison examines the wrong factors or characteristics of the entities, which can lea",
+          "top1_target": "ACM-IVF-001",
+          "top1_score": 0.3371674120426178
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-027",
+      "size": 102,
+      "n_sources": 9,
+      "n_independent_families": 8,
+      "avg_top1": 0.3731,
+      "med_top1": 0.3761,
+      "top3_target_entities": [
+        [
+          "ACO-TMR-005",
+          9
+        ],
+        [
+          "ACM-SCBI-002",
+          7
+        ],
+        [
+          "ACO-TSV-006",
+          7
+        ]
+      ],
+      "top1_target_levels": {
+        "Mechanism": 31,
+        "ControlObjective": 40,
+        "Practice": 31
+      },
+      "sources_distribution": {
+        "mitre_atlas": 70,
+        "nist_ai_100_2_e2025": 14,
+        "capec_v3_9": 12,
+        "cis_controls_v8_1_2": 1,
+        "cwe_software_development_view_v4_19_1": 1,
+        "nist_sp800_53_rev5": 1,
+        "owasp_mcp_third_party_servers_v1_0": 1,
+        "owasp_mcp_top_10_v0_1_2025_beta": 1,
+        "owasp_ml_top_10": 1
+      },
+      "families_distribution": {
+        "MITRE_ATLAS": 70,
+        "NIST_AI_TAXONOMY": 14,
+        "MITRE_CAPEC": 12,
+        "OWASP_MCP": 2,
+        "CIS": 1,
+        "MITRE_CWE": 1,
+        "NIST_800_53": 1,
+        "OWASP_TOP10": 1
+      },
+      "iter3_member_pct": 0.833,
+      "iter3_dominance": true,
+      "convergence_verdict": "STRONG_(8_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "capec_v3_9/CAPEC-167",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "White Box Reverse Engineering. White Box Reverse Engineering. An attacker discovers the structure, function, and composition of a type of computer software through white box analys",
+          "top1_target": "ACM-TSV-001",
+          "top1_score": 0.3750828206539154
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-185",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Malicious Software Download. Malicious Software Download. An attacker uses deceptive methods to cause a user or an automated process to download and install dangerous code that ori",
+          "top1_target": "ACO-TMR-004",
+          "top1_score": 0.3610696792602539
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-189",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Black Box Reverse Engineering. Black Box Reverse Engineering. An adversary discovers the structure, function, and composition of a type of computer software through black box analy",
+          "top1_target": "ACM-TSV-001",
+          "top1_score": 0.40391305088996887
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-033",
+      "size": 57,
+      "n_sources": 5,
+      "n_independent_families": 5,
+      "avg_top1": 0.3532,
+      "med_top1": 0.3609,
+      "top3_target_entities": [
+        [
+          "ACO-IVF-008",
+          10
+        ],
+        [
+          "ACO-IVF-005",
+          9
+        ],
+        [
+          "ACP-IAT-005",
+          7
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 17,
+        "ControlObjective": 36,
+        "Mechanism": 4
+      },
+      "sources_distribution": {
+        "capec_v3_9": 49,
+        "cis_controls_v8_1_2": 4,
+        "cwe_software_development_view_v4_19_1": 2,
+        "asvs_v5_0_0": 1,
+        "mcp_official_security_foundations_2025": 1
+      },
+      "families_distribution": {
+        "MITRE_CAPEC": 49,
+        "CIS": 4,
+        "MITRE_CWE": 2,
+        "ASVS": 1,
+        "MCP_OFFICIAL": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(5_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V17.3.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the signaling server is able to continue processing legitimate incoming signaling messages during a flood attack. This should be achieved by implementing rate limiting ",
+          "top1_target": "ACP-ITS-004",
+          "top1_score": 0.4068205952644348
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-33",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "HTTP Request Smuggling. HTTP Request Smuggling. An adversary abuses the flexibility and discrepancies in the parsing and interpretation of HTTP Request messages using various HTTP ",
+          "top1_target": "ACP-IAT-005",
+          "top1_score": 0.39024922251701355
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-34",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "HTTP Response Splitting. HTTP Response Splitting. An adversary manipulates and injects malicious content, in the form of secret unauthorized HTTP responses, into a single HTTP resp",
+          "top1_target": "ACO-IVF-008",
+          "top1_score": 0.3906732201576233
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-030",
+      "size": 47,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3497,
+      "med_top1": 0.3526,
+      "top3_target_entities": [
+        [
+          "ACO-IAT-006",
+          13
+        ],
+        [
+          "ACO-ITS-003",
+          8
+        ],
+        [
+          "ACP-IAT-001",
+          4
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 30,
+        "Practice": 15,
+        "Mechanism": 2
+      },
+      "sources_distribution": {
+        "capec_v3_9": 36,
+        "nist_sp800_53_rev5": 10,
+        "mitre_atlas": 1
+      },
+      "families_distribution": {
+        "MITRE_CAPEC": 36,
+        "NIST_800_53": 10,
+        "MITRE_ATLAS": 1
+      },
+      "iter3_member_pct": 0.021,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "capec_v3_9/CAPEC-158",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Sniffing Network Traffic. Sniffing Network Traffic. In this attack pattern, the adversary monitors network traffic between nodes of a public or multicast network in an attempt to c",
+          "top1_target": "ACO-ITS-003",
+          "top1_score": 0.3844186067581177
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-173",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Action Spoofing. Action Spoofing. An adversary is able to disguise one action for another and therefore trick a user into initiating one type of action when they intend to initiate",
+          "top1_target": "ACP-IAT-001",
+          "top1_score": 0.40724241733551025
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-313",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Passive OS Fingerprinting. Passive OS Fingerprinting. An adversary engages in activity to detect the version or type of OS software in a an environment by passively monitoring comm",
+          "top1_target": "ACP-SPC-005",
+          "top1_score": 0.4106682240962982
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-022",
+      "size": 42,
+      "n_sources": 5,
+      "n_independent_families": 5,
+      "avg_top1": 0.3582,
+      "med_top1": 0.371,
+      "top3_target_entities": [
+        [
+          "ACM-TMR-005",
+          6
+        ],
+        [
+          "ACP-SPC-001",
+          6
+        ],
+        [
+          "ACO-RPR-009",
+          5
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 16,
+        "ControlObjective": 16,
+        "Mechanism": 10
+      },
+      "sources_distribution": {
+        "capec_v3_9": 24,
+        "asvs_v5_0_0": 13,
+        "cwe_software_development_view_v4_19_1": 3,
+        "mitre_atlas": 1,
+        "safecode_agile_2012": 1
+      },
+      "families_distribution": {
+        "MITRE_CAPEC": 24,
+        "ASVS": 13,
+        "MITRE_CWE": 3,
+        "MITRE_ATLAS": 1,
+        "SAFECODE": 1
+      },
+      "iter3_member_pct": 0.024,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(5_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V5.1.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the documentation defines the permitted file types, expected file extensions",
+          "top1_target": "ACP-IVF-002",
+          "top1_score": 0.33815306425094604
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V5.2.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
+          "top1_target": "ACO-IVF-005",
+          "top1_score": 0.39030012488365173
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V5.2.2",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that when the application accepts a file, either on its own or within an archive such as a zip file, it checks if the file extension matches an expected file extension and v",
+          "top1_target": "ACP-SCBI-002",
+          "top1_score": 0.3741878867149353
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-064",
+      "size": 37,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3515,
+      "med_top1": 0.3611,
+      "top3_target_entities": [
+        [
+          "ACO-IAT-004",
+          9
+        ],
+        [
+          "ACP-IAT-005",
+          6
+        ],
+        [
+          "ACO-IAT-002",
+          5
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 25,
+        "Practice": 8,
+        "Mechanism": 4
+      },
+      "sources_distribution": {
+        "asvs_v5_0_0": 34,
+        "cwe_software_development_view_v4_19_1": 2,
+        "mcp_official_security_foundations_2025": 1
+      },
+      "families_distribution": {
+        "ASVS": 34,
+        "MITRE_CWE": 2,
+        "MCP_OFFICIAL": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V3.3.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that cookies have the 'Secure' attribute set, and if the '\\__Host-' prefix is not used for the cookie name, the '__Secure-' prefix must be used for the cookie name.",
+          "top1_target": "ACO-IAT-004",
+          "top1_score": 0.25152820348739624
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V3.3.2",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that each cookie's 'SameSite' attribute value is set according to the purpose of the cookie, to limit exposure to user interface redress attacks and browser-based request fo",
+          "top1_target": "ACO-IAT-004",
+          "top1_score": 0.3839418888092041
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V3.3.3",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that cookies have the '__Host-' prefix for the cookie name unless they are explicitly designed to be shared with other hosts.",
+          "top1_target": "ACO-IAT-004",
+          "top1_score": 0.22800198197364807
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-044",
+      "size": 35,
+      "n_sources": 5,
+      "n_independent_families": 3,
+      "avg_top1": 0.3745,
+      "med_top1": 0.3722,
+      "top3_target_entities": [
+        [
+          "ACO-TMR-008",
+          3
+        ],
+        [
+          "ACO-RPR-001",
+          2
+        ],
+        [
+          "ACM-TMR-002",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 14,
+        "Practice": 12,
+        "Mechanism": 9
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 14,
+        "eu_dora": 12,
+        "eu_cra": 5,
+        "eu_rgpd": 3,
+        "asvs_v5_0_0": 1
+      },
+      "families_distribution": {
+        "EU": 20,
+        "NIST_800_53": 14,
+        "ASVS": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V14.2.6",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the application only returns the minimum required sensitive data for the application's functionality. For example, only returning some of the digits of a credit card nu",
+          "top1_target": "ACO-IVF-005",
+          "top1_score": 0.37216243147850037
+        },
+        {
+          "item_id": "eu_cra/CRA-ART-15",
+          "source": "eu_cra",
+          "source_text_excerpt": "CRA Article 15. Article 15 (Voluntary reporting) provides that manufacturers, importers and distributors may, on a voluntary basis, notify ENISA of any vulnerability contained in a",
+          "top1_target": "ACO-RPR-001",
+          "top1_score": 0.4064890742301941
+        },
+        {
+          "item_id": "eu_cra/CRA-ART-16",
+          "source": "eu_cra",
+          "source_text_excerpt": "CRA Article 16. Article 16 (Other provisions related to reporting) sets out modalities and confidentiality safeguards for reporting under Articles 14 and 15. Information submitted ",
+          "top1_target": "ACP-ITS-003",
+          "top1_score": 0.41180193424224854
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-026",
+      "size": 34,
+      "n_sources": 4,
+      "n_independent_families": 4,
+      "avg_top1": 0.3803,
+      "med_top1": 0.3897,
+      "top3_target_entities": [
+        [
+          "ACO-TMR-002",
+          8
+        ],
+        [
+          "ACO-TMR-005",
+          6
+        ],
+        [
+          "ACM-SCBI-002",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 22,
+        "Mechanism": 5,
+        "Practice": 7
+      },
+      "sources_distribution": {
+        "nist_ai_rmf_1_0": 19,
+        "mitre_atlas": 13,
+        "enisa_multilayer_ai_cybersecurity_practices_2023": 1,
+        "nist_sp800_53_rev5": 1
+      },
+      "families_distribution": {
+        "NIST_AI_RMF": 19,
+        "MITRE_ATLAS": 13,
+        "ENISA": 1,
+        "NIST_800_53": 1
+      },
+      "iter3_member_pct": 0.941,
+      "iter3_dominance": true,
+      "convergence_verdict": "STRONG_(4_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "enisa_multilayer_ai_cybersecurity_practices_2023/ENISA-AI-FAICP-LAYER-I",
+          "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+          "source_text_excerpt": "Layer I - Cybersecurity foundations for AI-hosting ICT environments. A multilayer framework for good cybersecurity practices for AI June 2023 6 2. FRAMEWORK FOR GOOD CYBERSECURITY ",
+          "top1_target": "ACO-TMR-002",
+          "top1_score": 0.412678062915802
+        },
+        {
+          "item_id": "mitre_atlas/AML.TA0015",
+          "source": "mitre_atlas",
+          "source_text_excerpt": "Lateral Movement. The adversary is trying to move through your AI environment.\n\nLateral Movement consists of techniques that adversaries may use to gain access to and control other",
+          "top1_target": "ACO-TMR-002",
+          "top1_score": 0.3904936909675598
+        },
+        {
+          "item_id": "mitre_atlas/AML.T0000",
+          "source": "mitre_atlas",
+          "source_text_excerpt": "Search Open Technical Databases. Adversaries may search for publicly available research and technical documentation to learn how and where AI is used within a victim organization.\n",
+          "top1_target": "ACM-TMR-005",
+          "top1_score": 0.3934252858161926
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-009",
+      "size": 26,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3011,
+      "med_top1": 0.3141,
+      "top3_target_entities": [
+        [
+          "ACO-IVF-005",
+          7
+        ],
+        [
+          "ACP-IVF-005",
+          3
+        ],
+        [
+          "ACO-IVF-003",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 7,
+        "ControlObjective": 19
+      },
+      "sources_distribution": {
+        "cwe_software_development_view_v4_19_1": 20,
+        "capec_v3_9": 5,
+        "asvs_v5_0_0": 1
+      },
+      "families_distribution": {
+        "MITRE_CWE": 20,
+        "MITRE_CAPEC": 5,
+        "ASVS": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V1.4.2",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that sign, range, and input validation techniques are used to prevent integer overflows.",
+          "top1_target": "ACP-IVF-001",
+          "top1_score": 0.40360957384109497
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-47",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Buffer Overflow via Parameter Expansion. Buffer Overflow via Parameter Expansion. In this attack, the target software is given input that the adversary knows will be modified and e",
+          "top1_target": "ACO-IVF-003",
+          "top1_score": 0.31844562292099
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-92",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Forced Integer Overflow. Forced Integer Overflow. This attack forces an integer variable to go out of range. The integer variable is often used as an offset such as size of memory ",
+          "top1_target": "ACP-IAT-005",
+          "top1_score": 0.33167627453804016
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-052",
+      "size": 23,
+      "n_sources": 5,
+      "n_independent_families": 5,
+      "avg_top1": 0.3824,
+      "med_top1": 0.3814,
+      "top3_target_entities": [
+        [
+          "ACM-TSV-004",
+          4
+        ],
+        [
+          "ACP-TSV-006",
+          3
+        ],
+        [
+          "ACP-TMR-001",
+          3
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 7,
+        "Practice": 9,
+        "Mechanism": 7
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 19,
+        "cis_controls_v8_1_2": 1,
+        "mitre_atlas": 1,
+        "owasp_dsomm": 1,
+        "pci_dss_v4_0_1": 1
+      },
+      "families_distribution": {
+        "NIST_800_53": 19,
+        "CIS": 1,
+        "MITRE_ATLAS": 1,
+        "OWASP_DSOMM": 1,
+        "PCI": 1
+      },
+      "iter3_member_pct": 0.043,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(5_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "cis_controls_v8_1_2/CIS-14.5",
+          "source": "cis_controls_v8_1_2",
+          "source_text_excerpt": "Train Workforce Members on Causes of Unintentional Data Exposure. Train workforce members to be aware of causes for unintentional data exposure. Example topics include mis-delivery",
+          "top1_target": "ACO-ATB-003",
+          "top1_score": 0.4049544930458069
+        },
+        {
+          "item_id": "mitre_atlas/AML.T0005.002",
+          "source": "mitre_atlas",
+          "source_text_excerpt": "Use Pre-Trained Model. Adversaries may use an off-the-shelf pre-trained model as a proxy for the victim model to aid in staging the attack.",
+          "top1_target": "ACO-TMR-001",
+          "top1_score": 0.4648838937282562
+        },
+        {
+          "item_id": "nist_sp800_53_rev5/SP800-53-AT-2.1",
+          "source": "nist_sp800_53_rev5",
+          "source_text_excerpt": "Practical Exercises. Provide practical exercises in literacy training that simulate events and incidents.",
+          "top1_target": "ACP-TSV-006",
+          "top1_score": 0.2909435033798218
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-025",
+      "size": 22,
+      "n_sources": 4,
+      "n_independent_families": 4,
+      "avg_top1": 0.377,
+      "med_top1": 0.3811,
+      "top3_target_entities": [
+        [
+          "ACO-TMR-004",
+          3
+        ],
+        [
+          "ACO-ITS-003",
+          2
+        ],
+        [
+          "ACO-IVF-004",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 12,
+        "Practice": 7,
+        "Mechanism": 3
+      },
+      "sources_distribution": {
+        "capec_v3_9": 9,
+        "nist_sp800_53_rev5": 9,
+        "cis_controls_v8_1_2": 2,
+        "owasp_dsomm": 2
+      },
+      "families_distribution": {
+        "MITRE_CAPEC": 9,
+        "NIST_800_53": 9,
+        "CIS": 2,
+        "OWASP_DSOMM": 2
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(4_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "capec_v3_9/CAPEC-407",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Pretexting. Pretexting. An adversary engages in pretexting behavior to solicit information from target persons, or manipulate the target into performing some action that serves the",
+          "top1_target": "ACO-TMR-004",
+          "top1_score": 0.41448283195495605
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-410",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Information Elicitation. Information Elicitation. An adversary engages an individual using any combination of social engineering methods for the purpose of extracting information. ",
+          "top1_target": "ACO-ITS-003",
+          "top1_score": 0.3746049702167511
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-412",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Pretexting via Customer Service. Pretexting via Customer Service. An adversary engages in pretexting behavior, assuming the role of someone who works for Customer Service, to solic",
+          "top1_target": "ACO-IVF-004",
+          "top1_score": 0.4174646735191345
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-053",
+      "size": 22,
+      "n_sources": 4,
+      "n_independent_families": 4,
+      "avg_top1": 0.3573,
+      "med_top1": 0.3567,
+      "top3_target_entities": [
+        [
+          "ACP-TMR-001",
+          3
+        ],
+        [
+          "ACP-RPR-001",
+          3
+        ],
+        [
+          "ACP-TMR-009",
+          3
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 18,
+        "ControlObjective": 2,
+        "Mechanism": 2
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 17,
+        "hipaa_security_rule": 2,
+        "ssdf_sp800_218_v1_1": 2,
+        "nist_ai_rmf_1_0": 1
+      },
+      "families_distribution": {
+        "NIST_800_53": 17,
+        "HIPAA": 2,
+        "NIST_SSDF": 2,
+        "NIST_AI_RMF": 1
+      },
+      "iter3_member_pct": 0.045,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(4_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "hipaa_security_rule/HIPAA-164-308a7",
+          "source": "hipaa_security_rule",
+          "source_text_excerpt": "Contingency Plan. Contingency Plan \u2014 Administrative Safeguard. Establish (and implement as needed) policies and procedures for responding to an emergency or other occurrence (such ",
+          "top1_target": "ACP-TMR-001",
+          "top1_score": 0.3737698495388031
+        },
+        {
+          "item_id": "hipaa_security_rule/HIPAA-164-314b1",
+          "source": "hipaa_security_rule",
+          "source_text_excerpt": "Requirements for Group Health Plans. Requirements for Group Health Plans \u2014 Organizational Requirement. Except when the only ePHI disclosed to a plan sponsor is summary health infor",
+          "top1_target": "ACO-TMR-008",
+          "top1_score": 0.3813590407371521
+        },
+        {
+          "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-1.2",
+          "source": "nist_ai_rmf_1_0",
+          "source_text_excerpt": "Interdisciplinary AI actors, competencies, skills, and. capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their ",
+          "top1_target": "ACP-ITS-001",
+          "top1_score": 0.28592056035995483
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-008",
+      "size": 20,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.2947,
+      "med_top1": 0.2951,
+      "top3_target_entities": [
+        [
+          "ACM-IVF-001",
+          5
+        ],
+        [
+          "ACP-SPC-001",
+          3
+        ],
+        [
+          "ACO-IVF-003",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 8,
+        "Practice": 6,
+        "Mechanism": 6
+      },
+      "sources_distribution": {
+        "cwe_software_development_view_v4_19_1": 18,
+        "owasp_dsomm": 1,
+        "safecode_agile_2012": 1
+      },
+      "families_distribution": {
+        "MITRE_CWE": 18,
+        "OWASP_DSOMM": 1,
+        "SAFECODE": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-1052",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Excessive Use of Hard-Coded Literals in Initialization. The product initializes a data element using a hard-coded literal that is not a simple integer or static constant element.",
+          "top1_target": "ACO-IVF-003",
+          "top1_score": 0.3423239290714264
+        },
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-1071",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Empty Code Block. The source code contains a block that does not contain any code, i.e., the block is empty.",
+          "top1_target": "ACO-SPC-001",
+          "top1_score": 0.29165923595428467
+        },
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-1080",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Source Code File with Excessive Number of Lines of Code. A source code file has too many lines of code.",
+          "top1_target": "ACP-SPC-001",
+          "top1_score": 0.3559790253639221
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-065",
+      "size": 18,
+      "n_sources": 4,
+      "n_independent_families": 4,
+      "avg_top1": 0.3351,
+      "med_top1": 0.3309,
+      "top3_target_entities": [
+        [
+          "ACO-IAT-001",
+          5
+        ],
+        [
+          "ACO-IAT-002",
+          3
+        ],
+        [
+          "ACP-IAT-001",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 11,
+        "Practice": 4,
+        "Mechanism": 3
+      },
+      "sources_distribution": {
+        "asvs_v5_0_0": 12,
+        "cwe_software_development_view_v4_19_1": 3,
+        "pci_dss_v4_0_1": 2,
+        "capec_v3_9": 1
+      },
+      "families_distribution": {
+        "ASVS": 12,
+        "MITRE_CWE": 3,
+        "PCI": 2,
+        "MITRE_CAPEC": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(4_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V6.2.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended.",
+          "top1_target": "ACO-IAT-001",
+          "top1_score": 0.314678430557251
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V6.2.2",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that users can change their password.",
+          "top1_target": "ACO-IAT-003",
+          "top1_score": 0.38526642322540283
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V6.2.3",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that password change functionality requires the user's current and new password.",
+          "top1_target": "ACP-IAT-001",
+          "top1_score": 0.32294589281082153
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-067",
+      "size": 16,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3437,
+      "med_top1": 0.3484,
+      "top3_target_entities": [
+        [
+          "ACO-IAT-004",
+          4
+        ],
+        [
+          "ACP-IAT-001",
+          4
+        ],
+        [
+          "ACO-IAT-001",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 7,
+        "ControlObjective": 6,
+        "Mechanism": 3
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 10,
+        "asvs_v5_0_0": 5,
+        "pci_dss_v4_0_1": 1
+      },
+      "families_distribution": {
+        "NIST_800_53": 10,
+        "ASVS": 5,
+        "PCI": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V7.1.2",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the documentation defines how many concurrent (parallel) sessions are allowed for one account as well as the intended behaviors and actions to be taken when the maximum",
+          "top1_target": "ACP-IAT-004",
+          "top1_score": 0.3988376259803772
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V7.4.2",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the application terminates all active sessions when a user account is disabled or deleted (such as an employee leaving the company).",
+          "top1_target": "ACO-IAT-004",
+          "top1_score": 0.40955454111099243
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V7.4.3",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the application gives the option to terminate all other active sessions after a successful change or removal of any authentication factor (including password change via",
+          "top1_target": "ACP-IAT-001",
+          "top1_score": 0.38964948058128357
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-021",
+      "size": 15,
+      "n_sources": 5,
+      "n_independent_families": 5,
+      "avg_top1": 0.427,
+      "med_top1": 0.4111,
+      "top3_target_entities": [
+        [
+          "ACP-TSV-001",
+          3
+        ],
+        [
+          "ACP-TSV-005",
+          2
+        ],
+        [
+          "ACM-TSV-001",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 6,
+        "Mechanism": 4,
+        "ControlObjective": 5
+      },
+      "sources_distribution": {
+        "owasp_dsomm": 8,
+        "nist_sp800_53_rev5": 3,
+        "pci_dss_v4_0_1": 2,
+        "cis_controls_v8_1_2": 1,
+        "eu_dora": 1
+      },
+      "families_distribution": {
+        "OWASP_DSOMM": 8,
+        "NIST_800_53": 3,
+        "PCI": 2,
+        "CIS": 1,
+        "EU": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(5_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "cis_controls_v8_1_2/CIS-18",
+          "source": "cis_controls_v8_1_2",
+          "source_text_excerpt": "Penetration Testing. Test the effectiveness and resiliency of enterprise assets through identifying and exploiting weaknesses in controls (people, processes, and technology), and s",
+          "top1_target": "ACP-TSV-001",
+          "top1_score": 0.5613797903060913
+        },
+        {
+          "item_id": "eu_dora/DORA-ART-26",
+          "source": "eu_dora",
+          "source_text_excerpt": "DORA Article 26. Article 26 (Advanced testing of ICT tools, systems and processes based on TLPT) requires financial entities identified by competent authorities, taking into accoun",
+          "top1_target": "ACP-TSV-005",
+          "top1_score": 0.5113866329193115
+        },
+        {
+          "item_id": "nist_sp800_53_rev5/SP800-53-CA-8.1",
+          "source": "nist_sp800_53_rev5",
+          "source_text_excerpt": "Independent Penetration Testing Agent or Team. Employ an independent penetration testing agent or team to perform penetration testing on the system or system components.",
+          "top1_target": "ACM-TSV-002",
+          "top1_score": 0.4110618829727173
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-024",
+      "size": 14,
+      "n_sources": 5,
+      "n_independent_families": 5,
+      "avg_top1": 0.4114,
+      "med_top1": 0.3999,
+      "top3_target_entities": [
+        [
+          "ACO-IVF-003",
+          3
+        ],
+        [
+          "ACM-IVF-001",
+          2
+        ],
+        [
+          "ACO-IVF-008",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "Mechanism": 5,
+        "ControlObjective": 7,
+        "Practice": 2
+      },
+      "sources_distribution": {
+        "capec_v3_9": 7,
+        "asvs_v5_0_0": 3,
+        "mitre_atlas": 2,
+        "cis_controls_v8_1_2": 1,
+        "owasp_llm_top_10": 1
+      },
+      "families_distribution": {
+        "MITRE_CAPEC": 7,
+        "ASVS": 3,
+        "MITRE_ATLAS": 2,
+        "CIS": 1,
+        "OWASP_TOP10": 1
+      },
+      "iter3_member_pct": 0.214,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(5_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V1.3.3",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that data being passed to a potentially dangerous context is sanitized beforehand to enforce safety measures, such as only allowing characters which are safe for this contex",
+          "top1_target": "ACM-IVF-001",
+          "top1_score": 0.47610968351364136
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V1.3.8",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the application appropriately sanitizes untrusted input before use in Java Naming and Directory Interface (JNDI) queries and that JNDI is configured securely to prevent",
+          "top1_target": "ACM-IVF-001",
+          "top1_score": 0.43900927901268005
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V1.3.9",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the application sanitizes content before it is sent to memcache to prevent injection attacks.",
+          "top1_target": "ACO-IVF-005",
+          "top1_score": 0.32923853397369385
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-063",
+      "size": 14,
+      "n_sources": 4,
+      "n_independent_families": 4,
+      "avg_top1": 0.3819,
+      "med_top1": 0.3945,
+      "top3_target_entities": [
+        [
+          "ACP-ITS-003",
+          4
+        ],
+        [
+          "ACP-ITS-004",
+          3
+        ],
+        [
+          "ACO-IVF-005",
+          2
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 4,
+        "Practice": 9,
+        "Mechanism": 1
+      },
+      "sources_distribution": {
+        "asvs_v5_0_0": 11,
+        "capec_v3_9": 1,
+        "cwe_software_development_view_v4_19_1": 1,
+        "safecode_agile_2012": 1
+      },
+      "families_distribution": {
+        "ASVS": 11,
+        "MITRE_CAPEC": 1,
+        "MITRE_CWE": 1,
+        "SAFECODE": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(4_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V4.4.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that WebSocket over TLS (WSS) is used for all WebSocket connections.",
+          "top1_target": "ACO-ITS-003",
+          "top1_score": 0.2742777168750763
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V4.4.2",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that, during the initial HTTP WebSocket handshake, the Origin header field is checked against a list of origins allowed for the application.",
+          "top1_target": "ACP-IAT-005",
+          "top1_score": 0.2146611511707306
+        },
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V12.1.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that only the latest recommended versions of the TLS protocol are enabled, such as TLS 1.2 and TLS 1.3. The latest version of the TLS protocol must be the preferred option.",
+          "top1_target": "ACP-ITS-004",
+          "top1_score": 0.30396148562431335
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-028",
+      "size": 10,
+      "n_sources": 4,
+      "n_independent_families": 4,
+      "avg_top1": 0.3686,
+      "med_top1": 0.3732,
+      "top3_target_entities": [
+        [
+          "ACP-SPC-002",
+          2
+        ],
+        [
+          "ACP-TMR-005",
+          1
+        ],
+        [
+          "ACO-SLG-005",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 4,
+        "ControlObjective": 3,
+        "Mechanism": 3
+      },
+      "sources_distribution": {
+        "capec_v3_9": 4,
+        "mitre_atlas": 3,
+        "cwe_software_development_view_v4_19_1": 2,
+        "nist_sp800_53_rev5": 1
+      },
+      "families_distribution": {
+        "MITRE_CAPEC": 4,
+        "MITRE_ATLAS": 3,
+        "MITRE_CWE": 2,
+        "NIST_800_53": 1
+      },
+      "iter3_member_pct": 0.3,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(4_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "capec_v3_9/CAPEC-116",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Excavation. Excavation. An adversary actively probes the target in a manner that is designed to solicit information that could be leveraged for malicious purposes.. Prerequisites: ",
+          "top1_target": "ACP-TMR-005",
+          "top1_score": 0.33304354548454285
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-406",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Dumpster Diving. Dumpster Diving. An adversary cases an establishment and searches through trash bins, dumpsters, or areas where company information may have been accidentally disc",
+          "top1_target": "ACP-SPC-002",
+          "top1_score": 0.375296950340271
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-545",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Pull Data from System Resources. Pull Data from System Resources. An adversary who is authorized or has the ability to search known system resources, does so with the intention of ",
+          "top1_target": "ACO-SLG-005",
+          "top1_score": 0.37274497747421265
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-043",
+      "size": 8,
+      "n_sources": 4,
+      "n_independent_families": 4,
+      "avg_top1": 0.3845,
+      "med_top1": 0.3872,
+      "top3_target_entities": [
+        [
+          "ACM-RPR-001",
+          2
+        ],
+        [
+          "ACO-IAT-007",
+          1
+        ],
+        [
+          "ACO-IAT-006",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 4,
+        "Mechanism": 3,
+        "Practice": 1
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 5,
+        "asvs_v5_0_0": 1,
+        "cis_controls_v8_1_2": 1,
+        "hipaa_security_rule": 1
+      },
+      "families_distribution": {
+        "NIST_800_53": 5,
+        "ASVS": 1,
+        "CIS": 1,
+        "HIPAA": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(4_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V8.4.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that multi-tenant applications use cross-tenant controls to ensure consumer operations will never affect tenants with which they do not have permissions to interact.",
+          "top1_target": "ACO-IAT-007",
+          "top1_score": 0.3899778425693512
+        },
+        {
+          "item_id": "cis_controls_v8_1_2/CIS-1.2",
+          "source": "cis_controls_v8_1_2",
+          "source_text_excerpt": "Address Unauthorized Assets. Ensure that a process exists to address unauthorized assets on a weekly basis. The enterprise may choose to remove the asset from the network, deny the",
+          "top1_target": "ACO-IAT-006",
+          "top1_score": 0.4018108546733856
+        },
+        {
+          "item_id": "hipaa_security_rule/HIPAA-164-310d1",
+          "source": "hipaa_security_rule",
+          "source_text_excerpt": "Device and Media Controls. Device and Media Controls \u2014 Physical Safeguard. Implement policies and procedures that govern the receipt and removal of hardware and electronic media th",
+          "top1_target": "ACM-RPR-001",
+          "top1_score": 0.4739564061164856
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-038",
+      "size": 8,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.2995,
+      "med_top1": 0.3123,
+      "top3_target_entities": [
+        [
+          "ACO-RPR-009",
+          2
+        ],
+        [
+          "ACO-TSV-002",
+          1
+        ],
+        [
+          "ACM-IVF-004",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 4,
+        "Mechanism": 3,
+        "Practice": 1
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 4,
+        "pci_dss_v4_0_1": 3,
+        "cwe_software_development_view_v4_19_1": 1
+      },
+      "families_distribution": {
+        "NIST_800_53": 4,
+        "PCI": 3,
+        "MITRE_CWE": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-208",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Observable Timing Discrepancy. Two separate operations in a product require different amounts of time to complete, in a way that is observable to an actor and reveals security-rele",
+          "top1_target": "ACO-TSV-002",
+          "top1_score": 0.2075972855091095
+        },
+        {
+          "item_id": "nist_sp800_53_rev5/SP800-53-SC-36.2",
+          "source": "nist_sp800_53_rev5",
+          "source_text_excerpt": "Synchronization. Synchronize the following duplicate systems or system components: [duplicate systems or system components].",
+          "top1_target": "ACM-IVF-004",
+          "top1_score": 0.3467159867286682
+        },
+        {
+          "item_id": "nist_sp800_53_rev5/SP800-53-SC-45",
+          "source": "nist_sp800_53_rev5",
+          "source_text_excerpt": "System Time Synchronization. Synchronize system clocks within and between systems and system components.",
+          "top1_target": "ACP-ATB-002",
+          "top1_score": 0.30135074257850647
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-069",
+      "size": 7,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.4191,
+      "med_top1": 0.4049,
+      "top3_target_entities": [
+        [
+          "ACM-SPC-003",
+          2
+        ],
+        [
+          "ACP-IAT-002",
+          1
+        ],
+        [
+          "ACP-IAT-005",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 3,
+        "Mechanism": 3,
+        "ControlObjective": 1
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 3,
+        "capec_v3_9": 2,
+        "cis_controls_v8_1_2": 2
+      },
+      "families_distribution": {
+        "NIST_800_53": 3,
+        "MITRE_CAPEC": 2,
+        "CIS": 2
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "capec_v3_9/CAPEC-561",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Windows Admin Shares with Stolen Credentials. Windows Admin Shares with Stolen Credentials. An adversary guesses or obtains (i.e. steals or purchases) legitimate Windows administra",
+          "top1_target": "ACP-IAT-002",
+          "top1_score": 0.4278486967086792
+        },
+        {
+          "item_id": "capec_v3_9/CAPEC-645",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Use of Captured Tickets (Pass The Ticket). Use of Captured Tickets (Pass The Ticket). An adversary uses stolen Kerberos tickets to access systems/resources that leverage the Kerber",
+          "top1_target": "ACP-IAT-005",
+          "top1_score": 0.42797255516052246
+        },
+        {
+          "item_id": "cis_controls_v8_1_2/CIS-5.6",
+          "source": "cis_controls_v8_1_2",
+          "source_text_excerpt": "Centralize Account Management. Centralize account management through a directory or identity service.",
+          "top1_target": "ACM-SPC-003",
+          "top1_score": 0.4049108028411865
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-029",
+      "size": 6,
+      "n_sources": 4,
+      "n_independent_families": 3,
+      "avg_top1": 0.3959,
+      "med_top1": 0.3924,
+      "top3_target_entities": [
+        [
+          "ACO-IVF-005",
+          3
+        ],
+        [
+          "ACP-SPC-004",
+          1
+        ],
+        [
+          "ACP-IAT-005",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 2,
+        "ControlObjective": 4
+      },
+      "sources_distribution": {
+        "mcp_official_security_foundations_2025": 3,
+        "mitre_atlas": 1,
+        "owasp_mcp_third_party_servers_v1_0": 1,
+        "owasp_mcp_top_10_v0_1_2025_beta": 1
+      },
+      "families_distribution": {
+        "MCP_OFFICIAL": 3,
+        "OWASP_MCP": 2,
+        "MITRE_ATLAS": 1
+      },
+      "iter3_member_pct": 0.167,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-CLIENT-REGISTRATION",
+          "source": "mcp_official_security_foundations_2025",
+          "source_text_excerpt": "Client registration and client metadata trust. MCP supports three client registration mechanisms. Choose based on your scenario: Client ID Metadata Documents : When client and serv",
+          "top1_target": "ACP-SPC-004",
+          "top1_score": 0.4116334617137909
+        },
+        {
+          "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-REDIRECT-CLIENT-METADATA-SECURITY",
+          "source": "mcp_official_security_foundations_2025",
+          "source_text_excerpt": "Authorization code, redirect and client metadata document security. An attacker who has gained access to an authorization code contained in an authorization response can try to red",
+          "top1_target": "ACP-IAT-005",
+          "top1_score": 0.4921311140060425
+        },
+        {
+          "item_id": "mcp_official_security_foundations_2025/MCP-LOCAL-SERVER-COMPROMISE",
+          "source": "mcp_official_security_foundations_2025",
+          "source_text_excerpt": "Local MCP server compromise and sandboxing. Local MCP servers are MCP Servers running on a user\u2019s local machine, either by the user downloading and executing a server, authoring a ",
+          "top1_target": "ACO-ITS-001",
+          "top1_score": 0.32159730792045593
+        }
+      ],
+      "ai_ml_inflected": true
+    },
+    {
+      "cluster_id": "CID7-072",
+      "size": 3,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3523,
+      "med_top1": 0.3118,
+      "top3_target_entities": [
+        [
+          "ACO-RPR-004",
+          1
+        ],
+        [
+          "ACO-RPR-009",
+          1
+        ],
+        [
+          "ACP-RPR-006",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "ControlObjective": 2,
+        "Practice": 1
+      },
+      "sources_distribution": {
+        "asvs_v5_0_0": 1,
+        "cwe_software_development_view_v4_19_1": 1,
+        "owasp_dsomm": 1
+      },
+      "families_distribution": {
+        "ASVS": 1,
+        "MITRE_CWE": 1,
+        "OWASP_DSOMM": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "asvs_v5_0_0/ASVS-REQ-V13.4.1",
+          "source": "asvs_v5_0_0",
+          "source_text_excerpt": "Verify that the application is deployed either without any source control metadata, including the .git or .svn folders, or in a way that these folders are inaccessible both externa",
+          "top1_target": "ACO-RPR-004",
+          "top1_score": 0.31182920932769775
+        },
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-276",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Incorrect Default Permissions. During installation, installed file permissions are set to allow anyone to modify those files.",
+          "top1_target": "ACO-RPR-009",
+          "top1_score": 0.29982590675354004
+        },
+        {
+          "item_id": "owasp_dsomm/DSOMM-ACTIVITY-85D52588F5424225A33820DC22A5508D",
+          "source": "owasp_dsomm",
+          "source_text_excerpt": "Rolling update on deployment. Rolling update on deployment While a deployment is performed, the application can not be reached. A deployment without downtime is performed*.",
+          "top1_target": "ACP-RPR-006",
+          "top1_score": 0.44529932737350464
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-050",
+      "size": 3,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3076,
+      "med_top1": 0.317,
+      "top3_target_entities": [
+        [
+          "ACP-TMR-001",
+          2
+        ],
+        [
+          "ACP-IAT-005",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 3
+      },
+      "sources_distribution": {
+        "capec_v3_9": 1,
+        "nist_sp800_53_rev5": 1,
+        "owasp_dsomm": 1
+      },
+      "families_distribution": {
+        "MITRE_CAPEC": 1,
+        "NIST_800_53": 1,
+        "OWASP_DSOMM": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "capec_v3_9/CAPEC-295",
+          "source": "capec_v3_9",
+          "source_text_excerpt": "Timestamp Request. Timestamp Request. This pattern of attack leverages standard requests to learn the exact time associated with a target system. An adversary may be able to use th",
+          "top1_target": "ACP-IAT-005",
+          "top1_score": 0.2871662974357605
+        },
+        {
+          "item_id": "nist_sp800_53_rev5/SP800-53-SI-21",
+          "source": "nist_sp800_53_rev5",
+          "source_text_excerpt": "Information Refresh. Refresh [information] at [frequencies] or generate the information on demand and delete the information when no longer needed.",
+          "top1_target": "ACP-TMR-001",
+          "top1_score": 0.3187246322631836
+        },
+        {
+          "item_id": "owasp_dsomm/DSOMM-ACTIVITY-C922981B65ED40F3A94796FEE9A0125F",
+          "source": "owasp_dsomm",
+          "source_text_excerpt": "Generation of response statistics. Generation of response statistics No or delayed reaction to findings leads to potential exploitation of findings. Creation and response statistic",
+          "top1_target": "ACP-TMR-001",
+          "top1_score": 0.316983699798584
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-049",
+      "size": 3,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3657,
+      "med_top1": 0.3662,
+      "top3_target_entities": [
+        [
+          "ACM-TMR-003",
+          1
+        ],
+        [
+          "ACP-TMR-009",
+          1
+        ],
+        [
+          "ACP-ATB-006",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "Mechanism": 1,
+        "Practice": 2
+      },
+      "sources_distribution": {
+        "cwe_software_development_view_v4_19_1": 1,
+        "nist_sp800_53_rev5": 1,
+        "owasp_dsomm": 1
+      },
+      "families_distribution": {
+        "MITRE_CWE": 1,
+        "NIST_800_53": 1,
+        "OWASP_DSOMM": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "cwe_software_development_view_v4_19_1/CWE-439",
+          "source": "cwe_software_development_view_v4_19_1",
+          "source_text_excerpt": "Behavioral Change in New Version or Environment. A's behavior or functionality changes with a new version of A, or a new environment, which is not known (or manageable) by B.",
+          "top1_target": "ACM-TMR-003",
+          "top1_score": 0.3633950352668762
+        },
+        {
+          "item_id": "nist_sp800_53_rev5/SP800-53-PM-26",
+          "source": "nist_sp800_53_rev5",
+          "source_text_excerpt": "Complaint Management. Implement a process for receiving and responding to complaints, concerns, or questions from individuals about the organizational security and privacy practice",
+          "top1_target": "ACP-TMR-009",
+          "top1_score": 0.3675285577774048
+        },
+        {
+          "item_id": "owasp_dsomm/DSOMM-ACTIVITY-B4193D32394847E2A3263748C48019A1",
+          "source": "owasp_dsomm",
+          "source_text_excerpt": "Definition of a change management process. Definition of a change management process The impact of a change is not controlled because these are not recorded or documented. Each cha",
+          "top1_target": "ACP-ATB-006",
+          "top1_score": 0.36616742610931396
+        }
+      ],
+      "ai_ml_inflected": false
+    },
+    {
+      "cluster_id": "CID7-051",
+      "size": 3,
+      "n_sources": 3,
+      "n_independent_families": 3,
+      "avg_top1": 0.3955,
+      "med_top1": 0.3992,
+      "top3_target_entities": [
+        [
+          "ACP-TSV-007",
+          1
+        ],
+        [
+          "ACO-IAT-006",
+          1
+        ],
+        [
+          "ACM-TSV-004",
+          1
+        ]
+      ],
+      "top1_target_levels": {
+        "Practice": 1,
+        "ControlObjective": 1,
+        "Mechanism": 1
+      },
+      "sources_distribution": {
+        "nist_sp800_53_rev5": 1,
+        "owasp_dsomm": 1,
+        "pci_dss_v4_0_1": 1
+      },
+      "families_distribution": {
+        "NIST_800_53": 1,
+        "OWASP_DSOMM": 1,
+        "PCI": 1
+      },
+      "iter3_member_pct": 0.0,
+      "iter3_dominance": false,
+      "convergence_verdict": "STRONG_(3_independent_families)",
+      "sample_items": [
+        {
+          "item_id": "nist_sp800_53_rev5/SP800-53-PS-3",
+          "source": "nist_sp800_53_rev5",
+          "source_text_excerpt": "Personnel Screening. Screen individuals prior to authorizing access to the system; and Rescreen individuals in accordance with [organization-defined conditions requiring rescreenin",
+          "top1_target": "ACP-TSV-007",
+          "top1_score": 0.36806827783584595
+        },
+        {
+          "item_id": "owasp_dsomm/DSOMM-ACTIVITY-185D5A7419DC4422BE0744EA35226783",
+          "source": "owasp_dsomm",
+          "source_text_excerpt": "Office Hours. Office Hours Developers and Operations are not in contact with the security team and therefore do not ask prior implementation of (known or unknown) threats- As a sec",
+          "top1_target": "ACO-IAT-006",
+          "top1_score": 0.41913658380508423
+        },
+        {
+          "item_id": "pci_dss_v4_0_1/PCI-6.2.2",
+          "source": "pci_dss_v4_0_1",
+          "source_text_excerpt": "Software development personnel working on          6.2.2.a Examine software development procedures. Software development personnel working on          6.2.2.a Examine software deve",
+          "top1_target": "ACM-TSV-004",
+          "top1_score": 0.39919763803482056
+        }
+      ],
+      "ai_ml_inflected": false
+    }
+  ],
+  "moderate_clusters_summary": [
+    {
+      "cluster_id": "CID7-060",
+      "size": 20,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3552,
+      "concept_signature_top3": [
+        "ACO-ATB-004",
+        "ACP-TMR-008",
+        "ACP-SLG-002"
+      ]
+    },
+    {
+      "cluster_id": "CID7-057",
+      "size": 18,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3752,
+      "concept_signature_top3": [
+        "ACP-SPC-002",
+        "ACM-SLG-006",
+        "ACM-RPR-004"
+      ]
+    },
+    {
+      "cluster_id": "CID7-059",
+      "size": 13,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.391,
+      "concept_signature_top3": [
+        "ACO-TMR-008",
+        "ACP-IAT-001",
+        "ACM-SCBI-002"
+      ]
+    },
+    {
+      "cluster_id": "CID7-014",
+      "size": 9,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.34,
+      "concept_signature_top3": [
+        "ACP-SPC-002",
+        "ACO-TSV-003",
+        "ACO-RPR-008"
+      ]
+    },
+    {
+      "cluster_id": "CID7-013",
+      "size": 8,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.2646,
+      "concept_signature_top3": [
+        "ACP-ITS-002",
+        "ACO-TSV-004",
+        "ACP-IVF-005"
+      ]
+    },
+    {
+      "cluster_id": "CID7-003",
+      "size": 7,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.4048,
+      "concept_signature_top3": [
+        "ACP-IVF-003",
+        "ACO-IVF-005",
+        "ACO-TMR-005"
+      ]
+    },
+    {
+      "cluster_id": "CID7-015",
+      "size": 5,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3181,
+      "concept_signature_top3": [
+        "ACP-SPC-002",
+        "ACO-IAT-001",
+        "ACO-IAT-003"
+      ]
+    },
+    {
+      "cluster_id": "CID7-012",
+      "size": 5,
+      "n_independent_families": 2,
+      "ai_ml_inflected": true,
+      "top1_avg": 0.3484,
+      "concept_signature_top3": [
+        "ACO-TMR-004",
+        "ACP-RPR-001",
+        "ACP-ATB-004"
+      ]
+    },
+    {
+      "cluster_id": "CID7-058",
+      "size": 4,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3211,
+      "concept_signature_top3": [
+        "ACO-SCBI-001",
+        "ACO-TMR-005",
+        "ACM-SCBI-004"
+      ]
+    },
+    {
+      "cluster_id": "CID7-018",
+      "size": 4,
+      "n_independent_families": 2,
+      "ai_ml_inflected": true,
+      "top1_avg": 0.3896,
+      "concept_signature_top3": [
+        "ACO-TSV-006",
+        "ACP-SPC-001",
+        "ACM-TMR-005"
+      ]
+    },
+    {
+      "cluster_id": "CID7-032",
+      "size": 3,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.406,
+      "concept_signature_top3": [
+        "ACM-ITS-004",
+        "ACP-TMR-009",
+        "ACP-ITS-004"
+      ]
+    },
+    {
+      "cluster_id": "CID7-068",
+      "size": 3,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.341,
+      "concept_signature_top3": [
+        "ACM-IAT-002",
+        "ACO-SLG-007",
+        "ACP-IAT-001"
+      ]
+    },
+    {
+      "cluster_id": "CID7-054",
+      "size": 3,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.4015,
+      "concept_signature_top3": [
+        "ACO-TMR-003",
+        "ACO-IVF-003",
+        "ACO-SPC-001"
+      ]
+    },
+    {
+      "cluster_id": "CID7-041",
+      "size": 3,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3504,
+      "concept_signature_top3": [
+        "ACO-IVF-007",
+        "ACM-SPC-002",
+        "ACO-RPR-002"
+      ]
+    },
+    {
+      "cluster_id": "CID7-047",
+      "size": 3,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3382,
+      "concept_signature_top3": [
+        "ACP-SPC-004",
+        "ACP-TMR-008",
+        "ACP-IAT-003"
+      ]
+    },
+    {
+      "cluster_id": "CID7-070",
+      "size": 3,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3545,
+      "concept_signature_top3": [
+        "ACP-TMR-009",
+        "ACO-TMR-008",
+        "ACO-RPR-010"
+      ]
+    },
+    {
+      "cluster_id": "CID7-001",
+      "size": 2,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.2815,
+      "concept_signature_top3": [
+        "ACP-IVF-007",
+        "ACM-IVF-002"
+      ]
+    },
+    {
+      "cluster_id": "CID7-019",
+      "size": 2,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.37,
+      "concept_signature_top3": [
+        "ACO-RPR-009",
+        "ACP-TSV-003"
+      ]
+    },
+    {
+      "cluster_id": "CID7-046",
+      "size": 2,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3283,
+      "concept_signature_top3": [
+        "ACP-ITS-004",
+        "ACP-SCBI-003"
+      ]
+    },
+    {
+      "cluster_id": "CID7-042",
+      "size": 2,
+      "n_independent_families": 2,
+      "ai_ml_inflected": true,
+      "top1_avg": 0.379,
+      "concept_signature_top3": [
+        "ACP-IVF-003",
+        "ACP-SPC-005"
+      ]
+    },
+    {
+      "cluster_id": "CID7-023",
+      "size": 2,
+      "n_independent_families": 2,
+      "ai_ml_inflected": true,
+      "top1_avg": 0.4362,
+      "concept_signature_top3": [
+        "ACO-IVF-003",
+        "ACO-IVF-005"
+      ]
+    },
+    {
+      "cluster_id": "CID7-040",
+      "size": 2,
+      "n_independent_families": 2,
+      "ai_ml_inflected": false,
+      "top1_avg": 0.3677,
+      "concept_signature_top3": [
+        "ACP-RPR-010",
+        "ACM-SLG-001"
+      ]
+    }
+  ],
+  "ai_ml_inflected_clusters_summary": [
+    {
+      "cluster_id": "CID7-027",
+      "size": 102,
+      "n_independent_families": 8,
+      "iter3_pct": 0.833,
+      "convergence": "STRONG_(8_independent_families)",
+      "sources": [
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10"
+      ],
+      "top1_avg": 0.3731,
+      "concept_signature_top3": [
+        "ACO-TMR-005",
+        "ACM-SCBI-002",
+        "ACO-TSV-006"
+      ],
+      "sample_excerpt": "White Box Reverse Engineering. White Box Reverse Engineering. An attacker discovers the structure, function, and composition of a type of computer software through white box analys"
+    },
+    {
+      "cluster_id": "CID7-030",
+      "size": 47,
+      "n_independent_families": 3,
+      "iter3_pct": 0.021,
+      "convergence": "STRONG_(3_independent_families)",
+      "sources": [
+        "capec_v3_9",
+        "nist_sp800_53_rev5",
+        "mitre_atlas"
+      ],
+      "top1_avg": 0.3497,
+      "concept_signature_top3": [
+        "ACO-IAT-006",
+        "ACO-ITS-003",
+        "ACP-IAT-001"
+      ],
+      "sample_excerpt": "Sniffing Network Traffic. Sniffing Network Traffic. In this attack pattern, the adversary monitors network traffic between nodes of a public or multicast network in an attempt to c"
+    },
+    {
+      "cluster_id": "CID7-022",
+      "size": 42,
+      "n_independent_families": 5,
+      "iter3_pct": 0.024,
+      "convergence": "STRONG_(5_independent_families)",
+      "sources": [
+        "capec_v3_9",
+        "asvs_v5_0_0",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "safecode_agile_2012"
+      ],
+      "top1_avg": 0.3582,
+      "concept_signature_top3": [
+        "ACM-TMR-005",
+        "ACP-SPC-001",
+        "ACO-RPR-009"
+      ],
+      "sample_excerpt": "Verify that the documentation defines the permitted file types, expected file extensions"
+    },
+    {
+      "cluster_id": "CID7-026",
+      "size": 34,
+      "n_independent_families": 4,
+      "iter3_pct": 0.941,
+      "convergence": "STRONG_(4_independent_families)",
+      "sources": [
+        "nist_ai_rmf_1_0",
+        "mitre_atlas",
+        "enisa_multilayer_ai_cybersecurity_practices_2023",
+        "nist_sp800_53_rev5"
+      ],
+      "top1_avg": 0.3803,
+      "concept_signature_top3": [
+        "ACO-TMR-002",
+        "ACO-TMR-005",
+        "ACM-SCBI-002"
+      ],
+      "sample_excerpt": "Layer I - Cybersecurity foundations for AI-hosting ICT environments. A multilayer framework for good cybersecurity practices for AI June 2023 6 2. FRAMEWORK FOR GOOD CYBERSECURITY "
+    },
+    {
+      "cluster_id": "CID7-052",
+      "size": 23,
+      "n_independent_families": 5,
+      "iter3_pct": 0.043,
+      "convergence": "STRONG_(5_independent_families)",
+      "sources": [
+        "nist_sp800_53_rev5",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "owasp_dsomm",
+        "pci_dss_v4_0_1"
+      ],
+      "top1_avg": 0.3824,
+      "concept_signature_top3": [
+        "ACM-TSV-004",
+        "ACP-TSV-006",
+        "ACP-TMR-001"
+      ],
+      "sample_excerpt": "Train Workforce Members on Causes of Unintentional Data Exposure. Train workforce members to be aware of causes for unintentional data exposure. Example topics include mis-delivery"
+    },
+    {
+      "cluster_id": "CID7-053",
+      "size": 22,
+      "n_independent_families": 4,
+      "iter3_pct": 0.045,
+      "convergence": "STRONG_(4_independent_families)",
+      "sources": [
+        "nist_sp800_53_rev5",
+        "hipaa_security_rule",
+        "ssdf_sp800_218_v1_1",
+        "nist_ai_rmf_1_0"
+      ],
+      "top1_avg": 0.3573,
+      "concept_signature_top3": [
+        "ACP-TMR-001",
+        "ACP-RPR-001",
+        "ACP-TMR-009"
+      ],
+      "sample_excerpt": "Contingency Plan. Contingency Plan \u2014 Administrative Safeguard. Establish (and implement as needed) policies and procedures for responding to an emergency or other occurrence (such "
+    },
+    {
+      "cluster_id": "CID7-024",
+      "size": 14,
+      "n_independent_families": 5,
+      "iter3_pct": 0.214,
+      "convergence": "STRONG_(5_independent_families)",
+      "sources": [
+        "capec_v3_9",
+        "asvs_v5_0_0",
+        "mitre_atlas",
+        "cis_controls_v8_1_2",
+        "owasp_llm_top_10"
+      ],
+      "top1_avg": 0.4114,
+      "concept_signature_top3": [
+        "ACO-IVF-003",
+        "ACM-IVF-001",
+        "ACO-IVF-008"
+      ],
+      "sample_excerpt": "Verify that data being passed to a potentially dangerous context is sanitized beforehand to enforce safety measures, such as only allowing characters which are safe for this contex"
+    },
+    {
+      "cluster_id": "CID7-028",
+      "size": 10,
+      "n_independent_families": 4,
+      "iter3_pct": 0.3,
+      "convergence": "STRONG_(4_independent_families)",
+      "sources": [
+        "capec_v3_9",
+        "mitre_atlas",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5"
+      ],
+      "top1_avg": 0.3686,
+      "concept_signature_top3": [
+        "ACP-SPC-002",
+        "ACP-TMR-005",
+        "ACO-SLG-005"
+      ],
+      "sample_excerpt": "Excavation. Excavation. An adversary actively probes the target in a manner that is designed to solicit information that could be leveraged for malicious purposes.. Prerequisites: "
+    },
+    {
+      "cluster_id": "CID7-029",
+      "size": 6,
+      "n_independent_families": 3,
+      "iter3_pct": 0.167,
+      "convergence": "STRONG_(3_independent_families)",
+      "sources": [
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta"
+      ],
+      "top1_avg": 0.3959,
+      "concept_signature_top3": [
+        "ACO-IVF-005",
+        "ACP-SPC-004",
+        "ACP-IAT-005"
+      ],
+      "sample_excerpt": "Client registration and client metadata trust. MCP supports three client registration mechanisms. Choose based on your scenario: Client ID Metadata Documents : When client and serv"
+    },
+    {
+      "cluster_id": "CID7-012",
+      "size": 5,
+      "n_independent_families": 2,
+      "iter3_pct": 0.6,
+      "convergence": "MODERATE_(2_families)",
+      "sources": [
+        "mitre_atlas",
+        "nist_sp800_53_rev5"
+      ],
+      "top1_avg": 0.3484,
+      "concept_signature_top3": [
+        "ACO-TMR-004",
+        "ACP-RPR-001",
+        "ACP-ATB-004"
+      ],
+      "sample_excerpt": "Financial Harm. Financial harm involves the loss of wealth, property, or other monetary assets due to theft, fraud or forgery, or pressure to provide financial resources to the adv"
+    },
+    {
+      "cluster_id": "CID7-018",
+      "size": 4,
+      "n_independent_families": 2,
+      "iter3_pct": 0.75,
+      "convergence": "MODERATE_(2_families)",
+      "sources": [
+        "mitre_atlas",
+        "owasp_dsomm"
+      ],
+      "top1_avg": 0.3896,
+      "concept_signature_top3": [
+        "ACO-TSV-006",
+        "ACP-SPC-001",
+        "ACM-TMR-005"
+      ],
+      "sample_excerpt": "Compromised PyTorch Dependency Chain. Linux packages for PyTorch's pre-release version, called Pytorch-nightly, were compromised from December 25 to 30, 2022 by a malicious binary "
+    },
+    {
+      "cluster_id": "CID7-042",
+      "size": 2,
+      "n_independent_families": 2,
+      "iter3_pct": 0.5,
+      "convergence": "MODERATE_(2_families)",
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "nist_ai_rmf_1_0"
+      ],
+      "top1_avg": 0.379,
+      "concept_signature_top3": [
+        "ACP-IVF-003",
+        "ACP-SPC-005"
+      ],
+      "sample_excerpt": "Insufficient Visual Distinction of Homoglyphs Presented to User. The product displays information or identifiers to a user, but the display mechanism does not make it easy for the "
+    },
+    {
+      "cluster_id": "CID7-023",
+      "size": 2,
+      "n_independent_families": 2,
+      "iter3_pct": 0.5,
+      "convergence": "MODERATE_(2_families)",
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "nist_ai_100_2_e2025"
+      ],
+      "top1_avg": 0.4362,
+      "concept_signature_top3": [
+        "ACO-IVF-003",
+        "ACO-IVF-005"
+      ],
+      "sample_excerpt": "External Control of Assumed-Immutable Web Parameter. The web application does not sufficiently verify inputs that are assumed to be immutable but are actually externally controllab"
+    },
+    {
+      "cluster_id": "CID7-075",
+      "size": 1,
+      "n_independent_families": 1,
+      "iter3_pct": 1.0,
+      "convergence": "WEAK_(single_family)",
+      "sources": [
+        "nist_ai_rmf_1_0"
+      ],
+      "top1_avg": 0.2064,
+      "concept_signature_top3": [
+        "ACO-ITS-006"
+      ],
+      "sample_excerpt": "Effectiveness of the employed TEVV met-. rics and processes in the MEASURE function are evaluated and documented."
+    }
+  ]
+}

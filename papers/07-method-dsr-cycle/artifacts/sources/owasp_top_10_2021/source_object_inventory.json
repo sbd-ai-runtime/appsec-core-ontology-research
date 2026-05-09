@@ -1,0 +1,133 @@
+{
+  "schema_version": "0.2",
+  "pilot_id": "owasp_top_10_2021",
+  "status": "source_objects_extracted",
+  "source_document_id": "SRC-OWASP-TOP10-2021",
+  "extracted_at": "2026-04-12T23:17:16.386277Z",
+  "counts": {
+    "total": 10,
+    "risk_categories": 10
+  },
+  "items": [
+    {
+      "source_object_id": "TOP10-A01-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A01:2021",
+      "title": "Broken Access Control",
+      "statement": "Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 34,
+      "normalized_text_hash": "21ea94917eebe673d436c73ff8eec7f22bf87b3a99c6f9b246bf2c2fb8341009"
+    },
+    {
+      "source_object_id": "TOP10-A02-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A02:2021",
+      "title": "Cryptographic Failures",
+      "statement": "The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets require extra protection, mainly if that data falls under privacy laws or regulations.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 29,
+      "normalized_text_hash": "1ae9526a49c8b1fb3309b1b4d4b512a5c56e7909fad8876213d90da4ec12668e"
+    },
+    {
+      "source_object_id": "TOP10-A03-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A03:2021",
+      "title": "Injection",
+      "statement": "An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application; dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter; hostile data is used within ORM search parameters to extract additional, sensitive records.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 33,
+      "normalized_text_hash": "a0c8efe4c11ed77f4093d9d21e2ca75a48694f4086a6b7f93078daaa67980c08"
+    },
+    {
+      "source_object_id": "TOP10-A04-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A04:2021",
+      "title": "Insecure Design",
+      "statement": "Insecure design is a broad category representing different weaknesses, expressed as missing or ineffective control design. Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 40,
+      "normalized_text_hash": "653608e1e350348cd95dda16c69f0d2ed7906f52d42e79d85f2a3af908a26f8b"
+    },
+    {
+      "source_object_id": "TOP10-A05-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A05:2021",
+      "title": "Security Misconfiguration",
+      "statement": "The application might be vulnerable if the application is missing appropriate security hardening across any part of the application stack or improperly configured permissions on cloud services; unnecessary features are enabled or installed; default accounts and their passwords are still enabled and unchanged.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 20,
+      "normalized_text_hash": "d58496edd7bd8ce09e4497be29eacfed5d865b51367169c47e1b2fd1be846a0b"
+    },
+    {
+      "source_object_id": "TOP10-A06-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A06:2021",
+      "title": "Vulnerable and Outdated Components",
+      "statement": "You are likely vulnerable if you do not know the versions of all components you use. If the software is vulnerable, unsupported, or out of date, including the OS, web/application server, DBMS, applications, APIs and all components, runtime environments, and libraries.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 3,
+      "normalized_text_hash": "6d26f413813d1905e62f788af4bad53ae96c1249635e5961e9ea576f6cd4fc4e"
+    },
+    {
+      "source_object_id": "TOP10-A07-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A07:2021",
+      "title": "Identification and Authentication Failures",
+      "statement": "Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be authentication weaknesses if the application permits automated attacks such as credential stuffing or brute force.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 22,
+      "normalized_text_hash": "1186903c33e1b95032681b97bd6f6cd8bebca0a6f225ab090fcff479a4f4d8aa"
+    },
+    {
+      "source_object_id": "TOP10-A08-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A08:2021",
+      "title": "Software and Data Integrity Failures",
+      "statement": "Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and CDNs.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 10,
+      "normalized_text_hash": "5ef49162155a345930ba8d5763762eeed089534941c95ad00ec1edc57fcd9521"
+    },
+    {
+      "source_object_id": "TOP10-A09-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A09:2021",
+      "title": "Security Logging and Monitoring Failures",
+      "statement": "This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, detection, monitoring, and active response occurs any time.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 4,
+      "normalized_text_hash": "89f0d9b15b6cf9adf5def96334ac5bee5cfb0618765e38cf5d16b3992a6613dc"
+    },
+    {
+      "source_object_id": "TOP10-A10-2021",
+      "object_type": "risk_category",
+      "source_document_id": "SRC-OWASP-TOP10-2021",
+      "framework_family": "OWASP-TOP10",
+      "risk_id": "A10:2021",
+      "title": "Server-Side Request Forgery (SSRF)",
+      "statement": "SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination, even when protected by a firewall, VPN, or another type of network access control list.",
+      "statement_kind": "substantive",
+      "cwes_mapped": 1,
+      "normalized_text_hash": "e6967dfed73c693b7bad780a0adede97c9de7cf9f765e67fa24ccf0d5cc16370"
+    }
+  ]
+}

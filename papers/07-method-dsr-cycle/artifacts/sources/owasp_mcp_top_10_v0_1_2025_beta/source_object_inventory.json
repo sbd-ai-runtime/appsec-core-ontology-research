@@ -1,0 +1,179 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+  "status": "curated_top10_source_objects_ready",
+  "source_model": "owasp_mcp_top10_curated_risk_objects",
+  "summary": {
+    "source_objects": 11,
+    "risk_surfaces": 10,
+    "context_surfaces": 1
+  },
+  "items": [
+    {
+      "source_object_id": "MCP-TOP10-CONTEXT",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "context_surface",
+      "statement_kind": "contextual",
+      "source_title": "OWASP MCP Top 10 beta framing and scope",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:about-the-mcp-top-10",
+        "OWASP-MCP-TOP-10-V0_1-2025:road-map",
+        "OWASP-MCP-TOP-10-V0_1-2025:next-phase",
+        "OWASP-MCP-TOP-10-V0_1-2025:top-10",
+        "OWASP-MCP-TOP-10-V0_1-2025:overview",
+        "OWASP-MCP-TOP-10-V0_1-2025:licensing"
+      ],
+      "text_preview": "As AI systems become increasingly integrated into software supply chains, enterprise applications, and security infrastructure, the need for structured, secure, and interpretable model interaction layers is paramount. The Model Context Protocol (MCP) is emerging as a framework to define the operational, contextual, and behavioral boundaries of AI models. How"
+    },
+    {
+      "source_object_id": "MCP01-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Token Mismanagement & Secret Exposure",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp12025--token-mismanagement--secret-exposure"
+      ],
+      "text_preview": "Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers may retrieve these tokens through prompt injection, compromised context, or debug traces, leading to full compromise of connected systems. Short-lived, scoped credentials and secret-scanning control"
+    },
+    {
+      "source_object_id": "MCP02-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Privilege Escalation via Scope Creep",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp22025--privilege-escalation-via-scope-creep"
+      ],
+      "text_preview": "Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enforcement can perform unintended actions such as repository modification, system control, or data exfiltration. Enforce least-privilege design, automated scope expiry, and strict access reviews to pre"
+    },
+    {
+      "source_object_id": "MCP03-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Tool Poisoning",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp032025--tool-poisoning"
+      ],
+      "text_preview": "Tool poisoning occurs when an adversary compromises the tools, plugins, or their outputs that an AI model depends on-injecting malicious, misleading, or biased context to manipulate model behavior. This category encompasses several sub-techniques, including rug pulls (malicious updates to trusted tools), schema poisoning (corrupting interface definitions t"
+    },
+    {
+      "source_object_id": "MCP04-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Software Supply Chain Attacks & Dependency Tampering",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp42025--software-supply-chain-attacks--dependency-tampering"
+      ],
+      "text_preview": "MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A compromised dependency can alter agent behavior or introduce execution-level backdoors. Implement signed components, dependency monitoring, and provenance tracking for all MCP modules."
+    },
+    {
+      "source_object_id": "MCP05-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Command Injection & Execution",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp52025--command-injection--execution"
+      ],
+      "text_preview": "Command injection in MCP environments occurs when an AI agent constructs and executes system commands, shell scripts, API calls, or code snippets using untrusted input—whether from user prompts, retrieved context, or third-party data sources—without proper validation or sanitization."
+    },
+    {
+      "source_object_id": "MCP06-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Prompt Injection via Contextual Payloads",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp62025--prompt-injection-via-contextual-payloads"
+      ],
+      "text_preview": "This risk is analogous to classic injection attacks (e.g., XSS, SQLi), but in the MCP world the “interpreter” is the model and the “payload” is text (or any content that becomes text after OCR/processing). Because models are designed to follow natural-language instructions, prompt injection attacks are both powerful and subtle."
+    },
+    {
+      "source_object_id": "MCP07-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Insufficient Authentication & Authorization",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp072025--insufficient-authentication--authorization"
+      ],
+      "text_preview": "Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during interactions. Since MCP ecosystems often involve multiple agents, users, and services exchanging data and executing actions, weak or missing identity validation exposes critical attack paths."
+    },
+    {
+      "source_object_id": "MCP08-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Lack of Audit and Telemetry",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp82025--lack-of-audit-and-telemetry"
+      ],
+      "text_preview": "Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes investigation and incident response. Maintain detailed logs of tool invocations, context changes, and user-agent interactions with immutable audit trails."
+    },
+    {
+      "source_object_id": "MCP09-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Shadow MCP Servers",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp92025--shadow-mcp-servers"
+      ],
+      "text_preview": "“Shadow MCP Servers” refer to unapproved or unsupervised deployments of Model Context Protocol instances that operate outside the organization’s formal security governance. Much like Shadow IT, these rogue MCP nodes are often spun up by developers, research teams, or data scientists for experimentation, testing, or convenience—frequently using default creden"
+    },
+    {
+      "source_object_id": "MCP10-2025",
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_document_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025"
+      ],
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Context Injection & Over-Sharing",
+      "source_unit_ids": [
+        "OWASP-MCP-TOP-10-V0_1-2025:mcp102025--context-injection--over-sharing"
+      ],
+      "text_preview": "In the Model Context Protocol (MCP), “context” represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions. When context windows are shared, persistent, or insufficiently scoped, sensitive information from one task, user, or agent may be exposed to another. This phenomenon—known as context over-sharin"
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-04T11:39:22.834074+00:00",
+    "revision_reason": "Cleaning pass on MCP variant inventory: stripped \"Page N genai.owasp.org\" PDF-extraction artefacts; restored mid-word dashes; collapsed whitespace.",
+    "rule_version": "mcp_clean/1.0",
+    "n_fields_cleaned": 1,
+    "n_items_total": 11
+  }
+}

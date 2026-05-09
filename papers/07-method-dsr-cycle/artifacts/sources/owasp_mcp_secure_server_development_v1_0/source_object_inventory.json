@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+  "status": "sectional_source_objects_ready",
+  "source_model": "section_level_controls_and_checklist",
+  "summary": {
+    "source_objects": 11,
+    "control_sections": 8,
+    "checklists": 1
+  },
+  "items": [
+    {
+      "source_object_id": "OWASP-MCP-INTRO",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "context",
+      "statement_kind": "substantive",
+      "source_title": "Introduction & Background",
+      "source_page_numbers": [
+        4
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P004"
+      ],
+      "text_preview": "Introduction & Background Organizations need to secure their MCP servers to safeguard AI integrations. These servers act as bridges between AI assistants and external tools or data sources, so any security gap could allow attackers to manipulate those AI as"
+    },
+    {
+      "source_object_id": "OWASP-MCP-RISK-LANDSCAPE",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "risk_landscape",
+      "statement_kind": "substantive",
+      "source_title": "Current Vulnerability Landscape",
+      "source_page_numbers": [
+        5
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P005"
+      ],
+      "text_preview": "Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI-oriented risks. Common vulnerabilities/risks include: • Tool Poisoning: Adversaries manipulate the"
+    },
+    {
+      "source_object_id": "OWASP-MCP-ARCH",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Secure MCP Architecture",
+      "source_page_numbers": [
+        6
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P006"
+      ],
+      "text_preview": "1. Secure MCP Architecture • Local vs Remote Connections: MCP exposes two communication channels, STDIO or Unix sockets for local network communications, and Streamable HTTP for remote connections. For each communication type, additional security controls a"
+    },
+    {
+      "source_object_id": "OWASP-MCP-TOOL-DESIGN",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Safe Tool Design",
+      "source_page_numbers": [
+        7
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P007"
+      ],
+      "text_preview": "2. Safe Tool Design • Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this signature and hash at load time. • Strict Onboarding and Approval: Maintai"
+    },
+    {
+      "source_object_id": "OWASP-MCP-DATA-VALIDATION",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Data Validation & Resource Management",
+      "source_page_numbers": [
+        8
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P008"
+      ],
+      "text_preview": "3. Data Validation & Resource Management • Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts and isolated memory/compute budgets to prevent DoS attacks or runaway processes. • Strict Input/Ou"
+    },
+    {
+      "source_object_id": "OWASP-MCP-PROMPT-INJECTION",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Prompt Injection Controls",
+      "source_page_numbers": [
+        9
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P009"
+      ],
+      "text_preview": "4. Prompt Injection Controls • Structured Tool Invocation: Favor structured JSON tool calls over having the model generate free-form text commands. This funnels the model's intent through a formal, schema-validated interface. • Human-in-the-Loop (HITL):"
+    },
+    {
+      "source_object_id": "OWASP-MCP-AUTH",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Authentication & Authorization",
+      "source_page_numbers": [
+        10
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P010"
+      ],
+      "text_preview": "5. Authentication & Authorization • Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user identity, validate iss, aud, exp, and signatures on every request. o Token Delegation: Use th"
+    },
+    {
+      "source_object_id": "OWASP-MCP-DEPLOYMENT",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Secure Deployment & Updates",
+      "source_page_numbers": [
+        11
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P011"
+      ],
+      "text_preview": "6. Secure Deployment & Updates • Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment variables, logs or plain-text in code. Never allow an LLM access to a secret, perform"
+    },
+    {
+      "source_object_id": "OWASP-MCP-GOVERNANCE",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Governance",
+      "source_page_numbers": [
+        12
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P012"
+      ],
+      "text_preview": "7. Governance • Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. • Peer Review and Oversight: Establish a policy that no new tool or"
+    },
+    {
+      "source_object_id": "OWASP-MCP-CONTINUOUS-VALIDATION",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "control_section",
+      "statement_kind": "substantive",
+      "source_title": "Tools & Continuous Validation",
+      "source_page_numbers": [
+        13
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P013"
+      ],
+      "text_preview": "8. Tools & Continuous Validation • Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use Software Composition Analysis (SCA) tools (e.g., npm audit, pip audit, OSV-Scanner) to"
+    },
+    {
+      "source_object_id": "OWASP-MCP-MINIMUM-BAR",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "source_object_type": "review_checklist",
+      "statement_kind": "checklist",
+      "source_title": "MCP Security Minimum Bar (Review Checklist)",
+      "source_page_numbers": [
+        14
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P014"
+      ],
+      "text_preview": "MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement • All remote MCP servers use OAuth 2.1/OIDC. • Tokens are short-lived, scoped, validated on every call. • No token passthrough; policy enforcement is centralized. 2."
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-04T11:39:22.826682+00:00",
+    "revision_reason": "Cleaning pass on MCP variant inventory: stripped \"Page N genai.owasp.org\" PDF-extraction artefacts; restored mid-word dashes; collapsed whitespace.",
+    "rule_version": "mcp_clean/1.0",
+    "n_fields_cleaned": 11,
+    "n_items_total": 11
+  }
+}

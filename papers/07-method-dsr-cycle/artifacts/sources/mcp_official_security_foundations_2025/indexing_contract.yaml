@@ -1,0 +1,36 @@
+pilot_id: mcp_official_security_foundations_2025
+status: published_traceability_surface_compared
+source_model: official_html_security_docs
+comparison_target: sbdtoe_manual_v2_via_appsec_core_v0
+classification_taxonomy:
+- manual_gap
+- appsec_core_gap
+- comparison_gap
+- out_of_scope_for_appsec_core
+- transversal_enterprise_control_partially_supported_by_appsec_scope
+pipeline_steps:
+- capture_source
+- extract_source_units
+- extract_source_objects
+- normalize_to_appsec_core
+- classify_gap_kind
+- compare_against_manual_traceability_surface
+scripts:
+- scripts/extract_html_heading_units.py
+- scripts/extract_mcp_official_source_objects.py
+- scripts/normalize_mcp_official_to_appsec_core.py
+- scripts/derive_mcp_official_manual_gap_analysis.py
+- scripts/compare_mcp_official_against_published_manual_traceability_surface.py
+planned_outputs:
+- data/mcp_official_security_foundations_2025/stubs/source_retrieval_receipt.json
+- data/mcp_official_security_foundations_2025/stubs/external_source_inventory.json
+- data/mcp_official_security_foundations_2025/stubs/source_unit_inventory.json
+- data/mcp_official_security_foundations_2025/stubs/source_object_inventory.json
+- data/mcp_official_security_foundations_2025/stubs/appsec_core_normalization.json
+- data/mcp_official_security_foundations_2025/stubs/manual_gap_analysis.json
+- data/mcp_official_security_foundations_2025/stubs/published_manual_traceability_comparison.json
+- data/mcp_official_security_foundations_2025/stubs/published_manual_traceability_comparison.md
+notes:
+- This pilot is normative-first and should be read before any MCP top-10 style packaging.
+- manual_gap is intentionally not asserted until direct comparison against the published
+  manual traceability surface.

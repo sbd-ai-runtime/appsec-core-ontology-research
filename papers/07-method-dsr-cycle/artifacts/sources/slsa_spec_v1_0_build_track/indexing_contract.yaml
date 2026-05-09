@@ -1,0 +1,33 @@
+pilot_id: slsa_spec_v1_0_build_track
+status: traceability_surface_compared
+source_model: versioned_html_spec_pages_with_curated_section_objects
+comparison_target: sbdtoe_manual_v2_via_appsec_core_v0
+classification_taxonomy:
+  - manual_gap
+  - appsec_core_gap
+  - comparison_gap
+  - out_of_scope_for_appsec_core
+pipeline_steps:
+  - capture_source
+  - extract_source_units
+  - extract_source_objects
+  - normalize_to_appsec_core
+  - classify_gap_kind
+  - compare_against_manual_traceability_surface
+scripts:
+  - scripts/extract_html_heading_units.py
+  - scripts/extract_slsa_source_objects.py
+  - scripts/normalize_slsa_to_appsec_core.py
+  - scripts/derive_slsa_manual_gap_analysis.py
+  - scripts/compare_against_published_manual_traceability_surface.py
+planned_outputs:
+  - data/slsa_spec_v1_0_build_track/stubs/source_retrieval_receipt.json
+  - data/slsa_spec_v1_0_build_track/stubs/external_source_inventory.json
+  - data/slsa_spec_v1_0_build_track/stubs/source_unit_inventory.json
+  - data/slsa_spec_v1_0_build_track/stubs/source_object_inventory.json
+  - data/slsa_spec_v1_0_build_track/stubs/appsec_core_normalization.json
+  - data/slsa_spec_v1_0_build_track/stubs/manual_gap_analysis.json
+notes:
+  - This pilot is intentionally narrower than the full SLSA specification and focuses on the build track plus verification semantics.
+  - manual_gap is not asserted until explicit comparison against the published manual traceability surface.
+  - The source is a versioned HTML snapshot to reduce drift from the moving current SLSA alias.

@@ -1,0 +1,182 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+  "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+  "status": "page_level_units_ready",
+  "summary": {
+    "page_units": 17,
+    "pdf_pages": 17
+  },
+  "items": [
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P001",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 1,
+      "char_count": 85,
+      "text_preview": "A Practical Guide for Secure MCP Server Development Version 1.0 February , 2026",
+      "raw_text": "A Practical Guide for Secure \nMCP Server Development  \n \nVersion 1.0 \nFebruary , 2026"
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P002",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 2,
+      "char_count": 1296,
+      "text_preview": "Page 2 genai.owasp.org The information provided in this document does not, and is not intended to, constitute legal advice. All information is for general informational purposes only. This document contains links to other third -party websi",
+      "raw_text": "Page 2 \n genai.owasp.org  \n  \nThe information provided in this document does not, and is not intended to, constitute legal advice. All \ninformation is for general informational purposes only. This document contains links to other third -party \nwebsites. Such links are only for convenience  and OWASP does not recommend or endorse the contents of \nthe third -party sites.  \nLicense and Usage  \nThis document is licensed under Creative Commons, CC BY -SA 4.0  \nYou are free to:  \n● Share — copy and redistribute the material in any medium or format  \n● Adapt — remix, transform, and build upon the material for any purpose, even commercially.  \n● Under the following terms:  \n○ Attribution — You must give appropriate credit, provide a link to the license, and indicate if \nchanges were made. You may do so in any reasonable manner but not in any way that \nsuggests the licensor endorses you or your use.  \n○ Attribution Guidelines - must include the project name as well as the name of the asset \nReferenced  \n■ OWASP Top 10 for LLMs - GenAI Red Teaming Guide  \n● ShareAlike — If you remix, transform, or build upon the material, you must distribute your \ncontributions under the same license as the original.  \nLink to full license text: https://creativecommons.org/licenses/by -sa/4.0/legalcode"
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P003",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 3,
+      "char_count": 523,
+      "text_preview": "Page 3 genai.owasp.org Table of Content Introduction & Background 4 Current Vulnerability Landscape 5 1. Secure MCP Architecture 6 2. Safe Tool Design 7 3. Data Validation & Resource Management 8 4. Prompt Injection Controls 9 5. Authentica",
+      "raw_text": "Page 3 \n genai.owasp.org  \n \n \n \n \nTable of Content  \n \nIntroduction & Background  4 \nCurrent Vulnerability Landscape  5 \n1. Secure MCP Architecture  6 \n2. Safe Tool Design  7 \n3. Data Validation & Resource Management  8 \n4. Prompt Injection Controls  9 \n5. Authentication & Authorization  10 \n6. Secure Deployment & Updates  11 \n7. Governance  12 \n8. Tools & Continuous Validation  13 \nMCP Security Minimum Bar (Review Checklist)  14 \nAcknowledgements  15 \nOWASP GenAI Security Project Sponsors  16 \nProject Supporters  17"
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P004",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 4,
+      "char_count": 990,
+      "text_preview": "Page 4 genai.owasp.org Introduction & Background Organizations need to secure their MCP servers to safeguard AI integrations. These servers act as bridges between AI assistants and external tools or data sources, so any security gap could a",
+      "raw_text": "Page 4 \n genai.owasp.org  \n Introduction & Background  \n \nOrganizations need to secure their MCP servers to safeguard AI integrations. These servers act as bridges \nbetween AI assistants and external tools or data sources, so any security gap could allow attackers to \nmanipulate those AI assistants, steal sensitive  information, or compromise downstream systems. Unlike \ntraditional APIs, MCP servers often operate with delegated user permissions, dynamic tool -based \narchitectures, and can chain multiple tool calls, amplifying the impact of any single vulnerability.  \nThis guide provides best practices for designing and implementing secure MCP servers. While security \npractitioners will certainly benefit from this guide, it is intended for software architects, platform engineers, \nand development teams responsible for MCP  server development. The content outlines essential security \ncontrols and design decisions to apply from initial architecture through production deployment."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P005",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 5,
+      "char_count": 2645,
+      "text_preview": "Page 5 genai.owasp.org Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI -oriented risks. Common vulnerabilities/risks include: • Too",
+      "raw_text": "Page 5 \n genai.owasp.org  \n Current Vulnerability \nLandscape  \n \nMCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and \nsome unique AI -oriented risks. Common vulnerabilities/risks include:  \n• Tool Poisoning:  Adversaries manipulate the AI through crafted inputs in prompts or tool metadata. \nA maliciously designed tool description, for example, can include  hidden instructions that trick the \nmodel into performing unintended actions or exfiltrating data.  \n• Dynamic Tool Instability (\"Rug Pulls\"):  Given the lack of strict versioning for tool descriptions and \nthe dynamic nature of loading them, there is a risk of \"rug pulls.\" A previously trusted tool definition \ncan be swapped or modified in real -time to introduce malicious behavior, bypassing initi al security \nchecks that occurred before the change.  \n• Code Injection & Unsafe Execution : The MCP server passes model -provided inputs directly into \nsystem commands, APIs, or database queries without validation. Incorrect, misguided, or malicious \ncode might be executed without user awareness or approval.  \n• Credential Leakage & Token Misuse:  MCP servers often handle API keys or OAuth tokens. If these \nsecrets are improperly stored, logged in plaintext, or cached for too long, attackers can steal them \nto impersonate the client or access connected systems.  \n• Excessive Permissions: Over -privileged tools or broad access scopes dramatically amplify the \nimpact of a breach. This violates the principle of least privilege and allows a single compromised \ntool to endanger many systems. Applicable if the MCP server is the policy enforcer, or if the LLM has \na permissions mismatch when interacting with a user.  \n• Insufficient Isolation (Session, Identity & Compute):  MCP servers often manage multiple \nconcurrent sessions, share access privileges, or execute code in shared environments, creating \nmultiple layers of isolation risks. Without protocol -enforced state separation, there is a distinct risk \nof cross -tenant data leakage where one user might accidentally access another's context. \nFurthermore, if the MCP server shares a single access identity (such as a service account) among \nmultiple users, it creates an identity  impersonation risk where individual user actions cannot be \ndistinguished. Beyond logical separation, there is a critical need for compute isolation; when \nservers execute code or tools in a shared host environment without strict sandboxing (like \ncontainers  or micro -VMs), malicious tenants can potentially exhaust shared resources or access the \nprocess memory of others."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P006",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 6,
+      "char_count": 2227,
+      "text_preview": "Page 6 genai.owasp.org 1. Secure MCP Architecture • Local vs Remote Connections: MCP exposes two communication channels, STDIO or Unix sockets for local network communications, and Streamable HTTP for remote connections. For each communicat",
+      "raw_text": "Page 6 \n genai.owasp.org  \n 1. Secure MCP Architecture  \n \n• Local vs Remote Connections:  MCP exposes two communication channels, STDIO or Unix sockets \nfor local network communications, and Streamable HTTP for remote connections. For each \ncommunication type, additional security controls apply:  \no Local MCP Servers:  Prefer STDIO or Unix sockets over network sockets. If you must use \nlocal HTTP, bind only to 127.0.0.1, still utilize explicit authorization/authentication, and \nvalidate the Origin header. Run processes in isolated/sandboxed subprocesses or \ncontainers, wit h minimal or no access to external networks and minimal privileges.  \no Remote MCP Servers:  Enforce TLS 1.2+ for all remote connections. Strictly validate all \nJSON -RPC messages against the MCP schema, rejecting any malformed or unrecognized \ndata.  \n• Enforce Trusted Connections and Authentication for MCP Clients: To secure interactions between \nMCP Clients and Servers, use strong validation techniques such as allowlists, hardcoded \nconnections, or mutual TLS (mTLS) for known static relationships. In dynamic environments where \nclients change, use strong authentication  protocols (such as OAuth 2.1 or OIDC) to dynamically verify \nclient identity and allow connections rather than depending exclusively on static network trust.  \n• Isolate Users and Sessions:  In multi -tenant systems, strictly segregate execution contexts, \nmemory, and temp storage for each user or agent. Strictly prohibit the use of global variables, class -\nlevel attributes, or shared singleton instances for storing user -specific data. Architect  the server to \ninstantiate separate objects per session or utilize a strictly session -keyed state store (e.g., Redis \nwith session_id namespaces).  \no Strict Lifecycle Management:  Implement deterministic cleanup routines. Ensure that when \nan MCP session terminates, disconnects, or times out, all associated file handles, \ntemporary storage, in -memory contexts, and cached tokens are immediately flushed and \ndestroyed to prevent residua l data exposure.  \no Per -Session Resource Quotas:  Enforce strict limits on memory, CPU, file system usage, \nand API rate limits keyed to the session ID or user identity."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P007",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 7,
+      "char_count": 1045,
+      "text_preview": "Page 7 genai.owasp.org 2. Safe Tool Design • Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this signature and hash at load time. •",
+      "raw_text": "Page 7 \n genai.owasp.org  \n 2. Safe Tool Design  \n \n• Cryptographic Tool Manifests:  Require every tool to have a signed manifest that includes its \ndescription, schema, version, and required permissions. Verify this signature and hash at load time.  \n• Strict Onboarding and Approval:  Maintain a formal approval workflow for adding or updating any \ntool description or functionality. This must include code scanning (SAST), dynamic testing, \ndependency scanning (SCA), and manual security review.  \no Validate Descriptions vs. Behavior:  Implement manual checks, tool pinning, and LLM scans \nto ensure a tool's advertised functionality (in its description) matches its actual code \nbehavior during runtime. Flag any tool that attempts to perform actions (e.g., network \nwrites) not mentioned in i ts description.  \no Tool Structure Validation: Maintain and audit all fields of each tool added to the policy. Only \nexpose minimal, strictly necessary fields to the model, keeping internal metadata and \nsensitive fields outside of model context."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P008",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 8,
+      "char_count": 801,
+      "text_preview": "Page 8 genai.owasp.org 3. Data Validation & Resource Management • Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts and isolated memory/compute budgets to prevent DoS attacks",
+      "raw_text": "Page 8 \n genai.owasp.org  \n 3. Data Validation & Resource \nManagement  \n \n• Resource Usage Limits:  Impose quotas and rate limits on tool invocations and data fetches per \nsession. Use timeouts and isolated memory/compute budgets to prevent DoS attacks or runaway \nprocesses.  \n• Strict Input/Output Validation:  Treat all data as untrusted. Define and enforce JSON Schemas for \nevery tool’s inputs (from the model) and outputs (back to the model). Reject any request that doesn't \nmatch the expected schema.  \n• Strict Input/Output Sanitization and Encoding: Filter and sanitize all inputs to the model and \noutputs into the tool. Strip or escape sequences which could lead to classic code injection attacks \n(e.g. XSS, SQL Injection, RCE). Enforce size limits on all outputs from the tools or model."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P009",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 9,
+      "char_count": 1037,
+      "text_preview": "Page 9 genai.owasp.org 4. Prompt Injection Controls • Structured Tool Invocation: Favor structured JSON tool calls over having the model generate free - form text commands. This funnels the model's intent through a formal, schema -validated",
+      "raw_text": "Page 9 \n genai.owasp.org  \n 4. Prompt Injection Controls  \n \n• Structured Tool Invocation:  Favor structured JSON tool calls over having the model generate free -\nform text commands. This funnels the model's intent through a formal, schema -validated interface.  \n• Human -in-the-Loop (HITL):  For high -risk actions (e.g., deleting data, sending money, system -level \nchanges), implement an approval checkpoint. Pause the action and require explicit confirmation \n(e.g., using MCP elicitations) from a human user on MCP Client before proceeding.  \n• LLM -as-a-Judge:  For high -risk actions, run a dedicated approval check in a distinct context LLM \nsession, using a policy prompt that defines which tool calls and parameters are allowed and which \nare blocked.  \n• One Task, One Session:  Reset MCP sessions when an agent switches contexts or tasks. This \n\"context compartmentalization\" prevents hidden instructions from persisting in a long conversation \nhistory, and could minimize “context degradation\" improving LLM output quality."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P010",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 10,
+      "char_count": 1734,
+      "text_preview": "Page 10 genai.owasp.org 5. Authentication & Authorization • Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user identity, validate iss, aud, exp, and signatures on e",
+      "raw_text": "Page 10 \n genai.owasp.org  \n 5. Authentication & \nAuthorization  \n \n• Enforce OAuth 2.1 / OIDC:  Treat authentication as mandatory for all remote MCP servers. Use OAuth \n2.1/OIDC for client and user identity, validate iss, aud, exp, and signatures on every request.  \no Token Delegation:  Use the OAuth token delegation flow to pass user context and \npermissions to an MCP server while limiting permissions and retaining distinct server non -\nhuman identity (NHI). ( RFC 8693 ) \no Prohibit Token Passthrough : Do not forward client tokens to downstream APIs; instead, \nuse tokens explicitly issued to the MCP server or validated via \"On -Behalf -Of\" flows. Direct \npassthrough breaks audit trails and bypasses policies, creating a critical Confused Deputy \nrisk. This v ulnerability allows the MCP server to be tricked into misusing a user's privileges \nto execute unauthorized actions, effectively bypassing the server's intended security \nconstraints.  \n• Use Short -Lived, Scoped Tokens : Issue access tokens with minimal lifetimes (minutes) and narrow \nscopes. Revalidate token signature, audience, and expiry on each call before executing any tool or \nresource access.  \n• Treat Sessions as State, Not Identity : Never rely on session IDs alone for authorization or \nauthentication. Bind any session/stream/queue entry to validated user and client identity (OAuth), \nrotate/expire aggressively, and re -check authorization before performing sensitive actions.  \n• Centralize Policy Enforcement:  Use a dedicated policy/gateway layer to enforce authentication, \nauthorization, consent, tool filtering, and audit logging. Evaluate all requests centrally so policies \nremain consistent across agents, servers, and upstream services."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P011",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 11,
+      "char_count": 1454,
+      "text_preview": "Page 11 genai.owasp.org 6. Secure Deployment & Updates • Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment variables, logs or plain -text in code. Never a",
+      "raw_text": "Page 11 \n genai.owasp.org  \n 6. Secure Deployment & \nUpdates  \n \n• Secrets Storage and Management:  Utilize secrets storage vaults for client credentials and API keys. \nDo not store secrets in environment variables, logs or plain -text in code. Never allow an LLM access \nto a secret, perform all secrets management functions in transparent middleware which is \ninaccessible to the LLM.  \n• Containerize and Harden: Deploy the MCP server in a minimal, hardened container. Run the \ncontainer as a non -root user and drop all unnecessary container packages, dependencies, or Linux \ncapabilities to limit residual attack surface.  \n• Network Segmentation:  Place the server in a restricted network segment. Use firewall rules or \nKubernetes NetworkPolicies to block all inbound and outbound traffic, except for what is explicitly \nrequired.  \n• Supply Chain Controls:  Version pin and scan all dependencies at build time, use signed container \nimages, monitor for new CVEs, and maintain AIBOMs for all builds to ensure provenance and detect \ntampering.  \n• CI/CD Security Gates:  Integrate security checks and scanning directly into your pipeline as a gate. \nFail the build if new code introduces a vulnerability, uses an unapproved dependency, or fails a \npolicy check (e.g., using policy -as-code tools like OPA).  \n• Safe Error Handling:  Do not return stack traces, tokens, filesystem paths, or tool internals in \nresponses returned to the model/client."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P012",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 12,
+      "char_count": 986,
+      "text_preview": "Page 12 genai.owasp.org 7. Governance • Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. • Peer Review and Oversight:",
+      "raw_text": "Page 12 \n genai.owasp.org  \n 7. Governance  \n \n• Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, \nand registry manifests to ensure their integrity and prevent tampering.  \n• Peer Review and Oversight: Establish a policy that no new tool or major code change goes live \nwithout a security -focused peer review.  \n• Audit Logs and Trails: Log every action, including tool invocations (with parameters), resource \naccess, authentication/authorization events, and configuration changes (logging new and old \nvalues).  Use field -level allowlists and redaction/hashing to prevent sensitive data from entering \nverbose logs.  Store these logs securely and immutably for forensic analysis.  \n• Non -Human Identity Governance: Treat all automated agents, backend processes or MCP server \nsystems as first -class identities with unique credentials and tightly scoped permissions. \nContinuously audit NHI systems for data access and tool usage."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P013",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 13,
+      "char_count": 1093,
+      "text_preview": "Page 13 genai.owasp.org 8. Tools & Continuous Validation • Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP -Scan in your CI/CD pipeline. Use Software Composition Analysis (SCA) tools (e.g.",
+      "raw_text": "Page 13 \n genai.owasp.org  \n 8. Tools & Continuous \nValidation  \n \n• Automated Code Scanning:  Use static analysis (SAST) tools (with custom MCP rules) and Invariant \nMCP -Scan in your CI/CD pipeline. Use Software Composition Analysis (SCA) tools (e.g., npm audit, \npip audit, OSV -Scanner) to find vulnerabilities in dependencies. Break any build which exceeds your \nrisk tolerance due to scan findings.  \n• Runtime Protections:  Use runtime security tools to enforce isolation. This includes Docker's \nseccomp profiles, AppArmor, or specialized wrappers like context -protector. Tools like mcp -watch \ncan monitor runtime behavior.  \n• Continuous Monitoring: Feed MCP server audit logs into a centralized monitoring system (SIEM). \nConfigure real -time alerts for suspicious patterns, such as a spike in failed validations, high -\nfrequency tool calls, or a tool suddenly accessing unusual files.  \n• Supply Chain Vigilance:  Use frameworks like the OpenSSF Scorecard to evaluate your project's \nsecurity posture. Monitor vulnerability databases like OSV for new issues in your dependencies."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P014",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 14,
+      "char_count": 1236,
+      "text_preview": "Page 14 genai.owasp.org MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement • All remote MCP servers use OAuth 2.1/OIDC. • Tokens are short -lived, scoped, validated on every call. • No token passthroug",
+      "raw_text": "Page 14 \n genai.owasp.org  \n MCP Security Minimum Bar \n(Review Checklist)  \n \n1. Strong Identity, Auth & Policy Enforcement  \n• All remote MCP servers use OAuth 2.1/OIDC.  \n• Tokens are short -lived, scoped, validated on every call.  \n• No token passthrough; policy enforcement is centralized.  \n2. Strict Isolation & Lifecycle Control  \n• Users, sessions, and execution contexts are fully isolated.  \n• No shared state for user data.  \n• Sessions have deterministic cleanup and enforced resource quotas.  \n3. Trusted, Controlled Tooling  \n• Tools are cryptographically signed, version -pinned, and formally approved.  \n• Tool descriptions are validated against runtime behavior.  \n• Only minimal, necessary tool fields are exposed to the model.  \n4. Schema -Driven Validation Everywhere  \n• All MCP messages, tool inputs, and outputs are schema -validated.  \n• Inputs/outputs are sanitized, size -limited, and treated as untrusted.  \n• Structured (JSON) tool invocation is required.  \n5. Hardened Deployment & Continuous Oversight  \n• Server runs containerized, non -root, network -restricted.  \n• Secrets are stored in vaults and never exposed to the LLM.  \n• CI/CD security gates, audit logs, and continuous monitoring are mandatory."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P015",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 15,
+      "char_count": 580,
+      "text_preview": "Page 15 genai.owasp.org Acknowledgements Contributors Name Company Idan Habler, PhD CISCO, OWASP Tomer Elias OWASP Joshua Beck SAS Venkata Sai Kishore Modalavalasa OWASP Manish Bhatt OWASP/Amazon Leo Vineeth Sai Narajala Cisco, OWASP Yuval ",
+      "raw_text": "Page 15 \n genai.owasp.org  \n Acknowledgements  \n \nContributors  \nName  Company  \nIdan Habler, PhD  CISCO, OWASP  \nTomer Elias  OWASP  \nJoshua Beck  SAS  \nVenkata Sai Kishore Modalavalasa  OWASP  \nManish Bhatt  OWASP/Amazon Leo  \nVineeth Sai Narajala  Cisco, OWASP  \nYuval Sarel  Cyera  \nTomer Wetzler  Zenity  \nRico Komenda  adesso SE & OWASP  \nHisham Abdulhalim  Payoneer  \nGuy Shtar  intuit  \nSagiv Antebi  BGU  \nJohn Cotter  Bentley Systems  \nDipen Shah  Affirm  \nAamiruddin Syed  OWASP  \nRoy Barkay  Nebius  \nAlmog Langleben  Sunbit  \nRiggs Goodman III  AWS  \nRoi Vanunu  Jazz"
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P016",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 16,
+      "char_count": 983,
+      "text_preview": "Page 16 genai.owasp.org OWASP GenAI Security Project Sponsors We appreciate our Project Sponsors, funding contributions to help support the objectives of the project and help to cover operational and outreach costs augmenting the resources ",
+      "raw_text": "Page 16 \n genai.owasp.org  \n OWASP GenAI Security  Project \nSponsors  \n \nWe appreciate our Project Sponsors, funding contributions to help support the objectives of the project \nand help to cover operational and outreach costs augmenting the resources provided by the OWASP.org \nfoundation. The OWASP GenAI Security Project continu es to maintain a vendor neutral and unbiased \napproach. Sponsors do not receive special governance considerations as part of their support.   \n \nSponsors do receive recognition for their contributions in our materials and web properties. All \nmaterials the proj ect generates are community developed, driven and released under open source and \ncreative commons licenses. For more information on becoming a sponsor, visit the Sponsorship \nSection on our Website  to learn more about helping to sustain the project through sponsorship.  \nProject Sponsors:  \n \n \n \n \n \n \n \n \n \n \n \nSponsor s list, as of publication date. Find the full sponsor list here ."
+    },
+    {
+      "unit_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0:P017",
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "source_document_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+      "unit_kind": "page",
+      "page_number": 17,
+      "char_count": 1597,
+      "text_preview": "Page 17 genai.owasp.org Project Supporters Project supporters lend their resources and expertise to support the goals of the project. Accenture AddValueMachine Inc Aeye Security Lab Inc. AI informatics GmbH AI Village aigos Aon Aqua Securit",
+      "raw_text": "Page 17 \n genai.owasp.org  \n Project Supporters  \n \nProject supporters lend their resources and expertise to support the goals of the project.  \nAccenture  \nAddValueMachine Inc  \nAeye Security Lab Inc.  \nAI informatics GmbH  \nAI Village  \naigos  \nAon  \nAqua Security  \nAstra Security  \nAVID  \nAWARE7 GmbH  \nAWS  \nBBVA  \nBearer  \nBeDisruptive  \nBit79  \nBlue Yonder  \nBroadBand Security, Inc.  \nBuddoBot  \nBugcrowd  \nCadea   \nCheck Point  \nCisco  \nCloud Security Podcast  \nCloudflare  \nCloudsec.ai  \nCoalfire  Cobalt   \nCohere  \nComcast  \nComplex Technologies  \nCredal.ai  \nDatabook  \nDistributedApps.ai  \nDreadNode  \nDSI  \nEPAM  \nExabeam  \nEY Italy  \nF5  \nFedEx  \nForescout  \nGE HealthCare  \nGiskard  \nGitHub  \nGoogle  \nGuidePoint Security  \nHackerOne  \nHADESS  \nIBM  \niFood  \nIriusRisk  \nIronCore Labs  \nIT University Copenhagen   Kainos  \nKLAVAN   \nKlavan Security Group  \nKPMG Germany FS  \nKudelski Security  \nLakera  \nLasso Security  \nLayerup  \nLegato  \nLinkfire  \nLLM Guard  \nLOGIC PLUS  \nMaibornWolff  \nMend.io  \nMicrosoft  \nModus Create  \nNexus  \nNightfall AI  \nNordic Venture Family  \nNormalyze  \nNuBinary  \nPalo Alto Networks  \nPalosade  \nPraetorian  \nPreamble  \nPrecize  \nPrompt Security   PromptArmor  \nPynt  \nQuiq   \nRed Hat  \nRHITE  \nSAFE Security  \nSalesforce  \nSAP  \nSecuriti  \nSee -Docs & Thenavigo  \nServiceTitan  \nSHI  \nSmiling Prophet  \nSnyk  \nSourcetoad  \nSprinklr  \nstackArmor  \nTietoevry  \nTrellix  \nTrustwave SpiderLabs  \nU Washington  \nUniversity of Illinois  \nVE3  \nWhyLabs  \nYahoo   \nZenity  \n \nSupporters list, as of publication date. Find the full supporter  list here ."
+    }
+  ]
+}

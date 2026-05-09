@@ -1,0 +1,923 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "OWASP Top 10 \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "OWASP Top 10",
+        "version": "2021",
+        "url": "https://owasp.org/Top10/",
+        "author": "OWASP",
+        "release_date": "2021",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "problem_space_inverted",
+        "pilot_id": "owasp_top_10_2021"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 10,
+      "items_grounded": 9,
+      "items_lab_depth_pending": 1,
+      "olir_pairs_emitted": 46,
+      "primary_pairs": 9,
+      "secondary_pairs": 37,
+      "relationship_type_distribution": {
+        "equal": 4,
+        "intersects-with": 42,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A01-2021",
+          "description": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, o\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.527,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.527; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000001 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A01-2021",
+          "description": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, o\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.477,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.477; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000002 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A01-2021",
+          "description": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, o\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-005",
+          "description": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.461,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.461; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000003 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A01-2021",
+          "description": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, o\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000004 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A02-2021",
+          "description": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-002",
+          "description": "Secure Transport And Insecure Protocol Exclusion. Service interactions must use secure transport with valid certificates and approved protocol versions, while insecure transport options are explicitl\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.541,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.541; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000005 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A02-2021",
+          "description": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.474,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.474; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A02-2021",
+          "description": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-001",
+          "description": "Authentication Strength And Identity Assurance. Require strong and context-appropriate authentication for privileged or sensitive access, including MFA, brute-force resistance, federation support and\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.464,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.464; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000007 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A02-2021",
+          "description": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000008 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A02-2021",
+          "description": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-004",
+          "description": "Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.448,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.448; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000009 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A03-2021",
+          "description": "Injection. An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application; dynamic queries or non-parameterized calls without context-aware\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-003",
+          "description": "Injection-Resistant Input Handling And Dangerous Pattern Exclusion. Input-handling paths must avoid dangerous execution and injection patterns and use safe query, rendering and parsing primitives ins\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.629,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.629; threshold mapping \u2192 equal. Claim OWASP_TOP_10_2021-CLAIM-000010 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A03-2021",
+          "description": "Injection. An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application; dynamic queries or non-parameterized calls without context-aware\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-003",
+          "description": "Dangerous Pattern Exclusion. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. validation and analysis. pattern exclusi\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.458,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.458; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000011 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A05-2021",
+          "description": "Security Misconfiguration. The application might be vulnerable if the application is missing appropriate security hardening across any part of the application stack or improperly configured permissio\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.49,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.490; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000012 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A06-2021",
+          "description": "Vulnerable and Outdated Components. You are likely vulnerable if you do not know the versions of all components you use. If the software is vulnerable, unsupported, or out of date, including the OS, \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000013 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A06-2021",
+          "description": "Vulnerable and Outdated Components. You are likely vulnerable if you do not know the versions of all components you use. If the software is vulnerable, unsupported, or out of date, including the OS, \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-003",
+          "description": "Threat Model Versioning Controls. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. Control access, classification\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.41,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.410; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000014 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A07-2021",
+          "description": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be aut\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-001",
+          "description": "Authentication Strength And Identity Assurance. Require strong and context-appropriate authentication for privileged or sensitive access, including MFA, brute-force resistance, federation support and\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.634,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.634; threshold mapping \u2192 equal. Claim OWASP_TOP_10_2021-CLAIM-000015 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A07-2021",
+          "description": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be aut\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-001",
+          "description": "Strong Authentication And Step-Up Enforcement. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. identity and trust control. authentic\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.602,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.602; threshold mapping \u2192 equal. Claim OWASP_TOP_10_2021-CLAIM-000016 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A07-2021",
+          "description": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be aut\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-001",
+          "description": "Authentication And Federation Protocols. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. Authenticate callers and enforce authorizat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.537,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.537; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000017 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A07-2021",
+          "description": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be aut\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-002",
+          "description": "Machine Identity And Mutual Authentication Discipline. Bind service interactions to explicit trusted identities through mutual authentication or bounded machine tokens. identity and trust control. mu\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.503,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.503; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000018 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A07-2021",
+          "description": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be aut\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.493,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.493; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000019 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A07-2021",
+          "description": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be aut\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-004",
+          "description": "Operational Identity Binding And Short-Lived Credentials. Pipeline, workload and deploy identities must be explicitly bound to the task they perform and should prefer short-lived credentials over sta\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.479,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.479; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000020 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A07-2021",
+          "description": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be aut\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000021 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.507,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.507; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000022 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.505,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.505; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000023 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.499,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.499; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000024 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.498,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.498; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000025 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-003",
+          "description": "Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.468,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.468; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000026 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-004",
+          "description": "Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000027 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-006",
+          "description": "Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.458,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.458; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000028 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-002",
+          "description": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.453,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.453; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000029 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-004",
+          "description": "Message Integrity And Authorized Peer Validation. Verify message integrity and accept traffic only from authorized origins and destinations. identity and trust control. integrity verification",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000030 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-004",
+          "description": "Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/d\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000031 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-004",
+          "description": "End-to-End Deployment Traceability. Every deployment must remain traceable from authorization and pipeline context to the exact artifact, commit and target environment. Incidents and reviews can be t\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000032 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A08-2021",
+          "description": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applica\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-004",
+          "description": "Findings Workflow And Exception Governance. Triage testing findings, track them to correction and close them only through retest or formal exception. Separate raw automated signal from final release \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.41,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.410; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000033 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-004",
+          "description": "Logging Failure Visibility Controls. Detect when logging stops working so absence of records cannot silently destroy auditability. Logging-pipeline failure visibility is strong in the requirement sur\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.676,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.676; threshold mapping \u2192 equal. Claim OWASP_TOP_10_2021-CLAIM-000034 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-006",
+          "description": "External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.578,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.578; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000035 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.576,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.576; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000036 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-006",
+          "description": "Centralized Error Handling And Sensitive Error Logging Hygiene. Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.569,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.569; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000037 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.561,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.561; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000038 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-005",
+          "description": "Structured External Call Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. The repo clearly expresses interaction loggin\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.514,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.514; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000039 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.502,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.502; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000040 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000041 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-010",
+          "description": "Record And Periodically Review Exceptions Against The Intended Baseline. Record approved deviations and periodically review whether the current baseline still matches intended security posture. integ\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.474,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.474; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000042 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-003",
+          "description": "Security Finding Triage And Correction Closure. Security-test findings must be triaged, tracked to correction, constrained by severity-based closure targets and revalidated or formally excepted when \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.468,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.468; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000043 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.467,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.467; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000044 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "TOP10-A09-2021",
+          "description": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.409,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.409; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000045 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "TOP10-A10-2021",
+          "description": "Server-Side Request Forgery (SSRF). SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim OWASP_TOP_10_2021-CLAIM-000046 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      }
+    ]
+  }
+}

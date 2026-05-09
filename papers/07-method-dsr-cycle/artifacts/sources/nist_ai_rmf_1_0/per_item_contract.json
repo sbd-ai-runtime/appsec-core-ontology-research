@@ -1,0 +1,2348 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "nist_ai_rmf_1_0",
+  "is_iteration_3_pilot": true,
+  "n_items": 53,
+  "items": [
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-1",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-1",
+      "source_text": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- practices across the grated into organizational policies, processes, procedures, and organization related practices. to the mapping,",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000001",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.46879029273986816,
+          "disambiguation_margin": 0.0769423246383667,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000002",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4652777910232544,
+          "disambiguation_margin": 0.18237438797950745,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000003",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACP_IAT_002",
+          "target_id": "ACP-IAT-002",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4607991576194763,
+          "disambiguation_margin": 0.11045736074447632,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000004",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.44497591257095337,
+          "disambiguation_margin": 0.13116616010665894,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000005",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4370013177394867,
+          "disambiguation_margin": 0.08368191123008728,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000006",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4274787902832031,
+          "disambiguation_margin": 0.08405673503875732,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000007",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.41917502880096436,
+          "disambiguation_margin": 0.04327934980392456,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000008",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00001",
+          "item_ref": "NIST-AI-RMF-GOVERN-1",
+          "target_core_entity": "ac:ACO_SCBI_005",
+          "target_id": "ACO-SCBI-005",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4138895571231842,
+          "disambiguation_margin": 0.06118437647819519,
+          "rationale_snippet": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- pr",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-1.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-1.3",
+      "source_text": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in place, transparent, and GOVERN 1.4: The risk management process and its outcomes are implemented established through transparent policies, procedures, and other effectively. controls based on organizational risk priorities. Continued on next page Page 22 Table 1: Categories and subcategories for the GOVERN function. (Continued) Categories Subcategories",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000009",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00002",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.3",
+          "target_core_entity": "ac:ACM_TMR_002",
+          "target_id": "ACM-TMR-002",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5851364135742188,
+          "disambiguation_margin": 0.09616127610206604,
+          "rationale_snippet": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in pl",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000010",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00002",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.3",
+          "target_core_entity": "ac:ACP_TMR_003",
+          "target_id": "ACP-TMR-003",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5612465739250183,
+          "disambiguation_margin": 0.04785341024398804,
+          "rationale_snippet": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in pl",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000011",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00002",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.3",
+          "target_core_entity": "ac:ACP_TSV_001",
+          "target_id": "ACP-TSV-001",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.46434327960014343,
+          "disambiguation_margin": 0.11897256970405579,
+          "rationale_snippet": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in pl",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000012",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00002",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.3",
+          "target_core_entity": "ac:ACO_SCBI_002",
+          "target_id": "ACO-SCBI-002",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4512020945549011,
+          "disambiguation_margin": 0.07660526037216187,
+          "rationale_snippet": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in pl",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000013",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00002",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.3",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44045817852020264,
+          "disambiguation_margin": 0.12462946772575378,
+          "rationale_snippet": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in pl",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000014",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00002",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.3",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42631036043167114,
+          "disambiguation_margin": 0.06361573934555054,
+          "rationale_snippet": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in pl",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000015",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00002",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.3",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4200385510921478,
+          "disambiguation_margin": 0.09204834699630737,
+          "rationale_snippet": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in pl",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-1.5",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-1.5",
+      "source_text": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency of periodic review.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000016",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACO_TMR_006",
+          "target_id": "ACO-TMR-006",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5760872960090637,
+          "disambiguation_margin": 0.10485345125198364,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000017",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACM_RPR_010",
+          "target_id": "ACM-RPR-010",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.49244704842567444,
+          "disambiguation_margin": 0.06452986598014832,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000018",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACP_RPR_010",
+          "target_id": "ACP-RPR-010",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.46919894218444824,
+          "disambiguation_margin": 0.05615946650505066,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000019",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACO_SCBI_002",
+          "target_id": "ACO-SCBI-002",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.466167151927948,
+          "disambiguation_margin": 0.14336112141609192,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000020",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACM_IAT_003",
+          "target_id": "ACM-IAT-003",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4577658772468567,
+          "disambiguation_margin": 0.19944512844085693,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000021",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACO_ATB_005",
+          "target_id": "ACO-ATB-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.44164547324180603,
+          "disambiguation_margin": 0.11637881398200989,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000022",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4394570589065552,
+          "disambiguation_margin": 0.09475985169410706,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000023",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACM_ATB_004",
+          "target_id": "ACM-ATB-004",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.43341875076293945,
+          "disambiguation_margin": 0.10298299789428711,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000024",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00003",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.5",
+          "target_core_entity": "ac:ACO_RPR_010",
+          "target_id": "ACO-RPR-010",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.41665083169937134,
+          "disambiguation_margin": 0.10385638475418091,
+          "rationale_snippet": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-1.6",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-1.6",
+      "source_text": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000025",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00004",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.6",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44578874111175537,
+          "disambiguation_margin": 0.12036016583442688,
+          "rationale_snippet": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities. GOVERN 1.1: Legal and regulatory requirements involving AI. GOVERN",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000026",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00004",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.6",
+          "target_core_entity": "ac:ACM_RPR_002",
+          "target_id": "ACM-RPR-002",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4374530017375946,
+          "disambiguation_margin": 0.09628304839134216,
+          "rationale_snippet": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities. GOVERN 1.1: Legal and regulatory requirements involving AI. GOVERN",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000027",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00004",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.6",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42532458901405334,
+          "disambiguation_margin": 0.1015717089176178,
+          "rationale_snippet": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities. GOVERN 1.1: Legal and regulatory requirements involving AI. GOVERN",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000028",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00004",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.6",
+          "target_core_entity": "ac:ACP_ATB_002",
+          "target_id": "ACP-ATB-002",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4170255661010742,
+          "disambiguation_margin": 0.05734941363334656,
+          "rationale_snippet": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities. GOVERN 1.1: Legal and regulatory requirements involving AI. GOVERN",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-1.7",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-1.7",
+      "source_text": "Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000029",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00005",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.7",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.46020787954330444,
+          "disambiguation_margin": 0.05962485074996948,
+          "rationale_snippet": "Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 1.1",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000030",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00005",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.7",
+          "target_core_entity": "ac:ACO_SCBI_005",
+          "target_id": "ACO-SCBI-005",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.426438570022583,
+          "disambiguation_margin": 0.07476276159286499,
+          "rationale_snippet": "Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 1.1",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000031",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00005",
+          "item_ref": "NIST-AI-RMF-GOVERN-1.7",
+          "target_core_entity": "ac:ACM_RPR_002",
+          "target_id": "ACM-RPR-002",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.42211437225341797,
+          "disambiguation_margin": 0.0704306960105896,
+          "rationale_snippet": "Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 1.1",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-2",
+      "source_text": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals and teams throughout place so that the the organization. appropriate teams GOVERN 2.2: The organization\u2019s personnel and partners receive and individuals are AI risk management training to enable them to perform their du- empowered, ties and responsibilities consistent with related policies, proce- responsible, and dures, and agreements. trained for mapping,",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000032",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00006",
+          "item_ref": "NIST-AI-RMF-GOVERN-2",
+          "target_core_entity": "ac:ACP_TMR_007",
+          "target_id": "ACP-TMR-007",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.500480055809021,
+          "disambiguation_margin": 0.07182925939559937,
+          "rationale_snippet": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals a",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000033",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00006",
+          "item_ref": "NIST-AI-RMF-GOVERN-2",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.461702436208725,
+          "disambiguation_margin": 0.14088216423988342,
+          "rationale_snippet": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals a",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000034",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00006",
+          "item_ref": "NIST-AI-RMF-GOVERN-2",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4442170262336731,
+          "disambiguation_margin": 0.0891832709312439,
+          "rationale_snippet": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals a",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000035",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00006",
+          "item_ref": "NIST-AI-RMF-GOVERN-2",
+          "target_core_entity": "ac:ACP_IAT_002",
+          "target_id": "ACP-IAT-002",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4370999038219452,
+          "disambiguation_margin": 0.10768714547157288,
+          "rationale_snippet": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals a",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000036",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00006",
+          "item_ref": "NIST-AI-RMF-GOVERN-2",
+          "target_core_entity": "ac:ACO_SCBI_002",
+          "target_id": "ACO-SCBI-002",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.41502273082733154,
+          "disambiguation_margin": 0.04858079552650452,
+          "rationale_snippet": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals a",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000037",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00006",
+          "item_ref": "NIST-AI-RMF-GOVERN-2",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.41439706087112427,
+          "disambiguation_margin": 0.058752238750457764,
+          "rationale_snippet": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals a",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-2.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-2.3",
+      "source_text": "Executive leadership of the organization takes re-. measuring, and sponsibility for decisions about risks associated with AI system managing AI risks. development and deployment.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00007"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00007"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-3",
+      "source_text": "GOVERN 3.1: Decision-making related to mapping, measuring,. Workforce diversity, and managing AI risks throughout the lifecycle is informed by a equity, inclusion, diverse team (e.g., diversity of demographics, disciplines, expe- and accessibility rience, expertise, and backgrounds). processes are",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000038",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00008",
+          "item_ref": "NIST-AI-RMF-GOVERN-3",
+          "target_core_entity": "ac:ACM_ITS_002",
+          "target_id": "ACM-ITS-002",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.42792564630508423,
+          "disambiguation_margin": 0.11349523067474365,
+          "rationale_snippet": "GOVERN 3.1: Decision-making related to mapping, measuring,. Workforce diversity, and managing AI risks throughout the lifecycle is informed by a equity, inclusion, diverse team (e.g., diversity of dem",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000039",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00008",
+          "item_ref": "NIST-AI-RMF-GOVERN-3",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42234429717063904,
+          "disambiguation_margin": 0.10705387592315674,
+          "rationale_snippet": "GOVERN 3.1: Decision-making related to mapping, measuring,. Workforce diversity, and managing AI risks throughout the lifecycle is informed by a equity, inclusion, diverse team (e.g., diversity of dem",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-3.2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-3.2",
+      "source_text": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. managing of AI risks throughout the lifecycle.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000040",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00009",
+          "item_ref": "NIST-AI-RMF-GOVERN-3.2",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.44425100088119507,
+          "disambiguation_margin": 0.05379927158355713,
+          "rationale_snippet": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. manag",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000041",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00009",
+          "item_ref": "NIST-AI-RMF-GOVERN-3.2",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.44332319498062134,
+          "disambiguation_margin": 0.0728522539138794,
+          "rationale_snippet": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. manag",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000042",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00009",
+          "item_ref": "NIST-AI-RMF-GOVERN-3.2",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4173113703727722,
+          "disambiguation_margin": 0.14902925491333008,
+          "rationale_snippet": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. manag",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000043",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00009",
+          "item_ref": "NIST-AI-RMF-GOVERN-3.2",
+          "target_core_entity": "ac:ACO_SCBI_002",
+          "target_id": "ACO-SCBI-002",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.41209179162979126,
+          "disambiguation_margin": 0.09707260131835938,
+          "rationale_snippet": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. manag",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-4",
+      "source_text": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and uses of AI systems to minimize to a culture potential negative impacts. Continued on next page Page 23 Table 1: Categories and subcategories for the GOVERN function. (Continued) Categories Subcategories that considers and GOVERN 4.2: Organizational teams document the risks and po- communicates AI tential impacts of the AI technology they design, develop, deploy, risk. evaluate, and use, and they communicate about the impacts more broadly.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000044",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00010",
+          "item_ref": "NIST-AI-RMF-GOVERN-4",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4450325667858124,
+          "disambiguation_margin": 0.10751646757125854,
+          "rationale_snippet": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and us",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000045",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00010",
+          "item_ref": "NIST-AI-RMF-GOVERN-4",
+          "target_core_entity": "ac:ACP_IVF_006",
+          "target_id": "ACP-IVF-006",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4244862198829651,
+          "disambiguation_margin": 0.050326406955718994,
+          "rationale_snippet": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and us",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000046",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00010",
+          "item_ref": "NIST-AI-RMF-GOVERN-4",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4232489764690399,
+          "disambiguation_margin": 0.13800552487373352,
+          "rationale_snippet": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and us",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000047",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00010",
+          "item_ref": "NIST-AI-RMF-GOVERN-4",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.42283666133880615,
+          "disambiguation_margin": 0.08249115943908691,
+          "rationale_snippet": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and us",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000048",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00010",
+          "item_ref": "NIST-AI-RMF-GOVERN-4",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4196198582649231,
+          "disambiguation_margin": 0.11967310309410095,
+          "rationale_snippet": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and us",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-4.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-4.3",
+      "source_text": "Organizational practices are in place to enable AI. testing, identification of incidents, and information sharing.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00011"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000049",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00011",
+          "item_ref": "NIST-AI-RMF-GOVERN-4.3",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44655847549438477,
+          "disambiguation_margin": 0.09374633431434631,
+          "rationale_snippet": "Organizational practices are in place to enable AI. testing, identification of incidents, and information sharing. GOVERN 4.1: Organizational policies and practices are in place. GOVERN",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000050",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00011",
+          "item_ref": "NIST-AI-RMF-GOVERN-4.3",
+          "target_core_entity": "ac:ACP_IVF_006",
+          "target_id": "ACP-IVF-006",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4382636249065399,
+          "disambiguation_margin": 0.07488122582435608,
+          "rationale_snippet": "Organizational practices are in place to enable AI. testing, identification of incidents, and information sharing. GOVERN 4.1: Organizational policies and practices are in place. GOVERN",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-5",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-5",
+      "source_text": "GOVERN 5.1: Organizational policies and practices are in place. Processes are in to collect, consider, prioritize, and integrate feedback from those place for robust external to the team that developed or deployed the AI system engagement with regarding the potential individual and societal impacts related to relevant AI actors. AI risks.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00012"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000051",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00012",
+          "item_ref": "NIST-AI-RMF-GOVERN-5",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4120078682899475,
+          "disambiguation_margin": 0.12234625220298767,
+          "rationale_snippet": "GOVERN 5.1: Organizational policies and practices are in place. Processes are in to collect, consider, prioritize, and integrate feedback from those place for robust external to the team that develope",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-5.2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-5.2",
+      "source_text": "Mechanisms are established to enable the team. that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00013"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00013"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-GOVERN-6",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-GOVERN-6",
+      "source_text": "Policies      GOVERN 6.1: Policies and procedures are in place that address. and procedures are AI risks associated with third-party entities, including risks of in- in place to address fringement of a third-party\u2019s intellectual property or other rights. AI risks and benefits GOVERN 6.2: Contingency processes are in place to handle arising from failures or incidents in third-party data or AI systems deemed to third-party software be high-risk. and data and other supply chain issues. 5.2 Map The MAP function establishes the context to frame risks related to an AI system. The AI lifecycle consists of many interdependent activities involving a diverse set of actors (See Figure 3). In practice, AI actors in charge of one part of the process often do not have full visibility or control over other parts and their associated contexts. The interdependencies between these activities, and among the relevant AI actors, can make it difficult to reliably anticipate impacts of AI systems. For example, early decisions in identifying purposes and objectives of an AI system can alter its behavior and capabilities, and the dynamics of de- ployment setting (such as end users or impacted individuals) can shape the impacts of AI system decisions. As a result, the best intentions within one dimension of the AI lifecycle can be undermined via interactions with decisions and conditions in other, later activities. Page 24 This complexity and varying levels of visibility can introduce uncertainty into risk man- agement practices. Anticipating, assessing, and otherwise addressing potential sources of negative risk can mitigate this uncertainty and enhance the integrity of the decision process. The information gathered while carrying out the MAP function enables negative risk pre- vention and informs decisions for processes such as model management, as well as an initial decision about appropriateness or the need for an AI solution. Outcomes in the MAP function are the basis for the MEASURE and MANAGE functions. Without contex- tual knowledge, and awareness of risks within the identified contexts, risk management is difficult to perform. The MAP function is intended to enhance an organization\u2019s ability to identify risks and broader contributing factors. Implementation of this function is enhanced by incorporating perspectives from a diverse internal team and engagement with those external to the team that developed or deployed the AI system. Engagement with external collaborators, end users, potentially impacted communities, and others may vary based on the risk level of a particular AI system, the makeup of the internal team, and organizational policies. Gathering such broad perspec- tives can help organizations proactively prevent negative risks and develop more trustwor- thy AI systems by: \u2022 improving their capacity for understanding contexts",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00014",
+        "NIST_AI_RMF_1_0-LIFTED-00015",
+        "NIST_AI_RMF_1_0-LIFTED-00016",
+        "NIST_AI_RMF_1_0-LIFTED-00017",
+        "NIST_AI_RMF_1_0-LIFTED-00018",
+        "NIST_AI_RMF_1_0-LIFTED-00019",
+        "NIST_AI_RMF_1_0-LIFTED-00020",
+        "NIST_AI_RMF_1_0-LIFTED-00021"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000052",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00015",
+          "item_ref": "NIST-AI-RMF-GOVERN-6",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.46826040744781494,
+          "disambiguation_margin": 0.14002454280853271,
+          "rationale_snippet": "\u2022 checking their assumptions about context of use. GOVERN",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000053",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00015",
+          "item_ref": "NIST-AI-RMF-GOVERN-6",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4433903098106384,
+          "disambiguation_margin": 0.12357473373413086,
+          "rationale_snippet": "\u2022 checking their assumptions about context of use. GOVERN",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000054",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00019",
+          "item_ref": "NIST-AI-RMF-GOVERN-6",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4300488531589508,
+          "disambiguation_margin": 0.045639604330062866,
+          "rationale_snippet": "\u2022 identifying constraints in real-world applications that may lead to negative impacts. GOVERN",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000055",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00020",
+          "item_ref": "NIST-AI-RMF-GOVERN-6",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4300735294818878,
+          "disambiguation_margin": 0.05949881672859192,
+          "rationale_snippet": "\u2022 identifying known and foreseeable negative impacts related to intended use of AI systems. GOVERN",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00014",
+        "NIST_AI_RMF_1_0-LIFTED-00016",
+        "NIST_AI_RMF_1_0-LIFTED-00017",
+        "NIST_AI_RMF_1_0-LIFTED-00018",
+        "NIST_AI_RMF_1_0-LIFTED-00021"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 8,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-1",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-1",
+      "source_text": "Context is       MAP 1.1: Intended purposes, potentially beneficial uses, context-. established and specific laws, norms and expectations, and prospective settings in understood. which the AI system will be deployed are understood and docu- mented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative im- pacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00022"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00022"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-1.2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-1.2",
+      "source_text": "Interdisciplinary AI actors, competencies, skills, and. capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their par- ticipation is documented. Opportunities for interdisciplinary col- laboration are prioritized.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00023"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00023"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-1.4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-1.4",
+      "source_text": "The business value or context of business use has been. clearly defined or \u2013 in the case of assessing existing AI systems \u2013 re-evaluated.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00024"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00024"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-1.6",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-1.6",
+      "source_text": "System requirements (e.g., \u201cthe system shall respect. the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into account to address AI risks.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00025"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000056",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00025",
+          "item_ref": "NIST-AI-RMF-MAP-1.6",
+          "target_core_entity": "ac:ACP_TMR_008",
+          "target_id": "ACP-TMR-008",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.47238796949386597,
+          "disambiguation_margin": 0.06190800666809082,
+          "rationale_snippet": "System requirements (e.g., \u201cthe system shall respect. the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into acc",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000057",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00025",
+          "item_ref": "NIST-AI-RMF-MAP-1.6",
+          "target_core_entity": "ac:ACM_TMR_007",
+          "target_id": "ACM-TMR-007",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4566548466682434,
+          "disambiguation_margin": 0.12300491333007812,
+          "rationale_snippet": "System requirements (e.g., \u201cthe system shall respect. the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into acc",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000058",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00025",
+          "item_ref": "NIST-AI-RMF-MAP-1.6",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4126720726490021,
+          "disambiguation_margin": 0.06158110499382019,
+          "rationale_snippet": "System requirements (e.g., \u201cthe system shall respect. the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into acc",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-2",
+      "source_text": "MAP 2.1: The specific tasks and methods used to implement the. Categorization of tasks that the AI system will support are defined (e.g., classifiers, the AI system is generative models, recommenders). performed. MAP 2.2: Information about the AI system\u2019s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions. Continued on next page Page 26 Table 2: Categories and subcategories for the MAP function. (Continued) Categories Subcategories",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00026"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00026"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-2.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-2.3",
+      "source_text": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, suitability), system trustworthiness, and construct validation.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00027"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000059",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACP_SCBI_006",
+          "target_id": "ACP-SCBI-006",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5525577068328857,
+          "disambiguation_margin": 0.13063418865203857,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000060",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACM_SCBI_004",
+          "target_id": "ACM-SCBI-004",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5313498973846436,
+          "disambiguation_margin": 0.14800769090652466,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000061",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACO_SCBI_006",
+          "target_id": "ACO-SCBI-006",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5181342363357544,
+          "disambiguation_margin": 0.11078062653541565,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000062",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACP_RPR_002",
+          "target_id": "ACP-RPR-002",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4601437449455261,
+          "disambiguation_margin": 0.05492231249809265,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000063",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4502739906311035,
+          "disambiguation_margin": 0.14936047792434692,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000064",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACM_TSV_004",
+          "target_id": "ACM-TSV-004",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.44426608085632324,
+          "disambiguation_margin": 0.10525083541870117,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000065",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4423348903656006,
+          "disambiguation_margin": 0.09849980473518372,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000066",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACO_RPR_002",
+          "target_id": "ACO-RPR-002",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.44194886088371277,
+          "disambiguation_margin": 0.07116782665252686,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000067",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4392375946044922,
+          "disambiguation_margin": 0.10811322927474976,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000068",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACP_TSV_004",
+          "target_id": "ACP-TSV-004",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.42107826471328735,
+          "disambiguation_margin": 0.05160033702850342,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000069",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00027",
+          "item_ref": "NIST-AI-RMF-MAP-2.3",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.41306033730506897,
+          "disambiguation_margin": 0.06808391213417053,
+          "rationale_snippet": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-3",
+      "source_text": "AI                MAP 3.1: Potential benefits of intended AI system functionality. capabilities, targeted and performance are examined and documented. usage, goals, and MAP 3.2: Potential costs, including non-monetary costs, which expected benefits result from expected or realized AI errors or system functionality and costs compared and trustworthiness \u2013 as connected to organizational risk toler- with appropriate ance \u2013 are examined and documented. benchmarks are",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00028"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00028"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-3.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-3.3",
+      "source_text": "Targeted application scope is specified and docu-. understood. mented based on the system\u2019s capability, established context, and AI system categorization.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00029"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00029"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-3.4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-3.4",
+      "source_text": "Processes for operator and practitioner proficiency. with AI system performance and trustworthiness \u2013 and relevant technical standards and certifications \u2013 are defined, assessed, and documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00030"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00030"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-3.5",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-3.5",
+      "source_text": "Processes for human oversight are defined, assessed,. and documented in accordance with organizational policies from the GOVERN function.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00031"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000070",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00031",
+          "item_ref": "NIST-AI-RMF-MAP-3.5",
+          "target_core_entity": "ac:ACM_RPR_002",
+          "target_id": "ACM-RPR-002",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.40992558002471924,
+          "disambiguation_margin": 0.05613839626312256,
+          "rationale_snippet": "Processes for human oversight are defined, assessed,. and documented in accordance with organizational policies from the GOVERN function. AI                MAP 3.1: Potential benefits of intended AI s",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-4",
+      "source_text": "Risks and         MAP 4.1: Approaches for mapping AI technology and legal risks. benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are in place, followed, and documented, as are risks of in- of the AI system fringement of a third party\u2019s intellectual property or other rights. including third-party MAP 4.2: Internal risk controls for components of the AI sys- software and data. tem, including third-party AI technologies, are identified and documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00032"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000071",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00032",
+          "item_ref": "NIST-AI-RMF-MAP-4",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4595623016357422,
+          "disambiguation_margin": 0.0684691071510315,
+          "rationale_snippet": "Risks and         MAP 4.1: Approaches for mapping AI technology and legal risks. benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are in",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000072",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00032",
+          "item_ref": "NIST-AI-RMF-MAP-4",
+          "target_core_entity": "ac:ACM_TMR_005",
+          "target_id": "ACM-TMR-005",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.43283581733703613,
+          "disambiguation_margin": 0.06506624817848206,
+          "rationale_snippet": "Risks and         MAP 4.1: Approaches for mapping AI technology and legal risks. benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are in",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000073",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00032",
+          "item_ref": "NIST-AI-RMF-MAP-4",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4293656349182129,
+          "disambiguation_margin": 0.11208167672157288,
+          "rationale_snippet": "Risks and         MAP 4.1: Approaches for mapping AI technology and legal risks. benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are in",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-5",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-5",
+      "source_text": "Impacts to        MAP 5.1: Likelihood and magnitude of each identified impact. individuals, groups, (both potentially beneficial and harmful) based on expected use, communities, past uses of AI systems in similar contexts, public incident re- organizations, and ports, feedback from those external to the team that developed society are or deployed the AI system, or other data are identified and characterized. documented. Continued on next page Page 27 Table 2: Categories and subcategories for the MAP function. (Continued) Categories Subcategories",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00033"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00033"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MAP-5.2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MAP-5.2",
+      "source_text": "monitor AI risk",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00034",
+        "NIST_AI_RMF_1_0-LIFTED-00035",
+        "NIST_AI_RMF_1_0-LIFTED-00036"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000074",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00034",
+          "item_ref": "NIST-AI-RMF-MAP-5.2",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4140368700027466,
+          "disambiguation_margin": 0.05947190523147583,
+          "rationale_snippet": "monitor AI risk. Impacts to        MAP 5.1: Likelihood and magnitude of each identified impact. MAP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00035",
+        "NIST_AI_RMF_1_0-LIFTED-00036"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 3,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-1",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-1",
+      "source_text": "MEASURE 1.1: Approaches and metrics for measurement of AI. Appropriate risks enumerated during the MAP function are selected for imple- methods and metrics mentation starting with the most significant AI risks. The risks are identified and or trustworthiness characteristics that will not \u2013 or cannot \u2013 be applied. measured are properly documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00037"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00037"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-1.2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-1.2",
+      "source_text": "Appropriateness of AI metrics and effectiveness. of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00038"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00038"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-1.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-1.3",
+      "source_text": "Internal experts who did not serve as front-line. developers for the system and/or independent assessors are in- volved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00039"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000075",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00039",
+          "item_ref": "NIST-AI-RMF-MEASURE-1.3",
+          "target_core_entity": "ac:ACP_IVF_006",
+          "target_id": "ACP-IVF-006",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4517754912376404,
+          "disambiguation_margin": 0.1110365092754364,
+          "rationale_snippet": "Internal experts who did not serve as front-line. developers for the system and/or independent assessors are in- volved in regular assessments and updates. Domain experts, users, AI actors external to",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2",
+      "source_text": "AI         MEASURE 2.1: Test sets, metrics, and details about the tools used. systems are during TEVV are documented. evaluated for MEASURE 2.2: Evaluations involving human subjects meet ap- trustworthy plicable requirements (including human subject protection) and characteristics. are representative of the relevant population.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00040"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00040"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.3",
+      "source_text": "AI system performance or assurance criteria. are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00041"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000076",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00041",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.3",
+          "target_core_entity": "ac:ACM_TMR_007",
+          "target_id": "ACM-TMR-007",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4384385645389557,
+          "disambiguation_margin": 0.0630776584148407,
+          "rationale_snippet": "AI system performance or assurance criteria. are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented. AI         MEASURE ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000077",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00041",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.3",
+          "target_core_entity": "ac:ACM_RPR_005",
+          "target_id": "ACM-RPR-005",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4225408136844635,
+          "disambiguation_margin": 0.09713777899742126,
+          "rationale_snippet": "AI system performance or assurance criteria. are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented. AI         MEASURE ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000078",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00041",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.3",
+          "target_core_entity": "ac:ACO_TSV_007",
+          "target_id": "ACO-TSV-007",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.42062437534332275,
+          "disambiguation_margin": 0.05861783027648926,
+          "rationale_snippet": "AI system performance or assurance criteria. are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented. AI         MEASURE ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.4",
+      "source_text": "The functionality and behavior of the AI sys-. tem and its components \u2013 as identified in the MAP function \u2013 are monitored when in production.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00042"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00042"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.5",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.5",
+      "source_text": "The AI system to be deployed is demonstrated. to be valid and reliable. Limitations of the generalizability be- yond the conditions under which the technology was developed are documented. Continued on next page Page 29 Table 3: Categories and subcategories for the MEASURE function. (Continued) Categories Subcategories",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00043"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00043"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.6",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.6",
+      "source_text": "The AI system is evaluated regularly for safety. risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics re- flect system reliability and robustness, real-time monitoring, and response times for AI system failures.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00044"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000079",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00044",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.6",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4324185252189636,
+          "disambiguation_margin": 0.08656725287437439,
+          "rationale_snippet": "The AI system is evaluated regularly for safety. risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the ri",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000080",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00044",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.6",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42081326246261597,
+          "disambiguation_margin": 0.18828347325325012,
+          "rationale_snippet": "The AI system is evaluated regularly for safety. risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the ri",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000081",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00044",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.6",
+          "target_core_entity": "ac:ACO_IVF_007",
+          "target_id": "ACO-IVF-007",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.417068749666214,
+          "disambiguation_margin": 0.05065441131591797,
+          "rationale_snippet": "The AI system is evaluated regularly for safety. risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the ri",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.7",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.7",
+      "source_text": "AI system security and resilience \u2013 as identified. in the MAP function \u2013 are evaluated and documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00045"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000082",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00045",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.7",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4302263855934143,
+          "disambiguation_margin": 0.06028878688812256,
+          "rationale_snippet": "AI system security and resilience \u2013 as identified. in the MAP function \u2013 are evaluated and documented. AI         MEASURE 2.1: Test sets, metrics, and details about the tools used. MEASURE",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.8",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.8",
+      "source_text": "Risks associated with transparency and account-. ability \u2013 as identified in the MAP function \u2013 are examined and documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00046"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00046"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.9",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.9",
+      "source_text": "The AI model is explained, validated, and docu-. mented, and AI system output is interpreted within its context \u2013 as identified in the MAP function \u2013 to inform responsible use and governance.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00047"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00047"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.11",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.11",
+      "source_text": "Fairness and bias \u2013 as identified in the MAP. function \u2013 are evaluated and results are documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00048"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000083",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00048",
+          "item_ref": "NIST-AI-RMF-MEASURE-2.11",
+          "target_core_entity": "ac:ACP_TSV_006",
+          "target_id": "ACP-TSV-006",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4498292803764343,
+          "disambiguation_margin": 0.1656041145324707,
+          "rationale_snippet": "Fairness and bias \u2013 as identified in the MAP. function \u2013 are evaluated and results are documented. AI         MEASURE 2.1: Test sets, metrics, and details about the tools used. MEASURE",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.12",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.12",
+      "source_text": "Environmental impact and sustainability of AI. model training and management activities \u2013 as identified in the MAP function \u2013 are assessed and documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00049"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00049"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-2.13",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-2.13",
+      "source_text": "Effectiveness of the employed TEVV met-. rics and processes in the MEASURE function are evaluated and documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00050"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00050"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-3",
+      "source_text": "MEASURE 3.1: Approaches, personnel, and documentation are. Mechanisms for in place to regularly identify and track existing, unanticipated, tracking identified and emergent AI risks based on factors such as intended and ac- AI risks over time tual performance in deployed contexts. are in place. MEASURE 3.2: Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available. Continued on next page Page 30 Table 3: Categories and subcategories for the MEASURE function. (Continued) Categories Subcategories",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00051"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00051"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-3.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-3.3",
+      "source_text": "Feedback processes for end users and impacted. communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00052"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000084",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00052",
+          "item_ref": "NIST-AI-RMF-MEASURE-3.3",
+          "target_core_entity": "ac:ACM_TSV_004",
+          "target_id": "ACM-TSV-004",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4474918842315674,
+          "disambiguation_margin": 0.163718581199646,
+          "rationale_snippet": "Feedback processes for end users and impacted. communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics. MEASURE 3.1: Approaches, pers",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-4",
+      "source_text": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00053",
+        "NIST_AI_RMF_1_0-LIFTED-00054",
+        "NIST_AI_RMF_1_0-LIFTED-00055"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000085",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00053",
+          "item_ref": "NIST-AI-RMF-MEASURE-4",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4230007529258728,
+          "disambiguation_margin": 0.20872512459754944,
+          "rationale_snippet": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context. MEASURE",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000086",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00054",
+          "item_ref": "NIST-AI-RMF-MEASURE-4",
+          "target_core_entity": "ac:ACM_ITS_002",
+          "target_id": "ACM-ITS-002",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4830780029296875,
+          "disambiguation_margin": 0.11672532558441162,
+          "rationale_snippet": "and informed through efficacy of consultation with domain experts and other end users. Ap- measurement is proaches are documented. gathered and MEASURE 4.2: Measurement results regarding AI system tru",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000087",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00054",
+          "item_ref": "NIST-AI-RMF-MEASURE-4",
+          "target_core_entity": "ac:ACO_ITS_007",
+          "target_id": "ACO-ITS-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4447038769721985,
+          "disambiguation_margin": 0.06299853324890137,
+          "rationale_snippet": "and informed through efficacy of consultation with domain experts and other end users. Ap- measurement is proaches are documented. gathered and MEASURE 4.2: Measurement results regarding AI system tru",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000088",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00054",
+          "item_ref": "NIST-AI-RMF-MEASURE-4",
+          "target_core_entity": "ac:ACM_ATB_002",
+          "target_id": "ACM-ATB-002",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4440838694572449,
+          "disambiguation_margin": 0.06650936603546143,
+          "rationale_snippet": "and informed through efficacy of consultation with domain experts and other end users. Ap- measurement is proaches are documented. gathered and MEASURE 4.2: Measurement results regarding AI system tru",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000089",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00054",
+          "item_ref": "NIST-AI-RMF-MEASURE-4",
+          "target_core_entity": "ac:ACO_RPR_004",
+          "target_id": "ACO-RPR-004",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.43656933307647705,
+          "disambiguation_margin": 0.10193228721618652,
+          "rationale_snippet": "and informed through efficacy of consultation with domain experts and other end users. Ap- measurement is proaches are documented. gathered and MEASURE 4.2: Measurement results regarding AI system tru",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000090",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00054",
+          "item_ref": "NIST-AI-RMF-MEASURE-4",
+          "target_core_entity": "ac:ACP_ITS_001",
+          "target_id": "ACP-ITS-001",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4199286699295044,
+          "disambiguation_margin": 0.07408076524734497,
+          "rationale_snippet": "and informed through efficacy of consultation with domain experts and other end users. Ap- measurement is proaches are documented. gathered and MEASURE 4.2: Measurement results regarding AI system tru",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000091",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00054",
+          "item_ref": "NIST-AI-RMF-MEASURE-4",
+          "target_core_entity": "ac:ACP_RPR_004",
+          "target_id": "ACP-RPR-004",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4177674949169159,
+          "disambiguation_margin": 0.0762404203414917,
+          "rationale_snippet": "and informed through efficacy of consultation with domain experts and other end users. Ap- measurement is proaches are documented. gathered and MEASURE 4.2: Measurement results regarding AI system tru",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00055"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 3,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MEASURE-4.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MEASURE-4.3",
+      "source_text": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness characteristics are identified and documented. 5.4 Manage The MANAGE function entails allocating risk resources to mapped and measured risks on a regular basis and as defined by the GOVERN function. Risk treatment comprises plans to respond to, recover from, and communicate about incidents or events. Contextual information gleaned from expert consultation and input from relevant AI actors \u2013 established in GOVERN and carried out in MAP \u2013 is utilized in this function to decrease the likelihood of system failures and negative impacts. Systematic documentation practices established in GOVERN and utilized in MAP and MEASURE bolster AI risk management efforts and increase transparency and accountability. Processes for assessing emergent risks are in place, along with mechanisms for continual improvement. After completing the MANAGE function, plans for prioritizing risk and regular monitoring and improvement will be in place. Framework users will have enhanced capacity to man- age the risks of deployed AI systems and to allocate risk management resources based on assessed and prioritized risks. It is incumbent on Framework users to continue to apply the MANAGE function to deployed AI systems as methods, contexts, risks, and needs or expectations from relevant AI actors evolve over time. Page 31 Practices related to managing AI risks are described in the NIST AI RMF Playbook. Table 4 lists the MANAGE function\u2019s categories and subcategories. Table 4: Categories and subcategories for the MANAGE function. Categories Subcategories",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00056"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000092",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00056",
+          "item_ref": "NIST-AI-RMF-MEASURE-4.3",
+          "target_core_entity": "ac:ACM_TMR_002",
+          "target_id": "ACM-TMR-002",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5712683200836182,
+          "disambiguation_margin": 0.0715678334236145,
+          "rationale_snippet": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness ch",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000093",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00056",
+          "item_ref": "NIST-AI-RMF-MEASURE-4.3",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.43895405530929565,
+          "disambiguation_margin": 0.05673372745513916,
+          "rationale_snippet": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness ch",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000094",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00056",
+          "item_ref": "NIST-AI-RMF-MEASURE-4.3",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42555221915245056,
+          "disambiguation_margin": 0.13666793704032898,
+          "rationale_snippet": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness ch",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000095",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00056",
+          "item_ref": "NIST-AI-RMF-MEASURE-4.3",
+          "target_core_entity": "ac:ACO_SCBI_002",
+          "target_id": "ACO-SCBI-002",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4178076982498169,
+          "disambiguation_margin": 0.14097821712493896,
+          "rationale_snippet": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness ch",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-1",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-1",
+      "source_text": "AI           MANAGE 1.1:     A determination is made as to whether the AI. risks based on system achieves its intended purposes and stated objectives and assessments and whether its development or deployment should proceed. other analytical MANAGE 1.2: Treatment of documented AI risks is prioritized output from the based on impact, likelihood, and available resources or methods. MAP and MEASURE",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00057"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000096",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00057",
+          "item_ref": "NIST-AI-RMF-MANAGE-1",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4570283889770508,
+          "disambiguation_margin": 0.05099901556968689,
+          "rationale_snippet": "AI           MANAGE 1.1:     A determination is made as to whether the AI. risks based on system achieves its intended purposes and stated objectives and assessments and whether its development or dep",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-1.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-1.3",
+      "source_text": "Responses to the AI risks deemed high priority, as. functions are identified by the MAP function, are developed, planned, and doc- prioritized, umented. Risk response options can include mitigating, transfer- responded to, and ring, avoiding, or accepting. managed.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00058"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000097",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00058",
+          "item_ref": "NIST-AI-RMF-MANAGE-1.3",
+          "target_core_entity": "ac:ACP_TMR_003",
+          "target_id": "ACP-TMR-003",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.45560744404792786,
+          "disambiguation_margin": 0.07560491561889648,
+          "rationale_snippet": "Responses to the AI risks deemed high priority, as. functions are identified by the MAP function, are developed, planned, and doc- prioritized, umented. Risk response options can include mitigating, t",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000098",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00058",
+          "item_ref": "NIST-AI-RMF-MANAGE-1.3",
+          "target_core_entity": "ac:ACO_SCBI_002",
+          "target_id": "ACO-SCBI-002",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4376159906387329,
+          "disambiguation_margin": 0.14478686451911926,
+          "rationale_snippet": "Responses to the AI risks deemed high priority, as. functions are identified by the MAP function, are developed, planned, and doc- prioritized, umented. Risk response options can include mitigating, t",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-1.4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-1.4",
+      "source_text": "Negative residual risks (defined as the sum of all. unmitigated risks) to both downstream acquirers of AI systems and end users are documented.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00059"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00059"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-2",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-2",
+      "source_text": "MANAGE 2.1: Resources required to manage AI risks are taken. Strategies to into account \u2013 along with viable non-AI alternative systems, ap- maximize AI proaches, or methods \u2013 to reduce the magnitude or likelihood of benefits and potential impacts. minimize negative MANAGE 2.2: Mechanisms are in place and applied to sustain impacts are planned, the value of deployed AI systems. prepared,",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00060"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "NIST_AI_RMF_1_0-LIFTED-00060"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-2.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-2.3",
+      "source_text": "Procedures are followed to respond to and recover. implemented, from a previously unknown risk when it is identified. documented, and informed by input MANAGE 2.4: Mechanisms are in place and applied, and respon- from relevant AI sibilities are assigned and understood, to supersede, disengage, or actors. deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use.",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00061"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000099",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00061",
+          "item_ref": "NIST-AI-RMF-MANAGE-2.3",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5012124180793762,
+          "disambiguation_margin": 0.12336421012878418,
+          "rationale_snippet": "Procedures are followed to respond to and recover. implemented, from a previously unknown risk when it is identified. documented, and informed by input MANAGE 2.4: Mechanisms are in place and applied,",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-3",
+      "source_text": "AI           MANAGE 3.1: AI risks and benefits from third-party resources. risks and benefits are regularly monitored, and risk controls are applied and from third-party documented. entities are MANAGE 3.2: Pre-trained models which are used for develop- managed. ment are monitored as part of AI system regular monitoring and maintenance. Continued on next page Page 32 Table 4: Categories and subcategories for the MANAGE function. (Continued) Categories Subcategories",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00062"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000100",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00062",
+          "item_ref": "NIST-AI-RMF-MANAGE-3",
+          "target_core_entity": "ac:ACM_TMR_003",
+          "target_id": "ACM-TMR-003",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.46108555793762207,
+          "disambiguation_margin": 0.09272313117980957,
+          "rationale_snippet": "AI           MANAGE 3.1: AI risks and benefits from third-party resources. risks and benefits are regularly monitored, and risk controls are applied and from third-party documented. entities are MANAG",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-4",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-4",
+      "source_text": "Risk          MANAGE 4.1: Post-deployment AI system monitoring plans. treatments, are implemented, including mechanisms for capturing and eval- including response uating input from users and other relevant AI actors, appeal and recovery, and and override, decommissioning, incident response, recovery, and communication change management. plans for the MANAGE 4.2: Measurable activities for continual improvements identified and are integrated into AI system updates and include regular engage- measured AI risks ment with interested parties, including relevant AI actors. are documented and",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00063"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000101",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00063",
+          "item_ref": "NIST-AI-RMF-MANAGE-4",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5300923585891724,
+          "disambiguation_margin": 0.08621487021446228,
+          "rationale_snippet": "Risk          MANAGE 4.1: Post-deployment AI system monitoring plans. treatments, are implemented, including mechanisms for capturing and eval- including response uating input from users and other rel",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000102",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00063",
+          "item_ref": "NIST-AI-RMF-MANAGE-4",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.42116430401802063,
+          "disambiguation_margin": 0.06944289803504944,
+          "rationale_snippet": "Risk          MANAGE 4.1: Post-deployment AI system monitoring plans. treatments, are implemented, including mechanisms for capturing and eval- including response uating input from users and other rel",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "nist_ai_rmf_1_0/NIST-AI-RMF-MANAGE-4.3",
+      "source": "nist_ai_rmf_1_0",
+      "source_object_id": "NIST-AI-RMF-MANAGE-4.3",
+      "source_text": "Incidents and errors are communicated to relevant. monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are followed and documented. 6. AI RMF Profiles AI RMF use-case profiles are implementations of the AI RMF functions, categories, and subcategories for a specific setting or application based on the requirements, risk tolerance, and resources of the Framework user: for example, an AI RMF hiring profile or an AI RMF fair housing profile. Profiles may illustrate and offer insights into how risk can be managed at various stages of the AI lifecycle or in specific sector, technology, or end-use applications. AI RMF profiles assist organizations in deciding how they might best manage AI risk that is well-aligned with their goals, considers legal/regulatory requirements and best practices, and reflects risk management priorities. AI RMF temporal profiles are descriptions of either the current state or the desired, target state of specific AI risk management activities within a given sector, industry, organization, or application context. An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals. Comparing Current and Target Profiles likely reveals gaps to be addressed to meet AI risk management objectives. Action plans can be developed to address these gaps to fulfill outcomes in a given category or subcategory. Prioritization of gap mitigation is driven by the user\u2019s needs and risk management processes. This risk-based approach also enables Framework users to compare their approaches with other approaches and to gauge the resources needed (e.g., staffing, funding) to achieve AI risk management goals in a cost- effective, prioritized manner. Page 33 AI RMF cross-sectoral profiles cover risks of models or applications that can be used across use cases or sectors. Cross-sectoral profiles can also cover how to govern, map, measure, and manage risks for activities or business processes common across sectors such as the use of large language models, cloud-based services or acquisition. This Framework does not prescribe profile templates, allowing for flexibility in implemen- tation. Page 34 Appendix A: Descriptions of AI Actor Tasks from Figures 2 and 3 AI Design tasks are performed during the Application Context and Data and Input phases of the AI lifecycle in Figure 2. AI Design actors create the concept and objectives of AI systems and are responsible for the planning, design, and data collection and processing tasks of the AI system so that the AI system is lawful and fit-for-purpose. Tasks include ar- ticulating and documenting the system\u2019s concept and objectives, underlying assumptions, context, and requirements; gathering and cleaning data; and documenting the metadata and characteristics of the dataset. AI actors in this category include data scientists, do- main experts, socio-cultural analysts, experts in the field of diversity, equity, inclusion, and accessibility, members of impacted communities, human factors experts (e.g., UX/UI design), governance experts, data engineers, data providers, system funders, product man- agers, third-party entities, evaluators, and legal and privacy governance. AI Development tasks are performed during the AI Model phase of the lifecycle in Figure 2. AI Development actors provide the initial infrastructure of AI systems and are responsi- ble for model building and interpretation tasks, which involve the creation, selection, cali- bration, training, and/or testing of models or algorithms. AI actors in this category include machine learning experts, data scientists, developers, third-party entities, legal and privacy governance experts, and experts in the socio-cultural and contextual factors associated with the deployment setting. AI Deployment tasks are performed during the Task and Output phase of the lifecycle in Figure 2. AI Deployment actors are responsible for contextual decisions relating to how the AI system is used to assure deployment of the system into production. Related tasks include piloting the system, checking compatibility with legacy systems, ensuring regu- latory compliance, managing organizational change, and evaluating user experience. AI actors in this category include system integrators, software developers, end users, oper- ators and practitioners, evaluators, and domain experts with expertise in human factors, socio-cultural analysis, and governance. Operation and Monitoring tasks are performed in the Application Context/Operate and Monitor phase of the lifecycle in Figure 2. These tasks are carried out by AI actors who are responsible for operating the AI system and working with others to regularly assess system output and impacts. AI actors in this category include system operators, domain experts, AI designers, users who interpret or incorporate the output of AI systems, product developers, evaluators and auditors, compliance experts, organizational management, and members of the research community. Test, Evaluation, Verification, and Validation (TEVV) tasks are performed throughout the AI lifecycle. They are carried out by AI actors who examine the AI system or its components, or detect and remediate problems. Ideally, AI actors carrying out verification Page 35 and validation tasks are distinct from those who perform test and evaluation actions. Tasks can be incorporated into a phase as early as design, where tests are planned in accordance with the design requirement. \u2022 TEVV tasks for design, planning, and data may center on internal and external vali- dation of assumptions for system design, data collection, and measurements relative to the intended context of deployment or application. \u2022 TEVV tasks for development (i.e., model building) include model validation and assessment. \u2022 TEVV tasks for deployment include system validation and integration in production, with testing, and recalibration for systems and process integration, user experience, and compliance with existing legal, regulatory, and ethical specifications. \u2022 TEVV tasks for operations involve ongoing monitoring for periodic updates, testing, and subject matter expert (SME) recalibration of models, the tracking of incidents or errors reported and their management, the detection of emergent properties and related impacts, and processes for redress and response. Human Factors tasks and activities are found throughout the dimensions of the AI life- cycle. They include human-centered design practices and methodologies, promoting the active involvement of end users and other interested parties and relevant AI actors, incor- porating context-specific norms and values in system design, evaluating and adapting end user experiences, and broad integration of humans and human dynamics in all phases of the AI lifecycle. Human factors professionals provide multidisciplinary skills and perspectives to understand context of use, inform interdisciplinary and demographic diversity, engage in consultative processes, design and evaluate user experience, perform human-centered evaluation and testing, and inform impact assessments. Domain Expert tasks involve input from multidisciplinary practitioners or scholars who provide knowledge or expertise in \u2013 and about \u2013 an industry sector, economic sector, con- text, or application area where an AI system is being used. AI actors who are domain experts can provide essential guidance for AI system design and development, and inter- pret outputs in support of work performed by TEVV and AI impact assessment teams. AI Impact Assessment tasks include assessing and evaluating requirements for AI system accountability, combating harmful bias, examining impacts of AI systems, product safety, liability, and security, among others. AI actors such as impact assessors and evaluators provide technical, human factor, socio-cultural, and legal expertise. Procurement tasks are conducted by AI actors with financial, legal, or policy management authority for acquisition of AI models, products, or services from a third-party developer, vendor, or contractor. Governance and Oversight tasks are assumed by AI actors with management, fiduciary, and legal authority and responsibility for the organization in which an AI system is de- Page 36 signed, developed, and/or deployed. Key AI actors responsible for AI governance include organizational management, senior leadership, and the Board of Directors. These actors are parties that are concerned with the impact and sustainability of the organization as a whole. Additional AI Actors Third-party entities include providers, developers, vendors, and evaluators of data, al- gorithms, models, and/or systems and related services for another organization or the or- ganization\u2019s customers or clients. Third-party entities are responsible for AI design and development tasks, in whole or in part. By definition, they are external to the design, devel- opment, or deployment team of the organization that acquires its technologies or services. The technologies acquired from third-party entities may be complex or opaque, and risk tolerances may not align with the deploying or operating organization. End users of an AI system are the individuals or groups that use the system for specific purposes. These individuals or groups interact with an AI system in a specific context. End users can range in competency from AI experts to first-time technology end users. Affected individuals/communities encompass all individuals, groups, communities, or organizations directly or indirectly affected by AI systems or decisions based on the output of AI systems. These individuals do not necessarily interact with the deployed system or application. Other AI actors may provide formal or quasi-formal norms or guidance for specifying and managing AI risks. They can include trade associations, standards developing or- ganizations, advocacy groups, researchers, environmental groups, and civil society organizations. The general public is most likely to directly experience positive and negative impacts of AI technologies. They may provide the motivation for actions taken by the AI actors. This group can include individuals, communities, and consumers associated with the context in which an AI system is developed or deployed. Page 37 Appendix B: How AI Risks Differ from Traditional Software Risks As with traditional software, risks from AI-based technology can be bigger than an en- terprise, span organizations, and lead to societal impacts. AI systems also bring a set of risks that are not comprehensively addressed by current risk frameworks and approaches. Some AI system features that present risks also can be beneficial. For example, pre-trained models and transfer learning can advance research and increase accuracy and resilience when compared to other models and approaches. Identifying contextual factors in the MAP function will assist AI actors in determining the level of risk and potential management efforts. Compared to traditional software, AI-specific risks that are new or increased include the following: \u2022 The data used for building an AI system may not be a true or appropriate representa- tion of the context or intended use of the AI system, and the ground truth may either not exist or not be available. Additionally, harmful bias and other data quality issues can affect AI system trustworthiness, which could lead to negative impacts. \u2022 AI system dependency and reliance on data for training tasks, combined with in- creased volume and complexity typically associated with such data. \u2022 Intentional or unintentional changes during training may fundamentally alter AI sys- tem performance. \u2022 Datasets used to train AI systems may become detached from their original and in- tended context or may become stale or outdated relative to deployment context. \u2022 AI system scale and complexity (many systems contain billions or even trillions of decision points) housed within more traditional software applications. \u2022 Use of pre-trained models that can advance research and improve performance can also increase levels of statistical uncertainty and cause issues with bias management, scientific validity, and reproducibility. \u2022 Higher degree of difficulty in predicting failure modes for emergent properties of large-scale pre-trained models. \u2022 Privacy risk due to enhanced data aggregation capability for AI systems. \u2022 AI systems may require more frequent maintenance and triggers for conducting cor- rective maintenance due to data, model, or concept drift. \u2022 Increased opacity and concerns about reproducibility. \u2022 Underdeveloped software testing standards and inability to document AI-based prac- tices to the standard expected of traditionally engineered software for all but the simplest of cases. \u2022 Difficulty in performing regular AI-based software testing, or determining what to test, since AI systems are not subject to the same controls as traditional code devel- opment. Page 38 \u2022 Computational costs for developing AI systems and their impact on the environment and planet. \u2022 Inability to predict or detect the side effects of AI-based systems beyond statistical measures. Privacy and cybersecurity risk management considerations and approaches are applicable in the design, development, deployment, evaluation, and use of AI systems. Privacy and cybersecurity risks are also considered as part of broader enterprise risk management con- siderations, which may incorporate AI risks. As part of the effort to address AI trustworthi- ness characteristics such as \u201cSecure and Resilient\u201d and \u201cPrivacy-Enhanced,\u201d organizations may consider leveraging available standards and guidance that provide broad guidance to organizations to reduce security and privacy risks, such as, but not limited to, the NIST Cy- bersecurity Framework, the NIST Privacy Framework, the NIST Risk Management Frame- work, and the Secure Software Development Framework. These frameworks have some features in common with the AI RMF. Like most risk management approaches, they are outcome-based rather than prescriptive and are often structured around a Core set of func- tions, categories, and subcategories. While there are significant differences between these frameworks based on the domain addressed \u2013 and because AI risk management calls for addressing many other types of risks \u2013 frameworks like those mentioned above may inform security and privacy considerations in the MAP, MEASURE, and MANAGE functions of the AI RMF. At the same time, guidance available before publication of this AI RMF does not compre- hensively address many AI system risks. For example, existing frameworks and guidance are unable to: \u2022 adequately manage the problem of harmful bias in AI systems",
+      "source_lifted_rows": [
+        "NIST_AI_RMF_1_0-LIFTED-00064",
+        "NIST_AI_RMF_1_0-LIFTED-00065",
+        "NIST_AI_RMF_1_0-LIFTED-00066",
+        "NIST_AI_RMF_1_0-LIFTED-00067",
+        "NIST_AI_RMF_1_0-LIFTED-00068"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000103",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00064",
+          "item_ref": "NIST-AI-RMF-MANAGE-4.3",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.49119406938552856,
+          "disambiguation_margin": 0.16855674982070923,
+          "rationale_snippet": "Incidents and errors are communicated to relevant. monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000104",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00065",
+          "item_ref": "NIST-AI-RMF-MANAGE-4.3",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.49119406938552856,
+          "disambiguation_margin": 0.16855672001838684,
+          "rationale_snippet": "Incidents and errors are communicated to relevant. monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000105",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00066",
+          "item_ref": "NIST-AI-RMF-MANAGE-4.3",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.49119406938552856,
+          "disambiguation_margin": 0.16855672001838684,
+          "rationale_snippet": "Incidents and errors are communicated to relevant. monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000106",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00067",
+          "item_ref": "NIST-AI-RMF-MANAGE-4.3",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.49119406938552856,
+          "disambiguation_margin": 0.16855672001838684,
+          "rationale_snippet": "Incidents and errors are communicated to relevant. monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "NIST_AI_RMF_1_0-CLAIM-000107",
+          "lifted_row_ref": "NIST_AI_RMF_1_0-LIFTED-00068",
+          "item_ref": "NIST-AI-RMF-MANAGE-4.3",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.491193950176239,
+          "disambiguation_margin": 0.1685565710067749,
+          "rationale_snippet": "Incidents and errors are communicated to relevant. monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 5,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

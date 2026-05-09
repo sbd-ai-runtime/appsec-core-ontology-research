@@ -1,0 +1,2614 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "SAFECode \u2014 Practical Security Stories and Security Tasks for Agile Development Environments \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "SAFECode \u2014 Practical Security Stories and Security Tasks for Agile Development Environments",
+        "version": "2012",
+        "url": "https://safecode.org/",
+        "author": "SAFECode",
+        "release_date": "2012",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "mixed",
+        "pilot_id": "safecode_agile_2012"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 29,
+      "items_grounded": 26,
+      "items_lab_depth_pending": 3,
+      "olir_pairs_emitted": 135,
+      "primary_pairs": 26,
+      "secondary_pairs": 109,
+      "relationship_type_distribution": {
+        "equal": 9,
+        "intersects-with": 126,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.544,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.544; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000001 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-004",
+          "description": "End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.506,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.506; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000002 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.506,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.506; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000003 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-004",
+          "description": "Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.491,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.491; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000004 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.478,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.478; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000005 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.472,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.472; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-005",
+          "description": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000007 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-006",
+          "description": "Centralized Error Handling And Sensitive Error Logging Hygiene. Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000008 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000009 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-1",
+          "description": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000010 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-009",
+          "description": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.58,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.580; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000011 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.548,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.548; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000012 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.542,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.542; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000013 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-005",
+          "description": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.513,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.513; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000014 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-007",
+          "description": "Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.511,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.511; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000015 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.492,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.492; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000016 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-001",
+          "description": "Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.488,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.488; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000017 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.458,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.458; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000018 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.453,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.453; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000019 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-004",
+          "description": "Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000020 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-001",
+          "description": "Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000021 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-2",
+          "description": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000022 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-4",
+          "description": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-002",
+          "description": "Governed Static Analysis Execution. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. validation and analysis. static analysis",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.729,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.729; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000023 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-4",
+          "description": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-005",
+          "description": "Static Analysis Profile Management. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. This anchor is narrower than the full problem\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.639,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.639; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000024 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-4",
+          "description": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-002",
+          "description": "Static Analysis Signal Quality And Baseline Governance. Operate static analysis with managed rule profiles, critical-surface coverage discipline and explicit false-positive baseline governance. Stati\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.593,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.593; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000025 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-4",
+          "description": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-003",
+          "description": "Structured Threat Analysis Method Discipline. Use a declared structured method with minimum coverage discipline so that threat analysis remains repeatable, comparable and appropriate to risk context.\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.459,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.459; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000026 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-4",
+          "description": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-010",
+          "description": "Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.459,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.459; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000027 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-5",
+          "description": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-004",
+          "description": "Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.49,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.490; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000028 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-5",
+          "description": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-004",
+          "description": "Rollback And Containment Controls. Keep rollback procedures specific, tested and time-bounded before they are needed in production. Introduce high-impact change gradually and contain unsafe rollout w\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000029 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-5",
+          "description": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-001",
+          "description": "Dependency Inventory And SBOM Traceability. Maintain a build-linked inventory of third-party components and generated SBOMs for produced artifacts. A software component inventory exists per build or \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.434,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.434; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000030 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-5",
+          "description": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-005",
+          "description": "Structured External Call Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. The repo clearly expresses interaction loggin\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000031 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-5",
+          "description": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-006",
+          "description": "External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000032 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-5",
+          "description": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000033 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-5",
+          "description": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.413,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.413; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000034 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-6",
+          "description": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-004",
+          "description": "End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.491,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.491; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000035 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-6",
+          "description": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-004",
+          "description": "Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.456,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.456; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000036 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-6",
+          "description": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.449,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.449; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000037 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-6",
+          "description": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.448,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.448; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000038 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-6",
+          "description": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-001",
+          "description": "Versioned Pipelines. Keep build and release logic versioned, reviewable and deterministic. governance and review. workflow",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.435,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.435; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000039 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-6",
+          "description": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-001",
+          "description": "Dependency Inventory And SBOM Traceability. Maintain a build-linked inventory of third-party components and generated SBOMs for produced artifacts. A software component inventory exists per build or \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.413,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.413; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000040 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-001",
+          "description": "Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.65,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.650; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000041 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-010",
+          "description": "Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.5,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.500; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000042 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000043 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.478,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.478; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000044 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.471,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.471; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000045 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-001",
+          "description": "Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.463,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.463; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000046 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.456,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.456; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000047 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000048 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-7",
+          "description": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-003",
+          "description": "Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.429,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.429; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000049 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-8",
+          "description": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.535,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.535; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000050 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-8",
+          "description": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-004",
+          "description": "Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.419,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.419; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000051 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-8",
+          "description": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-007",
+          "description": "Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.413,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.413; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000052 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-8",
+          "description": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-009",
+          "description": "Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.409,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.409; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000053 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-9",
+          "description": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-002",
+          "description": "Governed Static Analysis Execution. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. validation and analysis. static analysis",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.648,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.648; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000054 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-9",
+          "description": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-004",
+          "description": "Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.602,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.602; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000055 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-9",
+          "description": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-005",
+          "description": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.455,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.455; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000056 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-9",
+          "description": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-010",
+          "description": "Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.446,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.446; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000057 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-9",
+          "description": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-004",
+          "description": "Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000058 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-10",
+          "description": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.624,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.624; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000059 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-10",
+          "description": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.509,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.509; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000060 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-10",
+          "description": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000061 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-10",
+          "description": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.409,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.409; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000062 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-11",
+          "description": "Perform automated malware scanner on released binaries. Perform and add to release cycle automated malware scanner on released binaries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.51,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.510; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000063 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-11",
+          "description": "Perform automated malware scanner on released binaries. Perform and add to release cycle automated malware scanner on released binaries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000064 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-12",
+          "description": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000065 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-12",
+          "description": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-007",
+          "description": "Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.435,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.435; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000066 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-12",
+          "description": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.434,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.434; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000067 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-12",
+          "description": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000068 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-13",
+          "description": "Ensure inclusion of security patches from previous releases. Ensure inclusion of security patches/fixes applied in previous release(s)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.57,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.570; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000069 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-13",
+          "description": "Ensure inclusion of security patches from previous releases. Ensure inclusion of security patches/fixes applied in previous release(s)",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.451,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.451; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000070 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-14",
+          "description": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.432,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.432; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000071 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-14",
+          "description": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000072 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-14",
+          "description": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-001",
+          "description": "Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000073 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-14",
+          "description": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-007",
+          "description": "Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000074 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-15",
+          "description": "Ensure all QA engineers have obtained secure testing training. Ensure all QA engineers have obtained secure testing training",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-007",
+          "description": "Security Testing And Empirical Assurance Integrity. Testing strategy, signal quality, finding closure, reproducible evidence, staged validation and specialized empirical testing must operate as one c\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.558,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.558; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000075 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-15",
+          "description": "Ensure all QA engineers have obtained secure testing training. Ensure all QA engineers have obtained secure testing training",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-005",
+          "description": "Staged Dynamic Testing And Gate Enforcement. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. validation and analysis. dynamic testing",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.512,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.512; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000076 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-OPS-16",
+          "description": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-009",
+          "description": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.585,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.585; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000077 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-16",
+          "description": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.545,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.545; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000078 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-16",
+          "description": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-007",
+          "description": "Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.532,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.532; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000079 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-16",
+          "description": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.48,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.480; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000080 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-16",
+          "description": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-001",
+          "description": "Strong Authentication And Step-Up Enforcement. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. identity and trust control. authentic\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.461,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.461; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000081 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-16",
+          "description": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000082 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-OPS-16",
+          "description": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-004",
+          "description": "Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/d\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.416,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.416; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000083 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-1",
+          "description": "Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-001",
+          "description": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000084 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-1",
+          "description": "Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000085 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-1",
+          "description": "Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-001",
+          "description": "Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000086 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-009",
+          "description": "Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.555,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.555; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000087 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.52,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.520; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000088 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-005",
+          "description": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.506,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.506; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000089 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-007",
+          "description": "Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.5,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.500; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000090 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.476,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.476; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000091 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.467,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.467; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000092 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-005",
+          "description": "Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.462,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.462; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000093 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-004",
+          "description": "Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000094 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.444,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.444; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000095 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-2",
+          "description": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ATB-007",
+          "description": "Automatable Topology And Pattern Validation. Validate topology and architecture conformance automatically where patterns and constraints are explicit enough. validation and analysis. validation",
+          "level": "Practice",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000096 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-3",
+          "description": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-001",
+          "description": "Threat Modeling Scope And Trigger Discipline. Apply threat modeling at the right risk levels and re-trigger it when architectural change, new exposure or relevant risk events make the previous model \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.65,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.650; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000097 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-3",
+          "description": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-001",
+          "description": "Threat Model Creation And Triggered Refresh. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. governance and revi\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.608,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.608; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000098 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-3",
+          "description": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.466,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.466; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000099 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-3",
+          "description": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.449,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.449; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000100 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-3",
+          "description": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-006",
+          "description": "Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000101 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-3",
+          "description": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000102 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-4",
+          "description": "Conduct penetration tests on software around beta stage. Conduct penetration tests on the software around beta stage",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-005",
+          "description": "Staged Dynamic Testing And Gate Enforcement. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. validation and analysis. dynamic testing",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.538,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.538; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000103 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-5",
+          "description": "Enhance existing test suite to include security test cases. Enhance existing test suite to include security test cases",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-001",
+          "description": "Risk-Proportional Security Testing Strategy. Maintain an explicit, risk-proportional security testing strategy that defines test types, cadence, ownership, coverage thresholds and acceptance criteria\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.563,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.563; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000104 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-5",
+          "description": "Enhance existing test suite to include security test cases. Enhance existing test suite to include security test cases",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000105 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-7",
+          "description": "Perform network fuzz testing. Perform network fuzz testing",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-002",
+          "description": "Test Execution Surfaces. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. Apply regression tests, offensive testing and fuzzing where deeper empirical val\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.456,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.456; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000106 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-003",
+          "description": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.512,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.512; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000107 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.473,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.473; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000108 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-005",
+          "description": "Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.472,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.472; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000109 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-008",
+          "description": "Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.457,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.457; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000110 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.449,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.449; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000111 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-007",
+          "description": "Security Logging And Audit Trail Assurance. Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000112 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-007",
+          "description": "Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000113 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-005",
+          "description": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.432,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.432; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000114 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000115 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-8",
+          "description": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000116 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-9",
+          "description": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.533,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.533; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000117 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-9",
+          "description": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.517,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.517; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000118 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-9",
+          "description": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.515,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.515; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000119 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-9",
+          "description": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-009",
+          "description": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.502,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.502; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000120 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-9",
+          "description": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.455,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.455; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000121 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-9",
+          "description": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-005",
+          "description": "Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000122 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-9",
+          "description": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-008",
+          "description": "Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000123 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-10",
+          "description": "Prioritization of resolution of issues from code analysis. Prioritization of resolution of issues identified by code analysis tools (static and run-time), especially for existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-002",
+          "description": "Governed Static Analysis Execution. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. validation and analysis. static analysis",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.525,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.525; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000124 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-10",
+          "description": "Prioritization of resolution of issues from code analysis. Prioritization of resolution of issues identified by code analysis tools (static and run-time), especially for existing code",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-005",
+          "description": "Static Analysis Profile Management. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. This anchor is narrower than the full problem\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.45,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.450; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000125 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-11",
+          "description": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.537,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.537; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000126 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-11",
+          "description": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-004",
+          "description": "Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000127 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-11",
+          "description": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-003",
+          "description": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.44,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.440; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000128 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-11",
+          "description": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-002",
+          "description": "Structured And Centralized Security Logging. Emit structured logs with consistent fields and central forwarding rather than fragmented local-only records. rollout recovery and runtime records. centra\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000129 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-11",
+          "description": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000130 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "SCAGILE-EXP-12",
+          "description": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.624,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.624; threshold mapping \u2192 equal. Claim SAFECODE_AGILE_2012-CLAIM-000131 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-12",
+          "description": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-001",
+          "description": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.549,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.549; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000132 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-12",
+          "description": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.457,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.457; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000133 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-12",
+          "description": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-007",
+          "description": "Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000134 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "SCAGILE-EXP-12",
+          "description": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-003",
+          "description": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000135 at Practice level. Secondary disclosure."
+      }
+    ]
+  }
+}

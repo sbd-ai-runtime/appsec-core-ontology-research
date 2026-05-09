@@ -1,0 +1,22 @@
+meta:
+  pilot_id: pci_dss_v4_0_1
+  status: source_captured
+retrieval_policy:
+  checksum_sha256: 5e6b9093b84007b973097d20126a3768ea2f0a1d4200255c849b0fb3bf04ebc7
+  local_extracted_text: sources/pci_dss_v4_0_1/PCI-DSS-v4_0_1.extracted.txt
+  local_snapshot_path: sources/pci_dss_v4_0_1/PCI-DSS-v4_0_1.pdf
+  preferred_artifact: pdf
+  retrieval_mode: manual_download_from_pci_ssc
+  retrieved_at: '2026-04-13T00:52:00Z'
+source_document:
+  canonical_url: https://www.pcisecuritystandards.org/document_library/
+  framework_family: PCI-DSS
+  language: en
+  origin_url: https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf
+  publication_date: '2024-06-01'
+  publisher: PCI Security Standards Council
+  source_document_id: SRC-PCI-DSS-V4_0_1
+  source_kind: compliance_standard
+  stability_reason: official_pci_ssc_release
+  title: Payment Card Industry Data Security Standard v4.0.1
+  version: 4.0.1

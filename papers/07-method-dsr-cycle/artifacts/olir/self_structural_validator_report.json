@@ -1,0 +1,938 @@
+{
+  "validator_report": {
+    "validator": "self-structural (IR 8278A r1 documented requirements)",
+    "external_nist_olir_validator_invoked": false,
+    "external_validator_caveat": "External NIST OLIR validators (per https://csrc.nist.gov/projects/olir) not invoked at generation time \u2014 programme-lead may commission external OLIR submission review separately as part of OLIR registration future work (\u00a713). Self-validation tests structural conformance against IR 8278A r1 documented requirements: namespaces, metadata blocks, STRM resource types, ratified relationship vocabulary.",
+    "n_artefacts_validated": 32,
+    "n_pass": 32,
+    "n_fail": 0,
+    "per_artefact": [
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/appsec_core_v1_reference_doc.xml",
+        "type": "Reference Document",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_metadata_block": true,
+          "has_concepts_block": true,
+          "concepts_strm_resource_type": true,
+          "has_required_metadata_fields": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_asvs_v5_0_0.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "asvs_v5_0_0",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_capec_v3_9.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "capec_v3_9",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_cis_controls_v8_1_2.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "cis_controls_v8_1_2",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_cwe_software_development_view_v4_19_1.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "cwe_software_development_view_v4_19_1",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_enisa_multilayer_ai_cybersecurity_practices_2023.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_cra.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "eu_cra",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_dora.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "eu_dora",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_nis2.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "eu_nis2",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_rgpd.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "eu_rgpd",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_hipaa_security_rule.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "hipaa_security_rule",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_mcp_official_security_foundations_2025.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "mcp_official_security_foundations_2025",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_mitre_atlas.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "mitre_atlas",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_ai_100_2_e2025.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "nist_ai_100_2_e2025",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_ai_rmf_1_0.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "nist_ai_rmf_1_0",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_sp800_53_rev5.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "nist_sp800_53_rev5",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_dsomm.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_dsomm",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_llm_top_10.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_llm_top_10",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_secure_server_development_v1_0.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_third_party_servers_v1_0.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_top_10_v0_1_2025_beta.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_ml_top_10.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_ml_top_10",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_proactive_controls_2018.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_proactive_controls_2018",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_samm_v2_1.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_samm_v2_1",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_top_10_2021.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "owasp_top_10_2021",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_pci_dss_v4_0_1.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "pci_dss_v4_0_1",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_pci_sslc_v1_1.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "pci_sslc_v1_1",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_agile_2012.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "safecode_agile_2012",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_fpssd_2018.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "safecode_fpssd_2018",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_sic_2010.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "safecode_sic_2010",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_slsa_spec_v1_0_build_track.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "slsa_spec_v1_0_build_track",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      },
+      {
+        "artefact": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_ssdf_sp800_218_v1_1.xml",
+        "type": "Concept Crosswalk",
+        "pilot_id": "ssdf_sp800_218_v1_1",
+        "structural_conformance": {
+          "has_xml_declaration": true,
+          "has_olir_namespace": true,
+          "has_source_document": true,
+          "has_reference_document": true,
+          "has_methodology_block": true,
+          "has_mappings_block": true,
+          "has_relationship_type_in_each_mapping": true,
+          "uses_only_ratified_relationship_types": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "aggregate": {
+    "olir_pairs_total": 16490,
+    "primary_pairs": 2873,
+    "secondary_pairs": 13617,
+    "relationship_type_distribution": {
+      "equal": 667,
+      "intersects-with": 15823,
+      "unspecified": 0
+    },
+    "n_pilots": 31,
+    "n_entities_in_reference_doc": 212
+  },
+  "per_pilot_stats": [
+    {
+      "pilot_id": "asvs_v5_0_0",
+      "items_total": 345,
+      "items_grounded": 250,
+      "olir_pairs": 1025,
+      "primary_pairs": 250,
+      "secondary_pairs": 775,
+      "rel_dist": {
+        "equal": 49,
+        "intersects-with": 976,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "capec_v3_9",
+      "items_total": 559,
+      "items_grounded": 355,
+      "olir_pairs": 1342,
+      "primary_pairs": 355,
+      "secondary_pairs": 987,
+      "rel_dist": {
+        "equal": 45,
+        "intersects-with": 1297,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "cis_controls_v8_1_2",
+      "items_total": 166,
+      "items_grounded": 148,
+      "olir_pairs": 928,
+      "primary_pairs": 148,
+      "secondary_pairs": 780,
+      "rel_dist": {
+        "equal": 34,
+        "intersects-with": 894,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "cwe_software_development_view_v4_19_1",
+      "items_total": 399,
+      "items_grounded": 152,
+      "olir_pairs": 582,
+      "primary_pairs": 152,
+      "secondary_pairs": 430,
+      "rel_dist": {
+        "equal": 20,
+        "intersects-with": 562,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "items_total": 5,
+      "items_grounded": 4,
+      "olir_pairs": 7,
+      "primary_pairs": 4,
+      "secondary_pairs": 3,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 7,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "eu_cra",
+      "items_total": 9,
+      "items_grounded": 4,
+      "olir_pairs": 25,
+      "primary_pairs": 4,
+      "secondary_pairs": 21,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 25,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "eu_dora",
+      "items_total": 24,
+      "items_grounded": 11,
+      "olir_pairs": 30,
+      "primary_pairs": 11,
+      "secondary_pairs": 19,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 30,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "eu_nis2",
+      "items_total": 4,
+      "items_grounded": 4,
+      "olir_pairs": 49,
+      "primary_pairs": 4,
+      "secondary_pairs": 45,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 49,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "eu_rgpd",
+      "items_total": 6,
+      "items_grounded": 3,
+      "olir_pairs": 43,
+      "primary_pairs": 3,
+      "secondary_pairs": 40,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 43,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "hipaa_security_rule",
+      "items_total": 22,
+      "items_grounded": 19,
+      "olir_pairs": 133,
+      "primary_pairs": 19,
+      "secondary_pairs": 114,
+      "rel_dist": {
+        "equal": 2,
+        "intersects-with": 131,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "items_total": 13,
+      "items_grounded": 8,
+      "olir_pairs": 21,
+      "primary_pairs": 8,
+      "secondary_pairs": 13,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 21,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "mitre_atlas",
+      "items_total": 278,
+      "items_grounded": 180,
+      "olir_pairs": 592,
+      "primary_pairs": 180,
+      "secondary_pairs": 412,
+      "rel_dist": {
+        "equal": 4,
+        "intersects-with": 588,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "nist_ai_100_2_e2025",
+      "items_total": 53,
+      "items_grounded": 38,
+      "olir_pairs": 180,
+      "primary_pairs": 38,
+      "secondary_pairs": 142,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 180,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "nist_ai_rmf_1_0",
+      "items_total": 53,
+      "items_grounded": 31,
+      "olir_pairs": 102,
+      "primary_pairs": 31,
+      "secondary_pairs": 71,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 102,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "nist_sp800_53_rev5",
+      "items_total": 1196,
+      "items_grounded": 992,
+      "olir_pairs": 6581,
+      "primary_pairs": 992,
+      "secondary_pairs": 5589,
+      "rel_dist": {
+        "equal": 265,
+        "intersects-with": 6316,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_dsomm",
+      "items_total": 193,
+      "items_grounded": 170,
+      "olir_pairs": 808,
+      "primary_pairs": 170,
+      "secondary_pairs": 638,
+      "rel_dist": {
+        "equal": 48,
+        "intersects-with": 760,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_llm_top_10",
+      "items_total": 10,
+      "items_grounded": 9,
+      "olir_pairs": 130,
+      "primary_pairs": 9,
+      "secondary_pairs": 121,
+      "rel_dist": {
+        "equal": 7,
+        "intersects-with": 123,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+      "items_total": 10,
+      "items_grounded": 10,
+      "olir_pairs": 60,
+      "primary_pairs": 10,
+      "secondary_pairs": 50,
+      "rel_dist": {
+        "equal": 2,
+        "intersects-with": 58,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "items_total": 8,
+      "items_grounded": 6,
+      "olir_pairs": 30,
+      "primary_pairs": 6,
+      "secondary_pairs": 24,
+      "rel_dist": {
+        "equal": 0,
+        "intersects-with": 30,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+      "items_total": 10,
+      "items_grounded": 8,
+      "olir_pairs": 48,
+      "primary_pairs": 8,
+      "secondary_pairs": 40,
+      "rel_dist": {
+        "equal": 3,
+        "intersects-with": 45,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_ml_top_10",
+      "items_total": 10,
+      "items_grounded": 9,
+      "olir_pairs": 96,
+      "primary_pairs": 9,
+      "secondary_pairs": 87,
+      "rel_dist": {
+        "equal": 4,
+        "intersects-with": 92,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_proactive_controls_2018",
+      "items_total": 10,
+      "items_grounded": 10,
+      "olir_pairs": 68,
+      "primary_pairs": 10,
+      "secondary_pairs": 58,
+      "rel_dist": {
+        "equal": 12,
+        "intersects-with": 56,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_samm_v2_1",
+      "items_total": 90,
+      "items_grounded": 90,
+      "olir_pairs": 1079,
+      "primary_pairs": 90,
+      "secondary_pairs": 989,
+      "rel_dist": {
+        "equal": 74,
+        "intersects-with": 1005,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "owasp_top_10_2021",
+      "items_total": 10,
+      "items_grounded": 9,
+      "olir_pairs": 46,
+      "primary_pairs": 9,
+      "secondary_pairs": 37,
+      "rel_dist": {
+        "equal": 4,
+        "intersects-with": 42,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "pci_dss_v4_0_1",
+      "items_total": 217,
+      "items_grounded": 201,
+      "olir_pairs": 1384,
+      "primary_pairs": 201,
+      "secondary_pairs": 1183,
+      "rel_dist": {
+        "equal": 38,
+        "intersects-with": 1346,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "pci_sslc_v1_1",
+      "items_total": 28,
+      "items_grounded": 28,
+      "olir_pairs": 253,
+      "primary_pairs": 28,
+      "secondary_pairs": 225,
+      "rel_dist": {
+        "equal": 12,
+        "intersects-with": 241,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "safecode_agile_2012",
+      "items_total": 29,
+      "items_grounded": 26,
+      "olir_pairs": 135,
+      "primary_pairs": 26,
+      "secondary_pairs": 109,
+      "rel_dist": {
+        "equal": 9,
+        "intersects-with": 126,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "safecode_fpssd_2018",
+      "items_total": 17,
+      "items_grounded": 17,
+      "olir_pairs": 123,
+      "primary_pairs": 17,
+      "secondary_pairs": 106,
+      "rel_dist": {
+        "equal": 8,
+        "intersects-with": 115,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "safecode_sic_2010",
+      "items_total": 12,
+      "items_grounded": 12,
+      "olir_pairs": 83,
+      "primary_pairs": 12,
+      "secondary_pairs": 71,
+      "rel_dist": {
+        "equal": 2,
+        "intersects-with": 81,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "slsa_spec_v1_0_build_track",
+      "items_total": 14,
+      "items_grounded": 13,
+      "olir_pairs": 92,
+      "primary_pairs": 13,
+      "secondary_pairs": 79,
+      "rel_dist": {
+        "equal": 7,
+        "intersects-with": 85,
+        "unspecified": 0
+      }
+    },
+    {
+      "pilot_id": "ssdf_sp800_218_v1_1",
+      "items_total": 61,
+      "items_grounded": 56,
+      "olir_pairs": 415,
+      "primary_pairs": 56,
+      "secondary_pairs": 359,
+      "rel_dist": {
+        "equal": 18,
+        "intersects-with": 397,
+        "unspecified": 0
+      }
+    }
+  ]
+}

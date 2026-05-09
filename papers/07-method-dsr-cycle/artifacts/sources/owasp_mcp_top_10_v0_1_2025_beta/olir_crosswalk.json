@@ -1,0 +1,961 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "OWASP MCP Top 10 \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "OWASP MCP Top 10",
+        "version": "v0.1 2025 beta",
+        "url": "https://owasp.org/www-project-mcp-top-10/",
+        "author": "OWASP",
+        "release_date": "2025",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "problem_space_inverted",
+        "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 10,
+      "items_grounded": 8,
+      "items_lab_depth_pending": 2,
+      "olir_pairs_emitted": 48,
+      "primary_pairs": 8,
+      "secondary_pairs": 40,
+      "relationship_type_distribution": {
+        "equal": 3,
+        "intersects-with": 45,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-005",
+          "description": "Secret Isolation Across Technical Surfaces. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. identity and trust control. isolation",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.613,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.613; threshold mapping \u2192 equal. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000001 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-004",
+          "description": "Session And Token Trust Boundaries. Sessions and tokens must be unguessable, transported securely, bounded in scope and lifetime, and revalidated or revoked when client context materially changes. Se\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.603,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.603; threshold mapping \u2192 equal. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000002 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-004",
+          "description": "Bounded Session And Token Management. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. identity and trust control. session management",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.577,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.577; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000003 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-004",
+          "description": "Short-Lived Token Controls. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. The current semantic anchor comes mostly from adjacent operational-id\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.516,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.516; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000004 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.511,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.511; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000005 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.463,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.463; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000007 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-005",
+          "description": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.449,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.449; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000008 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.446,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.446; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000009 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000010 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000011 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP01-2025",
+          "description": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attacker\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-005",
+          "description": "Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.431,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.431; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000012 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP02-2025",
+          "description": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enf\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000013 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP02-2025",
+          "description": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enf\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.477,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.477; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000014 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP02-2025",
+          "description": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enf\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-002",
+          "description": "Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.469,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.469; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000015 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP02-2025",
+          "description": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enf\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.457,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.457; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000016 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP02-2025",
+          "description": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enf\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.456,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.456; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000017 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP02-2025",
+          "description": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enf\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-005",
+          "description": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000018 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP02-2025",
+          "description": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enf\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.414,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.414; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000019 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP04-2025",
+          "description": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A comprom\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-001",
+          "description": "Dependency Inventory And SBOM Traceability. Maintain a build-linked inventory of third-party components and generated SBOMs for produced artifacts. A software component inventory exists per build or \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.525,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.525; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000020 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP04-2025",
+          "description": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A comprom\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.499,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.499; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000021 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP04-2025",
+          "description": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A comprom\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000022 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP04-2025",
+          "description": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A comprom\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-004",
+          "description": "End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.435,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.435; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000023 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP05-2025",
+          "description": "Command Injection & Execution. Command injection in MCP environments occurs when an AI agent constructs and executes system commands, shell scripts, API calls, or code snippets using untrusted input\u2014\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-003",
+          "description": "Injection-Resistant Input Handling And Dangerous Pattern Exclusion. Input-handling paths must avoid dangerous execution and injection patterns and use safe query, rendering and parsing primitives ins\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000024 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP06-2025",
+          "description": "Prompt Injection via Contextual Payloads. This risk is analogous to classic injection attacks (e.g., XSS, SQLi), but in the MCP world the \u201cinterpreter\u201d is the model and the \u201cpayload\u201d is text (or any \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-003",
+          "description": "Injection-Resistant Input Handling And Dangerous Pattern Exclusion. Input-handling paths must avoid dangerous execution and injection patterns and use safe query, rendering and parsing primitives ins\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.549,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.549; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000025 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP06-2025",
+          "description": "Prompt Injection via Contextual Payloads. This risk is analogous to classic injection attacks (e.g., XSS, SQLi), but in the MCP world the \u201cinterpreter\u201d is the model and the \u201cpayload\u201d is text (or any \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-003",
+          "description": "Dangerous Pattern Exclusion. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. validation and analysis. pattern exclusi\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.464,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.464; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000026 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP07-2025",
+          "description": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-001",
+          "description": "Authentication Strength And Identity Assurance. Require strong and context-appropriate authentication for privileged or sensitive access, including MFA, brute-force resistance, federation support and\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.556,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.556; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000027 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP07-2025",
+          "description": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-001",
+          "description": "Strong Authentication And Step-Up Enforcement. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. identity and trust control. authentic\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.531,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.531; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000028 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP07-2025",
+          "description": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-002",
+          "description": "Machine Identity And Mutual Authentication Discipline. Bind service interactions to explicit trusted identities through mutual authentication or bounded machine tokens. identity and trust control. mu\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.528,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.528; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000029 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP07-2025",
+          "description": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-001",
+          "description": "Authentication And Federation Protocols. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. Authenticate callers and enforce authorizat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.52,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.520; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000030 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP07-2025",
+          "description": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-001",
+          "description": "Authenticated Service Interaction And Machine Identity Binding. Machine-to-machine interactions must authenticate peer services through explicit trusted identities, mutual authentication or secure bo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000031 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP07-2025",
+          "description": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-004",
+          "description": "Operational Identity Binding And Short-Lived Credentials. Pipeline, workload and deploy identities must be explicitly bound to the task they perform and should prefer short-lived credentials over sta\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.47,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.470; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000032 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP07-2025",
+          "description": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.446,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.446; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000033 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.65,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.650; threshold mapping \u2192 equal. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000034 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.6,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.600; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000035 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-006",
+          "description": "External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.59,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.590; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000036 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.583,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.583; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000037 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-004",
+          "description": "Logging Failure Visibility Controls. Detect when logging stops working so absence of records cannot silently destroy auditability. Logging-pipeline failure visibility is strong in the requirement sur\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.535,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.535; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000038 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-004",
+          "description": "End-to-End Deployment Traceability. Every deployment must remain traceable from authorization and pipeline context to the exact artifact, commit and target environment. Incidents and reviews can be t\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.503,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.503; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000039 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-006",
+          "description": "External Interaction Auditability. External calls and integration outcomes must be logged with enough trustworthy context to support review and accountability without turning the slice into full oper\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.494,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.494; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000040 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-005",
+          "description": "Structured External Call Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. The repo clearly expresses interaction loggin\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000041 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-005",
+          "description": "Deployment Pipeline Traceability And Audit Controls. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. Pipeline instrumentation that records arti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.47,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.470; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000042 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-006",
+          "description": "Centralized Error Handling And Sensitive Error Logging Hygiene. Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000043 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000044 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP08-2025",
+          "description": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impede\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-005",
+          "description": "Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000045 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP10-2025",
+          "description": "Context Injection & Over-Sharing. In the Model Context Protocol (MCP), \u201ccontext\u201d represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions.\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-004",
+          "description": "Short-Lived Token Controls. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. The current semantic anchor comes mostly from adjacent operational-id\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000046 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP10-2025",
+          "description": "Context Injection & Over-Sharing. In the Model Context Protocol (MCP), \u201ccontext\u201d represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions.\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-004",
+          "description": "Session And Token Trust Boundaries. Sessions and tokens must be unguessable, transported securely, bounded in scope and lifetime, and revalidated or revoked when client context materially changes. Se\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000047 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP10-2025",
+          "description": "Context Injection & Over-Sharing. In the Model Context Protocol (MCP), \u201ccontext\u201d represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions.\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-004",
+          "description": "Bounded Session And Token Management. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. identity and trust control. session management",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000048 at Practice level. Secondary disclosure."
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.2",
+  "pilot_id": "eu_nis2",
+  "status": "source_objects_extracted_from_synthesis",
+  "source_document_id": "SRC-EU-NIS2",
+  "extracted_at": "2026-04-12T23:42:44.685785Z",
+  "counts": {
+    "total": 4,
+    "articles": 4
+  },
+  "synthesis_conclusion": "### Conclusão principal",
+  "existing_validation": "Article-by-article validation already performed in knowledge-graph working notes. See 2026-04-05-nis2-overlay-validation-synthesis.md",
+  "items": [
+    {
+      "source_object_id": "NIS2-ART-20",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-NIS2",
+      "framework_family": "NIS2",
+      "article_number": 20,
+      "title": "NIS2 Article 20",
+      "statement": "Article 20 (Governance) requires that management bodies of essential and important entities approve the cybersecurity risk-management measures taken to comply with Article 21, oversee their implementation, and may be held liable for infringements. Management bodies must follow training to acquire sufficient knowledge and skills to identify risks and assess cybersecurity risk-management practices, and entities must offer similar training to employees on a regular basis. Establishes accountability of senior leadership for cybersecurity risk management; ties governance directly to the technical and organisational measures required by Article 21.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-nis2-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "NIS2-ART-21",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-NIS2",
+      "framework_family": "NIS2",
+      "article_number": 21,
+      "title": "NIS2 Article 21",
+      "statement": "Article 21 (Cybersecurity risk-management measures) obliges essential and important entities to take appropriate and proportionate technical, operational and organisational measures to manage cybersecurity risks and prevent or minimise the impact of incidents. Measures shall be based on an all-hazards approach and shall include at least: (a) risk-analysis and information-system security policies; (b) incident handling; (c) business continuity (backup management, disaster recovery, crisis management); (d) supply-chain security including security-related aspects of relationships with direct suppliers; (e) security in network and information-systems acquisition, development and maintenance, including vulnerability handling and disclosure; (f) policies and procedures to assess effectiveness of cybersecurity risk-management measures; (g) basic cyber-hygiene practices and cybersecurity training; (h) policies on cryptography and encryption; (i) human-resources security, access-control policies and asset management; (j) multi-factor authentication or continuous-authentication solutions, secured voice/video/text communications and secured emergency communication systems within the entity, where appropriate.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-nis2-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "NIS2-ART-22",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-NIS2",
+      "framework_family": "NIS2",
+      "article_number": 22,
+      "title": "NIS2 Article 22",
+      "statement": "Article 22 (Union-level coordinated security risk assessments of critical supply chains) provides for the Cooperation Group, in cooperation with the Commission and ENISA, to carry out coordinated security risk assessments of specific critical ICT services, ICT systems or ICT products supply chains, taking into account technical and, where relevant, non-technical risk factors. Member States shall, where appropriate, take into account the results of those assessments and may take measures aimed at addressing identified risks, including imposing security or technical requirements, restrictions, or audits on suppliers and service providers concerned.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-nis2-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "NIS2-ART-23",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-NIS2",
+      "framework_family": "NIS2",
+      "article_number": 23,
+      "title": "NIS2 Article 23",
+      "statement": "Article 23 (Reporting obligations) requires essential and important entities to notify, without undue delay, their CSIRT or competent authority of any incident having a significant impact on the provision of their services. The notification regime is layered: (a) early warning within 24 hours of becoming aware of the significant incident, indicating whether the incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact; (b) incident notification within 72 hours, including initial assessment of severity and impact and indicators of compromise where available; (c) intermediate report on request; (d) final report within one month, including detailed description of the incident, type of threat, applied and ongoing mitigation measures, cross-border impact. Imposes obligations on entities to communicate with affected service recipients about significant cyber threats and remedial measures.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-nis2-overlay-validation-synthesis.md"
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-03T18:53:44.121605+00:00",
+    "revision_reason": "Replace placeholder bodies with curated obligation summaries grounded in primary source + KG working notes.",
+    "rule_version": "regulatory_curated_bodies/1.0"
+  }
+}

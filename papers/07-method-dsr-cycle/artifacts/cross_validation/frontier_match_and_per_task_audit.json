@@ -1,0 +1,102 @@
+{
+  "schema": "frontier_match_and_per_task_audit_v7/1.0",
+  "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+  "summary": {
+    "ssdf_same_level": {
+      "pool": "ssdf_same_level",
+      "n_pairs": 142,
+      "n_strict": 28,
+      "n_slice_primary": 53,
+      "n_frontier": 135,
+      "strict_pct": 19.72,
+      "slice_primary_pct": 37.32,
+      "frontier_pct": 95.07
+    },
+    "ssdf_cross_level": {
+      "pool": "ssdf_cross_level",
+      "n_pairs": 281,
+      "n_strict": 9,
+      "n_slice_primary": 14,
+      "n_frontier": 133,
+      "strict_pct": 3.2,
+      "slice_primary_pct": 4.98,
+      "frontier_pct": 47.33
+    },
+    "scf_v7": {
+      "pool": "scf_v7",
+      "n_pairs": 5652,
+      "n_strict": 566,
+      "n_slice_primary": 954,
+      "n_frontier": 4823,
+      "strict_pct": 10.01,
+      "slice_primary_pct": 16.88,
+      "frontier_pct": 85.33
+    },
+    "ssdf_cross_level_asvs_contaminated": {
+      "pool": "ssdf_cross_level_asvs_contaminated",
+      "n_pairs": 233,
+      "n_strict": 1,
+      "n_slice_primary": 3,
+      "n_frontier": 87,
+      "strict_pct": 0.43,
+      "slice_primary_pct": 1.29,
+      "frontier_pct": 37.34
+    },
+    "ssdf_cross_level_non_asvs": {
+      "pool": "ssdf_cross_level_non_asvs",
+      "n_pairs": 48,
+      "n_strict": 8,
+      "n_slice_primary": 11,
+      "n_frontier": 46,
+      "strict_pct": 16.67,
+      "slice_primary_pct": 22.92,
+      "frontier_pct": 95.83
+    },
+    "ssdf_same_level_per_task": {
+      "n_tasks": 35,
+      "n_with_strict_hit": 10,
+      "n_with_slice_primary_hit": 24,
+      "n_with_frontier_hit": 35,
+      "per_task_strict_pct": 28.57,
+      "per_task_slice_primary_pct": 68.57,
+      "per_task_frontier_pct": 100.0
+    },
+    "ssdf_cross_level_per_task": {
+      "n_tasks": 30,
+      "n_with_strict_hit": 8,
+      "n_with_slice_primary_hit": 11,
+      "n_with_frontier_hit": 30,
+      "per_task_strict_pct": 26.67,
+      "per_task_slice_primary_pct": 36.67,
+      "per_task_frontier_pct": 100.0
+    },
+    "scf_v7_per_task": {
+      "n_tasks": 355,
+      "n_with_strict_hit": 118,
+      "n_with_slice_primary_hit": 199,
+      "n_with_frontier_hit": 346,
+      "per_task_strict_pct": 33.24,
+      "per_task_slice_primary_pct": 56.06,
+      "per_task_frontier_pct": 97.46
+    }
+  },
+  "ssdf_pw8_sa11_pair_check": {
+    "found_in_pool": "cross_level_impl",
+    "left_primary_co": "ACO-SCBI-004",
+    "left_primary_slice": "ACO-SCBI",
+    "left_frontier_slices": [
+      "ACO-SCBI",
+      "ACO-SLG",
+      "ACO-TSV"
+    ],
+    "right_primary_co": "ACO-TMR-008",
+    "right_primary_slice": "ACO-TMR",
+    "right_frontier_slices": [
+      "ACO-TMR",
+      "ACO-TSV"
+    ],
+    "strict": false,
+    "slice_primary": false,
+    "frontier": true
+  }
+}

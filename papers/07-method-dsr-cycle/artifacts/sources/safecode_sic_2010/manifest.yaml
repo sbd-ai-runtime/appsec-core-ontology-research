@@ -1,0 +1,24 @@
+meta:
+  pilot_id: safecode_sic_2010
+  status: source_captured
+  intended_use: ssdf_cross_reference_validation
+source_document:
+  source_document_id: SRC-SAFECODE-SIC-2010
+  title: "Software Integrity Controls: An Assurance-Based Approach to Minimizing Risks in the Software Supply Chain"
+  publisher: SAFECode
+  source_kind: industry_guidance
+  framework_family: SAFECode
+  version: '1.0'
+  publication_date: '2010-06-14'
+  language: en
+  format_candidates:
+    - pdf
+  canonical_url: https://safecode.org/publication/SAFECode_Software_Integrity_Controls0610.pdf
+  stability_reason: official_safecode_publication
+retrieval_policy:
+  preferred_artifact: pdf
+  retrieval_mode: web_download
+  local_snapshot_path: sources/safecode_sic_2010/SAFECode_Software_Integrity_Controls0610.pdf
+  local_snapshot_format: pdf
+  checksum_sha256: pending
+  retrieved_at: '2026-04-14'

@@ -1,0 +1,448 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "MCP Official Security Foundations \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "MCP Official Security Foundations",
+        "version": "2025",
+        "url": "https://modelcontextprotocol.io/",
+        "author": "Anthropic / MCP Working Group",
+        "release_date": "2025",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "mixed",
+        "pilot_id": "mcp_official_security_foundations_2025"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 13,
+      "items_grounded": 8,
+      "items_lab_depth_pending": 5,
+      "olir_pairs_emitted": 21,
+      "primary_pairs": 8,
+      "secondary_pairs": 13,
+      "relationship_type_distribution": {
+        "equal": 0,
+        "intersects-with": 21,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-AUTH-DISCOVERY-METADATA",
+          "description": "Authorization server discovery and protected resource metadata. This section describes the mechanisms by which MCP servers advertise their associated authorization servers to MCP clients, as well as \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-002",
+          "description": "Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.474,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.474; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000001 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-AUTH-DISCOVERY-METADATA",
+          "description": "Authorization server discovery and protected resource metadata. This section describes the mechanisms by which MCP servers advertise their associated authorization servers to MCP clients, as well as \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-006",
+          "description": "Registry Allowlisting And Approved Source Enforcement. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. Technical controls that restrict dependency\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000002 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-AUTH-SCOPE-NEGOTIATION",
+          "description": "Scope selection and step-up authorization. When implementing authorization flows, MCP clients SHOULD follow the principle of least privilege by requesting only the scopes necessary for their intended\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-002",
+          "description": "Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000003 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-AUTH-TOKEN-VALIDATION",
+          "description": "Inbound token handling and validation. Access token handling when making requests to MCP servers MUST conform to the requirements defined in OAuth 2.1 Section 5 \u201cResource Requests\u201d . Specifically: MC\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.411,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.411; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000004 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-AUTH-ERROR-HANDLING",
+          "description": "Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000005 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-AUTH-ERROR-HANDLING",
+          "description": "Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-005",
+          "description": "Authenticated API Boundary Enforcement. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. gateway enforcement",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.462,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.462; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000006 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-AUTH-ERROR-HANDLING",
+          "description": "Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.44,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.440; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000007 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-CONFUSED-DEPUTY",
+          "description": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-005",
+          "description": "Authenticated API Boundary Enforcement. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. gateway enforcement",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.549,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.549; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000008 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-CONFUSED-DEPUTY",
+          "description": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-005",
+          "description": "API Gateway Mutual Authentication. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. gateway",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.53,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.530; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000009 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-CONFUSED-DEPUTY",
+          "description": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.504,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.504; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000010 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-CONFUSED-DEPUTY",
+          "description": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-002",
+          "description": "Machine Identity And Mutual Authentication Discipline. Bind service interactions to explicit trusted identities through mutual authentication or bounded machine tokens. identity and trust control. mu\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000011 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-CONFUSED-DEPUTY",
+          "description": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-001",
+          "description": "Authenticated Service Interaction And Machine Identity Binding. Machine-to-machine interactions must authenticate peer services through explicit trusted identities, mutual authentication or secure bo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.463,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.463; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000012 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-TOKEN-PASSTHROUGH",
+          "description": "Token passthrough anti-pattern. \u201cToken passthrough\u201d is an anti-pattern where an MCP server accepts tokens from an MCP client without validating that the tokens were properly issued to the MCP server \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000013 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-TOKEN-PASSTHROUGH",
+          "description": "Token passthrough anti-pattern. \u201cToken passthrough\u201d is an anti-pattern where an MCP server accepts tokens from an MCP client without validating that the tokens were properly issued to the MCP server \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-004",
+          "description": "Session And Token Trust Boundaries. Sessions and tokens must be unguessable, transported securely, bounded in scope and lifetime, and revalidated or revoked when client context materially changes. Se\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.485,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.485; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000014 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-SESSION-HIJACKING",
+          "description": "Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same sessi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-004",
+          "description": "Bounded Session And Token Management. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. identity and trust control. session management",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.487,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.487; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000015 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-SESSION-HIJACKING",
+          "description": "Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same sessi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-004",
+          "description": "Session And Token Trust Boundaries. Sessions and tokens must be unguessable, transported securely, bounded in scope and lifetime, and revalidated or revoked when client context materially changes. Se\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.474,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.474; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000016 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-SESSION-HIJACKING",
+          "description": "Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same sessi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-004",
+          "description": "Short-Lived Token Controls. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. The current semantic anchor comes mostly from adjacent operational-id\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.41,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.410; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000017 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "MCP-SCOPE-MINIMIZATION",
+          "description": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (v\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-004",
+          "description": "Bounded Session And Token Management. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. identity and trust control. session management",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.522,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.522; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000018 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-SCOPE-MINIMIZATION",
+          "description": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (v\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.491,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.491; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000019 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-SCOPE-MINIMIZATION",
+          "description": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (v\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.424,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.424; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000020 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "MCP-SCOPE-MINIMIZATION",
+          "description": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (v\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-005",
+          "description": "Centralized Log Ingestion And Source Accountability. Security logs must be ingested centrally with source accountability so that review does not depend on fragile local host access or ad hoc collecti\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000021 at ControlObjective level. Secondary disclosure."
+      }
+    ]
+  }
+}

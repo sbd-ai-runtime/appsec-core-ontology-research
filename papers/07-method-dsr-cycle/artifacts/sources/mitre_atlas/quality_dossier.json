@@ -1,0 +1,26 @@
+{
+  "pilot_id": "mitre_atlas",
+  "n_inventory_items": 278,
+  "n_lifted_rows": 329,
+  "atomicity_ratio": 1.183,
+  "decomposition_method_distribution": {
+    "passthrough": 262,
+    "multiplicity_triggered": 67
+  },
+  "governance_fraction_estimate": 0.033,
+  "duplicate_fraction": 0.0,
+  "n_unique_texts": 329,
+  "contextualised_text_length": {
+    "p50": 507,
+    "p90": 1058,
+    "min": 6,
+    "max": 4689
+  },
+  "chain_depth_distribution": {
+    "0": 132,
+    "1": 119,
+    "2": 78
+  },
+  "flags": [],
+  "verdict": "PROCEED"
+}

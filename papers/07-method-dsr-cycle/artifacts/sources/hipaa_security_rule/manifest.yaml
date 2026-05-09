@@ -1,0 +1,23 @@
+meta:
+  pilot_id: hipaa_security_rule
+  status: source_captured
+retrieval_policy:
+  checksum_sha256: 84622f565b1922ce9f9353ac6b53fc003408efd083304c819bb519e1bda4a3fb
+  local_extracted_text: sources/hipaa_security_rule/hipaa_security_rule.extracted.txt
+  local_snapshot_path: sources/hipaa_security_rule/CFR-2023-title45-vol2-part164-subpartC.pdf
+  preferred_artifact: pdf
+  retrieval_mode: automated_download_from_govinfo
+  retrieved_at: '2026-04-13T01:00:00Z'
+source_document:
+  canonical_url: https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html
+  framework_family: HIPAA
+  language: en
+  origin_url: https://www.govinfo.gov/content/pkg/CFR-2023-title45-vol2/pdf/CFR-2023-title45-vol2-part164-subpartC.pdf
+  publication_date: '2003-02-20'
+  publisher: U.S. Department of Health and Human Services (HHS)
+  source_document_id: SRC-HIPAA-SECURITY-RULE
+  source_kind: regulatory
+  stability_reason: official_us_federal_regulation
+  title: HIPAA Security Rule (45 CFR Part 164, Subpart C)
+  update_date: '2013-01-25'
+  version: CFR 2023

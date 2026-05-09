@@ -1,0 +1,2272 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "hipaa_security_rule",
+  "is_iteration_3_pilot": false,
+  "n_items": 22,
+  "items": [
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a1",
+      "source_text": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violations. Required implementation specifications: (i) Risk Analysis \u2014 conduct an accurate and thorough assessment of the potential risks and vulnerabilities to the confidentiality, integrity, and availability of electronic protected health information (ePHI) held by the covered entity; (ii) Risk Management \u2014 implement security measures sufficient to reduce risks and vulnerabilities to a reasonable and appropriate level; (iii) Sanction Policy \u2014 apply appropriate sanctions against workforce members who fail to comply with the security policies and procedures; (iv) Information System Activity Review \u2014 implement procedures to regularly review records of information system activity, such as audit logs, access reports, and security incident tracking reports.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000001",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5510226488113403,
+          "disambiguation_margin": 0.09220185875892639,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000002",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5269022583961487,
+          "disambiguation_margin": 0.14903613924980164,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000003",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACO_RPR_010",
+          "target_id": "ACO-RPR-010",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.49095672369003296,
+          "disambiguation_margin": 0.05664914846420288,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000004",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.48604822158813477,
+          "disambiguation_margin": 0.10852089524269104,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000005",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.47542309761047363,
+          "disambiguation_margin": 0.04563683271408081,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000006",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4621236324310303,
+          "disambiguation_margin": 0.10045936703681946,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000007",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4380454123020172,
+          "disambiguation_margin": 0.0637739896774292,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000008",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42681884765625,
+          "disambiguation_margin": 0.07713520526885986,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000009",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4187144935131073,
+          "disambiguation_margin": 0.04709500074386597,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000010",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00001",
+          "item_ref": "HIPAA-164-308a1",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.41306835412979126,
+          "disambiguation_margin": 0.05833923816680908,
+          "rationale_snippet": "Security Management Process. Security Management Process \u2014 Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violatio",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a2",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a2",
+      "source_text": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies and procedures required by Subpart C for the covered entity. The role of the security official is to oversee security risk management activities including risk analysis, the development of policies, the response to security incidents, and the management of access to ePHI. The designation may be a single position; in larger entities, security responsibility may be supported by additional roles, but a single accountable official is required.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000011",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5235649943351746,
+          "disambiguation_margin": 0.07118386030197144,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000012",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5063040256500244,
+          "disambiguation_margin": 0.07409864664077759,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000013",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACP_TMR_008",
+          "target_id": "ACP-TMR-008",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4987010955810547,
+          "disambiguation_margin": 0.06416648626327515,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000014",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACP_IAT_002",
+          "target_id": "ACP-IAT-002",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.48562896251678467,
+          "disambiguation_margin": 0.15771055221557617,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000015",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.48028990626335144,
+          "disambiguation_margin": 0.1142967939376831,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000016",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4528527855873108,
+          "disambiguation_margin": 0.08156675100326538,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000017",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4407862424850464,
+          "disambiguation_margin": 0.12490499019622803,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000018",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.43709510564804077,
+          "disambiguation_margin": 0.10726034641265869,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000019",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.43540704250335693,
+          "disambiguation_margin": 0.11629188060760498,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000020",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.43220168352127075,
+          "disambiguation_margin": 0.04591384530067444,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000021",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.42609986662864685,
+          "disambiguation_margin": 0.1118611991405487,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000022",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00002",
+          "item_ref": "HIPAA-164-308a2",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.41852033138275146,
+          "disambiguation_margin": 0.1416017711162567,
+          "rationale_snippet": "Assigned Security Responsibility. Assigned Security Responsibility \u2014 Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a3",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a3",
+      "source_text": "Workforce Security. Workforce Security \u2014 Administrative Safeguard. Implement policies and procedures to ensure that all members of the workforce have appropriate access to ePHI, and to prevent those workforce members who do not have access from obtaining access. Addressable implementation specifications: (i) Authorisation and/or Supervision \u2014 procedures for authorisation and/or supervision of workforce members who work with ePHI or in locations where it might be accessed; (ii) Workforce Clearance Procedure \u2014 determine that the access of a workforce member to ePHI is appropriate; (iii) Termination Procedures \u2014 terminate access to ePHI when employment or relationship ends or when access is no longer authorised.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000023",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00003",
+          "item_ref": "HIPAA-164-308a3",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4973682463169098,
+          "disambiguation_margin": 0.08963832259178162,
+          "rationale_snippet": "Workforce Security. Workforce Security \u2014 Administrative Safeguard. Implement policies and procedures to ensure that all members of the workforce have appropriate access to ePHI, and to prevent those w",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000024",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00003",
+          "item_ref": "HIPAA-164-308a3",
+          "target_core_entity": "ac:ACO_IAT_002",
+          "target_id": "ACO-IAT-002",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4669164717197418,
+          "disambiguation_margin": 0.044083237648010254,
+          "rationale_snippet": "Workforce Security. Workforce Security \u2014 Administrative Safeguard. Implement policies and procedures to ensure that all members of the workforce have appropriate access to ePHI, and to prevent those w",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a4",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a4",
+      "source_text": "Information Access Management. Information Access Management \u2014 Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of the Privacy Rule. Implementation specifications: (i) Isolating Healthcare Clearinghouse Functions \u2014 required where a clearinghouse is part of a larger organisation",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00004",
+        "HIPAA_SECURITY_RULE-LIFTED-00005",
+        "HIPAA_SECURITY_RULE-LIFTED-00006",
+        "HIPAA_SECURITY_RULE-LIFTED-00007",
+        "HIPAA_SECURITY_RULE-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000025",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00004",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5109506845474243,
+          "disambiguation_margin": 0.048224836587905884,
+          "rationale_snippet": "Information Access Management. Information Access Management \u2014 Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000026",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00004",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.494540274143219,
+          "disambiguation_margin": 0.16610145568847656,
+          "rationale_snippet": "Information Access Management. Information Access Management \u2014 Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000027",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00004",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.45963412523269653,
+          "disambiguation_margin": 0.1265663504600525,
+          "rationale_snippet": "Information Access Management. Information Access Management \u2014 Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000028",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00004",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4570573568344116,
+          "disambiguation_margin": 0.08111011981964111,
+          "rationale_snippet": "Information Access Management. Information Access Management \u2014 Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000029",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00004",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4456791877746582,
+          "disambiguation_margin": 0.04933708906173706,
+          "rationale_snippet": "Information Access Management. Information Access Management \u2014 Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000030",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00004",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4414522051811218,
+          "disambiguation_margin": 0.05756610631942749,
+          "rationale_snippet": "Information Access Management. Information Access Management \u2014 Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000031",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00005",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.47625821828842163,
+          "disambiguation_margin": 0.10914188623428345,
+          "rationale_snippet": "(ii) Access Authorization \u2014 addressable. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000032",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00006",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5029112100601196,
+          "disambiguation_margin": 0.05458897352218628,
+          "rationale_snippet": "policies and procedures for granting access to ePHI (e.g., through access to workstations, transactions, programmes or processes). 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000033",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00007",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACO_IAT_003",
+          "target_id": "ACO-IAT-003",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5252406001091003,
+          "disambiguation_margin": 0.07891815900802612,
+          "rationale_snippet": "(iii) Access Establishment and Modification \u2014 addressable. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000034",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00007",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACP_IAT_003",
+          "target_id": "ACP-IAT-003",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46985459327697754,
+          "disambiguation_margin": 0.05205172300338745,
+          "rationale_snippet": "(iii) Access Establishment and Modification \u2014 addressable. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000035",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00008",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACP_IAT_003",
+          "target_id": "ACP-IAT-003",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5657330751419067,
+          "disambiguation_margin": 0.048328399658203125,
+          "rationale_snippet": "based upon the entity's access authorisation policies, procedures to establish, document, review and modify a user's right of access. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000036",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00008",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5423500537872314,
+          "disambiguation_margin": 0.06150245666503906,
+          "rationale_snippet": "based upon the entity's access authorisation policies, procedures to establish, document, review and modify a user's right of access. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000037",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00008",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACO_RPR_001",
+          "target_id": "ACO-RPR-001",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.46294069290161133,
+          "disambiguation_margin": 0.11545103788375854,
+          "rationale_snippet": "based upon the entity's access authorisation policies, procedures to establish, document, review and modify a user's right of access. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000038",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00008",
+          "item_ref": "HIPAA-164-308a4",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4266970157623291,
+          "disambiguation_margin": 0.15847796201705933,
+          "rationale_snippet": "based upon the entity's access authorisation policies, procedures to establish, document, review and modify a user's right of access. 164.308. Administrative",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 5,
+        "multiplicity_in_supposed_atomic": true
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a5",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a5",
+      "source_text": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including management). Addressable implementation specifications: (i) Security Reminders \u2014 periodic security updates; (ii) Protection from Malicious Software \u2014 procedures for guarding against, detecting and reporting malicious software; (iii) Log-in Monitoring \u2014 procedures for monitoring log-in attempts and reporting discrepancies; (iv) Password Management \u2014 procedures for creating, changing and safeguarding passwords.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000039",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5436848402023315,
+          "disambiguation_margin": 0.09812277555465698,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000040",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5116415023803711,
+          "disambiguation_margin": 0.07295411825180054,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000041",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACO_TSV_007",
+          "target_id": "ACO-TSV-007",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5046678781509399,
+          "disambiguation_margin": 0.06451523303985596,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000042",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5015497207641602,
+          "disambiguation_margin": 0.11661219596862793,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000043",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.49416497349739075,
+          "disambiguation_margin": 0.06064271926879883,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000044",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.46359434723854065,
+          "disambiguation_margin": 0.11615613102912903,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000045",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACO_IAT_001",
+          "target_id": "ACO-IAT-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.45561036467552185,
+          "disambiguation_margin": 0.0633661150932312,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000046",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.45471644401550293,
+          "disambiguation_margin": 0.08117052912712097,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000047",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4538232088088989,
+          "disambiguation_margin": 0.09411704540252686,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000048",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.42168158292770386,
+          "disambiguation_margin": 0.05303412675857544,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000049",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00009",
+          "item_ref": "HIPAA-164-308a5",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4134595990180969,
+          "disambiguation_margin": 0.05104634165763855,
+          "rationale_snippet": "Security Awareness and Training. Security Awareness and Training \u2014 Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including managemen",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a6",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a6",
+      "source_text": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response and Reporting \u2014 identify and respond to suspected or known security incidents",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00010",
+        "HIPAA_SECURITY_RULE-LIFTED-00011",
+        "HIPAA_SECURITY_RULE-LIFTED-00012"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000050",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00010",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5563765168190002,
+          "disambiguation_margin": 0.10551875829696655,
+          "rationale_snippet": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000051",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00010",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_TMR_008",
+          "target_id": "ACP-TMR-008",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5528461933135986,
+          "disambiguation_margin": 0.06213468313217163,
+          "rationale_snippet": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000052",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00010",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.47187286615371704,
+          "disambiguation_margin": 0.05563053488731384,
+          "rationale_snippet": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000053",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00010",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4526640772819519,
+          "disambiguation_margin": 0.10466647148132324,
+          "rationale_snippet": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000054",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00010",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4223306179046631,
+          "disambiguation_margin": 0.10232594609260559,
+          "rationale_snippet": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000055",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00010",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4186475872993469,
+          "disambiguation_margin": 0.06043738126754761,
+          "rationale_snippet": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000056",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00010",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.415926992893219,
+          "disambiguation_margin": 0.06718045473098755,
+          "rationale_snippet": "Security Incident Procedures. Security Incident Procedures \u2014 Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000057",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5555245280265808,
+          "disambiguation_margin": 0.11380231380462646,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000058",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5082830190658569,
+          "disambiguation_margin": 0.07157021760940552,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000059",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.49342215061187744,
+          "disambiguation_margin": 0.056745946407318115,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000060",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4847518801689148,
+          "disambiguation_margin": 0.11462646722793579,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000061",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACO_TSV_003",
+          "target_id": "ACO-TSV-003",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.48123323917388916,
+          "disambiguation_margin": 0.08927729725837708,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000062",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4690643548965454,
+          "disambiguation_margin": 0.06716945767402649,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000063",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.45661312341690063,
+          "disambiguation_margin": 0.06871920824050903,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000064",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4409402012825012,
+          "disambiguation_margin": 0.09858393669128418,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000065",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.43217653036117554,
+          "disambiguation_margin": 0.09841272234916687,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000066",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.43130961060523987,
+          "disambiguation_margin": 0.10289207100868225,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000067",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_SPC_003",
+          "target_id": "ACP-SPC-003",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4264717698097229,
+          "disambiguation_margin": 0.06258752942085266,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000068",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_ATB_004",
+          "target_id": "ACP-ATB-004",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.41490259766578674,
+          "disambiguation_margin": 0.08610543608665466,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000069",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00011",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4105924665927887,
+          "disambiguation_margin": 0.05303850769996643,
+          "rationale_snippet": "mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000070",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00012",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.48586952686309814,
+          "disambiguation_margin": 0.06775534152984619,
+          "rationale_snippet": "and document security incidents and their outcomes. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000071",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00012",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACM_TMR_004",
+          "target_id": "ACM-TMR-004",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4418327808380127,
+          "disambiguation_margin": 0.05592051148414612,
+          "rationale_snippet": "and document security incidents and their outcomes. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000072",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00012",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4378078579902649,
+          "disambiguation_margin": 0.09509718418121338,
+          "rationale_snippet": "and document security incidents and their outcomes. 164.308. Administrative",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000073",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00012",
+          "item_ref": "HIPAA-164-308a6",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4243154227733612,
+          "disambiguation_margin": 0.05367138981819153,
+          "rationale_snippet": "and document security incidents and their outcomes. 164.308. Administrative",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 3,
+        "multiplicity_in_supposed_atomic": true
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a7",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a7",
+      "source_text": "Contingency Plan. Contingency Plan \u2014 Administrative Safeguard. Establish (and implement as needed) policies and procedures for responding to an emergency or other occurrence (such as fire, vandalism, system failure, or natural disaster) that damages systems containing ePHI. Required: (i) Data Backup Plan \u2014 establish and implement procedures to create and maintain retrievable exact copies of ePHI",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00013",
+        "HIPAA_SECURITY_RULE-LIFTED-00014",
+        "HIPAA_SECURITY_RULE-LIFTED-00015"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "HIPAA_SECURITY_RULE-LIFTED-00013",
+        "HIPAA_SECURITY_RULE-LIFTED-00014",
+        "HIPAA_SECURITY_RULE-LIFTED-00015"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 3,
+        "multiplicity_in_supposed_atomic": true
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308a8",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308a8",
+      "source_text": "Evaluation. Evaluation \u2014 Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in response to environmental or operational changes affecting the security of ePHI, that establishes the extent to which a covered entity's security policies and procedures meet the requirements of Subpart C. Evaluations shall be performed at appropriate intervals as determined by the covered entity.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00016"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000074",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00016",
+          "item_ref": "HIPAA-164-308a8",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.47787511348724365,
+          "disambiguation_margin": 0.08380788564682007,
+          "rationale_snippet": "Evaluation. Evaluation \u2014 Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respons",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000075",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00016",
+          "item_ref": "HIPAA-164-308a8",
+          "target_core_entity": "ac:ACM_TSV_003",
+          "target_id": "ACM-TSV-003",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4736737012863159,
+          "disambiguation_margin": 0.061654508113861084,
+          "rationale_snippet": "Evaluation. Evaluation \u2014 Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respons",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000076",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00016",
+          "item_ref": "HIPAA-164-308a8",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.45961683988571167,
+          "disambiguation_margin": 0.13131499290466309,
+          "rationale_snippet": "Evaluation. Evaluation \u2014 Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respons",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000077",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00016",
+          "item_ref": "HIPAA-164-308a8",
+          "target_core_entity": "ac:ACM_TMR_006",
+          "target_id": "ACM-TMR-006",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4328244626522064,
+          "disambiguation_margin": 0.06078076362609863,
+          "rationale_snippet": "Evaluation. Evaluation \u2014 Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respons",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000078",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00016",
+          "item_ref": "HIPAA-164-308a8",
+          "target_core_entity": "ac:ACM_IAT_003",
+          "target_id": "ACM-IAT-003",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4288744628429413,
+          "disambiguation_margin": 0.07459518313407898,
+          "rationale_snippet": "Evaluation. Evaluation \u2014 Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respons",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-308b1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-308b1",
+      "source_text": "Business Associate Contracts and Other Arrangements. Business Associate Contracts and Other Arrangements \u2014 Administrative Safeguard. A covered entity, in accordance with \u00a7164.306, may permit a business associate to create, receive, maintain, or transmit ePHI on the covered entity's behalf only if the covered entity obtains satisfactory assurances, in accordance with \u00a7164.314(a), that the business associate will appropriately safeguard the information. Implementation specification: Written Contract or Other Arrangement \u2014 document the satisfactory assurances through a written contract or other arrangement that meets the applicable requirements of \u00a7164.314(a).",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00017"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000079",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00017",
+          "item_ref": "HIPAA-164-308b1",
+          "target_core_entity": "ac:ACP_ITS_005",
+          "target_id": "ACP-ITS-005",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5035366415977478,
+          "disambiguation_margin": 0.1530071198940277,
+          "rationale_snippet": "Business Associate Contracts and Other Arrangements. Business Associate Contracts and Other Arrangements \u2014 Administrative Safeguard. A covered entity, in accordance with \u00a7164.306, may permit a busines",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000080",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00017",
+          "item_ref": "HIPAA-164-308b1",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4680243730545044,
+          "disambiguation_margin": 0.07754907011985779,
+          "rationale_snippet": "Business Associate Contracts and Other Arrangements. Business Associate Contracts and Other Arrangements \u2014 Administrative Safeguard. A covered entity, in accordance with \u00a7164.306, may permit a busines",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-310a1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-310a1",
+      "source_text": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in which they are housed, while ensuring that properly authorised access is allowed. Addressable implementation specifications: Contingency Operations (facility access during emergencies); Facility Security Plan (safeguard the facility from unauthorised access, tampering, theft); Access Control and Validation Procedures (control and validate a person's access to facilities based on role or function); Maintenance Records (document repairs and modifications to physical components related to security).",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00018"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000081",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00018",
+          "item_ref": "HIPAA-164-310a1",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5609754323959351,
+          "disambiguation_margin": 0.11087709665298462,
+          "rationale_snippet": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000082",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00018",
+          "item_ref": "HIPAA-164-310a1",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5112530589103699,
+          "disambiguation_margin": 0.14217329025268555,
+          "rationale_snippet": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000083",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00018",
+          "item_ref": "HIPAA-164-310a1",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4774695634841919,
+          "disambiguation_margin": 0.06648409366607666,
+          "rationale_snippet": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000084",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00018",
+          "item_ref": "HIPAA-164-310a1",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.47435182332992554,
+          "disambiguation_margin": 0.0992511510848999,
+          "rationale_snippet": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000085",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00018",
+          "item_ref": "HIPAA-164-310a1",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4464208781719208,
+          "disambiguation_margin": 0.06753087043762207,
+          "rationale_snippet": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000086",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00018",
+          "item_ref": "HIPAA-164-310a1",
+          "target_core_entity": "ac:ACO_ITS_002",
+          "target_id": "ACO-ITS-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4456526041030884,
+          "disambiguation_margin": 0.11226224899291992,
+          "rationale_snippet": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000087",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00018",
+          "item_ref": "HIPAA-164-310a1",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4270842671394348,
+          "disambiguation_margin": 0.04789802432060242,
+          "rationale_snippet": "Facility Access Controls. Facility Access Controls \u2014 Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-310b",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-310b",
+      "source_text": "Workstation Use. Workstation Use \u2014 Physical Safeguard. Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, and the physical attributes of the surroundings of a specific workstation or class of workstation that can access ePHI. Workstation use policies must address the appropriate use of workstations and apply to all workforce members and others authorised to use the entity's workstations.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00019"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000088",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00019",
+          "item_ref": "HIPAA-164-310b",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4174286127090454,
+          "disambiguation_margin": 0.0835353434085846,
+          "rationale_snippet": "Workstation Use. Workstation Use \u2014 Physical Safeguard. Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, and",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000089",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00019",
+          "item_ref": "HIPAA-164-310b",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.41587769985198975,
+          "disambiguation_margin": 0.08471664786338806,
+          "rationale_snippet": "Workstation Use. Workstation Use \u2014 Physical Safeguard. Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, and",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-310c",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-310c",
+      "source_text": "Workstation Security. Workstation Security \u2014 Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security includes physical means such as device placement, locks, screen privacy filters, secure rooms or cabinets \u2014 applicable to both stationary and portable workstations.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00020"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000090",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00020",
+          "item_ref": "HIPAA-164-310c",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.45401716232299805,
+          "disambiguation_margin": 0.18338757753372192,
+          "rationale_snippet": "Workstation Security. Workstation Security \u2014 Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security inclu",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000091",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00020",
+          "item_ref": "HIPAA-164-310c",
+          "target_core_entity": "ac:ACP_SPC_005",
+          "target_id": "ACP-SPC-005",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.453737735748291,
+          "disambiguation_margin": 0.07524627447128296,
+          "rationale_snippet": "Workstation Security. Workstation Security \u2014 Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security inclu",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000092",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00020",
+          "item_ref": "HIPAA-164-310c",
+          "target_core_entity": "ac:ACO_SLG_003",
+          "target_id": "ACO-SLG-003",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.44885390996932983,
+          "disambiguation_margin": 0.0874485969543457,
+          "rationale_snippet": "Workstation Security. Workstation Security \u2014 Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security inclu",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000093",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00020",
+          "item_ref": "HIPAA-164-310c",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4439195394515991,
+          "disambiguation_margin": 0.14385682344436646,
+          "rationale_snippet": "Workstation Security. Workstation Security \u2014 Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security inclu",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000094",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00020",
+          "item_ref": "HIPAA-164-310c",
+          "target_core_entity": "ac:ACO_ITS_002",
+          "target_id": "ACO-ITS-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4134480953216553,
+          "disambiguation_margin": 0.06464242935180664,
+          "rationale_snippet": "Workstation Security. Workstation Security \u2014 Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security inclu",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-310d1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-310d1",
+      "source_text": "Device and Media Controls. Device and Media Controls \u2014 Physical Safeguard. Implement policies and procedures that govern the receipt and removal of hardware and electronic media that contain ePHI into and out of a facility, and the movement of these items within the facility. Required: Disposal \u2014 implement policies and procedures to address the final disposition of ePHI, and/or the hardware or electronic media on which it is stored; Media Re-use \u2014 implement procedures for removal of ePHI from electronic media before the media are made available for re-use. Addressable: Accountability \u2014 record movements of hardware and media; Data Backup and Storage \u2014 create a retrievable, exact copy of ePHI before movement of equipment.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00021"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "HIPAA_SECURITY_RULE-LIFTED-00021"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-312a1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-312a1",
+      "source_text": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or software programmes that have been granted access rights as specified in \u00a7164.308(a)(4). Required: Unique User Identification (assign a unique name and/or number for identifying and tracking user identity); Emergency Access Procedure (procedures for obtaining necessary ePHI during an emergency). Addressable: Automatic Logoff (terminate an electronic session after a predetermined time of inactivity); Encryption and Decryption (mechanism to encrypt and decrypt ePHI).",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00022"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000095",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACP_IAT_003",
+          "target_id": "ACP-IAT-003",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5219910144805908,
+          "disambiguation_margin": 0.05473273992538452,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000096",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5208249688148499,
+          "disambiguation_margin": 0.058916568756103516,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000097",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5132563710212708,
+          "disambiguation_margin": 0.20211714506149292,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000098",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4823477864265442,
+          "disambiguation_margin": 0.16273841261863708,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000099",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.45795738697052,
+          "disambiguation_margin": 0.04736733436584473,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000100",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.43101683259010315,
+          "disambiguation_margin": 0.07834848761558533,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000101",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42926904559135437,
+          "disambiguation_margin": 0.11581870913505554,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000102",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00022",
+          "item_ref": "HIPAA-164-312a1",
+          "target_core_entity": "ac:ACO_SLG_003",
+          "target_id": "ACO-SLG-003",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4149961471557617,
+          "disambiguation_margin": 0.09197813272476196,
+          "rationale_snippet": "Access Control. Access Control \u2014 Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-312b",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-312b",
+      "source_text": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit controls support detection of unauthorised access, support incident investigations and provide evidence of policy enforcement. Audit controls are required for all systems handling ePHI without further qualification.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00023"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000103",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.6053144931793213,
+          "disambiguation_margin": 0.1283741593360901,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000104",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACO_SLG_003",
+          "target_id": "ACO-SLG-003",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5948952436447144,
+          "disambiguation_margin": 0.08366942405700684,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000105",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.523733377456665,
+          "disambiguation_margin": 0.10231706500053406,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000106",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACM_IAT_003",
+          "target_id": "ACM-IAT-003",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5099290013313293,
+          "disambiguation_margin": 0.14275288581848145,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000107",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACP_ITS_006",
+          "target_id": "ACP-ITS-006",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.47827863693237305,
+          "disambiguation_margin": 0.13501125574111938,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000108",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4544512629508972,
+          "disambiguation_margin": 0.09779685735702515,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000109",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACO_SPC_006",
+          "target_id": "ACO-SPC-006",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42964333295822144,
+          "disambiguation_margin": 0.09757167100906372,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000110",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4249875545501709,
+          "disambiguation_margin": 0.08668869733810425,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000111",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACO_SCBI_005",
+          "target_id": "ACO-SCBI-005",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4221654534339905,
+          "disambiguation_margin": 0.044836580753326416,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000112",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00023",
+          "item_ref": "HIPAA-164-312b",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.41118597984313965,
+          "disambiguation_margin": 0.05473768711090088,
+          "rationale_snippet": "Audit Controls. Audit Controls \u2014 Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audit",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-312c1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-312c1",
+      "source_text": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authenticate Electronic Protected Health Information \u2014 implement electronic mechanisms to corroborate that ePHI has not been altered or destroyed in an unauthorised manner. This includes, where appropriate, the use of cryptographic checksums, digital signatures, or comparable controls.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00024"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000113",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.606235146522522,
+          "disambiguation_margin": 0.2178012728691101,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000114",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5888702869415283,
+          "disambiguation_margin": 0.24736633896827698,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000115",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACP_ITS_004",
+          "target_id": "ACP-ITS-004",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5512768030166626,
+          "disambiguation_margin": 0.08587351441383362,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000116",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACM_ITS_004",
+          "target_id": "ACM-ITS-004",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5406851768493652,
+          "disambiguation_margin": 0.09636926651000977,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000117",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACO_ITS_003",
+          "target_id": "ACO-ITS-003",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5280379056930542,
+          "disambiguation_margin": 0.15498554706573486,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000118",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACO_SLG_003",
+          "target_id": "ACO-SLG-003",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5112949013710022,
+          "disambiguation_margin": 0.057922571897506714,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000119",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACM_SCBI_004",
+          "target_id": "ACM-SCBI-004",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.49000006914138794,
+          "disambiguation_margin": 0.1457616686820984,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000120",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACP_SCBI_006",
+          "target_id": "ACP-SCBI-006",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4745163321495056,
+          "disambiguation_margin": 0.11796653270721436,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000121",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACP_IAT_001",
+          "target_id": "ACP-IAT-001",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.47117847204208374,
+          "disambiguation_margin": 0.0715184211730957,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000122",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACP_IVF_002",
+          "target_id": "ACP-IVF-002",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4656302332878113,
+          "disambiguation_margin": 0.08145403861999512,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000123",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.46225082874298096,
+          "disambiguation_margin": 0.09073728322982788,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000124",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACM_IVF_003",
+          "target_id": "ACM-IVF-003",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.43959712982177734,
+          "disambiguation_margin": 0.05125153064727783,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000125",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42635640501976013,
+          "disambiguation_margin": 0.09696850180625916,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000126",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00024",
+          "item_ref": "HIPAA-164-312c1",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.41611215472221375,
+          "disambiguation_margin": 0.05875203013420105,
+          "rationale_snippet": "Integrity. Integrity \u2014 Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentica",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-312d",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-312d",
+      "source_text": "Person or Entity Authentication. Person or Entity Authentication \u2014 Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication mechanisms include passwords, PINs, smart cards, biometrics, and multi-factor authentication. Authentication is a required standard without specific implementation specifications, but the mechanisms must be appropriate to the risk.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00025"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000127",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00025",
+          "item_ref": "HIPAA-164-312d",
+          "target_core_entity": "ac:ACP_IAT_001",
+          "target_id": "ACP-IAT-001",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5662029981613159,
+          "disambiguation_margin": 0.15114730596542358,
+          "rationale_snippet": "Person or Entity Authentication. Person or Entity Authentication \u2014 Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000128",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00025",
+          "item_ref": "HIPAA-164-312d",
+          "target_core_entity": "ac:ACM_IAT_001",
+          "target_id": "ACM-IAT-001",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5276749730110168,
+          "disambiguation_margin": 0.11378997564315796,
+          "rationale_snippet": "Person or Entity Authentication. Person or Entity Authentication \u2014 Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000129",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00025",
+          "item_ref": "HIPAA-164-312d",
+          "target_core_entity": "ac:ACO_IAT_001",
+          "target_id": "ACO-IAT-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5244891047477722,
+          "disambiguation_margin": 0.07189643383026123,
+          "rationale_snippet": "Person or Entity Authentication. Person or Entity Authentication \u2014 Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000130",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00025",
+          "item_ref": "HIPAA-164-312d",
+          "target_core_entity": "ac:ACP_SPC_002",
+          "target_id": "ACP-SPC-002",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44568055868148804,
+          "disambiguation_margin": 0.08516508340835571,
+          "rationale_snippet": "Person or Entity Authentication. Person or Entity Authentication \u2014 Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000131",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00025",
+          "item_ref": "HIPAA-164-312d",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.43507999181747437,
+          "disambiguation_margin": 0.1359047293663025,
+          "rationale_snippet": "Person or Entity Authentication. Person or Entity Authentication \u2014 Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000132",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00025",
+          "item_ref": "HIPAA-164-312d",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.42851585149765015,
+          "disambiguation_margin": 0.11986136436462402,
+          "rationale_snippet": "Person or Entity Authentication. Person or Entity Authentication \u2014 Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-312e1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-312e1",
+      "source_text": "Transmission Security. Transmission Security \u2014 Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic communications network. Addressable: Integrity Controls \u2014 implement security measures to ensure that electronically transmitted ePHI is not improperly modified without detection until disposed of; Encryption \u2014 implement a mechanism to encrypt ePHI whenever deemed appropriate.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00026"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000133",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00026",
+          "item_ref": "HIPAA-164-312e1",
+          "target_core_entity": "ac:ACO_ITS_002",
+          "target_id": "ACO-ITS-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5071303844451904,
+          "disambiguation_margin": 0.12773358821868896,
+          "rationale_snippet": "Transmission Security. Transmission Security \u2014 Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic comm",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000134",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00026",
+          "item_ref": "HIPAA-164-312e1",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4952205419540405,
+          "disambiguation_margin": 0.11746740341186523,
+          "rationale_snippet": "Transmission Security. Transmission Security \u2014 Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic comm",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000135",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00026",
+          "item_ref": "HIPAA-164-312e1",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4745618402957916,
+          "disambiguation_margin": 0.07265830039978027,
+          "rationale_snippet": "Transmission Security. Transmission Security \u2014 Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic comm",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-314a1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-314a1",
+      "source_text": "Business Associate Contracts or Other Arrangements. Business Associate Contracts or Other Arrangements \u2014 Organizational Requirement. The contract or other arrangement required by \u00a7164.308",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00027",
+        "HIPAA_SECURITY_RULE-LIFTED-00028",
+        "HIPAA_SECURITY_RULE-LIFTED-00029"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000136",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00029",
+          "item_ref": "HIPAA-164-314a1",
+          "target_core_entity": "ac:ACP_ITS_005",
+          "target_id": "ACP-ITS-005",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.45608729124069214,
+          "disambiguation_margin": 0.09738212823867798,
+          "rationale_snippet": "(or \u00a7164.314(a)(2)(ii) for government entities). Required contract provisions: business associate must comply with applicable requirements of Subpart C; ensure subcontractors that create, receive, mai",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000137",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00029",
+          "item_ref": "HIPAA-164-314a1",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.43815043568611145,
+          "disambiguation_margin": 0.09562245011329651,
+          "rationale_snippet": "(or \u00a7164.314(a)(2)(ii) for government entities). Required contract provisions: business associate must comply with applicable requirements of Subpart C; ensure subcontractors that create, receive, mai",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [
+        "HIPAA_SECURITY_RULE-LIFTED-00027",
+        "HIPAA_SECURITY_RULE-LIFTED-00028"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 3,
+        "multiplicity_in_supposed_atomic": true
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-314b1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-314b1",
+      "source_text": "Requirements for Group Health Plans. Requirements for Group Health Plans \u2014 Organizational Requirement. Except when the only ePHI disclosed to a plan sponsor is summary health information or enrolment/disenrolment information, a group health plan must ensure that its plan documents provide that the plan sponsor will reasonably and appropriately safeguard ePHI created, received, maintained, or transmitted to or by the plan sponsor on behalf of the group health plan. Plan documents must require the plan sponsor to: implement administrative, physical, and technical safeguards; ensure that the agents to whom the sponsor provides this information also implement reasonable and appropriate safeguards; report security incidents.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00030"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "HIPAA_SECURITY_RULE-LIFTED-00030"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-316a",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-316a",
+      "source_text": "Policies and Procedures. Policies and Procedures \u2014 Standard. Implement reasonable and appropriate policies and procedures to comply with the standards, implementation specifications, or other requirements of Subpart C, taking into account those factors specified in \u00a7164.306(b)(2)(i)\u2013(iv). This standard is not to be construed to permit or excuse an action that violates any other standard, implementation specification, or other requirement of Subpart C. A covered entity may change its policies and procedures at any time, provided that the changes are documented and are implemented in accordance with this subpart.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00031"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000138",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00031",
+          "item_ref": "HIPAA-164-316a",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.48425737023353577,
+          "disambiguation_margin": 0.06473317742347717,
+          "rationale_snippet": "Policies and Procedures. Policies and Procedures \u2014 Standard. Implement reasonable and appropriate policies and procedures to comply with the standards, implementation specifications, or other requirem",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000139",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00031",
+          "item_ref": "HIPAA-164-316a",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4186929166316986,
+          "disambiguation_margin": 0.15883761644363403,
+          "rationale_snippet": "Policies and Procedures. Policies and Procedures \u2014 Standard. Implement reasonable and appropriate policies and procedures to comply with the standards, implementation specifications, or other requirem",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "hipaa_security_rule/HIPAA-164-316b1",
+      "source": "hipaa_security_rule",
+      "source_object_id": "HIPAA-164-316b1",
+      "source_text": "Documentation. Documentation \u2014 Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, or assessment is required by this subpart to be documented, maintain a written (which may be electronic) record of the action, activity, or assessment. Implementation specifications: Time Limit \u2014 retain the documentation for 6 years from the date of its creation or the date when it last was in effect, whichever is later; Availability \u2014 make documentation available to those persons responsible for implementing the procedures to which the documentation pertains; Updates \u2014 review documentation periodically, and update as needed, in response to environmental or operational changes affecting the security of the ePHI.",
+      "source_lifted_rows": [
+        "HIPAA_SECURITY_RULE-LIFTED-00032"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000140",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00032",
+          "item_ref": "HIPAA-164-316b1",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46967852115631104,
+          "disambiguation_margin": 0.0780022144317627,
+          "rationale_snippet": "Documentation. Documentation \u2014 Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, or",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000141",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00032",
+          "item_ref": "HIPAA-164-316b1",
+          "target_core_entity": "ac:ACM_TMR_008",
+          "target_id": "ACM-TMR-008",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.46821364760398865,
+          "disambiguation_margin": 0.04896789789199829,
+          "rationale_snippet": "Documentation. Documentation \u2014 Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, or",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000142",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00032",
+          "item_ref": "HIPAA-164-316b1",
+          "target_core_entity": "ac:ACM_TSV_004",
+          "target_id": "ACM-TSV-004",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4592878222465515,
+          "disambiguation_margin": 0.18272870779037476,
+          "rationale_snippet": "Documentation. Documentation \u2014 Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, or",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000143",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00032",
+          "item_ref": "HIPAA-164-316b1",
+          "target_core_entity": "ac:ACP_RPR_010",
+          "target_id": "ACP-RPR-010",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.45677053928375244,
+          "disambiguation_margin": 0.0569307804107666,
+          "rationale_snippet": "Documentation. Documentation \u2014 Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, or",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "HIPAA_SECURITY_RULE-CLAIM-000144",
+          "lifted_row_ref": "HIPAA_SECURITY_RULE-LIFTED-00032",
+          "item_ref": "HIPAA-164-316b1",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.43343865871429443,
+          "disambiguation_margin": 0.1828826367855072,
+          "rationale_snippet": "Documentation. Documentation \u2014 Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, or",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

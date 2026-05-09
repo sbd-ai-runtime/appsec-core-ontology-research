@@ -1,0 +1,14 @@
+meta:
+  pilot_id: eu_nis2
+  status: source_captured_from_kg_synthesis
+source_document:
+  canonical_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
+  eu_reference: Directive (EU) 2022/2555
+  framework_family: NIS2
+  note: Articles extracted from knowledge-graph synthesis notes (2026-04-05 regulatory
+    wave). Article-by-article validation against SbD-ToE manual already completed.
+  publisher: European Union
+  source_document_id: SRC-EU-NIS2
+  source_kind: regulatory
+  title: Network and Information Security Directive (NIS2)
+  year: '2023'

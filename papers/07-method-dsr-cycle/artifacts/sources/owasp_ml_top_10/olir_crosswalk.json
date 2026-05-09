@@ -1,0 +1,1873 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "OWASP Machine Learning Security Top 10 \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "OWASP Machine Learning Security Top 10",
+        "version": "v0.3 Draft (2023)",
+        "url": "https://owasp.org/www-project-machine-learning-security-top-10/",
+        "author": "OWASP",
+        "release_date": "2023",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "problem_space_inverted",
+        "pilot_id": "owasp_ml_top_10"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 10,
+      "items_grounded": 9,
+      "items_lab_depth_pending": 1,
+      "olir_pairs_emitted": 96,
+      "primary_pairs": 9,
+      "secondary_pairs": 87,
+      "relationship_type_distribution": {
+        "equal": 4,
+        "intersects-with": 92,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML01-2023",
+          "description": "ML01:2023 Input Manipulation Attack. Description. Input Manipulation Attacks is an umbrella term, which include Adversarial\nAttacks, a type of attack in which an attacker deliberately alters input da\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.487,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.487; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000001 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML01-2023",
+          "description": "ML01:2023 Input Manipulation Attack. Description. Input Manipulation Attacks is an umbrella term, which include Adversarial\nAttacks, a type of attack in which an attacker deliberately alters input da\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.456,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.456; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000002 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML01-2023",
+          "description": "ML01:2023 Input Manipulation Attack. Description. Input Manipulation Attacks is an umbrella term, which include Adversarial\nAttacks, a type of attack in which an attacker deliberately alters input da\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-006",
+          "description": "Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.455,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.455; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000003 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML01-2023",
+          "description": "ML01:2023 Input Manipulation Attack. Description. Input Manipulation Attacks is an umbrella term, which include Adversarial\nAttacks, a type of attack in which an attacker deliberately alters input da\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000004 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.503,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.503; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000005 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.489,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.489; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-004",
+          "description": "Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.486,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.486; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000007 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.482,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.482; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000008 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000009 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-001",
+          "description": "Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.45,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.450; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000010 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000011 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-007",
+          "description": "Input Validation And Safe Failure Integrity. External input validation, schema discipline, injection resistance, pre-use validation, controlled failure, centralized safe error handling and context-aw\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.427,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.427; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000012 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.413,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.413; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000013 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML02-2023",
+          "description": "ML02:2023 Data Poisoning Attack. Description. Data poisoning attacks occur when an attacker manipulates the training data to\ncause the model to behave in an undesirable way. How to Prevent. Data vali\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.41,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.410; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000014 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML03-2023",
+          "description": "ML03:2023 Model Inversion Attack. Description. Model inversion attacks occur when an attacker reverse-engineers the model to\nextract information from it. How to Prevent. Access control: Limiting acce\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.521,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.521; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000015 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML03-2023",
+          "description": "ML03:2023 Model Inversion Attack. Description. Model inversion attacks occur when an attacker reverse-engineers the model to\nextract information from it. How to Prevent. Access control: Limiting acce\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-003",
+          "description": "Threat Model Versioning Controls. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. Control access, classification\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.5,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.500; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000016 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML03-2023",
+          "description": "ML03:2023 Model Inversion Attack. Description. Model inversion attacks occur when an attacker reverse-engineers the model to\nextract information from it. How to Prevent. Access control: Limiting acce\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.432,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.432; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000017 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML03-2023",
+          "description": "ML03:2023 Model Inversion Attack. Description. Model inversion attacks occur when an attacker reverse-engineers the model to\nextract information from it. How to Prevent. Access control: Limiting acce\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000018 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML03-2023",
+          "description": "ML03:2023 Model Inversion Attack. Description. Model inversion attacks occur when an attacker reverse-engineers the model to\nextract information from it. How to Prevent. Access control: Limiting acce\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-006",
+          "description": "Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000019 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.515,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.515; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000020 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.494,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.494; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000021 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.49,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.490; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000022 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-003",
+          "description": "Log Integrity Protection And Access Discipline. Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable sa\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.485,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.485; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000023 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-001",
+          "description": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.456,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.456; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000024 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.455,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.455; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000025 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-002",
+          "description": "Vault-Backed Secret Storage. Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code. identity and trust control. storage",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.45,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.450; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000026 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML05-2023",
+          "description": "ML05:2023 Model Theft. Description. Model theft attacks occur when an attacker gains access to the model\u2019s\nparameters. How to Prevent. Encryption: Encrypting the model\u2019s code, training data, and othe\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000027 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.638,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.638; threshold mapping \u2192 equal. Claim OWASP_ML_TOP_10-CLAIM-000048 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-002",
+          "description": "Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.625,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.625; threshold mapping \u2192 equal. Claim OWASP_ML_TOP_10-CLAIM-000049 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-002",
+          "description": "Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.595,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.595; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000040 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-003",
+          "description": "Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.546,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.546; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000050 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-004",
+          "description": "Message Integrity And Authorized Peer Validation. Verify message integrity and accept traffic only from authorized origins and destinations. identity and trust control. integrity verification",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.526,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.526; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000029 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.522,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.522; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000051 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.515,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.515; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000037 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-003",
+          "description": "Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.503,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.503; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000030 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-002",
+          "description": "Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.487,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.487; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000031 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-004",
+          "description": "Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.484,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.484; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000032 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-003",
+          "description": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.479,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.479; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000052 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-003",
+          "description": "Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.477,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.477; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000033 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.467,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.467; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000038 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-005",
+          "description": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.461,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.461; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000053 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-004",
+          "description": "Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/d\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.459,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.459; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000034 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-002",
+          "description": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.455,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.455; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000054 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.453,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.453; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000055 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-004",
+          "description": "End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.451,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.451; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000028 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-006",
+          "description": "Architectural Topology Validation And Pattern Conformance. Validate topology and architecture conformance automatically where feasible, using checks that compare the intended structure with approved \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.447,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.447; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000035 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-005",
+          "description": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000045 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-005",
+          "description": "Deployment Pipeline Traceability And Audit Controls. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. Pipeline instrumentation that records arti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000039 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.436,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.436; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000036 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.432,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.432; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000047 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML06-2023",
+          "description": "deploy software",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-006",
+          "description": "Registry Allowlisting And Approved Source Enforcement. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. Technical controls that restrict dependency\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000059 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.625,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.625; threshold mapping \u2192 equal. Claim OWASP_ML_TOP_10-CLAIM-000066 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-005",
+          "description": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.612,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.612; threshold mapping \u2192 equal. Claim OWASP_ML_TOP_10-CLAIM-000067 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-010",
+          "description": "Record And Periodically Review Exceptions Against The Intended Baseline. Record approved deviations and periodically review whether the current baseline still matches intended security posture. integ\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.55,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.550; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000068 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-006",
+          "description": "External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.546,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.546; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000069 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-003",
+          "description": "Periodic Review And Access Audit. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. Make rejected access, abuse signals and external\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.537,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.537; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000070 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-005",
+          "description": "Secret Isolation Across Technical Surfaces. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. identity and trust control. isolation",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.521,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.521; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000060 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.5,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.500; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000071 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-004",
+          "description": "Technical Segmentation And Sensitive Domain Isolation. Separate sensitive domains, environments and integration paths through technical isolation controls that are documented and reviewable. Movement\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.491,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.491; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000061 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-010",
+          "description": "Change Review Control For Security-Relevant Baseline Deviations. Record approved deviations and periodically review whether the current baseline still matches intended security posture. Change review\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.487,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.487; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000072 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.484,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.484; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000073 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.466,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.466; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000074 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-010",
+          "description": "Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.459,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.459; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000075 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.448,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.448; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000076 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-006",
+          "description": "Secret Change Auditability And Governance. Material changes to secret configuration, rotation state and operational-identity binding must remain reviewable and attributable through auditable records.\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.446,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.446; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000077 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-005",
+          "description": "Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces. Secret material and operational identities must be isolated by environment, execution surface and workload boundary so that compr\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.435,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.435; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000062 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-001",
+          "description": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000063 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML07-2023",
+          "description": "update the training datasets: Regularly monitoring",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000065 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-002",
+          "description": "Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.58,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.580; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000078 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.577,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.577; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000079 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-002",
+          "description": "Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.566,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.566; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000080 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-003",
+          "description": "Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.548,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.548; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000084 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-004",
+          "description": "Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.542,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.542; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000085 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-002",
+          "description": "Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.534,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.534; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000086 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-006",
+          "description": "Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.524,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.524; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000087 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-004",
+          "description": "Message Integrity And Authorized Peer Validation. Verify message integrity and accept traffic only from authorized origins and destinations. identity and trust control. integrity verification",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.52,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.520; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000088 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-003",
+          "description": "Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.506,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.506; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000089 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.48,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.480; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000096 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.465,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.465; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000081 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-005",
+          "description": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.459,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.459; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000082 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-004",
+          "description": "Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/d\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.455,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.455; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000090 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-006",
+          "description": "Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.453,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.453; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000091 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.432,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.432; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000092 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.429,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.429; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000097 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000098 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-005",
+          "description": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000083 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML08-2023",
+          "description": "Implement robust access controls: Ensure that only authorized personnel have\naccess to the MLOps system",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-002",
+          "description": "Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000095 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML09-2023",
+          "description": "ML09:2023 Output Integrity Attack. Description. In an Output Integrity Attack scenario, an attacker aims to modify or manipulate\nthe output of a machine learning model in order to change its behavior\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.546,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.546; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000099 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML09-2023",
+          "description": "ML09:2023 Output Integrity Attack. Description. In an Output Integrity Attack scenario, an attacker aims to modify or manipulate\nthe output of a machine learning model in order to change its behavior\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.539,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.539; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000100 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML09-2023",
+          "description": "ML09:2023 Output Integrity Attack. Description. In an Output Integrity Attack scenario, an attacker aims to modify or manipulate\nthe output of a machine learning model in order to change its behavior\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-005",
+          "description": "Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.496,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.496; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000101 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML09-2023",
+          "description": "ML09:2023 Output Integrity Attack. Description. In an Output Integrity Attack scenario, an attacker aims to modify or manipulate\nthe output of a machine learning model in order to change its behavior\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.489,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.489; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000102 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML09-2023",
+          "description": "ML09:2023 Output Integrity Attack. Description. In an Output Integrity Attack scenario, an attacker aims to modify or manipulate\nthe output of a machine learning model in order to change its behavior\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.469,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.469; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000103 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML09-2023",
+          "description": "ML09:2023 Output Integrity Attack. Description. In an Output Integrity Attack scenario, an attacker aims to modify or manipulate\nthe output of a machine learning model in order to change its behavior\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-007",
+          "description": "Input Validation And Safe Failure Integrity. External input validation, schema discipline, injection resistance, pre-use validation, controlled failure, centralized safe error handling and context-aw\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.468,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.468; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000104 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML09-2023",
+          "description": "ML09:2023 Output Integrity Attack. Description. In an Output Integrity Attack scenario, an attacker aims to modify or manipulate\nthe output of a machine learning model in order to change its behavior\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.424,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.424; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000105 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "ML10-2023",
+          "description": "ML10:2023 Model Poisoning. Description. Model poisoning attacks occur when an attacker manipulates the model's\nparameters to cause it to behave in an undesirable way. How to Prevent. Regularisation: \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-006",
+          "description": "Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000106 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "ML10-2023",
+          "description": "ML10:2023 Model Poisoning. Description. Model poisoning attacks occur when an attacker manipulates the model's\nparameters to cause it to behave in an undesirable way. How to Prevent. Regularisation: \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim OWASP_ML_TOP_10-CLAIM-000107 at ControlObjective level. Secondary disclosure."
+      }
+    ]
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "mcp_official_security_foundations_2025",
+  "status": "curated_section_objects_ready",
+  "source_model": "mcp_official_security_curated_sections",
+  "summary": {
+    "source_objects": 14,
+    "types": {
+      "auth_discovery_surface": 1,
+      "client_registration_surface": 1,
+      "context_surface": 1,
+      "error_surface": 1,
+      "local_runtime_surface": 1,
+      "privilege_surface": 2,
+      "redirect_and_client_metadata_surface": 1,
+      "threat_surface": 4,
+      "token_trust_surface": 2
+    }
+  },
+  "items": [
+    {
+      "source_object_id": "MCP-OFFICIAL-FOUNDATIONS",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25",
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18"
+      ],
+      "source_object_type": "context_surface",
+      "statement_kind": "contextual",
+      "source_title": "MCP official security foundations and scope",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:purpose-and-scope",
+        "MCP-AUTHORIZATION-2025_11_25:protocol-requirements",
+        "MCP-AUTHORIZATION-2025_11_25:standards-compliance",
+        "MCP-AUTHORIZATION-2025_11_25:roles",
+        "MCP-AUTHORIZATION-2025_11_25:overview",
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:purpose-and-scope",
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:attacks-and-mitigations"
+      ],
+      "text_preview": "The Model Context Protocol provides authorization capabilities at the transport level, enabling MCP clients to make requests to restricted MCP servers on behalf of resource owners. This specification defines the authorization flow for HTTP-based transports. Authorization is OPTIONAL for MCP implementations. When supported: Implementations using an HTTP-based"
+    },
+    {
+      "source_object_id": "MCP-AUTH-DISCOVERY-METADATA",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25"
+      ],
+      "source_object_type": "auth_discovery_surface",
+      "statement_kind": "substantive",
+      "source_title": "Authorization server discovery and protected resource metadata",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:authorization-server-discovery",
+        "MCP-AUTHORIZATION-2025_11_25:authorization-server-location",
+        "MCP-AUTHORIZATION-2025_11_25:protected-resource-metadata-discovery-requirements",
+        "MCP-AUTHORIZATION-2025_11_25:authorization-server-metadata-discovery"
+      ],
+      "text_preview": "This section describes the mechanisms by which MCP servers advertise their associated authorization servers to MCP clients, as well as the discovery process through which MCP clients can determine authorization server endpoints and supported capabilities. MCP servers MUST implement the OAuth 2.0 Protected Resource Metadata ( RFC9728 ) specification to indica"
+    },
+    {
+      "source_object_id": "MCP-AUTH-CLIENT-REGISTRATION",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25"
+      ],
+      "source_object_type": "client_registration_surface",
+      "statement_kind": "substantive",
+      "source_title": "Client registration and client metadata trust",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:client-registration-approaches",
+        "MCP-AUTHORIZATION-2025_11_25:client-id-metadata-documents",
+        "MCP-AUTHORIZATION-2025_11_25:preregistration",
+        "MCP-AUTHORIZATION-2025_11_25:dynamic-client-registration"
+      ],
+      "text_preview": "MCP supports three client registration mechanisms. Choose based on your scenario: Client ID Metadata Documents : When client and server have no prior relationship (most common) Pre-registration : When client and server have an existing relationship Dynamic Client Registration : For backwards compatibility or specific requirements Clients supporting all optio"
+    },
+    {
+      "source_object_id": "MCP-AUTH-SCOPE-NEGOTIATION",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25"
+      ],
+      "source_object_type": "privilege_surface",
+      "statement_kind": "substantive",
+      "source_title": "Scope selection and step-up authorization",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:scope-selection-strategy",
+        "MCP-AUTHORIZATION-2025_11_25:scope-challenge-handling"
+      ],
+      "text_preview": "When implementing authorization flows, MCP clients SHOULD follow the principle of least privilege by requesting only the scopes necessary for their intended operations. During the initial authorization handshake, MCP clients SHOULD follow this priority order for scope selection: Use scope parameter from the initial WWW-Authenticate header in the 401 response"
+    },
+    {
+      "source_object_id": "MCP-AUTH-RESOURCE-AUDIENCE-BINDING",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25"
+      ],
+      "source_object_type": "token_trust_surface",
+      "statement_kind": "substantive",
+      "source_title": "Resource parameter, canonical server URI and token audience binding",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:resource-parameter-implementation",
+        "MCP-AUTHORIZATION-2025_11_25:canonical-server-uri",
+        "MCP-AUTHORIZATION-2025_11_25:token-audience-binding-and-validation",
+        "MCP-AUTHORIZATION-2025_11_25:access-token-privilege-restriction"
+      ],
+      "text_preview": "MCP clients MUST implement Resource Indicators for OAuth 2.0 as defined in RFC 8707 to explicitly specify the target resource for which the token is being requested. The resource parameter: MUST be included in both authorization requests and token requests. MUST identify the MCP server that the client intends to use the token with. MUST use the canonical URI"
+    },
+    {
+      "source_object_id": "MCP-AUTH-TOKEN-VALIDATION",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25"
+      ],
+      "source_object_type": "token_trust_surface",
+      "statement_kind": "substantive",
+      "source_title": "Inbound token handling and validation",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:token-requirements",
+        "MCP-AUTHORIZATION-2025_11_25:token-handling",
+        "MCP-AUTHORIZATION-2025_11_25:security-considerations"
+      ],
+      "text_preview": "Access token handling when making requests to MCP servers MUST conform to the requirements defined in OAuth 2.1 Section 5 “Resource Requests” . Specifically: MCP client MUST use the Authorization request header field defined in OAuth 2.1 Section 5.1.1 : Authorization: Bearer <access-token> Note that authorization MUST be included in every HTTP request from c"
+    },
+    {
+      "source_object_id": "MCP-AUTH-ERROR-HANDLING",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25"
+      ],
+      "source_object_type": "error_surface",
+      "statement_kind": "substantive",
+      "source_title": "Authorization error handling and insufficient-scope behavior",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:error-handling",
+        "MCP-AUTHORIZATION-2025_11_25:scope-challenge-handling"
+      ],
+      "text_preview": "Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization required or token invalid 403 Forbidden Invalid scopes or insufficient permissions 400 Bad Request Malformed authorization request This section covers handling insufficient scope errors during runtime operations when a clie"
+    },
+    {
+      "source_object_id": "MCP-AUTH-REDIRECT-CLIENT-METADATA-SECURITY",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25"
+      ],
+      "source_object_type": "redirect_and_client_metadata_surface",
+      "statement_kind": "substantive",
+      "source_title": "Authorization code, redirect and client metadata document security",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:authorization-code-protection",
+        "MCP-AUTHORIZATION-2025_11_25:open-redirection",
+        "MCP-AUTHORIZATION-2025_11_25:client-id-metadata-document-security"
+      ],
+      "text_preview": "An attacker who has gained access to an authorization code contained in an authorization response can try to redeem the authorization code for an access token or otherwise make use of the authorization code. (Further described in OAuth 2.1 Section 7.5 ) To mitigate this, MCP clients MUST implement PKCE according to OAuth 2.1 Section 7.5.2 and MUST verify PKC"
+    },
+    {
+      "source_object_id": "MCP-CONFUSED-DEPUTY",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-AUTHORIZATION-2025_11_25",
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18"
+      ],
+      "source_object_type": "threat_surface",
+      "statement_kind": "substantive",
+      "source_title": "Confused deputy and proxy-consent failure",
+      "source_unit_ids": [
+        "MCP-AUTHORIZATION-2025_11_25:confused-deputy-problem",
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:confused-deputy-problem"
+      ],
+      "text_preview": "Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization codes, they can obtain access tokens without user consent. MCP proxy servers using static client IDs MUST obtain user consent for each dynamically registered client before forwarding to third-party authori"
+    },
+    {
+      "source_object_id": "MCP-TOKEN-PASSTHROUGH",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18"
+      ],
+      "source_object_type": "threat_surface",
+      "statement_kind": "substantive",
+      "source_title": "Token passthrough anti-pattern",
+      "source_unit_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:token-passthrough"
+      ],
+      "text_preview": "“Token passthrough” is an anti-pattern where an MCP server accepts tokens from an MCP client without validating that the tokens were properly issued to the MCP server and passes them through to the downstream API. ​ Risks Token passthrough is explicitly forbidden in the authorization specification as it introduces a number of security risks, that include: Se"
+    },
+    {
+      "source_object_id": "MCP-SSRF-DISCOVERY",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18"
+      ],
+      "source_object_type": "threat_surface",
+      "statement_kind": "substantive",
+      "source_title": "SSRF during OAuth discovery and metadata fetching",
+      "source_unit_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:server-side-request-forgery-ssrf"
+      ],
+      "text_preview": "Server-Side Request Forgery (SSRF) is an attack where an attacker can induce an MCP client to make HTTP requests to unintended destinations, potentially accessing internal network resources, cloud metadata endpoints, or other protected services. ​ Attack Description During OAuth metadata discovery, MCP clients fetch URLs from several sources that could be co"
+    },
+    {
+      "source_object_id": "MCP-SESSION-HIJACKING",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18"
+      ],
+      "source_object_type": "threat_surface",
+      "statement_kind": "substantive",
+      "source_title": "Session hijacking and event injection",
+      "source_unit_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:session-hijacking"
+      ],
+      "text_preview": "Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same session ID to impersonate the original client and perform unauthorized actions on their behalf. ​ Session Hijack Prompt Injection ​ Session Hijack Impersonation ​ Attack Description When you have multiple"
+    },
+    {
+      "source_object_id": "MCP-LOCAL-SERVER-COMPROMISE",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18"
+      ],
+      "source_object_type": "local_runtime_surface",
+      "statement_kind": "substantive",
+      "source_title": "Local MCP server compromise and sandboxing",
+      "source_unit_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:local-mcp-server-compromise"
+      ],
+      "text_preview": "Local MCP servers are MCP Servers running on a user’s local machine, either by the user downloading and executing a server, authoring a server themselves, or installing through a client’s configuration flows. These servers may have direct access to the user’s system and may be accessible to other processes running on the user’s machine, making them attractiv"
+    },
+    {
+      "source_object_id": "MCP-SCOPE-MINIMIZATION",
+      "pilot_id": "mcp_official_security_foundations_2025",
+      "source_document_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18"
+      ],
+      "source_object_type": "privilege_surface",
+      "statement_kind": "substantive",
+      "source_title": "Scope minimization and progressive least privilege",
+      "source_unit_ids": [
+        "MCP-SECURITY-BEST-PRACTICES-2025_06_18:scope-minimization"
+      ],
+      "text_preview": "Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. ​ Attack Description An attacker obtains (via log leakage, memory scraping, or local interception) an access token carrying broad scopes ( files:* , db:* , admin:* ) that were granted up front because the MCP server exposed every scope in scopes_supported"
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-04T11:39:22.835534+00:00",
+    "revision_reason": "Cleaning pass on MCP variant inventory: stripped \"Page N genai.owasp.org\" PDF-extraction artefacts; restored mid-word dashes; collapsed whitespace.",
+    "rule_version": "mcp_clean/1.0",
+    "n_fields_cleaned": 2,
+    "n_items_total": 14
+  }
+}

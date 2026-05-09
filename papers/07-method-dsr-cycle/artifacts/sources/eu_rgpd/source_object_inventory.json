@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.2",
+  "pilot_id": "eu_rgpd",
+  "status": "source_objects_extracted_from_synthesis",
+  "source_document_id": "SRC-EU-RGPD",
+  "extracted_at": "2026-04-12T23:42:44.693006Z",
+  "counts": {
+    "total": 6,
+    "articles": 6
+  },
+  "synthesis_conclusion": "## Conclusão principal",
+  "existing_validation": "Article-by-article validation already performed in knowledge-graph working notes. See 2026-04-05-rgpd-overlay-validation-synthesis.md",
+  "items": [
+    {
+      "source_object_id": "GDPR-ART-5",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-RGPD",
+      "framework_family": "GDPR",
+      "article_number": 5,
+      "title": "GDPR Article 5",
+      "statement": "Article 5 (Principles relating to processing of personal data) requires that personal data shall be: (a) processed lawfully, fairly and in a transparent manner; (b) collected for specified, explicit and legitimate purposes and not further processed in a manner incompatible with those purposes; (c) adequate, relevant and limited to what is necessary in relation to the purposes (data minimisation); (d) accurate and, where necessary, kept up to date; (e) kept in a form which permits identification of data subjects for no longer than necessary (storage limitation); (f) processed in a manner that ensures appropriate security including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures (integrity and confidentiality). The controller shall be responsible for, and able to demonstrate compliance with, paragraph 1 (accountability).",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-rgpd-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "GDPR-ART-25",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-RGPD",
+      "framework_family": "GDPR",
+      "article_number": 25,
+      "title": "GDPR Article 25",
+      "statement": "Article 25 (Data protection by design and by default) requires the controller, taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons posed by the processing, both at the time of the determination of the means for processing and at the time of the processing itself, to implement appropriate technical and organisational measures, such as pseudonymisation, designed to implement data-protection principles, and to integrate the necessary safeguards. The controller shall implement appropriate technical and organisational measures to ensure that, by default, only personal data which are necessary for each specific purpose of the processing are processed (data protection by default).",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-rgpd-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "GDPR-ART-28",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-RGPD",
+      "framework_family": "GDPR",
+      "article_number": 28,
+      "title": "GDPR Article 28",
+      "statement": "Article 28 (Processor) requires that processing by a processor shall be governed by a contract or other legal act under Union or Member State law that is binding on the processor and sets out the subject matter, duration, nature and purpose of the processing, type of personal data and categories of data subjects, and obligations and rights of the controller. The contract shall stipulate that the processor: processes personal data only on documented instructions; ensures that persons authorised to process personal data have committed themselves to confidentiality; takes all required security measures pursuant to Article 32; respects conditions for engaging another processor; assists the controller in fulfilling data-subject rights and security obligations; deletes or returns personal data after the end of services; makes available all information necessary to demonstrate compliance and allows for audits.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-rgpd-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "GDPR-ART-30",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-RGPD",
+      "framework_family": "GDPR",
+      "article_number": 30,
+      "title": "GDPR Article 30",
+      "statement": "Article 30 (Records of processing activities) requires each controller and, where applicable, the controller's representative to maintain a record of processing activities under its responsibility. The record shall contain: name and contact details of the controller and, where applicable, the joint controller, the controller's representative and the data protection officer; purposes of the processing; description of the categories of data subjects and personal data; categories of recipients; transfers to third countries; envisaged retention periods; and a general description of the technical and organisational security measures referred to in Article 32(1). Each processor shall maintain analogous records of all categories of processing activities carried out on behalf of a controller.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-rgpd-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "GDPR-ART-32",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-RGPD",
+      "framework_family": "GDPR",
+      "article_number": 32,
+      "title": "GDPR Article 32",
+      "statement": "Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including as appropriate: (a) the pseudonymisation and encryption of personal data; (b) the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services; (c) the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident; (d) a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing. In assessing the appropriate level of security, account shall be taken of the risks presented by processing, in particular from accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-rgpd-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "GDPR-ART-35",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-RGPD",
+      "framework_family": "GDPR",
+      "article_number": 35,
+      "title": "GDPR Article 35",
+      "statement": "Article 35 (Data protection impact assessment) requires that where a type of processing in particular using new technologies, and taking into account the nature, scope, context and purposes of the processing, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out an assessment of the impact of the envisaged processing operations on the protection of personal data. A single assessment may address a set of similar processing operations that present similar high risks. The assessment shall contain at least: a systematic description of the envisaged processing operations and the purposes of the processing; an assessment of the necessity and proportionality of the processing operations in relation to the purposes; an assessment of the risks to the rights and freedoms of data subjects; and the measures envisaged to address the risks, including safeguards, security measures and mechanisms to ensure the protection of personal data and to demonstrate compliance with this Regulation.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-rgpd-overlay-validation-synthesis.md"
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-03T18:53:44.125412+00:00",
+    "revision_reason": "Replace placeholder bodies with curated obligation summaries grounded in primary source + KG working notes.",
+    "rule_version": "regulatory_curated_bodies/1.0"
+  }
+}

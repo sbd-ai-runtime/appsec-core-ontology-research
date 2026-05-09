@@ -1,0 +1,64 @@
+{
+  "schema": "ssdf_crossval_v7_filtered/1.0",
+  "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+  "filter_rules": {
+    "included_ref_sources": [
+      "OWASPSAMM",
+      "PCISSLC",
+      "SCAGILE",
+      "SCFPSSD",
+      "SP80053"
+    ],
+    "excluded_ref_sources": [
+      "OWASPASVS",
+      "OWASPMASVS",
+      "OWASPSCVS"
+    ],
+    "rationale": {
+      "OWASPASVS": "SSDF v1.1 references ASVS v4 IDs; corpus has ASVS v5 only (v4 dropped 2026-04-27 amendment); v5 content \u2260 v4 content under same ID = version-drift contamination",
+      "OWASPMASVS": "Source not in substrate v7 corpus",
+      "OWASPSCVS": "Source not in substrate v7 corpus"
+    }
+  },
+  "totals": {
+    "n_same_level_total": 122,
+    "n_cross_level_total": 45,
+    "n_pairs_total": 167,
+    "n_exact_co": 22,
+    "n_same_slice": 21,
+    "n_different_slice": 79
+  },
+  "convergence_rates": {
+    "filtered_strict_pct": 18.03,
+    "filtered_adjusted_pct": 35.25
+  },
+  "per_source_pair_counts": {
+    "NIST-800-53": 50,
+    "SAFECode-FPSSD": 15,
+    "PCI-SSLC": 42,
+    "SAMM": 42,
+    "SAFECode-Agile": 18
+  },
+  "per_source_unresolved_tasks": {
+    "SAFECode-FPSSD": 2,
+    "NIST-800-53": 2,
+    "SAFECode-Agile": 1
+  },
+  "per_source_excluded_task_count": {
+    "OWASPASVS": 13,
+    "OWASPMASVS": 10,
+    "OWASPSCVS": 8
+  },
+  "comparison_to_full_ssdf_v7": {
+    "full_strict_pct": 18.03,
+    "full_adjusted_pct": 35.25,
+    "full_n_same_level": 122,
+    "full_n_total": 285
+  },
+  "version_drift_hypothesis_test": {
+    "hypothesis": "v7 SSDF full-set rate (18.03%) depressed by ASVS-axis contamination (v4 IDs in SSDF refs vs v5-only corpus)",
+    "filtered_strict_recovery_threshold": "\u226530% would empirically confirm hypothesis",
+    "filtered_strict_observed": 18.03,
+    "verdict": "NOT CONFIRMED \u2014 version drift not the dominant factor"
+  }
+}

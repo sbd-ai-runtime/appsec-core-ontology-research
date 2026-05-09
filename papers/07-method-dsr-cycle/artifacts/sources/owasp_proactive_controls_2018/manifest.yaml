@@ -1,0 +1,17 @@
+meta:
+  pilot_id: owasp_proactive_controls_2018
+  status: source_captured
+retrieval_policy:
+  checksum_sha256: c11d050724b6183a4c7943d9dad3b8ef986b840b64886375a7533f2609458b95
+  local_snapshot_path: sources/owasp_proactive_controls_2018/owasp_proactive_controls_2018.json
+  retrieved_at: '2026-04-12T23:34:58.209772Z'
+source_document:
+  canonical_url: https://owasp.org/www-project-proactive-controls/
+  framework_family: OWASP-PROACTIVE
+  publication_date: '2018-01-01'
+  publisher: OWASP
+  source_document_id: SRC-OWASP-PROACTIVE-2018
+  source_kind: proactive_control_list
+  stability_reason: official_owasp_release
+  title: OWASP Proactive Controls 2018
+  version: '3.0'

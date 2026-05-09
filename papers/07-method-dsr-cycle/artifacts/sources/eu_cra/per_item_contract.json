@@ -1,0 +1,551 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "eu_cra",
+  "is_iteration_3_pilot": false,
+  "n_items": 9,
+  "items": [
+    {
+      "item_id": "eu_cra/CRA-ART-13",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-13",
+      "source_text": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requirements set out in Annex I Part I. Manufacturers must perform a cybersecurity risk assessment, document it and update it where appropriate during the support period",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00001",
+        "EU_CRA-LIFTED-00002",
+        "EU_CRA-LIFTED-00003",
+        "EU_CRA-LIFTED-00004",
+        "EU_CRA-LIFTED-00005",
+        "EU_CRA-LIFTED-00006",
+        "EU_CRA-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "EU_CRA-CLAIM-000001",
+          "lifted_row_ref": "EU_CRA-LIFTED-00001",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACP_TMR_008",
+          "target_id": "ACP-TMR-008",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.44296443462371826,
+          "disambiguation_margin": 0.05612096190452576,
+          "rationale_snippet": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requiremen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000002",
+          "lifted_row_ref": "EU_CRA-LIFTED-00001",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4402989149093628,
+          "disambiguation_margin": 0.062432706356048584,
+          "rationale_snippet": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requiremen",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000003",
+          "lifted_row_ref": "EU_CRA-LIFTED-00003",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.48305416107177734,
+          "disambiguation_margin": 0.09045463800430298,
+          "rationale_snippet": "ensure that vulnerabilities are addressed effectively in line with Annex I Part II",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000004",
+          "lifted_row_ref": "EU_CRA-LIFTED-00003",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.45152074098587036,
+          "disambiguation_margin": 0.07468375563621521,
+          "rationale_snippet": "ensure that vulnerabilities are addressed effectively in line with Annex I Part II",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000005",
+          "lifted_row_ref": "EU_CRA-LIFTED-00003",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.41628777980804443,
+          "disambiguation_margin": 0.0624576210975647,
+          "rationale_snippet": "ensure that vulnerabilities are addressed effectively in line with Annex I Part II",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000006",
+          "lifted_row_ref": "EU_CRA-LIFTED-00004",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACM_TMR_008",
+          "target_id": "ACM-TMR-008",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4516592025756836,
+          "disambiguation_margin": 0.09398478269577026,
+          "rationale_snippet": "determine and document the support period during which the product will receive security updates",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000007",
+          "lifted_row_ref": "EU_CRA-LIFTED-00004",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.44680461287498474,
+          "disambiguation_margin": 0.12134930491447449,
+          "rationale_snippet": "determine and document the support period during which the product will receive security updates",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000008",
+          "lifted_row_ref": "EU_CRA-LIFTED-00004",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_RPR_010",
+          "target_id": "ACO-RPR-010",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.43619710206985474,
+          "disambiguation_margin": 0.061659932136535645,
+          "rationale_snippet": "determine and document the support period during which the product will receive security updates",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000009",
+          "lifted_row_ref": "EU_CRA-LIFTED-00004",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.41450172662734985,
+          "disambiguation_margin": 0.11211973428726196,
+          "rationale_snippet": "determine and document the support period during which the product will receive security updates",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000010",
+          "lifted_row_ref": "EU_CRA-LIFTED-00005",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACM_TMR_002",
+          "target_id": "ACM-TMR-002",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.45461106300354004,
+          "disambiguation_margin": 0.04993999004364014,
+          "rationale_snippet": "provide a coordinated vulnerability disclosure policy with a single point of contact",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000011",
+          "lifted_row_ref": "EU_CRA-LIFTED-00005",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.44806748628616333,
+          "disambiguation_margin": 0.11162126064300537,
+          "rationale_snippet": "provide a coordinated vulnerability disclosure policy with a single point of contact",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000012",
+          "lifted_row_ref": "EU_CRA-LIFTED-00005",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACP_TMR_003",
+          "target_id": "ACP-TMR-003",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.42925089597702026,
+          "disambiguation_margin": 0.07584041357040405,
+          "rationale_snippet": "provide a coordinated vulnerability disclosure policy with a single point of contact",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000013",
+          "lifted_row_ref": "EU_CRA-LIFTED-00005",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4283047914505005,
+          "disambiguation_margin": 0.04755806922912598,
+          "rationale_snippet": "provide a coordinated vulnerability disclosure policy with a single point of contact",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000014",
+          "lifted_row_ref": "EU_CRA-LIFTED-00005",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.41962921619415283,
+          "disambiguation_margin": 0.17980527877807617,
+          "rationale_snippet": "provide a coordinated vulnerability disclosure policy with a single point of contact",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000015",
+          "lifted_row_ref": "EU_CRA-LIFTED-00005",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.41280898451805115,
+          "disambiguation_margin": 0.04557958245277405,
+          "rationale_snippet": "provide a coordinated vulnerability disclosure policy with a single point of contact",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000016",
+          "lifted_row_ref": "EU_CRA-LIFTED-00006",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.47361963987350464,
+          "disambiguation_margin": 0.09947317838668823,
+          "rationale_snippet": "deliver security updates separately from functionality updates where technically feasible",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000017",
+          "lifted_row_ref": "EU_CRA-LIFTED-00006",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4142650365829468,
+          "disambiguation_margin": 0.06506174802780151,
+          "rationale_snippet": "deliver security updates separately from functionality updates where technically feasible",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000018",
+          "lifted_row_ref": "EU_CRA-LIFTED-00006",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACM_IVF_004",
+          "target_id": "ACM-IVF-004",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4092164635658264,
+          "disambiguation_margin": 0.07949557900428772,
+          "rationale_snippet": "deliver security updates separately from functionality updates where technically feasible",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000019",
+          "lifted_row_ref": "EU_CRA-LIFTED-00007",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4716772139072418,
+          "disambiguation_margin": 0.160221666097641,
+          "rationale_snippet": "and provide users with the information and instructions specified in Annex II, including secure setup, secure use, support-period end-date, decommissioning guidance and manufacturer contact details. T",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000020",
+          "lifted_row_ref": "EU_CRA-LIFTED-00007",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACO_RPR_007",
+          "target_id": "ACO-RPR-007",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.44419121742248535,
+          "disambiguation_margin": 0.05121797323226929,
+          "rationale_snippet": "and provide users with the information and instructions specified in Annex II, including secure setup, secure use, support-period end-date, decommissioning guidance and manufacturer contact details. T",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000021",
+          "lifted_row_ref": "EU_CRA-LIFTED-00007",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACM_TMR_007",
+          "target_id": "ACM-TMR-007",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.425345242023468,
+          "disambiguation_margin": 0.07659256458282471,
+          "rationale_snippet": "and provide users with the information and instructions specified in Annex II, including secure setup, secure use, support-period end-date, decommissioning guidance and manufacturer contact details. T",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000022",
+          "lifted_row_ref": "EU_CRA-LIFTED-00007",
+          "item_ref": "CRA-ART-13",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4220167398452759,
+          "disambiguation_margin": 0.1176309883594513,
+          "rationale_snippet": "and provide users with the information and instructions specified in Annex II, including secure setup, secure use, support-period end-date, decommissioning guidance and manufacturer contact details. T",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [
+        "EU_CRA-LIFTED-00002"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 7,
+        "multiplicity_in_supposed_atomic": true
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-14",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-14",
+      "source_text": "CRA Article 14. Article 14 (Reporting obligations of manufacturers) requires manufacturers to notify ENISA of any actively exploited vulnerability contained in their product within 24 hours of becoming aware of it, and of any severe incident having impact on the security of the product within 24 hours of becoming aware of it. An intermediate report shall be submitted within 72 hours, and a final report within one month. The manufacturer must also inform users of the affected product without undue delay and, where relevant, of corrective measures the user can deploy. The reporting regime aligns with the NIS2 layered notification model (early warning, notification, intermediate, final).",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "EU_CRA-CLAIM-000023",
+          "lifted_row_ref": "EU_CRA-LIFTED-00008",
+          "item_ref": "CRA-ART-14",
+          "target_core_entity": "ac:ACM_TMR_008",
+          "target_id": "ACM-TMR-008",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4381139874458313,
+          "disambiguation_margin": 0.10595014691352844,
+          "rationale_snippet": "CRA Article 14. Article 14 (Reporting obligations of manufacturers) requires manufacturers to notify ENISA of any actively exploited vulnerability contained in their product within 24 hours of becomin",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000024",
+          "lifted_row_ref": "EU_CRA-LIFTED-00008",
+          "item_ref": "CRA-ART-14",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4283095896244049,
+          "disambiguation_margin": 0.10001948475837708,
+          "rationale_snippet": "CRA Article 14. Article 14 (Reporting obligations of manufacturers) requires manufacturers to notify ENISA of any actively exploited vulnerability contained in their product within 24 hours of becomin",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-15",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-15",
+      "source_text": "CRA Article 15. Article 15 (Voluntary reporting) provides that manufacturers, importers and distributors may, on a voluntary basis, notify ENISA of any vulnerability contained in a product, any cyber threat that could affect the risk profile of the product, or any near-miss that could have led to an incident. Voluntary reports do not entail additional obligations on the reporting party beyond those that would have applied had the report not been made; ENISA shall facilitate such reporting and ensure confidentiality where appropriate.",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00009"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "EU_CRA-LIFTED-00009"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-16",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-16",
+      "source_text": "CRA Article 16. Article 16 (Other provisions related to reporting) sets out modalities and confidentiality safeguards for reporting under Articles 14 and 15. Information submitted to ENISA shall be exchanged with relevant CSIRTs and competent authorities under conditions ensuring confidentiality, in particular protecting trade secrets and personal data. ENISA shall coordinate with EU CyCLONe and the CSIRTs network for cross-border incidents. Manufacturers may rectify or supplement notifications submitted under Article 14 without prejudice to the duty to act in good faith and without undue delay.",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00010"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "EU_CRA-LIFTED-00010"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-18",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-18",
+      "source_text": "CRA Article 18. Article 18 (Obligations of importers) requires importers to place on the Union market only products with digital elements that comply with the essential cybersecurity requirements and the obligations of manufacturers. Before placing a product on the market, the importer shall verify that the manufacturer has carried out the conformity assessment procedure, that the product bears the CE marking, and that the technical documentation is available. Importers shall ensure that storage and transport conditions do not jeopardise compliance, indicate their name and contact address on the product or its packaging, keep a register of complaints and recalls, and inform the manufacturer of any vulnerabilities they become aware of.",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00011"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "EU_CRA-CLAIM-000025",
+          "lifted_row_ref": "EU_CRA-LIFTED-00011",
+          "item_ref": "CRA-ART-18",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4879910349845886,
+          "disambiguation_margin": 0.0995478630065918,
+          "rationale_snippet": "CRA Article 18. Article 18 (Obligations of importers) requires importers to place on the Union market only products with digital elements that comply with the essential cybersecurity requirements and ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000026",
+          "lifted_row_ref": "EU_CRA-LIFTED-00011",
+          "item_ref": "CRA-ART-18",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4540420472621918,
+          "disambiguation_margin": 0.07217404246330261,
+          "rationale_snippet": "CRA Article 18. Article 18 (Obligations of importers) requires importers to place on the Union market only products with digital elements that comply with the essential cybersecurity requirements and ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-19",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-19",
+      "source_text": "CRA Article 19. Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requirements of the Regulation. Distributors must verify the CE marking and accompanying documents, and ensure that storage and transport conditions do not impair compliance. Distributors shall not make a product available where they have reason to believe that it is not in conformity with this Regulation; they shall inform the manufacturer and importer of any non-conformities and any vulnerabilities they become aware of.",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00012"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "EU_CRA-CLAIM-000027",
+          "lifted_row_ref": "EU_CRA-LIFTED-00012",
+          "item_ref": "CRA-ART-19",
+          "target_core_entity": "ac:ACO_SCBI_007",
+          "target_id": "ACO-SCBI-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.44855332374572754,
+          "disambiguation_margin": 0.05315244197845459,
+          "rationale_snippet": "CRA Article 19. Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requirement",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000028",
+          "lifted_row_ref": "EU_CRA-LIFTED-00012",
+          "item_ref": "CRA-ART-19",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.42479217052459717,
+          "disambiguation_margin": 0.056077390909194946,
+          "rationale_snippet": "CRA Article 19. Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requirement",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "EU_CRA-CLAIM-000029",
+          "lifted_row_ref": "EU_CRA-LIFTED-00012",
+          "item_ref": "CRA-ART-19",
+          "target_core_entity": "ac:ACM_SCBI_006",
+          "target_id": "ACM-SCBI-006",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.41941073536872864,
+          "disambiguation_margin": 0.08917060494422913,
+          "rationale_snippet": "CRA Article 19. Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requirement",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-20",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-20",
+      "source_text": "CRA Article 20. Article 20 (Cases in which obligations of manufacturers apply to importers and distributors) provides that an importer or distributor shall be considered a manufacturer for the purposes of this Regulation, and shall be subject to the obligations of the manufacturer under Articles 13 and 14, where they place a product with digital elements on the market under their name or trademark or carry out a substantial modification of a product already placed on the market that affects compliance with the essential requirements.",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00013"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "EU_CRA-LIFTED-00013"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-21",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-21",
+      "source_text": "CRA Article 21. Article 21 (Other cases in which obligations of manufacturers apply) extends the manufacturer obligations to natural or legal persons placing on the market a product with digital elements that has been substantially modified, even if not under their own name or trademark, in respect of the part of the product affected by that modification. Such person shall provide a new conformity assessment for the modified part, update technical documentation accordingly, and ensure CE marking is renewed where required.",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00014"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "EU_CRA-LIFTED-00014"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "eu_cra/CRA-ART-22",
+      "source": "eu_cra",
+      "source_object_id": "CRA-ART-22",
+      "source_text": "CRA Article 22. Article 22 (Identification of economic operators) requires economic operators to identify, on request and for ten years after the product was placed on the market, any economic operator who supplied them with a product with digital elements, and any economic operator to whom they supplied a product with digital elements. The traceability obligation supports market surveillance under the Regulation and post-incident investigations involving supply-chain components.",
+      "source_lifted_rows": [
+        "EU_CRA-LIFTED-00015"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "EU_CRA-LIFTED-00015"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

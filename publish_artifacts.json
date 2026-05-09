@@ -140,7 +140,6 @@
           "source": "data/ssdf_sp800_218_v1_1/stubs/traceability_publication_candidates.json",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/ssdf_sp800_218_v1_1/traceability_publication_candidates.json"
         },
-
         {
           "source_repo": "external_sources_inventory",
           "source": "pilots/asvs_v5_0_0/brief.md",
@@ -191,7 +190,6 @@
           "source": "data/asvs_v5_0_0/stubs/published_manual_traceability_cluster_comparison.md",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/asvs_v5_0_0/published_manual_traceability_cluster_comparison.md"
         },
-
         {
           "source_repo": "external_sources_inventory",
           "source": "pilots/slsa_spec_v1_0_build_track/brief.md",
@@ -232,7 +230,6 @@
           "source": "data/slsa_spec_v1_0_build_track/stubs/manual_gap_analysis.json",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/slsa_spec_v1_0_build_track/manual_gap_analysis.json"
         },
-
         {
           "source_repo": "external_sources_inventory",
           "source": "pilots/cis_controls_v8_1/brief.md",
@@ -283,7 +280,6 @@
           "source": "data/cis_controls_v8_1/stubs/published_manual_traceability_control_comparison.md",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/cis_controls_v8_1/published_manual_traceability_control_comparison.md"
         },
-
         {
           "source_repo": "external_sources_inventory",
           "source": "pilots/capec_supply_chain_risks_v3_9/brief.md",
@@ -414,6 +410,1712 @@
           "source_repo": "knowledge_graph",
           "source": "data/publish/runtime/antipattern_threat_links.json",
           "dest": "papers/03-ontology-grounded-retrieval/artifacts/runtime_snapshot/antipattern_threat_links.json"
+        }
+      ]
+    },
+    {
+      "id": "paper7",
+      "description": "Method DSR cycle paper (P7) — coverage-preserving thesis evolution; substrate v7 + cross-validation evidence + 101 OLIR-track artefacts + DSR-HISTORY across 31-source corpus + 3 §8.2 multi-claim alignment figures + production scripts + sources_original.zip (29.93 MB; 76 raw source files; sha256 e222f066...) + 31/31 unified provenance with sha256. Layout: clean parallel structure with per-source consolidated dirs (sources/<source>/) plus substrate/ + cross_validation/ + method/ + figures/ + olir/ + scripts/ subtrees. Lineage: P7 evolves P2 v1.0.0 thesis (papers/02-coverage-preserving-knowledge-compilation) into operational substrate validation under DSR methodology.",
+      "files": [
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/asvs_v5_0_0/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/asvs_v5_0_0/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/asvs_v5_0_0/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/asvs_v5_0_0/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/asvs_v5_0_0_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/asvs_v5_0_0/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_asvs_v5_0_0.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_asvs_v5_0_0.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/asvs_v5_0_0_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/capec_v3_9/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/capec_v3_9/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/capec_v3_9/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/capec_v3_9/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/capec_v3_9_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/capec_v3_9/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/capec_v3_9/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/capec_v3_9/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_capec_v3_9.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/capec_v3_9/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_capec_v3_9.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/capec_v3_9/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/capec_v3_9_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/capec_v3_9/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/cis_controls_v8_1_2/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cis_controls_v8_1_2/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cis_controls_v8_1_2/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cis_controls_v8_1_2/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/cis_controls_v8_1_2_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cis_controls_v8_1_2/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/cis_controls_v8_1_2/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cis_controls_v8_1_2/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_cis_controls_v8_1_2.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cis_controls_v8_1_2/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_cis_controls_v8_1_2.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cis_controls_v8_1_2/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/cis_controls_v8_1_2_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cis_controls_v8_1_2/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/cwe_software_development_view_v4_19_1/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/cwe_software_development_view_v4_19_1/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/cwe_software_development_view_v4_19_1/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cwe_software_development_view_v4_19_1/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cwe_software_development_view_v4_19_1/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/cwe_software_development_view_v4_19_1/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/cwe_software_development_view_v4_19_1_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/cwe_software_development_view_v4_19_1/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_cwe_software_development_view_v4_19_1.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_cwe_software_development_view_v4_19_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/cwe_software_development_view_v4_19_1_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/enisa_multilayer_ai_cybersecurity_practices_2023/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/enisa_multilayer_ai_cybersecurity_practices_2023/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/enisa_multilayer_ai_cybersecurity_practices_2023/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/enisa_multilayer_ai_cybersecurity_practices_2023/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/enisa_multilayer_ai_cybersecurity_practices_2023_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/enisa_multilayer_ai_cybersecurity_practices_2023/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_enisa_multilayer_ai_cybersecurity_practices_2023.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_enisa_multilayer_ai_cybersecurity_practices_2023.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/enisa_multilayer_ai_cybersecurity_practices_2023_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/eu_cra/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_cra/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_cra/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/eu_cra_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/eu_cra/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_cra.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_cra.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_cra_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_cra/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/eu_dora/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_dora/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_dora/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/eu_dora_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/eu_dora/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_dora.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_dora.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_dora_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_dora/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/eu_nis2/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_nis2/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_nis2/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/eu_nis2_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/eu_nis2/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_nis2.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_nis2.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_nis2_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_nis2/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/eu_rgpd/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_rgpd/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/eu_rgpd/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/eu_rgpd_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/eu_rgpd/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_rgpd.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_eu_rgpd.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/eu_rgpd_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/eu_rgpd/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/hipaa_security_rule/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/hipaa_security_rule/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/hipaa_security_rule/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/hipaa_security_rule/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/hipaa_security_rule_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/hipaa_security_rule/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/hipaa_security_rule/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/hipaa_security_rule/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_hipaa_security_rule.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/hipaa_security_rule/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_hipaa_security_rule.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/hipaa_security_rule/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/hipaa_security_rule_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/hipaa_security_rule/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/mcp_official_security_foundations_2025/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/mcp_official_security_foundations_2025/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/mcp_official_security_foundations_2025/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/mcp_official_security_foundations_2025/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/mcp_official_security_foundations_2025/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/mcp_official_security_foundations_2025/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/mcp_official_security_foundations_2025_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/mcp_official_security_foundations_2025/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_mcp_official_security_foundations_2025.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_mcp_official_security_foundations_2025.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/mcp_official_security_foundations_2025_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/mitre_atlas/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/mitre_atlas/stubs/quality_dossier.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/quality_dossier.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/mitre_atlas/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/mitre_atlas/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/mitre_atlas_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/mitre_atlas/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_mitre_atlas.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_mitre_atlas.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/mitre_atlas_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mitre_atlas/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_100_2_e2025/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_100_2_e2025/stubs/quality_dossier.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/quality_dossier.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_100_2_e2025/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_100_2_e2025/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/nist_ai_100_2_e2025_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/nist_ai_100_2_e2025/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_ai_100_2_e2025.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_ai_100_2_e2025.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/nist_ai_100_2_e2025_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_100_2_e2025/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_rmf_1_0/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_rmf_1_0/stubs/quality_dossier.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/quality_dossier.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_rmf_1_0/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_ai_rmf_1_0/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/nist_ai_rmf_1_0_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/nist_ai_rmf_1_0/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_ai_rmf_1_0.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_ai_rmf_1_0.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/nist_ai_rmf_1_0_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_ai_rmf_1_0/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/nist_sp800_53_rev5/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_sp800_53_rev5/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/nist_sp800_53_rev5/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_sp800_53_rev5/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/nist_sp800_53_rev5_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_sp800_53_rev5/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/nist_sp800_53_rev5/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_sp800_53_rev5/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_sp800_53_rev5.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_sp800_53_rev5/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_nist_sp800_53_rev5.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_sp800_53_rev5/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/nist_sp800_53_rev5_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/nist_sp800_53_rev5/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_dsomm/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_dsomm/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_dsomm/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_dsomm/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_dsomm/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_dsomm/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_dsomm_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_dsomm/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_dsomm.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_dsomm.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_dsomm_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_llm_top_10/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_llm_top_10/stubs/quality_dossier.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/quality_dossier.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_llm_top_10/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_llm_top_10/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_llm_top_10_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_llm_top_10/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_llm_top_10.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_llm_top_10.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_llm_top_10_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_llm_top_10/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_secure_server_development_v1_0/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_secure_server_development_v1_0/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_secure_server_development_v1_0/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_secure_server_development_v1_0/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_secure_server_development_v1_0/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_secure_server_development_v1_0/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_mcp_secure_server_development_v1_0_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_mcp_secure_server_development_v1_0/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_secure_server_development_v1_0.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_secure_server_development_v1_0.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_mcp_secure_server_development_v1_0_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_third_party_servers_v1_0/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_third_party_servers_v1_0/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_third_party_servers_v1_0/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_third_party_servers_v1_0/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_third_party_servers_v1_0/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_third_party_servers_v1_0/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_mcp_third_party_servers_v1_0_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_mcp_third_party_servers_v1_0/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_third_party_servers_v1_0.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_third_party_servers_v1_0.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_mcp_third_party_servers_v1_0_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_top_10_v0_1_2025_beta/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_top_10_v0_1_2025_beta/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_mcp_top_10_v0_1_2025_beta/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_top_10_v0_1_2025_beta/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_top_10_v0_1_2025_beta/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_mcp_top_10_v0_1_2025_beta/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_mcp_top_10_v0_1_2025_beta_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_mcp_top_10_v0_1_2025_beta/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_top_10_v0_1_2025_beta.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_mcp_top_10_v0_1_2025_beta.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_mcp_top_10_v0_1_2025_beta_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_ml_top_10/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_ml_top_10/stubs/quality_dossier.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/quality_dossier.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_ml_top_10/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_ml_top_10/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_ml_top_10_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_ml_top_10/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_ml_top_10.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_ml_top_10.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_ml_top_10_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_ml_top_10/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_proactive_controls_2018/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_proactive_controls_2018/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_proactive_controls_2018/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_proactive_controls_2018/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_proactive_controls_2018_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_proactive_controls_2018/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_proactive_controls_2018/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_proactive_controls_2018/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_proactive_controls_2018.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_proactive_controls_2018/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_proactive_controls_2018.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_proactive_controls_2018/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_proactive_controls_2018_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_proactive_controls_2018/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_samm_v2_1/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_samm_v2_1/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_samm_v2_1/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_samm_v2_1/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_samm_v2_1/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_samm_v2_1/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_samm_v2_1_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_samm_v2_1/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_samm_v2_1.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_samm_v2_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_samm_v2_1_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/owasp_top_10_2021/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_top_10_2021/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/owasp_top_10_2021/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_top_10_2021/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/owasp_top_10_2021_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_top_10_2021/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/owasp_top_10_2021/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_top_10_2021/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_top_10_2021.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_top_10_2021/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_owasp_top_10_2021.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_top_10_2021/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/owasp_top_10_2021_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_top_10_2021/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/pci_dss_v4_0_1/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_dss_v4_0_1/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/pci_dss_v4_0_1/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_dss_v4_0_1/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/pci_dss_v4_0_1_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_dss_v4_0_1/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/pci_dss_v4_0_1/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_dss_v4_0_1/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_pci_dss_v4_0_1.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_dss_v4_0_1/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_pci_dss_v4_0_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_dss_v4_0_1/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/pci_dss_v4_0_1_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_dss_v4_0_1/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/pci_sslc_v1_1/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_sslc_v1_1/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/pci_sslc_v1_1_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_sslc_v1_1/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/pci_sslc_v1_1/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_sslc_v1_1/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_pci_sslc_v1_1.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_sslc_v1_1/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_pci_sslc_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_sslc_v1_1/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/pci_sslc_v1_1_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/pci_sslc_v1_1/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/safecode_agile_2012/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_agile_2012/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/safecode_agile_2012_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_agile_2012/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/safecode_agile_2012/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_agile_2012/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_agile_2012.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_agile_2012/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_agile_2012.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_agile_2012/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/safecode_agile_2012_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_agile_2012/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/safecode_fpssd_2018/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_fpssd_2018/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/safecode_fpssd_2018_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_fpssd_2018/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/safecode_fpssd_2018/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_fpssd_2018/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_fpssd_2018.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_fpssd_2018/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_fpssd_2018.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_fpssd_2018/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/safecode_fpssd_2018_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_fpssd_2018/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/safecode_sic_2010/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_sic_2010/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/safecode_sic_2010_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_sic_2010/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/safecode_sic_2010/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_sic_2010/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_sic_2010.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_sic_2010/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_safecode_sic_2010.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_sic_2010/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/safecode_sic_2010_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/safecode_sic_2010/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/slsa_spec_v1_0_build_track/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/slsa_spec_v1_0_build_track/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/slsa_spec_v1_0_build_track/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/slsa_spec_v1_0_build_track/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/slsa_spec_v1_0_build_track_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/slsa_spec_v1_0_build_track/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_slsa_spec_v1_0_build_track.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_slsa_spec_v1_0_build_track.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/slsa_spec_v1_0_build_track_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/ssdf_sp800_218_v1_1/source_manifest.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/manifest.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/ssdf_sp800_218_v1_1/brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "pilots/ssdf_sp800_218_v1_1/indexing_contract.yaml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/indexing_contract.yaml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/source_retrieval_receipt.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/retrieval_receipt.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/source_object_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/source_object_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/ssdf_sp800_218_v1_1/stubs/source_unit_inventory.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/source_unit_inventory.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v5/lifted/ssdf_sp800_218_v1_1_lifted.jsonl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/lifted.jsonl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/ssdf_sp800_218_v1_1/per_item_contract.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/per_item_contract.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_ssdf_sp800_218_v1_1.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/olir_crosswalk.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/concept_crosswalk_ssdf_sp800_218_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/olir_crosswalk.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/ssdf_sp800_218_v1_1_olir_v1_1.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/olir_schema_1_1.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_publish_bundle/sources_original.zip",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources_archive/sources_original.zip"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_publish_bundle/sources_original_manifest.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/sources_archive/sources_original_manifest.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/SUPPLIER_v7_0.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/SUPPLIER_v7_0.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/MANIFEST_v7_0.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/MANIFEST_v7_0.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/v7-substrate-claims.ttl",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/claims.ttl"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/v7-substrate-claims-shacl-report.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/shacl_report.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/v7-substrate-claims-shacl-report.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/shacl_report.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/source_provenance_consolidated.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/source_provenance_consolidated.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/source_provenance_consolidated.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/source_provenance_consolidated.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/ontology_side_index.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/substrate/ontology_side_index.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/ssdf_crossval_v7.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/ssdf_crossval.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/ssdf_crossval_v7_filtered.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/ssdf_crossval_filtered.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/scf_crossval_v7.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/scf_crossval.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/frontier_match_and_per_task_audit_v7.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/frontier_match_and_per_task_audit.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/cross_validation_per_pair_audit.xlsx",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/per_pair_audit.xlsx"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/ldp_cluster_analysis.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/ldp_cluster_analysis.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/calibration_distribution.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/calibration_distribution.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/per_source_metadata_table.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/per_source_metadata_table.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/LABDEPTHPENDING_ACR_ANALYSIS.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/reports/LABDEPTHPENDING_ACR_ANALYSIS.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/H2_INVERTED_MAPPING_DECISION.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/reports/H2_INVERTED_MAPPING_DECISION.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/PROCESS_INTEGRITY_REPORT.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/reports/PROCESS_INTEGRITY_REPORT.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/decision_0003_main.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03-amendment-1-claims-not-chains.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/decision_0003_amendment_1.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03-amendment-1-appendix-thresholds.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/decision_0003_amendment_1_appendix_thresholds.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "docs/DSR-HISTORY/cycle-a-iter-2-substrate-v6-2026-05-05.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/dsr_history/iter_2.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "docs/DSR-HISTORY/cycle-a-iter-3-2026-05-08.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/dsr_history/iter_3.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "docs/DSR-HISTORY/README.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/dsr_history/README.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/llm_assist_provenance_v7_addendum.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/llm_assist_provenance.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "agentic/briefs/2026-05-08-iteration-3-evidence-package.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/iteration_3_evidence_package.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "agentic/briefs/2026-05-09-olir-conversion-methodology.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/olir_conversion_methodology.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "agentic/briefs/2026-05-08-figshare-substrate-inventory.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/method/figshare_substrate_inventory.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-1-pw8-sa11-multi-claim-alignment-preview.png",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-1-pw8-sa11-multi-claim-alignment-preview.png"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-1-pw8-sa11-multi-claim-alignment.dot",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-1-pw8-sa11-multi-claim-alignment.dot"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-1-pw8-sa11-multi-claim-alignment.pdf",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-1-pw8-sa11-multi-claim-alignment.pdf"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-1-pw8-sa11-multi-claim-alignment.svg",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-1-pw8-sa11-multi-claim-alignment.svg"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-2-po1-sa1-strict-match-baseline-preview.png",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-2-po1-sa1-strict-match-baseline-preview.png"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-2-po1-sa1-strict-match-baseline.dot",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-2-po1-sa1-strict-match-baseline.dot"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-2-po1-sa1-strict-match-baseline.pdf",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-2-po1-sa1-strict-match-baseline.pdf"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-2-po1-sa1-strict-match-baseline.svg",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-2-po1-sa1-strict-match-baseline.svg"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-3-po2-ops15-genuine-divergence-preview.png",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-3-po2-ops15-genuine-divergence-preview.png"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-3-po2-ops15-genuine-divergence.dot",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-3-po2-ops15-genuine-divergence.dot"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-3-po2-ops15-genuine-divergence.pdf",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-3-po2-ops15-genuine-divergence.pdf"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figure-3-po2-ops15-genuine-divergence.svg",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/figure-3-po2-ops15-genuine-divergence.svg"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/figures/figures-p7-section-8-2-prompt-specs.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/figures/prompt_specs.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/appsec_core_v1_reference_doc.xml",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/reference_document.xml"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/appsec_core_v1_reference_doc.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/reference_document.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_validator_report.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/self_structural_validator_report.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_validator_report.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/self_structural_validator_report.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/jarsigner_verdict.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/jarsigner_verdict.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/OLIR_Schema.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/schema_1_1/OLIR_Schema.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/olir_schema_v1_1_validator_report.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/schema_1_1/validator_report.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/olir_exports/olir_schema_v1_1/olir_schema_v1_1_validator_report.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/olir/schema_1_1/validator_report.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/v5_normalization/grounding/run_pipeline_v7.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/grounding/run_pipeline_v7.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/v5_normalization/grounding/emit_substrate_v7_ttl.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/grounding/emit_substrate_v7_ttl.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/v5_normalization/grounding/ldp_cluster_analysis_v7.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/grounding/ldp_cluster_analysis_v7.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/v5_normalization/grounding/encode.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/grounding/encode.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/v5_normalization/grounding/score.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/grounding/score.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/v5_normalization/grounding/calibrate_thresholds.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/grounding/calibrate_thresholds.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/v5_normalization/grounding/pydantic_schemas.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/grounding/pydantic_schemas.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/cross_validate_ssdf_references_v7.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/cross_validation/cross_validate_ssdf_references_v7.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/cross_validate_ssdf_references_v7_filtered.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/cross_validation/cross_validate_ssdf_references_v7_filtered.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/cross_validate_scf_strm_v7.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/cross_validation/cross_validate_scf_strm_v7.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/frontier_match_and_audit_v7.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/cross_validation/frontier_match_and_audit_v7.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/figures/generate_p7_section_8_2_figures.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/figures/generate_p7_section_8_2_figures.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/olir/generate_olir_exports.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/olir/generate_olir_exports.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/olir/validate_olir_jsonschema.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/olir/validate_olir_jsonschema.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/build_source_provenance_consolidated.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/provenance/build_source_provenance_consolidated.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/build_sources_original_archive.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/sources_archive/build_sources_original_archive.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/build_paper7_bundle.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/build_paper7_bundle.py"
         }
       ]
     }

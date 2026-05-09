@@ -1,0 +1,24 @@
+meta:
+  pilot_id: safecode_agile_2012
+  status: source_captured
+  intended_use: ssdf_cross_reference_validation
+source_document:
+  source_document_id: SRC-SAFECODE-AGILE-2012
+  title: "Practical Security Stories and Security Tasks for Agile Development Environments"
+  publisher: SAFECode
+  source_kind: industry_guidance
+  framework_family: SAFECode
+  version: '1.0'
+  publication_date: '2012-07-17'
+  language: en
+  format_candidates:
+    - pdf
+  canonical_url: https://safecode.org/publication/SAFECode_Agile_Dev_Security0712.pdf
+  stability_reason: official_safecode_publication
+retrieval_policy:
+  preferred_artifact: pdf
+  retrieval_mode: web_download
+  local_snapshot_path: sources/safecode_agile_2012/SAFECode_Agile_Dev_Security0712.pdf
+  local_snapshot_format: pdf
+  checksum_sha256: 0261982c92b75a7644f5032c7cf380d51d396a6873636446eb9638ea92358617
+  retrieved_at: '2026-04-14'

@@ -1,0 +1,524 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "EU Cyber Resilience Act (selected articles) \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "EU Cyber Resilience Act (selected articles)",
+        "version": "Articles 13-24",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847",
+        "author": "European Union",
+        "release_date": "2024",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "solution_space_direct",
+        "pilot_id": "eu_cra"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 9,
+      "items_grounded": 4,
+      "items_lab_depth_pending": 5,
+      "olir_pairs_emitted": 25,
+      "primary_pairs": 4,
+      "secondary_pairs": 21,
+      "relationship_type_distribution": {
+        "equal": 0,
+        "intersects-with": 25,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-007",
+          "description": "Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture s\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000003 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-005",
+          "description": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.474,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.474; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000016 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-008",
+          "description": "Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.472,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.472; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000019 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.455,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.455; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000010 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.452,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.452; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000004 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-008",
+          "description": "Compliance Monitoring And Regulatory Change Feeds. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring exter\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.452,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.452; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.448,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.448; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000011 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-007",
+          "description": "Release Promotion And Reversible Rollout Assurance. Release authorization, verified artifact promotion, gated staging, deployment traceability, rollback readiness and controlled rollout must operate \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.444,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.444; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000020 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-008",
+          "description": "Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000001 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-010",
+          "description": "Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.436,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.436; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000008 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-003",
+          "description": "Structured Threat Analysis Method Selection. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. methodology",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.429,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.429; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000012 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000013 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-007",
+          "description": "Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000021 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000022 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-005",
+          "description": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000014 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.416,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.416; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000005 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-007",
+          "description": "Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000009 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-13",
+          "description": "CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requireme\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-004",
+          "description": "Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.409,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.409; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000018 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "CRA-ART-14",
+          "description": "CRA Article 14. Article 14 (Reporting obligations of manufacturers) requires manufacturers to notify ENISA of any actively exploited vulnerability contained in their product within 24 hours of becomi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-008",
+          "description": "Compliance Monitoring And Regulatory Change Feeds. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring exter\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000023 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-14",
+          "description": "CRA Article 14. Article 14 (Reporting obligations of manufacturers) requires manufacturers to notify ENISA of any actively exploited vulnerability contained in their product within 24 hours of becomi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-001",
+          "description": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000024 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "CRA-ART-18",
+          "description": "CRA Article 18. Article 18 (Obligations of importers) requires importers to place on the Union market only products with digital elements that comply with the essential cybersecurity requirements and\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-003",
+          "description": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.488,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.488; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000025 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-18",
+          "description": "CRA Article 18. Article 18 (Obligations of importers) requires importers to place on the Union market only products with digital elements that comply with the essential cybersecurity requirements and\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-005",
+          "description": "Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.454,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.454; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000026 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "CRA-ART-19",
+          "description": "CRA Article 19. Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requiremen\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-007",
+          "description": "Container Image Supply Integrity. Published container images must originate from approved bases, carry traceable inventory, and be promotable only under trusted supply-chain controls. Image supply is\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.449,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.449; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000027 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-19",
+          "description": "CRA Article 19. Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requiremen\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-003",
+          "description": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000028 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "CRA-ART-19",
+          "description": "CRA Article 19. Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requiremen\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-006",
+          "description": "Registry Allowlisting And Approved Source Enforcement. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. Technical controls that restrict dependency\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.419,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.419; threshold mapping \u2192 intersects-with. Claim EU_CRA-CLAIM-000029 at Mechanism level. Secondary disclosure."
+      }
+    ]
+  }
+}

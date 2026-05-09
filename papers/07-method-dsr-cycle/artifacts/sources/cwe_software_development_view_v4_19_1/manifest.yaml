@@ -1,0 +1,60 @@
+meta:
+  pilot_id: cwe_software_development_view_v4_19_1
+  status: source_captured
+  intended_use: weakness_oriented_external_source_for_appsec_core_normalization
+source_document:
+  source_document_id: SRC-CWE-VIEW-699-V4_19_1
+  title: CWE View 699 - Software Development
+  publisher: MITRE
+  source_kind: weakness_view
+  framework_family: CWE
+  version: '4.19.1'
+  revision: current
+  edition: current
+  publication_date: '2026-01-21'
+  downloads_page_last_updated: '2024-11-19'
+  language: en
+  format_candidates:
+    - html
+    - csv_zip
+    - xml_zip
+  canonical_url: https://cwe.mitre.org/data/definitions/699.html
+  origin_url: https://cwe.mitre.org/data/downloads.html
+  html_view_url: https://cwe.mitre.org/data/slices/699.html
+  csv_zip_url: https://cwe.mitre.org/data/csv/699.csv.zip
+  xml_zip_url: https://cwe.mitre.org/data/xml/views/699.xml.zip
+  stability_reason: official_mitre_published_view_and_machine_exports
+retrieval_policy:
+  preferred_artifact: xml_zip
+  alternate_artifacts:
+    - html
+    - csv_zip
+  retrieval_mode: deterministic_capture_completed
+  local_snapshot_paths:
+    - sources/cwe_software_development_view_v4_19_1/cwe-downloads.html
+    - sources/cwe_software_development_view_v4_19_1/cwe-view-699.html
+    - sources/cwe_software_development_view_v4_19_1/cwe-view-699.csv.zip
+    - sources/cwe_software_development_view_v4_19_1/cwe-view-699.xml.zip
+  signature_status: not_checked
+  captured_view_date: '2026-01-21'
+provenance_policy:
+  record_source_url: true
+  record_publication_date: true
+  record_retrieval_timestamp: true
+  record_checksum: true
+  keep_document_version_explicit: true
+normalization_targets:
+  primary:
+    - ControlObjective
+    - Practice
+    - Mechanism
+  secondary:
+    - Threat
+    - Artifact
+manual_integration_targets:
+  outputs:
+    - manual_gap_analysis
+    - traceability_publication_candidates
+  note: >
+    The output of this pilot is comparison material, not direct mutation of the
+    current manual contract.

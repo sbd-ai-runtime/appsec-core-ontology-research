@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "eu_nis2",
+  "status": "captured",
+  "source_family": "EU_REGULATION",
+  "captured_at": "2026-05-09T10:55:37Z",
+  "iteration": "Cycle A retroactive provenance reinforcement",
+  "iteration_authority": "programme-lead Pedro Farinha 2026-05-09",
+  "celex_id": "32022L2555",
+  "items": [
+    {
+      "artifact_id": "ART-EU-NIS2-PDF",
+      "source_document_id": "SRC-EU-NIS2",
+      "source_kind": "directive_pdf",
+      "title": "Network and Information Security Directive (NIS2) — Directive (EU) 2022/2555",
+      "origin_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555",
+      "celex_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+      "celex_id": "32022L2555",
+      "publisher": "European Union (EUR-Lex)",
+      "publication_date": "2022-12-27",
+      "language": "en",
+      "local_path": "sources/eu_nis2/eu_nis2.pdf",
+      "retrieved_at": "2026-05-09T10:55:37Z",
+      "format": "pdf",
+      "size_bytes": 1326245,
+      "sha256": "20d29e9c5300ae1095530996f04731311bf82bb7d4d6a7a0102cd0f075755cf3",
+      "version": "OJ L 333/80 27.12.2022",
+      "license": "EU public sector reuse policy (Commission Decision 2011/833/EU)"
+    }
+  ]
+}

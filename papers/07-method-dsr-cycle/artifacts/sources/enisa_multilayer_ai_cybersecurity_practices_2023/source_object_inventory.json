@@ -1,0 +1,174 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+  "status": "curated_framework_source_objects_ready",
+  "source_model": "framework_layer_curated_surfaces",
+  "summary": {
+    "source_objects": 6,
+    "context_surfaces": 1,
+    "control_surfaces": 2,
+    "sectoral_surfaces": 1,
+    "governance_surfaces": 2
+  },
+  "items": [
+    {
+      "source_object_id": "ENISA-AI-FAICP-CONTEXT",
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_document_id": "SRC-ENISA-FAICP-2023",
+      "source_object_type": "context_surface",
+      "statement_kind": "substantive",
+      "source_title": "Framework context, objectives and methodology",
+      "source_page_numbers": [
+        4,
+        5,
+        6
+      ],
+      "source_unit_ids": [
+        "SRC-ENISA-FAICP-2023:P004",
+        "SRC-ENISA-FAICP-2023:P005",
+        "SRC-ENISA-FAICP-2023:P006"
+      ],
+      "text_preview": "A multilayer framework for good cybersecurity practices for AI June 2023 3 EXECUTIVE SUMMARY In April 2021, the European Commission published a proposal for an artificial intelligence ( AI) regulation (1). The proposal focuses on high-risk AI systems, for which requirements include adequate level s for robustness, accuracy and cybersecurity. The pr oposed re",
+      "statement": "Framework context, objectives and methodology. ENISA's 2023 publication 'Multilayer Framework for Good Cybersecurity Practices for AI' (FAICP) responds to the proposed EU AI Act and addresses cybersecurity for AI systems across three layers: cybersecurity foundations for AI-hosting ICT environments, AI-specific cybersecurity practices and controls, and sector-specific cybersecurity practices for AI. The framework synthesises good practices and standards relevant for the security of AI systems, focusing on AI as part of a broader sociotechnical system. Methodology combines literature review, surveys of national preparedness and expert input from the ENISA Ad Hoc Working Group on Artificial Intelligence Cybersecurity. The framework complements existing ENISA work on AI threat landscape, AI cybersecurity challenges, and securing machine learning algorithms."
+    },
+    {
+      "source_object_id": "ENISA-AI-FAICP-LAYER-I",
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_document_id": "SRC-ENISA-FAICP-2023",
+      "source_object_type": "control_surface",
+      "statement_kind": "substantive",
+      "source_title": "Layer I - Cybersecurity foundations for AI-hosting ICT environments",
+      "source_page_numbers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "source_unit_ids": [
+        "SRC-ENISA-FAICP-2023:P007",
+        "SRC-ENISA-FAICP-2023:P008",
+        "SRC-ENISA-FAICP-2023:P009",
+        "SRC-ENISA-FAICP-2023:P010",
+        "SRC-ENISA-FAICP-2023:P011",
+        "SRC-ENISA-FAICP-2023:P012",
+        "SRC-ENISA-FAICP-2023:P013",
+        "SRC-ENISA-FAICP-2023:P014"
+      ],
+      "text_preview": "A multilayer framework for good cybersecurity practices for AI June 2023 6 2. FRAMEWORK FOR GOOD CYBERSECURITY PRACTICES FOR AI OVERVIEW OF THE FRAMEWORK The proposed FAICP framework is a simple approach to guide NCAs, individual AI stakeholders and the research community on how they can use the existing cybersecurity practices, what additional cybersecurity",
+      "statement": "Layer I — Cybersecurity foundations for AI-hosting ICT environments. Establishes that AI systems are deployed within general ICT environments and inherit the cybersecurity needs of those environments. Layer I addresses: secure ICT infrastructure, network security, identity and access management, secure software development practices, supply-chain security, cryptography, security monitoring and incident management, physical and environmental security, and governance. Foundational practices follow established frameworks (ISO 27001, NIST CSF, IEC 62443, etc.) but are noted in the AI context — for example, that compromise of general ICT can compromise the AI system that runs on it. Layer I is the prerequisite security baseline above which AI-specific controls (Layer II) are layered."
+    },
+    {
+      "source_object_id": "ENISA-AI-FAICP-LAYER-II",
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_document_id": "SRC-ENISA-FAICP-2023",
+      "source_object_type": "control_surface",
+      "statement_kind": "substantive",
+      "source_title": "Layer II - AI-specific cybersecurity practices and controls",
+      "source_page_numbers": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "source_unit_ids": [
+        "SRC-ENISA-FAICP-2023:P015",
+        "SRC-ENISA-FAICP-2023:P016",
+        "SRC-ENISA-FAICP-2023:P017",
+        "SRC-ENISA-FAICP-2023:P018",
+        "SRC-ENISA-FAICP-2023:P019",
+        "SRC-ENISA-FAICP-2023:P020",
+        "SRC-ENISA-FAICP-2023:P021",
+        "SRC-ENISA-FAICP-2023:P022",
+        "SRC-ENISA-FAICP-2023:P023"
+      ],
+      "text_preview": "A multilayer framework for good cybersecurity practices for AI June 2023 14 • AI assets and p rocedures • AI threat assessment • AI security management • AI-related standards • Ethical and t rustworthy AI • Tools • Networks and initiatives AI legislation The cybersecurity legislation presented in the first layer is complemented with AI -specific legislative ",
+      "statement": "Layer II — AI-specific cybersecurity practices and controls. Addresses controls that target AI's distinctive cybersecurity properties: threat modelling for AI assets and lifecycle phases (data, model, deployment, operation); AI threat assessment covering data poisoning, model evasion, model inversion, membership inference, model theft, supply-chain attacks on AI; AI-specific access management and segmentation between training data, models, inference endpoints; AI security management including monitoring of model drift and performance; AI standards alignment (ISO/IEC 23894, ISO/IEC 5338, NIST AI RMF); ethical and trustworthy AI considerations as adjacent to cybersecurity; documentation and audit trail of AI artifacts (training data, model weights, hyperparameters, evaluation results)."
+    },
+    {
+      "source_object_id": "ENISA-AI-FAICP-LAYER-III",
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_document_id": "SRC-ENISA-FAICP-2023",
+      "source_object_type": "sectoral_surface",
+      "statement_kind": "substantive",
+      "source_title": "Layer III - Sector-specific cybersecurity good practices for AI",
+      "source_page_numbers": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "source_unit_ids": [
+        "SRC-ENISA-FAICP-2023:P024",
+        "SRC-ENISA-FAICP-2023:P025",
+        "SRC-ENISA-FAICP-2023:P026",
+        "SRC-ENISA-FAICP-2023:P027"
+      ],
+      "text_preview": "A multilayer framework for good cybersecurity practices for AI June 2023 23 and trustworthy AI. • ALLAI73 is an independent Dutch organi sation dedicated to drive and foster responsible AI . ALLAI ’s vision is responsible AI for a world where AI is developed, deployed and used responsibly, i.e. in a safe and sustainable manner and in line with ethical princi",
+      "statement": "Layer III — Sector-specific cybersecurity practices for AI. Recognises that AI systems are deployed across sectors with their own regulatory and security contexts (health, finance, transport, energy, critical infrastructure). Layer III calls for sector authorities and industry to develop sector-specific guidance that adapts Layers I and II to sector use cases, regulatory regimes (e.g., GDPR for personal data, MDR for medical devices, DORA for financial entities), and threat profiles. ENISA recommends a coordinated approach between sector authorities, ENISA, and the European AI Board to harmonise sector AI cybersecurity guidance."
+    },
+    {
+      "source_object_id": "ENISA-AI-FAICP-SURVEY",
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_document_id": "SRC-ENISA-FAICP-2023",
+      "source_object_type": "governance_surface",
+      "statement_kind": "substantive",
+      "source_title": "Survey analysis of monitoring, enforcement and national preparedness",
+      "source_page_numbers": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "source_unit_ids": [
+        "SRC-ENISA-FAICP-2023:P028",
+        "SRC-ENISA-FAICP-2023:P029",
+        "SRC-ENISA-FAICP-2023:P030",
+        "SRC-ENISA-FAICP-2023:P031",
+        "SRC-ENISA-FAICP-2023:P032",
+        "SRC-ENISA-FAICP-2023:P033",
+        "SRC-ENISA-FAICP-2023:P034",
+        "SRC-ENISA-FAICP-2023:P035",
+        "SRC-ENISA-FAICP-2023:P036"
+      ],
+      "text_preview": "A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 regulation contains various requirements for providers and operators of AI systems, including cybersecurity requirements for high-risk AI systems. The objective of the survey was to collect information from the EU NCAs about existing ",
+      "statement": "Survey analysis of monitoring, enforcement and national preparedness for AI cybersecurity. The publication includes a survey of EU Member State authorities and stakeholders on the readiness for AI cybersecurity monitoring and enforcement. Findings include: heterogeneous national maturity levels; a need for harmonisation of metrics for AI cybersecurity; gaps in cross-border information-sharing about AI incidents; and the need for sectoral guidance to translate generic AI risk principles into operational controls. The survey complements the framework's three-layer architecture by identifying where Member States need additional support to operationalise the practices."
+    },
+    {
+      "source_object_id": "ENISA-AI-FAICP-CONCLUSIONS",
+      "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_document_id": "SRC-ENISA-FAICP-2023",
+      "source_object_type": "governance_surface",
+      "statement_kind": "substantive",
+      "source_title": "Conclusions and way forward for AI cybersecurity practices",
+      "source_page_numbers": [
+        37,
+        38
+      ],
+      "source_unit_ids": [
+        "SRC-ENISA-FAICP-2023:P037",
+        "SRC-ENISA-FAICP-2023:P038"
+      ],
+      "text_preview": "A multilayer framework for good cybersecurity practices for AI June 2023 36 4. CONCLUSIONS AND THE WAY FORWARD The report provide s a framework (FAICP) consisting of three layers (basic cybersecurity relevant to AI, AI - specific cybersecurity and sector -specific cybersecurity for AI) that categori ses the various identified best practices and standards in ",
+      "statement": "Conclusions and forward-looking recommendations. ENISA's recommendations include: develop sector-specific AI cybersecurity guidance; harmonise terminology between AI and cybersecurity domains; provide training and awareness; foster collaboration between AI providers, deployers and security professionals; integrate AI risk considerations into existing risk-management frameworks rather than creating parallel tracks; and align upcoming regulatory instruments (notably the AI Act) with established cybersecurity frameworks (NIS2, CRA) so that AI-specific requirements complement rather than duplicate general cybersecurity duties."
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-03T18:53:44.127912+00:00",
+    "revision_reason": "Replace placeholder bodies with curated obligation summaries grounded in primary source + KG working notes.",
+    "rule_version": "regulatory_curated_bodies/1.0"
+  }
+}

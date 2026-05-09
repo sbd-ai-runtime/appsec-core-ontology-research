@@ -1,0 +1,777 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "owasp_top_10_2021",
+  "is_iteration_3_pilot": false,
+  "n_items": 10,
+  "items": [
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A01-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A01-2021",
+      "source_text": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000001",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00001",
+          "item_ref": "TOP10-A01-2021",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5273329615592957,
+          "disambiguation_margin": 0.149446040391922,
+          "rationale_snippet": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000002",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00001",
+          "item_ref": "TOP10-A01-2021",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4771091341972351,
+          "disambiguation_margin": 0.05683714151382446,
+          "rationale_snippet": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000003",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00001",
+          "item_ref": "TOP10-A01-2021",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4614165723323822,
+          "disambiguation_margin": 0.1567906141281128,
+          "rationale_snippet": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000004",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00001",
+          "item_ref": "TOP10-A01-2021",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4424286484718323,
+          "disambiguation_margin": 0.1415102481842041,
+          "rationale_snippet": "Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A02-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A02-2021",
+      "source_text": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets require extra protection, mainly if that data falls under privacy laws or regulations.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000005",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00002",
+          "item_ref": "TOP10-A02-2021",
+          "target_core_entity": "ac:ACO_ITS_002",
+          "target_id": "ACO-ITS-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5413390398025513,
+          "disambiguation_margin": 0.08517438173294067,
+          "rationale_snippet": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000006",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00002",
+          "item_ref": "TOP10-A02-2021",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.47427064180374146,
+          "disambiguation_margin": 0.11554586887359619,
+          "rationale_snippet": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000007",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00002",
+          "item_ref": "TOP10-A02-2021",
+          "target_core_entity": "ac:ACO_IAT_001",
+          "target_id": "ACO-IAT-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46420276165008545,
+          "disambiguation_margin": 0.04561173915863037,
+          "rationale_snippet": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000008",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00002",
+          "item_ref": "TOP10-A02-2021",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4598592519760132,
+          "disambiguation_margin": 0.10182899236679077,
+          "rationale_snippet": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000009",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00002",
+          "item_ref": "TOP10-A02-2021",
+          "target_core_entity": "ac:ACP_IVF_004",
+          "target_id": "ACP-IVF-004",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4480297863483429,
+          "disambiguation_margin": 0.1115352213382721,
+          "rationale_snippet": "Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A03-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A03-2021",
+      "source_text": "Injection. An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application; dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter; hostile data is used within ORM search parameters to extract additional, sensitive records.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000010",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00003",
+          "item_ref": "TOP10-A03-2021",
+          "target_core_entity": "ac:ACO_IVF_003",
+          "target_id": "ACO-IVF-003",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.6287899613380432,
+          "disambiguation_margin": 0.23061364889144897,
+          "rationale_snippet": "Injection. An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application; dynamic queries or non-parameterized calls without context-aware ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000011",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00003",
+          "item_ref": "TOP10-A03-2021",
+          "target_core_entity": "ac:ACP_IVF_003",
+          "target_id": "ACP-IVF-003",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4576088786125183,
+          "disambiguation_margin": 0.12944072484970093,
+          "rationale_snippet": "Injection. An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application; dynamic queries or non-parameterized calls without context-aware ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A04-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A04-2021",
+      "source_text": "Insecure Design. Insecure design is a broad category representing different weaknesses, expressed as missing or ineffective control design. Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00004"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "OWASP_TOP_10_2021-LIFTED-00004"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A05-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A05-2021",
+      "source_text": "Security Misconfiguration. The application might be vulnerable if the application is missing appropriate security hardening across any part of the application stack or improperly configured permissions on cloud services; unnecessary features are enabled or installed; default accounts and their passwords are still enabled and unchanged.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000012",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00005",
+          "item_ref": "TOP10-A05-2021",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.49046799540519714,
+          "disambiguation_margin": 0.12399408221244812,
+          "rationale_snippet": "Security Misconfiguration. The application might be vulnerable if the application is missing appropriate security hardening across any part of the application stack or improperly configured permission",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A06-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A06-2021",
+      "source_text": "Vulnerable and Outdated Components. You are likely vulnerable if you do not know the versions of all components you use. If the software is vulnerable, unsupported, or out of date, including the OS, web/application server, DBMS, applications, APIs and all components, runtime environments, and libraries.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000013",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00006",
+          "item_ref": "TOP10-A06-2021",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4433607757091522,
+          "disambiguation_margin": 0.05610412359237671,
+          "rationale_snippet": "Vulnerable and Outdated Components. You are likely vulnerable if you do not know the versions of all components you use. If the software is vulnerable, unsupported, or out of date, including the OS, w",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000014",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00006",
+          "item_ref": "TOP10-A06-2021",
+          "target_core_entity": "ac:ACM_TMR_003",
+          "target_id": "ACM-TMR-003",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.409565269947052,
+          "disambiguation_margin": 0.08364063501358032,
+          "rationale_snippet": "Vulnerable and Outdated Components. You are likely vulnerable if you do not know the versions of all components you use. If the software is vulnerable, unsupported, or out of date, including the OS, w",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A07-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A07-2021",
+      "source_text": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be authentication weaknesses if the application permits automated attacks such as credential stuffing or brute force.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000015",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00007",
+          "item_ref": "TOP10-A07-2021",
+          "target_core_entity": "ac:ACO_IAT_001",
+          "target_id": "ACO-IAT-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.6340370178222656,
+          "disambiguation_margin": 0.12655174732208252,
+          "rationale_snippet": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000016",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00007",
+          "item_ref": "TOP10-A07-2021",
+          "target_core_entity": "ac:ACP_IAT_001",
+          "target_id": "ACP-IAT-001",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.6015001535415649,
+          "disambiguation_margin": 0.12562963366508484,
+          "rationale_snippet": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000017",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00007",
+          "item_ref": "TOP10-A07-2021",
+          "target_core_entity": "ac:ACM_IAT_001",
+          "target_id": "ACM-IAT-001",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5371679067611694,
+          "disambiguation_margin": 0.06156167387962341,
+          "rationale_snippet": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000018",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00007",
+          "item_ref": "TOP10-A07-2021",
+          "target_core_entity": "ac:ACP_ITS_002",
+          "target_id": "ACP-ITS-002",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5026584267616272,
+          "disambiguation_margin": 0.08281669020652771,
+          "rationale_snippet": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000019",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00007",
+          "item_ref": "TOP10-A07-2021",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.49261802434921265,
+          "disambiguation_margin": 0.10081374645233154,
+          "rationale_snippet": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000020",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00007",
+          "item_ref": "TOP10-A07-2021",
+          "target_core_entity": "ac:ACO_SPC_004",
+          "target_id": "ACO-SPC-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4787159562110901,
+          "disambiguation_margin": 0.12256109714508057,
+          "rationale_snippet": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000021",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00007",
+          "item_ref": "TOP10-A07-2021",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.43902748823165894,
+          "disambiguation_margin": 0.11300143599510193,
+          "rationale_snippet": "Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A08-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A08-2021",
+      "source_text": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and CDNs.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000022",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5066205859184265,
+          "disambiguation_margin": 0.05512097477912903,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000023",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5053553581237793,
+          "disambiguation_margin": 0.11606824398040771,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000024",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.49860119819641113,
+          "disambiguation_margin": 0.17435717582702637,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000025",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.49779605865478516,
+          "disambiguation_margin": 0.12368887662887573,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000026",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACO_ITS_003",
+          "target_id": "ACO-ITS-003",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.46812453866004944,
+          "disambiguation_margin": 0.11890372633934021,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000027",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACM_SCBI_004",
+          "target_id": "ACM-SCBI-004",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4601002335548401,
+          "disambiguation_margin": 0.12333518266677856,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000028",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACP_SCBI_006",
+          "target_id": "ACP-SCBI-006",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.45809537172317505,
+          "disambiguation_margin": 0.06725937128067017,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000029",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4533124268054962,
+          "disambiguation_margin": 0.08984389901161194,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000030",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACP_ITS_004",
+          "target_id": "ACP-ITS-004",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.43844863772392273,
+          "disambiguation_margin": 0.08361417055130005,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000031",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACM_ITS_004",
+          "target_id": "ACM-ITS-004",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.42648541927337646,
+          "disambiguation_margin": 0.08459800481796265,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000032",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACO_RPR_004",
+          "target_id": "ACO-RPR-004",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4184145927429199,
+          "disambiguation_margin": 0.047817736864089966,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000033",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00008",
+          "item_ref": "TOP10-A08-2021",
+          "target_core_entity": "ac:ACM_TSV_004",
+          "target_id": "ACM-TSV-004",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4097413122653961,
+          "disambiguation_margin": 0.14155009388923645,
+          "rationale_snippet": "Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A09-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A09-2021",
+      "source_text": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, detection, monitoring, and active response occurs any time.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000034",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACM_SLG_004",
+          "target_id": "ACM-SLG-004",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.6764583587646484,
+          "disambiguation_margin": 0.09117376804351807,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000035",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACP_ITS_006",
+          "target_id": "ACP-ITS-006",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5781501531600952,
+          "disambiguation_margin": 0.26457107067108154,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000036",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5763944387435913,
+          "disambiguation_margin": 0.1475619673728943,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000037",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACO_IVF_006",
+          "target_id": "ACO-IVF-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5689132809638977,
+          "disambiguation_margin": 0.11775246262550354,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000038",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.56101393699646,
+          "disambiguation_margin": 0.18436214327812195,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000039",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACM_ITS_005",
+          "target_id": "ACM-ITS-005",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5142872333526611,
+          "disambiguation_margin": 0.15258312225341797,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000040",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5022016763687134,
+          "disambiguation_margin": 0.053777098655700684,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000041",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5011347532272339,
+          "disambiguation_margin": 0.10945788025856018,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000042",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACP_RPR_010",
+          "target_id": "ACP-RPR-010",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4735856056213379,
+          "disambiguation_margin": 0.08776360750198364,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000043",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACO_TSV_003",
+          "target_id": "ACO-TSV-003",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.46754375100135803,
+          "disambiguation_margin": 0.09785881638526917,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000044",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4669376611709595,
+          "disambiguation_margin": 0.04612302780151367,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000045",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00009",
+          "item_ref": "TOP10-A09-2021",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4089444875717163,
+          "disambiguation_margin": 0.07035323977470398,
+          "rationale_snippet": "Security Logging and Monitoring Failures. This category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_top_10_2021/TOP10-A10-2021",
+      "source": "owasp_top_10_2021",
+      "source_object_id": "TOP10-A10-2021",
+      "source_text": "Server-Side Request Forgery (SSRF). SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination, even when protected by a firewall, VPN, or another type of network access control list.",
+      "source_lifted_rows": [
+        "OWASP_TOP_10_2021-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_TOP_10_2021-CLAIM-000046",
+          "lifted_row_ref": "OWASP_TOP_10_2021-LIFTED-00010",
+          "item_ref": "TOP10-A10-2021",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4427514672279358,
+          "disambiguation_margin": 0.06418272852897644,
+          "rationale_snippet": "Server-Side Request Forgery (SSRF). SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+pilot_id: slsa_spec_v1_0_build_track
+status: source_captured
+source_collection:
+  source_collection_id: SRC-SLSA-SPEC-V1_0-BUILD-TRACK
+  title: SLSA v1.0 Build Track and Verification Surface
+  publisher: SLSA project
+  source_kind: website_snapshot
+  format: html
+  version: '1.0'
+  publication_date: '2023-05-18'
+  license: Apache-2.0
+documents:
+  - source_document_id: SRC-SLSA-V1_0-INDEX
+    title: SLSA Specification
+    canonical_url: https://slsa.dev/spec/v1.0/
+    local_source_path: sources/slsa_spec_v1_0_build_track/index.html
+  - source_document_id: SRC-SLSA-V1_0-LEVELS
+    title: Security Levels
+    canonical_url: https://slsa.dev/spec/v1.0/levels
+    local_source_path: sources/slsa_spec_v1_0_build_track/levels.html
+  - source_document_id: SRC-SLSA-V1_0-PRINCIPLES
+    title: Guiding Principles
+    canonical_url: https://slsa.dev/spec/v1.0/principles
+    local_source_path: sources/slsa_spec_v1_0_build_track/principles.html
+  - source_document_id: SRC-SLSA-V1_0-REQUIREMENTS
+    title: Producing Artifacts
+    canonical_url: https://slsa.dev/spec/v1.0/requirements
+    local_source_path: sources/slsa_spec_v1_0_build_track/requirements.html
+  - source_document_id: SRC-SLSA-V1_0-VERIFYING-ARTIFACTS
+    title: Verifying Artifacts
+    canonical_url: https://slsa.dev/spec/v1.0/verifying-artifacts
+    local_source_path: sources/slsa_spec_v1_0_build_track/verifying_artifacts.html

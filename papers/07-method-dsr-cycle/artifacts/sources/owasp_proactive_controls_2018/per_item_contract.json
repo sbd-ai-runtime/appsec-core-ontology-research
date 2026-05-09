@@ -1,0 +1,1062 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "owasp_proactive_controls_2018",
+  "is_iteration_3_pilot": false,
+  "n_items": 10,
+  "items": [
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C1",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C1",
+      "source_text": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security requirements are derived from industry standards, applicable laws, and a history of past vulnerabilities. Security requirements define new features or additions to existing features to solve a specific security problem or eliminate a potential vulnerability.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000001",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACP_TMR_008",
+          "target_id": "ACP-TMR-008",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.8004352450370789,
+          "disambiguation_margin": 0.1623055338859558,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000002",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.7231230735778809,
+          "disambiguation_margin": 0.31502071022987366,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000003",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACM_TMR_007",
+          "target_id": "ACM-TMR-007",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.582327127456665,
+          "disambiguation_margin": 0.11328724026679993,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000004",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5321256518363953,
+          "disambiguation_margin": 0.11862808465957642,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000005",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACP_RPR_008",
+          "target_id": "ACP-RPR-008",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5293691158294678,
+          "disambiguation_margin": 0.07667005062103271,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000006",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4702925384044647,
+          "disambiguation_margin": 0.10152453184127808,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000007",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.46355295181274414,
+          "disambiguation_margin": 0.12310048937797546,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000008",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACO_IAT_001",
+          "target_id": "ACO-IAT-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4398244619369507,
+          "disambiguation_margin": 0.04820132255554199,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000009",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACO_ITS_002",
+          "target_id": "ACO-ITS-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4282909035682678,
+          "disambiguation_margin": 0.08784818649291992,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000010",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42503008246421814,
+          "disambiguation_margin": 0.0906047523021698,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000011",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00001",
+          "item_ref": "OPC-C1",
+          "target_core_entity": "ac:ACP_TSV_001",
+          "target_id": "ACP-TSV-001",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.42297691106796265,
+          "disambiguation_margin": 0.10601833462715149,
+          "rationale_snippet": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security req",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C2",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C2",
+      "source_text": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation flaws. A developer writing an application from scratch might not have sufficient knowledge, time, or budget to properly implement or maintain security features. Leveraging security frameworks helps accomplish security goals more efficiently and accurately.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000012",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4997887909412384,
+          "disambiguation_margin": 0.06421950459480286,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000013",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.49621331691741943,
+          "disambiguation_margin": 0.09490060806274414,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000014",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4932640790939331,
+          "disambiguation_margin": 0.2000691294670105,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000015",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACP_TMR_008",
+          "target_id": "ACP-TMR-008",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.47516781091690063,
+          "disambiguation_margin": 0.06543624401092529,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000016",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.47369781136512756,
+          "disambiguation_margin": 0.09759056568145752,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000017",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACM_TMR_002",
+          "target_id": "ACM-TMR-002",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4698063135147095,
+          "disambiguation_margin": 0.05383419990539551,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000018",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.46700358390808105,
+          "disambiguation_margin": 0.18276649713516235,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000019",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACP_RPR_008",
+          "target_id": "ACP-RPR-008",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4617427587509155,
+          "disambiguation_margin": 0.0680396556854248,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000020",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4191471338272095,
+          "disambiguation_margin": 0.05749201774597168,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000021",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00002",
+          "item_ref": "OPC-C2",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4189329147338867,
+          "disambiguation_margin": 0.09948557615280151,
+          "rationale_snippet": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fla",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C3",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C3",
+      "source_text": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of database connections, secure authentication to databases, and secure communication with databases.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000022",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00003",
+          "item_ref": "OPC-C3",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.48855751752853394,
+          "disambiguation_margin": 0.15403437614440918,
+          "rationale_snippet": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of data",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000023",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00003",
+          "item_ref": "OPC-C3",
+          "target_core_entity": "ac:ACP_SPC_002",
+          "target_id": "ACP-SPC-002",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4831581711769104,
+          "disambiguation_margin": 0.19011223316192627,
+          "rationale_snippet": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of data",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000024",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00003",
+          "item_ref": "OPC-C3",
+          "target_core_entity": "ac:ACO_SPC_002",
+          "target_id": "ACO-SPC-002",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.46690085530281067,
+          "disambiguation_margin": 0.12328532338142395,
+          "rationale_snippet": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of data",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000025",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00003",
+          "item_ref": "OPC-C3",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4533229172229767,
+          "disambiguation_margin": 0.1709648072719574,
+          "rationale_snippet": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of data",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000026",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00003",
+          "item_ref": "OPC-C3",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4150019884109497,
+          "disambiguation_margin": 0.11608880758285522,
+          "rationale_snippet": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of data",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C4",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C4",
+      "source_text": "Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some different but equivalent form that is no longer dangerous in the target interpreter. Escaping involves adding a special character before the character/string to avoid it being misinterpreted.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000027",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00004",
+          "item_ref": "OPC-C4",
+          "target_core_entity": "ac:ACP_IVF_007",
+          "target_id": "ACP-IVF-007",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.6367177963256836,
+          "disambiguation_margin": 0.17042630910873413,
+          "rationale_snippet": "Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some dif",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000028",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00004",
+          "item_ref": "OPC-C4",
+          "target_core_entity": "ac:ACO_IVF_008",
+          "target_id": "ACO-IVF-008",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.6038767099380493,
+          "disambiguation_margin": 0.06523233652114868,
+          "rationale_snippet": "Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some dif",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000029",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00004",
+          "item_ref": "OPC-C4",
+          "target_core_entity": "ac:ACM_IVF_005",
+          "target_id": "ACM-IVF-005",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.6009347438812256,
+          "disambiguation_margin": 0.3095018267631531,
+          "rationale_snippet": "Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some dif",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C5",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C5",
+      "source_text": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of structured fields (e.g., SSN, date, currency symbol). Semantic validation should enforce correctness of their values in the specific business context (e.g., start date is before end date, price is within expected range).",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000030",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00005",
+          "item_ref": "OPC-C5",
+          "target_core_entity": "ac:ACO_IVF_001",
+          "target_id": "ACO-IVF-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.6508744955062866,
+          "disambiguation_margin": 0.09233033657073975,
+          "rationale_snippet": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000031",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00005",
+          "item_ref": "OPC-C5",
+          "target_core_entity": "ac:ACP_IVF_001",
+          "target_id": "ACP-IVF-001",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.6462339162826538,
+          "disambiguation_margin": 0.09523630142211914,
+          "rationale_snippet": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000032",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00005",
+          "item_ref": "OPC-C5",
+          "target_core_entity": "ac:ACM_IVF_003",
+          "target_id": "ACM-IVF-003",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.632861316204071,
+          "disambiguation_margin": 0.1424848437309265,
+          "rationale_snippet": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000033",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00005",
+          "item_ref": "OPC-C5",
+          "target_core_entity": "ac:ACM_ATB_005",
+          "target_id": "ACM-ATB-005",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.47040897607803345,
+          "disambiguation_margin": 0.22979819774627686,
+          "rationale_snippet": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000034",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00005",
+          "item_ref": "OPC-C5",
+          "target_core_entity": "ac:ACO_ATB_006",
+          "target_id": "ACO-ATB-006",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4590227007865906,
+          "disambiguation_margin": 0.1480122208595276,
+          "rationale_snippet": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000035",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00005",
+          "item_ref": "OPC-C5",
+          "target_core_entity": "ac:ACP_ATB_007",
+          "target_id": "ACP-ATB-007",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4245319962501526,
+          "disambiguation_margin": 0.195462167263031,
+          "rationale_snippet": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C6",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C6",
+      "source_text": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an individual or entity is who they claim to be. Session management is a process by which a server maintains the state of the users authentication so that the user may continue to use the system without re-authenticating.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000036",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00006",
+          "item_ref": "OPC-C6",
+          "target_core_entity": "ac:ACM_IAT_001",
+          "target_id": "ACM-IAT-001",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5348447561264038,
+          "disambiguation_margin": 0.060584425926208496,
+          "rationale_snippet": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indiv",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000037",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00006",
+          "item_ref": "OPC-C6",
+          "target_core_entity": "ac:ACO_IAT_007",
+          "target_id": "ACO-IAT-007",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5313645601272583,
+          "disambiguation_margin": 0.06855565309524536,
+          "rationale_snippet": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indiv",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000038",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00006",
+          "item_ref": "OPC-C6",
+          "target_core_entity": "ac:ACP_ITS_002",
+          "target_id": "ACP-ITS-002",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4940429925918579,
+          "disambiguation_margin": 0.09579211473464966,
+          "rationale_snippet": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indiv",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000039",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00006",
+          "item_ref": "OPC-C6",
+          "target_core_entity": "ac:ACM_SPC_002",
+          "target_id": "ACM-SPC-002",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.47949349880218506,
+          "disambiguation_margin": 0.13464140892028809,
+          "rationale_snippet": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indiv",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000040",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00006",
+          "item_ref": "OPC-C6",
+          "target_core_entity": "ac:ACP_SPC_004",
+          "target_id": "ACP-SPC-004",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4573882222175598,
+          "disambiguation_margin": 0.09951242804527283,
+          "rationale_snippet": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indiv",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000041",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00006",
+          "item_ref": "OPC-C6",
+          "target_core_entity": "ac:ACO_ITS_001",
+          "target_id": "ACO-ITS-001",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.42622900009155273,
+          "disambiguation_margin": 0.1303296685218811,
+          "rationale_snippet": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indiv",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C7",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C7",
+      "source_text": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting and revoking those privileges. Access control functionality often spans many areas of software depending on the complexity of the access control system.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000042",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.7043657302856445,
+          "disambiguation_margin": 0.27099382877349854,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000043",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACO_IAT_002",
+          "target_id": "ACO-IAT-002",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.6419724225997925,
+          "disambiguation_margin": 0.07692694664001465,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000044",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACP_IAT_002",
+          "target_id": "ACP-IAT-002",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5886443853378296,
+          "disambiguation_margin": 0.04782545566558838,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000045",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACM_ITS_003",
+          "target_id": "ACM-ITS-003",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5104143619537354,
+          "disambiguation_margin": 0.048313021659851074,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000046",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.47436070442199707,
+          "disambiguation_margin": 0.20446732640266418,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000047",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACO_SCBI_003",
+          "target_id": "ACO-SCBI-003",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4588266611099243,
+          "disambiguation_margin": 0.0757935643196106,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000048",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACP_SCBI_005",
+          "target_id": "ACP-SCBI-005",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.45209839940071106,
+          "disambiguation_margin": 0.1384335160255432,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000049",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00007",
+          "item_ref": "OPC-C7",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.44829875230789185,
+          "disambiguation_margin": 0.050244808197021484,
+          "rationale_snippet": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C8",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C8",
+      "source_text": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws (EU General Data Protection Regulation GDPR), financial data protection rules such as PCI Data Security Standard (PCI DSS) or other regulations. Attackers can steal data from web and webservice applications in a number of ways.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000050",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00008",
+          "item_ref": "OPC-C8",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4511754512786865,
+          "disambiguation_margin": 0.22218281030654907,
+          "rationale_snippet": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls unde",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000051",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00008",
+          "item_ref": "OPC-C8",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.44455233216285706,
+          "disambiguation_margin": 0.12761607766151428,
+          "rationale_snippet": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls unde",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000052",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00008",
+          "item_ref": "OPC-C8",
+          "target_core_entity": "ac:ACO_SLG_003",
+          "target_id": "ACO-SLG-003",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4433628022670746,
+          "disambiguation_margin": 0.09646293520927429,
+          "rationale_snippet": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls unde",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000053",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00008",
+          "item_ref": "OPC-C8",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4203985333442688,
+          "disambiguation_margin": 0.15061858296394348,
+          "rationale_snippet": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls unde",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000054",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00008",
+          "item_ref": "OPC-C8",
+          "target_core_entity": "ac:ACO_ATB_002",
+          "target_id": "ACO-ATB-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4165530800819397,
+          "disambiguation_margin": 0.12185585498809814,
+          "rationale_snippet": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls unde",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C9",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C9",
+      "source_text": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security information during the runtime operation of an application. Monitoring is the live review of application and security logs using various forms of automation. The same tools and patterns can be used for operations, debugging and security purposes.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000055",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACO_SLG_007",
+          "target_id": "ACO-SLG-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.6506272554397583,
+          "disambiguation_margin": 0.07014834880828857,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000056",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACP_ITS_006",
+          "target_id": "ACP-ITS-006",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.6004684567451477,
+          "disambiguation_margin": 0.3552166223526001,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000057",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5704255104064941,
+          "disambiguation_margin": 0.2867273986339569,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000058",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5587867498397827,
+          "disambiguation_margin": 0.15995857119560242,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000059",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACM_ITS_005",
+          "target_id": "ACM-ITS-005",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5439715385437012,
+          "disambiguation_margin": 0.2517094016075134,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000060",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACO_IVF_006",
+          "target_id": "ACO-IVF-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5294812917709351,
+          "disambiguation_margin": 0.21395966410636902,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000061",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46282100677490234,
+          "disambiguation_margin": 0.17906242609024048,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000062",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACM_TMR_008",
+          "target_id": "ACM-TMR-008",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.45953643321990967,
+          "disambiguation_margin": 0.08750468492507935,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000063",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4538329243659973,
+          "disambiguation_margin": 0.09929490089416504,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000064",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.44548994302749634,
+          "disambiguation_margin": 0.17717361450195312,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000065",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.44256556034088135,
+          "disambiguation_margin": 0.05116701126098633,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000066",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACO_TSV_004",
+          "target_id": "ACO-TSV-004",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.42482903599739075,
+          "disambiguation_margin": 0.049077123403549194,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000067",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00009",
+          "item_ref": "OPC-C9",
+          "target_core_entity": "ac:ACP_IVF_006",
+          "target_id": "ACP-IVF-006",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.42257925868034363,
+          "disambiguation_margin": 0.0727294385433197,
+          "rationale_snippet": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informatio",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_proactive_controls_2018/OPC-C10",
+      "source": "owasp_proactive_controls_2018",
+      "source_object_id": "OPC-C10",
+      "source_text": "Handle All Errors and Exceptions. Exception handling is a programming concept that allows an application to respond to different error states (like network down, or database connection failed, etc) in various ways. Handling exceptions and errors correctly is critical to making your code reliable and secure.",
+      "source_lifted_rows": [
+        "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000068",
+          "lifted_row_ref": "OWASP_PROACTIVE_CONTROLS_2018-LIFTED-00010",
+          "item_ref": "OPC-C10",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5015608072280884,
+          "disambiguation_margin": 0.05080151557922363,
+          "rationale_snippet": "Handle All Errors and Exceptions. Exception handling is a programming concept that allows an application to respond to different error states (like network down, or database connection failed, etc) in",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+meta:
+  pilot_id: owasp_dsomm
+  status: source_captured
+  intended_use: devsecops_maturity_external_source_for_appsec_core_and_chapter_maturity_evaluation
+source_document:
+  source_document_id: SRC-OWASP-DSOMM-V4_2_0
+  title: OWASP DevSecOps Maturity Model
+  subtitle: Generated model snapshot 4.2.0
+  publisher: OWASP Foundation / OWASP DevSecOps Project
+  source_kind: maturity_model
+  framework_family: OWASP DSOMM
+  version: '4.2.0'
+  revision: generated_model_snapshot
+  edition: released_model_yaml_with_frozen_data_repo_commit
+  publication_date: '2026-04-05'
+  language: en
+  format_candidates:
+    - html_application_content
+    - generated_model_yaml
+    - github_data_snapshot_zip
+  canonical_url: https://dsomm.owasp.org
+  origin_url: https://owasp.org/www-project-devsecops-maturity-model/
+  supporting_project_url: https://devsecops.owasp.org/
+  supporting_repo_url: https://github.com/devsecopsmaturitymodel/DevSecOps-MaturityModel-data
+  stability_reason: official_owasp_project_page_plus_public_site_and_frozen_data_repo_snapshot
+  capture_note: >
+    The public project exposes DSOMM through a live site and related public
+    repositories. This pilot freezes the content line using generated model
+    snapshot `4.2.0` from `DevSecOps-MaturityModel-data` commit
+    `fda3b250ae9325b8c10f23318c9f0768eaa60b98`, while also capturing the
+    official project page and current DSOMM site shell for provenance.
+retrieval_policy:
+  preferred_artifact: generated_model_yaml
+  alternate_artifacts:
+    - html_application_content
+    - github_data_snapshot_zip
+  retrieval_mode: deterministic_capture_completed
+  local_snapshot_paths:
+    - sources/owasp_dsomm/project_page.html
+    - sources/owasp_dsomm/dsomm_site.html
+    - sources/owasp_dsomm/data_repo_HEAD.txt
+    - sources/owasp_dsomm/model_fda3b250ae9325b8c10f23318c9f0768eaa60b98.yaml
+    - sources/owasp_dsomm/data_fda3b250ae9325b8c10f23318c9f0768eaa60b98.zip
+  data_repo_head_commit: fda3b250ae9325b8c10f23318c9f0768eaa60b98
+  retrieved_at: '2026-04-05T10:24:19Z'
+  signature_status: not_checked
+provenance_policy:
+  record_source_url: true
+  record_publication_date: true
+  record_retrieval_timestamp: true
+  record_checksum: true
+  keep_document_version_explicit: true
+normalization_targets:
+  primary:
+    - ControlObjective
+    - Practice
+    - Mechanism
+  secondary:
+    - Artifact
+    - EvidencePattern
+  evaluation_only:
+    - maturity_progression_signals
+    - capability_pressure
+manual_integration_targets:
+  outputs:
+    - manual_gap_analysis
+    - chapter_maturity_claim_review
+  note: >
+    The output of this pilot is comparison material only. It should not mutate
+    the current manual contract or the current AppSec Core surface directly.

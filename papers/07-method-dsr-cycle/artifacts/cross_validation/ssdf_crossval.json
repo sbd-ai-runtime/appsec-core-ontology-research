@@ -1,0 +1,52 @@
+{
+  "schema": "ssdf_crossval_v7/1.0",
+  "substrate": "v7 (post-AI/ML Iteration 3)",
+  "substrate_supplier_path": "data/p7_olir_audit/p7_v2_corrected/v7/SUPPLIER_v7_0.json",
+  "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+  "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+  "ontology_tag": "ontology-v1-next-acr004-promoted",
+  "methodology": {
+    "oracle_path": "SSDF v1.1 published bibliography (NIST.SP.800-218.extracted.txt)",
+    "pair_counting_variant": "B (GROUNDED both sides)",
+    "strict_definition": "exact_co match between SSDF item primary CO and referenced item primary CO, restricted to same-level pairs (process\u2192process)",
+    "adjusted_definition": "strict + same-slice match counted as convergent (slice-bridge)",
+    "hub_controls_treatment": "NIST 800-53 SA-8 hub controls counted under cross_level.expected_divergence (not in strict/adjusted denominator)",
+    "cross_level_treatment": "process\u2192implementation pairs (SSDF\u2192ASVS, SSDF\u2192NIST-impl) reported separately under cross_level (not in strict/adjusted denominator)"
+  },
+  "totals": {
+    "ssdf_tasks_with_bibliography_refs": 41,
+    "n_same_level_total": 122,
+    "n_cross_level_total": 163,
+    "n_pairs_total": 285,
+    "n_exact_co": 22,
+    "n_same_slice": 21,
+    "n_different_slice": 79,
+    "n_cross_scope_covers": 18,
+    "n_cross_expected_divergence": 145
+  },
+  "convergence_rates": {
+    "strict_pct": 18.03,
+    "adjusted_pct": 35.25,
+    "cross_level_covered_pct": 11.04
+  },
+  "per_source_pair_counts": {
+    "NIST-800-53": 50,
+    "ASVS": 118,
+    "SAFECode-FPSSD": 15,
+    "PCI-SSLC": 42,
+    "SAMM": 42,
+    "SAFECode-Agile": 18
+  },
+  "per_source_unresolved_tasks": {
+    "SAFECode-FPSSD": 2,
+    "ASVS": 5,
+    "NIST-800-53": 2,
+    "SAFECode-Agile": 1
+  },
+  "comparison_to_v1_1_reference_2026_04_14": {
+    "v1_1_co_match_pct": 81,
+    "v1_1_co_plus_slice_pct": 100,
+    "v1_1_total_comparisons": 69,
+    "note": "v1.1 reference run on 2026-04-14 reported 81% co_match / 100% co+slice on 69 comparisons. Methodology variant differs slightly (v1.1 used different pair-counting; v7 uses Variant B)."
+  }
+}

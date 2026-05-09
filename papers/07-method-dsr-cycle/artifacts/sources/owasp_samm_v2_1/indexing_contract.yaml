@@ -1,0 +1,37 @@
+pilot_id: owasp_samm_v2_1
+status: published_traceability_surface_compared
+source_model: official_model_pages_plus_frozen_core_repo_snapshot
+comparison_target: sbdtoe_manual_v2_via_appsec_core_v0
+classification_taxonomy:
+  - manual_gap
+  - appsec_core_gap
+  - comparison_gap
+  - out_of_scope_for_appsec_core
+pipeline_steps:
+  - confirm_frozen_source_cut
+  - capture_source
+  - extract_source_units
+  - extract_source_objects
+  - normalize_domain_semantics_to_appsec_core
+  - separate_maturity_and_capability_pressure
+  - classify_gap_kind
+  - compare_against_manual_traceability_surface
+  - review_against_chapter_achievable_maturity_claims
+planned_outputs:
+  - data/owasp_samm_v2_1/stubs/source_retrieval_receipt.json
+  - data/owasp_samm_v2_1/stubs/external_source_inventory.json
+  - data/owasp_samm_v2_1/stubs/source_unit_inventory.json
+  - data/owasp_samm_v2_1/stubs/source_object_inventory.json
+  - data/owasp_samm_v2_1/stubs/appsec_core_normalization.json
+  - data/owasp_samm_v2_1/stubs/manual_gap_analysis.json
+  - data/owasp_samm_v2_1/stubs/chapter_maturity_claim_review.json
+  - data/owasp_samm_v2_1/stubs/chapter_maturity_claim_review.md
+  - data/owasp_samm_v2_1/stubs/published_manual_traceability_comparison.json
+  - data/owasp_samm_v2_1/stubs/published_manual_traceability_comparison.md
+notes:
+  - This pilot is intentionally opened before any decision to create a separate maturity or capability model beside the AppSec Core.
+  - The first question was whether current core semantics absorb most SAMM domain content cleanly enough.
+  - The second question was whether the residual pressure is domain pressure or maturity-layer pressure.
+  - The current frozen source cut is the version-2 website model plus `owaspsamm/core` commit `8afa059004fa4abc2b15c714a3a0113548e1881c`.
+  - No direct manual_gap is asserted after comparison against the published manual surface.
+  - The main residual pressure now concentrates on localized core or traceability-granularity tension around `Security Requirements` and `Environment Management`.

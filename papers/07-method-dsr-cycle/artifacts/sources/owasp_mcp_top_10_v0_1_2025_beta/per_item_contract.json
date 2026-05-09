@@ -1,0 +1,804 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "owasp_mcp_top_10_v0_1_2025_beta",
+  "is_iteration_3_pilot": false,
+  "n_items": 10,
+  "items": [
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP01-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP01-2025",
+      "source_text": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers may retrieve these tokens through prompt injection, compromised context, or debug traces, leading to full compromise of connected systems. Short-lived, scoped credentials and secret-scanning control",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000001",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACP_SPC_005",
+          "target_id": "ACP-SPC-005",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.6132054328918457,
+          "disambiguation_margin": 0.1322372555732727,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000002",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACO_IAT_004",
+          "target_id": "ACO-IAT-004",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.6033125519752502,
+          "disambiguation_margin": 0.10709714889526367,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000003",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACP_IAT_004",
+          "target_id": "ACP-IAT-004",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5770617723464966,
+          "disambiguation_margin": 0.08713126182556152,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000004",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACM_IAT_004",
+          "target_id": "ACM-IAT-004",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5158023238182068,
+          "disambiguation_margin": 0.10319340229034424,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000005",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5109679698944092,
+          "disambiguation_margin": 0.07344686985015869,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000006",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5008454322814941,
+          "disambiguation_margin": 0.11440813541412354,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000007",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4627370834350586,
+          "disambiguation_margin": 0.09374281764030457,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000008",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4489307403564453,
+          "disambiguation_margin": 0.10345864295959473,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000009",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.44576025009155273,
+          "disambiguation_margin": 0.06936925649642944,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000010",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4425828754901886,
+          "disambiguation_margin": 0.15022677183151245,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000011",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4386410713195801,
+          "disambiguation_margin": 0.05080696940422058,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000012",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00001",
+          "item_ref": "MCP01-2025",
+          "target_core_entity": "ac:ACM_TMR_005",
+          "target_id": "ACM-TMR-005",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4309331178665161,
+          "disambiguation_margin": 0.08239132165908813,
+          "rationale_snippet": "Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP02-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP02-2025",
+      "source_text": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enforcement can perform unintended actions such as repository modification, system control, or data exfiltration. Enforce least-privilege design, automated scope expiry, and strict access reviews to pre",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000013",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002",
+          "item_ref": "MCP02-2025",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5012537240982056,
+          "disambiguation_margin": 0.10696697235107422,
+          "rationale_snippet": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000014",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002",
+          "item_ref": "MCP02-2025",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.47749263048171997,
+          "disambiguation_margin": 0.12072062492370605,
+          "rationale_snippet": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000015",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002",
+          "item_ref": "MCP02-2025",
+          "target_core_entity": "ac:ACP_IAT_002",
+          "target_id": "ACP-IAT-002",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4689825773239136,
+          "disambiguation_margin": 0.05917859077453613,
+          "rationale_snippet": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000016",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002",
+          "item_ref": "MCP02-2025",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.45680129528045654,
+          "disambiguation_margin": 0.11051225662231445,
+          "rationale_snippet": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000017",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002",
+          "item_ref": "MCP02-2025",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.45552876591682434,
+          "disambiguation_margin": 0.08820390701293945,
+          "rationale_snippet": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000018",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002",
+          "item_ref": "MCP02-2025",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4182261824607849,
+          "disambiguation_margin": 0.04995843768119812,
+          "rationale_snippet": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000019",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00002",
+          "item_ref": "MCP02-2025",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.41395920515060425,
+          "disambiguation_margin": 0.06646686792373657,
+          "rationale_snippet": "Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP03-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP03-2025",
+      "source_text": "Tool Poisoning. Tool poisoning occurs when an adversary compromises the tools, plugins, or their outputs that an AI model depends on-injecting malicious, misleading, or biased context to manipulate model behavior. This category encompasses several sub-techniques, including rug pulls (malicious updates to trusted tools), schema poisoning (corrupting interface definitions t",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00003"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00003"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP04-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP04-2025",
+      "source_text": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A compromised dependency can alter agent behavior or introduce execution-level backdoors. Implement signed components, dependency monitoring, and provenance tracking for all MCP modules.",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000020",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00004",
+          "item_ref": "MCP04-2025",
+          "target_core_entity": "ac:ACO_SCBI_001",
+          "target_id": "ACO-SCBI-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5248907804489136,
+          "disambiguation_margin": 0.0999002456665039,
+          "rationale_snippet": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A compromi",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000021",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00004",
+          "item_ref": "MCP04-2025",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4987071752548218,
+          "disambiguation_margin": 0.06835785508155823,
+          "rationale_snippet": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A compromi",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000022",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00004",
+          "item_ref": "MCP04-2025",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4388046860694885,
+          "disambiguation_margin": 0.10978877544403076,
+          "rationale_snippet": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A compromi",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000023",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00004",
+          "item_ref": "MCP04-2025",
+          "target_core_entity": "ac:ACP_RPR_004",
+          "target_id": "ACP-RPR-004",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.43483370542526245,
+          "disambiguation_margin": 0.07961004972457886,
+          "rationale_snippet": "Software Supply Chain Attacks & Dependency Tampering. MCP ecosystems depend on open-source packages, connectors, and model-side plug-ins that may contain malicious or vulnerable components. A compromi",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP05-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP05-2025",
+      "source_text": "Command Injection & Execution. Command injection in MCP environments occurs when an AI agent constructs and executes system commands, shell scripts, API calls, or code snippets using untrusted input\u2014whether from user prompts, retrieved context, or third-party data sources\u2014without proper validation or sanitization.",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000024",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00005",
+          "item_ref": "MCP05-2025",
+          "target_core_entity": "ac:ACO_IVF_003",
+          "target_id": "ACO-IVF-003",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4828892946243286,
+          "disambiguation_margin": 0.055779486894607544,
+          "rationale_snippet": "Command Injection & Execution. Command injection in MCP environments occurs when an AI agent constructs and executes system commands, shell scripts, API calls, or code snippets using untrusted input\u2014w",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP06-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP06-2025",
+      "source_text": "Prompt Injection via Contextual Payloads. This risk is analogous to classic injection attacks (e.g., XSS, SQLi), but in the MCP world the \u201cinterpreter\u201d is the model and the \u201cpayload\u201d is text (or any content that becomes text after OCR/processing). Because models are designed to follow natural-language instructions, prompt injection attacks are both powerful and subtle.",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000025",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00006",
+          "item_ref": "MCP06-2025",
+          "target_core_entity": "ac:ACO_IVF_003",
+          "target_id": "ACO-IVF-003",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5490126609802246,
+          "disambiguation_margin": 0.094683438539505,
+          "rationale_snippet": "Prompt Injection via Contextual Payloads. This risk is analogous to classic injection attacks (e.g., XSS, SQLi), but in the MCP world the \u201cinterpreter\u201d is the model and the \u201cpayload\u201d is text (or any c",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000026",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00006",
+          "item_ref": "MCP06-2025",
+          "target_core_entity": "ac:ACP_IVF_003",
+          "target_id": "ACP-IVF-003",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4636841118335724,
+          "disambiguation_margin": 0.08098697662353516,
+          "rationale_snippet": "Prompt Injection via Contextual Payloads. This risk is analogous to classic injection attacks (e.g., XSS, SQLi), but in the MCP world the \u201cinterpreter\u201d is the model and the \u201cpayload\u201d is text (or any c",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP07-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP07-2025",
+      "source_text": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during interactions. Since MCP ecosystems often involve multiple agents, users, and services exchanging data and executing actions, weak or missing identity validation exposes critical attack paths.",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000027",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007",
+          "item_ref": "MCP07-2025",
+          "target_core_entity": "ac:ACO_IAT_001",
+          "target_id": "ACO-IAT-001",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5561932325363159,
+          "disambiguation_margin": 0.07652139663696289,
+          "rationale_snippet": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000028",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007",
+          "item_ref": "MCP07-2025",
+          "target_core_entity": "ac:ACP_IAT_001",
+          "target_id": "ACP-IAT-001",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.531211256980896,
+          "disambiguation_margin": 0.07251667976379395,
+          "rationale_snippet": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000029",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007",
+          "item_ref": "MCP07-2025",
+          "target_core_entity": "ac:ACP_ITS_002",
+          "target_id": "ACP-ITS-002",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5276450514793396,
+          "disambiguation_margin": 0.07099336385726929,
+          "rationale_snippet": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000030",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007",
+          "item_ref": "MCP07-2025",
+          "target_core_entity": "ac:ACM_IAT_001",
+          "target_id": "ACM-IAT-001",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.519782304763794,
+          "disambiguation_margin": 0.059555113315582275,
+          "rationale_snippet": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000031",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007",
+          "item_ref": "MCP07-2025",
+          "target_core_entity": "ac:ACO_ITS_001",
+          "target_id": "ACO-ITS-001",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5014423727989197,
+          "disambiguation_margin": 0.04621046781539917,
+          "rationale_snippet": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000032",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007",
+          "item_ref": "MCP07-2025",
+          "target_core_entity": "ac:ACO_SPC_004",
+          "target_id": "ACO-SPC-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4700608253479004,
+          "disambiguation_margin": 0.11891233921051025,
+          "rationale_snippet": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000033",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00007",
+          "item_ref": "MCP07-2025",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4458886384963989,
+          "disambiguation_margin": 0.10785561800003052,
+          "rationale_snippet": "Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP08-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP08-2025",
+      "source_text": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes investigation and incident response. Maintain detailed logs of tool invocations, context changes, and user-agent interactions with immutable audit trails.",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000034",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.6500869989395142,
+          "disambiguation_margin": 0.2794822156429291,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000035",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5998966693878174,
+          "disambiguation_margin": 0.06264477968215942,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000036",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACP_ITS_006",
+          "target_id": "ACP-ITS-006",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5904961824417114,
+          "disambiguation_margin": 0.23764437437057495,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000037",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5830886363983154,
+          "disambiguation_margin": 0.220717191696167,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000038",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACM_SLG_004",
+          "target_id": "ACM-SLG-004",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.534753143787384,
+          "disambiguation_margin": 0.06285011768341064,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000039",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACO_RPR_004",
+          "target_id": "ACO-RPR-004",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5031712651252747,
+          "disambiguation_margin": 0.0906069278717041,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000040",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACO_ITS_006",
+          "target_id": "ACO-ITS-006",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.49405235052108765,
+          "disambiguation_margin": 0.13682794570922852,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000041",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACM_ITS_005",
+          "target_id": "ACM-ITS-005",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.48334550857543945,
+          "disambiguation_margin": 0.13221198320388794,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000042",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACM_RPR_005",
+          "target_id": "ACM-RPR-005",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.47037273645401,
+          "disambiguation_margin": 0.14104518294334412,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000043",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACO_IVF_006",
+          "target_id": "ACO-IVF-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4433962106704712,
+          "disambiguation_margin": 0.06563717126846313,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000044",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4382747411727905,
+          "disambiguation_margin": 0.1707625687122345,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000045",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00008",
+          "item_ref": "MCP08-2025",
+          "target_core_entity": "ac:ACM_TMR_005",
+          "target_id": "ACM-TMR-005",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4198650121688843,
+          "disambiguation_margin": 0.07280242443084717,
+          "rationale_snippet": "Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP09-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP09-2025",
+      "source_text": "Shadow MCP Servers. \u201cShadow MCP Servers\u201d refer to unapproved or unsupervised deployments of Model Context Protocol instances that operate outside the organization\u2019s formal security governance. Much like Shadow IT, these rogue MCP nodes are often spun up by developers, research teams, or data scientists for experimentation, testing, or convenience\u2014frequently using default creden",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00009"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00009"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_top_10_v0_1_2025_beta/MCP10-2025",
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "source_object_id": "MCP10-2025",
+      "source_text": "Context Injection & Over-Sharing. In the Model Context Protocol (MCP), \u201ccontext\u201d represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions. When context windows are shared, persistent, or insufficiently scoped, sensitive information from one task, user, or agent may be exposed to another. This phenomenon\u2014known as context over-sharin",
+      "source_lifted_rows": [
+        "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000046",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00010",
+          "item_ref": "MCP10-2025",
+          "target_core_entity": "ac:ACM_IAT_004",
+          "target_id": "ACM-IAT-004",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.44272011518478394,
+          "disambiguation_margin": 0.0971572995185852,
+          "rationale_snippet": "Context Injection & Over-Sharing. In the Model Context Protocol (MCP), \u201ccontext\u201d represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000047",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00010",
+          "item_ref": "MCP10-2025",
+          "target_core_entity": "ac:ACO_IAT_004",
+          "target_id": "ACO-IAT-004",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4413290321826935,
+          "disambiguation_margin": 0.109108567237854,
+          "rationale_snippet": "Context Injection & Over-Sharing. In the Model Context Protocol (MCP), \u201ccontext\u201d represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_TOP_10_V0_1_2025_BETA-CLAIM-000048",
+          "lifted_row_ref": "OWASP_MCP_TOP_10_V0_1_2025_BETA-LIFTED-00010",
+          "item_ref": "MCP10-2025",
+          "target_core_entity": "ac:ACP_IAT_004",
+          "target_id": "ACP-IAT-004",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.41998231410980225,
+          "disambiguation_margin": 0.06963258981704712,
+          "rationale_snippet": "Context Injection & Over-Sharing. In the Model Context Protocol (MCP), \u201ccontext\u201d represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions. ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

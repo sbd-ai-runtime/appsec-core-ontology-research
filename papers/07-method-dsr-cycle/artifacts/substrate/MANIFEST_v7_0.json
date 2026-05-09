@@ -1,0 +1,669 @@
+{
+  "schema": "v7_manifest/1.0",
+  "supplier_version": "v7.0",
+  "generated_at": "2026-05-07T18:15:44.314277+00:00",
+  "branch": "cartographer-iteration-3-ai-ml-expansion",
+  "iteration": "Cycle A Iteration 3",
+  "iteration_authority": "programme-lead Pedro Farinha 2026-05-06",
+  "ontology_tag": "ontology-v1-next-acr004-promoted",
+  "apparatus_tag": "apparatus-shacl-pyshacl-v3",
+  "embeddings_tag": "appsec-core-embeddings-v1.1",
+  "substrate_baseline_tag": "substrate-v6-acr004-incorporated",
+  "ontology_npz_sha256": "17f6aac496b9896dae977a83745480322e1594a214bd9aa7b905f2cf9ddf23c8",
+  "ontology_corpus_sha256": "5951fd82e4b7547b37989af5b2f403ff3fd5e8b484b760ce4c565a6756b96c42",
+  "ontology_n_entities": 212,
+  "active_sources": [
+    "asvs_v5_0_0",
+    "capec_v3_9",
+    "cis_controls_v8_1_2",
+    "cwe_software_development_view_v4_19_1",
+    "enisa_multilayer_ai_cybersecurity_practices_2023",
+    "eu_cra",
+    "eu_dora",
+    "eu_nis2",
+    "eu_rgpd",
+    "hipaa_security_rule",
+    "mcp_official_security_foundations_2025",
+    "mitre_atlas",
+    "nist_ai_100_2_e2025",
+    "nist_ai_rmf_1_0",
+    "nist_sp800_53_rev5",
+    "owasp_dsomm",
+    "owasp_llm_top_10",
+    "owasp_mcp_secure_server_development_v1_0",
+    "owasp_mcp_third_party_servers_v1_0",
+    "owasp_mcp_top_10_v0_1_2025_beta",
+    "owasp_ml_top_10",
+    "owasp_proactive_controls_2018",
+    "owasp_samm_v2_1",
+    "owasp_top_10_2021",
+    "pci_dss_v4_0_1",
+    "pci_sslc_v1_1",
+    "safecode_agile_2012",
+    "safecode_fpssd_2018",
+    "safecode_sic_2010",
+    "slsa_spec_v1_0_build_track",
+    "ssdf_sp800_218_v1_1"
+  ],
+  "n_active_sources": 31,
+  "n_lifted_rows_total": 4935,
+  "n_items_total": 3861,
+  "n_claims_total": 18673,
+  "classifications": {
+    "GROUNDED": 2873,
+    "LabDepthPending": 988,
+    "OOS_AppSec": 0
+  },
+  "per_source_summary": [
+    {
+      "source": "asvs_v5_0_0",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 348,
+      "n_items": 345,
+      "n_grounded": 250,
+      "n_lab_depth_pending": 95,
+      "n_oos": 0,
+      "n_claims_emitted": 1027,
+      "claim_emission_ratio": 2.951,
+      "atomicity_ratio": 1.009,
+      "distinct_core_entities_reached": 112,
+      "claims_by_level": {
+        "Practice": 374,
+        "Mechanism": 343,
+        "ControlObjective": 310
+      }
+    },
+    {
+      "source": "capec_v3_9",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 640,
+      "n_items": 559,
+      "n_grounded": 355,
+      "n_lab_depth_pending": 204,
+      "n_oos": 0,
+      "n_claims_emitted": 1400,
+      "claim_emission_ratio": 2.188,
+      "atomicity_ratio": 1.145,
+      "distinct_core_entities_reached": 125,
+      "claims_by_level": {
+        "Mechanism": 490,
+        "ControlObjective": 480,
+        "Practice": 430
+      }
+    },
+    {
+      "source": "cis_controls_v8_1_2",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 327,
+      "n_items": 166,
+      "n_grounded": 148,
+      "n_lab_depth_pending": 18,
+      "n_oos": 0,
+      "n_claims_emitted": 1334,
+      "claim_emission_ratio": 4.08,
+      "atomicity_ratio": 1.97,
+      "distinct_core_entities_reached": 131,
+      "claims_by_level": {
+        "Mechanism": 486,
+        "ControlObjective": 410,
+        "Practice": 438
+      }
+    },
+    {
+      "source": "cwe_software_development_view_v4_19_1",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 405,
+      "n_items": 399,
+      "n_grounded": 152,
+      "n_lab_depth_pending": 247,
+      "n_oos": 0,
+      "n_claims_emitted": 582,
+      "claim_emission_ratio": 1.437,
+      "atomicity_ratio": 1.015,
+      "distinct_core_entities_reached": 110,
+      "claims_by_level": {
+        "ControlObjective": 225,
+        "Mechanism": 152,
+        "Practice": 205
+      }
+    },
+    {
+      "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 5,
+      "n_items": 5,
+      "n_grounded": 4,
+      "n_lab_depth_pending": 1,
+      "n_oos": 0,
+      "n_claims_emitted": 7,
+      "claim_emission_ratio": 1.4,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 5,
+      "claims_by_level": {
+        "ControlObjective": 4,
+        "Mechanism": 1,
+        "Practice": 2
+      }
+    },
+    {
+      "source": "eu_cra",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 15,
+      "n_items": 9,
+      "n_grounded": 4,
+      "n_lab_depth_pending": 5,
+      "n_oos": 0,
+      "n_claims_emitted": 29,
+      "claim_emission_ratio": 1.933,
+      "atomicity_ratio": 1.667,
+      "distinct_core_entities_reached": 23,
+      "claims_by_level": {
+        "Practice": 9,
+        "ControlObjective": 11,
+        "Mechanism": 9
+      }
+    },
+    {
+      "source": "eu_dora",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 53,
+      "n_items": 24,
+      "n_grounded": 11,
+      "n_lab_depth_pending": 13,
+      "n_oos": 0,
+      "n_claims_emitted": 32,
+      "claim_emission_ratio": 0.604,
+      "atomicity_ratio": 2.208,
+      "distinct_core_entities_reached": 19,
+      "claims_by_level": {
+        "Mechanism": 14,
+        "Practice": 9,
+        "ControlObjective": 9
+      }
+    },
+    {
+      "source": "eu_nis2",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 18,
+      "n_items": 4,
+      "n_grounded": 4,
+      "n_lab_depth_pending": 0,
+      "n_oos": 0,
+      "n_claims_emitted": 70,
+      "claim_emission_ratio": 3.889,
+      "atomicity_ratio": 4.5,
+      "distinct_core_entities_reached": 42,
+      "claims_by_level": {
+        "Mechanism": 20,
+        "ControlObjective": 22,
+        "Practice": 28
+      }
+    },
+    {
+      "source": "eu_rgpd",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 16,
+      "n_items": 6,
+      "n_grounded": 3,
+      "n_lab_depth_pending": 3,
+      "n_oos": 0,
+      "n_claims_emitted": 56,
+      "claim_emission_ratio": 3.5,
+      "atomicity_ratio": 2.667,
+      "distinct_core_entities_reached": 33,
+      "claims_by_level": {
+        "ControlObjective": 20,
+        "Practice": 21,
+        "Mechanism": 15
+      }
+    },
+    {
+      "source": "hipaa_security_rule",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 32,
+      "n_items": 22,
+      "n_grounded": 19,
+      "n_lab_depth_pending": 3,
+      "n_oos": 0,
+      "n_claims_emitted": 144,
+      "claim_emission_ratio": 4.5,
+      "atomicity_ratio": 1.455,
+      "distinct_core_entities_reached": 61,
+      "claims_by_level": {
+        "ControlObjective": 39,
+        "Practice": 56,
+        "Mechanism": 49
+      }
+    },
+    {
+      "source": "mcp_official_security_foundations_2025",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 13,
+      "n_items": 13,
+      "n_grounded": 8,
+      "n_lab_depth_pending": 5,
+      "n_oos": 0,
+      "n_claims_emitted": 21,
+      "claim_emission_ratio": 1.615,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 15,
+      "claims_by_level": {
+        "ControlObjective": 7,
+        "Mechanism": 9,
+        "Practice": 5
+      }
+    },
+    {
+      "source": "mitre_atlas",
+      "is_iteration_3_pilot": true,
+      "n_lifted_rows": 329,
+      "n_items": 278,
+      "n_grounded": 180,
+      "n_lab_depth_pending": 98,
+      "n_oos": 0,
+      "n_claims_emitted": 610,
+      "claim_emission_ratio": 1.854,
+      "atomicity_ratio": 1.183,
+      "distinct_core_entities_reached": 113,
+      "claims_by_level": {
+        "ControlObjective": 197,
+        "Mechanism": 222,
+        "Practice": 191
+      }
+    },
+    {
+      "source": "nist_ai_100_2_e2025",
+      "is_iteration_3_pilot": true,
+      "n_lifted_rows": 66,
+      "n_items": 53,
+      "n_grounded": 38,
+      "n_lab_depth_pending": 15,
+      "n_oos": 0,
+      "n_claims_emitted": 196,
+      "claim_emission_ratio": 2.97,
+      "atomicity_ratio": 1.245,
+      "distinct_core_entities_reached": 39,
+      "claims_by_level": {
+        "Practice": 61,
+        "ControlObjective": 78,
+        "Mechanism": 57
+      }
+    },
+    {
+      "source": "nist_ai_rmf_1_0",
+      "is_iteration_3_pilot": true,
+      "n_lifted_rows": 68,
+      "n_items": 53,
+      "n_grounded": 31,
+      "n_lab_depth_pending": 22,
+      "n_oos": 0,
+      "n_claims_emitted": 107,
+      "claim_emission_ratio": 1.574,
+      "atomicity_ratio": 1.283,
+      "distinct_core_entities_reached": 52,
+      "claims_by_level": {
+        "Practice": 38,
+        "Mechanism": 37,
+        "ControlObjective": 32
+      }
+    },
+    {
+      "source": "nist_sp800_53_rev5",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 1568,
+      "n_items": 1196,
+      "n_grounded": 992,
+      "n_lab_depth_pending": 204,
+      "n_oos": 0,
+      "n_claims_emitted": 7474,
+      "claim_emission_ratio": 4.767,
+      "atomicity_ratio": 1.311,
+      "distinct_core_entities_reached": 189,
+      "claims_by_level": {
+        "Mechanism": 2822,
+        "ControlObjective": 2048,
+        "Practice": 2604
+      }
+    },
+    {
+      "source": "owasp_dsomm",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 193,
+      "n_items": 193,
+      "n_grounded": 170,
+      "n_lab_depth_pending": 23,
+      "n_oos": 0,
+      "n_claims_emitted": 808,
+      "claim_emission_ratio": 4.187,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 136,
+      "claims_by_level": {
+        "ControlObjective": 238,
+        "Mechanism": 317,
+        "Practice": 253
+      }
+    },
+    {
+      "source": "owasp_llm_top_10",
+      "is_iteration_3_pilot": true,
+      "n_lifted_rows": 64,
+      "n_items": 10,
+      "n_grounded": 9,
+      "n_lab_depth_pending": 1,
+      "n_oos": 0,
+      "n_claims_emitted": 146,
+      "claim_emission_ratio": 2.281,
+      "atomicity_ratio": 6.4,
+      "distinct_core_entities_reached": 74,
+      "claims_by_level": {
+        "Practice": 53,
+        "ControlObjective": 40,
+        "Mechanism": 53
+      }
+    },
+    {
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 10,
+      "n_items": 10,
+      "n_grounded": 10,
+      "n_lab_depth_pending": 0,
+      "n_oos": 0,
+      "n_claims_emitted": 60,
+      "claim_emission_ratio": 6.0,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 49,
+      "claims_by_level": {
+        "ControlObjective": 20,
+        "Practice": 20,
+        "Mechanism": 20
+      }
+    },
+    {
+      "source": "owasp_mcp_third_party_servers_v1_0",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 8,
+      "n_items": 8,
+      "n_grounded": 6,
+      "n_lab_depth_pending": 2,
+      "n_oos": 0,
+      "n_claims_emitted": 30,
+      "claim_emission_ratio": 3.75,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 19,
+      "claims_by_level": {
+        "ControlObjective": 13,
+        "Mechanism": 10,
+        "Practice": 7
+      }
+    },
+    {
+      "source": "owasp_mcp_top_10_v0_1_2025_beta",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 10,
+      "n_items": 10,
+      "n_grounded": 8,
+      "n_lab_depth_pending": 2,
+      "n_oos": 0,
+      "n_claims_emitted": 48,
+      "claim_emission_ratio": 4.8,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 37,
+      "claims_by_level": {
+        "Practice": 17,
+        "ControlObjective": 18,
+        "Mechanism": 13
+      }
+    },
+    {
+      "source": "owasp_ml_top_10",
+      "is_iteration_3_pilot": true,
+      "n_lifted_rows": 23,
+      "n_items": 10,
+      "n_grounded": 9,
+      "n_lab_depth_pending": 1,
+      "n_oos": 0,
+      "n_claims_emitted": 107,
+      "claim_emission_ratio": 4.652,
+      "atomicity_ratio": 2.3,
+      "distinct_core_entities_reached": 51,
+      "claims_by_level": {
+        "ControlObjective": 30,
+        "Practice": 36,
+        "Mechanism": 41
+      }
+    },
+    {
+      "source": "owasp_proactive_controls_2018",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 10,
+      "n_items": 10,
+      "n_grounded": 10,
+      "n_lab_depth_pending": 0,
+      "n_oos": 0,
+      "n_claims_emitted": 68,
+      "claim_emission_ratio": 6.8,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 53,
+      "claims_by_level": {
+        "Practice": 18,
+        "ControlObjective": 23,
+        "Mechanism": 27
+      }
+    },
+    {
+      "source": "owasp_samm_v2_1",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 278,
+      "n_items": 90,
+      "n_grounded": 90,
+      "n_lab_depth_pending": 0,
+      "n_oos": 0,
+      "n_claims_emitted": 1651,
+      "claim_emission_ratio": 5.939,
+      "atomicity_ratio": 3.089,
+      "distinct_core_entities_reached": 149,
+      "claims_by_level": {
+        "ControlObjective": 465,
+        "Practice": 534,
+        "Mechanism": 652
+      }
+    },
+    {
+      "source": "owasp_top_10_2021",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 10,
+      "n_items": 10,
+      "n_grounded": 9,
+      "n_lab_depth_pending": 1,
+      "n_oos": 0,
+      "n_claims_emitted": 46,
+      "claim_emission_ratio": 4.6,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 37,
+      "claims_by_level": {
+        "Mechanism": 14,
+        "Practice": 14,
+        "ControlObjective": 18
+      }
+    },
+    {
+      "source": "pci_dss_v4_0_1",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 243,
+      "n_items": 217,
+      "n_grounded": 201,
+      "n_lab_depth_pending": 16,
+      "n_oos": 0,
+      "n_claims_emitted": 1491,
+      "claim_emission_ratio": 6.136,
+      "atomicity_ratio": 1.12,
+      "distinct_core_entities_reached": 114,
+      "claims_by_level": {
+        "ControlObjective": 470,
+        "Mechanism": 570,
+        "Practice": 451
+      }
+    },
+    {
+      "source": "pci_sslc_v1_1",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 35,
+      "n_items": 28,
+      "n_grounded": 28,
+      "n_lab_depth_pending": 0,
+      "n_oos": 0,
+      "n_claims_emitted": 257,
+      "claim_emission_ratio": 7.343,
+      "atomicity_ratio": 1.25,
+      "distinct_core_entities_reached": 87,
+      "claims_by_level": {
+        "Practice": 86,
+        "ControlObjective": 85,
+        "Mechanism": 86
+      }
+    },
+    {
+      "source": "safecode_agile_2012",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 29,
+      "n_items": 29,
+      "n_grounded": 26,
+      "n_lab_depth_pending": 3,
+      "n_oos": 0,
+      "n_claims_emitted": 135,
+      "claim_emission_ratio": 4.655,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 52,
+      "claims_by_level": {
+        "Practice": 42,
+        "ControlObjective": 42,
+        "Mechanism": 51
+      }
+    },
+    {
+      "source": "safecode_fpssd_2018",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 17,
+      "n_items": 17,
+      "n_grounded": 17,
+      "n_lab_depth_pending": 0,
+      "n_oos": 0,
+      "n_claims_emitted": 123,
+      "claim_emission_ratio": 7.235,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 74,
+      "claims_by_level": {
+        "ControlObjective": 35,
+        "Mechanism": 47,
+        "Practice": 41
+      }
+    },
+    {
+      "source": "safecode_sic_2010",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 12,
+      "n_items": 12,
+      "n_grounded": 12,
+      "n_lab_depth_pending": 0,
+      "n_oos": 0,
+      "n_claims_emitted": 83,
+      "claim_emission_ratio": 6.917,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 50,
+      "claims_by_level": {
+        "Mechanism": 24,
+        "Practice": 32,
+        "ControlObjective": 27
+      }
+    },
+    {
+      "source": "slsa_spec_v1_0_build_track",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 14,
+      "n_items": 14,
+      "n_grounded": 13,
+      "n_lab_depth_pending": 1,
+      "n_oos": 0,
+      "n_claims_emitted": 92,
+      "claim_emission_ratio": 6.571,
+      "atomicity_ratio": 1.0,
+      "distinct_core_entities_reached": 33,
+      "claims_by_level": {
+        "Mechanism": 26,
+        "Practice": 35,
+        "ControlObjective": 31
+      }
+    },
+    {
+      "source": "ssdf_sp800_218_v1_1",
+      "is_iteration_3_pilot": false,
+      "n_lifted_rows": 76,
+      "n_items": 61,
+      "n_grounded": 56,
+      "n_lab_depth_pending": 5,
+      "n_oos": 0,
+      "n_claims_emitted": 439,
+      "claim_emission_ratio": 5.776,
+      "atomicity_ratio": 1.246,
+      "distinct_core_entities_reached": 91,
+      "claims_by_level": {
+        "ControlObjective": 119,
+        "Practice": 145,
+        "Mechanism": 175
+      }
+    }
+  ],
+  "grounding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+    "e2_per_level": {
+      "ControlObjective": 0.4109674096107483,
+      "Practice": 0.4144279360771179,
+      "Mechanism": 0.4081895351409912
+    },
+    "e3_per_level": {
+      "ControlObjective": 0.043032675981521606,
+      "Practice": 0.04697637557983398,
+      "Mechanism": 0.04714446663856505
+    },
+    "calibration_cohort": [
+      "ssdf_sp800_218_v1_1",
+      "cis_controls_v8_1_2",
+      "owasp_samm_v2_1",
+      "cwe_software_development_view_v4_19_1"
+    ]
+  },
+  "termination_gates": {
+    "grounded_rate": {
+      "measured": 74.4108,
+      "baseline": 75.38,
+      "verdict": "FAIL"
+    },
+    "shacl_conforms": "to_verify_externally_via_consumer_conformance_validator"
+  },
+  "iteration_3_caveats": {
+    "owasp_llm_top_10": {
+      "atomicity_ratio_at_pipeline_1": 6.4,
+      "flag": "HIGH_DECOMPOSITION_RATIO",
+      "joint_review_resolution": "PROCEED \u2014 atomicity 6.4 reflects intentional editorial bundling (Description + Common Examples + Prevention Strategies per LLMNN page); structurally correct, semantically benign. Programme-lead Pedro Farinha + Orchestrator ratification 2026-05-07.",
+      "duplicate_fraction": 0.0,
+      "governance_fraction": 0.031,
+      "evidence_path": "data/owasp_llm_top_10/stubs/quality_dossier.json"
+    },
+    "enisa_ai_2024_dropped": {
+      "reason": "no discrete 2024 successor publication exists to ENISA Multilayer Framework 2023 (already in 26-source corpus)",
+      "iteration_3_corpus_actual": "5 sources added (not 6)"
+    },
+    "nist_ai_rmf_governance_surprise": {
+      "pre_iteration_hypothesis": "RMF expected governance-heavy pathology",
+      "stage_3_finding": "RMF governance fraction = 19% (under 40% threshold); falsified at Stage 3",
+      "deferred_to_stage_6": "lifted-concern fraction final assessment in LDP analysis post-grounding"
+    }
+  },
+  "h2_test_surfaces": {
+    "primary": "mitre_atlas",
+    "secondary": "owasp_ml_top_10",
+    "decision_pending": "Stage 7 sub-hypothesis evaluation"
+  }
+}

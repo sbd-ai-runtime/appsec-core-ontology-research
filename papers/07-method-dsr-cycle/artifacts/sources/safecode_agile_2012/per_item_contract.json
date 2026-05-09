@@ -1,0 +1,2259 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "safecode_agile_2012",
+  "is_iteration_3_pilot": false,
+  "n_items": 29,
+  "items": [
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-1",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-1",
+      "source_text": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000001",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5438085794448853,
+          "disambiguation_margin": 0.11279898881912231,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000002",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACP_RPR_004",
+          "target_id": "ACP-RPR-004",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5059810280799866,
+          "disambiguation_margin": 0.057695090770721436,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000003",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5059673190116882,
+          "disambiguation_margin": 0.10755321383476257,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000004",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACM_IVF_004",
+          "target_id": "ACM-IVF-004",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.49126291275024414,
+          "disambiguation_margin": 0.06538182497024536,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000005",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.47792744636535645,
+          "disambiguation_margin": 0.05066147446632385,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000006",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.47174689173698425,
+          "disambiguation_margin": 0.1294223964214325,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000007",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACM_SLG_005",
+          "target_id": "ACM-SLG-005",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.44198331236839294,
+          "disambiguation_margin": 0.047490864992141724,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000008",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACO_IVF_006",
+          "target_id": "ACO-IVF-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.42207038402557373,
+          "disambiguation_margin": 0.05318373441696167,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000009",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.42070913314819336,
+          "disambiguation_margin": 0.1516357958316803,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000010",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00001",
+          "item_ref": "SCAGILE-OPS-1",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.41460925340652466,
+          "disambiguation_margin": 0.15543770790100098,
+          "rationale_snippet": "Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-2",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-2",
+      "source_text": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000011",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5797628164291382,
+          "disambiguation_margin": 0.07517135143280029,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000012",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5480037927627563,
+          "disambiguation_margin": 0.07633289694786072,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000013",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5423144102096558,
+          "disambiguation_margin": 0.047543883323669434,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000014",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACM_SLG_005",
+          "target_id": "ACM-SLG-005",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5125062465667725,
+          "disambiguation_margin": 0.0940433144569397,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000015",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5107840299606323,
+          "disambiguation_margin": 0.06601575016975403,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000016",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4916587769985199,
+          "disambiguation_margin": 0.1167127788066864,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000017",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.48806798458099365,
+          "disambiguation_margin": 0.05296942591667175,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000018",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4583999514579773,
+          "disambiguation_margin": 0.10511034727096558,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000019",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.45290589332580566,
+          "disambiguation_margin": 0.09381166100502014,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000020",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4389188885688782,
+          "disambiguation_margin": 0.11462283134460449,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000021",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.425991028547287,
+          "disambiguation_margin": 0.056315451860427856,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000022",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00002",
+          "item_ref": "SCAGILE-OPS-2",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.42473703622817993,
+          "disambiguation_margin": 0.054945528507232666,
+          "rationale_snippet": "Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-3",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-3",
+      "source_text": "Use latest compiler versions. Use latest compiler versions as recommendation for new code",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00003"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "SAFECODE_AGILE_2012-LIFTED-00003"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-4",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-4",
+      "source_text": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000023",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00004",
+          "item_ref": "SCAGILE-OPS-4",
+          "target_core_entity": "ac:ACP_TSV_002",
+          "target_id": "ACP-TSV-002",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.7288911938667297,
+          "disambiguation_margin": 0.2734091281890869,
+          "rationale_snippet": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000024",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00004",
+          "item_ref": "SCAGILE-OPS-4",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.6386488080024719,
+          "disambiguation_margin": 0.15770679712295532,
+          "rationale_snippet": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000025",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00004",
+          "item_ref": "SCAGILE-OPS-4",
+          "target_core_entity": "ac:ACO_TSV_002",
+          "target_id": "ACO-TSV-002",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5929238796234131,
+          "disambiguation_margin": 0.16282597184181213,
+          "rationale_snippet": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000026",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00004",
+          "item_ref": "SCAGILE-OPS-4",
+          "target_core_entity": "ac:ACO_TMR_003",
+          "target_id": "ACO-TMR-003",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4594764709472656,
+          "disambiguation_margin": 0.11332845687866211,
+          "rationale_snippet": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000027",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00004",
+          "item_ref": "SCAGILE-OPS-4",
+          "target_core_entity": "ac:ACO_RPR_010",
+          "target_id": "ACO-RPR-010",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4591856598854065,
+          "disambiguation_margin": 0.09235674142837524,
+          "rationale_snippet": "Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-5",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-5",
+      "source_text": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000028",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00005",
+          "item_ref": "SCAGILE-OPS-5",
+          "target_core_entity": "ac:ACM_IVF_004",
+          "target_id": "ACM-IVF-004",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.48984357714653015,
+          "disambiguation_margin": 0.08328893780708313,
+          "rationale_snippet": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000029",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00005",
+          "item_ref": "SCAGILE-OPS-5",
+          "target_core_entity": "ac:ACM_RPR_004",
+          "target_id": "ACM-RPR-004",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.45964235067367554,
+          "disambiguation_margin": 0.07529124617576599,
+          "rationale_snippet": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000030",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00005",
+          "item_ref": "SCAGILE-OPS-5",
+          "target_core_entity": "ac:ACO_SCBI_001",
+          "target_id": "ACO-SCBI-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4339682459831238,
+          "disambiguation_margin": 0.13977855443954468,
+          "rationale_snippet": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000031",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00005",
+          "item_ref": "SCAGILE-OPS-5",
+          "target_core_entity": "ac:ACM_ITS_005",
+          "target_id": "ACM-ITS-005",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.42045915126800537,
+          "disambiguation_margin": 0.21266388893127441,
+          "rationale_snippet": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000032",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00005",
+          "item_ref": "SCAGILE-OPS-5",
+          "target_core_entity": "ac:ACP_ITS_006",
+          "target_id": "ACP-ITS-006",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.41711151599884033,
+          "disambiguation_margin": 0.17973944544792175,
+          "rationale_snippet": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000033",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00005",
+          "item_ref": "SCAGILE-OPS-5",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.41682910919189453,
+          "disambiguation_margin": 0.16526246070861816,
+          "rationale_snippet": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000034",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00005",
+          "item_ref": "SCAGILE-OPS-5",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.41326236724853516,
+          "disambiguation_margin": 0.20919105410575867,
+          "rationale_snippet": "Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-6",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-6",
+      "source_text": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000035",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00006",
+          "item_ref": "SCAGILE-OPS-6",
+          "target_core_entity": "ac:ACP_RPR_004",
+          "target_id": "ACP-RPR-004",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4909501075744629,
+          "disambiguation_margin": 0.09952157735824585,
+          "rationale_snippet": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000036",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00006",
+          "item_ref": "SCAGILE-OPS-6",
+          "target_core_entity": "ac:ACM_IVF_004",
+          "target_id": "ACM-IVF-004",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.45554107427597046,
+          "disambiguation_margin": 0.055881351232528687,
+          "rationale_snippet": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000037",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00006",
+          "item_ref": "SCAGILE-OPS-6",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4492381811141968,
+          "disambiguation_margin": 0.25229769945144653,
+          "rationale_snippet": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000038",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00006",
+          "item_ref": "SCAGILE-OPS-6",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4481060206890106,
+          "disambiguation_margin": 0.1605255901813507,
+          "rationale_snippet": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000039",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00006",
+          "item_ref": "SCAGILE-OPS-6",
+          "target_core_entity": "ac:ACM_SCBI_001",
+          "target_id": "ACM-SCBI-001",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.43476980924606323,
+          "disambiguation_margin": 0.05611938238143921,
+          "rationale_snippet": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000040",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00006",
+          "item_ref": "SCAGILE-OPS-6",
+          "target_core_entity": "ac:ACO_SCBI_001",
+          "target_id": "ACO-SCBI-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.41321516036987305,
+          "disambiguation_margin": 0.11255133152008057,
+          "rationale_snippet": "Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-7",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-7",
+      "source_text": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000041",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.6499882936477661,
+          "disambiguation_margin": 0.15261304378509521,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000042",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACO_RPR_010",
+          "target_id": "ACO-RPR-010",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5003786683082581,
+          "disambiguation_margin": 0.06619536876678467,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000043",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4830222725868225,
+          "disambiguation_margin": 0.07754337787628174,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000044",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4782005548477173,
+          "disambiguation_margin": 0.12084943056106567,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000045",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.47106510400772095,
+          "disambiguation_margin": 0.055536091327667236,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000046",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.46308740973472595,
+          "disambiguation_margin": 0.10501453280448914,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000047",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4564156234264374,
+          "disambiguation_margin": 0.08260491490364075,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000048",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.43839824199676514,
+          "disambiguation_margin": 0.09102535247802734,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000049",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00007",
+          "item_ref": "SCAGILE-OPS-7",
+          "target_core_entity": "ac:ACO_ITS_003",
+          "target_id": "ACO-ITS-003",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4291330575942993,
+          "disambiguation_margin": 0.13572806119918823,
+          "rationale_snippet": "Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.). OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-8",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-8",
+      "source_text": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000050",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00008",
+          "item_ref": "SCAGILE-OPS-8",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5351307392120361,
+          "disambiguation_margin": 0.10957974195480347,
+          "rationale_snippet": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000051",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00008",
+          "item_ref": "SCAGILE-OPS-8",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.41919687390327454,
+          "disambiguation_margin": 0.2263452261686325,
+          "rationale_snippet": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000052",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00008",
+          "item_ref": "SCAGILE-OPS-8",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.41305482387542725,
+          "disambiguation_margin": 0.045990049839019775,
+          "rationale_snippet": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000053",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00008",
+          "item_ref": "SCAGILE-OPS-8",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4094734787940979,
+          "disambiguation_margin": 0.08718788623809814,
+          "rationale_snippet": "Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-9",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-9",
+      "source_text": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000054",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00009",
+          "item_ref": "SCAGILE-OPS-9",
+          "target_core_entity": "ac:ACP_TSV_002",
+          "target_id": "ACP-TSV-002",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.6477824449539185,
+          "disambiguation_margin": 0.1429736614227295,
+          "rationale_snippet": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000055",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00009",
+          "item_ref": "SCAGILE-OPS-9",
+          "target_core_entity": "ac:ACO_TSV_004",
+          "target_id": "ACO-TSV-004",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.6020592451095581,
+          "disambiguation_margin": 0.13317328691482544,
+          "rationale_snippet": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000056",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00009",
+          "item_ref": "SCAGILE-OPS-9",
+          "target_core_entity": "ac:ACM_SLG_005",
+          "target_id": "ACM-SLG-005",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4546348452568054,
+          "disambiguation_margin": 0.14531326293945312,
+          "rationale_snippet": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000057",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00009",
+          "item_ref": "SCAGILE-OPS-9",
+          "target_core_entity": "ac:ACO_RPR_010",
+          "target_id": "ACO-RPR-010",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4457109868526459,
+          "disambiguation_margin": 0.08088919520378113,
+          "rationale_snippet": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000058",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00009",
+          "item_ref": "SCAGILE-OPS-9",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.44121843576431274,
+          "disambiguation_margin": 0.1877315640449524,
+          "rationale_snippet": "Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-10",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-10",
+      "source_text": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000059",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00010",
+          "item_ref": "SCAGILE-OPS-10",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.6244362592697144,
+          "disambiguation_margin": 0.30577898025512695,
+          "rationale_snippet": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000060",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00010",
+          "item_ref": "SCAGILE-OPS-10",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5094747543334961,
+          "disambiguation_margin": 0.21463149785995483,
+          "rationale_snippet": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000061",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00010",
+          "item_ref": "SCAGILE-OPS-10",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4196348190307617,
+          "disambiguation_margin": 0.2355741560459137,
+          "rationale_snippet": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000062",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00010",
+          "item_ref": "SCAGILE-OPS-10",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4086257219314575,
+          "disambiguation_margin": 0.1921178102493286,
+          "rationale_snippet": "Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate). OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-11",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-11",
+      "source_text": "Perform automated malware scanner on released binaries. Perform and add to release cycle automated malware scanner on released binaries",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00011"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000063",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00011",
+          "item_ref": "SCAGILE-OPS-11",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.510358989238739,
+          "disambiguation_margin": 0.13710877299308777,
+          "rationale_snippet": "Perform automated malware scanner on released binaries. Perform and add to release cycle automated malware scanner on released binaries. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000064",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00011",
+          "item_ref": "SCAGILE-OPS-11",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42052698135375977,
+          "disambiguation_margin": 0.08150404691696167,
+          "rationale_snippet": "Perform automated malware scanner on released binaries. Perform and add to release cycle automated malware scanner on released binaries. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-12",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-12",
+      "source_text": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00012"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000065",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00012",
+          "item_ref": "SCAGILE-OPS-12",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4407319128513336,
+          "disambiguation_margin": 0.09195396304130554,
+          "rationale_snippet": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000066",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00012",
+          "item_ref": "SCAGILE-OPS-12",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4348970651626587,
+          "disambiguation_margin": 0.08562543988227844,
+          "rationale_snippet": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000067",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00012",
+          "item_ref": "SCAGILE-OPS-12",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4335699677467346,
+          "disambiguation_margin": 0.1956038773059845,
+          "rationale_snippet": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000068",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00012",
+          "item_ref": "SCAGILE-OPS-12",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.42460864782333374,
+          "disambiguation_margin": 0.06264418363571167,
+          "rationale_snippet": "Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-13",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-13",
+      "source_text": "Ensure inclusion of security patches from previous releases. Ensure inclusion of security patches/fixes applied in previous release(s)",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00013"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000069",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00013",
+          "item_ref": "SCAGILE-OPS-13",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5702619552612305,
+          "disambiguation_margin": 0.05675405263900757,
+          "rationale_snippet": "Ensure inclusion of security patches from previous releases. Ensure inclusion of security patches/fixes applied in previous release(s). OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000070",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00013",
+          "item_ref": "SCAGILE-OPS-13",
+          "target_core_entity": "ac:ACM_ATB_001",
+          "target_id": "ACM-ATB-001",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4511851370334625,
+          "disambiguation_margin": 0.16983774304389954,
+          "rationale_snippet": "Ensure inclusion of security patches from previous releases. Ensure inclusion of security patches/fixes applied in previous release(s). OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-14",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-14",
+      "source_text": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00014"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000071",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00014",
+          "item_ref": "SCAGILE-OPS-14",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4324806034564972,
+          "disambiguation_margin": 0.05878332257270813,
+          "rationale_snippet": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000072",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00014",
+          "item_ref": "SCAGILE-OPS-14",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42148351669311523,
+          "disambiguation_margin": 0.07695531845092773,
+          "rationale_snippet": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000073",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00014",
+          "item_ref": "SCAGILE-OPS-14",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42120230197906494,
+          "disambiguation_margin": 0.06677010655403137,
+          "rationale_snippet": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000074",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00014",
+          "item_ref": "SCAGILE-OPS-14",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4196148216724396,
+          "disambiguation_margin": 0.04442104697227478,
+          "rationale_snippet": "Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-15",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-15",
+      "source_text": "Ensure all QA engineers have obtained secure testing training. Ensure all QA engineers have obtained secure testing training",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00015"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000075",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00015",
+          "item_ref": "SCAGILE-OPS-15",
+          "target_core_entity": "ac:ACO_TSV_007",
+          "target_id": "ACO-TSV-007",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5582621097564697,
+          "disambiguation_margin": 0.07194352149963379,
+          "rationale_snippet": "Ensure all QA engineers have obtained secure testing training. Ensure all QA engineers have obtained secure testing training. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000076",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00015",
+          "item_ref": "SCAGILE-OPS-15",
+          "target_core_entity": "ac:ACP_TSV_005",
+          "target_id": "ACP-TSV-005",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5117464661598206,
+          "disambiguation_margin": 0.06749045848846436,
+          "rationale_snippet": "Ensure all QA engineers have obtained secure testing training. Ensure all QA engineers have obtained secure testing training. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-16",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-16",
+      "source_text": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00016"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000077",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00016",
+          "item_ref": "SCAGILE-OPS-16",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5847365856170654,
+          "disambiguation_margin": 0.06753438711166382,
+          "rationale_snippet": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000078",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00016",
+          "item_ref": "SCAGILE-OPS-16",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5449800491333008,
+          "disambiguation_margin": 0.04999455809593201,
+          "rationale_snippet": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000079",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00016",
+          "item_ref": "SCAGILE-OPS-16",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5317410826683044,
+          "disambiguation_margin": 0.10967400670051575,
+          "rationale_snippet": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000080",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00016",
+          "item_ref": "SCAGILE-OPS-16",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4795515537261963,
+          "disambiguation_margin": 0.05867201089859009,
+          "rationale_snippet": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000081",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00016",
+          "item_ref": "SCAGILE-OPS-16",
+          "target_core_entity": "ac:ACP_IAT_001",
+          "target_id": "ACP-IAT-001",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46051302552223206,
+          "disambiguation_margin": 0.08169573545455933,
+          "rationale_snippet": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000082",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00016",
+          "item_ref": "SCAGILE-OPS-16",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.44064879417419434,
+          "disambiguation_margin": 0.0898929238319397,
+          "rationale_snippet": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them. OPS",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000083",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00016",
+          "item_ref": "SCAGILE-OPS-16",
+          "target_core_entity": "ac:ACM_ITS_004",
+          "target_id": "ACM-ITS-004",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4162050187587738,
+          "disambiguation_margin": 0.04806801676750183,
+          "rationale_snippet": "Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them. OPS",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-OPS-17",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-OPS-17",
+      "source_text": "Periodically check SSL certificates validity. Periodically check to ensure your SSL certificates and all certificates above it in its chain of trust have not expired or been revoked",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00017"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "SAFECODE_AGILE_2012-LIFTED-00017"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-1",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-1",
+      "source_text": "Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00018"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000084",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00018",
+          "item_ref": "SCAGILE-EXP-1",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.43874555826187134,
+          "disambiguation_margin": 0.13973820209503174,
+          "rationale_snippet": "Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000085",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00018",
+          "item_ref": "SCAGILE-EXP-1",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42840510606765747,
+          "disambiguation_margin": 0.09274867177009583,
+          "rationale_snippet": "Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000086",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00018",
+          "item_ref": "SCAGILE-EXP-1",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.422324001789093,
+          "disambiguation_margin": 0.06600168347358704,
+          "rationale_snippet": "Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-2",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-2",
+      "source_text": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00019"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000087",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5547229051589966,
+          "disambiguation_margin": 0.07208704948425293,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000088",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.5198138356208801,
+          "disambiguation_margin": 0.09567520022392273,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000089",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACM_SLG_005",
+          "target_id": "ACM-SLG-005",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5055239200592041,
+          "disambiguation_margin": 0.06417036056518555,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000090",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACP_TSV_007",
+          "target_id": "ACP-TSV-007",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.49955835938453674,
+          "disambiguation_margin": 0.05828949809074402,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000091",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.47631901502609253,
+          "disambiguation_margin": 0.07591187953948975,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000092",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46696120500564575,
+          "disambiguation_margin": 0.11738288402557373,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000093",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.46229004859924316,
+          "disambiguation_margin": 0.08224266767501831,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000094",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.44530782103538513,
+          "disambiguation_margin": 0.11585882306098938,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000095",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4436330795288086,
+          "disambiguation_margin": 0.043958842754364014,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000096",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00019",
+          "item_ref": "SCAGILE-EXP-2",
+          "target_core_entity": "ac:ACP_ATB_007",
+          "target_id": "ACP-ATB-007",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4232953190803528,
+          "disambiguation_margin": 0.05638214945793152,
+          "rationale_snippet": "Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-3",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-3",
+      "source_text": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00020"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000097",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00020",
+          "item_ref": "SCAGILE-EXP-3",
+          "target_core_entity": "ac:ACO_TMR_001",
+          "target_id": "ACO-TMR-001",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.6498889923095703,
+          "disambiguation_margin": 0.06501138210296631,
+          "rationale_snippet": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000098",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00020",
+          "item_ref": "SCAGILE-EXP-3",
+          "target_core_entity": "ac:ACP_TMR_001",
+          "target_id": "ACP-TMR-001",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.6079971194267273,
+          "disambiguation_margin": 0.06397432088851929,
+          "rationale_snippet": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000099",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00020",
+          "item_ref": "SCAGILE-EXP-3",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.46632421016693115,
+          "disambiguation_margin": 0.08900409936904907,
+          "rationale_snippet": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000100",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00020",
+          "item_ref": "SCAGILE-EXP-3",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4486459493637085,
+          "disambiguation_margin": 0.18179211020469666,
+          "rationale_snippet": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000101",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00020",
+          "item_ref": "SCAGILE-EXP-3",
+          "target_core_entity": "ac:ACO_TSV_006",
+          "target_id": "ACO-TSV-006",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4224942922592163,
+          "disambiguation_margin": 0.06898871064186096,
+          "rationale_snippet": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000102",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00020",
+          "item_ref": "SCAGILE-EXP-3",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4174641966819763,
+          "disambiguation_margin": 0.13389742374420166,
+          "rationale_snippet": "Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-4",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-4",
+      "source_text": "Conduct penetration tests on software around beta stage. Conduct penetration tests on the software around beta stage",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00021"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000103",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00021",
+          "item_ref": "SCAGILE-EXP-4",
+          "target_core_entity": "ac:ACP_TSV_005",
+          "target_id": "ACP-TSV-005",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5384413003921509,
+          "disambiguation_margin": 0.07541635632514954,
+          "rationale_snippet": "Conduct penetration tests on software around beta stage. Conduct penetration tests on the software around beta stage. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-5",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-5",
+      "source_text": "Enhance existing test suite to include security test cases. Enhance existing test suite to include security test cases",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00022"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000104",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00022",
+          "item_ref": "SCAGILE-EXP-5",
+          "target_core_entity": "ac:ACO_TSV_001",
+          "target_id": "ACO-TSV-001",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.563450276851654,
+          "disambiguation_margin": 0.04784595966339111,
+          "rationale_snippet": "Enhance existing test suite to include security test cases. Enhance existing test suite to include security test cases. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000105",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00022",
+          "item_ref": "SCAGILE-EXP-5",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4203003942966461,
+          "disambiguation_margin": 0.12074479460716248,
+          "rationale_snippet": "Enhance existing test suite to include security test cases. Enhance existing test suite to include security test cases. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-6",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-6",
+      "source_text": "Perform file fuzz testing. Perform file fuzz testing",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00023"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "SAFECODE_AGILE_2012-LIFTED-00023"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-7",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-7",
+      "source_text": "Perform network fuzz testing. Perform network fuzz testing",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00024"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000106",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00024",
+          "item_ref": "SCAGILE-EXP-7",
+          "target_core_entity": "ac:ACM_TSV_002",
+          "target_id": "ACM-TSV-002",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.45600056648254395,
+          "disambiguation_margin": 0.05414062738418579,
+          "rationale_snippet": "Perform network fuzz testing. Perform network fuzz testing. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-8",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-8",
+      "source_text": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00025"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000107",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5120642185211182,
+          "disambiguation_margin": 0.07033723592758179,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000108",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4730607867240906,
+          "disambiguation_margin": 0.09697651863098145,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000109",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4724249243736267,
+          "disambiguation_margin": 0.05022132396697998,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000110",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.45702821016311646,
+          "disambiguation_margin": 0.07856738567352295,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000111",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4485693573951721,
+          "disambiguation_margin": 0.07196071743965149,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000112",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACO_SLG_007",
+          "target_id": "ACO-SLG-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4452230632305145,
+          "disambiguation_margin": 0.05434316396713257,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000113",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4429455101490021,
+          "disambiguation_margin": 0.05460116267204285,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000114",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACP_IVF_005",
+          "target_id": "ACP-IVF-005",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.43246203660964966,
+          "disambiguation_margin": 0.07195600867271423,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000115",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42801791429519653,
+          "disambiguation_margin": 0.05600088834762573,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000116",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00025",
+          "item_ref": "SCAGILE-EXP-8",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4178953170776367,
+          "disambiguation_margin": 0.07269424200057983,
+          "rationale_snippet": "Third-party security assurance (module/library). Third-party security assurance for modules and libraries. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-9",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-9",
+      "source_text": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00026"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000117",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00026",
+          "item_ref": "SCAGILE-EXP-9",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5326956510543823,
+          "disambiguation_margin": 0.12642008066177368,
+          "rationale_snippet": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000118",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00026",
+          "item_ref": "SCAGILE-EXP-9",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5166984796524048,
+          "disambiguation_margin": 0.13069015741348267,
+          "rationale_snippet": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000119",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00026",
+          "item_ref": "SCAGILE-EXP-9",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.515286922454834,
+          "disambiguation_margin": 0.16409078240394592,
+          "rationale_snippet": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000120",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00026",
+          "item_ref": "SCAGILE-EXP-9",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5016593933105469,
+          "disambiguation_margin": 0.09821021556854248,
+          "rationale_snippet": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000121",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00026",
+          "item_ref": "SCAGILE-EXP-9",
+          "target_core_entity": "ac:ACP_IAT_006",
+          "target_id": "ACP-IAT-006",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4554349184036255,
+          "disambiguation_margin": 0.06082749366760254,
+          "rationale_snippet": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000122",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00026",
+          "item_ref": "SCAGILE-EXP-9",
+          "target_core_entity": "ac:ACM_TMR_005",
+          "target_id": "ACM-TMR-005",
+          "level": "Mechanism",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.44186002016067505,
+          "disambiguation_margin": 0.055983901023864746,
+          "rationale_snippet": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000123",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00026",
+          "item_ref": "SCAGILE-EXP-9",
+          "target_core_entity": "ac:ACO_TMR_008",
+          "target_id": "ACO-TMR-008",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4204595685005188,
+          "disambiguation_margin": 0.05058550834655762,
+          "rationale_snippet": "Security tool recommendations and effective use. Security tool recommendations and effective use including customization. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-10",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-10",
+      "source_text": "Prioritization of resolution of issues from code analysis. Prioritization of resolution of issues identified by code analysis tools (static and run-time), especially for existing code",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00027"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000124",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00027",
+          "item_ref": "SCAGILE-EXP-10",
+          "target_core_entity": "ac:ACP_TSV_002",
+          "target_id": "ACP-TSV-002",
+          "level": "Practice",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.5251407623291016,
+          "disambiguation_margin": 0.18492332100868225,
+          "rationale_snippet": "Prioritization of resolution of issues from code analysis. Prioritization of resolution of issues identified by code analysis tools (static and run-time), especially for existing code. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000125",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00027",
+          "item_ref": "SCAGILE-EXP-10",
+          "target_core_entity": "ac:ACM_TSV_005",
+          "target_id": "ACM-TSV-005",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.45016568899154663,
+          "disambiguation_margin": 0.07881492376327515,
+          "rationale_snippet": "Prioritization of resolution of issues from code analysis. Prioritization of resolution of issues identified by code analysis tools (static and run-time), especially for existing code. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-11",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-11",
+      "source_text": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00028"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000126",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00028",
+          "item_ref": "SCAGILE-EXP-11",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5365955829620361,
+          "disambiguation_margin": 0.05334797501564026,
+          "rationale_snippet": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000127",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00028",
+          "item_ref": "SCAGILE-EXP-11",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.48273441195487976,
+          "disambiguation_margin": 0.18245813250541687,
+          "rationale_snippet": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000128",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00028",
+          "item_ref": "SCAGILE-EXP-11",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.44037556648254395,
+          "disambiguation_margin": 0.13345128297805786,
+          "rationale_snippet": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000129",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00028",
+          "item_ref": "SCAGILE-EXP-11",
+          "target_core_entity": "ac:ACP_SLG_002",
+          "target_id": "ACP-SLG-002",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4195905923843384,
+          "disambiguation_margin": 0.05413660407066345,
+          "rationale_snippet": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000130",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00028",
+          "item_ref": "SCAGILE-EXP-11",
+          "target_core_entity": "ac:ACM_IAT_006",
+          "target_id": "ACM-IAT-006",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4172021150588989,
+          "disambiguation_margin": 0.08188295364379883,
+          "rationale_snippet": "Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "safecode_agile_2012/SCAGILE-EXP-12",
+      "source": "safecode_agile_2012",
+      "source_object_id": "SCAGILE-EXP-12",
+      "source_text": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening",
+      "source_lifted_rows": [
+        "SAFECODE_AGILE_2012-LIFTED-00029"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000131",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00029",
+          "item_ref": "SCAGILE-EXP-12",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.6235565543174744,
+          "disambiguation_margin": 0.16153794527053833,
+          "rationale_snippet": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000132",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00029",
+          "item_ref": "SCAGILE-EXP-12",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5492594242095947,
+          "disambiguation_margin": 0.07280179858207703,
+          "rationale_snippet": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000133",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00029",
+          "item_ref": "SCAGILE-EXP-12",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4570521116256714,
+          "disambiguation_margin": 0.1813669204711914,
+          "rationale_snippet": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000134",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00029",
+          "item_ref": "SCAGILE-EXP-12",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4408907890319824,
+          "disambiguation_margin": 0.05679476261138916,
+          "rationale_snippet": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening. EXP",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "SAFECODE_AGILE_2012-CLAIM-000135",
+          "lifted_row_ref": "SAFECODE_AGILE_2012-LIFTED-00029",
+          "item_ref": "SCAGILE-EXP-12",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4264184236526489,
+          "disambiguation_margin": 0.08778250217437744,
+          "rationale_snippet": "Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening. EXP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

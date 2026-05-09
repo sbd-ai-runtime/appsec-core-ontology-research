@@ -1,0 +1,1987 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0) \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+        "version": "AI 100-1 / RMF 1.0",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+        "author": "U.S. National Institute of Standards and Technology",
+        "release_date": "2023-01",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "mixed",
+        "pilot_id": "nist_ai_rmf_1_0"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 53,
+      "items_grounded": 31,
+      "items_lab_depth_pending": 22,
+      "olir_pairs_emitted": 102,
+      "primary_pairs": 31,
+      "secondary_pairs": 71,
+      "relationship_type_distribution": {
+        "equal": 0,
+        "intersects-with": 102,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-005",
+          "description": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.469,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.469; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000001 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.465,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.465; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000002 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-002",
+          "description": "Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.461,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.461; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000003 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000004 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-002",
+          "description": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.437,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.437; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000005 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.427,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.427; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.419,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.419; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000007 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1",
+          "description": "GOVERN 1.1: Legal and regulatory requirements involving AI. Policies, processes, are understood, managed, and documented. procedures, and GOVERN 1.2: The characteristics of trustworthy AI are inte- p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-005",
+          "description": "Release Promotion And Human Approval Integrity. Promotion between environments must respect explicit gates, including human approval for irreversible actions. Promotion gates are enforced and irrever\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.414,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.414; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000008 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.3",
+          "description": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.585,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.585; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000009 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.3",
+          "description": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-003",
+          "description": "Structured Threat Analysis Method Selection. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. methodology",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.561,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.561; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000010 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.3",
+          "description": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-001",
+          "description": "Risk-Based Security Test Planning. Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface. governance and review. strategy",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.464,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.464; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000011 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.3",
+          "description": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-002",
+          "description": "Dependency Risk Evaluation And Policy Gating. Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded. Dependency and image scanning results are avail\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.451,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.451; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000012 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.3",
+          "description": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.44,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.440; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000013 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.3",
+          "description": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-005",
+          "description": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000014 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.3",
+          "description": "Processes, procedures, and practices are in place. measuring, and to determine the needed level of risk management activities based managing of AI on the organization\u2019s risk tolerance. risks are in p\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-002",
+          "description": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000015 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-006",
+          "description": "Independent Review And Threat Model Lifecycle Governance. Threat models must be versioned, reviewed independently at the right release moments and kept under lifecycle discipline rather than treated \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.576,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.576; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000016 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-010",
+          "description": "Change Review Control For Security-Relevant Baseline Deviations. Record approved deviations and periodically review whether the current baseline still matches intended security posture. Change review\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.492,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.492; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000017 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-010",
+          "description": "Record And Periodically Review Exceptions Against The Intended Baseline. Record approved deviations and periodically review whether the current baseline still matches intended security posture. integ\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.469,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.469; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000018 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-002",
+          "description": "Dependency Risk Evaluation And Policy Gating. Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded. Dependency and image scanning results are avail\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.466,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.466; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000019 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-003",
+          "description": "Periodic Review And Access Audit. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. Make rejected access, abuse signals and external\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.458,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.458; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000020 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-005",
+          "description": "Architecture Review And Change Trigger Discipline. Subject meaningful architecture changes to explicit review, risk-proportional approval and disciplined change-trigger criteria. Architecture review \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000021 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-001",
+          "description": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000022 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-004",
+          "description": "Architecture Review Gates. Run formal architecture review and approval with risk-proportional gates and evidence. Re-trigger architecture review when meaningful change thresholds are crossed. Formal \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.433,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.433; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000023 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.5",
+          "description": "Ongoing monitoring and periodic review of the. risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequenc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-010",
+          "description": "Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000024 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.6",
+          "description": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.446,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.446; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000025 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.6",
+          "description": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-002",
+          "description": "Approval Gates And Separation Of Signal From Promotion Decision. Keep explicit human accountability for irreversible production promotion. Block promotion until required security gates pass and stagi\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.437,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.437; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000026 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.6",
+          "description": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000027 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.6",
+          "description": "Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ATB-002",
+          "description": "Architectural Decision And Solution Traceability. Keep ADRs and solution-level control traceability attached to the architecture rather than implicit in implementation only. governance and review. do\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000028 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.7",
+          "description": "Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000029 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.7",
+          "description": "Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-005",
+          "description": "Release Promotion And Human Approval Integrity. Promotion between environments must respect explicit gates, including human approval for irreversible actions. Promotion gates are enforced and irrever\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000030 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-1.7",
+          "description": "Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-002",
+          "description": "Approval Gates And Separation Of Signal From Promotion Decision. Keep explicit human accountability for irreversible production promotion. Block promotion until required security gates pass and stagi\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000031 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-2",
+          "description": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-007",
+          "description": "Threat Model Artifact Governance. Control access, classification and retention of threat-model artifacts so lifecycle governance remains auditable. governance and review. review",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.5,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.500; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000032 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-2",
+          "description": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.462,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.462; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000033 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-2",
+          "description": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.444,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.444; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000034 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-2",
+          "description": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-002",
+          "description": "Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.437,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.437; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000035 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-2",
+          "description": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-002",
+          "description": "Dependency Risk Evaluation And Policy Gating. Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded. Dependency and image scanning results are avail\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000036 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-2",
+          "description": "GOVERN 2.1: Roles and responsibilities and lines of communi-. Accountability cation related to mapping, measuring, and managing AI risks are structures are in documented and are clear to individuals \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-002",
+          "description": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.414,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.414; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000037 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-3",
+          "description": "GOVERN 3.1: Decision-making related to mapping, measuring,. Workforce diversity, and managing AI risks throughout the lifecycle is informed by a equity, inclusion, diverse team (e.g., diversity of de\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-002",
+          "description": "Trust Boundary Models. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Keep integration review, interface expectations and approval discipline\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000038 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-3",
+          "description": "GOVERN 3.1: Decision-making related to mapping, measuring,. Workforce diversity, and managing AI risks throughout the lifecycle is informed by a equity, inclusion, diverse team (e.g., diversity of de\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000039 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-3.2",
+          "description": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. mana\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.444,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.444; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000040 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-3.2",
+          "description": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. mana\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-009",
+          "description": "Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000041 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-3.2",
+          "description": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. mana\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000042 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-3.2",
+          "description": "Policies and procedures are in place to define and. prioritized in the mapping, differentiate roles and responsibilities for human-AI configura- measuring, and tions and oversight of AI systems. mana\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-002",
+          "description": "Dependency Risk Evaluation And Policy Gating. Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded. Dependency and image scanning results are avail\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.412,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.412; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000043 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-4",
+          "description": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and u\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-005",
+          "description": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000044 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-4",
+          "description": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and u\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-006",
+          "description": "Centralized Error Governance. Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable. governance and review. error governance",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.424,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.424; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000045 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-4",
+          "description": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and u\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000046 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-4",
+          "description": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and u\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-009",
+          "description": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000047 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-4",
+          "description": "GOVERN 4.1: Organizational policies and practices are in place. Organizational to foster a critical thinking and safety-first mindset in the design, teams are committed development, deployment, and u\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000048 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-4.3",
+          "description": "Organizational practices are in place to enable AI. testing, identification of incidents, and information sharing.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-006",
+          "description": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.447,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.447; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000049 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-4.3",
+          "description": "Organizational practices are in place to enable AI. testing, identification of incidents, and information sharing.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-006",
+          "description": "Centralized Error Governance. Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable. governance and review. error governance",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000050 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-5",
+          "description": "GOVERN 5.1: Organizational policies and practices are in place. Processes are in to collect, consider, prioritize, and integrate feedback from those place for robust external to the team that develop\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.412,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.412; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000051 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-6",
+          "description": "Policies      GOVERN 6.1: Policies and procedures are in place that address. and procedures are AI risks associated with third-party entities, including risks of in- in place to address fringement of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.468,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.468; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000052 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-6",
+          "description": "Policies      GOVERN 6.1: Policies and procedures are in place that address. and procedures are AI risks associated with third-party entities, including risks of in- in place to address fringement of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-009",
+          "description": "Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000053 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-GOVERN-6",
+          "description": "Policies      GOVERN 6.1: Policies and procedures are in place that address. and procedures are AI risks associated with third-party entities, including risks of in- in place to address fringement of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000055 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-1.6",
+          "description": "System requirements (e.g., \u201cthe system shall respect. the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into ac\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-008",
+          "description": "Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.472,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.472; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000056 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-1.6",
+          "description": "System requirements (e.g., \u201cthe system shall respect. the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into ac\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-007",
+          "description": "Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.457,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.457; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000057 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-1.6",
+          "description": "System requirements (e.g., \u201cthe system shall respect. the privacy of its users\u201d) are elicited from and understood by rel- evant AI actors. Design decisions take socio-technical implica- tions into ac\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-004",
+          "description": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.413,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.413; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000058 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-006",
+          "description": "Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.553,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.553; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000059 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-004",
+          "description": "Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.531,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.531; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000060 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-006",
+          "description": "Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.518,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.518; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000061 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-002",
+          "description": "Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000062 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.45,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.450; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000063 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-004",
+          "description": "Findings Workflow And Exception Governance. Triage testing findings, track them to correction and close them only through retest or formal exception. Separate raw automated signal from final release \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.444,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.444; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000064 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-002",
+          "description": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000065 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-002",
+          "description": "Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000066 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000067 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-004",
+          "description": "Reproducible Test Evidence Management. Keep reports, execution context and build linkage reproducible enough for later review and audit. integrity traceability and records. evidence management",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000068 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-2.3",
+          "description": "Scientific integrity and TEVV considerations are iden-. tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-001",
+          "description": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.413,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.413; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000069 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-3.5",
+          "description": "Processes for human oversight are defined, assessed,. and documented in accordance with organizational policies from the GOVERN function.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-002",
+          "description": "Approval Gates And Separation Of Signal From Promotion Decision. Keep explicit human accountability for irreversible production promotion. Block promotion until required security gates pass and stagi\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.41,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.410; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000070 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-4",
+          "description": "Risks and         MAP 4.1: Approaches for mapping AI technology and legal risks. benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are i\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000071 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-4",
+          "description": "Risks and         MAP 4.1: Approaches for mapping AI technology and legal risks. benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are i\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-005",
+          "description": "Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.433,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.433; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000072 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-4",
+          "description": "Risks and         MAP 4.1: Approaches for mapping AI technology and legal risks. benefits are mapped of its components \u2013 including the use of third-party data or soft- for all components ware \u2013 are i\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.429,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.429; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000073 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MAP-5.2",
+          "description": "monitor AI risk",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.414,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.414; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000074 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-1.3",
+          "description": "Internal experts who did not serve as front-line. developers for the system and/or independent assessors are in- volved in regular assessments and updates. Domain experts, users, AI actors external t\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-006",
+          "description": "Centralized Error Governance. Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable. governance and review. error governance",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.452,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.452; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000075 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.3",
+          "description": "AI system performance or assurance criteria. are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-007",
+          "description": "Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000076 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.3",
+          "description": "AI system performance or assurance criteria. are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-005",
+          "description": "Deployment Pipeline Traceability And Audit Controls. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. Pipeline instrumentation that records arti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000077 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.3",
+          "description": "AI system performance or assurance criteria. are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-007",
+          "description": "Security Testing And Empirical Assurance Integrity. Testing strategy, signal quality, finding closure, reproducible evidence, staged validation and specialized empirical testing must operate as one c\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000078 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.6",
+          "description": "The AI system is evaluated regularly for safety. risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the r\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.432,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.432; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000079 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.6",
+          "description": "The AI system is evaluated regularly for safety. risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the r\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000080 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.6",
+          "description": "The AI system is evaluated regularly for safety. risks \u2013 as identified in the MAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the r\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-007",
+          "description": "Input Validation And Safe Failure Integrity. External input validation, schema discipline, injection resistance, pre-use validation, controlled failure, centralized safe error handling and context-aw\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000081 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.7",
+          "description": "AI system security and resilience \u2013 as identified. in the MAP function \u2013 are evaluated and documented.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000082 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-2.11",
+          "description": "Fairness and bias \u2013 as identified in the MAP. function \u2013 are evaluated and results are documented.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-006",
+          "description": "Specialized Empirical Testing. Apply regression tests, offensive testing and fuzzing where deeper empirical validation is justified. validation and analysis. specialized testing",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.45,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.450; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000083 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-3.3",
+          "description": "Feedback processes for end users and impacted. communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics.",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-004",
+          "description": "Findings Workflow And Exception Governance. Triage testing findings, track them to correction and close them only through retest or formal exception. Separate raw automated signal from final release \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.447,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.447; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000084 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4",
+          "description": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-002",
+          "description": "Trust Boundary Models. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Keep integration review, interface expectations and approval discipline\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000086 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4",
+          "description": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-007",
+          "description": "Integration Trust And Service Interaction Assurance. Service-to-service trust, secure transport, message integrity, boundary mediation, integration review and external interaction auditability must o\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000087 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4",
+          "description": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-002",
+          "description": "Trust-Boundary And DFD Modeling. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. boundary model",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.444,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.444; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000088 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4",
+          "description": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-004",
+          "description": "End-to-End Deployment Traceability. Every deployment must remain traceable from authorization and pipeline context to the exact artifact, commit and target environment. Incidents and reviews can be t\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.437,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.437; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000089 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4",
+          "description": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000085 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4",
+          "description": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-001",
+          "description": "Trust Boundary And Integration Review. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. governance and review. boundary review",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000090 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4",
+          "description": "MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-004",
+          "description": "End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000091 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4.3",
+          "description": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.571,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.571; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000092 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4.3",
+          "description": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-005",
+          "description": "Static Analysis Profile Management. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. This anchor is narrower than the full problem\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000093 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4.3",
+          "description": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000094 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MEASURE-4.3",
+          "description": "Measurable performance improvements or de-. clines based on consultations with relevant AI actors, in- cluding affected communities, and field data about context- relevant risks and trustworthiness c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-002",
+          "description": "Dependency Risk Evaluation And Policy Gating. Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded. Dependency and image scanning results are avail\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000095 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-1",
+          "description": "AI           MANAGE 1.1:     A determination is made as to whether the AI. risks based on system achieves its intended purposes and stated objectives and assessments and whether its development or de\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.457,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.457; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000096 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-1.3",
+          "description": "Responses to the AI risks deemed high priority, as. functions are identified by the MAP function, are developed, planned, and doc- prioritized, umented. Risk response options can include mitigating, \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-003",
+          "description": "Structured Threat Analysis Method Selection. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. methodology",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.456,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.456; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000097 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-1.3",
+          "description": "Responses to the AI risks deemed high priority, as. functions are identified by the MAP function, are developed, planned, and doc- prioritized, umented. Risk response options can include mitigating, \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-002",
+          "description": "Dependency Risk Evaluation And Policy Gating. Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded. Dependency and image scanning results are avail\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000098 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-2.3",
+          "description": "Procedures are followed to respond to and recover. implemented, from a previously unknown risk when it is identified. documented, and informed by input MANAGE 2.4: Mechanisms are in place and applied\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000099 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-3",
+          "description": "AI           MANAGE 3.1: AI risks and benefits from third-party resources. risks and benefits are regularly monitored, and risk controls are applied and from third-party documented. entities are MANA\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-003",
+          "description": "Threat Model Versioning Controls. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. Control access, classification\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.461,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.461; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000100 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-4",
+          "description": "Risk          MANAGE 4.1: Post-deployment AI system monitoring plans. treatments, are implemented, including mechanisms for capturing and eval- including response uating input from users and other re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.53,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.530; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000101 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-4",
+          "description": "Risk          MANAGE 4.1: Post-deployment AI system monitoring plans. treatments, are implemented, including mechanisms for capturing and eval- including response uating input from users and other re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-009",
+          "description": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.421,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.421; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000102 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "NIST-AI-RMF-MANAGE-4.3",
+          "description": "Incidents and errors are communicated to relevant. monitored regularly. AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors ar\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-005",
+          "description": "Static Analysis Profile Management. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. This anchor is narrower than the full problem\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.491,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.491; threshold mapping \u2192 intersects-with. Claim NIST_AI_RMF_1_0-CLAIM-000103 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      }
+    ]
+  }
+}

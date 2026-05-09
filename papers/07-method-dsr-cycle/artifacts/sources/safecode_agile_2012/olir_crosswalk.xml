@@ -1,0 +1,2481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olir-concept-crosswalk xmlns="https://www.nist.gov/olir/v1" version="1.0">
+  <metadata>
+    <title>SAFECode — Practical Security Stories and Security Tasks for Agile Development Environments → AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)</title>
+    <submission-version>1.0</submission-version>
+    <submission-author>Pedro Farinha (programme lead) — SbD-ToE Programme</submission-author>
+    <submission-date>2026-05-08</submission-date>
+    <programme-doi>10.17605/OSF.IO/7T849</programme-doi>
+    <schema-basis>NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model</schema-basis>
+    <source-document strm-resource-type="DocumentaryImpl">
+      <title>SAFECode — Practical Security Stories and Security Tasks for Agile Development Environments</title>
+      <version>2012</version>
+      <url>https://safecode.org/</url>
+      <author>SAFECode</author>
+      <release-date>2012</release-date>
+      <mapping-direction>mixed</mapping-direction>
+      <pilot-id>safecode_agile_2012</pilot-id>
+    </source-document>
+    <reference-document strm-resource-type="Reference Document">
+      <title>AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)</title>
+      <version>V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)</version>
+      <url>https://osf.io/7t849/</url>
+      <author>SbD-ToE Programme — AppSec Core ontology project</author>
+    </reference-document>
+    <methodology>
+      Threshold-based continuous→categorical translation: sim≥0.6 → equal; 0.4≤sim&lt;0.6 → intersects-with; sim&lt;0.4 → unspecified.
+      Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target.
+      is-primary="true" marks item overall highest-similarity claim&apos;s target.
+      subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work).
+      STRM resource model: pilot doc → DocumentaryImpl; source-item → ConcreteImpl; AppSec Core V1 → Reference Document; Core entity → Concept.
+    </methodology>
+    <substrate-supplier-sha256>596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04</substrate-supplier-sha256>
+    <substrate-tag>substrate-v7-iter-3-ai-ml-incorporated</substrate-tag>
+    <ontology-tag>ontology-v1-next-acr004-promoted</ontology-tag>
+    <cycle-a-frozen-tag>cycle-a-frozen-2026-05-08</cycle-a-frozen-tag>
+  </metadata>
+  <stats>
+    <items-total>29</items-total>
+    <items-grounded>26</items-grounded>
+    <olir-pairs-emitted>135</olir-pairs-emitted>
+    <primary-pairs>26</primary-pairs>
+    <secondary-pairs>109</secondary-pairs>
+    <relationship-type-distribution>
+      <equal>9</equal>
+      <intersects-with>126</intersects-with>
+      <unspecified>0</unspecified>
+    </relationship-type-distribution>
+  </stats>
+  <mappings>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.544</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.544; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000001 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-004</id>
+        <description>End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.506</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.506; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000002 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.506</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.506; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000003 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-004</id>
+        <description>Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.491</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.491; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000004 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-001</id>
+        <description>Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.478</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.478; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000005 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.472</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.472; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000006 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-005</id>
+        <description>Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.442</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.442; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000007 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-006</id>
+        <description>Centralized Error Handling And Sensitive Error Logging Hygiene. Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.422</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.422; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000008 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.421</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.421; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000009 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-1</id>
+        <description>Configure bug tracking to track security vulnerabilities. Configure bug tracking to track security vulnerabilities as a requirement for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.415</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.415; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000010 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-009</id>
+        <description>Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. …</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.580</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.580; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000011 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.548</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.548; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000012 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-001</id>
+        <description>Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.542</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.542; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000013 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-005</id>
+        <description>Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.513</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.513; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000014 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-007</id>
+        <description>Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.511</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.511; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000015 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.492</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.492; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000016 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-001</id>
+        <description>Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.488</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.488; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000017 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.458</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.458; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000018 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.453</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.453; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000019 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.439</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.439; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000020 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.426</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.426; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000021 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-2</id>
+        <description>Verify security POCs and plan for fixes. Verify security POCs and plan for fixes as recommendation for software development team</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.425</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.425; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000022 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-4</id>
+        <description>Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-002</id>
+        <description>Governed Static Analysis Execution. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. validation and analysis. static analysis</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.729</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.729; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000023 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-4</id>
+        <description>Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-005</id>
+        <description>Static Analysis Profile Management. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. This anchor is narrower than the full problem…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.639</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.639; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000024 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-4</id>
+        <description>Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-002</id>
+        <description>Static Analysis Signal Quality And Baseline Governance. Operate static analysis with managed rule profiles, critical-surface coverage discipline and explicit false-positive baseline governance. Stati…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.593</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.593; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000025 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-4</id>
+        <description>Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-003</id>
+        <description>Structured Threat Analysis Method Discipline. Use a declared structured method with minimum coverage discipline so that threat analysis remains repeatable, comparable and appropriate to risk context.…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.459</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.459; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000026 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-4</id>
+        <description>Resolve critical and high severity issues from static analysis. Resolve critical and high severity issues identified by static code analysis tools</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-010</id>
+        <description>Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.459</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.459; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000027 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-5</id>
+        <description>Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-004</id>
+        <description>Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.490</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.490; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000028 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-5</id>
+        <description>Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-004</id>
+        <description>Rollback And Containment Controls. Keep rollback procedures specific, tested and time-bounded before they are needed in production. Introduce high-impact change gradually and contain unsafe rollout w…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.460</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.460; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000029 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-5</id>
+        <description>Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-001</id>
+        <description>Dependency Inventory And SBOM Traceability. Maintain a build-linked inventory of third-party components and generated SBOMs for produced artifacts. A software component inventory exists per build or …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.434</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.434; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000030 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-5</id>
+        <description>Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-005</id>
+        <description>Structured External Call Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. The repo clearly expresses interaction loggin…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.420</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.420; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000031 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-5</id>
+        <description>Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-006</id>
+        <description>External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit…</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.417</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.417; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000032 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-5</id>
+        <description>Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.417</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.417; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000033 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-5</id>
+        <description>Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.413</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.413; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000034 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-6</id>
+        <description>Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-004</id>
+        <description>End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.491</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.491; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000035 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-6</id>
+        <description>Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-004</id>
+        <description>Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.456</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.456; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000036 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-6</id>
+        <description>Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000037 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-6</id>
+        <description>Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.448</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.448; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000038 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-6</id>
+        <description>Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-001</id>
+        <description>Versioned Pipelines. Keep build and release logic versioned, reviewable and deterministic. governance and review. workflow</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.435</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.435; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000039 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-6</id>
+        <description>Keep track of patches/fixes to OS components. Keep track of patches/fixes to OS components for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-001</id>
+        <description>Dependency Inventory And SBOM Traceability. Maintain a build-linked inventory of third-party components and generated SBOMs for produced artifacts. A software component inventory exists per build or …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.413</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.413; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000040 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-001</id>
+        <description>Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.650</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.650; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000041 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-010</id>
+        <description>Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.500</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.500; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000042 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-005</id>
+        <description>Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.483</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.483; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000043 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-002</id>
+        <description>Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.478</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.478; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000044 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.471</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.471; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000045 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.463</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.463; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000046 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.456</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.456; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000047 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.438</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.438; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000048 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-7</id>
+        <description>Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-003</id>
+        <description>Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.429</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.429; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000049 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-8</id>
+        <description>Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.535</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.535; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000050 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-8</id>
+        <description>Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.419</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.419; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000051 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-8</id>
+        <description>Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.413</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.413; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000052 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-8</id>
+        <description>Use appropriate security-related flags for compiler. Use appropriate security-related flags for compiler for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-009</id>
+        <description>Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.409</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.409; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000053 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-9</id>
+        <description>Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-002</id>
+        <description>Governed Static Analysis Execution. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. validation and analysis. static analysis</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.648</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.648; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000054 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-9</id>
+        <description>Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-004</id>
+        <description>Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.602</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.602; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000055 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-9</id>
+        <description>Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-005</id>
+        <description>Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.455</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.455; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000056 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-9</id>
+        <description>Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-010</id>
+        <description>Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000057 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-9</id>
+        <description>Continuously verify coverage of static code analysis tools. Continuously verify coverage of static code analysis tools for new and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000058 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-10</id>
+        <description>Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.624</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.624; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000059 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-10</id>
+        <description>Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-002</id>
+        <description>Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.509</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.509; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000060 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-10</id>
+        <description>Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.420</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.420; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000061 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-10</id>
+        <description>Perform automated vulnerability scanner. Perform and add to testing cycle automated vulnerability scanner (OS and web as appropriate)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.409</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.409; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000062 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-11</id>
+        <description>Perform automated malware scanner on released binaries. Perform and add to release cycle automated malware scanner on released binaries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.510</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.510; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000063 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-11</id>
+        <description>Perform automated malware scanner on released binaries. Perform and add to release cycle automated malware scanner on released binaries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-002</id>
+        <description>Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.421</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.421; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000064 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-12</id>
+        <description>Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000065 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-12</id>
+        <description>Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.435</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.435; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000066 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-12</id>
+        <description>Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.434</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.434; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000067 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-12</id>
+        <description>Use secure versions of communication protocols. Use secure versions of communication protocols for new code and existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-005</id>
+        <description>Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.425</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.425; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000068 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-13</id>
+        <description>Ensure inclusion of security patches from previous releases. Ensure inclusion of security patches/fixes applied in previous release(s)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.570</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.570; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000069 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-13</id>
+        <description>Ensure inclusion of security patches from previous releases. Ensure inclusion of security patches/fixes applied in previous release(s)</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.451</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.451; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000070 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-14</id>
+        <description>Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.432</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.432; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000071 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-14</id>
+        <description>Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.421</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.421; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000072 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-14</id>
+        <description>Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.421</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.421; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000073 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-14</id>
+        <description>Ensure all developers have obtained secure coding training. Ensure all developers have obtained secure coding training</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.420</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.420; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000074 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-15</id>
+        <description>Ensure all QA engineers have obtained secure testing training. Ensure all QA engineers have obtained secure testing training</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-007</id>
+        <description>Security Testing And Empirical Assurance Integrity. Testing strategy, signal quality, finding closure, reproducible evidence, staged validation and specialized empirical testing must operate as one c…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.558</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.558; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000075 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-15</id>
+        <description>Ensure all QA engineers have obtained secure testing training. Ensure all QA engineers have obtained secure testing training</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-005</id>
+        <description>Staged Dynamic Testing And Gate Enforcement. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. validation and analysis. dynamic testing</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.512</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.512; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000076 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-16</id>
+        <description>Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-009</id>
+        <description>Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. …</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.585</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.585; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000077 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-16</id>
+        <description>Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.545</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.545; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000078 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-16</id>
+        <description>Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-007</id>
+        <description>Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.532</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.532; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000079 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-16</id>
+        <description>Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.480</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.480; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000080 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-16</id>
+        <description>Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-001</id>
+        <description>Strong Authentication And Step-Up Enforcement. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. identity and trust control. authentic…</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.461</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.461; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000081 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-16</id>
+        <description>Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000082 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-OPS-16</id>
+        <description>Ensure security fixes verified by security experts before committing. Ensure security fixes are verified by security experts before committing them</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-004</id>
+        <description>Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/d…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.416</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.416; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000083 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-1</id>
+        <description>Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.439</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.439; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000084 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-1</id>
+        <description>Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.428</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.428; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000085 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-1</id>
+        <description>Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.422</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.422; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000086 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-009</id>
+        <description>Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.555</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.555; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000087 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.520</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.520; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000088 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-005</id>
+        <description>Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.506</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.506; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000089 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-007</id>
+        <description>Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.500</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.500; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000090 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.476</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.476; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000091 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.467</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.467; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000092 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-005</id>
+        <description>Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.462</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.462; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000093 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.445</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.445; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000094 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.444</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.444; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000095 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-2</id>
+        <description>Security fix/patch validation (completeness and strength). Security fix/patch validation checking completeness and strength of fixes</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ATB-007</id>
+        <description>Automatable Topology And Pattern Validation. Validate topology and architecture conformance automatically where patterns and constraints are explicit enough. validation and analysis. validation</description>
+        <level>Practice</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.423</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.423; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000096 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-3</id>
+        <description>Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-001</id>
+        <description>Threat Modeling Scope And Trigger Discipline. Apply threat modeling at the right risk levels and re-trigger it when architectural change, new exposure or relevant risk events make the previous model …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.650</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.650; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000097 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-3</id>
+        <description>Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-001</id>
+        <description>Threat Model Creation And Triggered Refresh. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. governance and revi…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.608</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.608; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000098 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-3</id>
+        <description>Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-001</id>
+        <description>Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.466</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.466; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000099 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-3</id>
+        <description>Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-002</id>
+        <description>Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000100 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-3</id>
+        <description>Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-006</id>
+        <description>Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.422</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.422; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000101 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-3</id>
+        <description>Performing threat modeling for new/enhanced features. Performing threat modeling for new or enhanced features</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.417</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.417; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000102 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-4</id>
+        <description>Conduct penetration tests on software around beta stage. Conduct penetration tests on the software around beta stage</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-005</id>
+        <description>Staged Dynamic Testing And Gate Enforcement. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. validation and analysis. dynamic testing</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.538</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.538; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000103 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-5</id>
+        <description>Enhance existing test suite to include security test cases. Enhance existing test suite to include security test cases</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-001</id>
+        <description>Risk-Proportional Security Testing Strategy. Maintain an explicit, risk-proportional security testing strategy that defines test types, cadence, ownership, coverage thresholds and acceptance criteria…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.563</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.563; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000104 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-5</id>
+        <description>Enhance existing test suite to include security test cases. Enhance existing test suite to include security test cases</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.420</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.420; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000105 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-7</id>
+        <description>Perform network fuzz testing. Perform network fuzz testing</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-002</id>
+        <description>Test Execution Surfaces. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. Apply regression tests, offensive testing and fuzzing where deeper empirical val…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.456</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.456; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000106 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-003</id>
+        <description>Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.512</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.512; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000107 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.473</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.473; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000108 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-005</id>
+        <description>Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.472</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.472; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000109 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-008</id>
+        <description>Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000110 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000111 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-007</id>
+        <description>Security Logging And Audit Trail Assurance. Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.445</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.445; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000112 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.443</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.443; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000113 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.432</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.432; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000114 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.428</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.428; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000115 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-8</id>
+        <description>Third-party security assurance (module/library). Third-party security assurance for modules and libraries</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-001</id>
+        <description>Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.418</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.418; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000116 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-9</id>
+        <description>Security tool recommendations and effective use. Security tool recommendations and effective use including customization</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.533</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.533; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000117 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-9</id>
+        <description>Security tool recommendations and effective use. Security tool recommendations and effective use including customization</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-001</id>
+        <description>Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.517</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.517; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000118 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-9</id>
+        <description>Security tool recommendations and effective use. Security tool recommendations and effective use including customization</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.515</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.515; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000119 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-9</id>
+        <description>Security tool recommendations and effective use. Security tool recommendations and effective use including customization</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-009</id>
+        <description>Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. …</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.502</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.502; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000120 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-9</id>
+        <description>Security tool recommendations and effective use. Security tool recommendations and effective use including customization</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.455</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.455; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000121 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-9</id>
+        <description>Security tool recommendations and effective use. Security tool recommendations and effective use including customization</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-005</id>
+        <description>Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.442</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.442; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000122 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-9</id>
+        <description>Security tool recommendations and effective use. Security tool recommendations and effective use including customization</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-008</id>
+        <description>Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.420</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.420; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000123 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-10</id>
+        <description>Prioritization of resolution of issues from code analysis. Prioritization of resolution of issues identified by code analysis tools (static and run-time), especially for existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-002</id>
+        <description>Governed Static Analysis Execution. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. validation and analysis. static analysis</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.525</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.525; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000124 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-10</id>
+        <description>Prioritization of resolution of issues from code analysis. Prioritization of resolution of issues identified by code analysis tools (static and run-time), especially for existing code</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-005</id>
+        <description>Static Analysis Profile Management. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. This anchor is narrower than the full problem…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.450</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.450; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000125 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-11</id>
+        <description>Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.537</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.537; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000126 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-11</id>
+        <description>Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.483</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.483; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000127 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-11</id>
+        <description>Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-003</id>
+        <description>Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.440</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.440; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000128 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-11</id>
+        <description>Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-002</id>
+        <description>Structured And Centralized Security Logging. Emit structured logs with consistent fields and central forwarding rather than fragmented local-only records. rollout recovery and runtime records. centra…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.420</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.420; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000129 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-11</id>
+        <description>Environment hardening (development, building, deployment). Environment hardening covering development systems, building environment, deployment infrastructure</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.417</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.417; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000130 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-12</id>
+        <description>Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.624</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.624; threshold mapping → equal. Claim SAFECODE_AGILE_2012-CLAIM-000131 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-12</id>
+        <description>Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.549</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.549; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000132 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-12</id>
+        <description>Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000133 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-12</id>
+        <description>Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000134 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SCAGILE-EXP-12</id>
+        <description>Securing configuration. Securing configuration e.g. web server hardening, ACLs on folders holding sensitive data, configuration file hardening</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-003</id>
+        <description>Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.426</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.426; threshold mapping → intersects-with. Claim SAFECODE_AGILE_2012-CLAIM-000135 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+  </mappings>
+</olir-concept-crosswalk>

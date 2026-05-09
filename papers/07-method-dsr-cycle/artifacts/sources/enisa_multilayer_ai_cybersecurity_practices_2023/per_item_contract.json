@@ -1,0 +1,185 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+  "is_iteration_3_pilot": false,
+  "n_items": 5,
+  "items": [
+    {
+      "item_id": "enisa_multilayer_ai_cybersecurity_practices_2023/ENISA-AI-FAICP-LAYER-I",
+      "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_object_id": "ENISA-AI-FAICP-LAYER-I",
+      "source_text": "Layer I - Cybersecurity foundations for AI-hosting ICT environments. A multilayer framework for good cybersecurity practices for AI June 2023 6 2. FRAMEWORK FOR GOOD CYBERSECURITY PRACTICES FOR AI OVERVIEW OF THE FRAMEWORK The proposed FAICP framework is a simple approach to guide NCAs, individual AI stakeholders and the research community on how they can use the existing cybersecurity practices, what additional cybersecurity",
+      "source_lifted_rows": [
+        "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00001"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00001"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "enisa_multilayer_ai_cybersecurity_practices_2023/ENISA-AI-FAICP-LAYER-II",
+      "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_object_id": "ENISA-AI-FAICP-LAYER-II",
+      "source_text": "Layer II - AI-specific cybersecurity practices and controls. A multilayer framework for good cybersecurity practices for AI June 2023 14 \u2022 AI assets and p rocedures \u2022 AI threat assessment \u2022 AI security management \u2022 AI-related standards \u2022 Ethical and t rustworthy AI \u2022 Tools \u2022 Networks and initiatives AI legislation The cybersecurity legislation presented in the first layer is complemented with AI -specific legislative",
+      "source_lifted_rows": [
+        "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000001",
+          "lifted_row_ref": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00002",
+          "item_ref": "ENISA-AI-FAICP-LAYER-II",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4450041949748993,
+          "disambiguation_margin": 0.12593549489974976,
+          "rationale_snippet": "Layer II - AI-specific cybersecurity practices and controls. A multilayer framework for good cybersecurity practices for AI June 2023 14 \u2022 AI assets and p rocedures \u2022 AI threat assessment \u2022 AI securit",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "enisa_multilayer_ai_cybersecurity_practices_2023/ENISA-AI-FAICP-LAYER-III",
+      "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_object_id": "ENISA-AI-FAICP-LAYER-III",
+      "source_text": "Layer III - Sector-specific cybersecurity good practices for AI. A multilayer framework for good cybersecurity practices for AI June 2023 23 and trustworthy AI. \u2022 ALLAI73 is an independent Dutch organi sation dedicated to drive and foster responsible AI . ALLAI \u2019s vision is responsible AI for a world where AI is developed, deployed and used responsibly, i.e. in a safe and sustainable manner and in line with ethical princi",
+      "source_lifted_rows": [
+        "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000002",
+          "lifted_row_ref": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00003",
+          "item_ref": "ENISA-AI-FAICP-LAYER-III",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4397670030593872,
+          "disambiguation_margin": 0.05330657958984375,
+          "rationale_snippet": "Layer III - Sector-specific cybersecurity good practices for AI. A multilayer framework for good cybersecurity practices for AI June 2023 23 and trustworthy AI. \u2022 ALLAI73 is an independent Dutch organ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "enisa_multilayer_ai_cybersecurity_practices_2023/ENISA-AI-FAICP-SURVEY",
+      "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_object_id": "ENISA-AI-FAICP-SURVEY",
+      "source_text": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 regulation contains various requirements for providers and operators of AI systems, including cybersecurity requirements for high-risk AI systems. The objective of the survey was to collect information from the EU NCAs about existing",
+      "source_lifted_rows": [
+        "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000003",
+          "lifted_row_ref": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00004",
+          "item_ref": "ENISA-AI-FAICP-SURVEY",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4655747711658478,
+          "disambiguation_margin": 0.04649069905281067,
+          "rationale_snippet": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 regu",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000004",
+          "lifted_row_ref": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00004",
+          "item_ref": "ENISA-AI-FAICP-SURVEY",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4460381269454956,
+          "disambiguation_margin": 0.115191251039505,
+          "rationale_snippet": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 regu",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000005",
+          "lifted_row_ref": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00004",
+          "item_ref": "ENISA-AI-FAICP-SURVEY",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4365331828594208,
+          "disambiguation_margin": 0.08594155311584473,
+          "rationale_snippet": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 regu",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000006",
+          "lifted_row_ref": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00004",
+          "item_ref": "ENISA-AI-FAICP-SURVEY",
+          "target_core_entity": "ac:ACO_SLG_001",
+          "target_id": "ACO-SLG-001",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4115498661994934,
+          "disambiguation_margin": 0.06236749887466431,
+          "rationale_snippet": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 regu",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "enisa_multilayer_ai_cybersecurity_practices_2023/ENISA-AI-FAICP-CONCLUSIONS",
+      "source": "enisa_multilayer_ai_cybersecurity_practices_2023",
+      "source_object_id": "ENISA-AI-FAICP-CONCLUSIONS",
+      "source_text": "Conclusions and way forward for AI cybersecurity practices. A multilayer framework for good cybersecurity practices for AI June 2023 36 4. CONCLUSIONS AND THE WAY FORWARD The report provide s a framework (FAICP) consisting of three layers (basic cybersecurity relevant to AI, AI - specific cybersecurity and sector -specific cybersecurity for AI) that categori ses the various identified best practices and standards in",
+      "source_lifted_rows": [
+        "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-CLAIM-000007",
+          "lifted_row_ref": "ENISA_MULTILAYER_AI_CYBERSECURITY_PRACTICES_2023-LIFTED-00005",
+          "item_ref": "ENISA-AI-FAICP-CONCLUSIONS",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.41460657119750977,
+          "disambiguation_margin": 0.10030367970466614,
+          "rationale_snippet": "Conclusions and way forward for AI cybersecurity practices. A multilayer framework for good cybersecurity practices for AI June 2023 36 4. CONCLUSIONS AND THE WAY FORWARD The report provide s a framew",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

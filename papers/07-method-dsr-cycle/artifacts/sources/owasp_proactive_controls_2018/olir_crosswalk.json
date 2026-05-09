@@ -1,0 +1,1341 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "OWASP Proactive Controls \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "OWASP Proactive Controls",
+        "version": "2018 v3.0",
+        "url": "https://owasp.org/www-project-proactive-controls/",
+        "author": "OWASP",
+        "release_date": "2018",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "solution_space_direct",
+        "pilot_id": "owasp_proactive_controls_2018"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 10,
+      "items_grounded": 10,
+      "items_lab_depth_pending": 0,
+      "olir_pairs_emitted": 68,
+      "primary_pairs": 10,
+      "secondary_pairs": 58,
+      "relationship_type_distribution": {
+        "equal": 12,
+        "intersects-with": 56,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-008",
+          "description": "Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.8,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.800; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000001 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-008",
+          "description": "Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.723,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.723; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000002 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-007",
+          "description": "Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.582,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.582; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000003 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.532,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.532; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000004 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-008",
+          "description": "Define Hardened Baseline Profiles For Security-Relevant Components. Define and maintain hardened baseline profiles for security-relevant components so that new deployments start from a known secure p\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.529,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.529; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000005 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.47,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.470; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-007",
+          "description": "Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture s\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.464,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.464; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000007 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-001",
+          "description": "Authentication Strength And Identity Assurance. Require strong and context-appropriate authentication for privileged or sensitive access, including MFA, brute-force resistance, federation support and\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.44,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.440; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000008 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-002",
+          "description": "Secure Transport And Insecure Protocol Exclusion. Service interactions must use secure transport with valid certificates and approved protocol versions, while insecure transport options are explicitl\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000009 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-001",
+          "description": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000010 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C1",
+          "description": "Define Security Requirements. A security requirement is a statement of needed security functionality that ensures one of many different security properties of software is being satisfied. Security re\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TSV-001",
+          "description": "Risk-Based Security Test Planning. Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface. governance and review. strategy",
+          "level": "Practice",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000011 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-008",
+          "description": "Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.5,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.500; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000012 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.496,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.496; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000013 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-007",
+          "description": "Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture s\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.493,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.493; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000014 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-008",
+          "description": "Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.475,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.475; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000015 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.474,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.474; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000016 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.47,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.470; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000017 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.467,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.467; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000018 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-008",
+          "description": "Define Hardened Baseline Profiles For Security-Relevant Components. Define and maintain hardened baseline profiles for security-relevant components so that new deployments start from a known secure p\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.462,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.462; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000019 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-007",
+          "description": "Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.419,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.419; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000020 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C2",
+          "description": "Leverage Security Frameworks and Libraries. Secure coding libraries and software frameworks with embedded security help software developers guard against security-related design and implementation fl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.419,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.419; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000021 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C3",
+          "description": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of dat\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.489,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.489; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000022 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C3",
+          "description": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of dat\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-002",
+          "description": "Vault-Backed Secret Storage. Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code. identity and trust control. storage",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000023 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C3",
+          "description": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of dat\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-002",
+          "description": "Protected Secret Storage And Controlled Retrieval. Store secret material only in protected secret-management surfaces and retrieve it through controlled mechanisms rather than through embedded or bro\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.467,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.467; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000024 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C3",
+          "description": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of dat\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.453,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.453; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000025 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C3",
+          "description": "Secure Database Access. This section describes secure access to all data stores, including both relational databases and NoSQL databases. It covers query parameterization, secure configuration of dat\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-001",
+          "description": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000026 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C4",
+          "description": "Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some di\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-007",
+          "description": "Context-Aware Output Encoding At Rendering Boundaries. Apply encoding or escaping appropriate to the rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.637,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.637; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000027 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C4",
+          "description": "Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some di\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-008",
+          "description": "Context-Aware Output Encoding And Rendering Safety. Untrusted or dynamically composed data emitted to a rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, H\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.604,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.604; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000028 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C4",
+          "description": "Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some di\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-005",
+          "description": "Context-Aware Encoder Selection And Application. Apply encoding or escaping appropriate to the rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP heade\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.601,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.601; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000029 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C5",
+          "description": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-001",
+          "description": "External Input Contract Validation. Validate external inputs for presence, type, format and minimum contract conformance at application and integration entry points before processing begins. Malforme\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.651,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.651; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000030 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C5",
+          "description": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-001",
+          "description": "Boundary Input Validation. Validate external inputs and malformed messages at entry points before processing continues. validation and analysis. contract validation",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.646,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.646; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000031 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C5",
+          "description": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-003",
+          "description": "Schema And Contract Validators. Validate external inputs and malformed messages at entry points before processing continues. Constrain structured payloads and accepted values through explicit schema,\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.633,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.633; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000032 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C5",
+          "description": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ATB-005",
+          "description": "Automated Topology Validation Jobs. Validate topology and architecture conformance automatically where patterns and constraints are explicit enough. The repo has direct requirement and practice suppo\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.47,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.470; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000033 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C5",
+          "description": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-006",
+          "description": "Architectural Topology Validation And Pattern Conformance. Validate topology and architecture conformance automatically where feasible, using checks that compare the intended structure with approved \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.459,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.459; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000034 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C5",
+          "description": "Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ATB-007",
+          "description": "Automatable Topology And Pattern Validation. Validate topology and architecture conformance automatically where patterns and constraints are explicit enough. validation and analysis. validation",
+          "level": "Practice",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000035 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C6",
+          "description": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-001",
+          "description": "Authentication And Federation Protocols. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. Authenticate callers and enforce authorizat\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.535,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.535; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000036 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C6",
+          "description": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-007",
+          "description": "Identity And Access Control Integrity. Identity assurance, authorization policy, access revocation, session trust and API boundary enforcement must operate as one coherent access-control surface. Pri\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.531,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.531; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000037 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C6",
+          "description": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-002",
+          "description": "Machine Identity And Mutual Authentication Discipline. Bind service interactions to explicit trusted identities through mutual authentication or bounded machine tokens. identity and trust control. mu\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.494,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.494; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000038 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C6",
+          "description": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-002",
+          "description": "OIDC-Based Operational Identity. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by e\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.479,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.479; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000039 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C6",
+          "description": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-004",
+          "description": "Operational Identity Binding And OIDC Use. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. identity and t\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.457,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.457; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000040 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C6",
+          "description": "Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-001",
+          "description": "Authenticated Service Interaction And Machine Identity Binding. Machine-to-machine interactions must authenticate peer services through explicit trusted identities, mutual authentication or secure bo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000041 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.704,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.704; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000042 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-002",
+          "description": "Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.642,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.642; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000043 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-002",
+          "description": "Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.589,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.589; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000044 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-003",
+          "description": "Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.51,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.510; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000045 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.474,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.474; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000046 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SCBI-003",
+          "description": "Controlled Dependency And Image Sources. Restrict dependency and image acquisition to approved and enforced sources. Unapproved repositories, registries or image origins are blocked or rejected befor\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.459,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.459; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000047 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-005",
+          "description": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.452,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.452; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000048 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C7",
+          "description": "Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting a\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-009",
+          "description": "Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.448,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.448; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000049 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C8",
+          "description": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls und\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-003",
+          "description": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.451,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.451; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000050 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C8",
+          "description": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls und\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000051 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C8",
+          "description": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls und\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-003",
+          "description": "Log Integrity Protection And Access Discipline. Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable sa\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000052 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C8",
+          "description": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls und\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-001",
+          "description": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000053 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C8",
+          "description": "Protect Data Everywhere. Sensitive data such as passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls und\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ATB-002",
+          "description": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ATB",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000054 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-007",
+          "description": "Security Logging And Audit Trail Assurance. Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.651,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.651; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000055 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-006",
+          "description": "External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "equal",
+        "strength": 0.6,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.600; threshold mapping \u2192 equal. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000056 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.57,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.570; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000057 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.559,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.559; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000058 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-005",
+          "description": "Structured External Call Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. The repo clearly expresses interaction loggin\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.544,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.544; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000059 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-006",
+          "description": "Centralized Error Handling And Sensitive Error Logging Hygiene. Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets \u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.529,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.529; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000060 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.463,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.463; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000061 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-008",
+          "description": "Compliance Monitoring And Regulatory Change Feeds. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring exter\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.46,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.460; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000062 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.454,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.454; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000063 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000064 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-001",
+          "description": "Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000065 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TSV-004",
+          "description": "Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000066 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OPC-C9",
+          "description": "Implement Security Logging and Monitoring. Logging is a concept that most developers already use for debugging and diagnostics. Security logging is an equally basic concept: to log security informati\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-006",
+          "description": "Centralized Error Governance. Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable. governance and review. error governance",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.423,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.423; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000067 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OPC-C10",
+          "description": "Handle All Errors and Exceptions. Exception handling is a programming concept that allows an application to respond to different error states (like network down, or database connection failed, etc) i\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-001",
+          "description": "Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.502,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.502; threshold mapping \u2192 intersects-with. Claim OWASP_PROACTIVE_CONTROLS_2018-CLAIM-000068 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      }
+    ]
+  }
+}

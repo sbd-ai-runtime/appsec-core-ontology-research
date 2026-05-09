@@ -1,0 +1,22 @@
+pilot_id: capec_v3_9
+status: source_captured
+source_family: MITRE_CAPEC
+source_scope: Full CAPEC catalog v3.9 (559 non-deprecated attack patterns)
+version: '3.9'
+source_capture_policy:
+  format: xml_catalog_download
+  rationale: MITRE publishes canonical XML at capec.mitre.org
+sources:
+  - source_document_id: SRC-CAPEC-V3_9-XML
+    source_kind: xml_catalog
+    title: CAPEC Attack Pattern Catalog v3.9
+    origin_url: https://capec.mitre.org/data/xml/capec_latest.xml
+    local_path: sources/capec_v3_9/capec_v3_9.xml
+    sha256: 70279a2dff0cb0ad79e546adb07828335a704ad5210e047e09e986172fc9e34d
+    download_date: '2026-04-13'
+notes:
+  - Full catalog import. Previous pilot (capec_supply_chain_risks_v3_9) covered only View 683 (13 patterns).
+  - Organized by View 1000 (Mechanisms of Attack) categories for domain-first normalization.
+  - Includes Meta (77), Standard (197), and Detailed (341) abstraction levels.
+  - Meta patterns are abstract groupings; Standard and Detailed are substantive.
+  - Supersedes capec_supply_chain_risks_v3_9 for coverage purposes (that pilot remains for provenance).

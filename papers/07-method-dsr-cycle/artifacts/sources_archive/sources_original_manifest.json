@@ -1,0 +1,489 @@
+{
+  "schema_version": "1.0",
+  "archive_path": "data/p7_publish_bundle/sources_original.zip",
+  "archive_size_bytes": 31385934,
+  "archive_sha256": "e222f0664e438836fefd49653b21928828616b9c3cab5f63bd4fd6ce2e63dcad",
+  "build_timestamp_anchor": "2026-05-07T12:00:00Z (deterministic; substrate-v7 anchor)",
+  "supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+  "total_files": 76,
+  "total_sources": 31,
+  "missing_sources": [],
+  "sources_present": [
+    "asvs_v5_0_0",
+    "capec_v3_9",
+    "cis_controls_v8_1_2",
+    "cwe_software_development_view_v4_19_1",
+    "enisa_multilayer_ai_cybersecurity_practices_2023",
+    "eu_cra",
+    "eu_dora",
+    "eu_nis2",
+    "eu_rgpd",
+    "hipaa_security_rule",
+    "mcp_official_security_foundations_2025",
+    "mitre_atlas",
+    "nist_ai_100_2_e2025",
+    "nist_ai_rmf_1_0",
+    "nist_sp800_53_rev5",
+    "owasp_dsomm",
+    "owasp_llm_top_10",
+    "owasp_mcp_secure_server_development_v1_0",
+    "owasp_mcp_third_party_servers_v1_0",
+    "owasp_mcp_top_10_v0_1_2025_beta",
+    "owasp_ml_top_10",
+    "owasp_proactive_controls_2018",
+    "owasp_samm_v2_1",
+    "owasp_top_10_2021",
+    "pci_dss_v4_0_1",
+    "pci_sslc_v1_1",
+    "safecode_agile_2012",
+    "safecode_fpssd_2018",
+    "safecode_sic_2010",
+    "slsa_spec_v1_0_build_track",
+    "ssdf_sp800_218_v1_1"
+  ],
+  "files_by_source": {
+    "asvs_v5_0_0": [
+      {
+        "relative_path": "asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv",
+        "size_bytes": 105446,
+        "sha256": "6124dba176dc563f66363a11ae0c47f9b86b8a4a84c66a793670bd196ed86cd5"
+      },
+      {
+        "relative_path": "asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.flat.json",
+        "size_bytes": 162870,
+        "sha256": "8201b20eec2908c3380ac600c91c8ba746346fbb808859366abb232027532311"
+      },
+      {
+        "relative_path": "asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf",
+        "size_bytes": 516102,
+        "sha256": "f3e9a2f1098bc4af594578acb404121af69e3964aa4d90abd4b00607218d30c6"
+      },
+      {
+        "relative_path": "asvs_v5_0_0/release_page.html",
+        "size_bytes": 217071,
+        "sha256": "2d780ff96782c8ac14f709ff26bfe9149e65b0da0d331263c743a608644a43ff"
+      }
+    ],
+    "capec_v3_9": [
+      {
+        "relative_path": "capec_v3_9/capec_v3_9.xml",
+        "size_bytes": 3849998,
+        "sha256": "70279a2dff0cb0ad79e546adb07828335a704ad5210e047e09e986172fc9e34d"
+      }
+    ],
+    "cis_controls_v8_1_2": [
+      {
+        "relative_path": "cis_controls_v8_1_2/CIS_Controls_Guide_v8.1.2_0325_v2.pdf",
+        "size_bytes": 1422769,
+        "sha256": "e21b6d20098f3b0ed6391f95ac8f60fb7958a4b74389f96b456b37cd6ac878e4"
+      },
+      {
+        "relative_path": "cis_controls_v8_1_2/CIS_Controls_Version_8.1.2___March_2025.xlsx",
+        "size_bytes": 728326,
+        "sha256": "56ee1b73be5d80fa933332f9c5810da35b9d279e7e5ea1c8d67c9faed8a7ef5d"
+      }
+    ],
+    "cwe_software_development_view_v4_19_1": [
+      {
+        "relative_path": "cwe_software_development_view_v4_19_1/cwe-downloads.html",
+        "size_bytes": 45448,
+        "sha256": "ac28f1ddf07bebc33ee3478affa008d220006bc985b0d483fe69b0c3af7ded82"
+      },
+      {
+        "relative_path": "cwe_software_development_view_v4_19_1/cwe-view-699.csv.zip",
+        "size_bytes": 295113,
+        "sha256": "ea74eca522f02bbac27d34645da3110e5367d5a9ee68b4309ba9e013d126f326"
+      },
+      {
+        "relative_path": "cwe_software_development_view_v4_19_1/cwe-view-699.html",
+        "size_bytes": 38898227,
+        "sha256": "edf0582a6eac08435197dbb4461f1c1a5fca7232ee0228769d9f5ca49b4722f5"
+      },
+      {
+        "relative_path": "cwe_software_development_view_v4_19_1/cwe-view-699.xml.zip",
+        "size_bytes": 775353,
+        "sha256": "ee5b970b852783776dbcd3c8d3b131b011116096894ebc04334b26257a6f53da"
+      }
+    ],
+    "enisa_multilayer_ai_cybersecurity_practices_2023": [
+      {
+        "relative_path": "enisa_multilayer_ai_cybersecurity_practices_2023/Multilayer_Framework_for_Good_Cybersecurity_Practices_for_AI.pdf",
+        "size_bytes": 2701584,
+        "sha256": "126ed497056473cc109550708baba01705a5afa4aeab464aba4bea19e147635e"
+      },
+      {
+        "relative_path": "enisa_multilayer_ai_cybersecurity_practices_2023/landing_page.html",
+        "size_bytes": 53804,
+        "sha256": "808955a45673bcfa2bb505fd138e0232690d92e75269e0950c7e95218bb27857"
+      }
+    ],
+    "eu_cra": [
+      {
+        "relative_path": "eu_cra/eu_cra.pdf",
+        "size_bytes": 1782351,
+        "sha256": "e3ecaabddf6e321fa04097d15dfcccc7309d0fe5896240ab7625a27d74ab1b0a"
+      }
+    ],
+    "eu_dora": [
+      {
+        "relative_path": "eu_dora/eu_dora.pdf",
+        "size_bytes": 1493241,
+        "sha256": "85307f9e2a0409826dd0f54489645935816d16e929f0db4db3ef15badd11d38c"
+      }
+    ],
+    "eu_nis2": [
+      {
+        "relative_path": "eu_nis2/eu_nis2.pdf",
+        "size_bytes": 1326245,
+        "sha256": "20d29e9c5300ae1095530996f04731311bf82bb7d4d6a7a0102cd0f075755cf3"
+      }
+    ],
+    "eu_rgpd": [
+      {
+        "relative_path": "eu_rgpd/eu_rgpd.pdf",
+        "size_bytes": 982296,
+        "sha256": "bd84e63f5b622b739a83389afc3b30d240f792bb88d8eb03a816c9a82b0c2499"
+      }
+    ],
+    "hipaa_security_rule": [
+      {
+        "relative_path": "hipaa_security_rule/CFR-2023-title45-vol2-part164-subpartC.pdf",
+        "size_bytes": 216925,
+        "sha256": "84622f565b1922ce9f9353ac6b53fc003408efd083304c819bb519e1bda4a3fb"
+      },
+      {
+        "relative_path": "hipaa_security_rule/hipaa_security_rule.extracted.txt",
+        "size_bytes": 88408,
+        "sha256": "50026e7063d2a982a62f763c6d9ac0ef56a2f2b537a6e4051aedd3582a74cdcc"
+      }
+    ],
+    "mcp_official_security_foundations_2025": [
+      {
+        "relative_path": "mcp_official_security_foundations_2025/authorization_2025-11-25.html",
+        "size_bytes": 636460,
+        "sha256": "f24df721f88425ab8bd6defae87b0c3343c47f1697f893fc99eff14b84492380"
+      },
+      {
+        "relative_path": "mcp_official_security_foundations_2025/security_best_practices_2025-06-18.html",
+        "size_bytes": 498303,
+        "sha256": "ce6923153bb24dc9a9afeb38b9ddf7e7fd9a725ed22722fc6b6fbeaf93db3e64"
+      }
+    ],
+    "mitre_atlas": [
+      {
+        "relative_path": "mitre_atlas/ATLAS.yaml",
+        "size_bytes": 452932,
+        "sha256": "8a5693df51135721796607b8f29cba8ed33d745d5592ed80efbaaab0fba978f2"
+      }
+    ],
+    "nist_ai_100_2_e2025": [
+      {
+        "relative_path": "nist_ai_100_2_e2025/NIST.AI.100-2e2025.pdf",
+        "size_bytes": 1964469,
+        "sha256": "4811fb6ad73f9c9121843ab77e029b5adc6f2c86d33c2fc5b2099ef133847646"
+      }
+    ],
+    "nist_ai_rmf_1_0": [
+      {
+        "relative_path": "nist_ai_rmf_1_0/NIST.AI.100-1.pdf",
+        "size_bytes": 1946127,
+        "sha256": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1"
+      }
+    ],
+    "nist_sp800_53_rev5": [
+      {
+        "relative_path": "nist_sp800_53_rev5/NIST_SP-800-53_rev5_catalog.json",
+        "size_bytes": 10441924,
+        "sha256": "cc4ad0c9e759328b953d6fc4ad81884df43106f904e01ebc1508d4167c0a8543"
+      }
+    ],
+    "owasp_dsomm": [
+      {
+        "relative_path": "owasp_dsomm/data_fda3b250ae9325b8c10f23318c9f0768eaa60b98.zip",
+        "size_bytes": 196772,
+        "sha256": "ca439a9950eab3d149c534ca4a5d1fb8e5c48712e4dd55c2fd08d8a59e747c9d"
+      },
+      {
+        "relative_path": "owasp_dsomm/data_repo_HEAD.txt",
+        "size_bytes": 41,
+        "sha256": "35cb67094b8417e0d8ba944a43b93702f840cfb42fd05c1fbad2b3e9b116c5c0"
+      },
+      {
+        "relative_path": "owasp_dsomm/dsomm_site.html",
+        "size_bytes": 17808,
+        "sha256": "9b0d05aca6d9932718ce963d8e067a0a9ed912002db3d7da9bb8d84ee37a1baa"
+      },
+      {
+        "relative_path": "owasp_dsomm/model_fda3b250ae9325b8c10f23318c9f0768eaa60b98.yaml",
+        "size_bytes": 338134,
+        "sha256": "d93a478625a5efe20894cd63841cc0dd2f04e12bf107ddc3b8084b0807789252"
+      },
+      {
+        "relative_path": "owasp_dsomm/project_page.html",
+        "size_bytes": 33358,
+        "sha256": "e365b0f08af8bc9b8ba142225e652c763135ca2723ea219c17e8b99355a583d4"
+      }
+    ],
+    "owasp_llm_top_10": [
+      {
+        "relative_path": "owasp_llm_top_10/_hub-llm-top-10.html",
+        "size_bytes": 864589,
+        "sha256": "3bfa21c53bd930d482686237be6f16f4a4dc428944f7cf0ea4f26611e6675316"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm01-prompt-injection.html",
+        "size_bytes": 305876,
+        "sha256": "15c4b5243a4d370081bee6dbd8d9a50323fb9898bbc14fe086d99beb801ae638"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm022025-sensitive-information-disclosure.html",
+        "size_bytes": 312989,
+        "sha256": "51671ce3faa59dca989e1b20eed80c69176af0bbdc4f28376f0e0742b260dbe2"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm032025-supply-chain.html",
+        "size_bytes": 321742,
+        "sha256": "b52011a2f77f1318abda3be83efbc053f7a885290075353e41bd2c7f96288cb8"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm042025-data-and-model-poisoning.html",
+        "size_bytes": 305263,
+        "sha256": "84f5bfff9999e1c4019b3b268e56ac74da90c6a2eddcbf5b8873f8a01350b3d8"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm052025-improper-output-handling.html",
+        "size_bytes": 304284,
+        "sha256": "94d31fbdaa3140d0a07185d3d11197b830f7ea1d77133f8009ff67c992e96691"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm062025-excessive-agency.html",
+        "size_bytes": 311111,
+        "sha256": "6d7510ad5e0dc3ca1ea60a65af7c51d24cf9ab262fb814dbb5abfe76c64b2b36"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm072025-system-prompt-leakage.html",
+        "size_bytes": 304770,
+        "sha256": "a9845d03315f4e41ac21ade9d1cc1fc2eda478f85e95b1e43bc1949b04c47a90"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm082025-vector-and-embedding-weaknesses.html",
+        "size_bytes": 305980,
+        "sha256": "1dc29b059d569b2b5155a34dff7d519d79a87736cbdb6766b7325a10f0b1521d"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm092025-misinformation.html",
+        "size_bytes": 307472,
+        "sha256": "eacfb2a0488afb24ece094a58468bc88af96c08233349f2abda5f7ad32437347"
+      },
+      {
+        "relative_path": "owasp_llm_top_10/llm102025-unbounded-consumption.html",
+        "size_bytes": 316098,
+        "sha256": "2c5e072b3a2234321fa1055ec1415cbd96eee67ab2bfc92f6abc0e6c865b7f77"
+      }
+    ],
+    "owasp_mcp_secure_server_development_v1_0": [
+      {
+        "relative_path": "owasp_mcp_secure_server_development_v1_0/A_Practical_Guide_for_Secure_MCP_Server_Development_v1_0.pdf",
+        "size_bytes": 637801,
+        "sha256": "e0681dc7f64074f9dfceedda90533cf6db1cc3566508d28f77c69cc3cc2307b0"
+      },
+      {
+        "relative_path": "owasp_mcp_secure_server_development_v1_0/landing_page.html",
+        "size_bytes": 307272,
+        "sha256": "dd522536eedca4e78f1b16529b0489aa5b3d7c61963136434967aa3af0308ee9"
+      }
+    ],
+    "owasp_mcp_third_party_servers_v1_0": [
+      {
+        "relative_path": "owasp_mcp_third_party_servers_v1_0/A_Practical_Guide_for_Securely_Using_Third-Party_MCP_Servers_v1_0.pdf",
+        "size_bytes": 1003850,
+        "sha256": "4a0c877803ec174a518187872dc7ef3af5f5e5bca2ba00cc6e689b2f85b4a9fa"
+      },
+      {
+        "relative_path": "owasp_mcp_third_party_servers_v1_0/landing_page.html",
+        "size_bytes": 306562,
+        "sha256": "694452661fcc6668fd421c02b1f07810ff9d3dc188e24c3d9a12d85dee32147a"
+      }
+    ],
+    "owasp_mcp_top_10_v0_1_2025_beta": [
+      {
+        "relative_path": "owasp_mcp_top_10_v0_1_2025_beta/project_page.html",
+        "size_bytes": 48089,
+        "sha256": "41ec2354bdbaed4f18944f0d3a696277b4ddd5ad597138c7c8cc28b9fdfd54f3"
+      }
+    ],
+    "owasp_ml_top_10": [
+      {
+        "relative_path": "owasp_ml_top_10/ML01_2023-Input_Manipulation_Attack.html",
+        "size_bytes": 31549,
+        "sha256": "fd02dc546ad612a9c825a9bd98aa1d09a3f09b51821c7a81a7b66867e562a34b"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML02_2023-Data_Poisoning_Attack.html",
+        "size_bytes": 32285,
+        "sha256": "d7d7ef118834c54a2cef1db2eec3c0fda1b19533540bca2e61b22d2d34e7a5b9"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML03_2023-Model_Inversion_Attack.html",
+        "size_bytes": 32851,
+        "sha256": "ea2099a315a90c07956b90fdfdd1c489ee9dbbe14d44ccbef6ad2fca187628a0"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML04_2023-Membership_Inference_Attack.html",
+        "size_bytes": 31791,
+        "sha256": "0b689cd9726c9187485030bfadded3c5a1bbc86515f63b170ef10348f28a766d"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML05_2023-Model_Theft.html",
+        "size_bytes": 31344,
+        "sha256": "e91c44b6666b95f33a0386d47afb38f4d264acbf693d2b14111af57857af5ccd"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML06_2023-AI_Supply_Chain_Attacks.html",
+        "size_bytes": 33354,
+        "sha256": "24c68378b18e6e14e88b714f35175fd7e70aba1bc67fff6158b1bcbdd69e68b7"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML07_2023-Transfer_Learning_Attack.html",
+        "size_bytes": 32207,
+        "sha256": "2d7637374ebfe58d5fdaeee5e00fd8eb036a07c10d76e0d4343ac351deb02077"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML08_2023-Model_Skewing.html",
+        "size_bytes": 32052,
+        "sha256": "1aaa7df48fe1591ce21dc0cd76809e4147a7d646e3b718d45aa3ef14fa7ce6f1"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML09_2023-Output_Integrity_Attack.html",
+        "size_bytes": 31266,
+        "sha256": "dca5258b68a4681af3a7b2f8ebd9db7c855b1048cd3027fe47bbb512394d01d9"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/ML10_2023-Model_Poisoning.html",
+        "size_bytes": 31213,
+        "sha256": "1237410599341d19723c7433afe62f381233a98b0f82da54e5824ada21793cb9"
+      },
+      {
+        "relative_path": "owasp_ml_top_10/_hub-ml-top-10.html",
+        "size_bytes": 46378,
+        "sha256": "23114d044ed5be1aed3d67c174b3cac3551d55395bcc38aabf61007d45ee7aa7"
+      }
+    ],
+    "owasp_proactive_controls_2018": [
+      {
+        "relative_path": "owasp_proactive_controls_2018/owasp_proactive_controls_2018.json",
+        "size_bytes": 4582,
+        "sha256": "98da0bba7c1ef283123ae94d4d9fcc361f3ec11b880009c47d1cc4ba0cd3bc7f"
+      }
+    ],
+    "owasp_samm_v2_1": [
+      {
+        "relative_path": "owasp_samm_v2_1/core_8afa059004fa4abc2b15c714a3a0113548e1881c.zip",
+        "size_bytes": 307699,
+        "sha256": "fee257257259207f61e282f0888a4abca537b23366607e03722ccf9fc463d30a"
+      },
+      {
+        "relative_path": "owasp_samm_v2_1/core_repo_HEAD.txt",
+        "size_bytes": 41,
+        "sha256": "087f326d7e372d79df5880afb8ce8a71136961e39d4ed5b66108cb72c8277018"
+      },
+      {
+        "relative_path": "owasp_samm_v2_1/model.html",
+        "size_bytes": 12700,
+        "sha256": "0069f5ce10f7ee5e2494da70a35d8b7a2898aa792055100853b170e7f443470d"
+      },
+      {
+        "relative_path": "owasp_samm_v2_1/release_notes_v2.html",
+        "size_bytes": 13756,
+        "sha256": "94d444a1090ea5f98bcf3ad9a947d3ad32a435f4b970518355397ce1c607704c"
+      }
+    ],
+    "owasp_top_10_2021": [
+      {
+        "relative_path": "owasp_top_10_2021/owasp_top_10_2021.json",
+        "size_bytes": 4570,
+        "sha256": "c212943292c6bbf45f97778cb58f3d42fd9e8b45da51bd61e7d657462b24cbdc"
+      }
+    ],
+    "pci_dss_v4_0_1": [
+      {
+        "relative_path": "pci_dss_v4_0_1/PCI-DSS-v4_0_1.extracted.txt",
+        "size_bytes": 1400930,
+        "sha256": "392cadf0081c681c2c00c6e2a83f2efea95bbb3e2d222324e34b265150fd9d8a"
+      },
+      {
+        "relative_path": "pci_dss_v4_0_1/PCI-DSS-v4_0_1.pdf",
+        "size_bytes": 4458346,
+        "sha256": "5e6b9093b84007b973097d20126a3768ea2f0a1d4200255c849b0fb3bf04ebc7"
+      }
+    ],
+    "pci_sslc_v1_1": [
+      {
+        "relative_path": "pci_sslc_v1_1/PCI-Secure-SLC-Standard-v1_1.pdf",
+        "size_bytes": 470053,
+        "sha256": "a4f959b130e8efd222c0a43b4b97070154c148d020c3e5667694a43e6fa6d333"
+      }
+    ],
+    "safecode_agile_2012": [
+      {
+        "relative_path": "safecode_agile_2012/SAFECode_Agile_Dev_Security0712.pdf",
+        "size_bytes": 1541289,
+        "sha256": "0261982c92b75a7644f5032c7cf380d51d396a6873636446eb9638ea92358617"
+      }
+    ],
+    "safecode_fpssd_2018": [
+      {
+        "relative_path": "safecode_fpssd_2018/SAFECode_Fundamental_Practices_2018.pdf",
+        "size_bytes": 780508,
+        "sha256": "9a9a07b5fab1727c5d2e96cec38747e2c1c8508fe1e84a3971618714ecd733ae"
+      }
+    ],
+    "safecode_sic_2010": [
+      {
+        "relative_path": "safecode_sic_2010/SAFECode_Software_Integrity_Controls0610.pdf",
+        "size_bytes": 2328350,
+        "sha256": "e9d221e796ec898c1df24876b0b46c29fd33a16cccd910de34552169c7453b8b"
+      }
+    ],
+    "slsa_spec_v1_0_build_track": [
+      {
+        "relative_path": "slsa_spec_v1_0_build_track/index.html",
+        "size_bytes": 16564,
+        "sha256": "bb85b967d27c7eb8e639fb66c7da94990b6f479bdca2efa6c09fa8f147336ba0"
+      },
+      {
+        "relative_path": "slsa_spec_v1_0_build_track/levels.html",
+        "size_bytes": 25605,
+        "sha256": "5f76abd3a58616c0f53034554a839e425ea1dc90b59b80e37881ac991de1b13e"
+      },
+      {
+        "relative_path": "slsa_spec_v1_0_build_track/principles.html",
+        "size_bytes": 20318,
+        "sha256": "90f0b05395a94219b23ff7322add3759925df8de1efc9594cb47cb627e958232"
+      },
+      {
+        "relative_path": "slsa_spec_v1_0_build_track/requirements.html",
+        "size_bytes": 32223,
+        "sha256": "31975a28040d0a366bdea58742ded5ed98cf9ca76f9e960b0b255e7213cbf129"
+      },
+      {
+        "relative_path": "slsa_spec_v1_0_build_track/verifying_artifacts.html",
+        "size_bytes": 34948,
+        "sha256": "7967df1dd0426ae4e8dd784859c6e146460c4e17b6bacc48d548fbd231971e50"
+      }
+    ],
+    "ssdf_sp800_218_v1_1": [
+      {
+        "relative_path": "ssdf_sp800_218_v1_1/NIST.SP.800-218.extracted.txt",
+        "size_bytes": 107357,
+        "sha256": "8d56ca708e3b16b7b1dc77138f0664a34b33bf1965990d84530226438255eb9c"
+      },
+      {
+        "relative_path": "ssdf_sp800_218_v1_1/NIST.SP.800-218.pdf",
+        "size_bytes": 739891,
+        "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22"
+      }
+    ]
+  },
+  "license_notice": "Original source files retain their upstream licenses. See data/<source>/stubs/source_retrieval_receipt.json or pilots/<source>/source_manifest.yaml for per-source license. Research-dataset distribution under fair use / public-sector reuse / OWASP CC-BY-SA / NIST public-domain / EU public-sector reuse policy (Commission Decision 2011/833/EU). Not commercial reuse."
+}

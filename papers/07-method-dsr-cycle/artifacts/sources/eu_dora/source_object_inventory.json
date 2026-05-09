@@ -1,0 +1,269 @@
+{
+  "schema_version": "0.2",
+  "pilot_id": "eu_dora",
+  "status": "source_objects_extracted_from_synthesis",
+  "source_document_id": "SRC-EU-DORA",
+  "extracted_at": "2026-04-12T23:42:44.680766Z",
+  "counts": {
+    "total": 24,
+    "articles": 24
+  },
+  "synthesis_conclusion": "## Conclusão estrutural",
+  "existing_validation": "Article-by-article validation already performed in knowledge-graph working notes. See 2026-04-05-dora-overlay-validation-synthesis.md",
+  "items": [
+    {
+      "source_object_id": "DORA-ART-4",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 4,
+      "title": "DORA Article 4",
+      "statement": "Article 4 (Proportionality principle) provides that financial entities shall comply with the requirements of the Regulation in accordance with the principle of proportionality, taking into account their size, overall risk profile, and the nature, scale and complexity of their services, activities and operations. Microenterprises and small and non-interconnected investment firms benefit from a simplified ICT risk-management framework as specified in Article 16.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-5",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 5,
+      "title": "DORA Article 5",
+      "statement": "Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve, oversee and be responsible for the implementation of the ICT risk-management framework. Specific obligations include: set roles and responsibilities for ICT-related functions; bear final responsibility for managing ICT risk; approve and oversee implementation of the digital operational resilience strategy; allocate appropriate budget; approve and review policies on use of ICT third-party services; establish reporting channels for ICT-related incidents and major events; approve and review the audit plan, ICT internal audits and material modifications. The management body shall actively keep up with sufficient knowledge and skills to understand and assess ICT risk.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-6",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 6,
+      "title": "DORA Article 6",
+      "statement": "Article 6 (ICT risk-management framework) requires financial entities to have a sound, comprehensive and well-documented ICT risk-management framework as part of their overall risk-management system, enabling them to address ICT risk quickly, efficiently and comprehensively. The framework shall include strategies, policies, procedures, ICT protocols and tools necessary to duly and adequately protect all relevant physical components and infrastructures, including computer hardware and servers, premises, data centres, and sensitive designated areas. It shall provide identification of ICT-supported business functions, information assets and ICT assets, document classification of these, define a risk tolerance level, and ensure that critical or important functions identify ICT-related risks at all times. The framework shall be documented and reviewed at least once a year, audited regularly, and updated upon material change or following recommendations from audits or supervisors.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-8",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 8,
+      "title": "DORA Article 8",
+      "statement": "Article 8 (Identification) requires financial entities to identify, classify and adequately document all ICT-supported business functions, roles and responsibilities, information assets and ICT assets supporting those functions, and their interdependencies. Asset inventories must be reviewed regularly, mapped to criticality of supported business functions, and updated upon material changes. Financial entities shall identify all sources of ICT risk, including third-party ICT-related risk, on a continuous basis and shall assess cyber threats and ICT vulnerabilities relevant to their business functions and ICT assets.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-9",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 9,
+      "title": "DORA Article 9",
+      "statement": "Article 9 (Protection and prevention) requires financial entities to design, procure and implement ICT security policies, procedures, protocols and tools that aim to ensure resilience, continuity and availability of ICT systems and to maintain high standards of security, confidentiality and integrity of data. Includes: ICT security strategy, network and infrastructure security, identity management, access control on a need-to-know basis, secure data and configuration management, encryption of data in transit and at rest, secure development practices, vulnerability management and patch management, and physical and environmental security of ICT premises.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-10",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 10,
+      "title": "DORA Article 10",
+      "statement": "Article 10 (Detection) requires mechanisms to promptly detect anomalous activities — including network performance issues and ICT-related incidents — and to identify potential single points of failure. Detection mechanisms shall enable multiple layers of control, define alert thresholds and criteria for triggering ICT-related incident detection and response processes, including automatic alerting where relevant, and be regularly tested. Financial entities shall allocate sufficient resources and capabilities to monitor user activity, anomalies and ICT-related incidents.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-11",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 11,
+      "title": "DORA Article 11",
+      "statement": "Article 11 (Response and recovery) requires financial entities to put in place a comprehensive ICT business-continuity policy that ensures continuity of critical or important functions, including: response and recovery plans aligned with their ICT risk-management framework, that address all ICT-related incident scenarios; backup procedures with restoration tested at appropriate frequency; redundancy of ICT components; alternative or back-up sites with sufficient resources; and the ability to switch to and from disaster recovery sites. Recovery point and recovery time objectives shall be set per business function based on criticality.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-12",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 12,
+      "title": "DORA Article 12",
+      "statement": "Article 12 (Backup policies and procedures, restoration and recovery procedures and methods) requires financial entities to establish backup policies and procedures specifying the scope of data subject to backup and minimum frequency, considering criticality. Backups shall be tested at appropriate frequency to validate restoration. Restoration procedures shall be sufficient to recover data and resume operations within agreed recovery time objectives, on alternative or backup ICT facilities where possible. Data integrity and confidentiality of backed-up data shall be maintained.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-13",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 13,
+      "title": "DORA Article 13",
+      "statement": "Article 13 (Learning and evolving) requires financial entities to gather information on vulnerabilities and cyber threats, ICT-related incidents (in particular cyber-attacks) and analyse their likely impact on digital operational resilience. Lessons learned shall be implemented, and appropriate awareness programmes and digital operational resilience training shall be developed for staff and management. ICT-related lessons shall feed back into the ICT risk-management framework and into resilience testing.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-14",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 14,
+      "title": "DORA Article 14",
+      "statement": "Article 14 (Communication) requires financial entities to have communication plans enabling responsible disclosure of ICT-related incidents or major vulnerabilities to clients and counterparts as well as to the public, where appropriate. Communication policies shall distinguish between staff, financial market infrastructures, the public and other interested parties, including the press, and shall identify a designated person responsible for implementing the communication strategy.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-15",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 15,
+      "title": "DORA Article 15",
+      "statement": "Article 15 (Further harmonisation of ICT risk-management tools, methods, processes and policies) provides the legal basis for the European Supervisory Authorities to develop, in consultation with ENISA, draft regulatory technical standards specifying further elements of the ICT risk-management framework, including ICT security policies, procedures, protocols and tools, human-resources policies and access controls, ICT-related incident detection and response, business continuity and disaster recovery.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-17",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 17,
+      "title": "DORA Article 17",
+      "statement": "Article 17 (ICT-related incident management process) requires financial entities to define, establish and implement an ICT-related incident management process to detect, manage and notify ICT-related incidents. The process shall include: early-warning indicators; classification procedures using criteria specified by the ESAs; communication plans for staff and external stakeholders; escalation procedures including to senior management and the management body; and alignment with the financial entity's overall response and recovery plans.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-18",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 18,
+      "title": "DORA Article 18",
+      "statement": "Article 18 (Classification of ICT-related incidents and cyber threats) requires financial entities to classify ICT-related incidents and determine their impact based on criteria including: the number and relevance of clients or financial counterparts affected; the duration of the ICT-related incident; the geographical spread; data losses (including loss of confidentiality, integrity and availability); the severity of the impact on the ICT systems and infrastructure; the criticality of the services affected; and the economic impact of the ICT-related incident, both in absolute and relative terms.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-19",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 19,
+      "title": "DORA Article 19",
+      "statement": "Article 19 (Reporting of major ICT-related incidents and voluntary notification of significant cyber threats) requires financial entities to report major ICT-related incidents to the relevant competent authority. The reporting regime is layered: an initial notification, an intermediate report and a final report on root causes and lessons learned. Financial entities shall, on a voluntary basis, notify significant cyber threats when they deem the threat to be of relevance to the financial system, service users or clients.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-20",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 20,
+      "title": "DORA Article 20",
+      "statement": "Article 20 (Harmonisation of reporting content and templates) provides the legal basis for the ESAs, through joint regulatory technical standards, to specify the content of the reports for major ICT-related incidents and templates for voluntary notifications, the time limits, and the reporting obligations to third parties.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-21",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 21,
+      "title": "DORA Article 21",
+      "statement": "Article 21 (Centralisation of reporting of major ICT-related incidents) provides for the ESAs to assess, in cooperation with the European Central Bank and ENISA, the feasibility of further centralisation of reporting of major ICT-related incidents through the establishment of a single EU Hub for incident reporting by financial entities.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-22",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 22,
+      "title": "DORA Article 22",
+      "statement": "Article 22 (Supervisory feedback) requires that competent authorities provide relevant anonymised information and intelligence on ICT-related incidents to financial entities, with the aim of supporting the protection of those entities against similar threats.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-23",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 23,
+      "title": "DORA Article 23",
+      "statement": "Article 23 (Operational or security payment-related incidents concerning credit institutions, payment institutions, account information service providers, and electronic-money institutions) provides that the requirements laid down in this Regulation also apply to operational or security payment-related incidents and to major operational or security payment-related incidents, where such incidents concern the entities covered by this Article.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-24",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 24,
+      "title": "DORA Article 24",
+      "statement": "Article 24 (General requirements for the performance of digital operational resilience testing) requires financial entities, other than microenterprises, to establish, maintain and review a sound and comprehensive digital operational resilience testing programme as an integral part of the ICT risk-management framework. The programme shall include a range of assessments, tests, methodologies, practices and tools applied to all ICT systems and applications supporting critical or important functions, executed by independent parties (whether internal or external).",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-26",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 26,
+      "title": "DORA Article 26",
+      "statement": "Article 26 (Advanced testing of ICT tools, systems and processes based on TLPT) requires financial entities identified by competent authorities, taking into account criteria, to carry out advanced testing by means of threat-led penetration testing (TLPT) at least every three years. TLPT shall cover several or all critical or important functions of a financial entity and shall be performed on live production systems supporting such functions.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-27",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 27,
+      "title": "DORA Article 27",
+      "statement": "Article 27 (Requirements for testers for the carrying out of TLPT) sets requirements for testers used in TLPT. Internal testers and external providers shall meet the highest professional standards of conduct and shall hold relevant technical and organisational capabilities and demonstrate specific expertise in threat intelligence, penetration testing and red team testing.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "DORA-ART-28",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 28,
+      "title": "DORA Article 28",
+      "statement": "Article 28 (General principles) sets the principles for managing ICT third-party risk as an integral component of the ICT risk-management framework. Financial entities shall manage ICT third-party risk in a sound manner, ensure they have in place an information register containing all contractual arrangements regarding the use of ICT services provided by ICT third-party service providers, distinguishing between those that support critical or important functions and those that do not, and shall report at least yearly to competent authorities information on the number of new arrangements on the use of ICT services.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-29",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 29,
+      "title": "DORA Article 29",
+      "statement": "Article 29 (Preliminary assessment of ICT concentration risk at entity level) requires financial entities, when assessing potential ICT concentration risk at entity level, to take into account the use of multiple ICT third-party service providers, the use of ICT third-party service providers established in non-Union third countries, and the use of contractual arrangements that are difficult to terminate or substitute. Where appropriate, financial entities shall consider alternative providers.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-dora-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "DORA-ART-30",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-DORA",
+      "framework_family": "DORA",
+      "article_number": 30,
+      "title": "DORA Article 30",
+      "statement": "Article 30 (Key contractual provisions) requires that contractual arrangements between a financial entity and an ICT third-party service provider include, in writing, specific provisions including: clear and complete description of all functions and services to be provided; locations where the contracted services are to be provided and where data is to be processed; service-level descriptions including updates and revisions; data-availability, integrity and security provisions; access, recovery and return of data in case of insolvency, resolution, or discontinuation; subcontracting conditions; cooperation with competent authorities and the financial entity's internal audit function; termination rights and minimum notice periods; participation rights of competent authorities to obtain information and conduct inspections.",
+      "statement_kind": "substantive"
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-03T18:53:44.124460+00:00",
+    "revision_reason": "Replace placeholder bodies with curated obligation summaries grounded in primary source + KG working notes.",
+    "rule_version": "regulatory_curated_bodies/1.0"
+  }
+}

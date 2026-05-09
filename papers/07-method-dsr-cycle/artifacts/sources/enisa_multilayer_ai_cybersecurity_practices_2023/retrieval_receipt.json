@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "enisa_multilayer_ai_cybersecurity_practices_2023",
+  "status": "source_captured",
+  "retrieved_at": "2026-04-04T15:36:51Z",
+  "source_document_id": "SRC-ENISA-FAICP-2023",
+  "artifacts": [
+    {
+      "artifact_kind": "landing_page_html",
+      "source_url": "https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai",
+      "local_path": "sources/enisa_multilayer_ai_cybersecurity_practices_2023/landing_page.html",
+      "sha256": "808955a45673bcfa2bb505fd138e0232690d92e75269e0950c7e95218bb27857"
+    },
+    {
+      "artifact_kind": "pdf",
+      "source_url": "https://www.enisa.europa.eu/sites/default/files/publications/Multilayer%20Framework%20for%20Good%20Cybersecurity%20Practices%20for%20AI.pdf",
+      "local_path": "sources/enisa_multilayer_ai_cybersecurity_practices_2023/Multilayer_Framework_for_Good_Cybersecurity_Practices_for_AI.pdf",
+      "sha256": "126ed497056473cc109550708baba01705a5afa4aeab464aba4bea19e147635e"
+    }
+  ]
+}

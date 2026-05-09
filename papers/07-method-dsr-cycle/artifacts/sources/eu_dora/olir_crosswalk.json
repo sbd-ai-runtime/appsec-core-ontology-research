@@ -1,0 +1,619 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "EU Digital Operational Resilience Act (DORA, selected articles) \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "EU Digital Operational Resilience Act (DORA, selected articles)",
+        "version": "Regulation (EU) 2022/2554",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+        "author": "European Union",
+        "release_date": "2022",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "solution_space_direct",
+        "pilot_id": "eu_dora"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 24,
+      "items_grounded": 11,
+      "items_lab_depth_pending": 13,
+      "olir_pairs_emitted": 30,
+      "primary_pairs": 11,
+      "secondary_pairs": 19,
+      "relationship_type_distribution": {
+        "equal": 0,
+        "intersects-with": 30,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.517,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.517; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000007 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-001",
+          "description": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.443,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.443; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000006 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000001 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-RPR-006",
+          "description": "Progressive Rollout And Containment. Introduce high-impact change gradually and contain unsafe rollout without requiring immediate full rollback. rollout recovery and runtime records. controlled roll\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.438,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.438; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000002 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.436,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.436; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000008 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-004",
+          "description": "Rollback And Containment Controls. Keep rollback procedures specific, tested and time-bounded before they are needed in production. Introduce high-impact change gradually and contain unsafe rollout w\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000003 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-003",
+          "description": "CI/CD Gate And Release Promotion. Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface. Keep reports, execution context and build linkage reproduci\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.426,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.426; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000004 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-5",
+          "description": "DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve,\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-006",
+          "description": "External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000009 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-6",
+          "description": "DORA Article 6. Article 6 (ICT risk-management framework) requires financial entities to have a sound, comprehensive and well-documented ICT risk-management framework as part of their overall risk-ma\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.515,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.515; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000010 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-6",
+          "description": "DORA Article 6. Article 6 (ICT risk-management framework) requires financial entities to have a sound, comprehensive and well-documented ICT risk-management framework as part of their overall risk-ma\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-003",
+          "description": "Structured Threat Analysis Method Selection. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. methodology",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.483,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.483; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000011 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-9",
+          "description": "implement ICT security policies, procedures, protocols",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-ITS-003",
+          "description": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+          "level": "Practice",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.489,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.489; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000012 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-9",
+          "description": "implement ICT security policies, procedures, protocols",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-008",
+          "description": "Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.482,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.482; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000013 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-9",
+          "description": "implement ICT security policies, procedures, protocols",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IVF-004",
+          "description": "Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-err\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.469,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.469; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000017 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-9",
+          "description": "implement ICT security policies, procedures, protocols",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.453,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.453; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000014 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-9",
+          "description": "implement ICT security policies, procedures, protocols",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-004",
+          "description": "Rollback And Containment Controls. Keep rollback procedures specific, tested and time-bounded before they are needed in production. Introduce high-impact change gradually and contain unsafe rollout w\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.434,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.434; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000018 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-9",
+          "description": "implement ICT security policies, procedures, protocols",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.416,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.416; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000015 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-9",
+          "description": "implement ICT security policies, procedures, protocols",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-008",
+          "description": "Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.411,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.411; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000016 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-10",
+          "description": "DORA Article 10. Article 10 (Detection) requires mechanisms to promptly detect anomalous activities \u2014 including network performance issues and ICT-related incidents \u2014 and to identify potential single\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-001",
+          "description": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.488,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.488; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000019 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-10",
+          "description": "DORA Article 10. Article 10 (Detection) requires mechanisms to promptly detect anomalous activities \u2014 including network performance issues and ICT-related incidents \u2014 and to identify potential single\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-006",
+          "description": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.477,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.477; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000020 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-10",
+          "description": "DORA Article 10. Article 10 (Detection) requires mechanisms to promptly detect anomalous activities \u2014 including network performance issues and ICT-related incidents \u2014 and to identify potential single\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.442,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.442; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000021 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-10",
+          "description": "DORA Article 10. Article 10 (Detection) requires mechanisms to promptly detect anomalous activities \u2014 including network performance issues and ICT-related incidents \u2014 and to identify potential single\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-006",
+          "description": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000022 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-12",
+          "description": "DORA Article 12. Article 12 (Backup policies and procedures, restoration and recovery procedures and methods) requires financial entities to establish backup policies and procedures specifying the sc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-005",
+          "description": "Tested Rollback Readiness And Reversibility. Rollback paths must be predefined, tested and time-bounded so that release reversal is a real capability rather than an untested hope. Reversal of harmful\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.471,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.471; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000023 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-12",
+          "description": "DORA Article 12. Article 12 (Backup policies and procedures, restoration and recovery procedures and methods) requires financial entities to establish backup policies and procedures specifying the sc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-RPR-004",
+          "description": "Rollback And Containment Controls. Keep rollback procedures specific, tested and time-bounded before they are needed in production. Introduce high-impact change gradually and contain unsafe rollout w\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000024 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "DORA-ART-12",
+          "description": "DORA Article 12. Article 12 (Backup policies and procedures, restoration and recovery procedures and methods) requires financial entities to establish backup policies and procedures specifying the sc\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-006",
+          "description": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.427,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.427; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000025 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-13",
+          "description": "DORA Article 13. Article 13 (Learning and evolving) requires financial entities to gather information on vulnerabilities and cyber threats, ICT-related incidents (in particular cyber-attacks) and ana\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.425,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.425; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000026 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-15",
+          "description": "DORA Article 15. Article 15 (Further harmonisation of ICT risk-management tools, methods, processes and policies) provides the legal basis for the European Supervisory Authorities to develop, in cons\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.492,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.492; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000027 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-18",
+          "description": "DORA Article 18. Article 18 (Classification of ICT-related incidents and cyber threats) requires financial entities to classify ICT-related incidents and determine their impact based on criteria incl\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-002",
+          "description": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.418,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.418; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000028 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-19",
+          "description": "DORA Article 19. Article 19 (Reporting of major ICT-related incidents and voluntary notification of significant cyber threats) requires financial entities to report major ICT-related incidents to the\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SLG-001",
+          "description": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.434,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.434; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000030 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-24",
+          "description": "DORA Article 24. Article 24 (General requirements for the performance of digital operational resilience testing) requires financial entities, other than microenterprises, to establish, maintain and r\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SCBI-002",
+          "description": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+          "level": "Practice",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.415,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.415; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000031 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "DORA-ART-27",
+          "description": "DORA Article 27. Article 27 (Requirements for testers for the carrying out of TLPT) sets requirements for testers used in TLPT. Internal testers and external providers shall meet the highest professi\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-007",
+          "description": "Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.427,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.427; threshold mapping \u2192 intersects-with. Claim EU_DORA-CLAIM-000032 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      }
+    ]
+  }
+}

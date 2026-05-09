@@ -1,0 +1,507 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "mcp_official_security_foundations_2025",
+  "is_iteration_3_pilot": false,
+  "n_items": 13,
+  "items": [
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-DISCOVERY-METADATA",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-AUTH-DISCOVERY-METADATA",
+      "source_text": "Authorization server discovery and protected resource metadata. This section describes the mechanisms by which MCP servers advertise their associated authorization servers to MCP clients, as well as the discovery process through which MCP clients can determine authorization server endpoints and supported capabilities. MCP servers MUST implement the OAuth 2.0 Protected Resource Metadata ( RFC9728 ) specification to indica",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000001",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00001",
+          "item_ref": "MCP-AUTH-DISCOVERY-METADATA",
+          "target_core_entity": "ac:ACO_IAT_002",
+          "target_id": "ACO-IAT-002",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4735817313194275,
+          "disambiguation_margin": 0.07144281268119812,
+          "rationale_snippet": "Authorization server discovery and protected resource metadata. This section describes the mechanisms by which MCP servers advertise their associated authorization servers to MCP clients, as well as t",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000002",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00001",
+          "item_ref": "MCP-AUTH-DISCOVERY-METADATA",
+          "target_core_entity": "ac:ACM_SCBI_006",
+          "target_id": "ACM-SCBI-006",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.4147924780845642,
+          "disambiguation_margin": 0.1369648277759552,
+          "rationale_snippet": "Authorization server discovery and protected resource metadata. This section describes the mechanisms by which MCP servers advertise their associated authorization servers to MCP clients, as well as t",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-CLIENT-REGISTRATION",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-AUTH-CLIENT-REGISTRATION",
+      "source_text": "Client registration and client metadata trust. MCP supports three client registration mechanisms. Choose based on your scenario: Client ID Metadata Documents : When client and server have no prior relationship (most common) Pre-registration : When client and server have an existing relationship Dynamic Client Registration : For backwards compatibility or specific requirements Clients supporting all optio",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00002"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00002"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-SCOPE-NEGOTIATION",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-AUTH-SCOPE-NEGOTIATION",
+      "source_text": "Scope selection and step-up authorization. When implementing authorization flows, MCP clients SHOULD follow the principle of least privilege by requesting only the scopes necessary for their intended operations. During the initial authorization handshake, MCP clients SHOULD follow this priority order for scope selection: Use scope parameter from the initial WWW-Authenticate header in the 401 response",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000003",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00003",
+          "item_ref": "MCP-AUTH-SCOPE-NEGOTIATION",
+          "target_core_entity": "ac:ACO_IAT_002",
+          "target_id": "ACO-IAT-002",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4447016716003418,
+          "disambiguation_margin": 0.06074526906013489,
+          "rationale_snippet": "Scope selection and step-up authorization. When implementing authorization flows, MCP clients SHOULD follow the principle of least privilege by requesting only the scopes necessary for their intended ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-RESOURCE-AUDIENCE-BINDING",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-AUTH-RESOURCE-AUDIENCE-BINDING",
+      "source_text": "Resource parameter, canonical server URI and token audience binding. MCP clients MUST implement Resource Indicators for OAuth 2.0 as defined in RFC 8707 to explicitly specify the target resource for which the token is being requested. The resource parameter: MUST be included in both authorization requests and token requests. MUST identify the MCP server that the client intends to use the token with. MUST use the canonical URI",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00004"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00004"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-TOKEN-VALIDATION",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-AUTH-TOKEN-VALIDATION",
+      "source_text": "Inbound token handling and validation. Access token handling when making requests to MCP servers MUST conform to the requirements defined in OAuth 2.1 Section 5 \u201cResource Requests\u201d . Specifically: MCP client MUST use the Authorization request header field defined in OAuth 2.1 Section 5.1.1 : Authorization: Bearer <access-token> Note that authorization MUST be included in every HTTP request from c",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000004",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00005",
+          "item_ref": "MCP-AUTH-TOKEN-VALIDATION",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.41145843267440796,
+          "disambiguation_margin": 0.1029377281665802,
+          "rationale_snippet": "Inbound token handling and validation. Access token handling when making requests to MCP servers MUST conform to the requirements defined in OAuth 2.1 Section 5 \u201cResource Requests\u201d . Specifically: MCP",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-ERROR-HANDLING",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-AUTH-ERROR-HANDLING",
+      "source_text": "Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization required or token invalid 403 Forbidden Invalid scopes or insufficient permissions 400 Bad Request Malformed authorization request This section covers handling insufficient scope errors during runtime operations when a clie",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000005",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00006",
+          "item_ref": "MCP-AUTH-ERROR-HANDLING",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5012503862380981,
+          "disambiguation_margin": 0.10754448175430298,
+          "rationale_snippet": "Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization r",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000006",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00006",
+          "item_ref": "MCP-AUTH-ERROR-HANDLING",
+          "target_core_entity": "ac:ACP_IAT_005",
+          "target_id": "ACP-IAT-005",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.46202805638313293,
+          "disambiguation_margin": 0.066338449716568,
+          "rationale_snippet": "Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization r",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000007",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00006",
+          "item_ref": "MCP-AUTH-ERROR-HANDLING",
+          "target_core_entity": "ac:ACM_IAT_002",
+          "target_id": "ACM-IAT-002",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.440268337726593,
+          "disambiguation_margin": 0.0622076690196991,
+          "rationale_snippet": "Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization r",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-AUTH-REDIRECT-CLIENT-METADATA-SECURITY",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-AUTH-REDIRECT-CLIENT-METADATA-SECURITY",
+      "source_text": "Authorization code, redirect and client metadata document security. An attacker who has gained access to an authorization code contained in an authorization response can try to redeem the authorization code for an access token or otherwise make use of the authorization code. (Further described in OAuth 2.1 Section 7.5 ) To mitigate this, MCP clients MUST implement PKCE according to OAuth 2.1 Section 7.5.2 and MUST verify PKC",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00007"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00007"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-CONFUSED-DEPUTY",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-CONFUSED-DEPUTY",
+      "source_text": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization codes, they can obtain access tokens without user consent. MCP proxy servers using static client IDs MUST obtain user consent for each dynamically registered client before forwarding to third-party authori",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000008",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00008",
+          "item_ref": "MCP-CONFUSED-DEPUTY",
+          "target_core_entity": "ac:ACP_IAT_005",
+          "target_id": "ACP-IAT-005",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5492497086524963,
+          "disambiguation_margin": 0.058060020208358765,
+          "rationale_snippet": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization co",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000009",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00008",
+          "item_ref": "MCP-CONFUSED-DEPUTY",
+          "target_core_entity": "ac:ACM_IAT_005",
+          "target_id": "ACM-IAT-005",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5296750068664551,
+          "disambiguation_margin": 0.07539767026901245,
+          "rationale_snippet": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization co",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000010",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00008",
+          "item_ref": "MCP-CONFUSED-DEPUTY",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5041813254356384,
+          "disambiguation_margin": 0.15955710411071777,
+          "rationale_snippet": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization co",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000011",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00008",
+          "item_ref": "MCP-CONFUSED-DEPUTY",
+          "target_core_entity": "ac:ACP_ITS_002",
+          "target_id": "ACP-ITS-002",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4828050136566162,
+          "disambiguation_margin": 0.05323678255081177,
+          "rationale_snippet": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization co",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000012",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00008",
+          "item_ref": "MCP-CONFUSED-DEPUTY",
+          "target_core_entity": "ac:ACO_ITS_001",
+          "target_id": "ACO-ITS-001",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4631922245025635,
+          "disambiguation_margin": 0.11131080985069275,
+          "rationale_snippet": "Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization co",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-TOKEN-PASSTHROUGH",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-TOKEN-PASSTHROUGH",
+      "source_text": "Token passthrough anti-pattern. \u201cToken passthrough\u201d is an anti-pattern where an MCP server accepts tokens from an MCP client without validating that the tokens were properly issued to the MCP server and passes them through to the downstream API. \u200b Risks Token passthrough is explicitly forbidden in the authorization specification as it introduces a number of security risks, that include: Se",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000013",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00009",
+          "item_ref": "MCP-TOKEN-PASSTHROUGH",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5013841390609741,
+          "disambiguation_margin": 0.1435527205467224,
+          "rationale_snippet": "Token passthrough anti-pattern. \u201cToken passthrough\u201d is an anti-pattern where an MCP server accepts tokens from an MCP client without validating that the tokens were properly issued to the MCP server a",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000014",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00009",
+          "item_ref": "MCP-TOKEN-PASSTHROUGH",
+          "target_core_entity": "ac:ACO_IAT_004",
+          "target_id": "ACO-IAT-004",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4851604700088501,
+          "disambiguation_margin": 0.09745115041732788,
+          "rationale_snippet": "Token passthrough anti-pattern. \u201cToken passthrough\u201d is an anti-pattern where an MCP server accepts tokens from an MCP client without validating that the tokens were properly issued to the MCP server a",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-SSRF-DISCOVERY",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-SSRF-DISCOVERY",
+      "source_text": "SSRF during OAuth discovery and metadata fetching. Server-Side Request Forgery (SSRF) is an attack where an attacker can induce an MCP client to make HTTP requests to unintended destinations, potentially accessing internal network resources, cloud metadata endpoints, or other protected services. \u200b Attack Description During OAuth metadata discovery, MCP clients fetch URLs from several sources that could be co",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00010"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00010"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-SESSION-HIJACKING",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-SESSION-HIJACKING",
+      "source_text": "Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same session ID to impersonate the original client and perform unauthorized actions on their behalf. \u200b Session Hijack Prompt Injection \u200b Session Hijack Impersonation \u200b Attack Description When you have multiple",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00011"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000015",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00011",
+          "item_ref": "MCP-SESSION-HIJACKING",
+          "target_core_entity": "ac:ACP_IAT_004",
+          "target_id": "ACP-IAT-004",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.48743098974227905,
+          "disambiguation_margin": 0.1605556607246399,
+          "rationale_snippet": "Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same sessio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000016",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00011",
+          "item_ref": "MCP-SESSION-HIJACKING",
+          "target_core_entity": "ac:ACO_IAT_004",
+          "target_id": "ACO-IAT-004",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.47389769554138184,
+          "disambiguation_margin": 0.04891708493232727,
+          "rationale_snippet": "Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same sessio",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000017",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00011",
+          "item_ref": "MCP-SESSION-HIJACKING",
+          "target_core_entity": "ac:ACM_IAT_004",
+          "target_id": "ACM-IAT-004",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.41039878129959106,
+          "disambiguation_margin": 0.09441271424293518,
+          "rationale_snippet": "Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same sessio",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-LOCAL-SERVER-COMPROMISE",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-LOCAL-SERVER-COMPROMISE",
+      "source_text": "Local MCP server compromise and sandboxing. Local MCP servers are MCP Servers running on a user\u2019s local machine, either by the user downloading and executing a server, authoring a server themselves, or installing through a client\u2019s configuration flows. These servers may have direct access to the user\u2019s system and may be accessible to other processes running on the user\u2019s machine, making them attractiv",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00012"
+      ],
+      "final_classification": "LabDepthPending",
+      "claims": [],
+      "lab_depth_seeds": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00012"
+      ],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "mcp_official_security_foundations_2025/MCP-SCOPE-MINIMIZATION",
+      "source": "mcp_official_security_foundations_2025",
+      "source_object_id": "MCP-SCOPE-MINIMIZATION",
+      "source_text": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (via log leakage, memory scraping, or local interception) an access token carrying broad scopes ( files:* , db:* , admin:* ) that were granted up front because the MCP server exposed every scope in scopes_supported",
+      "source_lifted_rows": [
+        "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00013"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000018",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00013",
+          "item_ref": "MCP-SCOPE-MINIMIZATION",
+          "target_core_entity": "ac:ACP_IAT_004",
+          "target_id": "ACP-IAT-004",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5215364694595337,
+          "disambiguation_margin": 0.08892285823822021,
+          "rationale_snippet": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (vi",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000019",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00013",
+          "item_ref": "MCP-SCOPE-MINIMIZATION",
+          "target_core_entity": "ac:ACM_SPC_004",
+          "target_id": "ACM-SPC-004",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.49132782220840454,
+          "disambiguation_margin": 0.14101949334144592,
+          "rationale_snippet": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (vi",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000020",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00013",
+          "item_ref": "MCP-SCOPE-MINIMIZATION",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.42391690611839294,
+          "disambiguation_margin": 0.10323980450630188,
+          "rationale_snippet": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (vi",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-CLAIM-000021",
+          "lifted_row_ref": "MCP_OFFICIAL_SECURITY_FOUNDATIONS_2025-LIFTED-00013",
+          "item_ref": "MCP-SCOPE-MINIMIZATION",
+          "target_core_entity": "ac:ACO_SLG_005",
+          "target_id": "ACO-SLG-005",
+          "level": "ControlObjective",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.417988121509552,
+          "disambiguation_margin": 0.06322777271270752,
+          "rationale_snippet": "Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. \u200b Attack Description An attacker obtains (vi",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

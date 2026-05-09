@@ -1,0 +1,2445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olir-concept-crosswalk xmlns="https://www.nist.gov/olir/v1" version="1.0">
+  <metadata>
+    <title>HIPAA Security Rule (45 CFR Part 164 Subpart C) → AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)</title>
+    <submission-version>1.0</submission-version>
+    <submission-author>Pedro Farinha (programme lead) — SbD-ToE Programme</submission-author>
+    <submission-date>2026-05-08</submission-date>
+    <programme-doi>10.17605/OSF.IO/7T849</programme-doi>
+    <schema-basis>NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model</schema-basis>
+    <source-document strm-resource-type="DocumentaryImpl">
+      <title>HIPAA Security Rule (45 CFR Part 164 Subpart C)</title>
+      <version>current 2024</version>
+      <url>https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html</url>
+      <author>U.S. Department of Health and Human Services</author>
+      <release-date>2024</release-date>
+      <mapping-direction>solution_space_direct</mapping-direction>
+      <pilot-id>hipaa_security_rule</pilot-id>
+    </source-document>
+    <reference-document strm-resource-type="Reference Document">
+      <title>AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)</title>
+      <version>V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)</version>
+      <url>https://osf.io/7t849/</url>
+      <author>SbD-ToE Programme — AppSec Core ontology project</author>
+    </reference-document>
+    <methodology>
+      Threshold-based continuous→categorical translation: sim≥0.6 → equal; 0.4≤sim&lt;0.6 → intersects-with; sim&lt;0.4 → unspecified.
+      Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target.
+      is-primary="true" marks item overall highest-similarity claim&apos;s target.
+      subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work).
+      STRM resource model: pilot doc → DocumentaryImpl; source-item → ConcreteImpl; AppSec Core V1 → Reference Document; Core entity → Concept.
+    </methodology>
+    <substrate-supplier-sha256>596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04</substrate-supplier-sha256>
+    <substrate-tag>substrate-v7-iter-3-ai-ml-incorporated</substrate-tag>
+    <ontology-tag>ontology-v1-next-acr004-promoted</ontology-tag>
+    <cycle-a-frozen-tag>cycle-a-frozen-2026-05-08</cycle-a-frozen-tag>
+  </metadata>
+  <stats>
+    <items-total>22</items-total>
+    <items-grounded>19</items-grounded>
+    <olir-pairs-emitted>133</olir-pairs-emitted>
+    <primary-pairs>19</primary-pairs>
+    <secondary-pairs>114</secondary-pairs>
+    <relationship-type-distribution>
+      <equal>2</equal>
+      <intersects-with>131</intersects-with>
+      <unspecified>0</unspecified>
+    </relationship-type-distribution>
+  </stats>
+  <mappings>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-008</id>
+        <description>Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.551</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.551; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000001 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.527</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.527; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000002 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-010</id>
+        <description>Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode sile…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.491</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.491; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000003 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.486</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.486; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000004 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-006</id>
+        <description>Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.475</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.475; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000005 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.462</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.462; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000006 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-002</id>
+        <description>Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.438</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.438; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000007 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.427</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.427; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000008 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-005</id>
+        <description>Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.419</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.419; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000009 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a1</id>
+        <description>Security Management Process. Security Management Process — Administrative Safeguard. The covered entity must implement policies and procedures to prevent, detect, contain and correct security violati…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-001</id>
+        <description>Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.413</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.413; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000010 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-008</id>
+        <description>Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), m…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.524</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.524; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000011 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-009</id>
+        <description>Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. …</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.506</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.506; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000012 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-008</id>
+        <description>Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.499</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.499; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000013 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-002</id>
+        <description>Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.486</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.486; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000014 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.480</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.480; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000015 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.453</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.453; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000016 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000017 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-007</id>
+        <description>Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture s…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.437</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.437; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000018 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.435</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.435; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000019 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-001</id>
+        <description>Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.432</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.432; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000020 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.426</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.426; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000021 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a2</id>
+        <description>Assigned Security Responsibility. Assigned Security Responsibility — Administrative Safeguard. Identify the security official who is responsible for the development and implementation of the policies…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.419</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.419; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000022 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a3</id>
+        <description>Workforce Security. Workforce Security — Administrative Safeguard. Implement policies and procedures to ensure that all members of the workforce have appropriate access to ePHI, and to prevent those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.497</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.497; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000023 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a3</id>
+        <description>Workforce Security. Workforce Security — Administrative Safeguard. Implement policies and procedures to ensure that all members of the workforce have appropriate access to ePHI, and to prevent those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-002</id>
+        <description>Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.467</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.467; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000024 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-003</id>
+        <description>Access Review And Timely Revocation. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. identity and trust control. revocation</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.566</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.566; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000035 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.542</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.542; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000036 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-003</id>
+        <description>Access Revocation And Privilege Lifecycle Integrity. Grant, change and revocation of access must propagate predictably across identities, roles and active sessions, with reviewable records for high-r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.525</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.525; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000033 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.495</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.495; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000026 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-001</id>
+        <description>Release Authorization And Irreversible Change Accountability. Production release of irreversible change must require explicit accountable authorization rather than silent automatic promotion. Product…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.463</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.463; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000037 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.460</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.460; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000027 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000028 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000029 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a4</id>
+        <description>Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000030 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-009</id>
+        <description>Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. …</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.544</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.544; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000039 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-009</id>
+        <description>Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.512</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.512; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000040 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-007</id>
+        <description>Security Testing And Empirical Assurance Integrity. Testing strategy, signal quality, finding closure, reproducible evidence, staged validation and specialized empirical testing must operate as one c…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.505</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.505; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000041 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.502</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.502; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000042 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.494</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.494; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000043 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.464</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.464; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000044 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-001</id>
+        <description>Authentication Strength And Identity Assurance. Require strong and context-appropriate authentication for privileged or sensitive access, including MFA, brute-force resistance, federation support and…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.456</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.456; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000045 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.455</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.455; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000046 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.454</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.454; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000047 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.422</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.422; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000048 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a5</id>
+        <description>Security Awareness and Training. Security Awareness and Training — Administrative Safeguard. Implement a security awareness and training programme for all members of the workforce (including manageme…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.413</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.413; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000049 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-001</id>
+        <description>Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.556</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.556; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000050 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-009</id>
+        <description>Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. …</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.556</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.556; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000057 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-008</id>
+        <description>Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations,…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.553</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.553; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000051 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.508</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.508; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000058 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.485</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.485; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000060 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-003</id>
+        <description>Security Finding Triage And Correction Closure. Security-test findings must be triaged, tracked to correction, constrained by severity-based closure targets and revalidated or formally excepted when …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.481</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.481; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000061 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-007</id>
+        <description>Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.472</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.472; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000052 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-009</id>
+        <description>Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.469</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.469; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000062 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000063 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-004</id>
+        <description>Explicit Threat Disposition Register. Record threat disposition, ownership and accepted-risk rationale explicitly rather than leaving identified threats undecided. governance and review. governance r…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.442</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.442; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000071 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000064 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.438</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.438; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000072 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-003</id>
+        <description>Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.432</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.432; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000065 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.431</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.431; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000066 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-003</id>
+        <description>Secret Rotation And Renewal Discipline. Rotate, expire and renew secret material on defined cadence or trigger with attributable governance. identity and trust control. rotation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.426</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.426; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000067 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-006</id>
+        <description>Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits,…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.416</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.416; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000056 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ATB-004</id>
+        <description>External Exposure And Boundary Mediation Design. Justify externally exposed surfaces and define the mediation controls that protect them. policy and gate enforcement. mediation</description>
+        <level>Practice</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.415</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.415; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000068 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a6</id>
+        <description>Security Incident Procedures. Security Incident Procedures — Administrative Safeguard. Implement policies and procedures to address security incidents. Required implementation specification: Response…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.411</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.411; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000069 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a8</id>
+        <description>Evaluation. Evaluation — Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respon…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-007</id>
+        <description>Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release de…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.478</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.478; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000074 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a8</id>
+        <description>Evaluation. Evaluation — Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respon…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-003</id>
+        <description>CI/CD Gate And Release Promotion. Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface. Keep reports, execution context and build linkage reproduci…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.474</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.474; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000075 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a8</id>
+        <description>Evaluation. Evaluation — Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respon…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.460</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.460; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000076 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a8</id>
+        <description>Evaluation. Evaluation — Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respon…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-006</id>
+        <description>Reviewer Accountability And Consistency Gates. Subject threat models to independent review, approval and go-live governance where required. The current semantic anchor is narrower than the full revie…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.433</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.433; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000077 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308a8</id>
+        <description>Evaluation. Evaluation — Administrative Safeguard. Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently in respon…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-003</id>
+        <description>Periodic Review And Access Audit. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. Make rejected access, abuse signals and external…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.429</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.429; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000078 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308b1</id>
+        <description>Business Associate Contracts and Other Arrangements. Business Associate Contracts and Other Arrangements — Administrative Safeguard. A covered entity, in accordance with §164.306, may permit a busine…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-005</id>
+        <description>Integration Contract And Change Assurance. Keep integration review, interface expectations and approval discipline explicit when trust boundaries change. governance and review. contract review</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.504</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.504; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000079 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-308b1</id>
+        <description>Business Associate Contracts and Other Arrangements. Business Associate Contracts and Other Arrangements — Administrative Safeguard. A covered entity, in accordance with §164.306, may permit a busine…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-005</id>
+        <description>Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.468</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.468; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000080 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310a1</id>
+        <description>Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.561</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.561; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000081 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310a1</id>
+        <description>Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.511</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.511; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000082 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310a1</id>
+        <description>Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.477</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.477; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000083 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310a1</id>
+        <description>Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.474</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.474; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000084 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310a1</id>
+        <description>Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000085 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310a1</id>
+        <description>Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-002</id>
+        <description>Secure Transport And Insecure Protocol Exclusion. Service interactions must use secure transport with valid certificates and approved protocol versions, while insecure transport options are explicitl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000086 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310a1</id>
+        <description>Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.427</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.427; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000087 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310b</id>
+        <description>Workstation Use. Workstation Use — Physical Safeguard. Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, an…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.417</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.417; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000088 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310b</id>
+        <description>Workstation Use. Workstation Use — Physical Safeguard. Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, an…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.416</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.416; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000089 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310c</id>
+        <description>Workstation Security. Workstation Security — Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security incl…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.454</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.454; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000090 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310c</id>
+        <description>Workstation Security. Workstation Security — Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security incl…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-005</id>
+        <description>Secret Isolation Across Technical Surfaces. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. identity and trust control. isolation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.454</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.454; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000091 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310c</id>
+        <description>Workstation Security. Workstation Security — Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security incl…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-003</id>
+        <description>Log Integrity Protection And Access Discipline. Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable sa…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000092 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310c</id>
+        <description>Workstation Security. Workstation Security — Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security incl…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.444</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.444; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000093 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-310c</id>
+        <description>Workstation Security. Workstation Security — Physical Safeguard. Implement physical safeguards for all workstations that access ePHI, to restrict access to authorised users. Workstation security incl…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-002</id>
+        <description>Secure Transport And Insecure Protocol Exclusion. Service interactions must use secure transport with valid certificates and approved protocol versions, while insecure transport options are explicitl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.413</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.413; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000094 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-003</id>
+        <description>Access Review And Timely Revocation. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. identity and trust control. revocation</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.522</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.522; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000095 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.521</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.521; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000096 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.513</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.513; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000097 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.482</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.482; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000098 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.458</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.458; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000099 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.431</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.431; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000100 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.429</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.429; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000101 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312a1</id>
+        <description>Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwa…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-003</id>
+        <description>Log Integrity Protection And Access Discipline. Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable sa…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.415</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.415; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000102 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.605</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.605; threshold mapping → equal. Claim HIPAA_SECURITY_RULE-CLAIM-000103 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-003</id>
+        <description>Log Integrity Protection And Access Discipline. Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable sa…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.595</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.595; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000104 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.524</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.524; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000105 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-003</id>
+        <description>Periodic Review And Access Audit. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. Make rejected access, abuse signals and external…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.510</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.510; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000106 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-006</id>
+        <description>External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit…</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.478</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.478; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000107 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.454</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.454; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000108 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-006</id>
+        <description>Secret Change Auditability And Governance. Material changes to secret configuration, rotation state and operational-identity binding must remain reviewable and attributable through auditable records.…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.430</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.430; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000109 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-005</id>
+        <description>Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.425</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.425; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000110 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-005</id>
+        <description>Release Promotion And Human Approval Integrity. Promotion between environments must respect explicit gates, including human approval for irreversible actions. Promotion gates are enforced and irrever…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.422</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.422; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000111 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312b</id>
+        <description>Audit Controls. Audit Controls — Technical Safeguard. Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. Audi…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.411</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.411; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000112 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.606</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.606; threshold mapping → equal. Claim HIPAA_SECURITY_RULE-CLAIM-000113 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.589</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.589; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000114 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-004</id>
+        <description>Message Integrity And Authorized Peer Validation. Verify message integrity and accept traffic only from authorized origins and destinations. identity and trust control. integrity verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.551</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.551; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000115 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-004</id>
+        <description>Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/d…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.541</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.541; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000116 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-003</id>
+        <description>Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.528</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.528; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000117 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-003</id>
+        <description>Log Integrity Protection And Access Discipline. Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable sa…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.511</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.511; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000118 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-004</id>
+        <description>Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.490</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.490; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000119 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-006</id>
+        <description>Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.475</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.475; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000120 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-001</id>
+        <description>Strong Authentication And Step-Up Enforcement. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. identity and trust control. authentic…</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.471</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.471; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000121 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-002</id>
+        <description>Schema And Allowlist Enforcement. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. validation and analysis. schema enforcement</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.466</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.466; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000122 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.462</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.462; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000123 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-003</id>
+        <description>Schema And Contract Validators. Validate external inputs and malformed messages at entry points before processing continues. Constrain structured payloads and accepted values through explicit schema,…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.440</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.440; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000124 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.426</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.426; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000125 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312c1</id>
+        <description>Integrity. Integrity — Technical Safeguard. Implement policies and procedures to protect ePHI from improper alteration or destruction. Addressable implementation specification: Mechanism to Authentic…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.416</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.416; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000126 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312d</id>
+        <description>Person or Entity Authentication. Person or Entity Authentication — Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authenticatio…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-001</id>
+        <description>Strong Authentication And Step-Up Enforcement. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. identity and trust control. authentic…</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.566</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.566; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000127 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312d</id>
+        <description>Person or Entity Authentication. Person or Entity Authentication — Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authenticatio…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-001</id>
+        <description>Authentication And Federation Protocols. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. Authenticate callers and enforce authorizat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.528</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.528; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000128 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312d</id>
+        <description>Person or Entity Authentication. Person or Entity Authentication — Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authenticatio…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-001</id>
+        <description>Authentication Strength And Identity Assurance. Require strong and context-appropriate authentication for privileged or sensitive access, including MFA, brute-force resistance, federation support and…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.524</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.524; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000129 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312d</id>
+        <description>Person or Entity Authentication. Person or Entity Authentication — Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authenticatio…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-002</id>
+        <description>Vault-Backed Secret Storage. Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code. identity and trust control. storage</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000130 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312d</id>
+        <description>Person or Entity Authentication. Person or Entity Authentication — Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authenticatio…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.435</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.435; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000131 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312d</id>
+        <description>Person or Entity Authentication. Person or Entity Authentication — Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authenticatio…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.429</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.429; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000132 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312e1</id>
+        <description>Transmission Security. Transmission Security — Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic com…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-002</id>
+        <description>Secure Transport And Insecure Protocol Exclusion. Service interactions must use secure transport with valid certificates and approved protocol versions, while insecure transport options are explicitl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.507</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.507; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000133 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312e1</id>
+        <description>Transmission Security. Transmission Security — Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic com…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.495</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.495; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000134 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-312e1</id>
+        <description>Transmission Security. Transmission Security — Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic com…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-003</id>
+        <description>Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.475</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.475; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000135 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-314a1</id>
+        <description>Business Associate Contracts or Other Arrangements. Business Associate Contracts or Other Arrangements — Organizational Requirement. The contract or other arrangement required by §164.308</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-005</id>
+        <description>Integration Contract And Change Assurance. Keep integration review, interface expectations and approval discipline explicit when trust boundaries change. governance and review. contract review</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.456</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.456; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000136 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-314a1</id>
+        <description>Business Associate Contracts or Other Arrangements. Business Associate Contracts or Other Arrangements — Organizational Requirement. The contract or other arrangement required by §164.308</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-005</id>
+        <description>Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to ri…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.438</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.438; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000137 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-316a</id>
+        <description>Policies and Procedures. Policies and Procedures — Standard. Implement reasonable and appropriate policies and procedures to comply with the standards, implementation specifications, or other require…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-009</id>
+        <description>Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.484</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.484; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000138 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-316a</id>
+        <description>Policies and Procedures. Policies and Procedures — Standard. Implement reasonable and appropriate policies and procedures to comply with the standards, implementation specifications, or other require…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.419</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.419; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000139 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-316b1</id>
+        <description>Documentation. Documentation — Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.470</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.470; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000140 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-316b1</id>
+        <description>Documentation. Documentation — Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-008</id>
+        <description>Compliance Monitoring And Regulatory Change Feeds. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring exter…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.468</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.468; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000141 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-316b1</id>
+        <description>Documentation. Documentation — Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-004</id>
+        <description>Findings Workflow And Exception Governance. Triage testing findings, track them to correction and close them only through retest or formal exception. Separate raw automated signal from final release …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.459</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.459; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000142 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-316b1</id>
+        <description>Documentation. Documentation — Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-010</id>
+        <description>Record And Periodically Review Exceptions Against The Intended Baseline. Record approved deviations and periodically review whether the current baseline still matches intended security posture. integ…</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000143 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>HIPAA-164-316b1</id>
+        <description>Documentation. Documentation — Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, o…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.433</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.433; threshold mapping → intersects-with. Claim HIPAA_SECURITY_RULE-CLAIM-000144 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+  </mappings>
+</olir-concept-crosswalk>

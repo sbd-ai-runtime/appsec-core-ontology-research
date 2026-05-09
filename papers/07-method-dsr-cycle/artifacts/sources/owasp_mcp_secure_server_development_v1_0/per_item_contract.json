@@ -1,0 +1,958 @@
+{
+  "schema": "appsec_core_v7_per_item_contract/1.0",
+  "source": "owasp_mcp_secure_server_development_v1_0",
+  "is_iteration_3_pilot": false,
+  "n_items": 10,
+  "items": [
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-RISK-LANDSCAPE",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-RISK-LANDSCAPE",
+      "source_text": "Current Vulnerability Landscape. Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI-oriented risks. Common vulnerabilities/risks include: \u2022 Tool Poisoning: Adversaries manipulate the",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00001"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000001",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00001",
+          "item_ref": "OWASP-MCP-RISK-LANDSCAPE",
+          "target_core_entity": "ac:ACO_TSV_006",
+          "target_id": "ACO-TSV-006",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.49019214510917664,
+          "disambiguation_margin": 0.11913374066352844,
+          "rationale_snippet": "Current Vulnerability Landscape. Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI-oriented r",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000002",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00001",
+          "item_ref": "OWASP-MCP-RISK-LANDSCAPE",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4546363949775696,
+          "disambiguation_margin": 0.09880730509757996,
+          "rationale_snippet": "Current Vulnerability Landscape. Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI-oriented r",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000003",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00001",
+          "item_ref": "OWASP-MCP-RISK-LANDSCAPE",
+          "target_core_entity": "ac:ACP_SCBI_002",
+          "target_id": "ACP-SCBI-002",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.42038193345069885,
+          "disambiguation_margin": 0.137541264295578,
+          "rationale_snippet": "Current Vulnerability Landscape. Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI-oriented r",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000004",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00001",
+          "item_ref": "OWASP-MCP-RISK-LANDSCAPE",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4151456654071808,
+          "disambiguation_margin": 0.14246779680252075,
+          "rationale_snippet": "Current Vulnerability Landscape. Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI-oriented r",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000005",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00001",
+          "item_ref": "OWASP-MCP-RISK-LANDSCAPE",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.412453293800354,
+          "disambiguation_margin": 0.13211435079574585,
+          "rationale_snippet": "Current Vulnerability Landscape. Current Vulnerability Landscape MCP servers expose a broad and unique attack surface, containing traditional API security vulnerabilities and some unique AI-oriented r",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-ARCH",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-ARCH",
+      "source_text": "Secure MCP Architecture. 1. Secure MCP Architecture \u2022 Local vs Remote Connections: MCP exposes two communication channels, STDIO or Unix sockets for local network communications, and Streamable HTTP for remote connections. For each communication type, additional security controls a",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00002"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000006",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00002",
+          "item_ref": "OWASP-MCP-ARCH",
+          "target_core_entity": "ac:ACO_ITS_002",
+          "target_id": "ACO-ITS-002",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4200889468193054,
+          "disambiguation_margin": 0.08048313856124878,
+          "rationale_snippet": "Secure MCP Architecture. 1. Secure MCP Architecture \u2022 Local vs Remote Connections: MCP exposes two communication channels, STDIO or Unix sockets for local network communications, and Streamable HTTP f",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-TOOL-DESIGN",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-TOOL-DESIGN",
+      "source_text": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this signature and hash at load time. \u2022 Strict Onboarding and Approval: Maintai",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000007",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACM_IVF_002",
+          "target_id": "ACM-IVF-002",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5179576873779297,
+          "disambiguation_margin": 0.12556862831115723,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000008",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACO_SCBI_004",
+          "target_id": "ACO-SCBI-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.513775646686554,
+          "disambiguation_margin": 0.1363232135772705,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000009",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.5102237462997437,
+          "disambiguation_margin": 0.12043511867523193,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000010",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4841448962688446,
+          "disambiguation_margin": 0.07510191202163696,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000011",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACM_TSV_001",
+          "target_id": "ACM-TSV-001",
+          "level": "Mechanism",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4640752077102661,
+          "disambiguation_margin": 0.08885776996612549,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000012",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACP_SPC_001",
+          "target_id": "ACP-SPC-001",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.4638206958770752,
+          "disambiguation_margin": 0.08088764548301697,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000013",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACP_IVF_002",
+          "target_id": "ACP-IVF-002",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.44780421257019043,
+          "disambiguation_margin": 0.0820966362953186,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000014",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACO_SPC_007",
+          "target_id": "ACO-SPC-007",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.42811429500579834,
+          "disambiguation_margin": 0.046765148639678955,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000015",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACO_ITS_005",
+          "target_id": "ACO-ITS-005",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.42799991369247437,
+          "disambiguation_margin": 0.11950662732124329,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000016",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00003",
+          "item_ref": "OWASP-MCP-TOOL-DESIGN",
+          "target_core_entity": "ac:ACO_IVF_007",
+          "target_id": "ACO-IVF-007",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.42620474100112915,
+          "disambiguation_margin": 0.07236102223396301,
+          "rationale_snippet": "Safe Tool Design. 2. Safe Tool Design \u2022 Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-DATA-VALIDATION",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-DATA-VALIDATION",
+      "source_text": "Data Validation & Resource Management. 3. Data Validation & Resource Management \u2022 Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts and isolated memory/compute budgets to prevent DoS attacks or runaway processes. \u2022 Strict Input/Ou",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00004"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000017",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00004",
+          "item_ref": "OWASP-MCP-DATA-VALIDATION",
+          "target_core_entity": "ac:ACP_IVF_004",
+          "target_id": "ACP-IVF-004",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.594465970993042,
+          "disambiguation_margin": 0.08474230766296387,
+          "rationale_snippet": "Data Validation & Resource Management. 3. Data Validation & Resource Management \u2022 Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000018",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00004",
+          "item_ref": "OWASP-MCP-DATA-VALIDATION",
+          "target_core_entity": "ac:ACO_IVF_005",
+          "target_id": "ACO-IVF-005",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5288068652153015,
+          "disambiguation_margin": 0.05102640390396118,
+          "rationale_snippet": "Data Validation & Resource Management. 3. Data Validation & Resource Management \u2022 Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000019",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00004",
+          "item_ref": "OWASP-MCP-DATA-VALIDATION",
+          "target_core_entity": "ac:ACP_TMR_005",
+          "target_id": "ACP-TMR-005",
+          "level": "Practice",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.46991825103759766,
+          "disambiguation_margin": 0.1322275996208191,
+          "rationale_snippet": "Data Validation & Resource Management. 3. Data Validation & Resource Management \u2022 Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000020",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00004",
+          "item_ref": "OWASP-MCP-DATA-VALIDATION",
+          "target_core_entity": "ac:ACO_TMR_005",
+          "target_id": "ACO-TMR-005",
+          "level": "ControlObjective",
+          "slice": "ACO-TMR",
+          "similarity_score": 0.4506787359714508,
+          "disambiguation_margin": 0.11330229043960571,
+          "rationale_snippet": "Data Validation & Resource Management. 3. Data Validation & Resource Management \u2022 Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000021",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00004",
+          "item_ref": "OWASP-MCP-DATA-VALIDATION",
+          "target_core_entity": "ac:ACO_IAT_006",
+          "target_id": "ACO-IAT-006",
+          "level": "ControlObjective",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.41863006353378296,
+          "disambiguation_margin": 0.06433171033859253,
+          "rationale_snippet": "Data Validation & Resource Management. 3. Data Validation & Resource Management \u2022 Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts an",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000022",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00004",
+          "item_ref": "OWASP-MCP-DATA-VALIDATION",
+          "target_core_entity": "ac:ACM_ATB_005",
+          "target_id": "ACM-ATB-005",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.41128650307655334,
+          "disambiguation_margin": 0.07806918025016785,
+          "rationale_snippet": "Data Validation & Resource Management. 3. Data Validation & Resource Management \u2022 Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts an",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-PROMPT-INJECTION",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-PROMPT-INJECTION",
+      "source_text": "Prompt Injection Controls. 4. Prompt Injection Controls \u2022 Structured Tool Invocation: Favor structured JSON tool calls over having the model generate free-form text commands. This funnels the model's intent through a formal, schema-validated interface. \u2022 Human-in-the-Loop (HITL):",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00005"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000023",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00005",
+          "item_ref": "OWASP-MCP-PROMPT-INJECTION",
+          "target_core_entity": "ac:ACO_IVF_002",
+          "target_id": "ACO-IVF-002",
+          "level": "ControlObjective",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.5450242757797241,
+          "disambiguation_margin": 0.04731035232543945,
+          "rationale_snippet": "Prompt Injection Controls. 4. Prompt Injection Controls \u2022 Structured Tool Invocation: Favor structured JSON tool calls over having the model generate free-form text commands. This funnels the model's ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000024",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00005",
+          "item_ref": "OWASP-MCP-PROMPT-INJECTION",
+          "target_core_entity": "ac:ACP_IVF_002",
+          "target_id": "ACP-IVF-002",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.48157739639282227,
+          "disambiguation_margin": 0.06628942489624023,
+          "rationale_snippet": "Prompt Injection Controls. 4. Prompt Injection Controls \u2022 Structured Tool Invocation: Favor structured JSON tool calls over having the model generate free-form text commands. This funnels the model's ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-AUTH",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-AUTH",
+      "source_text": "Authentication & Authorization. 5. Authentication & Authorization \u2022 Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user identity, validate iss, aud, exp, and signatures on every request. o Token Delegation: Use th",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00006"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000025",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00006",
+          "item_ref": "OWASP-MCP-AUTH",
+          "target_core_entity": "ac:ACP_SPC_004",
+          "target_id": "ACP-SPC-004",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.583299994468689,
+          "disambiguation_margin": 0.30339083075523376,
+          "rationale_snippet": "Authentication & Authorization. 5. Authentication & Authorization \u2022 Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user ident",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000026",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00006",
+          "item_ref": "OWASP-MCP-AUTH",
+          "target_core_entity": "ac:ACM_SPC_002",
+          "target_id": "ACM-SPC-002",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5629739761352539,
+          "disambiguation_margin": 0.19880878925323486,
+          "rationale_snippet": "Authentication & Authorization. 5. Authentication & Authorization \u2022 Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user ident",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000027",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00006",
+          "item_ref": "OWASP-MCP-AUTH",
+          "target_core_entity": "ac:ACM_IAT_001",
+          "target_id": "ACM-IAT-001",
+          "level": "Mechanism",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.5455135107040405,
+          "disambiguation_margin": 0.06341147422790527,
+          "rationale_snippet": "Authentication & Authorization. 5. Authentication & Authorization \u2022 Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user ident",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000028",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00006",
+          "item_ref": "OWASP-MCP-AUTH",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5052865743637085,
+          "disambiguation_margin": 0.09383350610733032,
+          "rationale_snippet": "Authentication & Authorization. 5. Authentication & Authorization \u2022 Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user ident",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000029",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00006",
+          "item_ref": "OWASP-MCP-AUTH",
+          "target_core_entity": "ac:ACO_ITS_001",
+          "target_id": "ACO-ITS-001",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4311769902706146,
+          "disambiguation_margin": 0.08853223919868469,
+          "rationale_snippet": "Authentication & Authorization. 5. Authentication & Authorization \u2022 Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user ident",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000030",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00006",
+          "item_ref": "OWASP-MCP-AUTH",
+          "target_core_entity": "ac:ACO_SPC_004",
+          "target_id": "ACO-SPC-004",
+          "level": "ControlObjective",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.41866910457611084,
+          "disambiguation_margin": 0.09338724613189697,
+          "rationale_snippet": "Authentication & Authorization. 5. Authentication & Authorization \u2022 Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user ident",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-DEPLOYMENT",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-DEPLOYMENT",
+      "source_text": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment variables, logs or plain-text in code. Never allow an LLM access to a secret, perform",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000031",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACP_SPC_002",
+          "target_id": "ACP-SPC-002",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.630420982837677,
+          "disambiguation_margin": 0.11088258028030396,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000032",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.6035626530647278,
+          "disambiguation_margin": 0.09957891702651978,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000033",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACM_SPC_001",
+          "target_id": "ACM-SPC-001",
+          "level": "Mechanism",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5902235507965088,
+          "disambiguation_margin": 0.061436355113983154,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000034",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACP_RPR_004",
+          "target_id": "ACP-RPR-004",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5343117713928223,
+          "disambiguation_margin": 0.058133721351623535,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000035",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACP_ITS_003",
+          "target_id": "ACP-ITS-003",
+          "level": "Practice",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.431740403175354,
+          "disambiguation_margin": 0.08145838975906372,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000036",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACM_ITS_001",
+          "target_id": "ACM-ITS-001",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.43011412024497986,
+          "disambiguation_margin": 0.06766393780708313,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000037",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACP_SLG_003",
+          "target_id": "ACP-SLG-003",
+          "level": "Practice",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4261218309402466,
+          "disambiguation_margin": 0.0482478141784668,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000038",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00007",
+          "item_ref": "OWASP-MCP-DEPLOYMENT",
+          "target_core_entity": "ac:ACM_SLG_006",
+          "target_id": "ACM-SLG-006",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.42371684312820435,
+          "disambiguation_margin": 0.05136007070541382,
+          "rationale_snippet": "Secure Deployment & Updates. 6. Secure Deployment & Updates \u2022 Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-GOVERNANCE",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-GOVERNANCE",
+      "source_text": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. \u2022 Peer Review and Oversight: Establish a policy that no new tool or",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000039",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACP_SPC_006",
+          "target_id": "ACP-SPC-006",
+          "level": "Practice",
+          "slice": "ACO-SPC",
+          "similarity_score": 0.5930265188217163,
+          "disambiguation_margin": 0.06128072738647461,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000040",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACO_ATB_007",
+          "target_id": "ACO-ATB-007",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.5519782304763794,
+          "disambiguation_margin": 0.10002186894416809,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000041",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5293952226638794,
+          "disambiguation_margin": 0.09903407096862793,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000042",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACM_ITS_004",
+          "target_id": "ACM-ITS-004",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.5231878161430359,
+          "disambiguation_margin": 0.06341433525085449,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000043",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACM_SLG_003",
+          "target_id": "ACM-SLG-003",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.5200722217559814,
+          "disambiguation_margin": 0.17410171031951904,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000044",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACP_SCBI_003",
+          "target_id": "ACP-SCBI-003",
+          "level": "Practice",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.518612265586853,
+          "disambiguation_margin": 0.05060434341430664,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000045",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACP_ATB_003",
+          "target_id": "ACP-ATB-003",
+          "level": "Practice",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.48968905210494995,
+          "disambiguation_margin": 0.09803897142410278,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000046",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACP_IAT_002",
+          "target_id": "ACP-IAT-002",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.48597341775894165,
+          "disambiguation_margin": 0.10606443881988525,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000047",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACO_RPR_009",
+          "target_id": "ACO-RPR-009",
+          "level": "ControlObjective",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.46933501958847046,
+          "disambiguation_margin": 0.058627933263778687,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000048",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACO_ITS_003",
+          "target_id": "ACO-ITS-003",
+          "level": "ControlObjective",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4594731032848358,
+          "disambiguation_margin": 0.08269470930099487,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000049",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACO_TSV_007",
+          "target_id": "ACO-TSV-007",
+          "level": "ControlObjective",
+          "slice": "ACO-TSV",
+          "similarity_score": 0.4479932188987732,
+          "disambiguation_margin": 0.047512054443359375,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000050",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00008",
+          "item_ref": "OWASP-MCP-GOVERNANCE",
+          "target_core_entity": "ac:ACP_IVF_006",
+          "target_id": "ACP-IVF-006",
+          "level": "Practice",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4347201883792877,
+          "disambiguation_margin": 0.08598384261131287,
+          "rationale_snippet": "Governance. 7. Governance \u2022 Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. ",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-CONTINUOUS-VALIDATION",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-CONTINUOUS-VALIDATION",
+      "source_text": "Tools & Continuous Validation. 8. Tools & Continuous Validation \u2022 Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use Software Composition Analysis (SCA) tools (e.g., npm audit, pip audit, OSV-Scanner) to",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00009"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000051",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00009",
+          "item_ref": "OWASP-MCP-CONTINUOUS-VALIDATION",
+          "target_core_entity": "ac:ACM_SCBI_002",
+          "target_id": "ACM-SCBI-002",
+          "level": "Mechanism",
+          "slice": "ACO-SCBI",
+          "similarity_score": 0.5313466787338257,
+          "disambiguation_margin": 0.11187249422073364,
+          "rationale_snippet": "Tools & Continuous Validation. 8. Tools & Continuous Validation \u2022 Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use S",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000052",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00009",
+          "item_ref": "OWASP-MCP-CONTINUOUS-VALIDATION",
+          "target_core_entity": "ac:ACM_RPR_005",
+          "target_id": "ACM-RPR-005",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.5200406908988953,
+          "disambiguation_margin": 0.14733028411865234,
+          "rationale_snippet": "Tools & Continuous Validation. 8. Tools & Continuous Validation \u2022 Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use S",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000053",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00009",
+          "item_ref": "OWASP-MCP-CONTINUOUS-VALIDATION",
+          "target_core_entity": "ac:ACM_ATB_005",
+          "target_id": "ACM-ATB-005",
+          "level": "Mechanism",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.4893651604652405,
+          "disambiguation_margin": 0.17182815074920654,
+          "rationale_snippet": "Tools & Continuous Validation. 8. Tools & Continuous Validation \u2022 Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use S",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000054",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00009",
+          "item_ref": "OWASP-MCP-CONTINUOUS-VALIDATION",
+          "target_core_entity": "ac:ACM_SLG_005",
+          "target_id": "ACM-SLG-005",
+          "level": "Mechanism",
+          "slice": "ACO-SLG",
+          "similarity_score": 0.4623657166957855,
+          "disambiguation_margin": 0.13218346238136292,
+          "rationale_snippet": "Tools & Continuous Validation. 8. Tools & Continuous Validation \u2022 Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use S",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000055",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00009",
+          "item_ref": "OWASP-MCP-CONTINUOUS-VALIDATION",
+          "target_core_entity": "ac:ACM_IVF_001",
+          "target_id": "ACM-IVF-001",
+          "level": "Mechanism",
+          "slice": "ACO-IVF",
+          "similarity_score": 0.4418308138847351,
+          "disambiguation_margin": 0.06292575597763062,
+          "rationale_snippet": "Tools & Continuous Validation. 8. Tools & Continuous Validation \u2022 Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use S",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000056",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00009",
+          "item_ref": "OWASP-MCP-CONTINUOUS-VALIDATION",
+          "target_core_entity": "ac:ACO_ATB_006",
+          "target_id": "ACO-ATB-006",
+          "level": "ControlObjective",
+          "slice": "ACO-ATB",
+          "similarity_score": 0.43979084491729736,
+          "disambiguation_margin": 0.1786174774169922,
+          "rationale_snippet": "Tools & Continuous Validation. 8. Tools & Continuous Validation \u2022 Automated Code Scanning: Use static analysis (SAST) tools (with custom MCP rules) and Invariant MCP-Scan in your CI/CD pipeline. Use S",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    },
+    {
+      "item_id": "owasp_mcp_secure_server_development_v1_0/OWASP-MCP-MINIMUM-BAR",
+      "source": "owasp_mcp_secure_server_development_v1_0",
+      "source_object_id": "OWASP-MCP-MINIMUM-BAR",
+      "source_text": "MCP Security Minimum Bar (Review Checklist). MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement \u2022 All remote MCP servers use OAuth 2.1/OIDC. \u2022 Tokens are short-lived, scoped, validated on every call. \u2022 No token passthrough; policy enforcement is centralized. 2.",
+      "source_lifted_rows": [
+        "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00010"
+      ],
+      "final_classification": "GROUNDED",
+      "claims": [
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000057",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00010",
+          "item_ref": "OWASP-MCP-MINIMUM-BAR",
+          "target_core_entity": "ac:ACP_IAT_001",
+          "target_id": "ACP-IAT-001",
+          "level": "Practice",
+          "slice": "ACO-IAT",
+          "similarity_score": 0.4993901252746582,
+          "disambiguation_margin": 0.06672996282577515,
+          "rationale_snippet": "MCP Security Minimum Bar (Review Checklist). MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement \u2022 All remote MCP servers use OAuth 2.1/OIDC. \u2022 Tokens are short-l",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000058",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00010",
+          "item_ref": "OWASP-MCP-MINIMUM-BAR",
+          "target_core_entity": "ac:ACM_ITS_004",
+          "target_id": "ACM-ITS-004",
+          "level": "Mechanism",
+          "slice": "ACO-ITS",
+          "similarity_score": 0.4874080419540405,
+          "disambiguation_margin": 0.0676736831665039,
+          "rationale_snippet": "MCP Security Minimum Bar (Review Checklist). MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement \u2022 All remote MCP servers use OAuth 2.1/OIDC. \u2022 Tokens are short-l",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000059",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00010",
+          "item_ref": "OWASP-MCP-MINIMUM-BAR",
+          "target_core_entity": "ac:ACM_RPR_009",
+          "target_id": "ACM-RPR-009",
+          "level": "Mechanism",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.47836124897003174,
+          "disambiguation_margin": 0.08860909938812256,
+          "rationale_snippet": "MCP Security Minimum Bar (Review Checklist). MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement \u2022 All remote MCP servers use OAuth 2.1/OIDC. \u2022 Tokens are short-l",
+          "ablation_baseline_score": null
+        },
+        {
+          "claim_id": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-CLAIM-000060",
+          "lifted_row_ref": "OWASP_MCP_SECURE_SERVER_DEVELOPMENT_V1_0-LIFTED-00010",
+          "item_ref": "OWASP-MCP-MINIMUM-BAR",
+          "target_core_entity": "ac:ACP_RPR_009",
+          "target_id": "ACP-RPR-009",
+          "level": "Practice",
+          "slice": "ACO-RPR",
+          "similarity_score": 0.4236961603164673,
+          "disambiguation_margin": 0.05216187238693237,
+          "rationale_snippet": "MCP Security Minimum Bar (Review Checklist). MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement \u2022 All remote MCP servers use OAuth 2.1/OIDC. \u2022 Tokens are short-l",
+          "ablation_baseline_score": null
+        }
+      ],
+      "lab_depth_seeds": [],
+      "decomposition_diagnostic": {
+        "n_lifted_rows": 1,
+        "multiplicity_in_supposed_atomic": false
+      }
+    }
+  ]
+}

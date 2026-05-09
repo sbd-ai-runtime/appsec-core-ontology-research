@@ -1,0 +1,55 @@
+meta:
+  pilot_id: ssdf_sp800_218_v1_1
+  status: source_captured
+  intended_use: stable_external_source_for_appsec_core_normalization
+source_document:
+  source_document_id: SRC-NIST-SP800-218-V1_1
+  title: Secure Software Development Framework (SSDF) Version 1.1
+  subtitle: Recommendations for Mitigating the Risk of Software Vulnerabilities
+  publisher: NIST
+  source_kind: standard_guidance
+  framework_family: SSDF
+  version: '1.1'
+  revision: final
+  edition: final
+  publication_date: '2022-02-03'
+  language: en
+  format_candidates:
+    - html
+    - pdf
+  canonical_url: https://csrc.nist.gov/pubs/sp/800/218/final
+  origin_url: https://csrc.nist.gov/publications/detail/sp/800-218/final
+  doi_url: https://doi.org/10.6028/NIST.SP.800-218
+  pdf_url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf
+  stability_reason: official_nist_final_publication
+retrieval_policy:
+  preferred_artifact: pdf
+  alternate_artifact: html
+  retrieval_mode: deterministic_capture_completed
+  local_snapshot_path: sources/ssdf_sp800_218_v1_1/NIST.SP.800-218.pdf
+  local_snapshot_format: pdf
+  local_snapshot_size_bytes: 739891
+  checksum_sha256: 617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22
+  retrieved_at: '2026-04-03T17:52:43Z'
+  signature_status: not_checked
+provenance_policy:
+  record_source_url: true
+  record_publication_date: true
+  record_retrieval_timestamp: true
+  record_checksum: true
+  keep_document_version_explicit: true
+normalization_targets:
+  primary:
+    - ControlObjective
+    - Practice
+    - Mechanism
+  secondary:
+    - Artifact
+    - EvidencePattern
+manual_integration_targets:
+  outputs:
+    - manual_gap_analysis
+    - traceability_publication_candidates
+  note: >
+    The output of this pilot is editorial candidate material, not direct
+    mutation of the current manual contract.

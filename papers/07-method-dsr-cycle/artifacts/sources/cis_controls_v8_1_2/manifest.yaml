@@ -1,0 +1,28 @@
+pilot_id: cis_controls_v8_1_2
+status: source_captured
+source_family: CIS_CONTROLS
+source_scope: Full CIS Controls v8.1.2 (18 controls + 153 safeguards)
+version: '8.1.2'
+release_date: '2025-03'
+source_capture_policy:
+  format: excel_spreadsheet
+  rationale: Structured Excel from CIS provides safeguard-level detail with asset class, security function, and IG mapping
+sources:
+  - source_document_id: SRC-CIS-CONTROLS-V8_1_2
+    source_kind: controls_spreadsheet
+    title: CIS Controls Version 8.1.2 (March 2025)
+    origin_url: https://learn.cisecurity.org/cis-controls-download
+    local_path: sources/cis_controls_v8_1_2/CIS_Controls_Version_8.1.2___March_2025.xlsx
+    sha256: 56ee1b73be5d80fa933332f9c5810da35b9d279e7e5ea1c8d67c9faed8a7ef5d
+    download_date: '2026-04-13'
+  - source_document_id: SRC-CIS-CONTROLS-GUIDE-V8_1_2
+    source_kind: guide_pdf
+    title: CIS Controls Guide v8.1.2 (March 2025)
+    origin_url: https://learn.cisecurity.org/cis-controls-download
+    local_path: sources/cis_controls_v8_1_2/CIS_Controls_Guide_v8.1.2_0325_v2.pdf
+    sha256: e21b6d20098f3b0ed6391f95ac8f60fb7958a4b74389f96b456b37cd6ac878e4
+    download_date: '2026-04-13'
+notes:
+  - Supersedes cis_controls_v8_1 (which had only 18 top-level controls from public HTML).
+  - v8.1.2 is March 2025 update. Adds 153 safeguards with implementation group mapping.
+  - Excel source provides structured data; PDF provides full narrative guidance.

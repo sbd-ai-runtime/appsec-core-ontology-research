@@ -1,0 +1,24 @@
+meta:
+  pilot_id: pci_sslc_v1_1
+  status: source_captured
+  intended_use: ssdf_cross_reference_validation
+source_document:
+  source_document_id: SRC-PCI-SSLC-V1_1
+  title: "PCI Software Security Framework: Secure Software Lifecycle Requirements and Assessment Procedures"
+  publisher: PCI Security Standards Council
+  source_kind: standard_guidance
+  framework_family: PCI_SSLC
+  version: '1.1'
+  publication_date: '2021-02'
+  language: en
+  format_candidates:
+    - pdf
+  canonical_url: https://www.pcisecuritystandards.org/document_library?category=sware_sec
+  stability_reason: official_pci_ssc_final_publication
+retrieval_policy:
+  preferred_artifact: pdf
+  retrieval_mode: manual_download
+  local_snapshot_path: sources/pci_sslc_v1_1/PCI-Secure-SLC-Standard-v1_1.pdf
+  local_snapshot_format: pdf
+  checksum_sha256: a4f959b130e8efd222c0a43b4b97070154c148d020c3e5667694a43e6fa6d333
+  retrieved_at: '2026-04-14'

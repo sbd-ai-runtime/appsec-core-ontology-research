@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "owasp_mcp_top_10_v0_1_2025_beta",
+  "status": "source_captured",
+  "retrieved_at": "2026-04-04T13:32:18Z",
+  "sources": [
+    {
+      "source_id": "OWASP-MCP-TOP-10-PROJECT-PAGE",
+      "publisher": "OWASP Foundation",
+      "title": "OWASP MCP Top 10",
+      "url": "https://owasp.org/www-project-mcp-top-10/",
+      "local_path": "/Users/pedrofarinha/Shared-Projs/SecurityByDesign-TheoryOfEverything/ExternalSourcesInventory/sources/owasp_mcp_top_10_v0_1_2025_beta/project_page.html",
+      "sha256": "41ec2354bdbaed4f18944f0d3a696277b4ddd5ad597138c7c8cc28b9fdfd54f3",
+      "format": "html",
+      "editorial_status": "beta_v0_1_living_project_page"
+    }
+  ]
+}

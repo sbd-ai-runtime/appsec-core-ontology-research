@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "mitre_atlas",
+  "status": "captured",
+  "source_family": "MITRE_ATLAS",
+  "mapping_direction": "problem_space_inverted",
+  "captured_at": "2026-05-07T16:52:37Z",
+  "iteration": "Cycle A Iteration 3",
+  "iteration_authority": "programme-lead Pedro Farinha 2026-05-06",
+  "h2_test_subject": true,
+  "items": [
+    {
+      "artifact_id": "ART-ATLAS-YAML-V5_6_0",
+      "source_document_id": "SRC-ATLAS-V5_6_0",
+      "source_kind": "consolidated_yaml_export",
+      "origin_url": "https://raw.githubusercontent.com/mitre-atlas/atlas-data/main/dist/ATLAS.yaml",
+      "upstream_repo": "https://github.com/mitre-atlas/atlas-data",
+      "upstream_release": "v5.6.0 (2026-05-04)",
+      "local_path": "sources/mitre_atlas/ATLAS.yaml",
+      "retrieved_at": "2026-05-07T16:52:37Z",
+      "file_timestamp": "2026-05-07T15:21:00Z",
+      "format": "yaml",
+      "size_bytes": 452932,
+      "sha256": "8a5693df51135721796607b8f29cba8ed33d745d5592ed80efbaaab0fba978f2",
+      "version": "5.6.0",
+      "entity_types_documented": [
+        "tactics",
+        "techniques",
+        "subtechniques",
+        "mitigations",
+        "case_studies"
+      ]
+    }
+  ]
+}

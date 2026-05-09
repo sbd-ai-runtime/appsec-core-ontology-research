@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "nist_ai_rmf_1_0",
+  "status": "captured",
+  "source_family": "NIST_AI",
+  "mapping_direction": "mixed",
+  "captured_at": "2026-05-07T17:04:26Z",
+  "iteration": "Cycle A Iteration 3",
+  "iteration_authority": "programme-lead Pedro Farinha 2026-05-06",
+  "expected_quality_caveat": "governance-heavy; large lifted-concern fraction expected per dispatcher \u00a7source-list CAUTION note",
+  "items": [
+    {
+      "artifact_id": "ART-NIST-AI-100-1-PDF",
+      "source_document_id": "SRC-NIST-AI-100-1",
+      "source_kind": "publication_pdf",
+      "origin_url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+      "publication_page": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "release_date": "2023-01",
+      "local_path": "sources/nist_ai_rmf_1_0/NIST.AI.100-1.pdf",
+      "retrieved_at": "2026-05-07T17:04:26Z",
+      "file_timestamp": "2026-05-07T17:03:01Z",
+      "format": "pdf",
+      "size_bytes": 1946127,
+      "sha256": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1",
+      "version": "AI RMF 1.0 / NIST AI 100-1"
+    }
+  ]
+}

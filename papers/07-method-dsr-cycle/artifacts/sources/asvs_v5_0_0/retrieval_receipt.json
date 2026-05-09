@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "asvs_v5_0_0",
+  "source_document_id": "SRC-OWASP-ASVS-V5_0_0",
+  "retrieved_at": "2026-05-03T13:23:41Z",
+  "release_timestamp": "2025-05-30T09:35:31Z",
+  "captured_files": [
+    {
+      "filename": "release_page.html",
+      "local_path": "sources/asvs_v5_0_0/release_page.html",
+      "source_url": "https://github.com/OWASP/ASVS/releases/tag/v5.0.0_release",
+      "format": "html",
+      "size_bytes": 217071,
+      "checksum_sha256": "2d780ff96782c8ac14f709ff26bfe9149e65b0da0d331263c743a608644a43ff"
+    },
+    {
+      "filename": "OWASP_Application_Security_Verification_Standard_5.0.0_en.flat.json",
+      "local_path": "sources/asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.flat.json",
+      "source_url": "https://github.com/OWASP/ASVS/releases/download/v5.0.0_release/OWASP_Application_Security_Verification_Standard_5.0.0_en.flat.json",
+      "format": "flat_json",
+      "size_bytes": 162870,
+      "checksum_sha256": "8201b20eec2908c3380ac600c91c8ba746346fbb808859366abb232027532311"
+    },
+    {
+      "filename": "OWASP_Application_Security_Verification_Standard_5.0.0_en.csv",
+      "local_path": "sources/asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv",
+      "source_url": "https://github.com/OWASP/ASVS/releases/download/v5.0.0_release/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv",
+      "format": "csv",
+      "size_bytes": 105446,
+      "checksum_sha256": "6124dba176dc563f66363a11ae0c47f9b86b8a4a84c66a793670bd196ed86cd5"
+    },
+    {
+      "filename": "OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf",
+      "local_path": "sources/asvs_v5_0_0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf",
+      "source_url": "https://github.com/OWASP/ASVS/releases/download/v5.0.0_release/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf",
+      "format": "pdf",
+      "size_bytes": 516102,
+      "checksum_sha256": "f3e9a2f1098bc4af594578acb404121af69e3964aa4d90abd4b00607218d30c6"
+    }
+  ]
+}

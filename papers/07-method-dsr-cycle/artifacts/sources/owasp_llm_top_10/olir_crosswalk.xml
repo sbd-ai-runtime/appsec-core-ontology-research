@@ -1,0 +1,2391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olir-concept-crosswalk xmlns="https://www.nist.gov/olir/v1" version="1.0">
+  <metadata>
+    <title>OWASP Top 10 for LLM Applications → AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)</title>
+    <submission-version>1.0</submission-version>
+    <submission-author>Pedro Farinha (programme lead) — SbD-ToE Programme</submission-author>
+    <submission-date>2026-05-08</submission-date>
+    <programme-doi>10.17605/OSF.IO/7T849</programme-doi>
+    <schema-basis>NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model</schema-basis>
+    <source-document strm-resource-type="DocumentaryImpl">
+      <title>OWASP Top 10 for LLM Applications</title>
+      <version>2025</version>
+      <url>https://genai.owasp.org/llm-top-10/</url>
+      <author>OWASP GenAI Security Project</author>
+      <release-date>2025-03</release-date>
+      <mapping-direction>solution_space_direct</mapping-direction>
+      <pilot-id>owasp_llm_top_10</pilot-id>
+    </source-document>
+    <reference-document strm-resource-type="Reference Document">
+      <title>AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)</title>
+      <version>V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)</version>
+      <url>https://osf.io/7t849/</url>
+      <author>SbD-ToE Programme — AppSec Core ontology project</author>
+    </reference-document>
+    <methodology>
+      Threshold-based continuous→categorical translation: sim≥0.6 → equal; 0.4≤sim&lt;0.6 → intersects-with; sim&lt;0.4 → unspecified.
+      Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target.
+      is-primary="true" marks item overall highest-similarity claim&apos;s target.
+      subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work).
+      STRM resource model: pilot doc → DocumentaryImpl; source-item → ConcreteImpl; AppSec Core V1 → Reference Document; Core entity → Concept.
+    </methodology>
+    <substrate-supplier-sha256>596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04</substrate-supplier-sha256>
+    <substrate-tag>substrate-v7-iter-3-ai-ml-incorporated</substrate-tag>
+    <ontology-tag>ontology-v1-next-acr004-promoted</ontology-tag>
+    <cycle-a-frozen-tag>cycle-a-frozen-2026-05-08</cycle-a-frozen-tag>
+  </metadata>
+  <stats>
+    <items-total>10</items-total>
+    <items-grounded>9</items-grounded>
+    <olir-pairs-emitted>130</olir-pairs-emitted>
+    <primary-pairs>9</primary-pairs>
+    <secondary-pairs>121</secondary-pairs>
+    <relationship-type-distribution>
+      <equal>7</equal>
+      <intersects-with>123</intersects-with>
+      <unspecified>0</unspecified>
+    </relationship-type-distribution>
+  </stats>
+  <mappings>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-002</id>
+        <description>Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.599</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.599; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000001 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-002</id>
+        <description>Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.593</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.593; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000002 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.579</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.579; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000003 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-004</id>
+        <description>Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.484</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.484; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000008 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.480</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.480; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000009 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-002</id>
+        <description>Schema And Allowlist Enforcement. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. validation and analysis. schema enforcement</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.437</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.437; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000004 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-005</id>
+        <description>Release Promotion And Human Approval Integrity. Promotion between environments must respect explicit gates, including human approval for irreversible actions. Promotion gates are enforced and irrever…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.428</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.428; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000010 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM01-2025</id>
+        <description>mitigate with current techniques</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.413</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.413; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000011 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-002</id>
+        <description>Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.629</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.629; threshold mapping → equal. Claim OWASP_LLM_TOP_10-CLAIM-000017 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-002</id>
+        <description>Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.622</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.622; threshold mapping → equal. Claim OWASP_LLM_TOP_10-CLAIM-000018 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-006</id>
+        <description>Log Retention Lifecycle Management Controls. Govern retention, archive and purge behavior of security-relevant logs explicitly. Automated retention policies, archive workflows, and scheduled purge me…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.611</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.611; threshold mapping → equal. Claim OWASP_LLM_TOP_10-CLAIM-000023 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-001</id>
+        <description>Boundary Input Validation. Validate external inputs and malformed messages at entry points before processing continues. validation and analysis. contract validation</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.570</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.570; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000013 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-001</id>
+        <description>External Input Contract Validation. Validate external inputs for presence, type, format and minimum contract conformance at application and integration entry points before processing begins. Malforme…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.549</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.549; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000014 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.530</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.530; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000019 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-004</id>
+        <description>Log Retention And Lifecycle Governance. Govern retention, archive and purge behavior of security-relevant logs explicitly. governance and review. retention governance</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.511</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.511; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000024 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-004</id>
+        <description>Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.510</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.510; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000025 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-004</id>
+        <description>Audit Record Retention And Lifecycle Governance. Audit logs must be retained, archived and purged under explicit lifecycle rules that satisfy security and regulatory expectations. Security records re…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.504</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.504; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000026 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-003</id>
+        <description>Dangerous Pattern Exclusion. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. validation and analysis. pattern exclusi…</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.479</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.479; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000016 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000020 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.445</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.445; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000021 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-004</id>
+        <description>Short-Lived Token Controls. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. The current semantic anchor comes mostly from adjacent operational-id…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.445</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.445; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000027 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-003</id>
+        <description>Injection-Resistant Input Handling And Dangerous Pattern Exclusion. Input-handling paths must avoid dangerous execution and injection patterns and use safe query, rendering and parsing primitives ins…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.432</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.432; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000012 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-006</id>
+        <description>Architectural Topology Validation And Pattern Conformance. Validate topology and architecture conformance automatically where feasible, using checks that compare the intended structure with approved …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.422</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.422; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000015 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM02-2025</id>
+        <description>Implement data sanitization to prevent user data from entering the training model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-004</id>
+        <description>Bounded Session And Token Management. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. identity and trust control. session management</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.416</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.416; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000028 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-001</id>
+        <description>Versioned Pipelines. Keep build and release logic versioned, reviewable and deterministic. governance and review. workflow</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.586</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.586; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000034 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-004</id>
+        <description>Pipeline Definition As Reviewed Code. Keep build and release logic versioned, reviewable and deterministic. governance and review. build</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.567</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.567; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000035 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.508</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.508; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000040 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-006</id>
+        <description>Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.494</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.494; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000041 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-001</id>
+        <description>Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.486</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.486; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000042 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.483</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.483; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000043 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-004</id>
+        <description>End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.476</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.476; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000036 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.471</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.471; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000044 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-005</id>
+        <description>Deployment Pipeline Traceability And Audit Controls. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. Pipeline instrumentation that records arti…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.469</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.469; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000037 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.468</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.468; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000045 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-002</id>
+        <description>Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.461</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.461; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000032 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-002</id>
+        <description>Static Rulepacks And Security Linters. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. Detect and block dangerous input-handling patterns such as…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000046 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-005</id>
+        <description>Logging Pipeline Health Visibility. Detect when logging stops working so absence of records cannot silently destroy auditability. rollout recovery and runtime records. pipeline health</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000038 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-007</id>
+        <description>Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture s…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.442</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.442; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000047 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-002</id>
+        <description>Central Log Ingestion And Normalization. Emit structured logs with consistent fields and central forwarding rather than fragmented local-only records. The repo is explicit about centralized ingestion…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.430</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.430; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000039 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.428</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.428; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000049 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-005</id>
+        <description>Staged Dynamic Testing And Gate Enforcement. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. validation and analysis. dynamic testing</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.426</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.426; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000050 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.424</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.424; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000051 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-007</id>
+        <description>Security Logging And Audit Trail Assurance. Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.423</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.423; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000052 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-007</id>
+        <description>Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coheren…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.418</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.418; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000053 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-008</id>
+        <description>Define Hardened Baseline Profiles For Security-Relevant Components. Define and maintain hardened baseline profiles for security-relevant components so that new deployments start from a known secure p…</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.418</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.418; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000054 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM03-2025</id>
+        <description>LLM03:2025 Supply Chain. LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in bia…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.417</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.417; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000033 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.601</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.601; threshold mapping → equal. Claim OWASP_LLM_TOP_10-CLAIM-000070 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-004</id>
+        <description>Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.586</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.586; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000056 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-003</id>
+        <description>Schema And Contract Validators. Validate external inputs and malformed messages at entry points before processing continues. Constrain structured payloads and accepted values through explicit schema,…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.569</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.569; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000057 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.558</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.558; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000071 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-002</id>
+        <description>Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.537</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.537; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000072 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-006</id>
+        <description>Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.523</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.523; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000073 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.517</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.517; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000074 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.506</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.506; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000059 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-004</id>
+        <description>Reproducible Test Evidence Management. Keep reports, execution context and build linkage reproducible enough for later review and audit. integrity traceability and records. evidence management</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.499</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.499; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000060 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-006</id>
+        <description>Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.499</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.499; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000061 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.496</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.496; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000075 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-006</id>
+        <description>Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.488</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.488; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000062 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.486</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.486; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000063 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.478</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.478; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000064 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-004</id>
+        <description>Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.474</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.474; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000065 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.472</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.472; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000076 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ATB-003</id>
+        <description>Trust-Boundary And Flow Review. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. review</description>
+        <level>Practice</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.464</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.464; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000066 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-007</id>
+        <description>Security Testing And Empirical Assurance Integrity. Testing strategy, signal quality, finding closure, reproducible evidence, staged validation and specialized empirical testing must operate as one c…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.456</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.456; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000068 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.454</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.454; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000077 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-004</id>
+        <description>End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000078 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.434</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.434; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000079 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-009</id>
+        <description>Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.422</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.422; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000080 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-001</id>
+        <description>Threat Model Creation And Triggered Refresh. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. governance and revi…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.416</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.416; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000055 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM04-2025</id>
+        <description>detect, in effect creating the opportunity for a model to become a sleeper agent</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-003</id>
+        <description>Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.414</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.414; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000069 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM06-2025</id>
+        <description>LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referre…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-002</id>
+        <description>Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.542</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.542; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000085 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM06-2025</id>
+        <description>LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referre…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.527</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.527; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000086 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM06-2025</id>
+        <description>LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referre…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-002</id>
+        <description>Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000082 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM06-2025</id>
+        <description>LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referre…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-004</id>
+        <description>Operational Identity Binding And OIDC Use. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. identity and t…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.452</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.452; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000087 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM06-2025</id>
+        <description>LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referre…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-004</id>
+        <description>Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.442</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.442; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000084 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM06-2025</id>
+        <description>LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referre…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-002</id>
+        <description>Schema And Allowlist Enforcement. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. validation and analysis. schema enforcement</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.424</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.424; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000088 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM06-2025</id>
+        <description>LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referre…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-001</id>
+        <description>Release Authorization And Irreversible Change Accountability. Production release of irreversible change must require explicit accountable authorization rather than silent automatic promotion. Product…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.416</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.416; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000089 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM07-2025</id>
+        <description>LLM07:2025 System Prompt Leakage. The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain s…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.507</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.507; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000090 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM07-2025</id>
+        <description>LLM07:2025 System Prompt Leakage. The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain s…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.499</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.499; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000091 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM07-2025</id>
+        <description>LLM07:2025 System Prompt Leakage. The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain s…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.438</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.438; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000092 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM07-2025</id>
+        <description>LLM07:2025 System Prompt Leakage. The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain s…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.432</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.432; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000093 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM07-2025</id>
+        <description>LLM07:2025 System Prompt Leakage. The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain s…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.430</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.430; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000094 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM07-2025</id>
+        <description>LLM07:2025 System Prompt Leakage. The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain s…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-005</id>
+        <description>Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.429</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.429; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000095 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.557</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.557; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000098 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-005</id>
+        <description>Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.547</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.547; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000099 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.516</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.516; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000100 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.513</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.513; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000101 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-004</id>
+        <description>Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.513</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.513; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000102 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.494</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.494; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000103 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-006</id>
+        <description>Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.461</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.461; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000104 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.455</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.455; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000105 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000106 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-002</id>
+        <description>Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.427</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.427; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000097 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM08-2025</id>
+        <description>LLM08:2025 Vector and Embedding Weaknesses. Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Mod…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.410</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.410; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000107 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-001</id>
+        <description>Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.602</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.602; threshold mapping → equal. Claim OWASP_LLM_TOP_10-CLAIM-000113 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-004</id>
+        <description>Findings Workflow And Exception Governance. Triage testing findings, track them to correction and close them only through retest or formal exception. Separate raw automated signal from final release …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.504</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.504; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000108 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-002</id>
+        <description>Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.503</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.503; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000110 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-006</id>
+        <description>Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where com…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.491</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.491; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000114 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.489</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.489; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000115 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-009</id>
+        <description>Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.467</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.467; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000116 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-006</id>
+        <description>Reviewer Accountability And Consistency Gates. Subject threat models to independent review, approval and go-live governance where required. The current semantic anchor is narrower than the full revie…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.465</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.465; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000109 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-004</id>
+        <description>Threat Disposition, Risk Acceptance And Ownership. Every identified threat must carry explicit disposition, rationale, owner and linked control or compensation, including formal risk acceptance where…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.452</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.452; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000111 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-002</id>
+        <description>Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.444</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.444; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000117 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.440</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.440; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000120 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-005</id>
+        <description>Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.440</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.440; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000121 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-002</id>
+        <description>Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.439</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.439; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000118 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.427</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.427; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000123 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-001</id>
+        <description>Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.414</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.414; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000124 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM09-2025</id>
+        <description>Implement human oversight and fact-checking processes, especially for critical</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-001</id>
+        <description>Secret Leak Prevention And Hardcoded-Secret Exclusion. Prevent secret material from being embedded in source code, repositories and other uncontrolled surfaces, and detect leakage before promotion or…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.411</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.411; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000119 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IAT-002</id>
+        <description>Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization</description>
+        <level>Practice</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.615</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.615; threshold mapping → equal. Claim OWASP_LLM_TOP_10-CLAIM-000137 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-002</id>
+        <description>Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.604</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.604; threshold mapping → equal. Claim OWASP_LLM_TOP_10-CLAIM-000138 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ITS-006</id>
+        <description>External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit…</description>
+        <level>Practice</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.544</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.544; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000132 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-002</id>
+        <description>Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently …</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.542</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.542; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000139 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-001</id>
+        <description>Boundary Input Validation. Validate external inputs and malformed messages at entry points before processing continues. validation and analysis. contract validation</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.537</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.537; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000125 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-005</id>
+        <description>Structured External Call Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. The repo clearly expresses interaction loggin…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.528</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.528; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000133 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IAT-006</id>
+        <description>Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.511</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.511; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000134 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-001</id>
+        <description>External Input Contract Validation. Validate external inputs for presence, type, format and minimum contract conformance at application and integration entry points before processing begins. Malforme…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.510</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.510; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000126 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-001</id>
+        <description>Versioned Pipelines. Keep build and release logic versioned, reviewable and deterministic. governance and review. workflow</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.493</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.493; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000142 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-006</id>
+        <description>Centralized Error Handling And Sensitive Error Logging Hygiene. Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets …</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.483</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.483; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000135 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-005</id>
+        <description>Deployment Pipeline Traceability And Audit Controls. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. Pipeline instrumentation that records arti…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.470</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.470; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000143 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.468</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.468; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000140 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ITS-003</id>
+        <description>Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol re…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.466</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.466; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000141 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-004</id>
+        <description>End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.455</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.455; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000144 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-004</id>
+        <description>End-to-End Deployment Traceability. Every deployment must remain traceable from authorization and pipeline context to the exact artifact, commit and target environment. Incidents and reviews can be t…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.454</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.454; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000145 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-001</id>
+        <description>Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before i…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000127 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-008</id>
+        <description>Compliance Monitoring And Regulatory Change Feeds. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring exter…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.439</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.439; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000146 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-IVF-005</id>
+        <description>Context-Aware Encoder Selection And Application. Apply encoding or escaping appropriate to the rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP heade…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.434</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.434; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000136 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-005</id>
+        <description>Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.432</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.432; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000129 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IVF-005</id>
+        <description>Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.431</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.431; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000130 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>LLM10-2025</id>
+        <description>create a shadow model</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-005</id>
+        <description>Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.409</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.409; threshold mapping → intersects-with. Claim OWASP_LLM_TOP_10-CLAIM-000131 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+  </mappings>
+</olir-concept-crosswalk>

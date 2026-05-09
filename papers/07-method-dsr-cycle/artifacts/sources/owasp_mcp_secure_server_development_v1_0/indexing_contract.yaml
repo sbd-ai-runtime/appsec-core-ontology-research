@@ -1,0 +1,31 @@
+pilot_id: owasp_mcp_secure_server_development_v1_0
+status: pre_traceability_comparison_gap_read
+source_model: pdf_guide_with_sectional_controls
+comparison_target: sbdtoe_manual_v2_via_appsec_core_v0
+classification_taxonomy:
+  - manual_gap
+  - appsec_core_gap
+  - comparison_gap
+  - out_of_scope_for_appsec_core
+pipeline_steps:
+  - capture_source
+  - extract_source_units
+  - extract_source_objects
+  - normalize_to_appsec_core
+  - classify_gap_kind
+  - compare_against_manual_traceability_surface
+scripts:
+  - scripts/extract_pdf_page_units.py
+  - scripts/extract_owasp_mcp_source_objects.py
+  - scripts/normalize_owasp_mcp_to_appsec_core.py
+  - scripts/derive_owasp_mcp_manual_gap_analysis.py
+planned_outputs:
+  - data/owasp_mcp_secure_server_development_v1_0/stubs/source_retrieval_receipt.json
+  - data/owasp_mcp_secure_server_development_v1_0/stubs/external_source_inventory.json
+  - data/owasp_mcp_secure_server_development_v1_0/stubs/source_unit_inventory.json
+  - data/owasp_mcp_secure_server_development_v1_0/stubs/source_object_inventory.json
+  - data/owasp_mcp_secure_server_development_v1_0/stubs/appsec_core_normalization.json
+  - data/owasp_mcp_secure_server_development_v1_0/stubs/manual_gap_analysis.json
+notes:
+  - manual_gap is intentionally not asserted until direct comparison against the published manual traceability surface.
+  - comparison_gap is used when relevant semantics exist but the current objective-level method is too coarse.

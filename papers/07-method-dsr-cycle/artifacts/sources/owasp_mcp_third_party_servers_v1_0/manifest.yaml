@@ -1,0 +1,19 @@
+pilot_id: owasp_mcp_third_party_servers_v1_0
+status: source_units_ready
+source_family: owasp_mcp_third_party_usage_guide
+publisher: OWASP GenAI Security Project
+comparison_target: sbdtoe_manual_v2_via_appsec_core_v0
+documents:
+  - source_document_id: OWASP-MCP-THIRD-PARTY-GUIDE-V1_0
+    title: A Practical Guide for Securely Using Third-Party MCP Servers
+    version_label: '1.0'
+    publication_date: '2025-11-04'
+    editorial_state: stable_guide
+    source_kind: pdf_guide_with_html_landing_page
+    local_pdf_path: sources/owasp_mcp_third_party_servers_v1_0/A_Practical_Guide_for_Securely_Using_Third-Party_MCP_Servers_v1_0.pdf
+    local_html_path: sources/owasp_mcp_third_party_servers_v1_0/landing_page.html
+    landing_page_url: https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/
+    download_url: https://genai.owasp.org/download/51928/
+notes:
+  - This pilot is practical and third-party-consumption oriented, not a builder guide.
+  - It should be read after the MCP normative and MCP Top 10 pilots.

@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olir-concept-crosswalk xmlns="https://www.nist.gov/olir/v1" version="1.0">
+  <metadata>
+    <title>SLSA — Supply-chain Levels for Software Artifacts (Build Track) → AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)</title>
+    <submission-version>1.0</submission-version>
+    <submission-author>Pedro Farinha (programme lead) — SbD-ToE Programme</submission-author>
+    <submission-date>2026-05-08</submission-date>
+    <programme-doi>10.17605/OSF.IO/7T849</programme-doi>
+    <schema-basis>NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model</schema-basis>
+    <source-document strm-resource-type="DocumentaryImpl">
+      <title>SLSA — Supply-chain Levels for Software Artifacts (Build Track)</title>
+      <version>v1.0</version>
+      <url>https://slsa.dev/spec/v1.0/</url>
+      <author>OpenSSF / SLSA Working Group</author>
+      <release-date>2023</release-date>
+      <mapping-direction>solution_space_direct</mapping-direction>
+      <pilot-id>slsa_spec_v1_0_build_track</pilot-id>
+    </source-document>
+    <reference-document strm-resource-type="Reference Document">
+      <title>AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)</title>
+      <version>V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)</version>
+      <url>https://osf.io/7t849/</url>
+      <author>SbD-ToE Programme — AppSec Core ontology project</author>
+    </reference-document>
+    <methodology>
+      Threshold-based continuous→categorical translation: sim≥0.6 → equal; 0.4≤sim&lt;0.6 → intersects-with; sim&lt;0.4 → unspecified.
+      Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target.
+      is-primary="true" marks item overall highest-similarity claim&apos;s target.
+      subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work).
+      STRM resource model: pilot doc → DocumentaryImpl; source-item → ConcreteImpl; AppSec Core V1 → Reference Document; Core entity → Concept.
+    </methodology>
+    <substrate-supplier-sha256>596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04</substrate-supplier-sha256>
+    <substrate-tag>substrate-v7-iter-3-ai-ml-incorporated</substrate-tag>
+    <ontology-tag>ontology-v1-next-acr004-promoted</ontology-tag>
+    <cycle-a-frozen-tag>cycle-a-frozen-2026-05-08</cycle-a-frozen-tag>
+  </metadata>
+  <stats>
+    <items-total>14</items-total>
+    <items-grounded>13</items-grounded>
+    <olir-pairs-emitted>92</olir-pairs-emitted>
+    <primary-pairs>13</primary-pairs>
+    <secondary-pairs>79</secondary-pairs>
+    <relationship-type-distribution>
+      <equal>7</equal>
+      <intersects-with>85</intersects-with>
+      <unspecified>0</unspecified>
+    </relationship-type-distribution>
+  </stats>
+  <mappings>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.593</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.593; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000001 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-006</id>
+        <description>Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.570</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.570; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000002 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.543</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.543; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000003 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-004</id>
+        <description>Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.533</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.533; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000004 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-006</id>
+        <description>Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.532</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.532; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000005 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.520</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.520; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000006 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-007</id>
+        <description>Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.490</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.490; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000007 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-004</id>
+        <description>Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.487</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.487; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000008 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-004</id>
+        <description>Reproducible Test Evidence Management. Keep reports, execution context and build linkage reproducible enough for later review and audit. integrity traceability and records. evidence management</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.480</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.480; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000009 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.460</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.460; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000010 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.451</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.451; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000011 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-IVF-002</id>
+        <description>Schema And Allowlist Enforcement. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. validation and analysis. schema enforcement</description>
+        <level>Practice</level>
+        <slice-family>ACO-IVF</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000012 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L1</id>
+        <description>Build L1: Provenance exists. Summary Package has provenance showing how it was built. Can be used to prevent mistakes but is trivial to bypass or forge. Intended for Projects and organizations wantin…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-001</id>
+        <description>Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rat…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.436</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.436; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000013 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L2</id>
+        <description>Build L2: Hosted build platform. Summary Forging the provenance or evading verification requires an explicit “attack”, though this may be easy to perform. Deters unsophisticated adversaries or those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.548</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.548; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000014 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L2</id>
+        <description>Build L2: Hosted build platform. Summary Forging the provenance or evading verification requires an explicit “attack”, though this may be easy to perform. Deters unsophisticated adversaries or those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-004</id>
+        <description>Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.522</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.522; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000015 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L2</id>
+        <description>Build L2: Hosted build platform. Summary Forging the provenance or evading verification requires an explicit “attack”, though this may be easy to perform. Deters unsophisticated adversaries or those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.522</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.522; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000016 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L2</id>
+        <description>Build L2: Hosted build platform. Summary Forging the provenance or evading verification requires an explicit “attack”, though this may be easy to perform. Deters unsophisticated adversaries or those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.519</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.519; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000017 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L2</id>
+        <description>Build L2: Hosted build platform. Summary Forging the provenance or evading verification requires an explicit “attack”, though this may be easy to perform. Deters unsophisticated adversaries or those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-004</id>
+        <description>Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.498</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.498; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000018 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L2</id>
+        <description>Build L2: Hosted build platform. Summary Forging the provenance or evading verification requires an explicit “attack”, though this may be easy to perform. Deters unsophisticated adversaries or those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-004</id>
+        <description>Reproducible Test Evidence Management. Keep reports, execution context and build linkage reproducible enough for later review and audit. integrity traceability and records. evidence management</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.448</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.448; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000019 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L2</id>
+        <description>Build L2: Hosted build platform. Summary Forging the provenance or evading verification requires an explicit “attack”, though this may be easy to perform. Deters unsophisticated adversaries or those …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.430</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.430; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000020 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L3</id>
+        <description>Build L3: Hardened builds. Summary Forging the provenance or evading verification requires exploiting a vulnerability that is beyond the capabilities of most adversaries. In practice, this means that…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.660</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.660; threshold mapping → equal. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000021 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L3</id>
+        <description>Build L3: Hardened builds. Summary Forging the provenance or evading verification requires exploiting a vulnerability that is beyond the capabilities of most adversaries. In practice, this means that…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-004</id>
+        <description>Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.517</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.517; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000022 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L3</id>
+        <description>Build L3: Hardened builds. Summary Forging the provenance or evading verification requires exploiting a vulnerability that is beyond the capabilities of most adversaries. In practice, this means that…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.446</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.446; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000023 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L3</id>
+        <description>Build L3: Hardened builds. Summary Forging the provenance or evading verification requires exploiting a vulnerability that is beyond the capabilities of most adversaries. In practice, this means that…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.445</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.445; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000024 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L3</id>
+        <description>Build L3: Hardened builds. Summary Forging the provenance or evading verification requires exploiting a vulnerability that is beyond the capabilities of most adversaries. In practice, this means that…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-004</id>
+        <description>Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.442</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.442; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000025 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L3</id>
+        <description>Build L3: Hardened builds. Summary Forging the provenance or evading verification requires exploiting a vulnerability that is beyond the capabilities of most adversaries. In practice, this means that…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.433</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.433; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000026 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-L3</id>
+        <description>Build L3: Hardened builds. Summary Forging the provenance or evading verification requires exploiting a vulnerability that is beyond the capabilities of most adversaries. In practice, this means that…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-002</id>
+        <description>Test Execution Surfaces. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. Apply regression tests, offensive testing and fuzzing where deeper empirical val…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.415</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.415; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000027 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.567</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.567; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000028 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ATB-003</id>
+        <description>Trust-Boundary And Flow Review. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. review</description>
+        <level>Practice</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.561</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.561; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000029 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.546</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.546; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000030 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.540</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.540; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000031 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-002</id>
+        <description>Trust-Boundary And DFD Modeling. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. boundary model</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.525</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.525; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000032 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.486</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.486; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000033 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.484</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.484; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000034 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.457</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.457; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000035 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.456</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.456; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000036 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000037 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-PLATFORMS</id>
+        <description>Trust platforms, verify artifacts. Establish trust in a small number of platforms and systems—such as change management, build, and packaging platforms—and then automatically verify the many artifact…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SLG-007</id>
+        <description>Security Logging And Audit Trail Assurance. Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.428</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.428; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000038 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.520</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.520; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000039 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-005</id>
+        <description>Secret Isolation Across Technical Surfaces. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. identity and trust control. isolation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.517</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.517; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000040 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SLG-003</id>
+        <description>Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection</description>
+        <level>Practice</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.499</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.499; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000041 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SPC-001</id>
+        <description>Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secr…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.487</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.487; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000042 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ATB-002</id>
+        <description>Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flo…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.484</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.484; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000043 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-ITS-003</id>
+        <description>Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-ITS</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.463</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.463; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000044 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SLG-003</id>
+        <description>Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SLG</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.455</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.455; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000045 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-ATB-003</id>
+        <description>Trust-Boundary And Flow Review. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. review</description>
+        <level>Practice</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.454</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.454; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000046 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-005</id>
+        <description>Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.443</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.443; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000047 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-004</id>
+        <description>Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000048 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.441</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.441; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000049 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-003</id>
+        <description>Approved Source And Registry Governance. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.433</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.433; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000050 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-ATB-002</id>
+        <description>Trust-Boundary And DFD Modeling. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. boundary model</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-ATB</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.427</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.427; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000051 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-TRUST-CODE</id>
+        <description>Trust code, not individuals. Securely trace all software back to source code rather than trust individuals who have write access to package registries. Reasoning : Code is static and analyzable. Peop…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.415</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.415; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000052 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-PREFER-ATTESTATIONS</id>
+        <description>Prefer attestations over inferences. Require explicit attestations about an artifact’s provenance; do not infer security properties from a platform’s configurations. Reasoning : Theoretically, access…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TSV-003</id>
+        <description>CI/CD Gate And Release Promotion. Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface. Keep reports, execution context and build linkage reproduci…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.566</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.566; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000053 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-PREFER-ATTESTATIONS</id>
+        <description>Prefer attestations over inferences. Require explicit attestations about an artifact’s provenance; do not infer security properties from a platform’s configurations. Reasoning : Theoretically, access…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-006</id>
+        <description>Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.557</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.557; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000054 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-PREFER-ATTESTATIONS</id>
+        <description>Prefer attestations over inferences. Require explicit attestations about an artifact’s provenance; do not infer security properties from a platform’s configurations. Reasoning : Theoretically, access…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.547</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.547; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000055 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-PREFER-ATTESTATIONS</id>
+        <description>Prefer attestations over inferences. Require explicit attestations about an artifact’s provenance; do not infer security properties from a platform’s configurations. Reasoning : Theoretically, access…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.525</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.525; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000056 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-PREFER-ATTESTATIONS</id>
+        <description>Prefer attestations over inferences. Require explicit attestations about an artifact’s provenance; do not infer security properties from a platform’s configurations. Reasoning : Theoretically, access…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.505</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.505; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000057 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-PREFER-ATTESTATIONS</id>
+        <description>Prefer attestations over inferences. Require explicit attestations about an artifact’s provenance; do not infer security properties from a platform’s configurations. Reasoning : Theoretically, access…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.465</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.465; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000058 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRINCIPLE-PREFER-ATTESTATIONS</id>
+        <description>Prefer attestations over inferences. Require explicit attestations about an artifact’s provenance; do not infer security properties from a platform’s configurations. Reasoning : Theoretically, access…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-IAT-002</id>
+        <description>Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-bas…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-IAT</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.444</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.444; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000059 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM</id>
+        <description>Choose an appropriate build platform. The producer MUST select a build platform that is capable of reaching their desired SLSA Build Level. For example, if a producer wishes to produce a Build Level …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.449</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.449; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000060 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM</id>
+        <description>Choose an appropriate build platform. The producer MUST select a build platform that is capable of reaching their desired SLSA Build Level. For example, if a producer wishes to produce a Build Level …</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-001</id>
+        <description>Build-Linked SBOM Generation. Generate and retain SBOMs as first-class outputs of build or image publication flows. integrity traceability and records. inventory</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.440</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.440; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000061 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-CONSISTENT-BUILD</id>
+        <description>Follow a consistent build process. The producer MUST build their artifact in a consistent manner such that verifiers can form expectations about the build process. In some implementations, the produc…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-005</id>
+        <description>Build And Image Inventory Generation. Generate and retain SBOMs as first-class outputs of build or image publication flows. Build, select and promote images only through trusted, traceable and policy…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.536</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.536; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000062 at Mechanism level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-CONSISTENT-BUILD</id>
+        <description>Follow a consistent build process. The producer MUST build their artifact in a consistent manner such that verifiers can form expectations about the build process. In some implementations, the produc…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-001</id>
+        <description>Build-Linked SBOM Generation. Generate and retain SBOMs as first-class outputs of build or image publication flows. integrity traceability and records. inventory</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.515</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.515; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000063 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-DISTRIBUTE-PROVENANCE</id>
+        <description>Distribute provenance. The producer MUST distribute provenance to artifact consumers. The producer MAY delegate this responsibility to the package ecosystem , provided that the package ecosystem is c…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-006</id>
+        <description>Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.650</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.650; threshold mapping → equal. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000064 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-DISTRIBUTE-PROVENANCE</id>
+        <description>Distribute provenance. The producer MUST distribute provenance to artifact consumers. The producer MAY delegate this responsibility to the package ecosystem , provided that the package ecosystem is c…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.605</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.605; threshold mapping → equal. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000065 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-DISTRIBUTE-PROVENANCE</id>
+        <description>Distribute provenance. The producer MUST distribute provenance to artifact consumers. The producer MAY delegate this responsibility to the package ecosystem , provided that the package ecosystem is c…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.597</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.597; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000066 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-DISTRIBUTE-PROVENANCE</id>
+        <description>Distribute provenance. The producer MUST distribute provenance to artifact consumers. The producer MAY delegate this responsibility to the package ecosystem , provided that the package ecosystem is c…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.589</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.589; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000067 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-PRODUCER-DISTRIBUTE-PROVENANCE</id>
+        <description>Distribute provenance. The producer MUST distribute provenance to artifact consumers. The producer MAY delegate this responsibility to the package ecosystem , provided that the package ecosystem is c…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-006</id>
+        <description>Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.558</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.558; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000068 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION</id>
+        <description>Provenance generation. The build platform is responsible for generating provenance describing how the package was produced. The SLSA Build level describes the overall provenance integrity according t…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-006</id>
+        <description>Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.599</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.599; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000069 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION</id>
+        <description>Provenance generation. The build platform is responsible for generating provenance describing how the package was produced. The SLSA Build level describes the overall provenance integrity according t…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.587</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.587; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000070 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION</id>
+        <description>Provenance generation. The build platform is responsible for generating provenance describing how the package was produced. The SLSA Build level describes the overall provenance integrity according t…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.552</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.552; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000071 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION</id>
+        <description>Provenance generation. The build platform is responsible for generating provenance describing how the package was produced. The SLSA Build level describes the overall provenance integrity according t…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.550</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.550; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000072 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION</id>
+        <description>Provenance generation. The build platform is responsible for generating provenance describing how the package was produced. The SLSA Build level describes the overall provenance integrity according t…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-TMR-007</id>
+        <description>Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, s…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.459</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.459; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000073 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION</id>
+        <description>Provenance generation. The build platform is responsible for generating provenance describing how the package was produced. The SLSA Build level describes the overall provenance integrity according t…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-004</id>
+        <description>Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.458</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.458; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000074 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION</id>
+        <description>Provenance generation. The build platform is responsible for generating provenance describing how the package was produced. The SLSA Build level describes the overall provenance integrity according t…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TSV-004</id>
+        <description>Reproducible Test Evidence Management. Keep reports, execution context and build linkage reproducible enough for later review and audit. integrity traceability and records. evidence management</description>
+        <level>Practice</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.453</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.453; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000075 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-ISOLATION</id>
+        <description>Isolation strength. The build platform is responsible for isolating between builds, even within the same tenant project. In other words, how strong of a guarantee do we have that the build really exe…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-004</id>
+        <description>Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutabl…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.490</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.490; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000076 at ControlObjective level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-ISOLATION</id>
+        <description>Isolation strength. The build platform is responsible for isolating between builds, even within the same tenant project. In other words, how strong of a guarantee do we have that the build really exe…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SPC-005</id>
+        <description>Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces. Secret material and operational identities must be isolated by environment, execution surface and workload boundary so that compr…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.470</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.470; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000077 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-BUILD-PLATFORM-ISOLATION</id>
+        <description>Isolation strength. The build platform is responsible for isolating between builds, even within the same tenant project. In other words, how strong of a guarantee do we have that the build really exe…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-005</id>
+        <description>Secret Isolation Across Technical Surfaces. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. identity and trust control. isolation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.468</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.468; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000078 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-BUILD-LEVEL</id>
+        <description>Step 1: Check SLSA Build level. First, check the SLSA Build level by comparing the artifact to its provenance and the provenance to a preconfigured root of trust. The goal is to ensure that the prove…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-006</id>
+        <description>Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.645</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.645; threshold mapping → equal. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000079 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-BUILD-LEVEL</id>
+        <description>Step 1: Check SLSA Build level. First, check the SLSA Build level by comparing the artifact to its provenance and the provenance to a preconfigured root of trust. The goal is to ensure that the prove…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-004</id>
+        <description>Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.635</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.635; threshold mapping → equal. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000080 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-BUILD-LEVEL</id>
+        <description>Step 1: Check SLSA Build level. First, check the SLSA Build level by comparing the artifact to its provenance and the provenance to a preconfigured root of trust. The goal is to ensure that the prove…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-SCBI-006</id>
+        <description>Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verif…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.633</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.633; threshold mapping → equal. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000081 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-BUILD-LEVEL</id>
+        <description>Step 1: Check SLSA Build level. First, check the SLSA Build level by comparing the artifact to its provenance and the provenance to a preconfigured root of trust. The goal is to ensure that the prove…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-RPR-002</id>
+        <description>Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification</description>
+        <level>Practice</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>equal</relationship-type>
+      <strength>0.601</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.601; threshold mapping → equal. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000082 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-BUILD-LEVEL</id>
+        <description>Step 1: Check SLSA Build level. First, check the SLSA Build level by comparing the artifact to its provenance and the provenance to a preconfigured root of trust. The goal is to ensure that the prove…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.577</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.577; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000083 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-BUILD-LEVEL</id>
+        <description>Step 1: Check SLSA Build level. First, check the SLSA Build level by comparing the artifact to its provenance and the provenance to a preconfigured root of trust. The goal is to ensure that the prove…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-RPR-002</id>
+        <description>Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts r…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.559</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.559; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000084 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-BUILD-LEVEL</id>
+        <description>Step 1: Check SLSA Build level. First, check the SLSA Build level by comparing the artifact to its provenance and the provenance to a preconfigured root of trust. The goal is to ensure that the prove…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.428</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.428; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000085 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="true">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-EXPECTATIONS</id>
+        <description>Step 2: Check expectations. Next, check that the package’s provenance meets your expectations for that package in order to mitigate threat “C” . In our threat model, the adversary has ability to invo…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SCBI-003</id>
+        <description>Approved Source And Registry Governance. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. policy and gate enforcement. approval</description>
+        <level>Practice</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.516</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.516; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000086 at Practice level. Primary anchor (item highest-similarity claim).
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-EXPECTATIONS</id>
+        <description>Step 2: Check expectations. Next, check that the package’s provenance meets your expectations for that package in order to mitigate threat “C” . In our threat model, the adversary has ability to invo…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-SPC-001</id>
+        <description>Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and ana…</description>
+        <level>Practice</level>
+        <slice-family>ACO-SPC</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.481</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.481; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000087 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-EXPECTATIONS</id>
+        <description>Step 2: Check expectations. Next, check that the package’s provenance meets your expectations for that package in order to mitigate threat “C” . In our threat model, the adversary has ability to invo…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TMR-005</id>
+        <description>Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.470</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.470; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000088 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-EXPECTATIONS</id>
+        <description>Step 2: Check expectations. Next, check that the package’s provenance meets your expectations for that package in order to mitigate threat “C” . In our threat model, the adversary has ability to invo…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-SCBI-006</id>
+        <description>Registry Allowlisting And Approved Source Enforcement. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. Technical controls that restrict dependency…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-SCBI</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.455</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.455; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000089 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-EXPECTATIONS</id>
+        <description>Step 2: Check expectations. Next, check that the package’s provenance meets your expectations for that package in order to mitigate threat “C” . In our threat model, the adversary has ability to invo…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACM-RPR-003</id>
+        <description>Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenan…</description>
+        <level>Mechanism</level>
+        <slice-family>ACO-RPR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.447</strength>
+      <claim-level>Mechanism</claim-level>
+      <rationale>
+        Cosine similarity 0.447; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000090 at Mechanism level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-EXPECTATIONS</id>
+        <description>Step 2: Check expectations. Next, check that the package’s provenance meets your expectations for that package in order to mitigate threat “C” . In our threat model, the adversary has ability to invo…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACO-TSV-004</id>
+        <description>Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that prod…</description>
+        <level>ControlObjective</level>
+        <slice-family>ACO-TSV</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.433</strength>
+      <claim-level>ControlObjective</claim-level>
+      <rationale>
+        Cosine similarity 0.433; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000091 at ControlObjective level. Secondary disclosure.
+      </rationale>
+    </mapping>
+    <mapping is-primary="false">
+      <source-element strm-resource-type="ConcreteImpl">
+        <id>SLSA-VERIFY-EXPECTATIONS</id>
+        <description>Step 2: Check expectations. Next, check that the package’s provenance meets your expectations for that package in order to mitigate threat “C” . In our threat model, the adversary has ability to invo…</description>
+      </source-element>
+      <reference-element strm-resource-type="Concept">
+        <id>ACP-TMR-005</id>
+        <description>Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil…</description>
+        <level>Practice</level>
+        <slice-family>ACO-TMR</slice-family>
+      </reference-element>
+      <relationship-type>intersects-with</relationship-type>
+      <strength>0.427</strength>
+      <claim-level>Practice</claim-level>
+      <rationale>
+        Cosine similarity 0.427; threshold mapping → intersects-with. Claim SLSA_SPEC_V1_0_BUILD_TRACK-CLAIM-000092 at Practice level. Secondary disclosure.
+      </rationale>
+    </mapping>
+  </mappings>
+</olir-concept-crosswalk>

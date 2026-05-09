@@ -1,0 +1,619 @@
+{
+  "olir_concept_crosswalk": {
+    "metadata": {
+      "title": "OWASP MCP Third-Party Servers Security \u2192 AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated) (Concept Crosswalk)",
+      "submission_version": "1.0",
+      "submission_author": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme",
+      "submission_date": "2026-05-08",
+      "programme_doi": "10.17605/OSF.IO/7T849",
+      "schema_basis": "NIST IR 8477 relationship vocabulary + NIST IR 8278A r1 STRM resource model",
+      "source_document": {
+        "title": "OWASP MCP Third-Party Servers Security",
+        "version": "v1.0",
+        "url": "https://owasp.org/www-project-mcp-server-security/",
+        "author": "OWASP",
+        "release_date": "2025",
+        "strm_resource_type": "DocumentaryImpl",
+        "mapping_direction": "mixed",
+        "pilot_id": "owasp_mcp_third_party_servers_v1_0"
+      },
+      "reference_document": {
+        "title": "AppSec Core V1 (with ACR-001, ACR-002, ACR-004 incorporated)",
+        "version": "V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)",
+        "url": "https://osf.io/7t849/",
+        "author": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+        "strm_resource_type": "Reference Document"
+      },
+      "methodology": "Threshold-based continuous\u2192categorical translation: sim\u22650.6 \u2192 equal; 0.4\u2264sim<0.6 \u2192 intersects-with; sim<0.4 \u2192 unspecified. Multi-claim per source-item: one row per (source-item, target-Core-entity) unique pair using highest-similarity claim for that target; is-primary=true marks item's overall highest-similarity claim's target. subset-of / superset-of NOT in first cut (cosine similarity lacks directional info; SME refinement future work). STRM resource model: pilot doc \u2192 DocumentaryImpl; source-item \u2192 ConcreteImpl; AppSec Core V1 \u2192 Reference Document; Core entity \u2192 Concept.",
+      "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+      "substrate_tag": "substrate-v7-iter-3-ai-ml-incorporated",
+      "ontology_tag": "ontology-v1-next-acr004-promoted",
+      "cycle_a_frozen_tag": "cycle-a-frozen-2026-05-08"
+    },
+    "stats": {
+      "items_total": 8,
+      "items_grounded": 6,
+      "items_lab_depth_pending": 2,
+      "olir_pairs_emitted": 30,
+      "primary_pairs": 6,
+      "secondary_pairs": 24,
+      "relationship_type_distribution": {
+        "equal": 0,
+        "intersects-with": 30,
+        "unspecified": 0
+      }
+    },
+    "mappings": [
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOL-POISONING",
+          "description": "Tool poisoning and rug pull attacks. Use Cases A downloadable MCP server that runs locally, using native tools and system-level permissions to perform tasks independently of external infrastructure. \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.419,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.419; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000001 at ControlObjective level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOL-INTERFERENCE",
+          "description": "Tool interference across multiple MCP servers. Current Vulnerability Landscape Common attack patterns have begun to emerge around MCP, many focused on malicious inputs designed to influence an LLM, o\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TMR-005",
+          "description": "Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control",
+          "level": "Mechanism",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.429,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.429; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000002 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOL-INTERFERENCE",
+          "description": "Tool interference across multiple MCP servers. Current Vulnerability Landscape Common attack patterns have begun to emerge around MCP, many focused on malicious inputs designed to influence an LLM, o\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000003 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IVF-002",
+          "description": "Schema And Allowlist Enforcement. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. validation and analysis. schema enforcement",
+          "level": "Practice",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.589,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.589; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000004 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-005",
+          "description": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.486,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.486; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000005 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.458,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.458; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000006 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.441,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.441; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000007 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-005",
+          "description": "Authenticated API Boundary Enforcement. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. gateway enforcement",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.437,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.437; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000008 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-IAT-002",
+          "description": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently \u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.436,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.436; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000009 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.42,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.420; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000010 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+          "description": "Client security, server discovery and verification. \u2022 Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.413,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.413; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000011 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION",
+          "description": "Authentication, authorization and protected registration. Client Security and Server Discovery Understanding the distinct security responsibilities and attack surfaces of MCP clients and servers is c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.512,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.512; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000012 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION",
+          "description": "Authentication, authorization and protected registration. Client Security and Server Discovery Understanding the distinct security responsibilities and attack surfaces of MCP clients and servers is c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-001",
+          "description": "Authenticated Service Interaction And Machine Identity Binding. Machine-to-machine interactions must authenticate peer services through explicit trusted identities, mutual authentication or secure bo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.482,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.482; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000013 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION",
+          "description": "Authentication, authorization and protected registration. Client Security and Server Discovery Understanding the distinct security responsibilities and attack surfaces of MCP clients and servers is c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-009",
+          "description": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and r\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.465,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.465; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000014 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION",
+          "description": "Authentication, authorization and protected registration. Client Security and Server Discovery Understanding the distinct security responsibilities and attack surfaces of MCP clients and servers is c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SLG-003",
+          "description": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+          "level": "Practice",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.439,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.439; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000015 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION",
+          "description": "Authentication, authorization and protected registration. Client Security and Server Discovery Understanding the distinct security responsibilities and attack surfaces of MCP clients and servers is c\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.43,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.430; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000016 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-IAT-005",
+          "description": "Authenticated API Boundary Enforcement. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. gateway enforcement",
+          "level": "Practice",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.546,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.546; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000017 at Practice level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-ITS-001",
+          "description": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identiti\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.524,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.524; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000018 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IAT-007",
+          "description": "Identity And Access Control Integrity. Identity assurance, authorization policy, access revocation, session trust and API boundary enforcement must operate as one coherent access-control surface. Pri\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IAT",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.516,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.516; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000019 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SPC-002",
+          "description": "OIDC-Based Operational Identity. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by e\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.501,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.501; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000020 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-SPC-004",
+          "description": "Operational Identity Binding And OIDC Use. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. identity and t\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.493,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.493; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000021 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-SPC-004",
+          "description": "Operational Identity Binding And Short-Lived Credentials. Pipeline, workload and deploy identities must be explicitly bound to the task they perform and should prefer short-lived credentials over sta\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-SPC",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.458,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.458; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000022 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-ITS-001",
+          "description": "Authenticated Service Interaction And Machine Identity Binding. Machine-to-machine interactions must authenticate peer services through explicit trusted identities, mutual authentication or secure bo\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-ITS",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.445,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.445; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000023 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+          "description": "Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. \u2022 Protected \u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-IVF-005",
+          "description": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and in\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-IVF",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.417,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.417; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000024 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": true,
+        "source_element": {
+          "id": "OWASP-MCP-3P-GOVERNANCE-REGISTRY",
+          "description": "Trusted registry and governance workflow for third-party MCP servers. Tools & Utilities No tool will provide complete coverage, and the tools listed will vary in maturity and effectiveness. Use these\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SCBI-002",
+          "description": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed s\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SCBI",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.579,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.579; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000025 at Mechanism level. Primary anchor (item highest-similarity claim)."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-GOVERNANCE-REGISTRY",
+          "description": "Trusted registry and governance workflow for third-party MCP servers. Tools & Utilities No tool will provide complete coverage, and the tools listed will vary in maturity and effectiveness. Use these\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-TSV-001",
+          "description": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-TSV",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.488,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.488; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000026 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-GOVERNANCE-REGISTRY",
+          "description": "Trusted registry and governance workflow for third-party MCP servers. Tools & Utilities No tool will provide complete coverage, and the tools listed will vary in maturity and effectiveness. Use these\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACP-TMR-005",
+          "description": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceabil\u2026",
+          "level": "Practice",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.432,
+        "claim_level": "Practice",
+        "rationale": "Cosine similarity 0.432; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000027 at Practice level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-GOVERNANCE-REGISTRY",
+          "description": "Trusted registry and governance workflow for third-party MCP servers. Tools & Utilities No tool will provide complete coverage, and the tools listed will vary in maturity and effectiveness. Use these\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACM-SLG-005",
+          "description": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured Y\u2026",
+          "level": "Mechanism",
+          "slice_family": "ACO-SLG",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.428,
+        "claim_level": "Mechanism",
+        "rationale": "Cosine similarity 0.428; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000028 at Mechanism level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-GOVERNANCE-REGISTRY",
+          "description": "Trusted registry and governance workflow for third-party MCP servers. Tools & Utilities No tool will provide complete coverage, and the tools listed will vary in maturity and effectiveness. Use these\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-TMR-005",
+          "description": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-TMR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.422,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.422; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000029 at ControlObjective level. Secondary disclosure."
+      },
+      {
+        "is_primary": false,
+        "source_element": {
+          "id": "OWASP-MCP-3P-GOVERNANCE-REGISTRY",
+          "description": "Trusted registry and governance workflow for third-party MCP servers. Tools & Utilities No tool will provide complete coverage, and the tools listed will vary in maturity and effectiveness. Use these\u2026",
+          "strm_resource_type": "ConcreteImpl"
+        },
+        "reference_element": {
+          "id": "ACO-RPR-004",
+          "description": "End-to-End Deployment Traceability. Every deployment must remain traceable from authorization and pipeline context to the exact artifact, commit and target environment. Incidents and reviews can be t\u2026",
+          "level": "ControlObjective",
+          "slice_family": "ACO-RPR",
+          "strm_resource_type": "Concept"
+        },
+        "relationship_type": "intersects-with",
+        "strength": 0.416,
+        "claim_level": "ControlObjective",
+        "rationale": "Cosine similarity 0.416; threshold mapping \u2192 intersects-with. Claim OWASP_MCP_THIRD_PARTY_SERVERS_V1_0-CLAIM-000030 at ControlObjective level. Secondary disclosure."
+      }
+    ]
+  }
+}

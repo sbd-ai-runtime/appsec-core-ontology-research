@@ -1,0 +1,12 @@
+{
+  "pilot_id": "owasp_mcp_secure_server_development_v1_0",
+  "source_id": "OWASP-MCP-SECURE-SERVER-DEVELOPMENT-V1_0",
+  "status": "source_captured",
+  "retrieved_at": "2026-04-03T18:55:51Z",
+  "landing_page_url": "https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/",
+  "download_url": "https://genai.owasp.org/download/52676/?tmstv=1771286427",
+  "local_pdf": "sources/owasp_mcp_secure_server_development_v1_0/A_Practical_Guide_for_Secure_MCP_Server_Development_v1_0.pdf",
+  "checksum_sha256": "e0681dc7f64074f9dfceedda90533cf6db1cc3566508d28f77c69cc3cc2307b0",
+  "size_bytes":   637801,
+  "license": "CC BY-SA 4.0"
+}

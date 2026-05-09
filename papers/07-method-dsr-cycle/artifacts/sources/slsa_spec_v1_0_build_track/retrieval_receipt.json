@@ -1,0 +1,52 @@
+{
+  "pilot_id": "slsa_spec_v1_0_build_track",
+  "source_collection_id": "SRC-SLSA-SPEC-V1_0-BUILD-TRACK",
+  "status": "source_captured",
+  "artifacts": [
+    {
+      "source_document_id": "SRC-SLSA-V1_0-INDEX",
+      "title": "SLSA Specification",
+      "canonical_url": "https://slsa.dev/spec/v1.0/",
+      "local_path": "sources/slsa_spec_v1_0_build_track/index.html",
+      "retrieved_at": "2026-04-03T19:33:28Z",
+      "checksum_sha256": "bb85b967d27c7eb8e639fb66c7da94990b6f479bdca2efa6c09fa8f147336ba0",
+      "size_bytes": 16564
+    },
+    {
+      "source_document_id": "SRC-SLSA-V1_0-LEVELS",
+      "title": "Security Levels",
+      "canonical_url": "https://slsa.dev/spec/v1.0/levels",
+      "local_path": "sources/slsa_spec_v1_0_build_track/levels.html",
+      "retrieved_at": "2026-04-03T19:33:29Z",
+      "checksum_sha256": "5f76abd3a58616c0f53034554a839e425ea1dc90b59b80e37881ac991de1b13e",
+      "size_bytes": 25605
+    },
+    {
+      "source_document_id": "SRC-SLSA-V1_0-PRINCIPLES",
+      "title": "Guiding Principles",
+      "canonical_url": "https://slsa.dev/spec/v1.0/principles",
+      "local_path": "sources/slsa_spec_v1_0_build_track/principles.html",
+      "retrieved_at": "2026-04-03T19:33:29Z",
+      "checksum_sha256": "90f0b05395a94219b23ff7322add3759925df8de1efc9594cb47cb627e958232",
+      "size_bytes": 20318
+    },
+    {
+      "source_document_id": "SRC-SLSA-V1_0-REQUIREMENTS",
+      "title": "Producing Artifacts",
+      "canonical_url": "https://slsa.dev/spec/v1.0/requirements",
+      "local_path": "sources/slsa_spec_v1_0_build_track/requirements.html",
+      "retrieved_at": "2026-04-03T19:33:29Z",
+      "checksum_sha256": "31975a28040d0a366bdea58742ded5ed98cf9ca76f9e960b0b255e7213cbf129",
+      "size_bytes": 32223
+    },
+    {
+      "source_document_id": "SRC-SLSA-V1_0-VERIFYING-ARTIFACTS",
+      "title": "Verifying Artifacts",
+      "canonical_url": "https://slsa.dev/spec/v1.0/verifying-artifacts",
+      "local_path": "sources/slsa_spec_v1_0_build_track/verifying_artifacts.html",
+      "retrieved_at": "2026-04-03T19:33:30Z",
+      "checksum_sha256": "7967df1dd0426ae4e8dd784859c6e146460c4e17b6bacc48d548fbd231971e50",
+      "size_bytes": 34948
+    }
+  ]
+}

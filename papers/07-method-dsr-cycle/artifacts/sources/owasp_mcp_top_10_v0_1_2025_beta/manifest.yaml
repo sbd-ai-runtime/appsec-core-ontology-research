@@ -1,0 +1,17 @@
+pilot_id: owasp_mcp_top_10_v0_1_2025_beta
+status: source_captured
+source_family: owasp_mcp_top_10
+publisher: OWASP Foundation
+comparison_target: sbdtoe_manual_v2_via_appsec_core_v0
+documents:
+  - source_document_id: OWASP-MCP-TOP-10-V0_1-2025
+    title: OWASP MCP Top 10
+    version_label: v0.1
+    year_label: 2025
+    editorial_state: beta_release_and_pilot_testing
+    source_kind: html_project_page
+    local_source_path: sources/owasp_mcp_top_10_v0_1_2025_beta/project_page.html
+    source_url: https://owasp.org/www-project-mcp-top-10/
+notes:
+  - This source is intentionally treated as a stress-test and packaging source, not as a canonical stable framework.
+  - The MCP normative pilot should be read before this one.

@@ -1,0 +1,102 @@
+{
+  "informationReferenceName": "ENISA Multilayer Framework for Good Cybersecurity Practices for AI (2023 (June)) \u2014 Concept Crosswalk to AppSec Core V1",
+  "informationReferenceShortName": "enisa_multilayer_ai_cybersecurity_practices_2023 \u2192 AC V1",
+  "referenceVersion": "V1.next (substrate v7 baseline; cycle-a-frozen-20\u2026",
+  "webAddress": "https://osf.io/7t849/",
+  "focalDocumentVersion": "2023 (June)",
+  "targetAudience": "Application security engineers, security architects, and AppSec Core ontology users seeking concept-level alignment between this Focal Document and the AppSec Core V1 reference taxonomy. Mappings are derived computationally via claim-centric SBERT-based pipeline; SME refinement is future work.",
+  "comprehensive": "No",
+  "referenceDocumentAuthor": "SbD-ToE Programme \u2014 AppSec Core ontology project",
+  "referenceDocument": "AppSec Core V1",
+  "referenceDocumentURL": "https://osf.io/7t849/",
+  "referenceDeveloper": "Pedro Farinha",
+  "comments": "OLIR submission generated from substrate v7 (Cycle A frozen 2026-05-08; SUPPLIER SHA-256 596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04) via deterministic Python pipeline. Threshold-based continuous\u2192categorical translation: cosine similarity \u2265 0.6 \u2192 relationship 'equal to'; 0.4 \u2264 sim < 0.6 \u2192 'intersects with'. Multi-claim per source-item: one row per (focalElement, referenceElement) unique pair using highest-similarity claim. subset of / superset of / not related to NOT used in first cut (cosine similarity is undirected; SME refinement future work). Programme DOI: 10.17605/OSF.IO/7T849.",
+  "pointOfContact": "Pedro Farinha (programme lead) \u2014 SbD-ToE Programme; OSF 10.17605/OSF.IO/7T849",
+  "citations": "Programme DOI: 10.17605/OSF.IO/7T849. Cycle A frozen tag: cycle-a-frozen-2026-05-08. Source pilot: ENISA Multilayer Framework for Good Cybersecurity Practices for AI (2023 (June)); author European Union Agency for Cybersecurity (ENISA); URL https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai. Reference: AppSec Core V1 (V1.next (substrate v7 baseline; cycle-a-frozen-2026-05-08)).",
+  "relationships": [
+    {
+      "focalDocumentElement": "ENISA-AI-FAICP-LAYER-II",
+      "focalDocumentElementDescription": "Layer II - AI-specific cybersecurity practices and controls. A multilayer framework for good cybersecurity practices for AI June 2023 14 \u2022 AI assets and p rocedures \u2022 AI threat assessment \u2022 AI securi\u2026",
+      "rationale": "Semantic",
+      "relationship": "intersects with",
+      "referenceDocumentElement": "ACO-ATB-007",
+      "referenceDocumentElementDescription": "Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture s\u2026",
+      "fulfilledBy": "Y",
+      "strengthOfRelationship": "4",
+      "comments": "Cosine similarity 0.445; threshold mapping \u2192 intersects with. Claim level: ControlObjective. Primary anchor (item highest-similarity claim).",
+      "groupIdentifier": "primary"
+    },
+    {
+      "focalDocumentElement": "ENISA-AI-FAICP-LAYER-III",
+      "focalDocumentElementDescription": "Layer III - Sector-specific cybersecurity good practices for AI. A multilayer framework for good cybersecurity practices for AI June 2023 23 and trustworthy AI. \u2022 ALLAI73 is an independent Dutch orga\u2026",
+      "rationale": "Semantic",
+      "relationship": "intersects with",
+      "referenceDocumentElement": "ACO-TMR-005",
+      "referenceDocumentElementDescription": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+      "fulfilledBy": "Y",
+      "strengthOfRelationship": "4",
+      "comments": "Cosine similarity 0.440; threshold mapping \u2192 intersects with. Claim level: ControlObjective. Primary anchor (item highest-similarity claim).",
+      "groupIdentifier": "primary"
+    },
+    {
+      "focalDocumentElement": "ENISA-AI-FAICP-SURVEY",
+      "focalDocumentElementDescription": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+      "rationale": "Semantic",
+      "relationship": "intersects with",
+      "referenceDocumentElement": "ACO-TMR-005",
+      "referenceDocumentElementDescription": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable withou\u2026",
+      "fulfilledBy": "Y",
+      "strengthOfRelationship": "5",
+      "comments": "Cosine similarity 0.466; threshold mapping \u2192 intersects with. Claim level: ControlObjective. Primary anchor (item highest-similarity claim).",
+      "groupIdentifier": "primary"
+    },
+    {
+      "focalDocumentElement": "ENISA-AI-FAICP-SURVEY",
+      "focalDocumentElementDescription": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+      "rationale": "Semantic",
+      "relationship": "intersects with",
+      "referenceDocumentElement": "ACM-TSV-001",
+      "referenceDocumentElementDescription": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect\u2026",
+      "fulfilledBy": "Y",
+      "strengthOfRelationship": "4",
+      "comments": "Cosine similarity 0.446; threshold mapping \u2192 intersects with. Claim level: Mechanism. Secondary disclosure.",
+      "groupIdentifier": "secondary"
+    },
+    {
+      "focalDocumentElement": "ENISA-AI-FAICP-SURVEY",
+      "focalDocumentElementDescription": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+      "rationale": "Semantic",
+      "relationship": "intersects with",
+      "referenceDocumentElement": "ACP-RPR-009",
+      "referenceDocumentElementDescription": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+      "fulfilledBy": "Y",
+      "strengthOfRelationship": "4",
+      "comments": "Cosine similarity 0.437; threshold mapping \u2192 intersects with. Claim level: Practice. Secondary disclosure.",
+      "groupIdentifier": "secondary"
+    },
+    {
+      "focalDocumentElement": "ENISA-AI-FAICP-SURVEY",
+      "focalDocumentElementDescription": "Survey analysis of monitoring, enforcement and national preparedness. A multilayer framework for good cybersecurity practices for AI June 2023 27 3. SURVEY ANALYSIS The proposal for the A I Act95 reg\u2026",
+      "rationale": "Semantic",
+      "relationship": "intersects with",
+      "referenceDocumentElement": "ACO-SLG-001",
+      "referenceDocumentElementDescription": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical\u2026",
+      "fulfilledBy": "Y",
+      "strengthOfRelationship": "4",
+      "comments": "Cosine similarity 0.412; threshold mapping \u2192 intersects with. Claim level: ControlObjective. Secondary disclosure.",
+      "groupIdentifier": "secondary"
+    },
+    {
+      "focalDocumentElement": "ENISA-AI-FAICP-CONCLUSIONS",
+      "focalDocumentElementDescription": "Conclusions and way forward for AI cybersecurity practices. A multilayer framework for good cybersecurity practices for AI June 2023 36 4. CONCLUSIONS AND THE WAY FORWARD The report provide s a frame\u2026",
+      "rationale": "Semantic",
+      "relationship": "intersects with",
+      "referenceDocumentElement": "ACP-RPR-009",
+      "referenceDocumentElementDescription": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. \u2026",
+      "fulfilledBy": "Y",
+      "strengthOfRelationship": "4",
+      "comments": "Cosine similarity 0.415; threshold mapping \u2192 intersects with. Claim level: Practice. Primary anchor (item highest-similarity claim).",
+      "groupIdentifier": "primary"
+    }
+  ]
+}

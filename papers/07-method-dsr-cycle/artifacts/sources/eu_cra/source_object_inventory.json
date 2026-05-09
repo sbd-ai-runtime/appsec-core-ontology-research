@@ -1,0 +1,111 @@
+{
+  "schema_version": "0.2",
+  "pilot_id": "eu_cra",
+  "status": "source_objects_extracted_from_synthesis",
+  "source_document_id": "SRC-EU-CRA",
+  "extracted_at": "2026-04-12T23:42:44.690857Z",
+  "counts": {
+    "total": 9,
+    "articles": 9
+  },
+  "synthesis_conclusion": "## Conclusão principal",
+  "existing_validation": "Article-by-article validation already performed in knowledge-graph working notes. See 2026-04-05-cra-overlay-validation-synthesis.md",
+  "items": [
+    {
+      "source_object_id": "CRA-ART-13",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 13,
+      "title": "CRA Article 13",
+      "statement": "Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requirements set out in Annex I Part I. Manufacturers must perform a cybersecurity risk assessment, document it and update it where appropriate during the support period; exercise due diligence on third-party components; ensure that vulnerabilities are addressed effectively in line with Annex I Part II; determine and document the support period during which the product will receive security updates; provide a coordinated vulnerability disclosure policy with a single point of contact; deliver security updates separately from functionality updates where technically feasible; and provide users with the information and instructions specified in Annex II, including secure setup, secure use, support-period end-date, decommissioning guidance and manufacturer contact details. The support period shall be appropriate to the type of product and shall normally be at least five years.",
+      "statement_kind": "substantive",
+      "validation_source": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph/docs/project/working-notes/2026-04-05-cra-overlay-validation-synthesis.md"
+    },
+    {
+      "source_object_id": "CRA-ART-14",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 14,
+      "title": "CRA Article 14",
+      "statement": "Article 14 (Reporting obligations of manufacturers) requires manufacturers to notify ENISA of any actively exploited vulnerability contained in their product within 24 hours of becoming aware of it, and of any severe incident having impact on the security of the product within 24 hours of becoming aware of it. An intermediate report shall be submitted within 72 hours, and a final report within one month. The manufacturer must also inform users of the affected product without undue delay and, where relevant, of corrective measures the user can deploy. The reporting regime aligns with the NIS2 layered notification model (early warning, notification, intermediate, final).",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "CRA-ART-15",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 15,
+      "title": "CRA Article 15",
+      "statement": "Article 15 (Voluntary reporting) provides that manufacturers, importers and distributors may, on a voluntary basis, notify ENISA of any vulnerability contained in a product, any cyber threat that could affect the risk profile of the product, or any near-miss that could have led to an incident. Voluntary reports do not entail additional obligations on the reporting party beyond those that would have applied had the report not been made; ENISA shall facilitate such reporting and ensure confidentiality where appropriate.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "CRA-ART-16",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 16,
+      "title": "CRA Article 16",
+      "statement": "Article 16 (Other provisions related to reporting) sets out modalities and confidentiality safeguards for reporting under Articles 14 and 15. Information submitted to ENISA shall be exchanged with relevant CSIRTs and competent authorities under conditions ensuring confidentiality, in particular protecting trade secrets and personal data. ENISA shall coordinate with EU CyCLONe and the CSIRTs network for cross-border incidents. Manufacturers may rectify or supplement notifications submitted under Article 14 without prejudice to the duty to act in good faith and without undue delay.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "CRA-ART-18",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 18,
+      "title": "CRA Article 18",
+      "statement": "Article 18 (Obligations of importers) requires importers to place on the Union market only products with digital elements that comply with the essential cybersecurity requirements and the obligations of manufacturers. Before placing a product on the market, the importer shall verify that the manufacturer has carried out the conformity assessment procedure, that the product bears the CE marking, and that the technical documentation is available. Importers shall ensure that storage and transport conditions do not jeopardise compliance, indicate their name and contact address on the product or its packaging, keep a register of complaints and recalls, and inform the manufacturer of any vulnerabilities they become aware of.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "CRA-ART-19",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 19,
+      "title": "CRA Article 19",
+      "statement": "Article 19 (Obligations of distributors) requires distributors, when making a product with digital elements available on the market, to act with due care in relation to the requirements of the Regulation. Distributors must verify the CE marking and accompanying documents, and ensure that storage and transport conditions do not impair compliance. Distributors shall not make a product available where they have reason to believe that it is not in conformity with this Regulation; they shall inform the manufacturer and importer of any non-conformities and any vulnerabilities they become aware of.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "CRA-ART-20",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 20,
+      "title": "CRA Article 20",
+      "statement": "Article 20 (Cases in which obligations of manufacturers apply to importers and distributors) provides that an importer or distributor shall be considered a manufacturer for the purposes of this Regulation, and shall be subject to the obligations of the manufacturer under Articles 13 and 14, where they place a product with digital elements on the market under their name or trademark or carry out a substantial modification of a product already placed on the market that affects compliance with the essential requirements.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "CRA-ART-21",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 21,
+      "title": "CRA Article 21",
+      "statement": "Article 21 (Other cases in which obligations of manufacturers apply) extends the manufacturer obligations to natural or legal persons placing on the market a product with digital elements that has been substantially modified, even if not under their own name or trademark, in respect of the part of the product affected by that modification. Such person shall provide a new conformity assessment for the modified part, update technical documentation accordingly, and ensure CE marking is renewed where required.",
+      "statement_kind": "substantive"
+    },
+    {
+      "source_object_id": "CRA-ART-22",
+      "object_type": "regulatory_article",
+      "source_document_id": "SRC-EU-CRA",
+      "framework_family": "CRA",
+      "article_number": 22,
+      "title": "CRA Article 22",
+      "statement": "Article 22 (Identification of economic operators) requires economic operators to identify, on request and for ten years after the product was placed on the market, any economic operator who supplied them with a product with digital elements, and any economic operator to whom they supplied a product with digital elements. The traceability obligation supports market surveillance under the Regulation and post-incident investigations involving supply-chain components.",
+      "statement_kind": "substantive"
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-03T18:53:44.123680+00:00",
+    "revision_reason": "Replace placeholder bodies with curated obligation summaries grounded in primary source + KG working notes.",
+    "rule_version": "regulatory_curated_bodies/1.0"
+  }
+}

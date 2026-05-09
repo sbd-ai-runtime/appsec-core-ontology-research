@@ -1,0 +1,24 @@
+meta:
+  pilot_id: safecode_fpssd_2018
+  status: source_captured
+  intended_use: ssdf_cross_reference_validation
+source_document:
+  source_document_id: SRC-SAFECODE-FPSSD-3ED-2018
+  title: "Fundamental Practices for Secure Software Development: Essential Elements of a Secure Development Lifecycle Program, Third Edition"
+  publisher: SAFECode
+  source_kind: industry_guidance
+  framework_family: SAFECode
+  version: '3rd edition'
+  publication_date: '2018-03'
+  language: en
+  format_candidates:
+    - pdf
+  canonical_url: https://safecode.org/wp-content/uploads/2018/03/SAFECode_Fundamental_Practices_for_Secure_Software_Development_March_2018.pdf
+  stability_reason: official_safecode_publication
+retrieval_policy:
+  preferred_artifact: pdf
+  retrieval_mode: web_download
+  local_snapshot_path: sources/safecode_fpssd_2018/SAFECode_Fundamental_Practices_2018.pdf
+  local_snapshot_format: pdf
+  checksum_sha256: 9a9a07b5fab1727c5d2e96cec38747e2c1c8508fe1e84a3971618714ecd733ae
+  retrieved_at: '2026-04-14'

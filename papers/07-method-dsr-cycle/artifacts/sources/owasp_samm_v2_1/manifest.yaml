@@ -1,0 +1,69 @@
+meta:
+  pilot_id: owasp_samm_v2_1
+  status: source_captured
+  intended_use: maturity_heavy_external_source_for_appsec_core_and_chapter_maturity_evaluation
+source_document:
+  source_document_id: SRC-OWASP-SAMM-V2
+  title: OWASP Software Assurance Maturity Model
+  subtitle: Version 2 model line
+  publisher: OWASP Foundation / OWASP SAMM Project
+  source_kind: maturity_model
+  framework_family: OWASP SAMM
+  version: '2'
+  revision: website_model_with_frozen_core_commit
+  edition: current_version_2_line
+  publication_date: '2020-01-31'
+  language: en
+  format_candidates:
+    - html_model_pages
+    - github_core_snapshot_zip
+    - release_notes_html
+  canonical_url: https://owaspsamm.org/model/
+  origin_url: https://owasp.org/www-project-samm/
+  supporting_release_notes_url: https://owaspsamm.org/release-notes-v2/
+  supporting_repo_url: https://github.com/owaspsamm/core
+  stability_reason: official_project_site_plus_core_model_repository_with_freezable_version_2_line
+  capture_note: >
+    Current chapter authoring uses the label `OWASP SAMM v2.1`, but the
+    official public project pages still describe the live model primarily as
+    `version 2`. This pilot therefore freezes the website model pages together
+    with `owaspsamm/core` commit
+    `8afa059004fa4abc2b15c714a3a0113548e1881c`.
+retrieval_policy:
+  preferred_artifact: html_model_pages
+  alternate_artifacts:
+    - github_core_snapshot_zip
+    - release_notes_html
+  retrieval_mode: deterministic_capture_completed
+  local_snapshot_paths:
+    - sources/owasp_samm_v2_1/model.html
+    - sources/owasp_samm_v2_1/release_notes_v2.html
+    - sources/owasp_samm_v2_1/core_repo_HEAD.txt
+    - sources/owasp_samm_v2_1/core_8afa059004fa4abc2b15c714a3a0113548e1881c.zip
+  repo_head_commit: 8afa059004fa4abc2b15c714a3a0113548e1881c
+  retrieved_at: '2026-04-05T10:24:19Z'
+  signature_status: not_checked
+provenance_policy:
+  record_source_url: true
+  record_publication_date: true
+  record_retrieval_timestamp: true
+  record_checksum: true
+  keep_document_version_explicit: true
+normalization_targets:
+  primary:
+    - ControlObjective
+    - Practice
+    - Mechanism
+  secondary:
+    - Artifact
+    - EvidencePattern
+  evaluation_only:
+    - maturity_progression_signals
+    - capability_pressure
+manual_integration_targets:
+  outputs:
+    - manual_gap_analysis
+    - chapter_maturity_claim_review
+  note: >
+    The output of this pilot is comparison material only. It should not mutate
+    the current manual contract or the current AppSec Core surface directly.

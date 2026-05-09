@@ -1,0 +1,166 @@
+{
+  "schema_version": "0.1",
+  "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+  "status": "curated_third_party_source_objects_ready",
+  "source_model": "third_party_mcp_curated_surfaces",
+  "summary": {
+    "source_objects": 9,
+    "risk_surfaces": 4,
+    "control_surfaces": 2,
+    "governance_surfaces": 1,
+    "supporting_surfaces": 1,
+    "context_surfaces": 1
+  },
+  "items": [
+    {
+      "source_object_id": "OWASP-MCP-3P-CONTEXT-USE-CASES",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "context_surface",
+      "statement_kind": "contextual",
+      "source_title": "Third-party MCP context, roles and deployment use cases",
+      "source_page_numbers": [
+        4,
+        5
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P004",
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P005"
+      ],
+      "text_preview": "Content Monitoring/Moderation 11 Open Source Management 11 Sandboxed Execution 11 Governance 12 Governance Workflow 12 Recommended Roles & Responsibilities 12 Acknowledgements 13 OWASP GenAI Security Project Sponsors 14 Project Supporters 15 Introduction & Background This cheat sheet is intended for companies and"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-TOOL-POISONING",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Tool poisoning and rug pull attacks",
+      "source_page_numbers": [
+        6
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P006"
+      ],
+      "text_preview": "Use Cases A downloadable MCP server that runs locally, using native tools and system-level permissions to perform tasks independently of external infrastructure. These systems will often use STDIO for communication between the MCP client and server. While core operations are executed locally, some functionality, such as LLM execution o"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-PROMPT-INJECTION",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Prompt injection against third-party MCP usage",
+      "source_page_numbers": [
+        6,
+        7
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P006",
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P007"
+      ],
+      "text_preview": "Use Cases A downloadable MCP server that runs locally, using native tools and system-level permissions to perform tasks independently of external infrastructure. These systems will often use STDIO for communication between the MCP client and server. While core operations are executed locally, some functionality, such as LLM execution o"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-MEMORY-POISONING",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Memory poisoning in third-party MCP usage",
+      "source_page_numbers": [
+        7
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P007"
+      ],
+      "text_preview": "Current Vulnerability Landscape Common attack patterns have begun to emerge around MCP, many focused on malicious inputs designed to influence an LLM, or attacks that impact the tools an LLM calls. Tool Poisoning & Rug Pull Attacks Tool poisoning is a form of indirect prompt injection where adversaries embed malicious commands within a"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-TOOL-INTERFERENCE",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "risk_surface",
+      "statement_kind": "substantive",
+      "source_title": "Tool interference across multiple MCP servers",
+      "source_page_numbers": [
+        7
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P007"
+      ],
+      "text_preview": "Current Vulnerability Landscape Common attack patterns have begun to emerge around MCP, many focused on malicious inputs designed to influence an LLM, or attacks that impact the tools an LLM calls. Tool Poisoning & Rug Pull Attacks Tool poisoning is a form of indirect prompt injection where adversaries embed malicious commands within a"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "control_surface",
+      "statement_kind": "substantive",
+      "source_title": "Client security, server discovery and verification",
+      "source_page_numbers": [
+        8,
+        9
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P008",
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P009"
+      ],
+      "text_preview": "• Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing it to the model. Refer to the Input Validation and Sanitization section in the OWASP LLM Prompt Injection Prevention Cheat Sheet. • Use Strong Schemas: Define and enforce strict JSON/YAML sc"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "control_surface",
+      "statement_kind": "substantive",
+      "source_title": "Authentication, authorization and protected registration",
+      "source_page_numbers": [
+        9,
+        10
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P009",
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P010"
+      ],
+      "text_preview": "Client Security and Server Discovery Understanding the distinct security responsibilities and attack surfaces of MCP clients and servers is crucial for implementing comprehensive protection. Each side faces unique threats and requires tailored security measures. MCP Client Security Considerations Clients are often embedded in applicati"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-TOOLS-UTILITIES",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "supporting_surface",
+      "statement_kind": "supporting",
+      "source_title": "Tools, utilities and sandboxed execution references",
+      "source_page_numbers": [
+        11
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P011"
+      ],
+      "text_preview": "o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. • Protected Registration. Dynamic Client Registration is not advised for most use cases. However, if it is necessary, authorization servers that do not wish to provide unauthorized registration of clien"
+    },
+    {
+      "source_object_id": "OWASP-MCP-3P-GOVERNANCE-REGISTRY",
+      "pilot_id": "owasp_mcp_third_party_servers_v1_0",
+      "source_document_id": "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0",
+      "source_object_type": "governance_surface",
+      "statement_kind": "substantive",
+      "source_title": "Trusted registry and governance workflow for third-party MCP servers",
+      "source_page_numbers": [
+        12
+      ],
+      "source_unit_ids": [
+        "OWASP-MCP-THIRD-PARTY-GUIDE-V1_0:P012"
+      ],
+      "text_preview": "Tools & Utilities No tool will provide complete coverage, and the tools listed will vary in maturity and effectiveness. Use these lists as a jumping-off point to research and match tools for your use case and technical requirements. Automated Scanners • Invariant Labs MCP-Scan: Scans for malicious descriptions in MCP tools and monitor"
+    }
+  ],
+  "extraction_revision": {
+    "revised_at": "2026-05-04T11:39:22.833029+00:00",
+    "revision_reason": "Cleaning pass on MCP variant inventory: stripped \"Page N genai.owasp.org\" PDF-extraction artefacts; restored mid-word dashes; collapsed whitespace.",
+    "rule_version": "mcp_clean/1.0",
+    "n_fields_cleaned": 9,
+    "n_items_total": 9
+  }
+}

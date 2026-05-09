@@ -1,0 +1,54 @@
+meta:
+  pilot_id: enisa_multilayer_ai_cybersecurity_practices_2023
+  status: source_captured
+  intended_use: eu_ai_cybersecurity_practices_reference_for_appsec_core_normalization
+source_document:
+  source_document_id: SRC-ENISA-FAICP-2023
+  title: Multilayer Framework for Good Cybersecurity Practices for AI
+  subtitle: ENISA report
+  publisher: ENISA
+  source_kind: cybersecurity_practices_framework
+  framework_family: ENISA_AI
+  version: '2023-06-07'
+  revision: publication_release
+  edition: published_report
+  publication_date: '2023-06-07'
+  language: en
+  format_candidates:
+    - html
+    - pdf
+  canonical_url: https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai
+  origin_url: https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai
+  pdf_url: https://www.enisa.europa.eu/sites/default/files/publications/Multilayer%20Framework%20for%20Good%20Cybersecurity%20Practices%20for%20AI.pdf
+  stability_reason: official_enisa_publication_with_stable_pdf_and_publication_page
+retrieval_policy:
+  preferred_artifact: pdf
+  alternate_artifacts:
+    - html
+  retrieval_mode: deterministic_capture_completed
+  local_snapshot_paths:
+    - sources/enisa_multilayer_ai_cybersecurity_practices_2023/landing_page.html
+    - sources/enisa_multilayer_ai_cybersecurity_practices_2023/Multilayer_Framework_for_Good_Cybersecurity_Practices_for_AI.pdf
+  signature_status: not_checked
+  captured_release_timestamp: '2026-04-04T15:36:51Z'
+provenance_policy:
+  record_source_url: true
+  record_publication_date: true
+  record_retrieval_timestamp: true
+  record_checksum: true
+  keep_document_version_explicit: true
+normalization_targets:
+  primary:
+    - ControlObjective
+    - Practice
+    - Mechanism
+  secondary:
+    - Artifact
+    - EvidencePattern
+manual_integration_targets:
+  outputs:
+    - manual_gap_analysis
+    - traceability_publication_candidates
+  note: >
+    The output of this pilot is comparison material, not direct mutation of the
+    current manual contract.

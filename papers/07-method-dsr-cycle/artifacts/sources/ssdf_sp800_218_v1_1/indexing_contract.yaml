@@ -1,0 +1,53 @@
+meta:
+  pilot_id: ssdf_sp800_218_v1_1
+  status: editorial_candidates_ready
+input_contract:
+  source_manifest: pilots/ssdf_sp800_218_v1_1/source_manifest.yaml
+  accepted_source_artifacts:
+    - html_snapshot
+    - pdf_snapshot
+  required_provenance_fields:
+    - source_document_id
+    - canonical_url
+    - publication_date
+    - retrieved_at
+    - checksum_sha256
+stage_outputs:
+  source_inventory:
+    path: data/ssdf_sp800_218_v1_1/stubs/external_source_inventory.json
+  source_unit_inventory:
+    path: data/ssdf_sp800_218_v1_1/stubs/source_unit_inventory.json
+  source_object_inventory:
+    path: data/ssdf_sp800_218_v1_1/stubs/source_object_inventory.json
+  normalized_core_objects:
+    path: data/ssdf_sp800_218_v1_1/stubs/appsec_core_normalization.json
+  manual_gap_analysis:
+    path: data/ssdf_sp800_218_v1_1/stubs/manual_gap_analysis.json
+  traceability_candidates:
+    path: data/ssdf_sp800_218_v1_1/stubs/traceability_publication_candidates.json
+pipeline_scripts:
+  source_object_extraction:
+    path: scripts/extract_ssdf_source_objects.py
+  appsec_core_normalization:
+    path: scripts/normalize_ssdf_to_appsec_core.py
+  manual_gap_analysis:
+    path: scripts/derive_ssdf_manual_gap_analysis.py
+  traceability_candidate_derivation:
+    path: scripts/derive_traceability_publication_candidates.py
+normalization_rules:
+  - external_objects_land_in_appsec_core_before_any_manual_comparison
+  - external_objects_do_not_map_directly_to_canon
+  - rationale_for_core_mapping_must_be_preserved
+  - source_object_inventory_is_ssdf_specific_in_this_pilot
+  - objective_level_controlobjective_mapping_is_the_first_stable_normalization_surface
+comparison_rules:
+  coverage_status:
+    - covered
+    - partial
+    - bridge_only
+    - uncovered
+    - ambiguous
+  candidate_outputs:
+    - manual_addition
+    - traceability_repair
+    - canon_reconciliation

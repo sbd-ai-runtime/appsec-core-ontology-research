@@ -1,0 +1,18 @@
+meta:
+  pilot_id: owasp_top_10_2021
+  status: source_captured
+retrieval_policy:
+  checksum_sha256: 1dd91b2e1bfde93aa8729f862b9a14b6025282250293441b7741d4e7316f20ba
+  local_snapshot_path: sources/owasp_top_10_2021/owasp_top_10_2021.json
+  note: Curated from OWASP Top 10 2021 public page. 10 risk categories with descriptions.
+  retrieved_at: '2026-04-12T23:17:16.368023Z'
+source_document:
+  canonical_url: https://owasp.org/Top10/
+  framework_family: OWASP-TOP10
+  publication_date: '2021-09-24'
+  publisher: OWASP
+  source_document_id: SRC-OWASP-TOP10-2021
+  source_kind: risk_ranking
+  stability_reason: official_owasp_release
+  title: OWASP Top 10:2021
+  version: '2021'
