@@ -2116,6 +2116,31 @@
           "source_repo": "external_sources_inventory",
           "source": "scripts/build_paper7_bundle.py",
           "dest": "papers/07-method-dsr-cycle/artifacts/scripts/build_paper7_bundle.py"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/k_way_analysis/k_way_brief.md",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/k_way_analysis/k_way_brief.md"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/k_way_analysis/k_way_summary.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/k_way_analysis/k_way_summary.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/k_way_analysis/null_model_baseline.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/k_way_analysis/null_model_baseline.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "data/p7_olir_audit/p7_v2_corrected/v7/k_way_analysis/per_entity_k_way.json",
+          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/k_way_analysis/per_entity_k_way.json"
+        },
+        {
+          "source_repo": "external_sources_inventory",
+          "source": "scripts/k_way_null_model.py",
+          "dest": "papers/07-method-dsr-cycle/artifacts/scripts/cross_validation/k_way_null_model.py"
         }
       ]
     }

@@ -1,0 +1,3596 @@
+{
+  "schema_version": "1.0",
+  "substrate": "v7",
+  "n_entities": 202,
+  "entries": [
+    {
+      "entity_id": "ACO-SCBI-001",
+      "entity_type": "CO",
+      "k": 12,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SCBI-002",
+      "entity_type": "CO",
+      "k": 6,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "eu_nis2",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SCBI-003",
+      "entity_type": "CO",
+      "k": 6,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-SCBI-004",
+      "entity_type": "CO",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SCBI-005",
+      "entity_type": "CO",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SCBI-006",
+      "entity_type": "CO",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SCBI-007",
+      "entity_type": "CO",
+      "k": 5,
+      "sources": [
+        "eu_cra",
+        "eu_nis2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm"
+      ]
+    },
+    {
+      "entity_id": "ACO-IAT-001",
+      "entity_type": "CO",
+      "k": 15,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IAT-002",
+      "entity_type": "CO",
+      "k": 19,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IAT-003",
+      "entity_type": "CO",
+      "k": 7,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IAT-004",
+      "entity_type": "CO",
+      "k": 8,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_mcp_top_10_v0_1_2025_beta"
+      ]
+    },
+    {
+      "entity_id": "ACO-IAT-005",
+      "entity_type": "CO",
+      "k": 4,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm"
+      ]
+    },
+    {
+      "entity_id": "ACO-IAT-006",
+      "entity_type": "CO",
+      "k": 20,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_dora",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-IAT-007",
+      "entity_type": "CO",
+      "k": 9,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_proactive_controls_2018",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010"
+      ]
+    },
+    {
+      "entity_id": "ACO-ATB-001",
+      "entity_type": "CO",
+      "k": 2,
+      "sources": [
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-ATB-002",
+      "entity_type": "CO",
+      "k": 22,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-ATB-003",
+      "entity_type": "CO",
+      "k": 2,
+      "sources": [
+        "mitre_atlas",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACO-ATB-004",
+      "entity_type": "CO",
+      "k": 8,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-ATB-005",
+      "entity_type": "CO",
+      "k": 5,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-ATB-006",
+      "entity_type": "CO",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-ATB-007",
+      "entity_type": "CO",
+      "k": 20,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "enisa_multilayer_ai_cybersecurity_practices_2023",
+        "eu_cra",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TSV-001",
+      "entity_type": "CO",
+      "k": 9,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "eu_nis2",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TSV-002",
+      "entity_type": "CO",
+      "k": 4,
+      "sources": [
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012"
+      ]
+    },
+    {
+      "entity_id": "ACO-TSV-003",
+      "entity_type": "CO",
+      "k": 13,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-TSV-004",
+      "entity_type": "CO",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TSV-005",
+      "entity_type": "CO",
+      "k": 7,
+      "sources": [
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TSV-006",
+      "entity_type": "CO",
+      "k": 13,
+      "sources": [
+        "capec_v3_9",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TSV-007",
+      "entity_type": "CO",
+      "k": 17,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-001",
+      "entity_type": "CO",
+      "k": 4,
+      "sources": [
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-002",
+      "entity_type": "CO",
+      "k": 3,
+      "sources": [
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-003",
+      "entity_type": "CO",
+      "k": 9,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-004",
+      "entity_type": "CO",
+      "k": 5,
+      "sources": [
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-005",
+      "entity_type": "CO",
+      "k": 26,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "enisa_multilayer_ai_cybersecurity_practices_2023",
+        "eu_dora",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-006",
+      "entity_type": "CO",
+      "k": 3,
+      "sources": [
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-007",
+      "entity_type": "CO",
+      "k": 2,
+      "sources": [
+        "eu_nis2",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-TMR-008",
+      "entity_type": "CO",
+      "k": 17,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_dora",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SPC-001",
+      "entity_type": "CO",
+      "k": 10,
+      "sources": [
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SPC-002",
+      "entity_type": "CO",
+      "k": 11,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SPC-003",
+      "entity_type": "CO",
+      "k": 2,
+      "sources": [
+        "asvs_v5_0_0",
+        "cwe_software_development_view_v4_19_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SPC-004",
+      "entity_type": "CO",
+      "k": 13,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-SPC-005",
+      "entity_type": "CO",
+      "k": 8,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "slsa_spec_v1_0_build_track"
+      ]
+    },
+    {
+      "entity_id": "ACO-SPC-006",
+      "entity_type": "CO",
+      "k": 9,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-SPC-007",
+      "entity_type": "CO",
+      "k": 20,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-001",
+      "entity_type": "CO",
+      "k": 8,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018",
+        "pci_dss_v4_0_1",
+        "safecode_sic_2010"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-002",
+      "entity_type": "CO",
+      "k": 9,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-003",
+      "entity_type": "CO",
+      "k": 10,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_top_10_2021"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-004",
+      "entity_type": "CO",
+      "k": 5,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-005",
+      "entity_type": "CO",
+      "k": 21,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-006",
+      "entity_type": "CO",
+      "k": 16,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-007",
+      "entity_type": "CO",
+      "k": 10,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10"
+      ]
+    },
+    {
+      "entity_id": "ACO-IVF-008",
+      "entity_type": "CO",
+      "k": 7,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-ITS-001",
+      "entity_type": "CO",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-ITS-002",
+      "entity_type": "CO",
+      "k": 12,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_proactive_controls_2018",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-ITS-003",
+      "entity_type": "CO",
+      "k": 20,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-ITS-004",
+      "entity_type": "CO",
+      "k": 3,
+      "sources": [
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACO-ITS-005",
+      "entity_type": "CO",
+      "k": 13,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010"
+      ]
+    },
+    {
+      "entity_id": "ACO-ITS-006",
+      "entity_type": "CO",
+      "k": 8,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACO-ITS-007",
+      "entity_type": "CO",
+      "k": 6,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-001",
+      "entity_type": "CO",
+      "k": 8,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-002",
+      "entity_type": "CO",
+      "k": 13,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-003",
+      "entity_type": "CO",
+      "k": 1,
+      "sources": [
+        "mitre_atlas"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-004",
+      "entity_type": "CO",
+      "k": 12,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-005",
+      "entity_type": "CO",
+      "k": 3,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "eu_dora",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-006",
+      "entity_type": "CO",
+      "k": 1,
+      "sources": [
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-007",
+      "entity_type": "CO",
+      "k": 7,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-008",
+      "entity_type": "CO",
+      "k": 5,
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-009",
+      "entity_type": "CO",
+      "k": 25,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-RPR-010",
+      "entity_type": "CO",
+      "k": 15,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SLG-001",
+      "entity_type": "CO",
+      "k": 16,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "enisa_multilayer_ai_cybersecurity_practices_2023",
+        "eu_cra",
+        "eu_dora",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SLG-002",
+      "entity_type": "CO",
+      "k": 3,
+      "sources": [
+        "asvs_v5_0_0",
+        "nist_sp800_53_rev5",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SLG-003",
+      "entity_type": "CO",
+      "k": 13,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SLG-004",
+      "entity_type": "CO",
+      "k": 7,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SLG-005",
+      "entity_type": "CO",
+      "k": 7,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SLG-006",
+      "entity_type": "CO",
+      "k": 1,
+      "sources": [
+        "cwe_software_development_view_v4_19_1"
+      ]
+    },
+    {
+      "entity_id": "ACO-SLG-007",
+      "entity_type": "CO",
+      "k": 16,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "eu_rgpd",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SCBI-001",
+      "entity_type": "P",
+      "k": 6,
+      "sources": [
+        "asvs_v5_0_0",
+        "mitre_atlas",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "slsa_spec_v1_0_build_track"
+      ]
+    },
+    {
+      "entity_id": "ACP-SCBI-002",
+      "entity_type": "P",
+      "k": 20,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_dora",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SCBI-003",
+      "entity_type": "P",
+      "k": 11,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SCBI-004",
+      "entity_type": "P",
+      "k": 1,
+      "sources": [
+        "owasp_llm_top_10"
+      ]
+    },
+    {
+      "entity_id": "ACP-SCBI-005",
+      "entity_type": "P",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-SCBI-006",
+      "entity_type": "P",
+      "k": 17,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SCBI-007",
+      "entity_type": "P",
+      "k": 6,
+      "sources": [
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-IAT-001",
+      "entity_type": "P",
+      "k": 17,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-IAT-002",
+      "entity_type": "P",
+      "k": 20,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-IAT-003",
+      "entity_type": "P",
+      "k": 5,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACP-IAT-004",
+      "entity_type": "P",
+      "k": 9,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta"
+      ]
+    },
+    {
+      "entity_id": "ACP-IAT-005",
+      "entity_type": "P",
+      "k": 10,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-IAT-006",
+      "entity_type": "P",
+      "k": 24,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_dora",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ATB-001",
+      "entity_type": "P",
+      "k": 6,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ATB-002",
+      "entity_type": "P",
+      "k": 9,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ATB-003",
+      "entity_type": "P",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ATB-004",
+      "entity_type": "P",
+      "k": 4,
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACP-ATB-005",
+      "entity_type": "P",
+      "k": 2,
+      "sources": [
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ATB-006",
+      "entity_type": "P",
+      "k": 2,
+      "sources": [
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ATB-007",
+      "entity_type": "P",
+      "k": 7,
+      "sources": [
+        "capec_v3_9",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012"
+      ]
+    },
+    {
+      "entity_id": "ACP-TSV-001",
+      "entity_type": "P",
+      "k": 11,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "eu_nis2",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TSV-002",
+      "entity_type": "P",
+      "k": 6,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012"
+      ]
+    },
+    {
+      "entity_id": "ACP-TSV-003",
+      "entity_type": "P",
+      "k": 6,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TSV-004",
+      "entity_type": "P",
+      "k": 10,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TSV-005",
+      "entity_type": "P",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-TSV-006",
+      "entity_type": "P",
+      "k": 9,
+      "sources": [
+        "capec_v3_9",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TSV-007",
+      "entity_type": "P",
+      "k": 15,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-001",
+      "entity_type": "P",
+      "k": 9,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-002",
+      "entity_type": "P",
+      "k": 4,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-003",
+      "entity_type": "P",
+      "k": 11,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_dora",
+        "eu_nis2",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-004",
+      "entity_type": "P",
+      "k": 1,
+      "sources": [
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-005",
+      "entity_type": "P",
+      "k": 26,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-006",
+      "entity_type": "P",
+      "k": 3,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-007",
+      "entity_type": "P",
+      "k": 2,
+      "sources": [
+        "nist_ai_rmf_1_0",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-008",
+      "entity_type": "P",
+      "k": 15,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_dora",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-TMR-009",
+      "entity_type": "P",
+      "k": 7,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SPC-001",
+      "entity_type": "P",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SPC-002",
+      "entity_type": "P",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SPC-003",
+      "entity_type": "P",
+      "k": 7,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SPC-004",
+      "entity_type": "P",
+      "k": 12,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_proactive_controls_2018",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-SPC-005",
+      "entity_type": "P",
+      "k": 14,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track"
+      ]
+    },
+    {
+      "entity_id": "ACP-SPC-006",
+      "entity_type": "P",
+      "k": 13,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "eu_cra",
+        "eu_nis2",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010"
+      ]
+    },
+    {
+      "entity_id": "ACP-IVF-001",
+      "entity_type": "P",
+      "k": 6,
+      "sources": [
+        "asvs_v5_0_0",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-IVF-002",
+      "entity_type": "P",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-IVF-003",
+      "entity_type": "P",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-IVF-004",
+      "entity_type": "P",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-IVF-005",
+      "entity_type": "P",
+      "k": 22,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-IVF-006",
+      "entity_type": "P",
+      "k": 9,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-IVF-007",
+      "entity_type": "P",
+      "k": 7,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-ITS-001",
+      "entity_type": "P",
+      "k": 5,
+      "sources": [
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ITS-002",
+      "entity_type": "P",
+      "k": 10,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018",
+        "owasp_top_10_2021"
+      ]
+    },
+    {
+      "entity_id": "ACP-ITS-003",
+      "entity_type": "P",
+      "k": 19,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "eu_dora",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ITS-004",
+      "entity_type": "P",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ITS-005",
+      "entity_type": "P",
+      "k": 3,
+      "sources": [
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-ITS-006",
+      "entity_type": "P",
+      "k": 20,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_dora",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-001",
+      "entity_type": "P",
+      "k": 6,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-002",
+      "entity_type": "P",
+      "k": 13,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-003",
+      "entity_type": "P",
+      "k": 3,
+      "sources": [
+        "asvs_v5_0_0",
+        "mitre_atlas",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-004",
+      "entity_type": "P",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-005",
+      "entity_type": "P",
+      "k": 4,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-006",
+      "entity_type": "P",
+      "k": 1,
+      "sources": [
+        "eu_dora"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-008",
+      "entity_type": "P",
+      "k": 13,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-009",
+      "entity_type": "P",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "enisa_multilayer_ai_cybersecurity_practices_2023",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-RPR-010",
+      "entity_type": "P",
+      "k": 15,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SLG-001",
+      "entity_type": "P",
+      "k": 3,
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SLG-002",
+      "entity_type": "P",
+      "k": 8,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SLG-003",
+      "entity_type": "P",
+      "k": 26,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SLG-004",
+      "entity_type": "P",
+      "k": 5,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACP-SLG-005",
+      "entity_type": "P",
+      "k": 4,
+      "sources": [
+        "asvs_v5_0_0",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SCBI-001",
+      "entity_type": "M",
+      "k": 8,
+      "sources": [
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-SCBI-002",
+      "entity_type": "M",
+      "k": 19,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SCBI-003",
+      "entity_type": "M",
+      "k": 12,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SCBI-004",
+      "entity_type": "M",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SCBI-005",
+      "entity_type": "M",
+      "k": 7,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "pci_dss_v4_0_1",
+        "slsa_spec_v1_0_build_track"
+      ]
+    },
+    {
+      "entity_id": "ACM-SCBI-006",
+      "entity_type": "M",
+      "k": 14,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track"
+      ]
+    },
+    {
+      "entity_id": "ACM-IAT-001",
+      "entity_type": "M",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IAT-002",
+      "entity_type": "M",
+      "k": 24,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_dora",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IAT-003",
+      "entity_type": "M",
+      "k": 9,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "hipaa_security_rule",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IAT-004",
+      "entity_type": "M",
+      "k": 7,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mcp_official_security_foundations_2025",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta"
+      ]
+    },
+    {
+      "entity_id": "ACM-IAT-005",
+      "entity_type": "M",
+      "k": 6,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "mcp_official_security_foundations_2025",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IAT-006",
+      "entity_type": "M",
+      "k": 22,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_dora",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-ATB-001",
+      "entity_type": "M",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-ATB-002",
+      "entity_type": "M",
+      "k": 10,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-ATB-003",
+      "entity_type": "M",
+      "k": 2,
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACM-ATB-004",
+      "entity_type": "M",
+      "k": 4,
+      "sources": [
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-ATB-005",
+      "entity_type": "M",
+      "k": 9,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-TSV-001",
+      "entity_type": "M",
+      "k": 21,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "enisa_multilayer_ai_cybersecurity_practices_2023",
+        "eu_nis2",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TSV-002",
+      "entity_type": "M",
+      "k": 8,
+      "sources": [
+        "capec_v3_9",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "slsa_spec_v1_0_build_track"
+      ]
+    },
+    {
+      "entity_id": "ACM-TSV-003",
+      "entity_type": "M",
+      "k": 11,
+      "sources": [
+        "eu_dora",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TSV-004",
+      "entity_type": "M",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TSV-005",
+      "entity_type": "M",
+      "k": 5,
+      "sources": [
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-001",
+      "entity_type": "M",
+      "k": 3,
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-002",
+      "entity_type": "M",
+      "k": 13,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_dora",
+        "eu_nis2",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-003",
+      "entity_type": "M",
+      "k": 14,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-004",
+      "entity_type": "M",
+      "k": 3,
+      "sources": [
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-005",
+      "entity_type": "M",
+      "k": 21,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-006",
+      "entity_type": "M",
+      "k": 5,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-007",
+      "entity_type": "M",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "eu_cra",
+        "eu_dora",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-TMR-008",
+      "entity_type": "M",
+      "k": 13,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-SPC-001",
+      "entity_type": "M",
+      "k": 23,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SPC-002",
+      "entity_type": "M",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_proactive_controls_2018",
+        "pci_dss_v4_0_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-SPC-003",
+      "entity_type": "M",
+      "k": 5,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5"
+      ]
+    },
+    {
+      "entity_id": "ACM-SPC-004",
+      "entity_type": "M",
+      "k": 17,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_cra",
+        "eu_rgpd",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IVF-001",
+      "entity_type": "M",
+      "k": 19,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IVF-002",
+      "entity_type": "M",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IVF-003",
+      "entity_type": "M",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IVF-004",
+      "entity_type": "M",
+      "k": 15,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "eu_cra",
+        "eu_dora",
+        "eu_rgpd",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-IVF-005",
+      "entity_type": "M",
+      "k": 7,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_proactive_controls_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-ITS-001",
+      "entity_type": "M",
+      "k": 16,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-ITS-002",
+      "entity_type": "M",
+      "k": 7,
+      "sources": [
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-ITS-003",
+      "entity_type": "M",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-ITS-004",
+      "entity_type": "M",
+      "k": 18,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-ITS-005",
+      "entity_type": "M",
+      "k": 16,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-001",
+      "entity_type": "M",
+      "k": 3,
+      "sources": [
+        "capec_v3_9",
+        "nist_sp800_53_rev5",
+        "safecode_sic_2010"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-002",
+      "entity_type": "M",
+      "k": 5,
+      "sources": [
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-003",
+      "entity_type": "M",
+      "k": 14,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_sslc_v1_1",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-004",
+      "entity_type": "M",
+      "k": 11,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "eu_dora",
+        "eu_nis2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-005",
+      "entity_type": "M",
+      "k": 16,
+      "sources": [
+        "asvs_v5_0_0",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-008",
+      "entity_type": "M",
+      "k": 6,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-009",
+      "entity_type": "M",
+      "k": 19,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "hipaa_security_rule",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-RPR-010",
+      "entity_type": "M",
+      "k": 11,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "eu_rgpd",
+        "nist_ai_rmf_1_0",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SLG-001",
+      "entity_type": "M",
+      "k": 4,
+      "sources": [
+        "capec_v3_9",
+        "owasp_dsomm",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SLG-002",
+      "entity_type": "M",
+      "k": 5,
+      "sources": [
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_samm_v2_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SLG-003",
+      "entity_type": "M",
+      "k": 25,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "cwe_software_development_view_v4_19_1",
+        "eu_nis2",
+        "eu_rgpd",
+        "hipaa_security_rule",
+        "mcp_official_security_foundations_2025",
+        "mitre_atlas",
+        "nist_ai_100_2_e2025",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_ml_top_10",
+        "owasp_proactive_controls_2018",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "slsa_spec_v1_0_build_track",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SLG-004",
+      "entity_type": "M",
+      "k": 8,
+      "sources": [
+        "asvs_v5_0_0",
+        "cwe_software_development_view_v4_19_1",
+        "nist_sp800_53_rev5",
+        "owasp_mcp_top_10_v0_1_2025_beta",
+        "owasp_samm_v2_1",
+        "owasp_top_10_2021",
+        "pci_sslc_v1_1",
+        "safecode_fpssd_2018"
+      ]
+    },
+    {
+      "entity_id": "ACM-SLG-005",
+      "entity_type": "M",
+      "k": 16,
+      "sources": [
+        "asvs_v5_0_0",
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "mitre_atlas",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_mcp_third_party_servers_v1_0",
+        "owasp_ml_top_10",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "pci_sslc_v1_1",
+        "safecode_agile_2012",
+        "safecode_fpssd_2018",
+        "safecode_sic_2010",
+        "ssdf_sp800_218_v1_1"
+      ]
+    },
+    {
+      "entity_id": "ACM-SLG-006",
+      "entity_type": "M",
+      "k": 9,
+      "sources": [
+        "capec_v3_9",
+        "cis_controls_v8_1_2",
+        "nist_sp800_53_rev5",
+        "owasp_dsomm",
+        "owasp_llm_top_10",
+        "owasp_mcp_secure_server_development_v1_0",
+        "owasp_samm_v2_1",
+        "pci_dss_v4_0_1",
+        "ssdf_sp800_218_v1_1"
+      ]
+    }
+  ]
+}

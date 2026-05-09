@@ -38,10 +38,16 @@ CLEAN PARALLEL STRUCTURE (ratified 2026-05-09):
   │   ├── ldp_cluster_analysis.json
   │   ├── calibration_distribution.json
   │   ├── per_source_metadata_table.json
-  │   └── reports/
-  │       ├── LABDEPTHPENDING_ACR_ANALYSIS.md
-  │       ├── H2_INVERTED_MAPPING_DECISION.md
-  │       └── PROCESS_INTEGRITY_REPORT.md
+  │   ├── reports/
+  │   │   ├── LABDEPTHPENDING_ACR_ANALYSIS.md
+  │   │   ├── H2_INVERTED_MAPPING_DECISION.md
+  │   │   └── PROCESS_INTEGRITY_REPORT.md
+  │   └── k_way_analysis/               # Phase A.5 dispatcher (k-way + null-model)
+  │       ├── per_entity_k_way.json
+  │       ├── k_way_summary.json
+  │       ├── null_model_baseline.json
+  │       ├── k_way_brief.md
+  │       └── v5_baseline_recall.json
   ├── method/                           # methodology + decisions
   │   ├── decision_0003_main.md + decision_0003_amendment_1.md + appendix
   │   ├── dsr_history/{iter_2.md, iter_3.md, README.md}
@@ -101,6 +107,7 @@ REPORTS = V7_ROOT / "reports"
 FIGURES = REPORTS / "figures"
 OLIR_EXPORTS = V7_ROOT / "olir_exports"
 OLIR_SCHEMA_V1_1 = OLIR_EXPORTS / "olir_schema_v1_1"
+K_WAY_ANALYSIS = V7_ROOT / "k_way_analysis"
 SOURCES_ARCHIVE_DIR = REPO_ROOT / "data" / "p7_publish_bundle"
 
 OUTPUT_PATH = REPO_ROOT / "data" / "p7_publish_bundle" / "paper7_bundle.json"
@@ -226,7 +233,7 @@ def add_substrate(entries: list[Entry], absences: dict) -> None:
 
 
 def add_cross_validation(entries: list[Entry], absences: dict) -> None:
-    """cross_validation/ — validation evidence + reports/."""
+    """cross_validation/ — validation evidence + reports/ + k_way_analysis/."""
     items = [
         (REPORTS / "ssdf_crossval_v7.json", "cross_validation/ssdf_crossval.json"),
         (REPORTS / "ssdf_crossval_v7_filtered.json", "cross_validation/ssdf_crossval_filtered.json"),
@@ -247,6 +254,14 @@ def add_cross_validation(entries: list[Entry], absences: dict) -> None:
     for source_path, dest in items:
         if not add_entry(entries, source_path, dest):
             absences.setdefault("cross_validation_missing", []).append(dest)
+
+    # k_way_analysis/ subdir (Phase A.5 dispatcher 2026-05-09 deliverables)
+    if K_WAY_ANALYSIS.exists():
+        for path in sorted(K_WAY_ANALYSIS.iterdir()):
+            if path.is_file():
+                add_entry(entries, path, f"cross_validation/k_way_analysis/{path.name}")
+    else:
+        absences.setdefault("k_way_analysis_missing_dir", []).append(repo_relative(K_WAY_ANALYSIS))
 
 
 def add_method(entries: list[Entry], absences: dict) -> None:
@@ -332,6 +347,8 @@ def add_scripts(entries: list[Entry], absences: dict) -> None:
          "scripts/cross_validation/cross_validate_scf_strm_v7.py"),
         (REPO_ROOT / "scripts" / "frontier_match_and_audit_v7.py",
          "scripts/cross_validation/frontier_match_and_audit_v7.py"),
+        (REPO_ROOT / "scripts" / "k_way_null_model.py",
+         "scripts/cross_validation/k_way_null_model.py"),
         # figures/ — figure emitter
         (REPO_ROOT / "scripts" / "figures" / "generate_p7_section_8_2_figures.py",
          "scripts/figures/generate_p7_section_8_2_figures.py"),

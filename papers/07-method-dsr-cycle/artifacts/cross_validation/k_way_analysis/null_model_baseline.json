@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "n_trials": 1000,
+  "random_seed": 42,
+  "null_distribution": {
+    "mean_k_p5": 13.118811881188119,
+    "mean_k_p50": 13.257425742574258,
+    "mean_k_p95": 13.391089108910892,
+    "k_ge_3_fraction_p5": 0.9405940594059405,
+    "k_ge_3_fraction_p50": 0.9554455445544554,
+    "k_ge_3_fraction_p95": 0.9653465346534653,
+    "k_ge_5_fraction_p5": 0.8712871287128713,
+    "k_ge_5_fraction_p50": 0.8910891089108911,
+    "k_ge_5_fraction_p95": 0.905940594059406,
+    "k_ge_10_fraction_p5": 0.6485148514851485,
+    "k_ge_10_fraction_p50": 0.6732673267326733,
+    "k_ge_10_fraction_p95": 0.7029702970297029
+  },
+  "observed": {
+    "mean_k": 10.767326732673267,
+    "k_ge_3_fraction": 0.9306930693069307,
+    "k_ge_5_fraction": 0.8267326732673267,
+    "k_ge_10_fraction": 0.5198019801980198
+  },
+  "empirical_p_value": {
+    "mean_k": {
+      "one_sided_greater": 1.0,
+      "one_sided_less": 0.0,
+      "two_sided": 0.0
+    },
+    "k_ge_3_fraction": {
+      "one_sided_greater": 1.0,
+      "one_sided_less": 0.002,
+      "two_sided": 0.004
+    },
+    "k_ge_5_fraction": {
+      "one_sided_greater": 1.0,
+      "one_sided_less": 0.0,
+      "two_sided": 0.0
+    },
+    "k_ge_10_fraction": {
+      "one_sided_greater": 1.0,
+      "one_sided_less": 0.0,
+      "two_sided": 0.0
+    }
+  },
+  "interpretation": "Observed mean_k=10.7673 vs null median=13.2574 (95% CI [13.0941, 13.4208]). Observed is LOWER than null distribution; two-sided empirical p < 0.001 (extreme). One-sided P(null \u2265 observed) = 1.0000; P(null \u2264 observed) = 0.0000 (across 1000 trials, seed=42). Domain reading: observed mean_k LOWER than random shuffle baseline \u2192 sources cluster their GROUNDED claims onto FEWER distinct entities than uniform random assignment would predict. This is consistent with semantic specificity: methodology produces source-entity assignments with concentration structure beyond what claim-count marginals alone would generate."
+}
