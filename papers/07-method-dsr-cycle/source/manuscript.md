@@ -1,4 +1,4 @@
-# From a Five-Source Bounding Test to a Thirty-One-Source Pressure-Tested Ontology: A Three-Iteration Design Science Cycle for Normalizing Heterogeneous Application-Security Sources
+# Pressure-Testing AppSec Core: A Design Science Cycle for Bounded-Ontology Evolution Under Heterogeneous Application-Security Sources
 
 **Pedro Farinha**
 Independent Researcher
