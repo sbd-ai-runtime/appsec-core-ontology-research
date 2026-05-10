@@ -1,0 +1,241 @@
+meta:
+  name: AppSec Core V1 — SBERT augmentation rule
+  rule_version: '1.0'
+  status: ratified
+  ratification:
+    date: 2026-05-03
+    authority: programme-lead Pedro Farinha
+    dispatch_brief: ExternalSourcesInventory/agentic/briefs/2026-05-03-archon-embeddings-release-artefact.md
+    inspection_basis: sbd-toe-ontology/agentic/em-curso/2026-05-03-sbert-embedding-inspection.md
+    decision_amendment: ExternalSourcesInventory/agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03-amendment-1-claims-not-chains.md (§F augmentation symmetry principle)
+  description: >
+    Deterministic specification for converting AppSec Core V1 ontology entities
+    into augmented text suitable for SBERT encoding. Reads canonical YAML in
+    sbd-toe-ontology/ontology/ and emits one augmented-text record per indexed
+    entity. Reproducible bit-for-bit from canonical YAML + this rule. The
+    Mechanism level uses a derivative aggregation over the canonical
+    `supports_practices` relation; this is canonical content used in a
+    derivative way and was explicitly ratified by programme-lead 2026-05-03.
+
+scope:
+  indexed_levels:
+    - Slice
+    - ControlObjective
+    - Practice
+    - Mechanism
+  excluded_levels:
+    EvidencePattern:
+      reason: zero_normalized_instances_in_v1
+      action: future_work_when_consumer_forces_authoring
+    Artifact:
+      reason: structurally_text_poor_median_2_words_and_not_in_algorithm_anchor_loop
+      action: future_work_when_consumer_forces_authoring
+
+source_files:
+  ontology_root: ontology/
+  slice_drafts:
+    ACO-SCBI: appsec-core-supply-chain-build-integrity-draft.yaml
+    ACO-IAT:  appsec-core-identity-access-session-trust-draft.yaml
+    ACO-ATB:  appsec-core-architecture-trust-boundaries-draft.yaml
+    ACO-TSV:  appsec-core-testing-security-validation-draft.yaml
+    ACO-TMR:  appsec-core-threat-modeling-risk-disposition-draft.yaml
+    ACO-SPC:  appsec-core-secrets-protected-config-draft.yaml
+    ACO-IVF:  appsec-core-input-validation-safe-failure-draft.yaml
+    ACO-ITS:  appsec-core-integration-trust-service-security-draft.yaml
+    ACO-RPR:  appsec-core-release-promotion-controlled-rollout-draft.yaml
+    ACO-SLG:  appsec-core-security-event-logging-audit-trail-draft.yaml
+  slice_components_drafts: '<derived from slice_drafts by replacing -draft.yaml with -components-draft.yaml>'
+  slice_contracts:         '<derived from slice_drafts by replacing -draft.yaml with -slice-contract.yaml>'
+
+# ============================================================
+# FORMAT CONVENTIONS (Cartographer mirrors these on the source side per §F)
+# ============================================================
+#
+# Coordination snippet for Cartographer + Orchestrator:
+# `08-embeddings/format-conventions-snippet.md` (sibling file).
+#
+# Five conventions, each with rationale:
+#
+# (1) Separator — `. ` (period + space).
+#     SBERT tokenizers treat sentence boundaries naturally; periods produce
+#     stable embedding clusters and are present in the training distribution.
+#     Avoids artificial bracket tokens like `[Practice]` that would create
+#     encoder distribution shift (the model was trained on natural prose,
+#     not on tag markup).
+#     CLARIFICATION 2 (Cartographer Phase 1a final 2026-05-03): each
+#     fragment is period-stripped (trailing periods + whitespace removed)
+#     before joining, to avoid duplicated `.. ` at fragment boundaries.
+#     Implementation in build-script.py: `_strip_trailing_period(s)` applied
+#     to each fragment before `". ".join(parts)`.
+#
+# (2) Label prefixes — none.
+#     The augmented text is composed as natural prose. The entity-own name is
+#     the first token of the augmented text, which lets the encoder's natural
+#     attention bias toward the lead phrase do the level-disambiguating work.
+#     Consumers that need explicit per-level filtering use the corpus record's
+#     `entity_level` field at retrieval time, not as a token in the embedded
+#     text.
+#
+# (3) Snake-case enum handling — replace `_` with space; CASING PRESERVED.
+#     E.g., `validation_and_analysis` becomes `validation and analysis`,
+#     `verification_posture: external_input_contracts_are_enforced` becomes
+#     `external input contracts are enforced`. Produces tokens the encoder
+#     has seen; avoids ID-shaped tokens that get embedded poorly.
+#     CLARIFICATION 1 (Cartographer Phase 1a final 2026-05-03): "casing
+#     preserved" means the rule does NOT force lowercase. Ontology-side
+#     enums are already lowercase so this is a no-op on the ontology; the
+#     rule is shared with Cartographer's source side, where preserving
+#     proper-noun casing (e.g., "RESTful Web Services") matters.
+#
+# (4) Ordering — most specific → least specific (descending).
+#     CONVERGENCE 2026-05-03: in the convention sync, Archon initially
+#     proposed most-specific-first; then revised to context-first/seed-last
+#     after considering Cartographer's natural-prose argument. Cartographer
+#     simultaneously revised to most-specific-first to mirror Archon's
+#     original proposal. Both ends ratified Archon's original principle in
+#     Cartographer Phase 1a final composition. Both orderings are roughly
+#     equivalent for mean-pooled SBERT; convergence chooses Archon's
+#     original. Per-level templates below: entity-own name first (most
+#     specific), then entity-own prose fields (statement / description /
+#     scope), then derived/aggregated parent context (Mechanism's
+#     supports_practices aggregation), then enum qualifiers (family /
+#     type) at the tail. Cartographer's source-side mirror: seed text
+#     first, then ascending hierarchy titles in specific-to-general order.
+#     Symmetry: both sides anchor on their own specific surface and decay
+#     outward to context.
+#
+# (5) Truncation — none at corpus level.
+#     The full augmented text is preserved in `augmented-text-corpus.json`.
+#     The SBERT encoder enforces token-level truncation at `max_tokens: 256`
+#     (model default for all-MiniLM-L6-v2 is 256, mpnet-base-v2 is 384;
+#     pinned in manifest). Mechanism augmented text is the longest level
+#     (median ~25 words direct + ~30 derived = ~55 words ≈ 75 tokens), well
+#     under the cap.
+#
+# Cartographer mirrors (1)-(5) exactly. Any deviation breaks §F symmetry
+# and makes E2/E3 thresholds uninterpretable.
+# ============================================================
+
+format_conventions:
+  separator: ". "
+  separator_collision_handling: strip_trailing_period_from_each_fragment_before_join
+  label_prefixes: none
+  snake_case_to_words: replace_underscore_with_space_casing_preserved
+  field_ordering: most_specific_to_least_specific
+  corpus_level_truncation: none
+  encoder_level_truncation:
+    max_tokens: 256
+    note: model-default; manifest records the exact value used
+
+templates:
+
+  Slice:
+    iri_pattern: 'ac:SliceASC<NN>'
+    composition_order:
+      - field: meta.name
+        transform: as_is
+        rationale: most_specific_anchor_for_this_slice
+      - field: meta.scope
+        transform: snake_case_to_words
+        rationale: human_readable_scope_label
+      - field: meta.description
+        transform: as_is
+        rationale: prose_description_of_slice
+      - field: purpose.current_goal
+        transform: as_is
+        rationale: programme_intent_for_this_slice
+    skip_if_empty: true
+
+  ControlObjective:
+    iri_pattern: 'ac:ACO_<FAM>_<NNN>'
+    instance_path: normalized_objectives.<CO_ID>
+    composition_order:
+      - field: name
+        transform: as_is
+        rationale: most_specific_anchor_for_this_CO
+      - field: statement
+        transform: as_is
+        rationale: normative_what_this_CO_requires
+      - field: expected_outcome
+        transform: as_is
+        rationale: behavioural_intent
+      - field: verification_posture
+        transform: snake_case_to_words
+        rationale: assurance_stance_qualifier
+    skip_if_empty: true
+
+  Practice:
+    iri_pattern: 'ac:ACP_<FAM>_<NNN>'
+    instance_path: normalized_practices.<PRACTICE_ID>
+    composition_order:
+      - field: name
+        transform: as_is
+        rationale: most_specific_anchor_for_this_practice
+      - field: description
+        transform: as_is
+        rationale: how_this_practice_realizes_objectives
+      - field: practice_family
+        transform: snake_case_to_words
+        rationale: family_qualifier
+      - field: local_practice_type
+        transform: snake_case_to_words
+        rationale: local_type_qualifier
+    skip_if_empty: true
+
+  Mechanism:
+    iri_pattern: 'ac:ACM_<FAM>_<NNN>'
+    instance_path: normalized_mechanisms.<MECHANISM_ID>
+    composition_order:
+      - field: name
+        transform: as_is
+        rationale: most_specific_anchor_for_this_mechanism
+      - field: derived_from_supports_practices
+        derivation: 'concat(Practice[p].description for p in supports_practices) joined by separator'
+        skip_if_empty: false
+        ratification: programme-lead 2026-05-03
+        rationale: >
+          47% of Mechanisms (27/57) lack direct description and lack the
+          optional `note` field. Without this aggregation their augmented
+          text would fall below SBERT's effective discrimination range
+          (median 6 words with name+family+type only). The aggregation uses
+          the canonical `supports_practices` relation already declared in
+          the ontology, and pulls canonical Practice descriptions; no new
+          content is invented and no canonical YAML is mutated.
+      - field: note
+        transform: as_is
+        when: present_only
+        rationale: caveat_when_authored
+      - field: mechanism_family
+        transform: snake_case_to_words
+        rationale: family_qualifier
+      - field: local_mechanism_type
+        transform: snake_case_to_words
+        rationale: local_type_qualifier
+    skip_if_empty: true
+
+iri_canonical_scheme:
+  source: AppSec Core V1 OWL exports at packages/ontology/appsec-core/v1.0/formal/appsec-core-v0-bounded-v1.ttl
+  patterns:
+    Slice: 'ac:SliceASC<NN>'             # e.g., ac:SliceASC07
+    ControlObjective: 'ac:ACO_<FAM>_<NNN>' # e.g., ac:ACO_IVF_002
+    Practice: 'ac:ACP_<FAM>_<NNN>'         # e.g., ac:ACP_IVF_002
+    Mechanism: 'ac:ACM_<FAM>_<NNN>'        # e.g., ac:ACM_IVF_002
+  notes: >
+    Canonical IRI scheme matches the V1 OWL exports. Corpus records carry the
+    canonical IRI so any consumer joining its data graph against the ontology
+    via belongsToSlice / objective_realized_by_practice / objective_implemented_by_mechanism
+    aligns automatically. Substrate emitters (Cartographer Pipeline 2 §2.4
+    claim emission) MUST use these IRIs as the `target_core_entity` value to
+    ensure the SHACL Tier-2 (Part B) M2-M4 shapes can join successfully via
+    ont_graph.
+
+reproducibility_contract:
+  - Given the same canonical YAML state and this rule (rule_version 1.0), the
+    augmented-text-corpus.json output is bit-identical across runs.
+  - The build script does NOT inject timestamps, randomness, or environment-
+    dependent values into corpus records.
+  - Embedding output (.npz) is bit-identical given the same corpus + the same
+    pinned model snapshot + the same library versions, on the same architecture.
+    Cross-architecture bit-identity is not guaranteed (floating-point
+    determinism differences); the manifest records arch + lib versions to
+    diagnose any divergence.

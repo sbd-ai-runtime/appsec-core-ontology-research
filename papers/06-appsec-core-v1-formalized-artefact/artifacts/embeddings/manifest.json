@@ -1,0 +1,54 @@
+{
+  "schema": "appsec-core-v1-embeddings-manifest/1.0",
+  "release_artefact": "AppSec Core V1 — SBERT embeddings",
+  "rule_version": "1.0",
+  "ratification": {
+    "date": "2026-05-03",
+    "authority": "programme-lead Pedro Farinha",
+    "decision_amendment": "ExternalSourcesInventory/agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03-amendment-1-claims-not-chains.md",
+    "augmentation_symmetry_section": "§F"
+  },
+  "model": {
+    "name": "sentence-transformers/all-MiniLM-L6-v2",
+    "hf_revision_sha": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+    "encoder_max_tokens": 256,
+    "pooling": "mean (attention-mask-weighted)",
+    "normalize": "L2 (p=2, dim=1)"
+  },
+  "library_versions": {
+    "transformers": "4.57.1",
+    "torch": "2.2.2",
+    "numpy": "1.24.4"
+  },
+  "platform": {
+    "system": "Darwin",
+    "machine": "x86_64",
+    "python": "3.10.1"
+  },
+  "corpus": {
+    "filename": "augmented-text-corpus.json",
+    "sha256": "5951fd82e4b7547b37989af5b2f403ff3fd5e8b484b760ce4c565a6756b96c42",
+    "n_records": 212,
+    "counts_per_level": {
+      "Slice": 10,
+      "ControlObjective": 75,
+      "Practice": 69,
+      "Mechanism": 58
+    }
+  },
+  "embeddings": {
+    "filename": "embeddings-all-MiniLM-L6-v2-c9745ed1.npz",
+    "sha256": "17f6aac496b9896dae977a83745480322e1594a214bd9aa7b905f2cf9ddf23c8",
+    "n_entities": 212,
+    "embedding_dim": 384,
+    "dtype": "float32"
+  },
+  "build": {
+    "timestamp_utc": "2026-05-05T17:34:47.534529+00:00"
+  },
+  "notes": [
+    "Embedding determinism: same inputs + same arch + same lib versions → bit-identical .npz; cross-arch identity not guaranteed.",
+    "Excluded entities: EvidencePattern (0 normalized instances in v1) + Artifact (median 2 words; not in algorithm anchor loop). Both registered as future-work gaps.",
+    "Cartographer's PIPELINE 2 §2.1 must use the same model + revision + library versions to mirror the encoding side per Decision 0003 Amendment 1 §F."
+  ]
+}

@@ -1,0 +1,266 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: supply_chain_and_build_integrity
+  description: >
+    First narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    supply chain and build integrity.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-slice-supply-chain-build-integrity.md
+    - docs/project/working-notes/2026-04-03-evidence-pattern-supply-chain-status.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - supply_chain
+    - build_integrity
+  included_manual_categories:
+    - DEP
+    - DST
+    - CIC
+    - CNT
+  excluded_for_now:
+    - identity
+    - secrets
+    - testing
+    - runtime_governance
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-SCBI-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[supply_chain, build_integrity]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis, integrity_traceability_and_records]
+      - local_practice_type: enum[build, verification, approval, inventory, attestation]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis, integrity_traceability_and_records]
+      - local_mechanism_type: enum[automation, attestation, policy, inventory, workflow]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[build_definition, inventory, release_artifact, attestation, report, approval_record, gate_record]
+      - local_role: enum[build_definition, inventory, release_artifact, attestation, report, approval_record, gate_record]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[attestation, inventory, report, approval_record]
+      - local_evidence_kind: enum[attestation, inventory, report, workflow_record, approval_record]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to supply-chain or build-integrity judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-SCBI-001:
+    name: Dependency Inventory And SBOM Traceability
+    objective_kind: atomic
+    domain_key: supply_chain
+    objective_type: governance
+    statement: Maintain a build-linked inventory of third-party components and generated SBOMs for produced artifacts
+    expected_outcome: A software component inventory exists per build or published artifact and remains traceable downstream
+    verification_posture: inventory_and_traceability
+    current_manual_control_anchors:
+      - CTRL-supply-chain-inventario-e-analise-de-dependencias-6b0fd9f7fb
+      - CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+    current_manual_requirement_anchors:
+      - DEP-001
+      - DEP-010
+      - CNT-008
+      - DST-004
+    expected_artifacts:
+      - ART-sbom-ec0b691fce
+      - ART-dependency-inventory-4ddd43ae4f
+      - ART-container-image-51e2624252
+  ACO-SCBI-002:
+    name: Dependency Risk Evaluation And Policy Gating
+    objective_kind: atomic
+    domain_key: supply_chain
+    objective_type: preventive
+    statement: Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded
+    expected_outcome: Dependency and image scanning results are available per execution and gating is enforced before promotion
+    verification_posture: gated_analysis
+    current_manual_control_anchors:
+      - CTRL-supply-chain-inventario-e-analise-de-dependencias-6b0fd9f7fb
+      - CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+    current_manual_requirement_anchors:
+      - DEP-002
+      - CNT-002
+    expected_artifacts:
+      - ART-sca-report-da2c6d2413
+      - ART-pipeline-config-f8f2ba893d
+  ACO-SCBI-003:
+    name: Controlled Dependency And Image Sources
+    objective_kind: atomic
+    domain_key: supply_chain
+    objective_type: preventive
+    statement: Restrict dependency and image acquisition to approved and enforced sources
+    expected_outcome: Unapproved repositories, registries or image origins are blocked or rejected before use or promotion
+    verification_posture: source_control
+    current_manual_control_anchors:
+      - CTRL-supply-chain-inventario-e-analise-de-dependencias-6b0fd9f7fb
+      - CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+    current_manual_requirement_anchors:
+      - DEP-005
+      - CNT-001
+    expected_artifacts:
+      - ART-release-gate-57ec988cdb
+      - ART-approval-record-6fe32eb803
+    open_artifact_gap:
+      - repository_or_registry_allowlist_artifact
+      - enforcement_policy_artifact
+  ACO-SCBI-004:
+    name: Build Definition And Execution Integrity
+    objective_kind: atomic
+    domain_key: build_integrity
+    objective_type: preventive
+    statement: Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms
+    expected_outcome: Pipeline logic is versioned, reviewable and not mutable through unaudited manual paths
+    verification_posture: trusted_build_definition
+    current_manual_control_anchors:
+      - CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+    current_manual_requirement_anchors:
+      - CIC-001
+      - DST-006
+    expected_artifacts:
+      - ART-pipeline-config-f8f2ba893d
+  ACO-SCBI-005:
+    name: Release Promotion And Human Approval Integrity
+    objective_kind: atomic
+    domain_key: build_integrity
+    objective_type: governance
+    statement: Promotion between environments must respect explicit gates, including human approval for irreversible actions
+    expected_outcome: Promotion gates are enforced and irreversible actions are not executed without governed approval
+    verification_posture: gated_promotion
+    current_manual_control_anchors:
+      - CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+    current_manual_requirement_anchors:
+      - CIC-004
+    expected_artifacts:
+      - ART-release-gate-57ec988cdb
+      - ART-approval-record-6fe32eb803
+      - ART-sca-report-da2c6d2413
+  ACO-SCBI-006:
+    name: Artifact Attestation And Provenance Integrity
+    objective_kind: atomic
+    domain_key: build_integrity
+    objective_type: preventive
+    statement: Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence
+    expected_outcome: Downstream consumers can verify who built the artifact, from what source, under what pipeline execution, and whether integrity assertions hold
+    verification_posture: attestable_release
+    current_manual_control_anchors:
+      - CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+      - CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+    current_manual_requirement_anchors:
+      - CIC-005
+      - CIC-007
+      - CNT-007
+    expected_artifacts:
+      - ART-artifact-provenance-8b1bffca3c
+      - ART-artifact-signature-1d67811ec5
+      - ART-signature-attestation-67e300d959
+  ACO-SCBI-007:
+    name: Container Image Supply Integrity
+    objective_kind: composite
+    domain_key: supply_chain
+    objective_type: preventive
+    statement: Published container images must originate from approved bases, carry traceable inventory, and be promotable only under trusted supply-chain controls
+    expected_outcome: Image supply is constrained, reviewable and traceable from base image to published artifact
+    verification_posture: trusted_image_supply
+    composed_of:
+      - ACO-SCBI-001
+      - ACO-SCBI-002
+      - ACO-SCBI-003
+      - ACO-SCBI-006
+    current_manual_control_anchors:
+      - CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+    current_manual_requirement_anchors:
+      - CNT-001
+      - CNT-007
+      - CNT-008
+    expected_artifacts:
+      - ART-container-image-51e2624252
+      - ART-sbom-ec0b691fce
+      - ART-artifact-signature-1d67811ec5
+      - ART-artifact-provenance-8b1bffca3c
+mapping_policy:
+  requirement_mapping:
+    cardinality: many_to_one_allowed
+    note: SbD-ToE requirements stay in the manual layer and project into fewer reusable objectives
+  control_mapping:
+    cardinality: many_to_one_allowed
+    note: SbD-ToE controls are treated as manual-shaped anchors, not copied unchanged into the core
+  practice_mapping:
+    note: chapter-shaped practice records should normalize into reusable domain practices and mechanisms
+deferred_questions:
+  - Should `Attestation` become a first-class entity instead of remaining an `Artifact` role?
+  - Should `ACO-SCBI-007` remain a composite `ControlObjective`, or later move to a higher-level type such as `Capability` or `ControlFamily`?
+  - Should `ReleasePromotionGovernance` and `BuildExecutionIntegrity` stay separate or merge under one wider objective?
+  - How far should `EvidencePattern` remain inside `appsec-core` versus a supporting verification layer?

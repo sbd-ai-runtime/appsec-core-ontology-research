@@ -1,0 +1,157 @@
+meta:
+  name: AppSec Core EvidencePattern Index v0
+  version: '0.1'
+  status: working_draft
+  maturity: supporting_surface_entry
+  description: >
+    Lightweight global supporting index for EvidencePattern in AppSec Core v0.
+    This index is aligned to the current runtime output and is intended for
+    review and packaging decisions, not as a final normalized merged instance
+    set.
+  related_artifacts:
+    evidence_pattern_contract: ontology/appsec-core-evidence-pattern-v0-draft.yaml
+    consolidated_review: ontology/appsec-core-v0-consolidated.yaml
+    surface_contract: ontology/appsec-core-v0-surface-contract.yaml
+    runtime_source: data/publish/runtime/evidence_patterns.json
+    analysis_note: docs/project/working-notes/2026-04-03-appsec-core-evidence-pattern-analysis.md
+purpose:
+  current_goal: >
+    Provide one compact global read of the current EvidencePattern surface so
+    AppSec Core v0 can be reviewed as a semantically grounded model instead of
+    a purely descriptive one.
+  non_goals:
+    - replacing_runtime_source_data
+    - publishing_one_fully_normalized_slice_local_evidencepattern_merge
+    - introducing_execution_binding
+    - introducing_V3_result_models
+source_alignment:
+  source_file: data/publish/runtime/evidence_patterns.json
+  source_status: runtime_aligned
+  source_count: 213
+coverage_summary:
+  total_patterns: 213
+  mapped_controls: 213
+  with_expected_artifact_links: 191
+  without_expected_artifact_links: 22
+  with_supported_signal_ids: 0
+  published_signal_evidence_links: 11
+  signal_links_targeting_evidence_patterns: 11
+  signal_links_falling_back_to_artifact: 0
+  with_verification_when: 13
+  with_responsible_roles: 13
+  empty_detectable_in: 19
+distribution:
+  by_evidence_type:
+    workflow: 108
+    log: 82
+    document: 8
+    test: 6
+    artifact: 6
+    config: 3
+  by_detectable_surface_token:
+    ci_cd: 153
+    logs: 70
+    documentation: 48
+    config: 13
+  by_source_bundle:
+    02-requisitos-seguranca: 94
+    04-arquitetura-segura: 13
+    09-containers-imagens: 12
+    14-governanca-contratacao: 12
+    07-cicd-seguro: 10
+    05-dependencias-sbom-sca: 10
+    12-monitorizacao-operacoes: 10
+    10-testes-seguranca: 10
+    06-desenvolvimento-seguro: 9
+    11-deploy-seguro: 9
+    13-formacao-onboarding: 9
+    01-classificacao-aplicacoes: 8
+    03-threat-modeling: 7
+field_read:
+  strong_now:
+    - id
+    - maps_to_requirement_id
+    - maps_to_control_id
+    - evidence_type
+    - evidence_expectation
+    - verification_logic
+    - expected_artifact_type_ids
+    - source_bundle
+    - source_document
+  useful_but_heuristic:
+    - detectable_in
+  sparse_or_not_materialized:
+    - supported_signal_ids
+    - verification_when
+    - responsible_roles
+    - one_dense_signal_layer_grounded_primarily_on_evidencepattern_targets
+representative_examples:
+  workflow:
+    id: EP-ACC-002
+    requirement_id: ACC-002
+    control_id: CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af
+    detectable_in: [ci_cd, documentation]
+    expected_artifact_type_ids:
+      - ART-log-stream-b67ee06f7e
+      - ART-policy-report-7e52280504
+  log:
+    id: EP-ACC-001
+    requirement_id: ACC-001
+    control_id: CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af
+    detectable_in: [logs]
+    expected_artifact_type_ids:
+      - ART-log-stream-b67ee06f7e
+      - ART-identity-binding-f96a2a528c
+  document:
+    id: EP-ARC-001
+    requirement_id: ARC-001
+    control_id: CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+    detectable_in: [documentation]
+    expected_artifact_type_ids: []
+    cadence_hint: Design inicial; após alteração de topologia ou fronteiras
+  test:
+    id: EP-DEV-003
+    requirement_id: DEV-003
+    control_id: CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    detectable_in: []
+    expected_artifact_type_ids:
+      - ART-release-gate-57ec988cdb
+      - ART-artifact-provenance-8b1bffca3c
+  artifact:
+    id: EP-DST-004
+    requirement_id: DST-004
+    control_id: CTRL-supply-chain-inventario-e-analise-de-dependencias-6b0fd9f7fb
+    detectable_in: []
+    expected_artifact_type_ids:
+      - ART-sbom-ec0b691fce
+      - ART-container-image-51e2624252
+  config:
+    id: EP-API-005
+    requirement_id: API-005
+    control_id: CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    detectable_in: [config]
+    expected_artifact_type_ids:
+      - ART-sca-report-da2c6d2413
+      - ART-test-report-b11c5dfb8a
+read_decision:
+  good_enough_now:
+    - one_global_evidencepattern_support_surface_now_exists
+    - expectation_method_and_artifact_traceability_are_materially_usable
+    - the_runtime_now_contains_real_signal_to_evidencepattern_links
+    - the_current_surface_is_strong_enough_for_v0_review_support
+  not_claimed:
+    - one_fully_normalized_slice_local_evidencepattern_instance_merge
+    - one_execution_binding_registry
+    - one_runtime_finding_model
+    - one_source_provenance_layer
+    - one_signal_layer_grounded_primarily_on_evidencepattern_targets
+publication_position:
+  relation_to_v0:
+    - supporting_global_surface_for_a_first_class_entity
+    - complements_the_main_instance_index_instead_of_replacing_it
+    - should_be_read_before_any_implementation_binding_design
+next_step:
+  recommendation: >
+    Publish this index as the current EvidencePattern read surface for AppSec
+    Core v0, then revisit whether a fuller normalized instance layer is worth
+    the added complexity.

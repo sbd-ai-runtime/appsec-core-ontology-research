@@ -1,0 +1,250 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: threat_modeling_risk_disposition_and_mitigation_traceability
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for threat modeling, risk disposition
+    and mitigation traceability.
+  target_core_draft: ontology/appsec-core-threat-modeling-risk-disposition-draft.yaml
+  target_mapping_draft: ontology/appsec-core-threat-modeling-risk-disposition-mapping-draft.yaml
+normalized_practices:
+  ACP-TMR-001:
+    name: Threat Model Creation And Triggered Refresh
+    practice_family: governance_and_review
+    local_practice_type: modeling
+    supports_objectives:
+      - ACO-TMR-001
+      - ACO-TMR-006
+    description: Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale
+  ACP-TMR-002:
+    name: DFD And Trust-Boundary Grounding
+    practice_family: governance_and_review
+    local_practice_type: representation
+    supports_objectives:
+      - ACO-TMR-002
+      - ACO-TMR-007
+    description: Ground threat analysis in explicit DFDs, trust boundaries and current architecture assumptions
+  ACP-TMR-003:
+    name: Structured Threat Analysis Method Selection
+    practice_family: governance_and_review
+    local_practice_type: methodology
+    supports_objectives:
+      - ACO-TMR-003
+      - ACO-TMR-007
+    description: Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context
+  ACP-TMR-004:
+    name: Threat Disposition And Accepted Risk Governance
+    practice_family: governance_and_review
+    local_practice_type: disposition
+    supports_objectives:
+      - ACO-TMR-004
+      - ACO-TMR-007
+    description: Record threat disposition, ownership and accepted-risk rationale explicitly rather than leaving identified threats undecided
+  ACP-TMR-005:
+    name: Threat Traceability Into Requirements And Validation
+    practice_family: integrity_traceability_and_records
+    local_practice_type: traceability
+    supports_objectives:
+      - ACO-TMR-005
+      - ACO-TMR-007
+    description: Keep explicit links from identified threats into mitigations, backlog work and validation evidence
+  ACP-TMR-006:
+    name: Independent Review And Threat Model Approval
+    practice_family: governance_and_review
+    local_practice_type: review
+    supports_objectives:
+      - ACO-TMR-006
+      - ACO-TMR-007
+    description: Subject threat models to independent review, approval and go-live governance where required
+  ACP-TMR-007:
+    name: Threat Model Artifact Governance
+    practice_family: governance_and_review
+    local_practice_type: review
+    supports_objectives:
+      - ACO-TMR-006
+    description: Control access, classification and retention of threat-model artifacts so lifecycle governance remains auditable
+  ACP-TMR-008:
+    name: Security Requirements Identification And Derivation
+    practice_family: governance_and_review
+    local_practice_type: requirements_governance
+    supports_objectives:
+      - ACO-TMR-008
+    description: >
+      Process for identifying security requirements from internal sources
+      (policies, risk assessments, threat models) and external sources
+      (regulations, standards, industry guidance), deriving verifiable
+      security criteria, and documenting them in a structured requirements
+      portfolio. Covers the "where do requirements come from" facet of the
+      lifecycle.
+  ACP-TMR-009:
+    name: Requirements Communication And Compliance Monitoring
+    practice_family: governance_and_review
+    local_practice_type: requirements_governance
+    supports_objectives:
+      - ACO-TMR-008
+    description: >
+      Process for communicating security requirements to all relevant
+      stakeholders (development teams, third-party suppliers, acquirers),
+      monitoring external regulatory and compliance changes that affect
+      requirements, and triggering updates to the requirements portfolio
+      when the regulatory, threat, or business context evolves. Covers
+      the "where do requirements go and how do they stay current" facet.
+normalized_mechanisms:
+  ACM-TMR-001:
+    name: Threat Representation Models
+    mechanism_family: governance_and_review
+    local_mechanism_type: representation_model
+    source_semantic_ids:
+      - sem:mechanism:dfds
+      - sem:mechanism:trust-boundaries
+      - sem:mechanism:diagramas-versionados
+    supports_practices:
+      - ACP-TMR-002
+  ACM-TMR-002:
+    name: Structured Threat Analysis Frameworks
+    mechanism_family: governance_and_review
+    local_mechanism_type: modeling_framework
+    source_semantic_ids:
+      - sem:mechanism:stride
+      - sem:mechanism:linddun
+      - sem:mechanism:pasta
+    supports_practices:
+      - ACP-TMR-003
+  ACM-TMR-003:
+    name: Threat Model Versioning Controls
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: versioning
+    source_semantic_ids:
+      - sem:mechanism:data-e-versao-do-modelo
+    supports_practices:
+      - ACP-TMR-001
+      - ACP-TMR-007
+  ACM-TMR-004:
+    name: Explicit Threat Disposition Register
+    mechanism_family: governance_and_review
+    local_mechanism_type: governance_recording
+    source_semantic_ids:
+      - sem:mechanism:lista-de-ameacas-com-decisao-explicita
+    supports_practices:
+      - ACP-TMR-004
+  ACM-TMR-005:
+    name: Threat Mitigation Linkage Controls
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: traceability_control
+    source_semantic_ids:
+      - sem:mechanism:ligacao-a-requisitos-de-seguranca-ou-mitigacoes
+    supports_practices:
+      - ACP-TMR-005
+  ACM-TMR-006:
+    name: Reviewer Accountability And Consistency Gates
+    mechanism_family: governance_and_review
+    local_mechanism_type: gate
+    source_semantic_ids:
+      - sem:mechanism:identificacao-do-responsavel-pela-validacao
+    supports_practices:
+      - ACP-TMR-006
+    note: >
+      The current semantic anchor is narrower than the full review-governance
+      problem, but it is enough to support a first normalized mechanism here.
+  ACM-TMR-007:
+    name: Requirements Registry And Derivation Traceability
+    mechanism_family: governance_and_review
+    local_mechanism_type: requirements_registry
+    supports_practices:
+      - ACP-TMR-008
+    note: >
+      Structured requirements database or registry that captures each
+      requirement's origin (regulation, standard, threat model, policy),
+      its derivation chain to verifiable criteria, and its coverage
+      status across the SDLC.
+      Tools: requirements management platforms (Jira, Azure DevOps,
+      DOORS), traceability matrices, threat-to-requirement linkage.
+  ACM-TMR-008:
+    name: Compliance Monitoring And Regulatory Change Feeds
+    mechanism_family: governance_and_review
+    local_mechanism_type: compliance_monitoring
+    supports_practices:
+      - ACP-TMR-009
+    note: >
+      Automated or semi-automated monitoring of external regulatory and
+      compliance changes that affect the organization's security requirements.
+      Includes regulatory change alerting, compliance drift detection,
+      and stakeholder notification workflows.
+      Tools: compliance monitoring dashboards, regulatory intelligence
+      feeds, GRC platforms, supplier communication workflows.
+normalized_artifacts:
+  ACA-TMR-001:
+    source_artifact_id: ART-threat-model-3a09510d13
+    canonical_role: model
+    local_role: model
+    supports_objectives:
+      - ACO-TMR-001
+      - ACO-TMR-002
+      - ACO-TMR-003
+      - ACO-TMR-004
+      - ACO-TMR-005
+      - ACO-TMR-006
+      - ACO-TMR-007
+  ACA-TMR-002:
+    source_artifact_id: ART-risk-acceptance-record-ebea5da638
+    canonical_role: governance_record
+    local_role: governance_record
+    supports_objectives:
+      - ACO-TMR-004
+      - ACO-TMR-006
+      - ACO-TMR-007
+  ACA-TMR-003:
+    source_artifact_id: ART-validation-evidence-79f6aaf0ec
+    canonical_role: evidence_package
+    local_role: evidence
+    supports_objectives:
+      - ACO-TMR-005
+  ACA-TMR-004:
+    source_artifact_id: ART-pipeline-config-f8f2ba893d
+    canonical_role: configuration
+    local_role: configuration
+    supports_objectives:
+      - ACO-TMR-006
+current_manual_practice_mappings:
+  - source_practice_id: 03-threat-modeling:criacao-do-modelo-de-ameaca
+    target_practice_id: ACP-TMR-001
+  - source_practice_id: 03-threat-modeling:atualizacao-do-modelo-apos-alteracao-tecnica
+    target_practice_id: ACP-TMR-001
+  - source_practice_id: 03-threat-modeling:validacao-de-arquitetura-com-threat-modeling
+    target_practice_id: ACP-TMR-002
+  - source_practice_id: 03-threat-modeling:aplicacao-linddun-quando-existir-tratamento-de-dados-pessoais-novo
+    target_practice_id: ACP-TMR-003
+  - source_practice_id: 03-threat-modeling:validacao-de-impacto-no-negocio
+    target_practice_id: ACP-TMR-003
+  - source_practice_id: 03-threat-modeling:justificacao-formal-de-risco-aceite
+    target_practice_id: ACP-TMR-004
+  - source_practice_id: 03-threat-modeling:gate-de-controlo-de-consistencia-no-ci-cd
+    target_practice_id: ACP-TMR-005
+  - source_practice_id: 03-threat-modeling:aprovacao-formal-do-threat-model-baseline-e-revisoes
+    target_practice_id: ACP-TMR-006
+  - source_practice_id: 03-threat-modeling:reutilizacao-controlada-e-revisao-de-modelos-anteriores
+    target_practice_id: ACP-TMR-006
+  - source_practice_id: 03-threat-modeling:controlo-de-acesso-classificacao-e-retencao-dos-artefactos-de-threat-modeling
+    target_practice_id: ACP-TMR-007
+notes:
+  mechanism_surface_strength:
+    note: >
+      The threat-modeling slice has a better current mechanism surface than it
+      first appeared to have, because the `03-threat-modeling` bundle already
+      materializes method and governance-oriented mechanism entries.
+  threat_boundary:
+    note: >
+      This slice models threat-model governance, disposition and traceability,
+      not a stable reusable taxonomy of threat instances.
+  artifact_surface_limit:
+    note: >
+      The current artifact catalog is good enough to start, but review-specific
+      and traceability-specific artifacts remain thinner than the requirements
+      imply.
+open_questions:
+  - Should `ACP-TMR-007` remain inside lifecycle governance, or later become part of a broader cross-slice evidence-governance capability?
+  - Should `ACM-TMR-006` remain tied to reviewer accountability only, or later absorb stronger approval and go-live gate semantics once those mechanisms are better materialized?
+  - Which future artifact should become the primary anchor for threat-traceability matrices and explicit review records once the artifact taxonomy expands?
+  - At what point, if any, should reusable threat entities emerge from this slice without depending on weak canon-driven material?

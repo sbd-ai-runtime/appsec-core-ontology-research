@@ -1,0 +1,344 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: release_promotion_controlled_rollout_and_rollback_readiness
+  description: >
+    Ninth narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    release promotion, controlled rollout and rollback readiness.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-release-promotion-controlled-rollout.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - full_deploy_runtime_monitoring
+    - deploy_credentials_and_secret_lifecycle
+    - build_provenance_generation_as_primary_center
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - release_authorization
+    - promotion_integrity
+    - pre_promotion_validation
+    - deployment_traceability
+    - rollback_readiness
+    - controlled_rollout
+    - release_control_surface
+  included_manual_categories:
+    - DPL
+  included_primary_requirements:
+    - DPL-001
+    - DPL-002
+    - DPL-003
+    - DPL-004
+    - DPL-005
+    - DPL-007
+    - DPL-009
+  excluded_for_now:
+    - DPL-006_as_primary_center
+    - DPL-008_as_primary_center
+    - broader_runtime_operations
+    - full_secrets_and_operational_identity_surface
+    - full_build_integrity_surface
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-RPR-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[release_authorization, promotion_integrity, pre_promotion_validation, deployment_traceability, rollback_readiness, controlled_rollout, release_control_surface]
+      - objective_type: enum[governance, preventive, detective, corrective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, policy_and_gate_enforcement, integrity_traceability_and_records, rollout_recovery_and_runtime_records]
+      - local_practice_type: enum[approval_gate, provenance_verification, gating, traceability, rollback, controlled_rollout]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[policy_and_gate_enforcement, integrity_traceability_and_records, rollout_recovery_and_runtime_records]
+      - local_mechanism_type: enum[promotion_control, approval_gate, provenance_check, gate_policy, traceability_control, rollback_control, rollout_control]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[approval_record, gate_record, attestation, build_definition, operational_record, evidence_package]
+      - local_role: enum[governance_record, evidence, pipeline_definition, release_record, deployment_record, rollback_record]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[approval_record, gate_record, attestation, build_definition, operational_record, evidence_package]
+      - local_evidence_kind: enum[governance_record, evidence, pipeline_definition, release_record, deployment_record, rollback_record]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to release-control judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-RPR-001:
+    name: Release Authorization And Irreversible Change Accountability
+    objective_kind: atomic
+    domain_key: release_authorization
+    objective_type: governance
+    statement: Production release of irreversible change must require explicit accountable authorization rather than silent automatic promotion
+    expected_outcome: Production change has an identifiable approving authority and a reviewable decision point before irreversible action occurs
+    verification_posture: accountable_release_authorization
+    current_manual_control_anchors:
+      - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+    current_manual_requirement_anchors:
+      - DPL-001
+    expected_artifacts:
+      - ART-approval-record-6fe32eb803
+      - ART-release-gate-57ec988cdb
+    open_artifact_gap:
+      - release_authorization_policy_artifact
+  ACO-RPR-002:
+    name: Verified Artifact Promotion
+    objective_kind: atomic
+    domain_key: promotion_integrity
+    objective_type: preventive
+    statement: Only artifacts with verified identity, signature or provenance should be promoted into production release paths
+    expected_outcome: Promotion decisions are bound to attributable artifacts rather than to unverifiable binaries or mutable outputs
+    verification_posture: verified_artifacts_only
+    current_manual_control_anchors:
+      - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+      - CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+    current_manual_requirement_anchors:
+      - DPL-002
+    expected_artifacts:
+      - ART-artifact-provenance-8b1bffca3c
+      - ART-artifact-signature-1d67811ec5
+    open_artifact_gap:
+      - deployment_verification_record_artifact
+  ACO-RPR-003:
+    name: Pre-Promotion Security Gates And Staging Assurance
+    objective_kind: atomic
+    domain_key: pre_promotion_validation
+    objective_type: preventive
+    statement: Promotion must remain conditional on explicit pre-promotion security gates and a meaningful staging validation step before production release
+    expected_outcome: Promotion is blocked when required gates fail and staging remains a real assurance step rather than a ceremonial environment
+    verification_posture: promotion_is_gated_and_prevalidated
+    current_manual_control_anchors:
+      - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - DPL-003
+      - DPL-007
+    expected_artifacts:
+      - ART-release-gate-57ec988cdb
+      - ART-pipeline-config-f8f2ba893d
+    open_artifact_gap:
+      - staging_validation_record_artifact
+      - gate_policy_artifact
+  ACO-RPR-004:
+    name: End-to-End Deployment Traceability
+    objective_kind: atomic
+    domain_key: deployment_traceability
+    objective_type: detective
+    statement: Every deployment must remain traceable from authorization and pipeline context to the exact artifact, commit and target environment
+    expected_outcome: Incidents and reviews can be traced back to the deployed artifact and approval context without ambiguous release history
+    verification_posture: deployment_traceability_is_complete
+    current_manual_control_anchors:
+      - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+    current_manual_requirement_anchors:
+      - DPL-004
+    expected_artifacts:
+      - ART-deployment-plan-945b804751
+      - ART-artifact-provenance-8b1bffca3c
+      - ART-approval-record-6fe32eb803
+      - ART-operational-evidence-f5e852756f
+    open_artifact_gap:
+      - deployment_trace_record_artifact
+  ACO-RPR-005:
+    name: Tested Rollback Readiness And Reversibility
+    objective_kind: atomic
+    domain_key: rollback_readiness
+    objective_type: corrective
+    statement: Rollback paths must be predefined, tested and time-bounded so that release reversal is a real capability rather than an untested hope
+    expected_outcome: Reversal of harmful change can be executed under known constraints and verified recovery timing
+    verification_posture: rollback_is_realistic_and_tested
+    current_manual_control_anchors:
+      - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+    current_manual_requirement_anchors:
+      - DPL-005
+    expected_artifacts:
+      - ART-rollback-plan-4fbad982bb
+      - ART-operational-evidence-f5e852756f
+    open_artifact_gap:
+      - rollback_test_record_artifact
+      - rollback_sla_artifact
+  ACO-RPR-006:
+    name: Controlled Rollout And Blast-Radius Containment
+    objective_kind: atomic
+    domain_key: controlled_rollout
+    objective_type: preventive
+    statement: High-impact releases should use progressive rollout and explicit containment controls so that unsafe change can be limited without immediate full rollback
+    expected_outcome: Critical deployments can be introduced gradually and contained before they affect the whole production surface
+    verification_posture: rollout_is_progressive_and_contained
+    current_manual_control_anchors:
+      - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+    current_manual_requirement_anchors:
+      - DPL-009
+    expected_artifacts:
+      - ART-deployment-plan-945b804751
+      - ART-rollback-plan-4fbad982bb
+      - ART-pipeline-config-f8f2ba893d
+    open_artifact_gap:
+      - rollout_strategy_artifact
+      - containment_threshold_policy_artifact
+  ACO-RPR-007:
+    name: Release Promotion And Reversible Rollout Assurance
+    objective_kind: composite
+    domain_key: release_control_surface
+    objective_type: governance
+    statement: Release authorization, verified artifact promotion, gated staging, deployment traceability, rollback readiness and controlled rollout must operate as one coherent release-control surface
+    expected_outcome: Production promotion remains attributable, bounded and reversible enough to reduce the security impact of unsafe change before runtime incident handling becomes necessary
+    verification_posture: coherent_release_control_surface
+    composed_of:
+      - ACO-RPR-001
+      - ACO-RPR-002
+      - ACO-RPR-003
+      - ACO-RPR-004
+      - ACO-RPR-005
+      - ACO-RPR-006
+    current_manual_control_anchors:
+      - CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+    current_manual_requirement_anchors:
+      - DPL-001
+      - DPL-002
+      - DPL-003
+      - DPL-004
+      - DPL-005
+      - DPL-007
+      - DPL-009
+    expected_artifacts:
+      - ART-approval-record-6fe32eb803
+      - ART-artifact-provenance-8b1bffca3c
+      - ART-artifact-signature-1d67811ec5
+      - ART-release-gate-57ec988cdb
+      - ART-deployment-plan-945b804751
+      - ART-rollback-plan-4fbad982bb
+      - ART-pipeline-config-f8f2ba893d
+      - ART-operational-evidence-f5e852756f
+  ACO-RPR-008:
+    name: Secure Defaults And Hardened Baseline Selection
+    objective_kind: atomic
+    domain_key: secure_defaults
+    objective_type: preventive
+    statement: >
+      Security-relevant components should start from secure defaults or an
+      explicitly hardened baseline rather than from permissive or unsafe
+      baseline settings.
+    expected_outcome: >
+      New deployments and new configurations do not inherit unsafe default
+      posture without explicit review.
+    verification_posture: secure_default_or_hardened_baseline_exists
+    adjacent_manual_surfaces:
+      - architecture_and_trust_boundaries
+      - release_promotion_controlled_rollout_and_rollback_readiness
+      - secret_handling_protected_configuration_and_operational_identities
+    evidence_basis:
+      cross_pilot_fit: strong_cross_pilot_center
+      sources: [SSDF_PW_9, ASVS_V13, CIS_4, CWE]
+      cross_pilot_validation: [OWASP_SAMM_Environment_Management, OWASP_DSOMM_Application_Hardening]
+  ACO-RPR-009:
+    name: Security-Relevant Configuration Integrity And Override Control
+    objective_kind: atomic
+    domain_key: config_integrity
+    objective_type: preventive
+    statement: >
+      Security-relevant configuration must remain protected from uncontrolled
+      change, injection or silent override across build, deploy and runtime
+      preparation surfaces.
+    expected_outcome: >
+      Configuration affecting security posture remains attributable and cannot
+      be changed casually without leaving reviewable evidence.
+    verification_posture: controlled_security_relevant_configuration_changes
+    adjacent_manual_surfaces:
+      - supply_chain_and_build_integrity
+      - release_promotion_controlled_rollout_and_rollback_readiness
+      - architecture_and_trust_boundaries
+    evidence_basis:
+      cross_pilot_fit: strong_but_bounded_cross_pilot_center
+      sources: [SSDF_PW_9, ASVS_V13, CIS_4, CWE]
+      cross_pilot_validation: [OWASP_SAMM_Environment_Management, OWASP_DSOMM_Application_Hardening]
+  ACO-RPR-010:
+    name: Baseline Review, Exception Visibility And Change Discipline
+    objective_kind: atomic
+    domain_key: change_review
+    objective_type: governance
+    statement: >
+      Baseline changes, deviations and approved exceptions should be reviewed,
+      visible and bounded so that hardening posture does not erode silently.
+    expected_outcome: >
+      The project can distinguish approved deviation from unmanaged drift and
+      can review whether the current baseline still matches intended security
+      posture.
+    verification_posture: reviewable_baseline_change_and_exception_record
+    adjacent_manual_surfaces:
+      - threat_modeling_risk_disposition_and_mitigation_traceability
+      - release_promotion_controlled_rollout_and_rollback_readiness
+      - security_event_logging_audit_trail_and_centralized_logging
+    evidence_basis:
+      cross_pilot_fit: bounded_supporting_objective
+      sources: [SSDF_PW_9, ASVS_V13, CIS_4, CWE]
+      consumer_trial: [08-iac-infraestrutura, 02-requisitos-seguranca, 11-deploy-seguro]

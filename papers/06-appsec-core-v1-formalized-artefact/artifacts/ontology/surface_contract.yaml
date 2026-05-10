@@ -1,0 +1,144 @@
+meta:
+  name: AppSec Core v1.0 Surface Contract
+  version: '1.0'
+  status: review_candidate
+  maturity: packaging_checkpoint
+  description: >
+    Consumer-facing shape contract for AppSec Core v0. This file does not
+    replace the core draft or the slice contracts; it defines what currently
+    counts as the explicit v0 surface and what remains deferred.
+  related_artifacts:
+    consolidated_review: ontology/appsec-core-v0-consolidated.yaml
+    core_v0_draft: ontology/appsec-core-v0-draft.yaml
+    slice_registry: ontology/appsec-core-slice-registry-v0-draft.yaml
+    instance_index: ontology/appsec-core-v0-instance-index.yaml
+    evidence_pattern_contract: ontology/appsec-core-evidence-pattern-v0-draft.yaml
+    evidence_pattern_index: ontology/appsec-core-evidence-pattern-index-v0.yaml
+    entity_schema: ontology/appsec-core-entity-schema-v0-draft.yaml
+    cross_slice_vocabulary: ontology/appsec-core-cross-slice-vocabulary-v0-draft.yaml
+    manual_mapping_contract: ontology/appsec-core-manual-mapping-v0-draft.yaml
+    readiness_note: docs/working-notes/2026-04-03-appsec-core-v0-readiness.md
+    publication_candidate_checklist: docs/working-notes/2026-04-03-appsec-core-v0-publication-candidate-checklist.md
+purpose:
+  current_goal: >
+    Define the current consumer-facing shape of AppSec Core v0 without forcing
+    one merged instance set too early.
+  non_goals:
+    - replacing_slice_contracts
+    - publishing_external_alignment
+    - introducing_v3_runtime_semantics
+    - introducing_source_provenance_semantics
+surface:
+  entrypoints:
+    - ontology/appsec-core-v0-consolidated.yaml
+    - ontology/appsec-core-v0-draft.yaml
+    - ontology/appsec-core-slice-registry-v0-draft.yaml
+    - ontology/appsec-core-v0-instance-index.yaml
+    - ontology/appsec-core-evidence-pattern-v0-draft.yaml
+    - ontology/appsec-core-evidence-pattern-index-v0.yaml
+    - ontology/appsec-core-entity-schema-v0-draft.yaml
+    - ontology/appsec-core-cross-slice-vocabulary-v0-draft.yaml
+    - ontology/appsec-core-manual-mapping-v0-draft.yaml
+  consumer_read_order:
+    - consolidated_review_first
+    - slice_registry_second
+    - instance_index_third
+    - evidence_pattern_contract_fourth
+    - evidence_pattern_index_fifth
+    - core_v0_draft_sixth
+    - entity_schema_seventh
+    - cross_slice_vocabulary_eighth
+    - manual_mapping_contract_ninth
+    - slice_contracts_on_demand
+entity_boundary:
+  first_class_for_v0:
+    - ControlObjective
+    - Practice
+    - Mechanism
+    - Artifact
+    - EvidencePattern
+  supporting_but_not_core_driving:
+    - Threat
+    - Signal
+  explicitly_deferred:
+    - Problem
+    - Gap
+    - Capability
+entity_semantic_read:
+  Practice:
+    meaning: >
+      Prescriptive human or process discipline that should exist independently
+      of a specific tool or runtime product choice.
+  Mechanism:
+    meaning: >
+      Concrete technical or enforceable means used to implement practices or
+      directly realize objectives.
+  coupling_rule:
+    - mechanisms_should_reference_supported_practices_when_that_link_is_known
+instance_policy:
+  current_state: lightweight_global_index_plus_slice_local_drafts_plus_supporting_evidencepattern_index
+  v0_rule: >
+    A heavyweight merged global instance set is optional for v0. The minimum
+    viable v0 surface now includes the shared schema, the ten-slice reference
+    registry, one lightweight global instance index, one runtime-aligned
+    EvidencePattern support index and the slice-local instance drafts.
+  indexed_now:
+    - ControlObjective
+    - Practice
+    - Mechanism
+    - Artifact
+  not_yet_indexed_globally:
+    - Threat
+    - Signal
+  supporting_global_surfaces:
+    EvidencePattern:
+      status: runtime_aligned_support_index_available
+      artifacts:
+        - ontology/appsec-core-evidence-pattern-v0-draft.yaml
+        - ontology/appsec-core-evidence-pattern-index-v0.yaml
+      limitation: not_yet_a_full_normalized_slice_local_instance_merge
+      public_claim:
+        v0_supports:
+          - expected_evidence_shape
+          - validation_method_expression
+          - artifact_traceability
+          - deterministic_review_support
+        v0_does_not_claim:
+          - execution_binding
+          - verification_run_history
+          - full_signal_coverage
+          - runtime_decision_trace
+mapping_policy:
+  current_state: shared_contract_plus_slice_local_mapping_drafts
+  stable_rules:
+    - requirement_level_mapping_is_atomic_first
+    - control_level_mapping_may_land_on_composite
+    - bridge_only_observations_use_source_reference
+boundary_rules:
+  stays_out_of_v0_surface:
+    - regulatory_overlay
+    - external_alignment
+    - v3_runtime_verification
+    - source_provenance_transversal_layer
+method_guardrails:
+  - slice_cardinality_is_methodological_not_ontological
+  - future_versions_may_use_different_slice_counts_when_the_domain_requires_it
+acceptance_read:
+  stable_enough_now:
+    - the_v0_surface_can_be_described_as_one_compact_contract
+    - the_first_class_entity_boundary_is_now_explicit
+    - the_current_surface_does_not_depend_on_slice_11
+    - one_lightweight_global_instance_index_is_now_available
+    - one_supporting_global_evidencepattern_surface_is_now_available
+    - the_current_packaging_surface_has_passed_a_cross_artifact_consistency_review
+  still_open:
+    - whether_the_current_evidencepattern_support_index_is_enough_for_first_publication
+    - whether_a_heavier_merged_instance_set_adds_real_value_beyond_the_current_index
+    - whether_to_flatten_more_local_roles_before_publication
+next_step:
+  recommendation: >
+    Use this surface contract as the packaging checkpoint and current
+    review/publication candidate baseline for AppSec Core v0, use the
+    supporting EvidencePattern surface during review, then decide later
+    whether a fuller normalized instance layer would add enough publication
+    value to justify the extra complexity.

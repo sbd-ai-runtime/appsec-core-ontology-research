@@ -1,0 +1,3033 @@
+{
+  "schema": "appsec-core-v1-augmented-text-corpus/1.0",
+  "rule_version": "1.0",
+  "n_records": 212,
+  "records": [
+    {
+      "entity_iri": "ac:SliceASC01",
+      "entity_level": "Slice",
+      "entity_id": "ASC-01",
+      "family": "ACO-SCBI",
+      "augmented_text": "AppSec Core Slice Contract. supply chain and build integrity. Consolidated contract for the first AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize one reusable AppSec domain slice before opening additional slices or bringing in external alignment frameworks",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC02",
+      "entity_level": "Slice",
+      "entity_id": "ASC-02",
+      "family": "ACO-IAT",
+      "augmented_text": "AppSec Core Slice Contract. identity access and session trust. Consolidated contract for the second AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize a second reusable AppSec domain slice on a semantic surface very different from supply-chain and build-integrity before opening a third slice or pulling in external-alignment frameworks",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC03",
+      "entity_level": "Slice",
+      "entity_id": "ASC-03",
+      "family": "ACO-ATB",
+      "augmented_text": "AppSec Core Slice Contract. architecture and trust boundaries. Consolidated contract for the third AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize a third reusable AppSec domain slice on a design-time semantic surface centered on architecture baseline, trust boundaries, exposure control and segmentation before opening a fourth slice or pulling in external-alignment frameworks",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC04",
+      "entity_level": "Slice",
+      "entity_id": "ASC-04",
+      "family": "ACO-TSV",
+      "augmented_text": "AppSec Core Slice Contract. testing security validation and empirical assurance. Consolidated contract for the fourth AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize a fourth reusable AppSec domain slice on a validation-time semantic surface centered on risk-based testing, empirical assurance, reproducible evidence and release-relevant test interpretation before opening a fifth slice or pulling in external-alignment frameworks",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC05",
+      "entity_level": "Slice",
+      "entity_id": "ASC-05",
+      "family": "ACO-TMR",
+      "augmented_text": "AppSec Core Slice Contract. threat modeling risk disposition and mitigation traceability. Consolidated contract for the fifth AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize a fifth reusable AppSec domain slice on a threat-modeling semantic surface centered on scope, grounded representation, risk disposition, mitigation traceability and independent review before opening a sixth slice or pulling in external-alignment frameworks",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC06",
+      "entity_level": "Slice",
+      "entity_id": "ASC-06",
+      "family": "ACO-SPC",
+      "augmented_text": "AppSec Core Slice Contract. secret handling protected configuration and operational identities. Consolidated contract for the sixth AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize a sixth reusable AppSec domain slice on a technical semantic surface centered on secret leak prevention, protected storage, operational identities and secret governance before opening a seventh slice or pulling in external-alignment frameworks",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC07",
+      "entity_level": "Slice",
+      "entity_id": "ASC-07",
+      "family": "ACO-IVF",
+      "augmented_text": "AppSec Core Slice Contract. input output data safety and controlled failure. Consolidated contract for the seventh AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Slice scope expanded 2026-05-05 by ACR-004 promotion to cover output rendering safety as the symmetric counterpart of input validation at the same trust boundary. Stabilize a seventh reusable AppSec domain slice on a technical semantic surface centered on untrusted-data hygiene at trust boundaries — input validation, safe parsing, controlled failure and context-aware output rendering — before opening an eighth slice or broadening secure-development semantics prematurely",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC08",
+      "entity_level": "Slice",
+      "entity_id": "ASC-08",
+      "family": "ACO-ITS",
+      "augmented_text": "AppSec Core Slice Contract. integration trust and service to service security. Consolidated contract for the eighth AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize an eighth reusable AppSec domain slice on a technical semantic surface centered on trusted interaction between services and systems before opening a ninth slice or broadening API, identity or observability semantics prematurely",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC09",
+      "entity_level": "Slice",
+      "entity_id": "ASC-09",
+      "family": "ACO-RPR",
+      "augmented_text": "AppSec Core Slice Contract. release promotion controlled rollout and rollback readiness. Consolidated contract for the ninth AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize a ninth reusable AppSec domain slice on a pre-runtime release-control surface centered on promotion integrity, staged validation, deployment traceability, rollback readiness and controlled rollout before opening a tenth slice or broadening deploy/runtime semantics prematurely",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:SliceASC10",
+      "entity_level": "Slice",
+      "entity_id": "ASC-10",
+      "family": "ACO-SLG",
+      "augmented_text": "AppSec Core Slice Contract. security event logging audit trail and centralized logging. Consolidated contract for the tenth AppSec core slice. This file does not replace the detailed drafts; it defines the current stable reading across objectives, mapping rules, normalized components, confidence boundaries and immediate continuation criteria. Stabilize a tenth reusable AppSec domain slice on a security-logging and audit-trail surface centered on durable records, integrity, retention and centralized availability before opening an eleventh slice or broadening monitoring and response semantics prematurely",
+      "source_fields": [
+        "meta.name",
+        "meta.scope",
+        "meta.description",
+        "purpose.current_goal"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SCBI_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SCBI-001",
+      "family": "ACO-SCBI",
+      "augmented_text": "Dependency Inventory And SBOM Traceability. Maintain a build-linked inventory of third-party components and generated SBOMs for produced artifacts. A software component inventory exists per build or published artifact and remains traceable downstream. inventory and traceability",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SCBI_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SCBI-002",
+      "family": "ACO-SCBI",
+      "augmented_text": "Dependency Risk Evaluation And Policy Gating. Evaluate dependency and image risk automatically and block promotion when policy thresholds are exceeded. Dependency and image scanning results are available per execution and gating is enforced before promotion. gated analysis",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SCBI_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SCBI-003",
+      "family": "ACO-SCBI",
+      "augmented_text": "Controlled Dependency And Image Sources. Restrict dependency and image acquisition to approved and enforced sources. Unapproved repositories, registries or image origins are blocked or rejected before use or promotion. source control",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SCBI_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SCBI-004",
+      "family": "ACO-SCBI",
+      "augmented_text": "Build Definition And Execution Integrity. Define builds as reviewed code and execute them through controlled, deterministic pipeline mechanisms. Pipeline logic is versioned, reviewable and not mutable through unaudited manual paths. trusted build definition",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SCBI_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SCBI-005",
+      "family": "ACO-SCBI",
+      "augmented_text": "Release Promotion And Human Approval Integrity. Promotion between environments must respect explicit gates, including human approval for irreversible actions. Promotion gates are enforced and irreversible actions are not executed without governed approval. gated promotion",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SCBI_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SCBI-006",
+      "family": "ACO-SCBI",
+      "augmented_text": "Artifact Attestation And Provenance Integrity. Produced artifacts must carry verifiable provenance and, where required, cryptographic signature or attestation evidence. Downstream consumers can verify who built the artifact, from what source, under what pipeline execution, and whether integrity assertions hold. attestable release",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SCBI_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SCBI-007",
+      "family": "ACO-SCBI",
+      "augmented_text": "Container Image Supply Integrity. Published container images must originate from approved bases, carry traceable inventory, and be promotable only under trusted supply-chain controls. Image supply is constrained, reviewable and traceable from base image to published artifact. trusted image supply",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IAT_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IAT-001",
+      "family": "ACO-IAT",
+      "augmented_text": "Authentication Strength And Identity Assurance. Require strong and context-appropriate authentication for privileged or sensitive access, including MFA, brute-force resistance, federation support and step-up controls where needed. Sensitive access does not proceed under weak identity assurance and repeated abusive login attempts are throttled or blocked. strong authentication enforced",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IAT_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IAT-002",
+      "family": "ACO-IAT",
+      "augmented_text": "Authorization Policy Integrity And Least Privilege. Maintain explicit authorization policy and identity-to-permission binding under least-privilege constraints, including role-based and attribute-based decisions where appropriate. Access decisions remain policy-driven, bounded by least privilege and reviewable against the intended access model. least privilege and policy enforcement",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IAT_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IAT-003",
+      "family": "ACO-IAT",
+      "augmented_text": "Access Revocation And Privilege Lifecycle Integrity. Grant, change and revocation of access must propagate predictably across identities, roles and active sessions, with reviewable records for high-risk access changes. Removed access stops working promptly and access lifecycle changes can be traced, reviewed and challenged. immediate revocation and review",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IAT_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IAT-004",
+      "family": "ACO-IAT",
+      "augmented_text": "Session And Token Trust Boundaries. Sessions and tokens must be unguessable, transported securely, bounded in scope and lifetime, and revalidated or revoked when client context materially changes. Session identifiers and tokens remain difficult to replay or misuse outside their intended trust context and time bounds. bounded and trustworthy sessions",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IAT_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IAT-005",
+      "family": "ACO-IAT",
+      "augmented_text": "API Caller Trust And Service Boundary Enforcement. API and service boundaries must authenticate callers, enforce authorization decisions and reject anonymous or invalid requests consistently at the boundary layer. API consumers are trusted only through explicit caller identity and enforced access policy at service or gateway entry points. authenticated service boundary",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IAT_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IAT-006",
+      "family": "ACO-IAT",
+      "augmented_text": "Access Abuse Detection And Auditability. Access surfaces must emit sufficient telemetry to detect abuse, prove rejected access and audit externally visible calls with reviewable context. Rate limits, access denials and external-call activity are visible enough to support operational review and post-event investigation. access abuse telemetry",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IAT_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IAT-007",
+      "family": "ACO-IAT",
+      "augmented_text": "Identity And Access Control Integrity. Identity assurance, authorization policy, access revocation, session trust and API boundary enforcement must operate as one coherent access-control surface. Principal identity, granted privilege, active session state and API caller enforcement remain mutually consistent under grant, use and revocation conditions. coherent identity access surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ATB_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ATB-001",
+      "family": "ACO-ATB",
+      "augmented_text": "Architecture Baseline And Decision Traceability. Maintain a versioned architecture baseline, explicit architectural decisions and approved reusable patterns so that the intended design remains traceable over time. Material architectural choices are documented, reviewable and linked to the current architecture baseline rather than living only in implicit team memory. traceable architecture baseline",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ATB_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ATB-002",
+      "family": "ACO-ATB",
+      "augmented_text": "Trust Boundary Clarity And Protected Data Flows. Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point. Trust boundaries and critical flows are made explicit enough that boundary assumptions and protection points can be reviewed and challenged. explicit trust boundaries",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ATB_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ATB-003",
+      "family": "ACO-ATB",
+      "augmented_text": "External Exposure Justification And Boundary Mediation. Minimize externally exposed components and require explicit technical justification and mediation controls for every remaining exposure. Public or cross-boundary exposure exists only when justified and is protected through explicit gateway, proxy, WAF, ACL or equivalent mediation controls. justified external exposure",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ATB_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ATB-004",
+      "family": "ACO-ATB",
+      "augmented_text": "Technical Segmentation And Sensitive Domain Isolation. Separate sensitive domains, environments and integration paths through technical isolation controls that are documented and reviewable. Movement and interaction between sensitive zones are constrained by architecture-level segmentation rather than by informal convention alone. enforceable domain isolation",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ATB_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ATB-005",
+      "family": "ACO-ATB",
+      "augmented_text": "Architecture Review And Change Trigger Discipline. Subject meaningful architecture changes to explicit review, risk-proportional approval and disciplined change-trigger criteria. Architecture review is repeatable, proportionate and re-triggered when significant change occurs, rather than being a one-time ceremony. disciplined architecture review",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ATB_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ATB-006",
+      "family": "ACO-ATB",
+      "augmented_text": "Architectural Topology Validation And Pattern Conformance. Validate topology and architecture conformance automatically where feasible, using checks that compare the intended structure with approved patterns and constraints. Architecture drift or invalid topology can be detected through repeatable validation rather than only through manual interpretation. automatable architecture validation",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ATB_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ATB-007",
+      "family": "ACO-ATB",
+      "augmented_text": "Secure Architecture Governance And Boundary Integrity. Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture surface. The architecture remains explicit, reviewable, justified and technically bounded as the system evolves. coherent secure architecture surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TSV_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TSV-001",
+      "family": "ACO-TSV",
+      "augmented_text": "Risk-Proportional Security Testing Strategy. Maintain an explicit, risk-proportional security testing strategy that defines test types, cadence, ownership, coverage thresholds and acceptance criteria for each risk tier. Security testing effort is selected deliberately by risk rather than ad hoc, and coverage deviations are visible enough to review and challenge. explicit risk based testing strategy",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TSV_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TSV-002",
+      "family": "ACO-TSV",
+      "augmented_text": "Static Analysis Signal Quality And Baseline Governance. Operate static analysis with managed rule profiles, critical-surface coverage discipline and explicit false-positive baseline governance. Static-analysis results remain useful enough to support release decisions because coverage, noise and rule scope are controlled deliberately. governed static analysis signal",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TSV_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TSV-003",
+      "family": "ACO-TSV",
+      "augmented_text": "Security Finding Triage And Correction Closure. Security-test findings must be triaged, tracked to correction, constrained by severity-based closure targets and revalidated or formally excepted when timely correction is not achieved. Testing findings do not disappear into noise; they remain reviewable through correction, retest or explicit exception handling. governed security finding closure",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TSV_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TSV-004",
+      "family": "ACO-TSV",
+      "augmented_text": "Reproducible Security Test Evidence And Build Traceability. Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that produced it. Reported test results can be reinterpreted and trusted later without relying on memory or ad hoc reruns. reproducible build linked test evidence",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TSV_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TSV-005",
+      "family": "ACO-TSV",
+      "augmented_text": "Staged Dynamic Validation And Release Gate Discipline. Dynamic and behavior-sensitive security testing in staging must run under explicit gate policy before promotion, with clear distinction between blocking conditions, alert-only signals and approved overrides. Promotion decisions reflect deliberate interpretation of staged security-test results rather than unchecked pipeline completion alone. gated staged security validation",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TSV_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TSV-006",
+      "family": "ACO-TSV",
+      "augmented_text": "Specialized Empirical Testing Depth And Regression Assurance. Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where component risk or input complexity justifies it. High-risk behaviors are not left to generic scanning alone, and corrected vulnerabilities are defended against recurrence through focused regression and specialized test depth. deep empirical security testing",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TSV_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TSV-007",
+      "family": "ACO-TSV",
+      "augmented_text": "Security Testing And Empirical Assurance Integrity. Testing strategy, signal quality, finding closure, reproducible evidence, staged validation and specialized empirical testing must operate as one coherent security-assurance surface. Security testing is risk-directed, reproducible and decision-relevant across build, staging and corrective feedback loops. coherent security testing surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-001",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Modeling Scope And Trigger Discipline. Apply threat modeling at the right risk levels and re-trigger it when architectural change, new exposure or relevant risk events make the previous model stale. Threat modeling is not ad hoc; it is applied when materially needed and revisited when important change invalidates previous assumptions. threat modeling applied when required",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-002",
+      "family": "ACO-TMR",
+      "augmented_text": "Architecture-Grounded Threat Representation. Represent the current architecture, trust boundaries and critical flows explicitly enough that threat analysis is grounded in the real system rather than in vague assumptions. The threat model is tied to explicit DFDs, trust boundaries and flow assumptions that can be reviewed and challenged. architecture grounded threat model",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-003",
+      "family": "ACO-TMR",
+      "augmented_text": "Structured Threat Analysis Method Discipline. Use a declared structured method with minimum coverage discipline so that threat analysis remains repeatable, comparable and appropriate to risk context. The chosen threat-analysis method is explicit, consistently applied and broad enough to cover the critical model elements. structured threat analysis method",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-004",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Disposition, Risk Acceptance And Ownership. Every identified threat must carry explicit disposition, rationale, owner and linked control or compensation, including formal risk acceptance where mitigation is not chosen. Threats are not left undecided; they remain governed through explicit ownership, disposition and accepted-risk records where applicable. explicit threat disposition and ownership",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-005",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat-To-Mitigation And Validation Traceability. Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable without manual reconstruction. The path from identified threat to implemented control and validating evidence remains explicit enough to review and challenge. traceable threat mitigation chain",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-006",
+      "family": "ACO-TMR",
+      "augmented_text": "Independent Review And Threat Model Lifecycle Governance. Threat models must be versioned, reviewed independently at the right release moments and kept under lifecycle discipline rather than treated as one-time documents. Threat-model review and update become governed lifecycle events with auditable evidence and go-live impact when required. governed threat model review lifecycle",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-007",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Modeling And Risk Governance Integrity. Threat-model scope, grounded representation, structured method, disposition, traceability and independent review must operate as one coherent threat-governance surface. Threat modeling remains current, reviewable and action-linked across architecture change, mitigation planning and release governance. coherent threat modeling surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_TMR_008",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-TMR-008",
+      "family": "ACO-TMR",
+      "augmented_text": "Security Requirements Lifecycle Management. Security requirements are identified from internal and external sources, documented, communicated to all relevant stakeholders (including third parties), maintained as traceable artefacts throughout the SDLC, and continuously updated as regulatory, threat, and business contexts evolve. The organization maintains a living portfolio of security requirements derived from regulations, standards, threat models, and business needs. Requirements are communicated to development teams and third-party suppliers, translated into verifiable criteria, and monitored for completeness and currency. living security requirements portfolio exists",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SPC_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SPC-001",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Leak Prevention And Hardcoded-Secret Exclusion. Prevent secret material from being embedded in source code, repositories and other uncontrolled surfaces, and detect leakage before promotion or release. Secret exposure is blocked or surfaced early enough that secrets do not persist unnoticed in the delivery path. no uncontrolled secret exposure",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SPC_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SPC-002",
+      "family": "ACO-SPC",
+      "augmented_text": "Protected Secret Storage And Controlled Retrieval. Store secret material only in protected secret-management surfaces and retrieve it through controlled mechanisms rather than through embedded or broadly exposed configuration. Secrets are not treated as ordinary configuration and remain separated from code and uncontrolled distribution channels. protected secret storage only",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SPC_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SPC-003",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Rotation And Expiry Discipline. Keys, credentials and other secret material must rotate on defined cadence or trigger and must not remain critical without bounded lifetime or renewal discipline. Secret material does not persist indefinitely without review, expiry control or renewal evidence. bounded secret lifetime",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SPC_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SPC-004",
+      "family": "ACO-SPC",
+      "augmented_text": "Operational Identity Binding And Short-Lived Credentials. Pipeline, workload and deploy identities must be explicitly bound to the task they perform and should prefer short-lived credentials over static shared secrets. Operational identity use remains attributable, bounded and less dependent on long-lived shared secrets. bounded operational identity use",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SPC_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SPC-005",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces. Secret material and operational identities must be isolated by environment, execution surface and workload boundary so that compromise or misuse does not propagate broadly. Secret use remains partitioned enough that one surface does not automatically expose others. isolated secret usage surfaces",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SPC_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SPC-006",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Change Auditability And Governance. Material changes to secret configuration, rotation state and operational-identity binding must remain reviewable and attributable through auditable records. Secret governance does not depend on opaque configuration drift or informal operator memory. auditable secret change governance",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SPC_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SPC-007",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Handling And Operational Identity Integrity. Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coherent secret-handling surface. Secret material remains protected, bounded and governable across code, pipeline, workload and deploy contexts. coherent secret handling surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-001",
+      "family": "ACO-IVF",
+      "augmented_text": "External Input Contract Validation. Validate external inputs for presence, type, format and minimum contract conformance at application and integration entry points before processing begins. Malformed or unexpected external inputs are rejected early and consistently rather than being processed optimistically. external input contracts are enforced",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-002",
+      "family": "ACO-IVF",
+      "augmented_text": "Schema, Type And Allowlist Discipline. Constrain structured payloads and enumerated parameters through explicit schema, type and allowlist semantics rather than permissive parsing or blacklist-only defenses. Only explicitly accepted shapes and values are processed, and malformed structured inputs fail deterministically. schema and allowlist controls are explicit",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-003",
+      "family": "ACO-IVF",
+      "augmented_text": "Injection-Resistant Input Handling And Dangerous Pattern Exclusion. Input-handling paths must avoid dangerous execution and injection patterns and use safe query, rendering and parsing primitives instead of permissive or context-blind constructs. Injection-prone and dangerous input-handling constructs are blocked or replaced before they become production behavior. dangerous input patterns are excluded",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-004",
+      "family": "ACO-IVF",
+      "augmented_text": "Validation Before Internal Use And Trust Crossing. Validate data before business logic, persistence or downstream invocation so that internally consumed or forwarded data never becomes trusted merely by arrival. Data is not treated as trusted just because it crossed one boundary successfully; downstream use still depends on explicit validation discipline. pre use validation is enforced",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-005",
+      "family": "ACO-IVF",
+      "augmented_text": "Controlled Failure And Non-Revealing Client Error Surface. Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and internal detail leakage. Error behavior blocks unsafe continuation without teaching attackers about internal implementation, resource state or sensitive context. failures are controlled and non revealing",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-006",
+      "family": "ACO-IVF",
+      "augmented_text": "Centralized Error Handling And Sensitive Error Logging Hygiene. Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets or sensitive data in error records. Error handling behaves consistently across the system and error logs retain operational value without exposing sensitive information. centralized error governance is effective",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-007",
+      "family": "ACO-IVF",
+      "augmented_text": "Input Validation And Safe Failure Integrity. External input validation, schema discipline, injection resistance, pre-use validation, controlled failure, centralized safe error handling and context-aware output rendering must operate as one coherent input/output trust-boundary surface. Untrusted inputs are constrained, dangerous handling patterns are excluded, failures remain safe enough to support resilient AppSec behavior without overexposure, and outputs are rendered safely for their consumption context. coherent input output trust boundary surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_IVF_008",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-IVF-008",
+      "family": "ACO-IVF",
+      "augmented_text": "Context-Aware Output Encoding And Rendering Safety. Untrusted or dynamically composed data emitted to a rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP headers) must be encoded or escaped according to that context so that data cannot change the structure, semantics or trust posture of the output. Output boundaries do not allow data to escape its intended interpretation context; cross-site scripting, JSON/JS injection, URL-protocol abuse, header injection and content-sniffing-based interpretation drift are blocked at the rendering surface. context aware output encoding is applied at rendering boundaries",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ITS_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ITS-001",
+      "family": "ACO-ITS",
+      "augmented_text": "Authenticated Service Interaction And Machine Identity Binding. Machine-to-machine interactions must authenticate peer services through explicit trusted identities, mutual authentication or secure bounded tokens at boundary entry points. Cross-service calls are accepted only from authenticated peers with an explicit and reviewable trust basis. authenticated machine interaction",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ITS_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ITS-002",
+      "family": "ACO-ITS",
+      "augmented_text": "Secure Transport And Insecure Protocol Exclusion. Service interactions must use secure transport with valid certificates and approved protocol versions, while insecure transport options are explicitly disabled or rejected. Cross-system traffic remains protected in transit and insecure protocol fallback is not available by accident. secure transport is enforced",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ITS_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ITS-003",
+      "family": "ACO-ITS",
+      "augmented_text": "Message Integrity And Authorized Peer Validation. Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations. Messages cannot be trusted solely because they reached the receiver, and unauthorized peers are rejected with reviewable evidence. integrity and peer validation are enforced",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ITS_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ITS-004",
+      "family": "ACO-ITS",
+      "augmented_text": "Boundary-Mediated External Exposure And Integration Path Control. Externally exposed endpoints and cross-boundary integration paths must be minimized, justified and mediated through explicit boundary controls rather than informal exposure. Exposure exists only where justified, and interaction paths are controlled through gateways, proxies, ACLs, segmentation or equivalent boundary mediation. exposure and paths are boundary controlled",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ITS_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ITS-005",
+      "family": "ACO-ITS",
+      "augmented_text": "Integration Security Review And Contract Assurance. Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to risk. New or changed integrations are not accepted on trust alone and their security expectations remain documented, reviewable and challengeable. integrations are reviewed and conditioned",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ITS_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ITS-006",
+      "family": "ACO-ITS",
+      "augmented_text": "External Interaction Auditability. External calls and integration outcomes must be logged with enough trustworthy context to support review and accountability without turning the slice into full operational monitoring. Material external interactions remain traceable enough to support AppSec review, troubleshooting and audit without requiring the whole monitoring stack to define the slice. external interactions are traceable",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_ITS_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-ITS-007",
+      "family": "ACO-ITS",
+      "augmented_text": "Integration Trust And Service Interaction Assurance. Service-to-service trust, secure transport, message integrity, boundary mediation, integration review and external interaction auditability must operate as one coherent interaction-trust surface. Cross-boundary interactions are trusted only through explicit technical and reviewable controls rather than implicit network reachability or informal integration conventions. coherent integration trust surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-001",
+      "family": "ACO-RPR",
+      "augmented_text": "Release Authorization And Irreversible Change Accountability. Production release of irreversible change must require explicit accountable authorization rather than silent automatic promotion. Production change has an identifiable approving authority and a reviewable decision point before irreversible action occurs. accountable release authorization",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-002",
+      "family": "ACO-RPR",
+      "augmented_text": "Verified Artifact Promotion. Only artifacts with verified identity, signature or provenance should be promoted into production release paths. Promotion decisions are bound to attributable artifacts rather than to unverifiable binaries or mutable outputs. verified artifacts only",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-003",
+      "family": "ACO-RPR",
+      "augmented_text": "Pre-Promotion Security Gates And Staging Assurance. Promotion must remain conditional on explicit pre-promotion security gates and a meaningful staging validation step before production release. Promotion is blocked when required gates fail and staging remains a real assurance step rather than a ceremonial environment. promotion is gated and prevalidated",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-004",
+      "family": "ACO-RPR",
+      "augmented_text": "End-to-End Deployment Traceability. Every deployment must remain traceable from authorization and pipeline context to the exact artifact, commit and target environment. Incidents and reviews can be traced back to the deployed artifact and approval context without ambiguous release history. deployment traceability is complete",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-005",
+      "family": "ACO-RPR",
+      "augmented_text": "Tested Rollback Readiness And Reversibility. Rollback paths must be predefined, tested and time-bounded so that release reversal is a real capability rather than an untested hope. Reversal of harmful change can be executed under known constraints and verified recovery timing. rollback is realistic and tested",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-006",
+      "family": "ACO-RPR",
+      "augmented_text": "Controlled Rollout And Blast-Radius Containment. High-impact releases should use progressive rollout and explicit containment controls so that unsafe change can be limited without immediate full rollback. Critical deployments can be introduced gradually and contained before they affect the whole production surface. rollout is progressive and contained",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-007",
+      "family": "ACO-RPR",
+      "augmented_text": "Release Promotion And Reversible Rollout Assurance. Release authorization, verified artifact promotion, gated staging, deployment traceability, rollback readiness and controlled rollout must operate as one coherent release-control surface. Production promotion remains attributable, bounded and reversible enough to reduce the security impact of unsafe change before runtime incident handling becomes necessary. coherent release control surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_008",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-008",
+      "family": "ACO-RPR",
+      "augmented_text": "Secure Defaults And Hardened Baseline Selection. Security-relevant components should start from secure defaults or an explicitly hardened baseline rather than from permissive or unsafe baseline settings. New deployments and new configurations do not inherit unsafe default posture without explicit review. secure default or hardened baseline exists",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_009",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-009",
+      "family": "ACO-RPR",
+      "augmented_text": "Security-Relevant Configuration Integrity And Override Control. Security-relevant configuration must remain protected from uncontrolled change, injection or silent override across build, deploy and runtime preparation surfaces. Configuration affecting security posture remains attributable and cannot be changed casually without leaving reviewable evidence. controlled security relevant configuration changes",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_RPR_010",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-RPR-010",
+      "family": "ACO-RPR",
+      "augmented_text": "Baseline Review, Exception Visibility And Change Discipline. Baseline changes, deviations and approved exceptions should be reviewed, visible and bounded so that hardening posture does not erode silently. The project can distinguish approved deviation from unmanaged drift and can review whether the current baseline still matches intended security posture. reviewable baseline change and exception record",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SLG_001",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SLG-001",
+      "family": "ACO-SLG",
+      "augmented_text": "Critical Security Event Coverage And Catalog Discipline. Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity. Critical security events are defined, implemented and reviewable as a deliberate event set rather than as incidental logging. critical events are defined and present",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SLG_002",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SLG-002",
+      "family": "ACO-SLG",
+      "augmented_text": "Structured Audit Fields And Machine-Readable Log Shape. Security logs must use consistent structured fields and machine-readable formats so that audit records remain complete, parseable and comparable across sources. Audit entries carry the minimum required fields and remain machine-consumable across components and environments. log shape is structured and complete",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SLG_003",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SLG-003",
+      "family": "ACO-SLG",
+      "augmented_text": "Log Integrity Protection And Access Discipline. Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable safeguards. Security records remain trustworthy enough that unauthorized alteration is blocked or made evident. logs are tamper resistant",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SLG_004",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SLG-004",
+      "family": "ACO-SLG",
+      "augmented_text": "Audit Record Retention And Lifecycle Governance. Audit logs must be retained, archived and purged under explicit lifecycle rules that satisfy security and regulatory expectations. Security records remain available for the required period and their lifecycle is governed rather than accidental. log lifecycle is governed",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SLG_005",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SLG-005",
+      "family": "ACO-SLG",
+      "augmented_text": "Centralized Log Ingestion And Source Accountability. Security logs must be ingested centrally with source accountability so that review does not depend on fragile local host access or ad hoc collection. Central log visibility exists by source and application, and ingestion becomes reviewable rather than implicit. centralized ingestion is real",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SLG_006",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SLG-006",
+      "family": "ACO-SLG",
+      "augmented_text": "Logging Pipeline Health And Silent-Failure Visibility. Failures in log generation or forwarding must become visible so that absence of security records is itself reviewable rather than silently accepted. Logging pipeline degradation is detectable and reviewable before it undermines auditability completely. logging failures are visible",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACO_SLG_007",
+      "entity_level": "ControlObjective",
+      "entity_id": "ACO-SLG-007",
+      "family": "ACO-SLG",
+      "augmented_text": "Security Logging And Audit Trail Assurance. Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as one coherent security-logging surface. Security-relevant records remain present, trustworthy and reviewable enough to support AppSec assurance without requiring the whole operational monitoring program to define the slice. coherent security logging surface",
+      "source_fields": [
+        "name",
+        "statement",
+        "expected_outcome",
+        "verification_posture"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SCBI_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SCBI-001",
+      "family": "ACO-SCBI",
+      "augmented_text": "Build-Linked SBOM Generation. Generate and retain SBOMs as first-class outputs of build or image publication flows. integrity traceability and records. inventory",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SCBI_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SCBI-002",
+      "family": "ACO-SCBI",
+      "augmented_text": "Automated Dependency And Image Risk Gating. Run automated composition and vulnerability checks and use them as promotion gates. validation and analysis. verification",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SCBI_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SCBI-003",
+      "family": "ACO-SCBI",
+      "augmented_text": "Approved Source And Registry Governance. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. policy and gate enforcement. approval",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SCBI_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SCBI-004",
+      "family": "ACO-SCBI",
+      "augmented_text": "Pipeline Definition As Reviewed Code. Keep build and release logic versioned, reviewable and deterministic. governance and review. build",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SCBI_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SCBI-005",
+      "family": "ACO-SCBI",
+      "augmented_text": "Governed Promotion And Release Approval. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. approval",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SCBI_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SCBI-006",
+      "family": "ACO-SCBI",
+      "augmented_text": "Artifact Signature And Provenance Validation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SCBI_007",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SCBI-007",
+      "family": "ACO-SCBI",
+      "augmented_text": "Trusted Container Image Supply. Build, select and promote images only through trusted, traceable and policy-governed supply paths. policy and gate enforcement. approval",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IAT_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IAT-001",
+      "family": "ACO-IAT",
+      "augmented_text": "Strong Authentication And Step-Up Enforcement. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. identity and trust control. authentication",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IAT_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IAT-002",
+      "family": "ACO-IAT",
+      "augmented_text": "Least-Privilege Authorization Governance. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. identity and trust control. authorization",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IAT_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IAT-003",
+      "family": "ACO-IAT",
+      "augmented_text": "Access Review And Timely Revocation. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. identity and trust control. revocation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IAT_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IAT-004",
+      "family": "ACO-IAT",
+      "augmented_text": "Bounded Session And Token Management. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. identity and trust control. session management",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IAT_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IAT-005",
+      "family": "ACO-IAT",
+      "augmented_text": "Authenticated API Boundary Enforcement. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. gateway enforcement",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IAT_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IAT-006",
+      "family": "ACO-IAT",
+      "augmented_text": "Access Abuse Monitoring And Audit Trail. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. audit",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ATB_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ATB-001",
+      "family": "ACO-ATB",
+      "augmented_text": "Architecture Baseline Definition. Define and keep a secure architecture baseline explicit, versioned and reusable. governance and review. baseline",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ATB_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ATB-002",
+      "family": "ACO-ATB",
+      "augmented_text": "Architectural Decision And Solution Traceability. Keep ADRs and solution-level control traceability attached to the architecture rather than implicit in implementation only. governance and review. documentation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ATB_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ATB-003",
+      "family": "ACO-ATB",
+      "augmented_text": "Trust-Boundary And Flow Review. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ATB_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ATB-004",
+      "family": "ACO-ATB",
+      "augmented_text": "External Exposure And Boundary Mediation Design. Justify externally exposed surfaces and define the mediation controls that protect them. policy and gate enforcement. mediation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ATB_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ATB-005",
+      "family": "ACO-ATB",
+      "augmented_text": "Architecture Review And Approval Governance. Run formal architecture review and approval with risk-proportional gates and evidence. governance and review. review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ATB_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ATB-006",
+      "family": "ACO-ATB",
+      "augmented_text": "Architecture Change Trigger Discipline. Re-trigger architecture review when meaningful change thresholds are crossed. governance and review. review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ATB_007",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ATB-007",
+      "family": "ACO-ATB",
+      "augmented_text": "Automatable Topology And Pattern Validation. Validate topology and architecture conformance automatically where patterns and constraints are explicit enough. validation and analysis. validation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TSV_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TSV-001",
+      "family": "ACO-TSV",
+      "augmented_text": "Risk-Based Security Test Planning. Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface. governance and review. strategy",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TSV_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TSV-002",
+      "family": "ACO-TSV",
+      "augmented_text": "Governed Static Analysis Execution. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. validation and analysis. static analysis",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TSV_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TSV-003",
+      "family": "ACO-TSV",
+      "augmented_text": "Findings Triage, SLA And Retest Closure. Triage testing findings, track them to correction and close them only through retest or formal exception. governance and review. finding governance",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TSV_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TSV-004",
+      "family": "ACO-TSV",
+      "augmented_text": "Reproducible Test Evidence Management. Keep reports, execution context and build linkage reproducible enough for later review and audit. integrity traceability and records. evidence management",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TSV_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TSV-005",
+      "family": "ACO-TSV",
+      "augmented_text": "Staged Dynamic Testing And Gate Enforcement. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. validation and analysis. dynamic testing",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TSV_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TSV-006",
+      "family": "ACO-TSV",
+      "augmented_text": "Specialized Empirical Testing. Apply regression tests, offensive testing and fuzzing where deeper empirical validation is justified. validation and analysis. specialized testing",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TSV_007",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TSV-007",
+      "family": "ACO-TSV",
+      "augmented_text": "Human Review Of Security Test Signals. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. governance and review. release decision",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-001",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Model Creation And Triggered Refresh. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. governance and review. modeling",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-002",
+      "family": "ACO-TMR",
+      "augmented_text": "DFD And Trust-Boundary Grounding. Ground threat analysis in explicit DFDs, trust boundaries and current architecture assumptions. governance and review. representation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-003",
+      "family": "ACO-TMR",
+      "augmented_text": "Structured Threat Analysis Method Selection. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. methodology",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-004",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Disposition And Accepted Risk Governance. Record threat disposition, ownership and accepted-risk rationale explicitly rather than leaving identified threats undecided. governance and review. disposition",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-005",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Traceability Into Requirements And Validation. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-006",
+      "family": "ACO-TMR",
+      "augmented_text": "Independent Review And Threat Model Approval. Subject threat models to independent review, approval and go-live governance where required. governance and review. review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_007",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-007",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Model Artifact Governance. Control access, classification and retention of threat-model artifacts so lifecycle governance remains auditable. governance and review. review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_008",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-008",
+      "family": "ACO-TMR",
+      "augmented_text": "Security Requirements Identification And Derivation. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, standards, industry guidance), deriving verifiable security criteria, and documenting them in a structured requirements portfolio. Covers the \"where do requirements come from\" facet of the lifecycle. governance and review. requirements governance",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_TMR_009",
+      "entity_level": "Practice",
+      "entity_id": "ACP-TMR-009",
+      "family": "ACO-TMR",
+      "augmented_text": "Requirements Communication And Compliance Monitoring. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring external regulatory and compliance changes that affect requirements, and triggering updates to the requirements portfolio when the regulatory, threat, or business context evolves. Covers the \"where do requirements go and how do they stay current\" facet. governance and review. requirements governance",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SPC_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SPC-001",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Leak Prevention In Source And Pipeline. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. validation and analysis. discovery prevention",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SPC_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SPC-002",
+      "family": "ACO-SPC",
+      "augmented_text": "Vault-Backed Secret Storage. Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code. identity and trust control. storage",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SPC_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SPC-003",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Rotation And Renewal Discipline. Rotate, expire and renew secret material on defined cadence or trigger with attributable governance. identity and trust control. rotation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SPC_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SPC-004",
+      "family": "ACO-SPC",
+      "augmented_text": "Operational Identity Binding And OIDC Use. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. identity and trust control. identity binding",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SPC_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SPC-005",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Isolation Across Technical Surfaces. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. identity and trust control. isolation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SPC_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SPC-006",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Configuration Governance. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. governance and review. governance",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IVF_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IVF-001",
+      "family": "ACO-IVF",
+      "augmented_text": "Boundary Input Validation. Validate external inputs and malformed messages at entry points before processing continues. validation and analysis. contract validation",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IVF_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IVF-002",
+      "family": "ACO-IVF",
+      "augmented_text": "Schema And Allowlist Enforcement. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. validation and analysis. schema enforcement",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IVF_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IVF-003",
+      "family": "ACO-IVF",
+      "augmented_text": "Dangerous Pattern Exclusion. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. validation and analysis. pattern exclusion",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IVF_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IVF-004",
+      "family": "ACO-IVF",
+      "augmented_text": "Pre-Use Data Validation Discipline. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. validation and analysis. data flow guarding",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IVF_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IVF-005",
+      "family": "ACO-IVF",
+      "augmented_text": "Non-Revealing Error Surface Control. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. policy and gate enforcement. error surface control",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IVF_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IVF-006",
+      "family": "ACO-IVF",
+      "augmented_text": "Centralized Error Governance. Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable. governance and review. error governance",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_IVF_007",
+      "entity_level": "Practice",
+      "entity_id": "ACP-IVF-007",
+      "family": "ACO-IVF",
+      "augmented_text": "Context-Aware Output Encoding At Rendering Boundaries. Apply encoding or escaping appropriate to the rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP headers) at the boundary where untrusted or composed data is emitted, so structure and semantics of the output cannot be altered by data. validation and analysis. output encoding",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ITS_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ITS-001",
+      "family": "ACO-ITS",
+      "augmented_text": "Trust Boundary And Integration Review. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. governance and review. boundary review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ITS_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ITS-002",
+      "family": "ACO-ITS",
+      "augmented_text": "Machine Identity And Mutual Authentication Discipline. Bind service interactions to explicit trusted identities through mutual authentication or bounded machine tokens. identity and trust control. mutual auth",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ITS_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ITS-003",
+      "family": "ACO-ITS",
+      "augmented_text": "Transport And Protocol Hardening. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. transport hardening",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ITS_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ITS-004",
+      "family": "ACO-ITS",
+      "augmented_text": "Message Integrity And Authorized Peer Validation. Verify message integrity and accept traffic only from authorized origins and destinations. identity and trust control. integrity verification",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ITS_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ITS-005",
+      "family": "ACO-ITS",
+      "augmented_text": "Integration Contract And Change Assurance. Keep integration review, interface expectations and approval discipline explicit when trust boundaries change. governance and review. contract review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_ITS_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-ITS-006",
+      "family": "ACO-ITS",
+      "augmented_text": "External Interaction Audit Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. rollout recovery and runtime records. audit logging",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-001",
+      "family": "ACO-RPR",
+      "augmented_text": "Accountable Release Approval. Keep explicit human accountability for irreversible production promotion. governance and review. approval gate",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-002",
+      "family": "ACO-RPR",
+      "augmented_text": "Verified Artifact Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. integrity traceability and records. provenance verification",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-003",
+      "family": "ACO-RPR",
+      "augmented_text": "Pre-Promotion Gates And Staging Validation. Block promotion until required security gates pass and staging validation is completed. policy and gate enforcement. gating",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-004",
+      "family": "ACO-RPR",
+      "augmented_text": "End-to-End Deploy Traceability. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. integrity traceability and records. traceability",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-005",
+      "family": "ACO-RPR",
+      "augmented_text": "Tested Rollback Discipline. Keep rollback procedures specific, tested and time-bounded before they are needed in production. rollout recovery and runtime records. rollback",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_006",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-006",
+      "family": "ACO-RPR",
+      "augmented_text": "Progressive Rollout And Containment. Introduce high-impact change gradually and contain unsafe rollout without requiring immediate full rollback. rollout recovery and runtime records. controlled rollout",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_008",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-008",
+      "family": "ACO-RPR",
+      "augmented_text": "Define Hardened Baseline Profiles For Security-Relevant Components. Define and maintain hardened baseline profiles for security-relevant components so that new deployments start from a known secure posture. policy and gate enforcement. baseline definition",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_009",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-009",
+      "family": "ACO-RPR",
+      "augmented_text": "Review Security-Relevant Overrides Before Promotion Or Deployment. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. governance and review. override control",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_RPR_010",
+      "entity_level": "Practice",
+      "entity_id": "ACP-RPR-010",
+      "family": "ACO-RPR",
+      "augmented_text": "Record And Periodically Review Exceptions Against The Intended Baseline. Record approved deviations and periodically review whether the current baseline still matches intended security posture. integrity traceability and records. change review",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SLG_001",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SLG-001",
+      "family": "ACO-SLG",
+      "augmented_text": "Critical Event Catalog Governance. Define and maintain the security-relevant event set that must always be present in the audit trail. governance and review. event definition",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SLG_002",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SLG-002",
+      "family": "ACO-SLG",
+      "augmented_text": "Structured And Centralized Security Logging. Emit structured logs with consistent fields and central forwarding rather than fragmented local-only records. rollout recovery and runtime records. centralized ingestion",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SLG_003",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SLG-003",
+      "family": "ACO-SLG",
+      "augmented_text": "Log Integrity And Protected Access. Protect security records against tampering and uncontrolled access. integrity traceability and records. integrity protection",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SLG_004",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SLG-004",
+      "family": "ACO-SLG",
+      "augmented_text": "Log Retention And Lifecycle Governance. Govern retention, archive and purge behavior of security-relevant logs explicitly. governance and review. retention governance",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACP_SLG_005",
+      "entity_level": "Practice",
+      "entity_id": "ACP-SLG-005",
+      "family": "ACO-SLG",
+      "augmented_text": "Logging Pipeline Health Visibility. Detect when logging stops working so absence of records cannot silently destroy auditability. rollout recovery and runtime records. pipeline health",
+      "source_fields": [
+        "name",
+        "description",
+        "practice_family",
+        "local_practice_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SCBI_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SCBI-001",
+      "family": "ACO-SCBI",
+      "augmented_text": "Versioned Pipelines. Keep build and release logic versioned, reviewable and deterministic. governance and review. workflow",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SCBI_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SCBI-002",
+      "family": "ACO-SCBI",
+      "augmented_text": "Automated Security Scanners. Run automated composition and vulnerability checks and use them as promotion gates. Build, select and promote images only through trusted, traceable and policy-governed supply paths. validation and analysis. automation",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SCBI_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SCBI-003",
+      "family": "ACO-SCBI",
+      "augmented_text": "Release Promotion Gates. Separate security signal generation from approval decisions and enforce explicit release gates. policy and gate enforcement. policy",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SCBI_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SCBI-004",
+      "family": "ACO-SCBI",
+      "augmented_text": "Artifact Signing And Attestation. Attach and verify signature, attestation and provenance evidence for produced artifacts and images. integrity traceability and records. attestation",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SCBI_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SCBI-005",
+      "family": "ACO-SCBI",
+      "augmented_text": "Build And Image Inventory Generation. Generate and retain SBOMs as first-class outputs of build or image publication flows. Build, select and promote images only through trusted, traceable and policy-governed supply paths. This mechanism is visible in current manual practices and artifacts, but it is not yet strongly represented in the semantic-layer mechanism catalog. integrity traceability and records. inventory",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SCBI_006",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SCBI-006",
+      "family": "ACO-SCBI",
+      "augmented_text": "Registry Allowlisting And Approved Source Enforcement. Limit acquisition and promotion to approved repositories, registries and trusted base-image sources. Technical controls that restrict dependency and image acquisition to approved repositories and registries. Includes registry proxy with allowlisting, Kubernetes admission controllers that reject unapproved images, package manager configuration for approved sources. Tools: Artifactory/Nexus proxy, OPA/Gatekeeper admission policies. policy and gate enforcement. source enforcement",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IAT_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IAT-001",
+      "family": "ACO-IAT",
+      "augmented_text": "Authentication And Federation Protocols. Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. identity protocol",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IAT_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IAT-002",
+      "family": "ACO-IAT",
+      "augmented_text": "Access Policy Enforcement. Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. policy and gate enforcement. policy engine",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IAT_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IAT-003",
+      "family": "ACO-IAT",
+      "augmented_text": "Periodic Review And Access Audit. Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. governance and review. telemetry",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IAT_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IAT-004",
+      "family": "ACO-IAT",
+      "augmented_text": "Short-Lived Token Controls. Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules. The current semantic anchor comes mostly from adjacent operational-identity material, so this mechanism is useful but not yet a perfect manual fit for user-session semantics. identity and trust control. token control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IAT_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IAT-005",
+      "family": "ACO-IAT",
+      "augmented_text": "API Gateway Mutual Authentication. Authenticate callers and enforce authorization decisions consistently at API and service boundaries. identity and trust control. gateway",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IAT_006",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IAT-006",
+      "family": "ACO-IAT",
+      "augmented_text": "Structured Logging And Effective Configuration Recording. Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable. rollout recovery and runtime records. telemetry",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ATB_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ATB-001",
+      "family": "ACO-ATB",
+      "augmented_text": "Versioned Diagrams And ADR Records. Define and keep a secure architecture baseline explicit, versioned and reusable. Keep ADRs and solution-level control traceability attached to the architecture rather than implicit in implementation only. governance and review. documentation",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ATB_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ATB-002",
+      "family": "ACO-ATB",
+      "augmented_text": "Trust-Boundary And DFD Modeling. Review trust boundaries, critical integrations and protected data flows explicitly during architecture work. governance and review. boundary model",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ATB_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ATB-003",
+      "family": "ACO-ATB",
+      "augmented_text": "Boundary Mediation Controls. Justify externally exposed surfaces and define the mediation controls that protect them. The current semantic anchor is narrower than the full exposure-mediation problem, but it is the clearest existing mechanism anchor in the repo. policy and gate enforcement. mediation",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ATB_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ATB-004",
+      "family": "ACO-ATB",
+      "augmented_text": "Architecture Review Gates. Run formal architecture review and approval with risk-proportional gates and evidence. Re-trigger architecture review when meaningful change thresholds are crossed. Formal architecture review gates are visible in current requirements and practices, but they are not yet materialized as a strong semantic mechanism in the current mechanism catalog. governance and review. review gate",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ATB_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ATB-005",
+      "family": "ACO-ATB",
+      "augmented_text": "Automated Topology Validation Jobs. Validate topology and architecture conformance automatically where patterns and constraints are explicit enough. The repo has direct requirement and practice support for automatable topology validation, but no clean semantic mechanism entry for it yet. validation and analysis. automated validation",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TSV_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TSV-001",
+      "family": "ACO-TSV",
+      "augmented_text": "Integrated Security Scanners. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. Apply regression tests, offensive testing and fuzzing where deeper empirical validation is justified. validation and analysis. scanner",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TSV_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TSV-002",
+      "family": "ACO-TSV",
+      "augmented_text": "Test Execution Surfaces. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. Apply regression tests, offensive testing and fuzzing where deeper empirical validation is justified. validation and analysis. test orchestrator",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TSV_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TSV-003",
+      "family": "ACO-TSV",
+      "augmented_text": "CI/CD Gate And Release Promotion. Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface. Keep reports, execution context and build linkage reproducible enough for later review and audit. Run dynamic security testing in staging and connect its outcomes to explicit promotion gates. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. policy and gate enforcement. gate",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TSV_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TSV-004",
+      "family": "ACO-TSV",
+      "augmented_text": "Findings Workflow And Exception Governance. Triage testing findings, track them to correction and close them only through retest or formal exception. Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria. The repo clearly expresses findings triage, exception handling and decision review in requirements and practices, but not yet as a clean semantic mechanism family. governance and review. triage workflow",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TSV_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TSV-005",
+      "family": "ACO-TSV",
+      "augmented_text": "Static Analysis Profile Management. Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations. This anchor is narrower than the full problem of baseline governance and false-positive management, but it is the closest current semantic fit. validation and analysis. baseline",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-001",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Representation Models. Ground threat analysis in explicit DFDs, trust boundaries and current architecture assumptions. governance and review. representation model",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-002",
+      "family": "ACO-TMR",
+      "augmented_text": "Structured Threat Analysis Frameworks. Apply an explicit threat-analysis method with minimum coverage discipline appropriate to the risk context. governance and review. modeling framework",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-003",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Model Versioning Controls. Create threat models when required and refresh them when architectural change or risk trigger conditions make the current model stale. Control access, classification and retention of threat-model artifacts so lifecycle governance remains auditable. integrity traceability and records. versioning",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-004",
+      "family": "ACO-TMR",
+      "augmented_text": "Explicit Threat Disposition Register. Record threat disposition, ownership and accepted-risk rationale explicitly rather than leaving identified threats undecided. governance and review. governance recording",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-005",
+      "family": "ACO-TMR",
+      "augmented_text": "Threat Mitigation Linkage Controls. Keep explicit links from identified threats into mitigations, backlog work and validation evidence. integrity traceability and records. traceability control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_006",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-006",
+      "family": "ACO-TMR",
+      "augmented_text": "Reviewer Accountability And Consistency Gates. Subject threat models to independent review, approval and go-live governance where required. The current semantic anchor is narrower than the full review-governance problem, but it is enough to support a first normalized mechanism here. governance and review. gate",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_007",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-007",
+      "family": "ACO-TMR",
+      "augmented_text": "Requirements Registry And Derivation Traceability. Process for identifying security requirements from internal sources (policies, risk assessments, threat models) and external sources (regulations, standards, industry guidance), deriving verifiable security criteria, and documenting them in a structured requirements portfolio. Covers the \"where do requirements come from\" facet of the lifecycle. Structured requirements database or registry that captures each requirement's origin (regulation, standard, threat model, policy), its derivation chain to verifiable criteria, and its coverage status across the SDLC. Tools: requirements management platforms (Jira, Azure DevOps, DOORS), traceability matrices, threat-to-requirement linkage. governance and review. requirements registry",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_TMR_008",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-TMR-008",
+      "family": "ACO-TMR",
+      "augmented_text": "Compliance Monitoring And Regulatory Change Feeds. Process for communicating security requirements to all relevant stakeholders (development teams, third-party suppliers, acquirers), monitoring external regulatory and compliance changes that affect requirements, and triggering updates to the requirements portfolio when the regulatory, threat, or business context evolves. Covers the \"where do requirements go and how do they stay current\" facet. Automated or semi-automated monitoring of external regulatory and compliance changes that affect the organization's security requirements. Includes regulatory change alerting, compliance drift detection, and stakeholder notification workflows. Tools: compliance monitoring dashboards, regulatory intelligence feeds, GRC platforms, supplier communication workflows. governance and review. compliance monitoring",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SPC_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SPC-001",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Management Systems. Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline. Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. identity and trust control. vault",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SPC_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SPC-002",
+      "family": "ACO-SPC",
+      "augmented_text": "OIDC-Based Operational Identity. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. identity and trust control. workload identity",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SPC_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SPC-003",
+      "family": "ACO-SPC",
+      "augmented_text": "Short-Lived Credential Controls. Rotate, expire and renew secret material on defined cadence or trigger with attributable governance. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. identity and trust control. short lived credential",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SPC_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SPC-004",
+      "family": "ACO-SPC",
+      "augmented_text": "Secret Scope And Binding Controls. Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible. Separate secret use by environment, workload and execution surface so compromise does not propagate broadly. Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance. The repo has strong requirement and practice support for scoped secret use and operational identity binding, but this still exceeds the current semantic mechanism catalog. policy and gate enforcement. policy control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IVF_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IVF-001",
+      "family": "ACO-IVF",
+      "augmented_text": "Code Review For Input And Error Discipline. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable. governance and review. review",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IVF_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IVF-002",
+      "family": "ACO-IVF",
+      "augmented_text": "Static Rulepacks And Security Linters. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs. The repo clearly expresses dangerous-pattern detection and validation automation through practices and evidence, but the semantic mechanism catalog is still weak for this family. validation and analysis. rulepack",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IVF_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IVF-003",
+      "family": "ACO-IVF",
+      "augmented_text": "Schema And Contract Validators. Validate external inputs and malformed messages at entry points before processing continues. Constrain structured payloads and accepted values through explicit schema, type and allowlist checks. Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival. Schema and payload-validation semantics are strong in the requirement and evidence surfaces, but are not yet cleanly materialized in the current semantic mechanism catalog. validation and analysis. schema validator",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IVF_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IVF-004",
+      "family": "ACO-IVF",
+      "augmented_text": "Centralized Error Translation And Redaction. Keep client-visible failures controlled, generic and resistant to information leakage or enumeration. Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable. The requirements strongly imply handler centralization and redaction control, but the repo does not yet expose a stable reusable mechanism family for them. policy and gate enforcement. centralized handler",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_IVF_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-IVF-005",
+      "family": "ACO-IVF",
+      "augmented_text": "Context-Aware Encoder Selection And Application. Apply encoding or escaping appropriate to the rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP headers) at the boundary where untrusted or composed data is emitted, so structure and semantics of the output cannot be altered by data. Encoder library or framework primitive that selects the encoder appropriate to the rendering context (HTML element, attribute, JavaScript string, JSON value, URL component, CSS, HTTP header) and applies it at the output boundary. Includes safe-rendering DOM APIs (e.g., textContent, createTextNode) and trusted-types / output-sink hardening. validation and analysis. context encoder",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ITS_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ITS-001",
+      "family": "ACO-ITS",
+      "augmented_text": "API Gateway With Mutual Authentication. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Bind service interactions to explicit trusted identities through mutual authentication or bounded machine tokens. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. identity and trust control. gateway",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ITS_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ITS-002",
+      "family": "ACO-ITS",
+      "augmented_text": "Trust Boundary Models. Review trust boundaries and integration paths explicitly before accepting exposure or interface changes. Keep integration review, interface expectations and approval discipline explicit when trust boundaries change. governance and review. review gate",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ITS_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ITS-003",
+      "family": "ACO-ITS",
+      "augmented_text": "Transport Security Controls. Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations. The requirement surface is strong for TLS, certificates and protocol restrictions, but the current semantic mechanism catalog does not yet expose a clean reusable family for them. identity and trust control. transport control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ITS_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ITS-004",
+      "family": "ACO-ITS",
+      "augmented_text": "Message Integrity And Authorized Peer Policies. Verify message integrity and accept traffic only from authorized origins and destinations. Message signatures, integrity checks and authorized origin/destination controls are materially present in requirements, but still weakly materialized in the current mechanism catalog. policy and gate enforcement. allowlist control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_ITS_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-ITS-005",
+      "family": "ACO-ITS",
+      "augmented_text": "Structured External Call Logging. Record external calls with enough trustworthy context to support audit and review without turning into full monitoring. The repo clearly expresses interaction logging through requirements and artifacts, but the current mechanism catalog does not yet expose a stable interaction-logging mechanism family distinct from broader monitoring. rollout recovery and runtime records. logging control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-001",
+      "family": "ACO-RPR",
+      "augmented_text": "Release Promotion Controls. Keep explicit human accountability for irreversible production promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. Block promotion until required security gates pass and staging validation is completed. policy and gate enforcement. promotion control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-002",
+      "family": "ACO-RPR",
+      "augmented_text": "Approval Gates And Separation Of Signal From Promotion Decision. Keep explicit human accountability for irreversible production promotion. Block promotion until required security gates pass and staging validation is completed. The requirement and practice surfaces are strong for approval gates, but the current semantic mechanism catalog does not yet expose a stable gate mechanism family here. policy and gate enforcement. approval gate",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-003",
+      "family": "ACO-RPR",
+      "augmented_text": "Provenance And Signature Verification At Promotion. Promote only artifacts whose identity, signature or provenance has been verified at release time. The repo has strong artifact support for provenance and signatures, but the deploy-time verification mechanism is not yet cleanly separated in the mechanism catalog. integrity traceability and records. provenance check",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-004",
+      "family": "ACO-RPR",
+      "augmented_text": "Rollback And Containment Controls. Keep rollback procedures specific, tested and time-bounded before they are needed in production. Introduce high-impact change gradually and contain unsafe rollout without requiring immediate full rollback. Feature flags, rollback paths and controlled rollout strategies are clear in practices, but still weakly materialized as reusable mechanisms. rollout recovery and runtime records. rollout control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-005",
+      "family": "ACO-RPR",
+      "augmented_text": "Deployment Pipeline Traceability And Audit Controls. Keep release decisions, artifacts, environments and pipeline context traceable across every deployment. Pipeline instrumentation that records artifact provenance, environment state, configuration applied, and approval decisions at each deployment stage. Includes deploy manifests, environment snapshots, promotion logs. Tools: CI/CD audit logs, Docker/K8s deploy manifests, GitOps state records. integrity traceability and records. pipeline traceability",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_008",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-008",
+      "family": "ACO-RPR",
+      "augmented_text": "Baseline Configuration Template Or Policy Bundle. Define and maintain hardened baseline profiles for security-relevant components so that new deployments start from a known secure posture. Reusable baseline configuration template or policy bundle that encodes the intended hardened starting posture for security-relevant components. policy and gate enforcement. baseline template",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_009",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-009",
+      "family": "ACO-RPR",
+      "augmented_text": "Gate Or Policy Check For Prohibited Or Unsafe Overrides. Review security-relevant configuration overrides before promotion or deployment to prevent uncontrolled change to security posture. Automated or gated policy check that blocks prohibited or unsafe overrides of security-relevant configuration before promotion. validation and analysis. policy control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_RPR_010",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-RPR-010",
+      "family": "ACO-RPR",
+      "augmented_text": "Change Review Control For Security-Relevant Baseline Deviations. Record approved deviations and periodically review whether the current baseline still matches intended security posture. Change review control that ensures baseline deviations and approved exceptions are visible, attributable and periodically reviewed. integrity traceability and records. review control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SLG_001",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SLG-001",
+      "family": "ACO-SLG",
+      "augmented_text": "Machine-Readable Structured Logging. Emit structured logs with consistent fields and central forwarding rather than fragmented local-only records. validation and analysis. format control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SLG_002",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SLG-002",
+      "family": "ACO-SLG",
+      "augmented_text": "Central Log Ingestion And Normalization. Emit structured logs with consistent fields and central forwarding rather than fragmented local-only records. The repo is explicit about centralized ingestion and SIEM forwarding in practices and requirements, but the current semantic mechanism catalog is still thin for this family. rollout recovery and runtime records. ingestion control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SLG_003",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SLG-003",
+      "family": "ACO-SLG",
+      "augmented_text": "Log Integrity And Access Controls. Protect security records against tampering and uncontrolled access. Integrity, tamper evidence and access restrictions are strongly present in requirements, but not yet cleanly materialized as reusable mechanisms. integrity traceability and records. integrity control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SLG_004",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SLG-004",
+      "family": "ACO-SLG",
+      "augmented_text": "Logging Failure Visibility Controls. Detect when logging stops working so absence of records cannot silently destroy auditability. Logging-pipeline failure visibility is strong in the requirement surface, but still weakly materialized in the current mechanism catalog. rollout recovery and runtime records. health control",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SLG_005",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SLG-005",
+      "family": "ACO-SLG",
+      "augmented_text": "Security Event Catalog And Coverage Verification. Define and maintain the security-relevant event set that must always be present in the audit trail. A documented security event catalog (structured YAML/JSON or wiki) specifying which events must be emitted, combined with automated checks that verify catalog completeness against actual log output. Tools: SIEM rules, log coverage tests in CI/CD, OWASP Logging Cheat Sheet as reference. validation and analysis. coverage verification",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    },
+    {
+      "entity_iri": "ac:ACM_SLG_006",
+      "entity_level": "Mechanism",
+      "entity_id": "ACM-SLG-006",
+      "family": "ACO-SLG",
+      "augmented_text": "Log Retention Lifecycle Management Controls. Govern retention, archive and purge behavior of security-relevant logs explicitly. Automated retention policies, archive workflows, and scheduled purge mechanisms for security-relevant logs. Includes SIEM retention rules, S3/storage lifecycle policies, automated archive-to-cold-storage. Tools: SIEM retention configuration, cloud storage lifecycle rules. governance and review. lifecycle management",
+      "source_fields": [
+        "name",
+        "supports_practices->Practice.description (aggregated)",
+        "note",
+        "mechanism_family",
+        "local_mechanism_type"
+      ],
+      "rule_version": "1.0"
+    }
+  ]
+}

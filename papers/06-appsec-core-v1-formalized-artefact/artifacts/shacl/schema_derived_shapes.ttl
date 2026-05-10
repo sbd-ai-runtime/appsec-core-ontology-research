@@ -1,0 +1,354 @@
+@prefix ac: <https://securitybydesign.dev/ontology/appsec-core/v1#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ac:AppSecCoreV1ShapeSet a sh:NodeShape ;
+    sh:name "AppSecCoreV1ShapeSet" ;
+    sh:description "Bounded SHACL shape set for the AppSec Core v1.0 formal cut." ;
+    sh:message "Validates the slice and first-class instance surface emitted by the AppSec Core v1.0 formal workbench." .
+
+ac:SliceShape a sh:NodeShape ;
+    sh:targetClass ac:Slice ;
+    sh:name "SliceShape" ;
+    sh:description "Validates slice registry instances in the bounded AppSec Core v0 formal cut." ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Human-readable canonical label for the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:shortLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:diagramLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:slice_id ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^ASC-[0-9]{2}$" ;
+        sh:description "Stable slice identifier." ;
+    ] ;
+    sh:property [
+        sh:path ac:scope_key ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Canonical scope key for the slice." ;
+    ] ;
+    sh:property [
+        sh:path ac:objective_family_code ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^ACO-[A-Z]+$" ;
+        sh:description "Objective family code attached to the slice." ;
+    ] ;
+    sh:property [
+        sh:path ac:current_control_mode ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "dual_control_surface" "multi_control_convergent_surface" "single_broad_control_surface" "split_control_surface" ) ;
+        sh:description "Current control packaging mode declared in the slice registry." ;
+    ] ;
+    sh:property [
+        sh:path ac:contract_path ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^ontology/appsec-core-.*\\.yaml$" ;
+        sh:description "Relative path to the governing slice contract." ;
+    ] 
+    .
+
+ac:ControlObjectiveShape a sh:NodeShape ;
+    sh:targetClass ac:ControlObjective ;
+    sh:name "ControlObjectiveShape" ;
+    sh:description "reusable_domain_constraint_or_assurance_goal" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Human-readable canonical label for the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:shortLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:diagramLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:objective_id ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^ACO-[A-Z]+-[0-9]{3}$" ;
+        sh:description "Stable canonical identifier." ;
+    ] ;
+    sh:property [
+        sh:path ac:belongsToSlice ;
+        sh:class ac:Slice ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Slice membership in the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:hasObjectiveKind ;
+        sh:class ac:ObjectiveKind ;
+        sh:maxCount 1 ;
+        sh:description "Optional objective kind binding when the bounded export is enriched." ;
+    ] ;
+    sh:property [
+        sh:path ac:hasObjectiveType ;
+        sh:class ac:ObjectiveType ;
+        sh:maxCount 1 ;
+        sh:description "Optional objective type binding when the bounded export is enriched." ;
+    ] ;
+    sh:property [
+        sh:path ac:objective_realized_by_practice ;
+        sh:class ac:Practice ;
+        sh:minCount 1 ;
+        sh:description "Each ControlObjective must be constitutively linked to at least one practice." ;
+    ] ;
+    sh:property [
+        sh:path ac:objective_implemented_by_mechanism ;
+        sh:class ac:Mechanism ;
+        sh:minCount 1 ;
+        sh:description "Each ControlObjective must be constitutively linked to at least one mechanism." ;
+    ] ;
+    sh:property [
+        sh:path ac:objective_expects_artifact ;
+        sh:class ac:Artifact ;
+        sh:description "Optional stable cross-entity relation in the bounded model." ;
+    ] ;
+    sh:property [
+        sh:path ac:objective_verified_by_evidence_pattern ;
+        sh:class ac:EvidencePattern ;
+        sh:description "Optional stable cross-entity relation in the bounded model." ;
+    ] 
+    .
+
+ac:PracticeShape a sh:NodeShape ;
+    sh:targetClass ac:Practice ;
+    sh:name "PracticeShape" ;
+    sh:description "reusable_human_or_process_practice_that_realizes_objectives" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Human-readable canonical label for the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:shortLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:diagramLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:practice_id ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^ACP-[A-Z]+-[0-9]{3}$" ;
+        sh:description "Stable canonical identifier." ;
+    ] ;
+    sh:property [
+        sh:path ac:belongsToSlice ;
+        sh:class ac:Slice ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Slice membership in the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:hasPracticeFamily ;
+        sh:class ac:PracticeFamily ;
+        sh:maxCount 1 ;
+        sh:description "Optional practice family binding when the bounded export is enriched." ;
+    ] 
+    .
+
+ac:MechanismShape a sh:NodeShape ;
+    sh:targetClass ac:Mechanism ;
+    sh:name "MechanismShape" ;
+    sh:description "concrete_technical_or_process_means_that_implements_practices_or_objectives" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Human-readable canonical label for the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:shortLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:diagramLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:mechanism_id ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^ACM-[A-Z]+-[0-9]{3}$" ;
+        sh:description "Stable canonical identifier." ;
+    ] ;
+    sh:property [
+        sh:path ac:belongsToSlice ;
+        sh:class ac:Slice ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Slice membership in the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:hasMechanismFamily ;
+        sh:class ac:MechanismFamily ;
+        sh:maxCount 1 ;
+        sh:description "Optional mechanism family binding when the bounded export is enriched." ;
+    ] 
+    .
+
+ac:ArtifactShape a sh:NodeShape ;
+    sh:targetClass ac:Artifact ;
+    sh:name "ArtifactShape" ;
+    sh:description "control_relevant_or_evidence_bearing_output_used_for_review_traceability_and_assurance" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Human-readable canonical label for the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:shortLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:diagramLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:artifact_id ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^ACA-[A-Z]+-[0-9]{3}$" ;
+        sh:description "Stable canonical identifier." ;
+    ] ;
+    sh:property [
+        sh:path ac:belongsToSlice ;
+        sh:class ac:Slice ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Slice membership in the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:hasCanonicalArtifactRole ;
+        sh:class ac:ArtifactRole ;
+        sh:maxCount 1 ;
+        sh:description "Optional artifact role binding when the bounded export is enriched." ;
+    ] ;
+    sh:property [
+        sh:path ac:artifact_supports_evidence_pattern ;
+        sh:class ac:EvidencePattern ;
+        sh:description "Optional artifact-to-evidence relation in the bounded model." ;
+    ] 
+    .
+
+ac:EvidencePatternShape a sh:NodeShape ;
+    sh:targetClass ac:EvidencePattern ;
+    sh:name "EvidencePatternShape" ;
+    sh:description "expected_evidence_shape_used_for_deterministic_review_support" ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Human-readable canonical label for the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:shortLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:diagramLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:description "Optional compact presentation label." ;
+    ] ;
+    sh:property [
+        sh:path ac:evidence_pattern_id ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Stable canonical identifier." ;
+    ] ;
+    sh:property [
+        sh:path ac:belongsToSlice ;
+        sh:class ac:Slice ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Slice membership in the bounded formal cut." ;
+    ] ;
+    sh:property [
+        sh:path ac:expectation ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Expected evidence statement." ;
+    ] ;
+    sh:property [
+        sh:path ac:validation_method ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Validation method description." ;
+    ] ;
+    sh:property [
+        sh:path ac:hasCanonicalEvidenceKind ;
+        sh:class ac:ArtifactRole ;
+        sh:maxCount 1 ;
+        sh:description "Optional canonical evidence-kind binding when evidence patterns are materialized." ;
+    ] ;
+    sh:property [
+        sh:path ac:detectableInSurface ;
+        sh:class ac:DetectableSurface ;
+        sh:description "Optional detectable surface binding when evidence patterns are materialized." ;
+    ] 
+    .

@@ -1,0 +1,160 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: security_event_logging_audit_trail_and_centralized_logging
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for security event logging, audit
+    trail integrity and centralized logging assurance.
+  target_core_draft: ontology/appsec-core-security-event-logging-audit-trail-draft.yaml
+  target_mapping_draft: ontology/appsec-core-security-event-logging-audit-trail-mapping-draft.yaml
+normalized_practices:
+  ACP-SLG-001:
+    name: Critical Event Catalog Governance
+    practice_family: governance_and_review
+    local_practice_type: event_definition
+    supports_objectives:
+      - ACO-SLG-001
+      - ACO-SLG-007
+    description: Define and maintain the security-relevant event set that must always be present in the audit trail
+  ACP-SLG-002:
+    name: Structured And Centralized Security Logging
+    practice_family: rollout_recovery_and_runtime_records
+    local_practice_type: centralized_ingestion
+    supports_objectives:
+      - ACO-SLG-002
+      - ACO-SLG-005
+      - ACO-SLG-007
+    description: Emit structured logs with consistent fields and central forwarding rather than fragmented local-only records
+  ACP-SLG-003:
+    name: Log Integrity And Protected Access
+    practice_family: integrity_traceability_and_records
+    local_practice_type: integrity_protection
+    supports_objectives:
+      - ACO-SLG-003
+      - ACO-SLG-007
+    description: Protect security records against tampering and uncontrolled access
+  ACP-SLG-004:
+    name: Log Retention And Lifecycle Governance
+    practice_family: governance_and_review
+    local_practice_type: retention_governance
+    supports_objectives:
+      - ACO-SLG-004
+      - ACO-SLG-007
+    description: Govern retention, archive and purge behavior of security-relevant logs explicitly
+  ACP-SLG-005:
+    name: Logging Pipeline Health Visibility
+    practice_family: rollout_recovery_and_runtime_records
+    local_practice_type: pipeline_health
+    supports_objectives:
+      - ACO-SLG-006
+      - ACO-SLG-007
+    description: Detect when logging stops working so absence of records cannot silently destroy auditability
+normalized_mechanisms:
+  ACM-SLG-001:
+    name: Machine-Readable Structured Logging
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: format_control
+    source_semantic_ids:
+      - sem:mechanism:formato-legivel-por-maquina-ex-json
+    supports_practices:
+      - ACP-SLG-002
+  ACM-SLG-002:
+    name: Central Log Ingestion And Normalization
+    mechanism_family: rollout_recovery_and_runtime_records
+    local_mechanism_type: ingestion_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-SLG-002
+    note: >
+      The repo is explicit about centralized ingestion and SIEM forwarding in
+      practices and requirements, but the current semantic mechanism catalog is
+      still thin for this family.
+  ACM-SLG-003:
+    name: Log Integrity And Access Controls
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: integrity_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-SLG-003
+    note: >
+      Integrity, tamper evidence and access restrictions are strongly present
+      in requirements, but not yet cleanly materialized as reusable mechanisms.
+  ACM-SLG-004:
+    name: Logging Failure Visibility Controls
+    mechanism_family: rollout_recovery_and_runtime_records
+    local_mechanism_type: health_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-SLG-005
+    note: >
+      Logging-pipeline failure visibility is strong in the requirement surface,
+      but still weakly materialized in the current mechanism catalog.
+  ACM-SLG-005:
+    name: Security Event Catalog And Coverage Verification
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: coverage_verification
+    supports_practices:
+      - ACP-SLG-001
+    note: >
+      A documented security event catalog (structured YAML/JSON or wiki)
+      specifying which events must be emitted, combined with automated
+      checks that verify catalog completeness against actual log output.
+      Tools: SIEM rules, log coverage tests in CI/CD, OWASP Logging
+      Cheat Sheet as reference.
+  ACM-SLG-006:
+    name: Log Retention Lifecycle Management Controls
+    mechanism_family: governance_and_review
+    local_mechanism_type: lifecycle_management
+    supports_practices:
+      - ACP-SLG-004
+    note: >
+      Automated retention policies, archive workflows, and scheduled purge
+      mechanisms for security-relevant logs. Includes SIEM retention rules,
+      S3/storage lifecycle policies, automated archive-to-cold-storage.
+      Tools: SIEM retention configuration, cloud storage lifecycle rules.
+normalized_artifacts:
+  ACA-SLG-001:
+    source_artifact_id: ART-log-stream-b67ee06f7e
+    canonical_role: operational_record
+    local_role: log_record
+    supports_objectives:
+      - ACO-SLG-001
+      - ACO-SLG-002
+      - ACO-SLG-003
+      - ACO-SLG-004
+      - ACO-SLG-005
+      - ACO-SLG-007
+  ACA-SLG-002:
+    source_artifact_id: ART-alert-policy-c55180d8ab
+    canonical_role: configuration
+    local_role: alert_policy
+    supports_objectives:
+      - ACO-SLG-006
+      - ACO-SLG-007
+current_manual_practice_mappings:
+  - source_practice_id: 12-monitorizacao-operacoes:classificacao-e-cobertura-de-dominios-de-monitorizacao
+    target_practice_id: ACP-SLG-001
+  - source_practice_id: 12-monitorizacao-operacoes:logging-estruturado-e-centralizado
+    target_practice_id: ACP-SLG-002
+  - source_practice_id: 12-monitorizacao-operacoes:integracao-com-siem-e-normalizacao-de-eventos
+    target_practice_id: ACP-SLG-002
+  - source_practice_id: 12-monitorizacao-operacoes:seguranca-e-integridade-de-logs
+    target_practice_id: ACP-SLG-003
+notes:
+  practice_surface_strength:
+    note: >
+      This slice has a stronger practice surface than its thin artifact surface
+      might initially suggest.
+  artifact_surface_limit:
+    note: >
+      The current artifact catalog is narrow here, so several expected logging
+      governance artifacts remain explicit gaps.
+  boundary_read:
+    note: >
+      Alerting, incident response and behavioral detection remain bridge-only
+      consumers of this slice rather than central semantics.
+open_questions:
+  - Which future artifact should become the primary anchor for critical-event catalogs and retention policy evidence once the artifact taxonomy expands?
+  - Should `ACA-SLG-002` remain inside this slice as a support configuration artifact, or later share part of its role with a future alerting slice?

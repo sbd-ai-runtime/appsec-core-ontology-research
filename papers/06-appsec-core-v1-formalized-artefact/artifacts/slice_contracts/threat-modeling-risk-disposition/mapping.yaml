@@ -1,0 +1,127 @@
+meta:
+  name: AppSec Core Slice Mapping Draft
+  version: '0.1'
+  status: working_draft
+  scope: threat_modeling_risk_disposition_and_mitigation_traceability
+  description: >
+    Draft mapping layer between current SbD-ToE manual controls and requirements
+    and the normalized objectives proposed in the threat-modeling/risk-
+    disposition AppSec core slice draft.
+  source_manual_ontology: ontology/sbdtoe-ontology.yaml
+  target_core_draft: ontology/appsec-core-threat-modeling-risk-disposition-draft.yaml
+  source_notes:
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-5-candidate-evaluation.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-threat-modeling-risk-disposition.md
+mapping_conventions:
+  primary:
+    meaning: The manual object is mainly explained by this normalized objective
+  secondary:
+    meaning: The manual object materially contributes to this objective but is not best treated as its main anchor
+  composite_target_usage:
+    meaning: Composite objectives may be primary landing zones for broad manual control clusters, but requirement-level mappings should prefer atomic objectives when a direct semantic fit exists
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+  threat_catalog_warning:
+    meaning: The slice models threat-governance semantics, not a normalized reusable catalog of specific threats
+manual_control_mappings:
+  - source_control_id: CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    source_control_name: Threat modeling e gestao de risco
+    target_objectives:
+      - objective_id: ACO-TMR-007
+        strength: primary
+        rationale: The current threat-modeling control is broad enough to require a composite landing zone at control level
+      - objective_id: ACO-TMR-001
+        strength: secondary
+        rationale: Scope and trigger discipline are a direct sub-surface of the broader control
+      - objective_id: ACO-TMR-002
+        strength: secondary
+        rationale: Architecture-grounded representation is part of the same control envelope even if not the whole story
+      - objective_id: ACO-TMR-003
+        strength: secondary
+        rationale: Structured threat-analysis method choice and minimum coverage are part of the control's meaning
+      - objective_id: ACO-TMR-004
+        strength: secondary
+        rationale: Risk disposition and explicit acceptance are a major governed outcome of the same control
+      - objective_id: ACO-TMR-005
+        strength: secondary
+        rationale: Traceability from threat to mitigation and validation is a key downstream consequence of the control
+      - objective_id: ACO-TMR-006
+        strength: secondary
+        rationale: Independent review and lifecycle governance are part of the same threat-modeling governance cluster
+manual_requirement_mappings:
+  - source_requirement_id: THR-001
+    source_bundle: 03-threat-modeling
+    source_requirement_name: Threat modeling formal em aplicacoes L2+ e alteracoes arquiteturais significativas
+    target_objectives:
+      - objective_id: ACO-TMR-001
+        strength: primary
+        rationale: This is the clearest direct anchor for scope and trigger discipline
+  - source_requirement_id: THR-002
+    source_bundle: 03-threat-modeling
+    source_requirement_name: Arquitetura actual representada com DFDs e trust boundaries explicitos
+    target_objectives:
+      - objective_id: ACO-TMR-002
+        strength: primary
+        rationale: This requirement is directly about architecture-grounded threat representation
+  - source_requirement_id: THR-003
+    source_bundle: 03-threat-modeling
+    source_requirement_name: Metodologia estruturada aplicada com cobertura minima garantida
+    target_objectives:
+      - objective_id: ACO-TMR-003
+        strength: primary
+        rationale: The direct semantic center is structured method discipline and minimum coverage expectations
+  - source_requirement_id: THR-004
+    source_bundle: 03-threat-modeling
+    source_requirement_name: Disposicao formal de cada ameaca identificada com owner
+    target_objectives:
+      - objective_id: ACO-TMR-004
+        strength: primary
+        rationale: Explicit disposition, ownership and linked compensations are the main meaning of this requirement
+  - source_requirement_id: THR-005
+    source_bundle: 03-threat-modeling
+    source_requirement_name: Rastreabilidade ameaca para requisito backlog validacao
+    target_objectives:
+      - objective_id: ACO-TMR-005
+        strength: primary
+        rationale: This is the strongest direct anchor for threat-to-mitigation and validation traceability
+      - objective_id: ACO-TMR-004
+        strength: secondary
+        rationale: The traceability chain also presumes explicit prior disposition of the threat
+  - source_requirement_id: THR-006
+    source_bundle: 03-threat-modeling
+    source_requirement_name: Threat model versionado e actualizado dentro do ciclo ou apos trigger
+    target_objectives:
+      - objective_id: ACO-TMR-006
+        strength: primary
+        rationale: Versioning and update cadence belong first to lifecycle governance
+      - objective_id: ACO-TMR-001
+        strength: secondary
+        rationale: The same requirement also materially reinforces trigger discipline
+  - source_requirement_id: THR-007
+    source_bundle: 03-threat-modeling
+    source_requirement_name: Revisao independente por AppSec antes de go-live em L2 e L3
+    target_objectives:
+      - objective_id: ACO-TMR-006
+        strength: primary
+        rationale: Independent review before go-live is the clearest direct anchor for review governance
+bridge_only_observations:
+  - source_reference: ARC-005
+    note: >
+      Threat modeling integrated into critical flows remains an important bridge
+      between the architecture slice and this slice, but architecture baseline
+      and trust-boundary semantics stay primarily in the architecture slice.
+  - source_reference: CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    note: >
+      Architecture governance is a strong upstream dependency for this slice,
+      but it should not displace threat-modeling governance as the semantic
+      center here.
+  - source_reference: TST-008
+    note: >
+      Adversarial and empirical validation later consume outputs from this slice,
+      but testing remains downstream of threat traceability rather than the main
+      center of this slice.
+open_questions:
+  - Should `THR-006` remain mainly inside lifecycle governance, or later split versioning from independent review as the slice matures?
+  - Should `THR-005` remain one traceability objective, or later split mitigation traceability from validation traceability if multiple slices begin to depend on them differently?
+  - Should `ACO-TMR-002` remain narrowly about grounded representation, or later absorb stronger architecture-review semantics once the relationship to the architecture slice is modeled more explicitly?
+  - At what point, if any, should threat-specific entities become reusable beyond threat-modeling governance without depending on weak canon-driven material?

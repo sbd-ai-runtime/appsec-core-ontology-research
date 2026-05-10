@@ -2,7 +2,8 @@
   "version": 1,
   "source_roots": {
     "knowledge_graph": "../../SecurityByDesign-TheoryOfEverything/sbd-toe-knowledge-graph",
-    "external_sources_inventory": "../../SecurityByDesign-TheoryOfEverything/ExternalSourcesInventory"
+    "external_sources_inventory": "../../SecurityByDesign-TheoryOfEverything/ExternalSourcesInventory",
+    "sbd_toe_ontology": "../../SecurityByDesign-TheoryOfEverything/sbd-toe-ontology"
   },
   "bundles": [
     {
@@ -2141,6 +2142,542 @@
           "source_repo": "external_sources_inventory",
           "source": "scripts/k_way_null_model.py",
           "dest": "papers/07-method-dsr-cycle/artifacts/scripts/cross_validation/k_way_null_model.py"
+        }
+      ]
+    },
+    {
+      "id": "paper6",
+      "description": "AppSec Core V1: A Formalized Normalization Ontology paper (P6) — v1.1-fair-baseline canonical artefactos for figshare deposit + arXiv companion bundle. Includes V1 canonical YAML (instance index + slice registry + manual mapping + consolidated + surface contract); 4-type entity schema + cross-slice vocabulary; 10 slice contracts + 30 per-slice drafts/components/mappings; V0 supporting 213 evidence pattern index; OWL TTL canonical + 3 alt-format exports (RDF/XML, JSON-LD, N-Triples); SHACL apparatus-v3 composition (6 schema-derived + 5 consumer-conformance shapes per Decision 0001 Option C) + 2 validation summary reports; SBERT v1.1 embeddings release artefact (212 entities × 384 dim L2-normalized, model sentence-transformers/all-MiniLM-L6-v2 @ c9745ed1); 14 reproducibility scripts (OWL/SHACL builders + validators + CLI + bundle helper); architecture decision record (Option C apparatus composition) + ACR decision records (ACR-001/002/004); audit trail (V0→V1 attribution + figshare inventory + P6 validation Phase A/C/D briefs); governance (CHANGELOG + FREEZE-REGISTRY + AGENTS persona + Programme Preservation Protocol + LICENSE + README). Internal canonical anchor: sbd-toe-ontology @ ontology-v1.1-fair-baseline (commit 84fe8bf; tag object 82059122d5ed94b794f6871e72016abf9519e247). Validation outcomes: bounded SHACL + pyshacl 0.31.0 both conforms=True / 0 violations across 6 shapes (CO 75 / P 69 / M 58 / A 57 / Slice 10 / EP 0); OOPS! 0 Critical / 0 Important / 2 Minor (P04 + P22 design choices documented); FOOPS!-equivalent 13/15 binary (PURL1 deferred Cycle B; OM3 DOI deferred to figshare deposit). Cumulative entity counts: 75 CO + 69 P + 58 M + 57 A = 259 typed instances across 10 AppSec methodological slices.",
+      "files": [
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-v0-instance-index.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/ontology/instance_index.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-slice-registry-v0-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/ontology/slice_registry.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-manual-mapping-v0-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/ontology/manual_mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-v0-consolidated.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/ontology/consolidated.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-v0-surface-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/ontology/surface_contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-entity-schema-v0-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/schema/entity_schema.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-cross-slice-vocabulary-v0-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/schema/cross_slice_vocabulary.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-supply-chain-build-integrity-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/supply-chain-build-integrity/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-supply-chain-build-integrity-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/supply-chain-build-integrity/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-supply-chain-build-integrity-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/supply-chain-build-integrity/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-supply-chain-build-integrity-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/supply-chain-build-integrity/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-identity-access-session-trust-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/identity-access-session-trust/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-identity-access-session-trust-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/identity-access-session-trust/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-identity-access-session-trust-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/identity-access-session-trust/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-identity-access-session-trust-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/identity-access-session-trust/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-architecture-trust-boundaries-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/architecture-trust-boundaries/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-architecture-trust-boundaries-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/architecture-trust-boundaries/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-architecture-trust-boundaries-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/architecture-trust-boundaries/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-architecture-trust-boundaries-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/architecture-trust-boundaries/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-testing-security-validation-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/testing-security-validation/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-testing-security-validation-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/testing-security-validation/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-testing-security-validation-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/testing-security-validation/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-testing-security-validation-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/testing-security-validation/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-threat-modeling-risk-disposition-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/threat-modeling-risk-disposition/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-threat-modeling-risk-disposition-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/threat-modeling-risk-disposition/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-threat-modeling-risk-disposition-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/threat-modeling-risk-disposition/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-threat-modeling-risk-disposition-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/threat-modeling-risk-disposition/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-secrets-protected-config-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/secrets-protected-config/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-secrets-protected-config-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/secrets-protected-config/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-secrets-protected-config-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/secrets-protected-config/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-secrets-protected-config-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/secrets-protected-config/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-input-validation-safe-failure-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/input-validation-safe-failure/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-input-validation-safe-failure-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/input-validation-safe-failure/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-input-validation-safe-failure-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/input-validation-safe-failure/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-input-validation-safe-failure-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/input-validation-safe-failure/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-integration-trust-service-security-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/integration-trust-service-security/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-integration-trust-service-security-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/integration-trust-service-security/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-integration-trust-service-security-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/integration-trust-service-security/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-integration-trust-service-security-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/integration-trust-service-security/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-release-promotion-controlled-rollout-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/release-promotion-controlled-rollout/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-release-promotion-controlled-rollout-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/release-promotion-controlled-rollout/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-release-promotion-controlled-rollout-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/release-promotion-controlled-rollout/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-release-promotion-controlled-rollout-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/release-promotion-controlled-rollout/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-security-event-logging-audit-trail-slice-contract.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/security-event-logging-audit-trail/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-security-event-logging-audit-trail-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/security-event-logging-audit-trail/draft.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-security-event-logging-audit-trail-components-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/security-event-logging-audit-trail/components.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-security-event-logging-audit-trail-mapping-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/slice_contracts/security-event-logging-audit-trail/mapping.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-evidence-pattern-index-v0.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/evidence_patterns/index.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/appsec-core-evidence-pattern-v0-draft.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/evidence_patterns/contract.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/02-owl/exports/appsec-core-v0-bounded-v1.ttl",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/owl/appsec_core_v1_bounded.ttl"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/02-owl/exports/alt-formats/appsec-core-v1.0.jsonld",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/owl/alt_formats/appsec-core-v1.0.jsonld"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/02-owl/exports/alt-formats/appsec-core-v1.0.nt",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/owl/alt_formats/appsec-core-v1.0.nt"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/02-owl/exports/alt-formats/appsec-core-v1.0.owl",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/owl/alt_formats/appsec-core-v1.0.owl"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/03-shacl/shapes/appsec-core-v0-shapes.ttl",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/schema_derived_shapes.ttl"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/03-shacl/shapes/consumer-conformance-shapes.ttl",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/consumer_conformance_shapes.ttl"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v0-shacl-validation-summary.json",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/validation_bounded_summary.json"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v0-shacl-validation-report.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/validation_bounded_report.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-summary.json",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/validation_pyshacl_summary.json"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-report.txt",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/validation_pyshacl_report.txt"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-results-graph.ttl",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/validation_pyshacl_results_graph.ttl"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-v2-bucket-a-summary.json",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/v2_bucket_a_summary.json"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-v2-bucket-a-report.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/v2_bucket_a_report.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-v2-bucket-b-summary.json",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/v2_bucket_b_summary.json"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-v2-bucket-b-report.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/v2_bucket_b_report.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-v2-bucket-b-fixture.ttl",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/shacl/v2_bucket_b_fixture.ttl"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/08-embeddings/augmented-text-corpus.json",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/embeddings/augmented_text_corpus.json"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/08-embeddings/embeddings-all-MiniLM-L6-v2-c9745ed1.npz",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/embeddings/embeddings.npz"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/08-embeddings/embeddings-manifest.json",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/embeddings/manifest.json"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/08-embeddings/augmentation-rule.yaml",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/embeddings/augmentation_rule.yaml"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/08-embeddings/format-conventions-snippet.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/embeddings/format_conventions_snippet.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/08-embeddings/README.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/embeddings/README.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/__init__.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/__init__.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/build_inventory.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/build_inventory.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/build_label_catalog.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/build_label_catalog.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/build_owl.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/build_owl.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/build_shacl.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/build_shacl.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/cli.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/cli.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/paths.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/paths.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/source_bundle.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/source_bundle.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/validate_pyshacl.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/validate_pyshacl.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/validate_shacl.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/validate_shacl.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/python/src/appsec_core_formalization/yaml_utils.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/yaml_utils.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "scripts/formalize_appsec_core.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/formalize_appsec_core.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "scripts/consumer_conformance_validator.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/consumer_conformance_validator.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "formal/appsec_core/08-embeddings/build-script.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/build_embeddings.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "scripts/build_paper6_bundle.py",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/scripts/build_paper6_bundle.py"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/decisions/0001-consumer-conformance-shapes-ontology-owned.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/0001_consumer_conformance_shapes_option_c.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "docs/handover/2026-04-14-acr002-tmr008-promotion.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_002_security_requirements_lifecycle.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "docs/handover/2026-04-13-v0-freeze-v1-draft.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_001_v0_freeze_v1_draft.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "docs/handover/2026-04-15-v1.0-coherence-release.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_001_v1_coherence_release.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/briefs/2026-05-05-acr004-output-rendering-slice-boundary.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_004_output_rendering_brief.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/done/2026-05-05-acr004-output-rendering-execution-close.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_004_execution_close.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/done/2026-05-05-acr004-shapes-regression-remediation.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_004_shapes_regression_remediation.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/decisions/README.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/README.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/briefs/2026-05-08-p7-pass-6-ontology-audit-delivery.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/v0_to_v1_attribution_audit.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/briefs/2026-05-08-figshare-ontology-inventory.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/figshare_ontology_inventory.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/briefs/2026-05-10-p6-ontology-validation-phase-a.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/ontology_validation_phase_a.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/done/2026-05-10-p6-ontology-validation-phase-c-close.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/ontology_validation_phase_c_close.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/done/2026-05-10-p6-ontology-validation-phase-d-close.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/ontology_validation_phase_d_close.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "agentic/briefs/2026-04-17-archon-3-paper-supply.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/archon_3_paper_supply_framing.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "ontology/v1.0/CHANGELOG.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/CHANGELOG.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "FREEZE-REGISTRY.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/FREEZE-REGISTRY.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "AGENTS.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/AGENTS.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "PROGRAMME-PRESERVATION-PROTOCOL.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/PROGRAMME-PRESERVATION-PROTOCOL.md"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "LICENSE",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/LICENSE"
+        },
+        {
+          "source_repo": "sbd_toe_ontology",
+          "source": "README.md",
+          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/README.md"
         }
       ]
     }

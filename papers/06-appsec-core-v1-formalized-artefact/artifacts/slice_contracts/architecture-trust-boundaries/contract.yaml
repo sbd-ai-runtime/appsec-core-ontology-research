@@ -1,0 +1,166 @@
+meta:
+  name: AppSec Core Slice Contract
+  version: '0.1'
+  status: working_contract
+  scope: architecture_and_trust_boundaries
+  description: >
+    Consolidated contract for the third AppSec core slice. This file does not
+    replace the detailed drafts; it defines the current stable reading across
+    objectives, mapping rules, normalized components, confidence boundaries and
+    immediate continuation criteria.
+  related_artifacts:
+    objective_draft: ontology/appsec-core-architecture-trust-boundaries-draft.yaml
+    mapping_draft: ontology/appsec-core-architecture-trust-boundaries-mapping-draft.yaml
+    components_draft: ontology/appsec-core-architecture-trust-boundaries-components-draft.yaml
+    slice_note: docs/project/working-notes/2026-04-03-appsec-core-slice-architecture-trust-boundaries.md
+    candidate_evaluation: docs/project/working-notes/2026-04-03-appsec-core-slice-3-candidate-evaluation.md
+purpose:
+  current_goal: >
+    Stabilize a third reusable AppSec domain slice on a design-time semantic
+    surface centered on architecture baseline, trust boundaries, exposure
+    control and segmentation before opening a fourth slice or pulling in
+    external-alignment frameworks.
+  non_goals:
+    - regulatory_overlay_expansion
+    - v3_audit_persistence
+    - source_provenance_transversal_layer
+    - fourth_appsec_slice
+module_position:
+  appsec_core:
+    included:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+    deferred_or_weak:
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    included:
+      - requirement_to_objective_mapping
+      - control_to_objective_mapping
+      - practice_to_normalized_practice_mapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM and SLSA stay out of this contract
+objective_set:
+  atomic_objectives:
+    - ACO-ATB-001
+    - ACO-ATB-002
+    - ACO-ATB-003
+    - ACO-ATB-004
+    - ACO-ATB-005
+    - ACO-ATB-006
+  composite_objectives:
+    - ACO-ATB-007
+  composite_rules:
+    ACO-ATB-007:
+      meaning: Composite landing zone for the broad secure-architecture governance surface
+      composed_of:
+        - ACO-ATB-001
+        - ACO-ATB-002
+        - ACO-ATB-003
+        - ACO-ATB-004
+        - ACO-ATB-005
+        - ACO-ATB-006
+      usage_rule: >
+        May remain a primary target for the broad architecture governance
+        control, but requirement-level mappings should prefer atomic objectives
+        when a direct semantic fit exists.
+mapping_rules:
+  control_level:
+    rule: Broad architecture governance controls may map primarily to composite objectives when they span baseline, boundary, review and validation concerns at once
+    examples:
+      - source_control_id: CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+        primary_target: ACO-ATB-007
+      - source_control_id: CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+        primary_targets:
+          - ACO-ATB-002
+          - ACO-ATB-004
+  requirement_level:
+    rule: Requirement mappings should prefer atomic objectives when the requirement is semantically narrow
+    examples:
+      - source_requirement_id: ARC-002
+        primary_target: ACO-ATB-003
+      - source_requirement_id: ARC-006
+        primary_target: ACO-ATB-004
+        secondary_target: ACO-ATB-002
+  practice_level:
+    rule: >
+      The architecture practice surface is good enough to support normalization,
+      but the slice still begins from requirement and control decomposition.
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+component_subset:
+  normalized_practices:
+    - ACP-ATB-001
+    - ACP-ATB-002
+    - ACP-ATB-003
+    - ACP-ATB-004
+    - ACP-ATB-005
+    - ACP-ATB-006
+    - ACP-ATB-007
+  normalized_mechanisms:
+    - ACM-ATB-001
+    - ACM-ATB-002
+    - ACM-ATB-003
+    - ACM-ATB-004
+    - ACM-ATB-005
+  normalized_artifacts:
+    - ACA-ATB-001
+    - ACA-ATB-002
+    - ACA-ATB-003
+    - ACA-ATB-004
+evidence_pattern_position:
+  current_status: supporting_inside_slice
+  meaning: >
+    EvidencePattern stays inside the slice for now as a supporting AppSec core
+    concept that helps deterministic review semantics around diagrams, review
+    evidence and validation output.
+  explicit_boundaries:
+    - it_is_not_the_v3_audit_layer
+    - it_is_not_yet_split_into_a_separate_verification_module
+    - it_is_useful_enough_to_keep_in_the_third_slice_contract
+  revisit_trigger: >
+    Revisit only after this slice stabilizes and before opening broader
+    cross-slice verification semantics.
+confidence_boundaries:
+  strong_inputs:
+    - ontology/sbdtoe-ontology.yaml
+    - data/entities/canonical_requirements_s7.json
+    - data/entities/canonical_controls.json
+    - data/entities/practices.json
+    - data/publish/semantic/mechanisms.jsonl
+  useful_but_weaker_inputs:
+    - data/entities/artifact_catalog.json
+  weak_or_deferred_inputs:
+    - data/publish/indexes/requirement_control_links.jsonl
+    - data/entities/mitigated_threats.json
+    - data/publish/semantic/signals.jsonl
+  adjacent_but_not_central:
+    - ARC-005
+    - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    - CTRL-infrastructure-infraestrutura-como-codigo-governada-5228bca905
+  rule: >
+    Normalize this slice architecture-first, use the strong `ARC` requirement
+    surface and `04-arquitetura-segura` practices confidently, but do not let
+    the currently weak materialization of architecture-specific artifacts in the
+    artifact catalog hide real gaps.
+acceptance_read:
+  stable_enough_now:
+    - the third slice has a coherent objective set
+    - the objective set distinguishes atomic and composite semantics
+    - the mapping layer encodes the main atomic/composite rule
+    - a minimum component subset exists for practices, mechanisms and artifacts
+    - the slice records architecture-artifact gaps explicitly instead of hiding them
+  not_stable_enough_yet:
+    - full architecture artifact taxonomy
+    - threat-driven slice semantics
+    - signal-driven slice semantics
+    - external alignment for the slice
+    - explicit threat-modeling integration into the slice core
+next_step:
+  recommendation: >
+    Treat the first three slices as the current method reference set and review
+    what is now truly invariant before opening a fourth slice.

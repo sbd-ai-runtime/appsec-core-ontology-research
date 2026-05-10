@@ -1,0 +1,295 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: threat_modeling_risk_disposition_and_mitigation_traceability
+  description: >
+    Fifth narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    threat modeling, risk disposition and mitigation traceability.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-threat-modeling-risk-disposition.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - raw_threat_catalog_normalization
+    - runtime_incident_response
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - modeling_scope
+    - architecture_grounding
+    - method_discipline
+    - risk_disposition
+    - mitigation_traceability
+    - review_governance
+    - threat_modeling_surface
+  included_manual_categories:
+    - THR
+  excluded_for_now:
+    - raw_threat_catalog_normalization
+    - runtime_incident_response
+    - architecture_governance_as_primary_center
+    - signal_driven_threat_semantics
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-TMR-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[modeling_scope, architecture_grounding, method_discipline, risk_disposition, mitigation_traceability, review_governance, threat_modeling_surface, security_requirements_lifecycle]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, integrity_traceability_and_records]
+      - local_practice_type: enum[modeling, representation, methodology, disposition, traceability, review]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[governance_and_review, integrity_traceability_and_records]
+      - local_mechanism_type: enum[representation_model, modeling_framework, governance_recording, traceability_control, gate, versioning]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[model, governance_record, evidence_package, configuration]
+      - local_role: enum[model, governance_record, traceability_record, configuration, review_record, evidence]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[model, governance_record, evidence_package, configuration]
+      - local_evidence_kind: enum[model, governance_record, traceability_record, review_record, evidence]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to threat-modeling and risk-disposition judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-TMR-001:
+    name: Threat Modeling Scope And Trigger Discipline
+    objective_kind: atomic
+    domain_key: modeling_scope
+    objective_type: governance
+    statement: Apply threat modeling at the right risk levels and re-trigger it when architectural change, new exposure or relevant risk events make the previous model stale
+    expected_outcome: Threat modeling is not ad hoc; it is applied when materially needed and revisited when important change invalidates previous assumptions
+    verification_posture: threat_modeling_applied_when_required
+    current_manual_control_anchors:
+      - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    current_manual_requirement_anchors:
+      - THR-001
+      - THR-006
+    expected_artifacts:
+      - ART-threat-model-3a09510d13
+    open_artifact_gap:
+      - threat_model_trigger_register_artifact
+      - threat_model_version_index_artifact
+  ACO-TMR-002:
+    name: Architecture-Grounded Threat Representation
+    objective_kind: atomic
+    domain_key: architecture_grounding
+    objective_type: preventive
+    statement: Represent the current architecture, trust boundaries and critical flows explicitly enough that threat analysis is grounded in the real system rather than in vague assumptions
+    expected_outcome: The threat model is tied to explicit DFDs, trust boundaries and flow assumptions that can be reviewed and challenged
+    verification_posture: architecture_grounded_threat_model
+    current_manual_control_anchors:
+      - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    current_manual_requirement_anchors:
+      - THR-002
+    expected_artifacts:
+      - ART-threat-model-3a09510d13
+    open_artifact_gap:
+      - threat_model_dfd_artifact
+      - trust_boundary_annotation_artifact
+  ACO-TMR-003:
+    name: Structured Threat Analysis Method Discipline
+    objective_kind: atomic
+    domain_key: method_discipline
+    objective_type: governance
+    statement: Use a declared structured method with minimum coverage discipline so that threat analysis remains repeatable, comparable and appropriate to risk context
+    expected_outcome: The chosen threat-analysis method is explicit, consistently applied and broad enough to cover the critical model elements
+    verification_posture: structured_threat_analysis_method
+    current_manual_control_anchors:
+      - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    current_manual_requirement_anchors:
+      - THR-003
+    expected_artifacts:
+      - ART-threat-model-3a09510d13
+    open_artifact_gap:
+      - methodology_declaration_artifact
+      - coverage_assertion_artifact
+  ACO-TMR-004:
+    name: Threat Disposition, Risk Acceptance And Ownership
+    objective_kind: atomic
+    domain_key: risk_disposition
+    objective_type: governance
+    statement: Every identified threat must carry explicit disposition, rationale, owner and linked control or compensation, including formal risk acceptance where mitigation is not chosen
+    expected_outcome: Threats are not left undecided; they remain governed through explicit ownership, disposition and accepted-risk records where applicable
+    verification_posture: explicit_threat_disposition_and_ownership
+    current_manual_control_anchors:
+      - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    current_manual_requirement_anchors:
+      - THR-004
+    expected_artifacts:
+      - ART-threat-model-3a09510d13
+      - ART-risk-acceptance-record-ebea5da638
+    open_artifact_gap:
+      - threat_disposition_register_artifact
+      - owner_assignment_artifact
+  ACO-TMR-005:
+    name: Threat-To-Mitigation And Validation Traceability
+    objective_kind: atomic
+    domain_key: mitigation_traceability
+    objective_type: governance
+    statement: Threats selected for mitigation must remain traceable into requirements, backlog work and validation evidence so that mitigation is verifiable without manual reconstruction
+    expected_outcome: The path from identified threat to implemented control and validating evidence remains explicit enough to review and challenge
+    verification_posture: traceable_threat_mitigation_chain
+    current_manual_control_anchors:
+      - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    current_manual_requirement_anchors:
+      - THR-005
+    expected_artifacts:
+      - ART-threat-model-3a09510d13
+      - ART-validation-evidence-79f6aaf0ec
+    open_artifact_gap:
+      - threat_traceability_matrix_artifact
+      - backlog_trace_link_artifact
+  ACO-TMR-006:
+    name: Independent Review And Threat Model Lifecycle Governance
+    objective_kind: atomic
+    domain_key: review_governance
+    objective_type: governance
+    statement: Threat models must be versioned, reviewed independently at the right release moments and kept under lifecycle discipline rather than treated as one-time documents
+    expected_outcome: Threat-model review and update become governed lifecycle events with auditable evidence and go-live impact when required
+    verification_posture: governed_threat_model_review_lifecycle
+    current_manual_control_anchors:
+      - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    current_manual_requirement_anchors:
+      - THR-006
+      - THR-007
+    expected_artifacts:
+      - ART-threat-model-3a09510d13
+      - ART-risk-acceptance-record-ebea5da638
+      - ART-pipeline-config-f8f2ba893d
+    open_artifact_gap:
+      - threat_model_review_record_artifact
+      - go_live_threat_review_gate_artifact
+  ACO-TMR-007:
+    name: Threat Modeling And Risk Governance Integrity
+    objective_kind: composite
+    domain_key: threat_modeling_surface
+    objective_type: governance
+    statement: Threat-model scope, grounded representation, structured method, disposition, traceability and independent review must operate as one coherent threat-governance surface
+    expected_outcome: Threat modeling remains current, reviewable and action-linked across architecture change, mitigation planning and release governance
+    verification_posture: coherent_threat_modeling_surface
+    composed_of:
+      - ACO-TMR-001
+      - ACO-TMR-002
+      - ACO-TMR-003
+      - ACO-TMR-004
+      - ACO-TMR-005
+      - ACO-TMR-006
+    current_manual_control_anchors:
+      - CTRL-governance-threat-modeling-e-gestao-de-risco-272c9a8ed0
+    current_manual_requirement_anchors:
+      - THR-001
+      - THR-002
+      - THR-003
+      - THR-004
+      - THR-005
+      - THR-006
+      - THR-007
+    expected_artifacts:
+      - ART-threat-model-3a09510d13
+      - ART-risk-acceptance-record-ebea5da638
+      - ART-pipeline-config-f8f2ba893d
+  ACO-TMR-008:
+    name: Security Requirements Lifecycle Management
+    objective_kind: atomic
+    domain_key: security_requirements_lifecycle
+    objective_type: governance
+    statement: >
+      Security requirements are identified from internal and external sources,
+      documented, communicated to all relevant stakeholders (including third
+      parties), maintained as traceable artefacts throughout the SDLC, and
+      continuously updated as regulatory, threat, and business contexts evolve.
+    expected_outcome: >
+      The organization maintains a living portfolio of security requirements
+      derived from regulations, standards, threat models, and business needs.
+      Requirements are communicated to development teams and third-party
+      suppliers, translated into verifiable criteria, and monitored for
+      completeness and currency.
+    verification_posture: living_security_requirements_portfolio_exists
+    adjacent_manual_surfaces:
+      - threat_modeling_risk_disposition_and_mitigation_traceability
+      - testing_security_validation_and_empirical_assurance
+      - release_promotion_controlled_rollout_and_rollback_readiness
+    relationship_to_existing:
+      - complements: ACO-TMR-003
+        note: Threat Modeling produces requirements
+      - complements: ACO-TMR-005
+        note: Traceability is the mechanism for tracking requirements
+      - distinct_from: ACO-TMR-007
+        note: Governance composite covers SDLC governance broadly; TMR-008 covers requirements specifically
+    evidence_basis:
+      cross_pilot_fit: strong_multi_source_convergence
+      sources: [SSDF_PO_1_1, SSDF_PO_1_2, SSDF_PO_1_3, SSDF_PW_1_2, SSDF_PO_4_1]
+      cross_pilot_validation: [OWASP_SAMM_D_SR, PCI_SSLC_2_1, PCI_SSLC_3_3, NIST_800_53_SA_1, NIST_800_53_SA_4, SAFECode_FPSSD]

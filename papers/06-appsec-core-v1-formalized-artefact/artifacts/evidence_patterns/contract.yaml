@@ -1,0 +1,147 @@
+meta:
+  name: AppSec Core EvidencePattern v0 Draft
+  version: '0.1'
+  status: working_draft
+  maturity: supporting_surface_entry
+  description: >
+    Shared supporting contract for EvidencePattern in AppSec Core v0. This
+    artifact promotes one explicit cross-slice read of expected evidence
+    semantics without collapsing execution binding or V3 verification records
+    into the core.
+  related_artifacts:
+    consolidated_review: ontology/appsec-core-v0-consolidated.yaml
+    surface_contract: ontology/appsec-core-v0-surface-contract.yaml
+    entity_schema: ontology/appsec-core-entity-schema-v0-draft.yaml
+    cross_slice_vocabulary: ontology/appsec-core-cross-slice-vocabulary-v0-draft.yaml
+    runtime_index: ontology/appsec-core-evidence-pattern-index-v0.yaml
+    runtime_source: data/publish/runtime/evidence_patterns.json
+    analysis_note: docs/project/working-notes/2026-04-03-appsec-core-evidence-pattern-analysis.md
+purpose:
+  current_goal: >
+    Define one explicit global EvidencePattern contract for AppSec Core v0 that
+    is strong enough for semantic review support, but still disciplined enough
+    to keep execution binding and persistent verification results outside the
+    core.
+  non_goals:
+    - introducing_mechanisminstance_into_appsec_core
+    - defining_runtime_verification_results
+    - replacing_slice_local_contracts
+    - introducing_external_alignment_evidence_semantics
+position_in_v0:
+  status: first_class_in_schema_supporting_in_operation
+  why:
+    - Control objectives are not meaningfully reviewable without expected evidence shape
+    - Artifacts are not evidence by themselves; they need interpretation
+    - AppSec Core should express what evidence is expected before V3 exists
+  boundary:
+    in_scope:
+      - expected_evidence_shape
+      - validation_method_expression
+      - expected_artifact_links
+      - requirement_and_control_traceability
+      - lightweight_detectable_surfaces
+      - slice_supporting_review_semantics
+    out_of_scope:
+      - tool_specific_execution_binding
+      - mechanism_instance
+      - persistent_finding_records
+      - verification_run_history
+      - runtime_decision_trace
+      - source_provenance_transversal_layer
+schema_read:
+  required_fields:
+    - evidence_pattern_id
+    - canonical_evidence_kind
+    - expectation
+    - validation_method
+  recommended_fields:
+    - local_evidence_kind
+    - related_objectives
+    - related_artifacts
+    - detectable_in
+    - cadence_hint
+    - responsible_roles
+    - source_requirement_id
+    - source_control_id
+  runtime_aligned_fields_stable_now:
+    - evidence_pattern_id
+    - expectation
+    - validation_method
+    - evidence_type
+    - detectable_in
+    - expected_artifact_type_ids
+    - source_requirement_id
+    - source_control_id
+    - source_bundle
+    - source_document
+  runtime_fields_not_stable_enough_yet:
+    - supported_signal_ids
+    - cadence_hint
+    - responsible_roles
+    - one_final_cross_slice_evidence_kind_enum
+normalization_rules:
+  canonical_evidence_kind_read:
+    rule: >
+      Reuse canonical artifact-role vocabulary where possible instead of
+      introducing a disconnected second taxonomy.
+    stable_candidates:
+      - configuration
+      - governance_record
+      - review_record
+      - approval_record
+      - gate_record
+      - inventory
+      - attestation
+      - report
+      - evidence_package
+      - operational_record
+      - build_definition
+      - release_artifact
+      - model
+      - validation_output
+      - binding_record
+  validation_method_read:
+    meaning: >
+      Validation method explains how expected evidence should be interpreted or
+      checked, but does not yet bind that check to one executable tool,
+      workflow or runtime configuration.
+  detectable_surface_read:
+    stable_now:
+      - ci_cd
+      - logs
+      - documentation
+      - config
+    note: >
+      These surfaces are useful low-granularity hints, but they remain
+      heuristic and should not yet be treated as a full execution-surface
+      ontology.
+relation_read:
+  stable_core_relations:
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+  informative_but_not_yet_stable:
+    - signal_supports_evidence_pattern
+  current_runtime_signal_read:
+    source: data/publish/semantic/signal_evidence_links.jsonl
+    note: >
+      Signal linkage remains external and still sparse in the current runtime,
+      but real `Signal -> EvidencePattern` links now exist. `supported_signal_ids`
+      should be treated as optional denormalized cache, not as the current
+      source of truth for review behavior.
+current_limitations:
+  - supported_signal_ids_are_not_materialized_in_current_runtime_output
+  - current_signal_evidence_links_are_real_and_improving_but_still_sparse_relative_to_total_signal_volume
+  - cadence_hint_is_sparse_and_not_cross_slice_stable_yet
+  - responsible_roles_are_sparse_and_not_cross_slice_stable_yet
+  - the_current_index_is_runtime_aligned_not_yet_full_slice_normalized
+adoption_decision:
+  for_v0:
+    - keep_EvidencePattern_in_the_core_surface_as_supporting_first_class_semantics
+    - publish_one_global_runtime_aligned_supporting_index
+    - defer_full_normalized_slice_local_evidencepattern_instance_sets
+    - defer_implementation_binding_and_V3_result_models
+next_step:
+  recommendation: >
+    Use the runtime-aligned EvidencePattern index as the v0 review surface,
+    then decide later whether fully normalized slice-local EvidencePattern
+    instance sets add enough value to justify the extra maintenance burden.

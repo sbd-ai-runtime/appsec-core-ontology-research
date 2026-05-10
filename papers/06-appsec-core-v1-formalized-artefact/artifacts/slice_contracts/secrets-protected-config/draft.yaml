@@ -1,0 +1,260 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: secret_handling_protected_configuration_and_operational_identities
+  description: >
+    Sixth narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    secret handling, protected configuration and operational identities.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-secrets-protected-config.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - full_cryptography_domain_coverage
+    - end_user_identity_and_access_control
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - secret_leak_prevention
+    - protected_secret_storage
+    - secret_rotation
+    - operational_identity
+    - secret_usage_isolation
+    - secret_change_governance
+    - secret_handling_surface
+  included_manual_categories:
+    - ENC
+    - CFG
+    - DPL
+  excluded_for_now:
+    - full_cryptography_domain_coverage
+    - end_user_identity_and_access_control
+    - runtime_secret_telemetry
+    - broad_data_protection_semantics
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-SPC-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[secret_leak_prevention, protected_secret_storage, secret_rotation, operational_identity, secret_usage_isolation, secret_change_governance, secret_handling_surface]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, identity_and_trust_control, validation_and_analysis]
+      - local_practice_type: enum[discovery_prevention, storage, rotation, identity_binding, isolation, governance]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[identity_and_trust_control, policy_and_gate_enforcement, validation_and_analysis]
+      - local_mechanism_type: enum[scanner, vault, short_lived_credential, workload_identity, policy_control, audit_control]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[configuration, binding_record, governance_record, evidence_package]
+      - local_role: enum[configuration, binding_record, governance_record, evidence, policy_record]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[configuration, binding_record, governance_record, evidence_package]
+      - local_evidence_kind: enum[configuration, binding_record, governance_record, evidence]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to secret-handling and operational-identity judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-SPC-001:
+    name: Secret Leak Prevention And Hardcoded-Secret Exclusion
+    objective_kind: atomic
+    domain_key: secret_leak_prevention
+    objective_type: preventive
+    statement: Prevent secret material from being embedded in source code, repositories and other uncontrolled surfaces, and detect leakage before promotion or release
+    expected_outcome: Secret exposure is blocked or surfaced early enough that secrets do not persist unnoticed in the delivery path
+    verification_posture: no_uncontrolled_secret_exposure
+    current_manual_control_anchors:
+      - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+    current_manual_requirement_anchors:
+      - ENC-006
+      - CFG-003
+    expected_artifacts:
+      - ART-secret-config-a2bbf228fe
+    open_artifact_gap:
+      - secret_scan_report_artifact
+      - hardcoded_secret_exception_artifact
+  ACO-SPC-002:
+    name: Protected Secret Storage And Controlled Retrieval
+    objective_kind: atomic
+    domain_key: protected_secret_storage
+    objective_type: preventive
+    statement: Store secret material only in protected secret-management surfaces and retrieve it through controlled mechanisms rather than through embedded or broadly exposed configuration
+    expected_outcome: Secrets are not treated as ordinary configuration and remain separated from code and uncontrolled distribution channels
+    verification_posture: protected_secret_storage_only
+    current_manual_control_anchors:
+      - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+    current_manual_requirement_anchors:
+      - CFG-006
+      - CFG-004
+    expected_artifacts:
+      - ART-secret-config-a2bbf228fe
+    open_artifact_gap:
+      - vault_policy_artifact
+      - secret_retrieval_policy_artifact
+  ACO-SPC-003:
+    name: Secret Rotation And Expiry Discipline
+    objective_kind: atomic
+    domain_key: secret_rotation
+    objective_type: governance
+    statement: Keys, credentials and other secret material must rotate on defined cadence or trigger and must not remain critical without bounded lifetime or renewal discipline
+    expected_outcome: Secret material does not persist indefinitely without review, expiry control or renewal evidence
+    verification_posture: bounded_secret_lifetime
+    current_manual_control_anchors:
+      - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+    current_manual_requirement_anchors:
+      - ENC-007
+    expected_artifacts:
+      - ART-secret-config-a2bbf228fe
+    open_artifact_gap:
+      - secret_rotation_record_artifact
+      - expiry_policy_artifact
+  ACO-SPC-004:
+    name: Operational Identity Binding And Short-Lived Credentials
+    objective_kind: atomic
+    domain_key: operational_identity
+    objective_type: preventive
+    statement: Pipeline, workload and deploy identities must be explicitly bound to the task they perform and should prefer short-lived credentials over static shared secrets
+    expected_outcome: Operational identity use remains attributable, bounded and less dependent on long-lived shared secrets
+    verification_posture: bounded_operational_identity_use
+    current_manual_control_anchors:
+      - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+    current_manual_requirement_anchors:
+      - DPL-006
+    expected_artifacts:
+      - ART-identity-binding-f96a2a528c
+      - ART-secret-config-a2bbf228fe
+    open_artifact_gap:
+      - short_lived_credential_record_artifact
+      - operational_identity_policy_artifact
+  ACO-SPC-005:
+    name: Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces
+    objective_kind: atomic
+    domain_key: secret_usage_isolation
+    objective_type: preventive
+    statement: Secret material and operational identities must be isolated by environment, execution surface and workload boundary so that compromise or misuse does not propagate broadly
+    expected_outcome: Secret use remains partitioned enough that one surface does not automatically expose others
+    verification_posture: isolated_secret_usage_surfaces
+    current_manual_control_anchors:
+      - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+    current_manual_requirement_anchors:
+      - CFG-006
+      - DPL-006
+    expected_artifacts:
+      - ART-secret-config-a2bbf228fe
+      - ART-identity-binding-f96a2a528c
+    open_artifact_gap:
+      - secret_scope_matrix_artifact
+      - workload_identity_isolation_artifact
+  ACO-SPC-006:
+    name: Secret Change Auditability And Governance
+    objective_kind: atomic
+    domain_key: secret_change_governance
+    objective_type: governance
+    statement: Material changes to secret configuration, rotation state and operational-identity binding must remain reviewable and attributable through auditable records
+    expected_outcome: Secret governance does not depend on opaque configuration drift or informal operator memory
+    verification_posture: auditable_secret_change_governance
+    current_manual_control_anchors:
+      - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+    current_manual_requirement_anchors:
+      - ENC-007
+      - DPL-006
+    expected_artifacts:
+      - ART-secret-config-a2bbf228fe
+      - ART-identity-binding-f96a2a528c
+    open_artifact_gap:
+      - secret_change_record_artifact
+      - secret_access_audit_artifact
+  ACO-SPC-007:
+    name: Secret Handling And Operational Identity Integrity
+    objective_kind: composite
+    domain_key: secret_handling_surface
+    objective_type: governance
+    statement: Secret leak prevention, protected storage, rotation, operational identity, usage isolation and secret-change governance must operate as one coherent secret-handling surface
+    expected_outcome: Secret material remains protected, bounded and governable across code, pipeline, workload and deploy contexts
+    verification_posture: coherent_secret_handling_surface
+    composed_of:
+      - ACO-SPC-001
+      - ACO-SPC-002
+      - ACO-SPC-003
+      - ACO-SPC-004
+      - ACO-SPC-005
+      - ACO-SPC-006
+    current_manual_control_anchors:
+      - CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9
+    current_manual_requirement_anchors:
+      - ENC-006
+      - ENC-007
+      - CFG-003
+      - CFG-006
+      - DPL-006

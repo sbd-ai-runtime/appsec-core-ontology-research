@@ -1,0 +1,139 @@
+meta:
+  name: AppSec Core Slice Mapping Draft
+  version: '0.1'
+  status: working_draft
+  scope: release_promotion_controlled_rollout_and_rollback_readiness
+  description: >
+    Draft mapping layer between current SbD-ToE manual controls and requirements
+    and the normalized objectives proposed in the release-promotion and
+    controlled-rollout AppSec core slice draft.
+  source_manual_ontology: ontology/sbdtoe-ontology.yaml
+  target_core_draft: ontology/appsec-core-release-promotion-controlled-rollout-draft.yaml
+  source_notes:
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-9-candidate-evaluation.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-release-promotion-controlled-rollout.md
+mapping_conventions:
+  primary:
+    meaning: The manual object is mainly explained by this normalized objective
+  secondary:
+    meaning: The manual object materially contributes to this objective but is not best treated as its main anchor
+  composite_target_usage:
+    meaning: Composite objectives may be primary landing zones for broad manual control clusters, but requirement-level mappings should prefer atomic objectives when a direct semantic fit exists
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+  slice_boundary_warning:
+    meaning: The slice models pre-runtime release control, not the whole deploy chapter, not secrets lifecycle and not broader runtime monitoring
+manual_control_mappings:
+  - source_control_id: CTRL-infrastructure-deploy-seguro-e-reversivel-ae204be5f0
+    source_control_name: Deploy seguro e reversivel
+    target_objectives:
+      - objective_id: ACO-RPR-007
+        strength: primary
+        rationale: The broad current deploy control is the clearest composite landing zone for release authorization, verified promotion, staging gates, rollback and controlled rollout
+      - objective_id: ACO-RPR-001
+        strength: secondary
+        rationale: Approval and irreversible release accountability are one direct sub-surface of the broad control
+      - objective_id: ACO-RPR-002
+        strength: secondary
+        rationale: Verified promotion of attributable artifacts is one direct deploy-control meaning
+      - objective_id: ACO-RPR-003
+        strength: secondary
+        rationale: Pre-promotion security gates and staging validation are part of the same release-control envelope
+      - objective_id: ACO-RPR-004
+        strength: secondary
+        rationale: End-to-end deploy traceability materially belongs inside the current deploy-control surface
+      - objective_id: ACO-RPR-005
+        strength: secondary
+        rationale: Tested rollback readiness is one of the clearest direct meanings of the current control
+      - objective_id: ACO-RPR-006
+        strength: secondary
+        rationale: Progressive rollout and impact containment are explicit direct meanings of the same control
+  - source_control_id: CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+    source_control_name: Integridade e governacao de pipelines
+    target_objectives:
+      - objective_id: ACO-RPR-002
+        strength: primary
+        rationale: Build-time provenance and signature semantics are adjacent but materially support deploy-time verified promotion
+      - objective_id: ACO-RPR-003
+        strength: secondary
+        rationale: Pipeline-driven gating remains a strong input to pre-promotion validation
+  - source_control_id: CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    source_control_name: Testes de seguranca baseados em risco
+    target_objectives:
+      - objective_id: ACO-RPR-003
+        strength: primary
+        rationale: Pre-promotion release gates materially depend on test and validation outcomes, even though testing is not the semantic center here
+manual_requirement_mappings:
+  - source_requirement_id: DPL-001
+    source_bundle: 11-deploy-seguro
+    source_requirement_name: Aprovacao formal obrigatoria antes de deploy em producao
+    target_objectives:
+      - objective_id: ACO-RPR-001
+        strength: primary
+        rationale: This is the strongest direct anchor for accountable irreversible release authorization
+  - source_requirement_id: DPL-002
+    source_bundle: 11-deploy-seguro
+    source_requirement_name: Promocao apenas de artefactos com proveniencia verificada
+    target_objectives:
+      - objective_id: ACO-RPR-002
+        strength: primary
+        rationale: This is the clearest direct anchor for verified artifact promotion at deploy time
+  - source_requirement_id: DPL-003
+    source_bundle: 11-deploy-seguro
+    source_requirement_name: Gates automaticos de seguranca como condicao de promocao
+    target_objectives:
+      - objective_id: ACO-RPR-003
+        strength: primary
+        rationale: The requirement directly expresses gated pre-promotion release control
+  - source_requirement_id: DPL-004
+    source_bundle: 11-deploy-seguro
+    source_requirement_name: Rastreabilidade end-to-end de cada deploy
+    target_objectives:
+      - objective_id: ACO-RPR-004
+        strength: primary
+        rationale: This requirement is directly about full deployment traceability from approval to deployed artifact
+  - source_requirement_id: DPL-005
+    source_bundle: 11-deploy-seguro
+    source_requirement_name: Rollback configurado testado e com SLA definido
+    target_objectives:
+      - objective_id: ACO-RPR-005
+        strength: primary
+        rationale: This requirement is the clearest direct anchor for real rollback readiness rather than theoretical reversibility
+  - source_requirement_id: DPL-007
+    source_bundle: 11-deploy-seguro
+    source_requirement_name: Validacao em staging antes de promocao a producao
+    target_objectives:
+      - objective_id: ACO-RPR-003
+        strength: primary
+        rationale: Staging validation is a direct release-gating and pre-promotion assurance requirement
+  - source_requirement_id: DPL-009
+    source_bundle: 11-deploy-seguro
+    source_requirement_name: Deploy progressivo com contencao de impacto para aplicacoes criticas
+    target_objectives:
+      - objective_id: ACO-RPR-006
+        strength: primary
+        rationale: Controlled progressive rollout and blast-radius containment are the direct semantic center here
+bridge_only_observations:
+  - source_reference: DPL-006
+    note: >
+      Short-lived deploy credentials are important, but they remain more
+      coherent as a bridge to the secrets and operational identity slice than
+      as a primary anchor for this release-control slice.
+  - source_reference: DPL-008
+    note: >
+      Active monitoring during and after deploy is important, but it belongs
+      more to broader observability and runtime-response semantics than to the
+      current pre-runtime release-control center.
+  - source_reference: ontology/appsec-core-supply-chain-build-integrity-slice-contract.yaml
+    note: >
+      Provenance and signature generation semantics remain primarily in the
+      supply-chain slice; this slice consumes them as deploy-time verification
+      inputs.
+  - source_reference: ontology/appsec-core-testing-security-validation-slice-contract.yaml
+    note: >
+      Security-test strategy and evidence remain primarily in the testing
+      slice; this slice consumes them as pre-promotion gate inputs.
+open_questions:
+  - Should future release-control semantics split staging validation from automated security gates once richer staging-specific artifacts exist?
+  - Which future artifact should become the primary anchor for deploy-trace records once the artifact taxonomy expands beyond the current generic deployment plan and operational evidence?
+  - Should progressive rollout and rollback readiness remain in one slice long-term, or later separate containment strategy from reversal capability?

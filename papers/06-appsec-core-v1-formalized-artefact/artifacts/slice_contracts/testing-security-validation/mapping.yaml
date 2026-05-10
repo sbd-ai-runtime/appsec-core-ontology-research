@@ -1,0 +1,151 @@
+meta:
+  name: AppSec Core Slice Mapping Draft
+  version: '0.1'
+  status: working_draft
+  scope: testing_security_validation_and_empirical_assurance
+  description: >
+    Draft mapping layer between current SbD-ToE manual controls and requirements
+    and the normalized objectives proposed in the testing/security-validation
+    AppSec core slice draft.
+  source_manual_ontology: ontology/sbdtoe-ontology.yaml
+  target_core_draft: ontology/appsec-core-testing-security-validation-draft.yaml
+  source_notes:
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-4-candidate-evaluation.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-testing-security-validation.md
+mapping_conventions:
+  primary:
+    meaning: The manual object is mainly explained by this normalized objective
+  secondary:
+    meaning: The manual object materially contributes to this objective but is not best treated as its main anchor
+  composite_target_usage:
+    meaning: Composite objectives may be primary landing zones for broad manual control clusters, but requirement-level mappings should prefer atomic objectives when a direct semantic fit exists
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+  v3_boundary_warning:
+    meaning: Finding history, runtime decision trace and operational-response persistence remain outside this slice even where testing semantics are adjacent
+manual_control_mappings:
+  - source_control_id: CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    source_control_name: Testes de seguranca baseados em risco
+    target_objectives:
+      - objective_id: ACO-TSV-007
+        strength: primary
+        rationale: The current testing control is broad enough to require a composite landing zone at control level
+      - objective_id: ACO-TSV-001
+        strength: secondary
+        rationale: Risk-tier strategy and coverage thresholds are a direct sub-surface of the wider control
+      - objective_id: ACO-TSV-002
+        strength: secondary
+        rationale: Managed static-analysis signal quality is one concrete expression of the broader testing-control surface
+      - objective_id: ACO-TSV-003
+        strength: secondary
+        rationale: Findings triage, correction closure and formal exceptions are part of the same testing-governance envelope
+      - objective_id: ACO-TSV-004
+        strength: secondary
+        rationale: Reproducible evidence and build linkage are required if the control is to remain reviewable and auditable
+      - objective_id: ACO-TSV-005
+        strength: secondary
+        rationale: Staged dynamic validation and gate discipline are one of the main release-facing outcomes of the control
+      - objective_id: ACO-TSV-006
+        strength: secondary
+        rationale: Offensive testing, fuzzing and security regressions are deeper testing modes that still belong to the same control cluster
+manual_requirement_mappings:
+  - source_requirement_id: TST-001
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: Estrategia formal de testes de seguranca por nivel de risco
+    target_objectives:
+      - objective_id: ACO-TSV-001
+        strength: primary
+        rationale: This is the direct strategy and risk-tier planning anchor for the slice
+  - source_requirement_id: TST-002
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: SAST com perfil de cobertura gerido e baseline de falsos positivos
+    target_objectives:
+      - objective_id: ACO-TSV-002
+        strength: primary
+        rationale: The requirement is directly about governed static-analysis signal quality, coverage and baseline management
+  - source_requirement_id: TST-003
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: Gestao formal de findings com SLA de correcao por severidade
+    target_objectives:
+      - objective_id: ACO-TSV-003
+        strength: primary
+        rationale: Findings triage, SLA discipline, correction traceability and formal exceptions are the semantic center of this requirement
+  - source_requirement_id: TST-004
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: Evidencia de testes reproduzivel, auditavel e ligada ao build
+    target_objectives:
+      - objective_id: ACO-TSV-004
+        strength: primary
+        rationale: This is the clearest direct anchor for reproducible build-linked test evidence
+  - source_requirement_id: TST-005
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: DAST integrado em ambiente de staging antes de promocao
+    target_objectives:
+      - objective_id: ACO-TSV-005
+        strength: primary
+        rationale: The requirement is fundamentally about staged dynamic validation under promotion discipline
+  - source_requirement_id: TST-006
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: Testes de regressao de seguranca para vulnerabilidades corrigidas
+    target_objectives:
+      - objective_id: ACO-TSV-006
+        strength: primary
+        rationale: Security-regression discipline is the direct semantic center of this requirement
+      - objective_id: ACO-TSV-003
+        strength: secondary
+        rationale: Regression tests also contribute materially to proving correction closure for prior findings
+  - source_requirement_id: TST-007
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: Thresholds minimos de cobertura de testes de seguranca por risco
+    target_objectives:
+      - objective_id: ACO-TSV-001
+        strength: primary
+        rationale: Coverage thresholds are best treated as part of the risk-based testing strategy rather than as an independent assurance objective
+  - source_requirement_id: TST-008
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: Testes de penetracao periodicos com escopo e metodologia definidos
+    target_objectives:
+      - objective_id: ACO-TSV-006
+        strength: primary
+        rationale: Periodic offensive testing is one of the strongest direct anchors for specialized empirical testing depth
+      - objective_id: ACO-TSV-003
+        strength: secondary
+        rationale: The requirement also materially contributes to correction closure through retest and formal remediation follow-up
+  - source_requirement_id: TST-009
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: Fuzzing sistematico em componentes de processamento de input complexo
+    target_objectives:
+      - objective_id: ACO-TSV-006
+        strength: primary
+        rationale: This is the direct specialized-testing anchor for higher-entropy input surfaces
+  - source_requirement_id: TST-010
+    source_bundle: 10-testes-seguranca
+    source_requirement_name: IAST em ambiente de staging para validacao comportamental em runtime
+    target_objectives:
+      - objective_id: ACO-TSV-005
+        strength: primary
+        rationale: IAST in staging remains best modeled here as a behavior-sensitive staged validation control before promotion
+      - objective_id: ACO-TSV-003
+        strength: secondary
+        rationale: The requirement also inherits the same managed-findings policy as other security-testing signals
+bridge_only_observations:
+  - source_reference: CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    note: >
+      Secure development and code-validation semantics are strongly adjacent to
+      this slice, but remain outside the primary mapping layer so that testing
+      and empirical assurance keep a clean boundary of their own.
+  - source_reference: VAL-001
+    note: >
+      Input-validation requirements are relevant to test design and test-target
+      selection, but they describe implementation expectations rather than the
+      testing-assurance surface itself.
+  - source_reference: API-007
+    note: >
+      Auditability of externally visible calls can later interact with testing
+      evidence, but it belongs first to the identity/access slice rather than
+      to this testing slice.
+open_questions:
+  - Should `TST-007` remain fully inside strategy, or later become its own coverage-assurance objective if multiple slices begin to depend on explicit coverage semantics?
+  - Should `TST-010` remain inside staged dynamic validation, or later split behavioral instrumentation from promotion-gate discipline?
+  - Should `TST-003` remain slice-local, or later become part of a shared cross-slice finding-governance capability without drifting into `V3`?
+  - Should `TST-008` stay inside specialized empirical testing, or later seed a more explicit adversarial-assessment slice?

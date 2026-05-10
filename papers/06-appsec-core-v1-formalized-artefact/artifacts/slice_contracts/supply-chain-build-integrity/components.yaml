@@ -1,0 +1,233 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: supply_chain_and_build_integrity
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for supply chain and build integrity.
+  target_core_draft: ontology/appsec-core-supply-chain-build-integrity-draft.yaml
+  target_mapping_draft: ontology/appsec-core-supply-chain-build-integrity-mapping-draft.yaml
+normalized_practices:
+  ACP-SCBI-001:
+    name: Build-Linked SBOM Generation
+    practice_family: integrity_traceability_and_records
+    local_practice_type: inventory
+    supports_objectives:
+      - ACO-SCBI-001
+    description: Generate and retain SBOMs as first-class outputs of build or image publication flows
+  ACP-SCBI-002:
+    name: Automated Dependency And Image Risk Gating
+    practice_family: validation_and_analysis
+    local_practice_type: verification
+    supports_objectives:
+      - ACO-SCBI-002
+    description: Run automated composition and vulnerability checks and use them as promotion gates
+  ACP-SCBI-003:
+    name: Approved Source And Registry Governance
+    practice_family: policy_and_gate_enforcement
+    local_practice_type: approval
+    supports_objectives:
+      - ACO-SCBI-003
+      - ACO-SCBI-007
+    description: Limit acquisition and promotion to approved repositories, registries and trusted base-image sources
+  ACP-SCBI-004:
+    name: Pipeline Definition As Reviewed Code
+    practice_family: governance_and_review
+    local_practice_type: build
+    supports_objectives:
+      - ACO-SCBI-004
+    description: Keep build and release logic versioned, reviewable and deterministic
+  ACP-SCBI-005:
+    name: Governed Promotion And Release Approval
+    practice_family: policy_and_gate_enforcement
+    local_practice_type: approval
+    supports_objectives:
+      - ACO-SCBI-005
+    description: Separate security signal generation from approval decisions and enforce explicit release gates
+  ACP-SCBI-006:
+    name: Artifact Signature And Provenance Validation
+    practice_family: integrity_traceability_and_records
+    local_practice_type: attestation
+    supports_objectives:
+      - ACO-SCBI-006
+      - ACO-SCBI-007
+    description: Attach and verify signature, attestation and provenance evidence for produced artifacts and images
+  ACP-SCBI-007:
+    name: Trusted Container Image Supply
+    practice_family: policy_and_gate_enforcement
+    local_practice_type: approval
+    supports_objectives:
+      - ACO-SCBI-007
+    description: Build, select and promote images only through trusted, traceable and policy-governed supply paths
+normalized_mechanisms:
+  ACM-SCBI-001:
+    name: Versioned Pipelines
+    mechanism_family: governance_and_review
+    local_mechanism_type: workflow
+    source_semantic_ids:
+      - sem:mechanism:versionamento-de-pipelines
+    supports_practices:
+      - ACP-SCBI-004
+  ACM-SCBI-002:
+    name: Automated Security Scanners
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: automation
+    source_semantic_ids:
+      - sem:mechanism:scanners-automaticos
+      - sem:mechanism:integracao-de-scanners-servicos-repositorios-registries
+    supports_practices:
+      - ACP-SCBI-002
+      - ACP-SCBI-007
+  ACM-SCBI-003:
+    name: Release Promotion Gates
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: policy
+    source_semantic_ids:
+      - sem:mechanism:promocao-de-releases
+      - sem:pattern:separacao-entre-sinal-automatico-e-decisao-de-promocao
+    supports_practices:
+      - ACP-SCBI-005
+  ACM-SCBI-004:
+    name: Artifact Signing And Attestation
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: attestation
+    source_semantic_ids:
+      - sem:mechanism:assinatura-de-artefactos
+    supports_practices:
+      - ACP-SCBI-006
+  ACM-SCBI-005:
+    name: Build And Image Inventory Generation
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: inventory
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-SCBI-001
+      - ACP-SCBI-007
+    note: >
+      This mechanism is visible in current manual practices and artifacts, but it
+      is not yet strongly represented in the semantic-layer mechanism catalog.
+  ACM-SCBI-006:
+    name: Registry Allowlisting And Approved Source Enforcement
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: source_enforcement
+    supports_practices:
+      - ACP-SCBI-003
+    note: >
+      Technical controls that restrict dependency and image acquisition
+      to approved repositories and registries. Includes registry proxy
+      with allowlisting, Kubernetes admission controllers that reject
+      unapproved images, package manager configuration for approved sources.
+      Tools: Artifactory/Nexus proxy, OPA/Gatekeeper admission policies.
+normalized_artifacts:
+  ACA-SCBI-001:
+    source_artifact_id: ART-sbom-ec0b691fce
+    canonical_role: inventory
+    local_role: inventory
+    supports_objectives:
+      - ACO-SCBI-001
+      - ACO-SCBI-007
+  ACA-SCBI-002:
+    source_artifact_id: ART-dependency-inventory-4ddd43ae4f
+    canonical_role: inventory
+    local_role: inventory
+    supports_objectives:
+      - ACO-SCBI-001
+  ACA-SCBI-003:
+    source_artifact_id: ART-sca-report-da2c6d2413
+    canonical_role: report
+    local_role: report
+    supports_objectives:
+      - ACO-SCBI-002
+      - ACO-SCBI-005
+      - ACO-SCBI-007
+  ACA-SCBI-004:
+    source_artifact_id: ART-pipeline-config-f8f2ba893d
+    canonical_role: build_definition
+    local_role: build_definition
+    supports_objectives:
+      - ACO-SCBI-002
+      - ACO-SCBI-004
+  ACA-SCBI-005:
+    source_artifact_id: ART-release-gate-57ec988cdb
+    canonical_role: gate_record
+    local_role: gate_record
+    supports_objectives:
+      - ACO-SCBI-003
+      - ACO-SCBI-005
+  ACA-SCBI-006:
+    source_artifact_id: ART-approval-record-6fe32eb803
+    canonical_role: approval_record
+    local_role: approval_record
+    supports_objectives:
+      - ACO-SCBI-003
+      - ACO-SCBI-005
+  ACA-SCBI-007:
+    source_artifact_id: ART-artifact-signature-1d67811ec5
+    canonical_role: attestation
+    local_role: attestation
+    supports_objectives:
+      - ACO-SCBI-006
+      - ACO-SCBI-007
+  ACA-SCBI-008:
+    source_artifact_id: ART-signature-attestation-67e300d959
+    canonical_role: attestation
+    local_role: attestation
+    supports_objectives:
+      - ACO-SCBI-006
+  ACA-SCBI-009:
+    source_artifact_id: ART-artifact-provenance-8b1bffca3c
+    canonical_role: attestation
+    local_role: attestation
+    supports_objectives:
+      - ACO-SCBI-006
+      - ACO-SCBI-007
+  ACA-SCBI-010:
+    source_artifact_id: ART-container-image-51e2624252
+    canonical_role: release_artifact
+    local_role: release_artifact
+    supports_objectives:
+      - ACO-SCBI-001
+      - ACO-SCBI-007
+current_manual_practice_mappings:
+  - source_practice_id: 05-dependencias-sbom-sca:inventario-e-sbom-por-build
+    target_practice_id: ACP-SCBI-001
+  - source_practice_id: 05-dependencias-sbom-sca:sbom-em-cada-build
+    target_practice_id: ACP-SCBI-001
+  - source_practice_id: 05-dependencias-sbom-sca:sca-automatico-com-gates
+    target_practice_id: ACP-SCBI-002
+  - source_practice_id: 05-dependencias-sbom-sca:repositorios-internos-como-fonte-unica
+    target_practice_id: ACP-SCBI-003
+  - source_practice_id: 05-dependencias-sbom-sca:validacao-de-release-go-no-go
+    target_practice_id: ACP-SCBI-005
+  - source_practice_id: 07-cicd-seguro:design-seguro-dos-pipelines-versionamento-determinismo-e-revisao
+    target_practice_id: ACP-SCBI-004
+  - source_practice_id: 07-cicd-seguro:gates-por-risco-separacao-sinal-decisao
+    target_practice_id: ACP-SCBI-005
+  - source_practice_id: 07-cicd-seguro:nao-repudio-e-ownership-de-promocoes-acoes-irreversiveis
+    target_practice_id: ACP-SCBI-005
+  - source_practice_id: 07-cicd-seguro:rastreabilidade-ponta-a-ponta-commitpipelinerelease
+    target_practice_id: ACP-SCBI-006
+  - source_practice_id: 07-cicd-seguro:assinatura-e-proveniencia
+    target_practice_id: ACP-SCBI-006
+  - source_practice_id: 07-cicd-seguro:reprodutibilidade-e-determinismo-do-pipeline
+    target_practice_id: ACP-SCBI-004
+  - source_practice_id: 09-containers-imagens:governacao-de-registries-com-allowlist-e-digest-only
+    target_practice_id: ACP-SCBI-003
+  - source_practice_id: 09-containers-imagens:construcao-de-imagens-a-partir-de-bases-seguras-minimalistas-e-pinned-por-digest
+    target_practice_id: ACP-SCBI-007
+  - source_practice_id: 09-containers-imagens:validacao-automatica-de-vulnerabilidades-em-imagens-no-pipeline-ci-cd
+    target_practice_id: ACP-SCBI-002
+  - source_practice_id: 09-containers-imagens:promocao-por-estagios-com-aprovacao-explicita-e-revalidacao-por-ambiente
+    target_practice_id: ACP-SCBI-005
+  - source_practice_id: 09-containers-imagens:assinatura-e-verificacao-de-proveniencia-de-imagens-com-cosign-e-rekor
+    target_practice_id: ACP-SCBI-006
+  - source_practice_id: 09-containers-imagens:geracao-e-rastreabilidade-de-sbom-em-imagens
+    target_practice_id: ACP-SCBI-001
+  - source_practice_id: 09-containers-imagens:aprovacao-depreciacao-e-revogacao-de-golden-base-images-catalogo-organizacional
+    target_practice_id: ACP-SCBI-007
+open_questions:
+  - Should `Build And Image Inventory Generation` stay one mechanism, or split into dependency inventory versus image inventory?
+  - Should `Trusted Container Image Supply` remain a direct practice target, or later be treated only as a composite envelope over narrower practices?
+  - Should `Release Gate` and `Approval Record` remain separate normalized artifacts or collapse into a single governance artifact family?
+  - Which current image-runtime practices should remain outside this slice because they are really runtime hardening rather than supply integrity?

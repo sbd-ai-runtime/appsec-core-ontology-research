@@ -1,0 +1,2339 @@
+@prefix ac: <https://securitybydesign.dev/ontology/appsec-core/v1#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ac:AppSecCoreV1 a owl:Ontology ;
+    rdfs:label "AppSec Core v1.1 bounded ontology cut" ;
+    rdfs:comment "Bounded AppSec Core v1.0 OWL cut generated from the canonical surface contract, entity schema, cross-slice vocabulary, slice registry, global instance index, human-readable label catalog and source slice drafts. This cut covers first-class v1.0 entities, constitutive CO-Practice and CO-Mechanism relations, stable controlled vocabularies, ten slices and the full indexed instance set (74 COs, 68 Practices, 57 Mechanisms, 57 Artifacts)." ;
+    dcterms:title "AppSec Core V1 — Application Security Control Objective Ontology" ;
+    dcterms:description "Bounded AppSec Core v1.0 OWL cut generated from the canonical surface contract, entity schema, cross-slice vocabulary, slice registry, global instance index, human-readable label catalog and source slice drafts. This cut covers first-class v1.0 entities, constitutive CO-Practice and CO-Mechanism relations, stable controlled vocabularies, ten slices and the full indexed instance set (74 COs, 68 Practices, 57 Mechanisms, 57 Artifacts)." ;
+    owl:versionInfo "1.0" ;
+    owl:versionIRI <https://securitybydesign.dev/ontology/appsec-core/v1.1> ;
+    vann:preferredNamespacePrefix "ac" ;
+    vann:preferredNamespaceUri "https://securitybydesign.dev/ontology/appsec-core/v1#" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). See LICENSE in source repository." ;
+    dcterms:creator "Pedro Farinha (programme-lead, SecurityByDesign-TheoryOfEverything)" ;
+    dcterms:publisher "SecurityByDesign-TheoryOfEverything programme" ;
+    dcterms:created "2026-04-15"^^xsd:date ;
+    dcterms:issued "2026-05-08"^^xsd:date ;
+    dcterms:modified "2026-05-10"^^xsd:date ;
+    dcterms:bibliographicCitation "Farinha, P. (2026). AppSec Core V1: A Normalization Ontology for Application Security Control Objectives. SecurityByDesign-TheoryOfEverything programme." ;
+    foaf:depiction <https://securitybydesign.dev/assets/appsec-core-v1-logo.svg> ;
+    adms:status <http://purl.org/adms/status/Completed> ;
+    dcterms:source "canonical AppSec Core YAML surfaces in sbd-toe-ontology" .
+
+ac:shortLabel a owl:AnnotationProperty ;
+    rdfs:label "short label" ;
+    rdfs:comment "Human-friendly short label for compact views." .
+
+ac:diagramLabel a owl:AnnotationProperty ;
+    rdfs:label "diagram label" ;
+    rdfs:comment "Compact label intended for diagrams or tight visual layouts." .
+
+ac:AppSecCoreEntity a owl:Class ;
+    rdfs:label "AppSec Core entity" ;
+    rdfs:comment "Superclass for first-class AppSec Core v0 entities in the bounded formal cut." .
+
+ac:ControlledVocabularyValue a owl:Class ;
+    rdfs:label "Controlled vocabulary value" ;
+    rdfs:comment "Superclass for stable controlled vocabulary values explicitly modeled in the bounded formal cut." ;
+    owl:disjointWith ac:AppSecCoreEntity .
+
+ac:Slice a owl:Class ;
+    rdfs:label "Slice" ;
+    rdfs:comment "Methodological slice in the AppSec Core v0 reference set." .
+
+ac:ObjectiveKind a owl:Class ;
+    rdfs:subClassOf ac:ControlledVocabularyValue ;
+    rdfs:label "Objective kind" ;
+    rdfs:comment "Enumeration of ControlObjective kinds (atomic or composite)." .
+
+ac:ObjectiveType a owl:Class ;
+    rdfs:subClassOf ac:ControlledVocabularyValue ;
+    rdfs:label "Objective type" ;
+    rdfs:comment "Enumeration of ControlObjective types (governance/preventive/detective/corrective)." .
+
+ac:ArtifactRole a owl:Class ;
+    rdfs:subClassOf ac:ControlledVocabularyValue ;
+    rdfs:label "Artifact role" ;
+    rdfs:comment "Cross-slice canonical roles for Artifact instances (e.g. configuration, governance_record, report)." .
+
+ac:PracticeFamily a owl:Class ;
+    rdfs:subClassOf ac:ControlledVocabularyValue ;
+    rdfs:label "Practice family" ;
+    rdfs:comment "Cross-slice family qualifiers for Practice instances (e.g. governance_and_review, validation_and_analysis)." .
+
+ac:MechanismFamily a owl:Class ;
+    rdfs:subClassOf ac:ControlledVocabularyValue ;
+    rdfs:label "Mechanism family" ;
+    rdfs:comment "Cross-slice family qualifiers for Mechanism instances (e.g. policy_and_gate_enforcement, validation_and_analysis)." .
+
+ac:DetectableSurface a owl:Class ;
+    rdfs:subClassOf ac:ControlledVocabularyValue ;
+    rdfs:label "Detectable surface" ;
+    rdfs:comment "Operational surface where an EvidencePattern is expected to be detectable." .
+
+ac:ControlObjective a owl:Class ;
+    rdfs:subClassOf ac:AppSecCoreEntity ;
+    rdfs:label "Control objective" ;
+    rdfs:comment "Reusable AppSec domain constraint or assurance goal that expresses what must hold true in the application security domain, without carrying SbD-ToE manual chapter or requirement structure." .
+
+ac:Practice a owl:Class ;
+    rdfs:subClassOf ac:AppSecCoreEntity ;
+    rdfs:label "Practice" ;
+    rdfs:comment "Reusable human or process discipline that should exist independently of a specific tool or runtime product choice, and that helps realise one or more ControlObjective instances." .
+
+ac:Mechanism a owl:Class ;
+    rdfs:subClassOf ac:AppSecCoreEntity ;
+    rdfs:label "Mechanism" ;
+    rdfs:comment "Concrete technical or enforceable means used to implement Practice instances or to directly realise ControlObjective instances." .
+
+ac:Artifact a owl:Class ;
+    rdfs:subClassOf ac:AppSecCoreEntity ;
+    rdfs:label "Artifact" ;
+    rdfs:comment "Control-relevant or evidence-bearing output used for review, traceability and assurance against AppSec Core ControlObjective instances." .
+
+ac:EvidencePattern a owl:Class ;
+    rdfs:subClassOf ac:AppSecCoreEntity ;
+    rdfs:label "Evidence pattern" ;
+    rdfs:comment "Expected evidence shape used for deterministic review support of AppSec Core ControlObjective satisfaction; declarative first-class class with no populated instances in the bounded V1 cut (target_node_count=0 at V1 release)." .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( ac:ControlObjective ac:Practice ac:Mechanism ac:Artifact ac:EvidencePattern ) .
+
+ac:belongsToSlice a owl:ObjectProperty ;
+    rdfs:domain ac:AppSecCoreEntity ;
+    rdfs:range ac:Slice ;
+    rdfs:label "belongs to slice" ;
+    rdfs:comment "Membership relation from an AppSec Core entity instance to its methodological slice (ASC-NN)." ;
+    owl:inverseOf ac:hasMember .
+
+ac:hasMember a owl:ObjectProperty ;
+    rdfs:domain ac:Slice ;
+    rdfs:range ac:AppSecCoreEntity ;
+    rdfs:label "has member" ;
+    rdfs:comment "Inverse of ac:belongsToSlice; relates a Slice to the AppSec Core entity instances it contains." .
+
+ac:hasObjectiveKind a owl:ObjectProperty ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range ac:ObjectiveKind ;
+    rdfs:label "has objective kind" ;
+    rdfs:comment "Relates a ControlObjective to its kind (atomic or composite)." ;
+    owl:inverseOf ac:isObjectiveKindOf .
+
+ac:isObjectiveKindOf a owl:ObjectProperty ;
+    rdfs:domain ac:ObjectiveKind ;
+    rdfs:range ac:ControlObjective ;
+    rdfs:label "is objective kind of" ;
+    rdfs:comment "Inverse of ac:hasObjectiveKind; relates an ObjectiveKind value to ControlObjective instances that have it." .
+
+ac:hasObjectiveType a owl:ObjectProperty ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range ac:ObjectiveType ;
+    rdfs:label "has objective type" ;
+    rdfs:comment "Relates a ControlObjective to its objective type (governance/preventive/detective/corrective)." ;
+    owl:inverseOf ac:isObjectiveTypeOf .
+
+ac:isObjectiveTypeOf a owl:ObjectProperty ;
+    rdfs:domain ac:ObjectiveType ;
+    rdfs:range ac:ControlObjective ;
+    rdfs:label "is objective type of" ;
+    rdfs:comment "Inverse of ac:hasObjectiveType; relates an ObjectiveType value to ControlObjective instances that have it." .
+
+ac:hasPracticeFamily a owl:ObjectProperty ;
+    rdfs:domain ac:Practice ;
+    rdfs:range ac:PracticeFamily ;
+    rdfs:label "has practice family" ;
+    rdfs:comment "Relates a Practice to its cross-slice practice family qualifier." ;
+    owl:inverseOf ac:isPracticeFamilyOf .
+
+ac:isPracticeFamilyOf a owl:ObjectProperty ;
+    rdfs:domain ac:PracticeFamily ;
+    rdfs:range ac:Practice ;
+    rdfs:label "is practice family of" ;
+    rdfs:comment "Inverse of ac:hasPracticeFamily; relates a PracticeFamily value to Practice instances that have it." .
+
+ac:hasMechanismFamily a owl:ObjectProperty ;
+    rdfs:domain ac:Mechanism ;
+    rdfs:range ac:MechanismFamily ;
+    rdfs:label "has mechanism family" ;
+    rdfs:comment "Relates a Mechanism to its cross-slice mechanism family qualifier." ;
+    owl:inverseOf ac:isMechanismFamilyOf .
+
+ac:isMechanismFamilyOf a owl:ObjectProperty ;
+    rdfs:domain ac:MechanismFamily ;
+    rdfs:range ac:Mechanism ;
+    rdfs:label "is mechanism family of" ;
+    rdfs:comment "Inverse of ac:hasMechanismFamily; relates a MechanismFamily value to Mechanism instances that have it." .
+
+ac:hasCanonicalArtifactRole a owl:ObjectProperty ;
+    rdfs:domain ac:Artifact ;
+    rdfs:range ac:ArtifactRole ;
+    rdfs:label "has canonical artifact role" ;
+    rdfs:comment "Relates an Artifact to its canonical role in the AppSec Core taxonomy." ;
+    owl:inverseOf ac:isCanonicalArtifactRoleOf .
+
+ac:isCanonicalArtifactRoleOf a owl:ObjectProperty ;
+    rdfs:domain ac:ArtifactRole ;
+    rdfs:range ac:Artifact ;
+    rdfs:label "is canonical artifact role of" ;
+    rdfs:comment "Inverse of ac:hasCanonicalArtifactRole; relates an ArtifactRole value to Artifact instances that have it." .
+
+ac:hasCanonicalEvidenceKind a owl:ObjectProperty ;
+    rdfs:domain ac:EvidencePattern ;
+    rdfs:range ac:ArtifactRole ;
+    rdfs:label "has canonical evidence kind" ;
+    rdfs:comment "Relates an EvidencePattern to the canonical evidence kind (typically reusing an ArtifactRole value)." ;
+    owl:inverseOf ac:isCanonicalEvidenceKindOf .
+
+ac:isCanonicalEvidenceKindOf a owl:ObjectProperty ;
+    rdfs:domain ac:ArtifactRole ;
+    rdfs:range ac:EvidencePattern ;
+    rdfs:label "is canonical evidence kind of" ;
+    rdfs:comment "Inverse of ac:hasCanonicalEvidenceKind; relates an ArtifactRole value used as canonical evidence kind to the EvidencePattern that adopts it." .
+
+ac:detectableInSurface a owl:ObjectProperty ;
+    rdfs:domain ac:EvidencePattern ;
+    rdfs:range ac:DetectableSurface ;
+    rdfs:label "detectable in surface" ;
+    rdfs:comment "Relates an EvidencePattern to the detectable surface where the evidence is expected to manifest." ;
+    owl:inverseOf ac:surfaceOfDetectableEvidencePattern .
+
+ac:surfaceOfDetectableEvidencePattern a owl:ObjectProperty ;
+    rdfs:domain ac:DetectableSurface ;
+    rdfs:range ac:EvidencePattern ;
+    rdfs:label "surface of detectable evidence pattern" ;
+    rdfs:comment "Inverse of ac:detectableInSurface; relates a DetectableSurface to EvidencePattern instances detectable on it." .
+
+ac:objective_realized_by_practice a owl:ObjectProperty ;
+    rdfs:label "objective realized by practice" ;
+    rdfs:comment "Relates a ControlObjective to a Practice that realises it operationally." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range ac:Practice ;
+    owl:inverseOf ac:practice_realizes_objective .
+
+ac:objective_implemented_by_mechanism a owl:ObjectProperty ;
+    rdfs:label "objective implemented by mechanism" ;
+    rdfs:comment "Relates a ControlObjective to a Mechanism that implements it technically." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range ac:Mechanism ;
+    owl:inverseOf ac:mechanism_implements_objective .
+
+ac:objective_expects_artifact a owl:ObjectProperty ;
+    rdfs:label "objective expects artifact" ;
+    rdfs:comment "Relates a ControlObjective to an Artifact whose presence is expected as evidence of the objective." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range ac:Artifact ;
+    owl:inverseOf ac:artifact_supports_objective .
+
+ac:objective_verified_by_evidence_pattern a owl:ObjectProperty ;
+    rdfs:label "objective verified by evidence pattern" ;
+    rdfs:comment "Relates a ControlObjective to an EvidencePattern that supports its deterministic review." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range ac:EvidencePattern ;
+    owl:inverseOf ac:evidence_pattern_verifies_objective .
+
+ac:artifact_supports_evidence_pattern a owl:ObjectProperty ;
+    rdfs:label "artifact supports evidence pattern" ;
+    rdfs:comment "Relates an Artifact to an EvidencePattern it supports as evidence." ;
+    rdfs:domain ac:Artifact ;
+    rdfs:range ac:EvidencePattern ;
+    owl:inverseOf ac:evidence_pattern_supported_by_artifact .
+
+ac:practice_realizes_objective a owl:ObjectProperty ;
+    rdfs:label "practice realizes objective" ;
+    rdfs:comment "Inverse of ac:objective_realized_by_practice; relates a controlobjective to a practice that realises it operationally." ;
+    rdfs:domain ac:Practice ;
+    rdfs:range ac:ControlObjective .
+
+ac:mechanism_implements_objective a owl:ObjectProperty ;
+    rdfs:label "mechanism implements objective" ;
+    rdfs:comment "Inverse of ac:objective_implemented_by_mechanism; relates a controlobjective to a mechanism that implements it technically." ;
+    rdfs:domain ac:Mechanism ;
+    rdfs:range ac:ControlObjective .
+
+ac:artifact_supports_objective a owl:ObjectProperty ;
+    rdfs:label "artifact supports objective" ;
+    rdfs:comment "Inverse of ac:objective_expects_artifact; relates a controlobjective to an artifact whose presence is expected as evidence of the objective." ;
+    rdfs:domain ac:Artifact ;
+    rdfs:range ac:ControlObjective .
+
+ac:evidence_pattern_verifies_objective a owl:ObjectProperty ;
+    rdfs:label "evidence pattern verifies objective" ;
+    rdfs:comment "Inverse of ac:objective_verified_by_evidence_pattern; relates a controlobjective to an evidencepattern that supports its deterministic review." ;
+    rdfs:domain ac:EvidencePattern ;
+    rdfs:range ac:ControlObjective .
+
+ac:evidence_pattern_supported_by_artifact a owl:ObjectProperty ;
+    rdfs:label "evidence pattern supported by artifact" ;
+    rdfs:comment "Inverse of ac:artifact_supports_evidence_pattern; relates an artifact to an evidencepattern it supports as evidence." ;
+    rdfs:domain ac:EvidencePattern ;
+    rdfs:range ac:Artifact .
+
+ac:slice_id a owl:DatatypeProperty ;
+    rdfs:domain ac:Slice ;
+    rdfs:range xsd:string ;
+    rdfs:label "slice ID" ;
+    rdfs:comment "Stable identifier for an AppSec Core Slice (matches ASC-NN pattern)." .
+
+ac:scope_key a owl:DatatypeProperty ;
+    rdfs:domain ac:Slice ;
+    rdfs:range xsd:string ;
+    rdfs:label "scope key" ;
+    rdfs:comment "Canonical scope label for the slice (e.g. input_output_data_safety_and_controlled_failure)." .
+
+ac:objective_family_code a owl:DatatypeProperty ;
+    rdfs:domain ac:Slice ;
+    rdfs:range xsd:string ;
+    rdfs:label "objective family code" ;
+    rdfs:comment "Family code shared by all ControlObjective instances inside the slice (e.g. ACO-IVF)." .
+
+ac:current_control_mode a owl:DatatypeProperty ;
+    rdfs:domain ac:Slice ;
+    rdfs:range xsd:string ;
+    rdfs:label "current control mode" ;
+    rdfs:comment "Slice control-mode descriptor at the current AppSec Core release (e.g. single_broad_control_surface)." .
+
+ac:contract_path a owl:DatatypeProperty ;
+    rdfs:domain ac:Slice ;
+    rdfs:range xsd:string ;
+    rdfs:label "contract path" ;
+    rdfs:comment "Repository-relative path to the slice contract YAML in sbd-toe-ontology." .
+
+ac:artifact_id a owl:DatatypeProperty ;
+    rdfs:label "artifact ID" ;
+    rdfs:comment "Stable identifier for an Artifact instance (matches ACA-<SLICE>-<NNN> pattern)." ;
+    rdfs:domain ac:Artifact ;
+    rdfs:range xsd:string .
+
+ac:domain_key a owl:DatatypeProperty ;
+    rdfs:label "domain key" ;
+    rdfs:comment "Slice-local domain key categorising a ControlObjective." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range xsd:string .
+
+ac:evidence_pattern_id a owl:DatatypeProperty ;
+    rdfs:label "evidence pattern ID" ;
+    rdfs:comment "Stable identifier for an EvidencePattern instance." ;
+    rdfs:domain ac:EvidencePattern ;
+    rdfs:range xsd:string .
+
+ac:expectation a owl:DatatypeProperty ;
+    rdfs:label "expectation" ;
+    rdfs:comment "Expected evidence shape that supports deterministic review of an EvidencePattern." ;
+    rdfs:domain ac:EvidencePattern ;
+    rdfs:range xsd:string .
+
+ac:expected_outcome a owl:DatatypeProperty ;
+    rdfs:label "expected outcome" ;
+    rdfs:comment "Behavioural outcome that a ControlObjective expects to observe when satisfied." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range xsd:string .
+
+ac:local_mechanism_type a owl:DatatypeProperty ;
+    rdfs:label "local mechanism type" ;
+    rdfs:comment "Slice-local typing for a Mechanism (e.g. rulepack, context_encoder)." ;
+    rdfs:domain ac:Mechanism ;
+    rdfs:range xsd:string .
+
+ac:local_practice_type a owl:DatatypeProperty ;
+    rdfs:label "local practice type" ;
+    rdfs:comment "Slice-local typing for a Practice (e.g. contract_validation, output_encoding)." ;
+    rdfs:domain ac:Practice ;
+    rdfs:range xsd:string .
+
+ac:mechanism_id a owl:DatatypeProperty ;
+    rdfs:label "mechanism ID" ;
+    rdfs:comment "Stable identifier for a Mechanism instance (matches ACM-<SLICE>-<NNN> pattern)." ;
+    rdfs:domain ac:Mechanism ;
+    rdfs:range xsd:string .
+
+ac:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "Human-readable name for the AppSec Core entity instance." ;
+    rdfs:domain ac:AppSecCoreEntity ;
+    rdfs:range xsd:string .
+
+ac:objective_id a owl:DatatypeProperty ;
+    rdfs:label "objective ID" ;
+    rdfs:comment "Stable identifier for a ControlObjective instance (matches ACO-<SLICE>-<NNN> pattern)." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range xsd:string .
+
+ac:practice_id a owl:DatatypeProperty ;
+    rdfs:label "practice ID" ;
+    rdfs:comment "Stable identifier for a Practice instance (matches ACP-<SLICE>-<NNN> pattern)." ;
+    rdfs:domain ac:Practice ;
+    rdfs:range xsd:string .
+
+ac:statement a owl:DatatypeProperty ;
+    rdfs:label "statement" ;
+    rdfs:comment "Normative statement of what a ControlObjective requires to hold true in the application security domain." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range xsd:string .
+
+ac:validation_method a owl:DatatypeProperty ;
+    rdfs:label "validation method" ;
+    rdfs:comment "Method describing how an EvidencePattern is interpreted (not its execution binding)." ;
+    rdfs:domain ac:EvidencePattern ;
+    rdfs:range xsd:string .
+
+ac:verification_posture a owl:DatatypeProperty ;
+    rdfs:label "verification posture" ;
+    rdfs:comment "Assurance stance qualifier indicating how a ControlObjective is verified." ;
+    rdfs:domain ac:ControlObjective ;
+    rdfs:range xsd:string .
+
+ac:ObjectiveKindAtomic a ac:ObjectiveKind ;
+    rdfs:label "Atomic" .
+
+ac:ObjectiveKindComposite a ac:ObjectiveKind ;
+    rdfs:label "Composite" .
+
+ac:ObjectiveTypeGovernance a ac:ObjectiveType ;
+    rdfs:label "Governance" .
+
+ac:ObjectiveTypePreventive a ac:ObjectiveType ;
+    rdfs:label "Preventive" .
+
+ac:ObjectiveTypeDetective a ac:ObjectiveType ;
+    rdfs:label "Detective" .
+
+ac:ObjectiveTypeCorrective a ac:ObjectiveType ;
+    rdfs:label "Corrective" .
+
+ac:ArtifactRoleConfiguration a ac:ArtifactRole ;
+    rdfs:label "Configuration" .
+
+ac:ArtifactRoleGovernanceRecord a ac:ArtifactRole ;
+    rdfs:label "Governance Record" .
+
+ac:ArtifactRoleReviewRecord a ac:ArtifactRole ;
+    rdfs:label "Review Record" .
+
+ac:ArtifactRoleApprovalRecord a ac:ArtifactRole ;
+    rdfs:label "Approval Record" .
+
+ac:ArtifactRoleGateRecord a ac:ArtifactRole ;
+    rdfs:label "Gate Record" .
+
+ac:ArtifactRoleInventory a ac:ArtifactRole ;
+    rdfs:label "Inventory" .
+
+ac:ArtifactRoleAttestation a ac:ArtifactRole ;
+    rdfs:label "Attestation" .
+
+ac:ArtifactRoleReport a ac:ArtifactRole ;
+    rdfs:label "Report" .
+
+ac:ArtifactRoleEvidencePackage a ac:ArtifactRole ;
+    rdfs:label "Evidence Package" .
+
+ac:ArtifactRoleOperationalRecord a ac:ArtifactRole ;
+    rdfs:label "Operational Record" .
+
+ac:ArtifactRoleBuildDefinition a ac:ArtifactRole ;
+    rdfs:label "Build Definition" .
+
+ac:ArtifactRoleReleaseArtifact a ac:ArtifactRole ;
+    rdfs:label "Release Artifact" .
+
+ac:ArtifactRoleModel a ac:ArtifactRole ;
+    rdfs:label "Model" .
+
+ac:ArtifactRoleValidationOutput a ac:ArtifactRole ;
+    rdfs:label "Validation Output" .
+
+ac:ArtifactRoleBindingRecord a ac:ArtifactRole ;
+    rdfs:label "Binding Record" .
+
+ac:PracticeFamilyGovernanceAndReview a ac:PracticeFamily ;
+    rdfs:label "Governance and Review" .
+
+ac:PracticeFamilyPolicyAndGateEnforcement a ac:PracticeFamily ;
+    rdfs:label "Policy and Gate Enforcement" .
+
+ac:PracticeFamilyIdentityAndTrustControl a ac:PracticeFamily ;
+    rdfs:label "Identity and Trust Control" .
+
+ac:PracticeFamilyValidationAndAnalysis a ac:PracticeFamily ;
+    rdfs:label "Validation and Analysis" .
+
+ac:PracticeFamilyIntegrityTraceabilityAndRecords a ac:PracticeFamily ;
+    rdfs:label "Integrity Traceability and Records" .
+
+ac:PracticeFamilyRolloutRecoveryAndRuntimeRecords a ac:PracticeFamily ;
+    rdfs:label "Rollout Recovery and Runtime Records" .
+
+ac:MechanismFamilyGovernanceAndReview a ac:MechanismFamily ;
+    rdfs:label "Governance and Review" .
+
+ac:MechanismFamilyPolicyAndGateEnforcement a ac:MechanismFamily ;
+    rdfs:label "Policy and Gate Enforcement" .
+
+ac:MechanismFamilyIdentityAndTrustControl a ac:MechanismFamily ;
+    rdfs:label "Identity and Trust Control" .
+
+ac:MechanismFamilyValidationAndAnalysis a ac:MechanismFamily ;
+    rdfs:label "Validation and Analysis" .
+
+ac:MechanismFamilyIntegrityTraceabilityAndRecords a ac:MechanismFamily ;
+    rdfs:label "Integrity Traceability and Records" .
+
+ac:MechanismFamilyRolloutRecoveryAndRuntimeRecords a ac:MechanismFamily ;
+    rdfs:label "Rollout Recovery and Runtime Records" .
+
+ac:DetectableSurfaceCiCd a ac:DetectableSurface ;
+    rdfs:label "CI/CD" .
+
+ac:DetectableSurfaceLogs a ac:DetectableSurface ;
+    rdfs:label "Logs" .
+
+ac:DetectableSurfaceDocumentation a ac:DetectableSurface ;
+    rdfs:label "Documentation" .
+
+ac:DetectableSurfaceConfig a ac:DetectableSurface ;
+    rdfs:label "Config" .
+
+ac:SliceASC01 a ac:Slice ;
+    rdfs:label "Supply chain and build integrity" ;
+    rdfs:comment "supply chain and build integrity" ;
+    ac:slice_id "ASC-01" ;
+    ac:scope_key "supply_chain_and_build_integrity" ;
+    ac:objective_family_code "ACO-SCBI" ;
+    ac:current_control_mode "multi_control_convergent_surface" ;
+    ac:contract_path "ontology/appsec-core-supply-chain-build-integrity-slice-contract.yaml" ;
+    ac:shortLabel "Supply chain integrity" ;
+    ac:diagramLabel "SC integrity" .
+
+ac:SliceASC02 a ac:Slice ;
+    rdfs:label "Identity, access and session trust" ;
+    rdfs:comment "identity access and session trust" ;
+    ac:slice_id "ASC-02" ;
+    ac:scope_key "identity_access_and_session_trust" ;
+    ac:objective_family_code "ACO-IAT" ;
+    ac:current_control_mode "single_broad_control_surface" ;
+    ac:contract_path "ontology/appsec-core-identity-access-session-trust-slice-contract.yaml" ;
+    ac:shortLabel "Identity and access trust" ;
+    ac:diagramLabel "Identity trust" .
+
+ac:SliceASC03 a ac:Slice ;
+    rdfs:label "Architecture and trust boundaries" ;
+    rdfs:comment "architecture and trust boundaries" ;
+    ac:slice_id "ASC-03" ;
+    ac:scope_key "architecture_and_trust_boundaries" ;
+    ac:objective_family_code "ACO-ATB" ;
+    ac:current_control_mode "dual_control_surface" ;
+    ac:contract_path "ontology/appsec-core-architecture-trust-boundaries-slice-contract.yaml" ;
+    ac:shortLabel "Architecture and boundaries" ;
+    ac:diagramLabel "Architecture boundaries" .
+
+ac:SliceASC04 a ac:Slice ;
+    rdfs:label "Testing, security validation and empirical assurance" ;
+    rdfs:comment "testing security validation and empirical assurance" ;
+    ac:slice_id "ASC-04" ;
+    ac:scope_key "testing_security_validation_and_empirical_assurance" ;
+    ac:objective_family_code "ACO-TSV" ;
+    ac:current_control_mode "single_broad_control_surface" ;
+    ac:contract_path "ontology/appsec-core-testing-security-validation-slice-contract.yaml" ;
+    ac:shortLabel "Security validation and assurance" ;
+    ac:diagramLabel "Security validation" .
+
+ac:SliceASC05 a ac:Slice ;
+    rdfs:label "Threat modeling, risk disposition and mitigation traceability" ;
+    rdfs:comment "threat modeling risk disposition and mitigation traceability" ;
+    ac:slice_id "ASC-05" ;
+    ac:scope_key "threat_modeling_risk_disposition_and_mitigation_traceability" ;
+    ac:objective_family_code "ACO-TMR" ;
+    ac:current_control_mode "single_broad_control_surface" ;
+    ac:contract_path "ontology/appsec-core-threat-modeling-risk-disposition-slice-contract.yaml" ;
+    ac:shortLabel "Threat modeling and risk traceability" ;
+    ac:diagramLabel "Threat and risk" .
+
+ac:SliceASC06 a ac:Slice ;
+    rdfs:label "Secret handling, protected configuration and operational identities" ;
+    rdfs:comment "secret handling protected configuration and operational identities" ;
+    ac:slice_id "ASC-06" ;
+    ac:scope_key "secret_handling_protected_configuration_and_operational_identities" ;
+    ac:objective_family_code "ACO-SPC" ;
+    ac:current_control_mode "single_broad_control_surface" ;
+    ac:contract_path "ontology/appsec-core-secrets-protected-config-slice-contract.yaml" ;
+    ac:shortLabel "Secrets and protected configuration" ;
+    ac:diagramLabel "Secrets and config" .
+
+ac:SliceASC07 a ac:Slice ;
+    rdfs:label "Input validation, safe parsing and controlled failure" ;
+    rdfs:comment "input validation safe parsing and controlled failure" ;
+    ac:slice_id "ASC-07" ;
+    ac:scope_key "input_validation_safe_parsing_and_controlled_failure" ;
+    ac:objective_family_code "ACO-IVF" ;
+    ac:current_control_mode "single_broad_control_surface" ;
+    ac:contract_path "ontology/appsec-core-input-validation-safe-failure-slice-contract.yaml" ;
+    ac:shortLabel "Input validation and controlled failure" ;
+    ac:diagramLabel "Input validation" .
+
+ac:SliceASC08 a ac:Slice ;
+    rdfs:label "Integration trust and service-to-service security" ;
+    rdfs:comment "integration trust and service to service security" ;
+    ac:slice_id "ASC-08" ;
+    ac:scope_key "integration_trust_and_service_to_service_security" ;
+    ac:objective_family_code "ACO-ITS" ;
+    ac:current_control_mode "split_control_surface" ;
+    ac:contract_path "ontology/appsec-core-integration-trust-service-security-slice-contract.yaml" ;
+    ac:shortLabel "Service-to-service trust" ;
+    ac:diagramLabel "S2S trust" .
+
+ac:SliceASC09 a ac:Slice ;
+    rdfs:label "Release promotion, controlled rollout and rollback readiness" ;
+    rdfs:comment "release promotion controlled rollout and rollback readiness" ;
+    ac:slice_id "ASC-09" ;
+    ac:scope_key "release_promotion_controlled_rollout_and_rollback_readiness" ;
+    ac:objective_family_code "ACO-RPR" ;
+    ac:current_control_mode "split_control_surface" ;
+    ac:contract_path "ontology/appsec-core-release-promotion-controlled-rollout-slice-contract.yaml" ;
+    ac:shortLabel "Release rollout and rollback" ;
+    ac:diagramLabel "Rollout and rollback" .
+
+ac:SliceASC10 a ac:Slice ;
+    rdfs:label "Security event logging, audit trail and centralized logging" ;
+    rdfs:comment "security event logging audit trail and centralized logging" ;
+    ac:slice_id "ASC-10" ;
+    ac:scope_key "security_event_logging_audit_trail_and_centralized_logging" ;
+    ac:objective_family_code "ACO-SLG" ;
+    ac:current_control_mode "single_broad_control_surface" ;
+    ac:contract_path "ontology/appsec-core-security-event-logging-audit-trail-slice-contract.yaml" ;
+    ac:shortLabel "Security logging and audit trail" ;
+    ac:diagramLabel "Logging and audit" .
+
+ac:ACO_SCBI_001 a ac:ControlObjective ;
+    rdfs:label "Dependency Inventory And SBOM Traceability" ;
+    ac:objective_id "ACO-SCBI-001" ;
+    ac:belongsToSlice ac:SliceASC01 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_005 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_001 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_002 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_010 .
+
+ac:ACO_SCBI_002 a ac:ControlObjective ;
+    rdfs:label "Dependency Risk Evaluation And Policy Gating" ;
+    ac:objective_id "ACO-SCBI-002" ;
+    ac:belongsToSlice ac:SliceASC01 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_002 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_003 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_004 .
+
+ac:ACO_SCBI_003 a ac:ControlObjective ;
+    rdfs:label "Controlled Dependency And Image Sources" ;
+    ac:objective_id "ACO-SCBI-003" ;
+    ac:belongsToSlice ac:SliceASC01 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_006 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_005 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_006 .
+
+ac:ACO_SCBI_004 a ac:ControlObjective ;
+    rdfs:label "Build Definition And Execution Integrity" ;
+    ac:objective_id "ACO-SCBI-004" ;
+    ac:belongsToSlice ac:SliceASC01 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_001 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_004 .
+
+ac:ACO_SCBI_005 a ac:ControlObjective ;
+    rdfs:label "Release Promotion And Human Approval Integrity" ;
+    ac:objective_id "ACO-SCBI-005" ;
+    ac:belongsToSlice ac:SliceASC01 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_003 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_003 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_005 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_006 .
+
+ac:ACO_SCBI_006 a ac:ControlObjective ;
+    rdfs:label "Artifact Attestation And Provenance Integrity" ;
+    ac:objective_id "ACO-SCBI-006" ;
+    ac:belongsToSlice ac:SliceASC01 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_004 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_007 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_008 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_009 .
+
+ac:ACO_SCBI_007 a ac:ControlObjective ;
+    rdfs:label "Container Image Supply Integrity" ;
+    ac:objective_id "ACO-SCBI-007" ;
+    ac:belongsToSlice ac:SliceASC01 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_003 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_006 ;
+    ac:objective_realized_by_practice ac:ACP_SCBI_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SCBI_006 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_001 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_003 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_007 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_009 ;
+    ac:objective_expects_artifact ac:ACA_SCBI_010 .
+
+ac:ACP_SCBI_001 a ac:Practice ;
+    rdfs:label "Build-Linked SBOM Generation" ;
+    ac:practice_id "ACP-SCBI-001" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACP_SCBI_002 a ac:Practice ;
+    rdfs:label "Automated Dependency And Image Risk Gating" ;
+    ac:practice_id "ACP-SCBI-002" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACP_SCBI_003 a ac:Practice ;
+    rdfs:label "Approved Source And Registry Governance" ;
+    ac:practice_id "ACP-SCBI-003" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACP_SCBI_004 a ac:Practice ;
+    rdfs:label "Pipeline Definition As Reviewed Code" ;
+    ac:practice_id "ACP-SCBI-004" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACP_SCBI_005 a ac:Practice ;
+    rdfs:label "Governed Promotion And Release Approval" ;
+    ac:practice_id "ACP-SCBI-005" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACP_SCBI_006 a ac:Practice ;
+    rdfs:label "Artifact Signature And Provenance Validation" ;
+    ac:practice_id "ACP-SCBI-006" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACP_SCBI_007 a ac:Practice ;
+    rdfs:label "Trusted Container Image Supply" ;
+    ac:practice_id "ACP-SCBI-007" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACM_SCBI_001 a ac:Mechanism ;
+    rdfs:label "Versioned Pipelines" ;
+    ac:mechanism_id "ACM-SCBI-001" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACM_SCBI_002 a ac:Mechanism ;
+    rdfs:label "Automated Security Scanners" ;
+    ac:mechanism_id "ACM-SCBI-002" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACM_SCBI_003 a ac:Mechanism ;
+    rdfs:label "Release Promotion Gates" ;
+    ac:mechanism_id "ACM-SCBI-003" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACM_SCBI_004 a ac:Mechanism ;
+    rdfs:label "Artifact Signing And Attestation" ;
+    ac:mechanism_id "ACM-SCBI-004" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACM_SCBI_005 a ac:Mechanism ;
+    rdfs:label "Build And Image Inventory Generation" ;
+    ac:mechanism_id "ACM-SCBI-005" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACM_SCBI_006 a ac:Mechanism ;
+    rdfs:label "Registry Allowlisting And Approved Source Enforcement" ;
+    ac:mechanism_id "ACM-SCBI-006" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_001 a ac:Artifact ;
+    rdfs:label "SBOM" ;
+    ac:artifact_id "ACA-SCBI-001" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_002 a ac:Artifact ;
+    rdfs:label "Dependency Inventory" ;
+    ac:artifact_id "ACA-SCBI-002" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_003 a ac:Artifact ;
+    rdfs:label "SCA Report" ;
+    ac:artifact_id "ACA-SCBI-003" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_004 a ac:Artifact ;
+    rdfs:label "Pipeline Config" ;
+    ac:artifact_id "ACA-SCBI-004" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_005 a ac:Artifact ;
+    rdfs:label "Release Gate" ;
+    ac:artifact_id "ACA-SCBI-005" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_006 a ac:Artifact ;
+    rdfs:label "Approval Record" ;
+    ac:artifact_id "ACA-SCBI-006" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_007 a ac:Artifact ;
+    rdfs:label "Artifact Signature" ;
+    ac:artifact_id "ACA-SCBI-007" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_008 a ac:Artifact ;
+    rdfs:label "Signature Attestation" ;
+    ac:artifact_id "ACA-SCBI-008" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_009 a ac:Artifact ;
+    rdfs:label "Artifact Provenance" ;
+    ac:artifact_id "ACA-SCBI-009" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACA_SCBI_010 a ac:Artifact ;
+    rdfs:label "Container Image" ;
+    ac:artifact_id "ACA-SCBI-010" ;
+    ac:belongsToSlice ac:SliceASC01 .
+
+ac:ACO_IAT_001 a ac:ControlObjective ;
+    rdfs:label "Authentication Strength And Identity Assurance" ;
+    ac:objective_id "ACO-IAT-001" ;
+    ac:belongsToSlice ac:SliceASC02 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_001 ;
+    ac:objective_expects_artifact ac:ACA_IAT_003 .
+
+ac:ACO_IAT_002 a ac:ControlObjective ;
+    rdfs:label "Authorization Policy Integrity And Least Privilege" ;
+    ac:objective_id "ACO-IAT-002" ;
+    ac:belongsToSlice ac:SliceASC02 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_002 ;
+    ac:objective_expects_artifact ac:ACA_IAT_001 ;
+    ac:objective_expects_artifact ac:ACA_IAT_002 .
+
+ac:ACO_IAT_003 a ac:ControlObjective ;
+    rdfs:label "Access Revocation And Privilege Lifecycle Integrity" ;
+    ac:objective_id "ACO-IAT-003" ;
+    ac:belongsToSlice ac:SliceASC02 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_003 ;
+    ac:objective_expects_artifact ac:ACA_IAT_002 ;
+    ac:objective_expects_artifact ac:ACA_IAT_003 ;
+    ac:objective_expects_artifact ac:ACA_IAT_006 .
+
+ac:ACO_IAT_004 a ac:ControlObjective ;
+    rdfs:label "Session And Token Trust Boundaries" ;
+    ac:objective_id "ACO-IAT-004" ;
+    ac:belongsToSlice ac:SliceASC02 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_004 ;
+    ac:objective_expects_artifact ac:ACA_IAT_003 .
+
+ac:ACO_IAT_005 a ac:ControlObjective ;
+    rdfs:label "API Caller Trust And Service Boundary Enforcement" ;
+    ac:objective_id "ACO-IAT-005" ;
+    ac:belongsToSlice ac:SliceASC02 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_005 ;
+    ac:objective_expects_artifact ac:ACA_IAT_001 ;
+    ac:objective_expects_artifact ac:ACA_IAT_003 ;
+    ac:objective_expects_artifact ac:ACA_IAT_004 .
+
+ac:ACO_IAT_006 a ac:ControlObjective ;
+    rdfs:label "Access Abuse Detection And Auditability" ;
+    ac:objective_id "ACO-IAT-006" ;
+    ac:belongsToSlice ac:SliceASC02 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_006 ;
+    ac:objective_expects_artifact ac:ACA_IAT_003 ;
+    ac:objective_expects_artifact ac:ACA_IAT_004 ;
+    ac:objective_expects_artifact ac:ACA_IAT_005 .
+
+ac:ACO_IAT_007 a ac:ControlObjective ;
+    rdfs:label "Identity And Access Control Integrity" ;
+    ac:objective_id "ACO-IAT-007" ;
+    ac:belongsToSlice ac:SliceASC02 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_002 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_003 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_005 ;
+    ac:objective_realized_by_practice ac:ACP_IAT_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IAT_006 ;
+    ac:objective_expects_artifact ac:ACA_IAT_001 ;
+    ac:objective_expects_artifact ac:ACA_IAT_002 ;
+    ac:objective_expects_artifact ac:ACA_IAT_003 .
+
+ac:ACP_IAT_001 a ac:Practice ;
+    rdfs:label "Strong Authentication And Step-Up Enforcement" ;
+    ac:practice_id "ACP-IAT-001" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACP_IAT_002 a ac:Practice ;
+    rdfs:label "Least-Privilege Authorization Governance" ;
+    ac:practice_id "ACP-IAT-002" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACP_IAT_003 a ac:Practice ;
+    rdfs:label "Access Review And Timely Revocation" ;
+    ac:practice_id "ACP-IAT-003" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACP_IAT_004 a ac:Practice ;
+    rdfs:label "Bounded Session And Token Management" ;
+    ac:practice_id "ACP-IAT-004" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACP_IAT_005 a ac:Practice ;
+    rdfs:label "Authenticated API Boundary Enforcement" ;
+    ac:practice_id "ACP-IAT-005" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACP_IAT_006 a ac:Practice ;
+    rdfs:label "Access Abuse Monitoring And Audit Trail" ;
+    ac:practice_id "ACP-IAT-006" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACM_IAT_001 a ac:Mechanism ;
+    rdfs:label "Authentication And Federation Protocols" ;
+    ac:mechanism_id "ACM-IAT-001" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACM_IAT_002 a ac:Mechanism ;
+    rdfs:label "Access Policy Enforcement" ;
+    ac:mechanism_id "ACM-IAT-002" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACM_IAT_003 a ac:Mechanism ;
+    rdfs:label "Periodic Review And Access Audit" ;
+    ac:mechanism_id "ACM-IAT-003" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACM_IAT_004 a ac:Mechanism ;
+    rdfs:label "Short-Lived Token Controls" ;
+    ac:mechanism_id "ACM-IAT-004" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACM_IAT_005 a ac:Mechanism ;
+    rdfs:label "API Gateway Mutual Authentication" ;
+    ac:mechanism_id "ACM-IAT-005" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACM_IAT_006 a ac:Mechanism ;
+    rdfs:label "Structured Logging And Effective Configuration Recording" ;
+    ac:mechanism_id "ACM-IAT-006" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACA_IAT_001 a ac:Artifact ;
+    rdfs:label "Identity Binding" ;
+    ac:artifact_id "ACA-IAT-001" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACA_IAT_002 a ac:Artifact ;
+    rdfs:label "Access Review" ;
+    ac:artifact_id "ACA-IAT-002" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACA_IAT_003 a ac:Artifact ;
+    rdfs:label "Log Stream" ;
+    ac:artifact_id "ACA-IAT-003" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACA_IAT_004 a ac:Artifact ;
+    rdfs:label "Policy Report" ;
+    ac:artifact_id "ACA-IAT-004" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACA_IAT_005 a ac:Artifact ;
+    rdfs:label "Alert Policy" ;
+    ac:artifact_id "ACA-IAT-005" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACA_IAT_006 a ac:Artifact ;
+    rdfs:label "Approval Record" ;
+    ac:artifact_id "ACA-IAT-006" ;
+    ac:belongsToSlice ac:SliceASC02 .
+
+ac:ACO_ATB_001 a ac:ControlObjective ;
+    rdfs:label "Architecture Baseline And Decision Traceability" ;
+    ac:objective_id "ACO-ATB-001" ;
+    ac:belongsToSlice ac:SliceASC03 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_001 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_001 ;
+    ac:objective_expects_artifact ac:ACA_ATB_001 .
+
+ac:ACO_ATB_002 a ac:ControlObjective ;
+    rdfs:label "Trust Boundary Clarity And Protected Data Flows" ;
+    ac:objective_id "ACO-ATB-002" ;
+    ac:belongsToSlice ac:SliceASC03 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_002 .
+
+ac:ACO_ATB_003 a ac:ControlObjective ;
+    rdfs:label "External Exposure Justification And Boundary Mediation" ;
+    ac:objective_id "ACO-ATB-003" ;
+    ac:belongsToSlice ac:SliceASC03 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_003 ;
+    ac:objective_expects_artifact ac:ACA_ATB_004 .
+
+ac:ACO_ATB_004 a ac:ControlObjective ;
+    rdfs:label "Technical Segmentation And Sensitive Domain Isolation" ;
+    ac:objective_id "ACO-ATB-004" ;
+    ac:belongsToSlice ac:SliceASC03 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_002 .
+
+ac:ACO_ATB_005 a ac:ControlObjective ;
+    rdfs:label "Architecture Review And Change Trigger Discipline" ;
+    ac:objective_id "ACO-ATB-005" ;
+    ac:belongsToSlice ac:SliceASC03 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_005 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_004 ;
+    ac:objective_expects_artifact ac:ACA_ATB_001 ;
+    ac:objective_expects_artifact ac:ACA_ATB_002 .
+
+ac:ACO_ATB_006 a ac:ControlObjective ;
+    rdfs:label "Architectural Topology Validation And Pattern Conformance" ;
+    ac:objective_id "ACO-ATB-006" ;
+    ac:belongsToSlice ac:SliceASC03 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_005 ;
+    ac:objective_expects_artifact ac:ACA_ATB_003 ;
+    ac:objective_expects_artifact ac:ACA_ATB_004 .
+
+ac:ACO_ATB_007 a ac:ControlObjective ;
+    rdfs:label "Secure Architecture Governance And Boundary Integrity" ;
+    ac:objective_id "ACO-ATB-007" ;
+    ac:belongsToSlice ac:SliceASC03 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_002 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_005 ;
+    ac:objective_realized_by_practice ac:ACP_ATB_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ATB_005 ;
+    ac:objective_expects_artifact ac:ACA_ATB_001 ;
+    ac:objective_expects_artifact ac:ACA_ATB_002 .
+
+ac:ACP_ATB_001 a ac:Practice ;
+    rdfs:label "Architecture Baseline Definition" ;
+    ac:practice_id "ACP-ATB-001" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACP_ATB_002 a ac:Practice ;
+    rdfs:label "Architectural Decision And Solution Traceability" ;
+    ac:practice_id "ACP-ATB-002" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACP_ATB_003 a ac:Practice ;
+    rdfs:label "Trust-Boundary And Flow Review" ;
+    ac:practice_id "ACP-ATB-003" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACP_ATB_004 a ac:Practice ;
+    rdfs:label "External Exposure And Boundary Mediation Design" ;
+    ac:practice_id "ACP-ATB-004" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACP_ATB_005 a ac:Practice ;
+    rdfs:label "Architecture Review And Approval Governance" ;
+    ac:practice_id "ACP-ATB-005" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACP_ATB_006 a ac:Practice ;
+    rdfs:label "Architecture Change Trigger Discipline" ;
+    ac:practice_id "ACP-ATB-006" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACP_ATB_007 a ac:Practice ;
+    rdfs:label "Automatable Topology And Pattern Validation" ;
+    ac:practice_id "ACP-ATB-007" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACM_ATB_001 a ac:Mechanism ;
+    rdfs:label "Versioned Diagrams And ADR Records" ;
+    ac:mechanism_id "ACM-ATB-001" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACM_ATB_002 a ac:Mechanism ;
+    rdfs:label "Trust-Boundary And DFD Modeling" ;
+    ac:mechanism_id "ACM-ATB-002" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACM_ATB_003 a ac:Mechanism ;
+    rdfs:label "Boundary Mediation Controls" ;
+    ac:mechanism_id "ACM-ATB-003" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACM_ATB_004 a ac:Mechanism ;
+    rdfs:label "Architecture Review Gates" ;
+    ac:mechanism_id "ACM-ATB-004" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACM_ATB_005 a ac:Mechanism ;
+    rdfs:label "Automated Topology Validation Jobs" ;
+    ac:mechanism_id "ACM-ATB-005" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACA_ATB_001 a ac:Artifact ;
+    rdfs:label "Review Checklist" ;
+    ac:artifact_id "ACA-ATB-001" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACA_ATB_002 a ac:Artifact ;
+    rdfs:label "Approval Record" ;
+    ac:artifact_id "ACA-ATB-002" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACA_ATB_003 a ac:Artifact ;
+    rdfs:label "Pipeline Config" ;
+    ac:artifact_id "ACA-ATB-003" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACA_ATB_004 a ac:Artifact ;
+    rdfs:label "Policy Report" ;
+    ac:artifact_id "ACA-ATB-004" ;
+    ac:belongsToSlice ac:SliceASC03 .
+
+ac:ACO_TSV_001 a ac:ControlObjective ;
+    rdfs:label "Risk-Proportional Security Testing Strategy" ;
+    ac:objective_id "ACO-TSV-001" ;
+    ac:belongsToSlice ac:SliceASC04 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_003 ;
+    ac:objective_expects_artifact ac:ACA_TSV_005 .
+
+ac:ACO_TSV_002 a ac:ControlObjective ;
+    rdfs:label "Static Analysis Signal Quality And Baseline Governance" ;
+    ac:objective_id "ACO-TSV-002" ;
+    ac:belongsToSlice ac:SliceASC04 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_005 ;
+    ac:objective_expects_artifact ac:ACA_TSV_001 ;
+    ac:objective_expects_artifact ac:ACA_TSV_006 .
+
+ac:ACO_TSV_003 a ac:ControlObjective ;
+    rdfs:label "Security Finding Triage And Correction Closure" ;
+    ac:objective_id "ACO-TSV-003" ;
+    ac:belongsToSlice ac:SliceASC04 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_003 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_004 ;
+    ac:objective_expects_artifact ac:ACA_TSV_002 ;
+    ac:objective_expects_artifact ac:ACA_TSV_003 ;
+    ac:objective_expects_artifact ac:ACA_TSV_005 .
+
+ac:ACO_TSV_004 a ac:ControlObjective ;
+    rdfs:label "Reproducible Security Test Evidence And Build Traceability" ;
+    ac:objective_id "ACO-TSV-004" ;
+    ac:belongsToSlice ac:SliceASC04 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_003 ;
+    ac:objective_expects_artifact ac:ACA_TSV_002 ;
+    ac:objective_expects_artifact ac:ACA_TSV_006 .
+
+ac:ACO_TSV_005 a ac:ControlObjective ;
+    rdfs:label "Staged Dynamic Validation And Release Gate Discipline" ;
+    ac:objective_id "ACO-TSV-005" ;
+    ac:belongsToSlice ac:SliceASC04 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_005 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_004 ;
+    ac:objective_expects_artifact ac:ACA_TSV_002 ;
+    ac:objective_expects_artifact ac:ACA_TSV_004 ;
+    ac:objective_expects_artifact ac:ACA_TSV_005 ;
+    ac:objective_expects_artifact ac:ACA_TSV_006 .
+
+ac:ACO_TSV_006 a ac:ControlObjective ;
+    rdfs:label "Specialized Empirical Testing Depth And Regression Assurance" ;
+    ac:objective_id "ACO-TSV-006" ;
+    ac:belongsToSlice ac:SliceASC04 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_002 ;
+    ac:objective_expects_artifact ac:ACA_TSV_002 ;
+    ac:objective_expects_artifact ac:ACA_TSV_003 ;
+    ac:objective_expects_artifact ac:ACA_TSV_006 .
+
+ac:ACO_TSV_007 a ac:ControlObjective ;
+    rdfs:label "Security Testing And Empirical Assurance Integrity" ;
+    ac:objective_id "ACO-TSV-007" ;
+    ac:belongsToSlice ac:SliceASC04 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_002 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_003 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_004 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_005 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_006 ;
+    ac:objective_realized_by_practice ac:ACP_TSV_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TSV_005 ;
+    ac:objective_expects_artifact ac:ACA_TSV_001 ;
+    ac:objective_expects_artifact ac:ACA_TSV_002 ;
+    ac:objective_expects_artifact ac:ACA_TSV_003 ;
+    ac:objective_expects_artifact ac:ACA_TSV_004 ;
+    ac:objective_expects_artifact ac:ACA_TSV_005 .
+
+ac:ACP_TSV_001 a ac:Practice ;
+    rdfs:label "Risk-Based Security Test Planning" ;
+    ac:practice_id "ACP-TSV-001" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACP_TSV_002 a ac:Practice ;
+    rdfs:label "Governed Static Analysis Execution" ;
+    ac:practice_id "ACP-TSV-002" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACP_TSV_003 a ac:Practice ;
+    rdfs:label "Findings Triage, SLA And Retest Closure" ;
+    ac:practice_id "ACP-TSV-003" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACP_TSV_004 a ac:Practice ;
+    rdfs:label "Reproducible Test Evidence Management" ;
+    ac:practice_id "ACP-TSV-004" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACP_TSV_005 a ac:Practice ;
+    rdfs:label "Staged Dynamic Testing And Gate Enforcement" ;
+    ac:practice_id "ACP-TSV-005" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACP_TSV_006 a ac:Practice ;
+    rdfs:label "Specialized Empirical Testing" ;
+    ac:practice_id "ACP-TSV-006" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACP_TSV_007 a ac:Practice ;
+    rdfs:label "Human Review Of Security Test Signals" ;
+    ac:practice_id "ACP-TSV-007" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACM_TSV_001 a ac:Mechanism ;
+    rdfs:label "Integrated Security Scanners" ;
+    ac:mechanism_id "ACM-TSV-001" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACM_TSV_002 a ac:Mechanism ;
+    rdfs:label "Test Execution Surfaces" ;
+    ac:mechanism_id "ACM-TSV-002" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACM_TSV_003 a ac:Mechanism ;
+    rdfs:label "CI/CD Gate And Release Promotion" ;
+    ac:mechanism_id "ACM-TSV-003" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACM_TSV_004 a ac:Mechanism ;
+    rdfs:label "Findings Workflow And Exception Governance" ;
+    ac:mechanism_id "ACM-TSV-004" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACM_TSV_005 a ac:Mechanism ;
+    rdfs:label "Static Analysis Profile Management" ;
+    ac:mechanism_id "ACM-TSV-005" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACA_TSV_001 a ac:Artifact ;
+    rdfs:label "SAST Report" ;
+    ac:artifact_id "ACA-TSV-001" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACA_TSV_002 a ac:Artifact ;
+    rdfs:label "Test Report" ;
+    ac:artifact_id "ACA-TSV-002" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACA_TSV_003 a ac:Artifact ;
+    rdfs:label "Finding Register" ;
+    ac:artifact_id "ACA-TSV-003" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACA_TSV_004 a ac:Artifact ;
+    rdfs:label "Release Gate" ;
+    ac:artifact_id "ACA-TSV-004" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACA_TSV_005 a ac:Artifact ;
+    rdfs:label "Approval Record" ;
+    ac:artifact_id "ACA-TSV-005" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACA_TSV_006 a ac:Artifact ;
+    rdfs:label "Pipeline Config" ;
+    ac:artifact_id "ACA-TSV-006" ;
+    ac:belongsToSlice ac:SliceASC04 .
+
+ac:ACO_TMR_001 a ac:ControlObjective ;
+    rdfs:label "Threat Modeling Scope And Trigger Discipline" ;
+    ac:objective_id "ACO-TMR-001" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_003 ;
+    ac:objective_expects_artifact ac:ACA_TMR_001 .
+
+ac:ACO_TMR_002 a ac:ControlObjective ;
+    rdfs:label "Architecture-Grounded Threat Representation" ;
+    ac:objective_id "ACO-TMR-002" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_001 ;
+    ac:objective_expects_artifact ac:ACA_TMR_001 .
+
+ac:ACO_TMR_003 a ac:ControlObjective ;
+    rdfs:label "Structured Threat Analysis Method Discipline" ;
+    ac:objective_id "ACO-TMR-003" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_002 ;
+    ac:objective_expects_artifact ac:ACA_TMR_001 .
+
+ac:ACO_TMR_004 a ac:ControlObjective ;
+    rdfs:label "Threat Disposition, Risk Acceptance And Ownership" ;
+    ac:objective_id "ACO-TMR-004" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_004 ;
+    ac:objective_expects_artifact ac:ACA_TMR_001 ;
+    ac:objective_expects_artifact ac:ACA_TMR_002 .
+
+ac:ACO_TMR_005 a ac:ControlObjective ;
+    rdfs:label "Threat-To-Mitigation And Validation Traceability" ;
+    ac:objective_id "ACO-TMR-005" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_005 ;
+    ac:objective_expects_artifact ac:ACA_TMR_001 ;
+    ac:objective_expects_artifact ac:ACA_TMR_003 .
+
+ac:ACO_TMR_006 a ac:ControlObjective ;
+    rdfs:label "Independent Review And Threat Model Lifecycle Governance" ;
+    ac:objective_id "ACO-TMR-006" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_001 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_006 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_006 ;
+    ac:objective_expects_artifact ac:ACA_TMR_001 ;
+    ac:objective_expects_artifact ac:ACA_TMR_002 ;
+    ac:objective_expects_artifact ac:ACA_TMR_004 .
+
+ac:ACO_TMR_007 a ac:ControlObjective ;
+    rdfs:label "Threat Modeling And Risk Governance Integrity" ;
+    ac:objective_id "ACO-TMR-007" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_002 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_003 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_004 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_005 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_006 ;
+    ac:objective_expects_artifact ac:ACA_TMR_001 ;
+    ac:objective_expects_artifact ac:ACA_TMR_002 .
+
+ac:ACO_TMR_008 a ac:ControlObjective ;
+    rdfs:label "Security Requirements Lifecycle Management" ;
+    ac:objective_id "ACO-TMR-008" ;
+    ac:belongsToSlice ac:SliceASC05 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_008 ;
+    ac:objective_realized_by_practice ac:ACP_TMR_009 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_TMR_008 .
+
+ac:ACP_TMR_001 a ac:Practice ;
+    rdfs:label "Threat Model Creation And Triggered Refresh" ;
+    ac:practice_id "ACP-TMR-001" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_002 a ac:Practice ;
+    rdfs:label "DFD And Trust-Boundary Grounding" ;
+    ac:practice_id "ACP-TMR-002" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_003 a ac:Practice ;
+    rdfs:label "Structured Threat Analysis Method Selection" ;
+    ac:practice_id "ACP-TMR-003" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_004 a ac:Practice ;
+    rdfs:label "Threat Disposition And Accepted Risk Governance" ;
+    ac:practice_id "ACP-TMR-004" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_005 a ac:Practice ;
+    rdfs:label "Threat Traceability Into Requirements And Validation" ;
+    ac:practice_id "ACP-TMR-005" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_006 a ac:Practice ;
+    rdfs:label "Independent Review And Threat Model Approval" ;
+    ac:practice_id "ACP-TMR-006" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_007 a ac:Practice ;
+    rdfs:label "Threat Model Artifact Governance" ;
+    ac:practice_id "ACP-TMR-007" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_008 a ac:Practice ;
+    rdfs:label "Security Requirements Identification And Derivation" ;
+    ac:practice_id "ACP-TMR-008" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACP_TMR_009 a ac:Practice ;
+    rdfs:label "Requirements Communication And Compliance Monitoring" ;
+    ac:practice_id "ACP-TMR-009" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_001 a ac:Mechanism ;
+    rdfs:label "Threat Representation Models" ;
+    ac:mechanism_id "ACM-TMR-001" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_002 a ac:Mechanism ;
+    rdfs:label "Structured Threat Analysis Frameworks" ;
+    ac:mechanism_id "ACM-TMR-002" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_003 a ac:Mechanism ;
+    rdfs:label "Threat Model Versioning Controls" ;
+    ac:mechanism_id "ACM-TMR-003" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_004 a ac:Mechanism ;
+    rdfs:label "Explicit Threat Disposition Register" ;
+    ac:mechanism_id "ACM-TMR-004" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_005 a ac:Mechanism ;
+    rdfs:label "Threat Mitigation Linkage Controls" ;
+    ac:mechanism_id "ACM-TMR-005" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_006 a ac:Mechanism ;
+    rdfs:label "Reviewer Accountability And Consistency Gates" ;
+    ac:mechanism_id "ACM-TMR-006" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_007 a ac:Mechanism ;
+    rdfs:label "Requirements Registry And Derivation Traceability" ;
+    ac:mechanism_id "ACM-TMR-007" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACM_TMR_008 a ac:Mechanism ;
+    rdfs:label "Compliance Monitoring And Regulatory Change Feeds" ;
+    ac:mechanism_id "ACM-TMR-008" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACA_TMR_001 a ac:Artifact ;
+    rdfs:label "Threat Model" ;
+    ac:artifact_id "ACA-TMR-001" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACA_TMR_002 a ac:Artifact ;
+    rdfs:label "Risk Acceptance Record" ;
+    ac:artifact_id "ACA-TMR-002" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACA_TMR_003 a ac:Artifact ;
+    rdfs:label "Validation Evidence" ;
+    ac:artifact_id "ACA-TMR-003" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACA_TMR_004 a ac:Artifact ;
+    rdfs:label "Pipeline Config" ;
+    ac:artifact_id "ACA-TMR-004" ;
+    ac:belongsToSlice ac:SliceASC05 .
+
+ac:ACO_SPC_001 a ac:ControlObjective ;
+    rdfs:label "Secret Leak Prevention And Hardcoded-Secret Exclusion" ;
+    ac:objective_id "ACO-SPC-001" ;
+    ac:belongsToSlice ac:SliceASC06 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_001 ;
+    ac:objective_expects_artifact ac:ACA_SPC_001 .
+
+ac:ACO_SPC_002 a ac:ControlObjective ;
+    rdfs:label "Protected Secret Storage And Controlled Retrieval" ;
+    ac:objective_id "ACO-SPC-002" ;
+    ac:belongsToSlice ac:SliceASC06 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_002 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_004 ;
+    ac:objective_expects_artifact ac:ACA_SPC_001 .
+
+ac:ACO_SPC_003 a ac:ControlObjective ;
+    rdfs:label "Secret Rotation And Expiry Discipline" ;
+    ac:objective_id "ACO-SPC-003" ;
+    ac:belongsToSlice ac:SliceASC06 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_003 ;
+    ac:objective_expects_artifact ac:ACA_SPC_001 .
+
+ac:ACO_SPC_004 a ac:ControlObjective ;
+    rdfs:label "Operational Identity Binding And Short-Lived Credentials" ;
+    ac:objective_id "ACO-SPC-004" ;
+    ac:belongsToSlice ac:SliceASC06 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_004 ;
+    ac:objective_expects_artifact ac:ACA_SPC_001 ;
+    ac:objective_expects_artifact ac:ACA_SPC_002 .
+
+ac:ACO_SPC_005 a ac:ControlObjective ;
+    rdfs:label "Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces" ;
+    ac:objective_id "ACO-SPC-005" ;
+    ac:belongsToSlice ac:SliceASC06 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_004 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_004 ;
+    ac:objective_expects_artifact ac:ACA_SPC_001 ;
+    ac:objective_expects_artifact ac:ACA_SPC_002 .
+
+ac:ACO_SPC_006 a ac:ControlObjective ;
+    rdfs:label "Secret Change Auditability And Governance" ;
+    ac:objective_id "ACO-SPC-006" ;
+    ac:belongsToSlice ac:SliceASC06 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_003 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_004 ;
+    ac:objective_expects_artifact ac:ACA_SPC_001 ;
+    ac:objective_expects_artifact ac:ACA_SPC_002 .
+
+ac:ACO_SPC_007 a ac:ControlObjective ;
+    rdfs:label "Secret Handling And Operational Identity Integrity" ;
+    ac:objective_id "ACO-SPC-007" ;
+    ac:belongsToSlice ac:SliceASC06 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_001 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_002 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_004 ;
+    ac:objective_realized_by_practice ac:ACP_SPC_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SPC_004 ;
+    ac:objective_expects_artifact ac:ACA_SPC_001 ;
+    ac:objective_expects_artifact ac:ACA_SPC_002 .
+
+ac:ACP_SPC_001 a ac:Practice ;
+    rdfs:label "Secret Leak Prevention In Source And Pipeline" ;
+    ac:practice_id "ACP-SPC-001" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACP_SPC_002 a ac:Practice ;
+    rdfs:label "Vault-Backed Secret Storage" ;
+    ac:practice_id "ACP-SPC-002" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACP_SPC_003 a ac:Practice ;
+    rdfs:label "Secret Rotation And Renewal Discipline" ;
+    ac:practice_id "ACP-SPC-003" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACP_SPC_004 a ac:Practice ;
+    rdfs:label "Operational Identity Binding And OIDC Use" ;
+    ac:practice_id "ACP-SPC-004" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACP_SPC_005 a ac:Practice ;
+    rdfs:label "Secret Isolation Across Technical Surfaces" ;
+    ac:practice_id "ACP-SPC-005" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACP_SPC_006 a ac:Practice ;
+    rdfs:label "Secret Configuration Governance" ;
+    ac:practice_id "ACP-SPC-006" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACM_SPC_001 a ac:Mechanism ;
+    rdfs:label "Secret Management Systems" ;
+    ac:mechanism_id "ACM-SPC-001" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACM_SPC_002 a ac:Mechanism ;
+    rdfs:label "OIDC-Based Operational Identity" ;
+    ac:mechanism_id "ACM-SPC-002" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACM_SPC_003 a ac:Mechanism ;
+    rdfs:label "Short-Lived Credential Controls" ;
+    ac:mechanism_id "ACM-SPC-003" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACM_SPC_004 a ac:Mechanism ;
+    rdfs:label "Secret Scope And Binding Controls" ;
+    ac:mechanism_id "ACM-SPC-004" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACA_SPC_001 a ac:Artifact ;
+    rdfs:label "Secret Config" ;
+    ac:artifact_id "ACA-SPC-001" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACA_SPC_002 a ac:Artifact ;
+    rdfs:label "Identity Binding" ;
+    ac:artifact_id "ACA-SPC-002" ;
+    ac:belongsToSlice ac:SliceASC06 .
+
+ac:ACO_IVF_001 a ac:ControlObjective ;
+    rdfs:label "External Input Contract Validation" ;
+    ac:objective_id "ACO-IVF-001" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_004 .
+
+ac:ACO_IVF_002 a ac:ControlObjective ;
+    rdfs:label "Schema, Type And Allowlist Discipline" ;
+    ac:objective_id "ACO-IVF-002" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_001 ;
+    ac:objective_expects_artifact ac:ACA_IVF_003 .
+
+ac:ACO_IVF_003 a ac:ControlObjective ;
+    rdfs:label "Injection-Resistant Input Handling And Dangerous Pattern Exclusion" ;
+    ac:objective_id "ACO-IVF-003" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_002 ;
+    ac:objective_expects_artifact ac:ACA_IVF_001 ;
+    ac:objective_expects_artifact ac:ACA_IVF_002 ;
+    ac:objective_expects_artifact ac:ACA_IVF_004 ;
+    ac:objective_expects_artifact ac:ACA_IVF_005 .
+
+ac:ACO_IVF_004 a ac:ControlObjective ;
+    rdfs:label "Validation Before Internal Use And Trust Crossing" ;
+    ac:objective_id "ACO-IVF-004" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_005 .
+
+ac:ACO_IVF_005 a ac:ControlObjective ;
+    rdfs:label "Controlled Failure And Non-Revealing Client Error Surface" ;
+    ac:objective_id "ACO-IVF-005" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_004 ;
+    ac:objective_expects_artifact ac:ACA_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_004 ;
+    ac:objective_expects_artifact ac:ACA_IVF_006 .
+
+ac:ACO_IVF_006 a ac:ControlObjective ;
+    rdfs:label "Centralized Error Handling And Sensitive Error Logging Hygiene" ;
+    ac:objective_id "ACO-IVF-006" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_004 ;
+    ac:objective_expects_artifact ac:ACA_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_005 ;
+    ac:objective_expects_artifact ac:ACA_IVF_006 .
+
+ac:ACO_IVF_007 a ac:ControlObjective ;
+    rdfs:label "Input Validation And Safe Failure Integrity" ;
+    ac:objective_id "ACO-IVF-007" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_001 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_002 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_003 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_004 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_005 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_006 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_005 ;
+    ac:objective_expects_artifact ac:ACA_IVF_001 ;
+    ac:objective_expects_artifact ac:ACA_IVF_002 ;
+    ac:objective_expects_artifact ac:ACA_IVF_003 ;
+    ac:objective_expects_artifact ac:ACA_IVF_004 ;
+    ac:objective_expects_artifact ac:ACA_IVF_005 ;
+    ac:objective_expects_artifact ac:ACA_IVF_006 .
+
+ac:ACO_IVF_008 a ac:ControlObjective ;
+    rdfs:label "Context-Aware Output Encoding And Rendering Safety" ;
+    ac:objective_id "ACO-IVF-008" ;
+    ac:belongsToSlice ac:SliceASC07 ;
+    ac:objective_realized_by_practice ac:ACP_IVF_007 ;
+    ac:objective_implemented_by_mechanism ac:ACM_IVF_005 .
+
+ac:ACP_IVF_001 a ac:Practice ;
+    rdfs:label "Boundary Input Validation" ;
+    ac:practice_id "ACP-IVF-001" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACP_IVF_002 a ac:Practice ;
+    rdfs:label "Schema And Allowlist Enforcement" ;
+    ac:practice_id "ACP-IVF-002" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACP_IVF_003 a ac:Practice ;
+    rdfs:label "Dangerous Pattern Exclusion" ;
+    ac:practice_id "ACP-IVF-003" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACP_IVF_004 a ac:Practice ;
+    rdfs:label "Pre-Use Data Validation Discipline" ;
+    ac:practice_id "ACP-IVF-004" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACP_IVF_005 a ac:Practice ;
+    rdfs:label "Non-Revealing Error Surface Control" ;
+    ac:practice_id "ACP-IVF-005" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACP_IVF_006 a ac:Practice ;
+    rdfs:label "Centralized Error Governance" ;
+    ac:practice_id "ACP-IVF-006" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACP_IVF_007 a ac:Practice ;
+    rdfs:label "Context-Aware Output Encoding At Rendering Boundaries" ;
+    ac:practice_id "ACP-IVF-007" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACM_IVF_001 a ac:Mechanism ;
+    rdfs:label "Code Review For Input And Error Discipline" ;
+    ac:mechanism_id "ACM-IVF-001" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACM_IVF_002 a ac:Mechanism ;
+    rdfs:label "Static Rulepacks And Security Linters" ;
+    ac:mechanism_id "ACM-IVF-002" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACM_IVF_003 a ac:Mechanism ;
+    rdfs:label "Schema And Contract Validators" ;
+    ac:mechanism_id "ACM-IVF-003" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACM_IVF_004 a ac:Mechanism ;
+    rdfs:label "Centralized Error Translation And Redaction" ;
+    ac:mechanism_id "ACM-IVF-004" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACM_IVF_005 a ac:Mechanism ;
+    rdfs:label "Context-Aware Encoder Selection And Application" ;
+    ac:mechanism_id "ACM-IVF-005" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACA_IVF_001 a ac:Artifact ;
+    rdfs:label "Guideline Catalog" ;
+    ac:artifact_id "ACA-IVF-001" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACA_IVF_002 a ac:Artifact ;
+    rdfs:label "SAST Report" ;
+    ac:artifact_id "ACA-IVF-002" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACA_IVF_003 a ac:Artifact ;
+    rdfs:label "Validation Evidence" ;
+    ac:artifact_id "ACA-IVF-003" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACA_IVF_004 a ac:Artifact ;
+    rdfs:label "Test Report" ;
+    ac:artifact_id "ACA-IVF-004" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACA_IVF_005 a ac:Artifact ;
+    rdfs:label "Review Checklist" ;
+    ac:artifact_id "ACA-IVF-005" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACA_IVF_006 a ac:Artifact ;
+    rdfs:label "Log Stream" ;
+    ac:artifact_id "ACA-IVF-006" ;
+    ac:belongsToSlice ac:SliceASC07 .
+
+ac:ACO_ITS_001 a ac:ControlObjective ;
+    rdfs:label "Authenticated Service Interaction And Machine Identity Binding" ;
+    ac:objective_id "ACO-ITS-001" ;
+    ac:belongsToSlice ac:SliceASC08 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_001 ;
+    ac:objective_expects_artifact ac:ACA_ITS_001 .
+
+ac:ACO_ITS_002 a ac:ControlObjective ;
+    rdfs:label "Secure Transport And Insecure Protocol Exclusion" ;
+    ac:objective_id "ACO-ITS-002" ;
+    ac:belongsToSlice ac:SliceASC08 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_003 ;
+    ac:objective_expects_artifact ac:ACA_ITS_002 .
+
+ac:ACO_ITS_003 a ac:ControlObjective ;
+    rdfs:label "Message Integrity And Authorized Peer Validation" ;
+    ac:objective_id "ACO-ITS-003" ;
+    ac:belongsToSlice ac:SliceASC08 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_004 ;
+    ac:objective_expects_artifact ac:ACA_ITS_001 ;
+    ac:objective_expects_artifact ac:ACA_ITS_002 ;
+    ac:objective_expects_artifact ac:ACA_ITS_005 .
+
+ac:ACO_ITS_004 a ac:ControlObjective ;
+    rdfs:label "Boundary-Mediated External Exposure And Integration Path Control" ;
+    ac:objective_id "ACO-ITS-004" ;
+    ac:belongsToSlice ac:SliceASC08 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_002 ;
+    ac:objective_expects_artifact ac:ACA_ITS_002 ;
+    ac:objective_expects_artifact ac:ACA_ITS_003 .
+
+ac:ACO_ITS_005 a ac:ControlObjective ;
+    rdfs:label "Integration Security Review And Contract Assurance" ;
+    ac:objective_id "ACO-ITS-005" ;
+    ac:belongsToSlice ac:SliceASC08 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_001 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_002 ;
+    ac:objective_expects_artifact ac:ACA_ITS_003 ;
+    ac:objective_expects_artifact ac:ACA_ITS_004 .
+
+ac:ACO_ITS_006 a ac:ControlObjective ;
+    rdfs:label "External Interaction Auditability" ;
+    ac:objective_id "ACO-ITS-006" ;
+    ac:belongsToSlice ac:SliceASC08 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_005 ;
+    ac:objective_expects_artifact ac:ACA_ITS_005 .
+
+ac:ACO_ITS_007 a ac:ControlObjective ;
+    rdfs:label "Integration Trust And Service Interaction Assurance" ;
+    ac:objective_id "ACO-ITS-007" ;
+    ac:belongsToSlice ac:SliceASC08 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_001 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_002 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_003 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_004 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_005 ;
+    ac:objective_realized_by_practice ac:ACP_ITS_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_ITS_005 ;
+    ac:objective_expects_artifact ac:ACA_ITS_001 ;
+    ac:objective_expects_artifact ac:ACA_ITS_002 ;
+    ac:objective_expects_artifact ac:ACA_ITS_003 ;
+    ac:objective_expects_artifact ac:ACA_ITS_004 ;
+    ac:objective_expects_artifact ac:ACA_ITS_005 .
+
+ac:ACP_ITS_001 a ac:Practice ;
+    rdfs:label "Trust Boundary And Integration Review" ;
+    ac:practice_id "ACP-ITS-001" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACP_ITS_002 a ac:Practice ;
+    rdfs:label "Machine Identity And Mutual Authentication Discipline" ;
+    ac:practice_id "ACP-ITS-002" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACP_ITS_003 a ac:Practice ;
+    rdfs:label "Transport And Protocol Hardening" ;
+    ac:practice_id "ACP-ITS-003" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACP_ITS_004 a ac:Practice ;
+    rdfs:label "Message Integrity And Authorized Peer Validation" ;
+    ac:practice_id "ACP-ITS-004" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACP_ITS_005 a ac:Practice ;
+    rdfs:label "Integration Contract And Change Assurance" ;
+    ac:practice_id "ACP-ITS-005" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACP_ITS_006 a ac:Practice ;
+    rdfs:label "External Interaction Audit Logging" ;
+    ac:practice_id "ACP-ITS-006" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACM_ITS_001 a ac:Mechanism ;
+    rdfs:label "API Gateway With Mutual Authentication" ;
+    ac:mechanism_id "ACM-ITS-001" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACM_ITS_002 a ac:Mechanism ;
+    rdfs:label "Trust Boundary Models" ;
+    ac:mechanism_id "ACM-ITS-002" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACM_ITS_003 a ac:Mechanism ;
+    rdfs:label "Transport Security Controls" ;
+    ac:mechanism_id "ACM-ITS-003" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACM_ITS_004 a ac:Mechanism ;
+    rdfs:label "Message Integrity And Authorized Peer Policies" ;
+    ac:mechanism_id "ACM-ITS-004" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACM_ITS_005 a ac:Mechanism ;
+    rdfs:label "Structured External Call Logging" ;
+    ac:mechanism_id "ACM-ITS-005" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACA_ITS_001 a ac:Artifact ;
+    rdfs:label "Identity Binding" ;
+    ac:artifact_id "ACA-ITS-001" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACA_ITS_002 a ac:Artifact ;
+    rdfs:label "Policy Report" ;
+    ac:artifact_id "ACA-ITS-002" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACA_ITS_003 a ac:Artifact ;
+    rdfs:label "Review Checklist" ;
+    ac:artifact_id "ACA-ITS-003" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACA_ITS_004 a ac:Artifact ;
+    rdfs:label "Approval Record" ;
+    ac:artifact_id "ACA-ITS-004" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACA_ITS_005 a ac:Artifact ;
+    rdfs:label "Log Stream" ;
+    ac:artifact_id "ACA-ITS-005" ;
+    ac:belongsToSlice ac:SliceASC08 .
+
+ac:ACO_RPR_001 a ac:ControlObjective ;
+    rdfs:label "Release Authorization And Irreversible Change Accountability" ;
+    ac:objective_id "ACO-RPR-001" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_002 ;
+    ac:objective_expects_artifact ac:ACA_RPR_001 ;
+    ac:objective_expects_artifact ac:ACA_RPR_002 .
+
+ac:ACO_RPR_002 a ac:ControlObjective ;
+    rdfs:label "Verified Artifact Promotion" ;
+    ac:objective_id "ACO-RPR-002" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_003 ;
+    ac:objective_expects_artifact ac:ACA_RPR_003 ;
+    ac:objective_expects_artifact ac:ACA_RPR_004 .
+
+ac:ACO_RPR_003 a ac:ControlObjective ;
+    rdfs:label "Pre-Promotion Security Gates And Staging Assurance" ;
+    ac:objective_id "ACO-RPR-003" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_002 ;
+    ac:objective_expects_artifact ac:ACA_RPR_002 ;
+    ac:objective_expects_artifact ac:ACA_RPR_005 .
+
+ac:ACO_RPR_004 a ac:ControlObjective ;
+    rdfs:label "End-to-End Deployment Traceability" ;
+    ac:objective_id "ACO-RPR-004" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_005 ;
+    ac:objective_expects_artifact ac:ACA_RPR_001 ;
+    ac:objective_expects_artifact ac:ACA_RPR_003 ;
+    ac:objective_expects_artifact ac:ACA_RPR_006 ;
+    ac:objective_expects_artifact ac:ACA_RPR_008 .
+
+ac:ACO_RPR_005 a ac:ControlObjective ;
+    rdfs:label "Tested Rollback Readiness And Reversibility" ;
+    ac:objective_id "ACO-RPR-005" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_004 ;
+    ac:objective_expects_artifact ac:ACA_RPR_007 ;
+    ac:objective_expects_artifact ac:ACA_RPR_008 .
+
+ac:ACO_RPR_006 a ac:ControlObjective ;
+    rdfs:label "Controlled Rollout And Blast-Radius Containment" ;
+    ac:objective_id "ACO-RPR-006" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_004 ;
+    ac:objective_expects_artifact ac:ACA_RPR_005 ;
+    ac:objective_expects_artifact ac:ACA_RPR_006 ;
+    ac:objective_expects_artifact ac:ACA_RPR_007 .
+
+ac:ACO_RPR_007 a ac:ControlObjective ;
+    rdfs:label "Release Promotion And Reversible Rollout Assurance" ;
+    ac:objective_id "ACO-RPR-007" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_001 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_002 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_003 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_004 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_005 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_006 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_005 ;
+    ac:objective_expects_artifact ac:ACA_RPR_001 ;
+    ac:objective_expects_artifact ac:ACA_RPR_002 ;
+    ac:objective_expects_artifact ac:ACA_RPR_003 ;
+    ac:objective_expects_artifact ac:ACA_RPR_004 ;
+    ac:objective_expects_artifact ac:ACA_RPR_005 ;
+    ac:objective_expects_artifact ac:ACA_RPR_006 ;
+    ac:objective_expects_artifact ac:ACA_RPR_007 ;
+    ac:objective_expects_artifact ac:ACA_RPR_008 .
+
+ac:ACO_RPR_008 a ac:ControlObjective ;
+    rdfs:label "Secure Configuration Baseline Integrity" ;
+    ac:objective_id "ACO-RPR-008" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_008 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_008 ;
+    ac:objective_expects_artifact ac:ACA_RPR_009 ;
+    ac:objective_expects_artifact ac:ACA_RPR_010 .
+
+ac:ACO_RPR_009 a ac:ControlObjective ;
+    rdfs:label "Security-Relevant Configuration Integrity And Override Control" ;
+    ac:objective_id "ACO-RPR-009" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_009 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_009 ;
+    ac:objective_expects_artifact ac:ACA_RPR_010 ;
+    ac:objective_expects_artifact ac:ACA_RPR_011 .
+
+ac:ACO_RPR_010 a ac:ControlObjective ;
+    rdfs:label "Baseline Review, Exception Visibility And Change Discipline" ;
+    ac:objective_id "ACO-RPR-010" ;
+    ac:belongsToSlice ac:SliceASC09 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_009 ;
+    ac:objective_realized_by_practice ac:ACP_RPR_010 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_009 ;
+    ac:objective_implemented_by_mechanism ac:ACM_RPR_010 ;
+    ac:objective_expects_artifact ac:ACA_RPR_011 ;
+    ac:objective_expects_artifact ac:ACA_RPR_012 .
+
+ac:ACP_RPR_001 a ac:Practice ;
+    rdfs:label "Accountable Release Approval" ;
+    ac:practice_id "ACP-RPR-001" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_002 a ac:Practice ;
+    rdfs:label "Verified Artifact Promotion" ;
+    ac:practice_id "ACP-RPR-002" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_003 a ac:Practice ;
+    rdfs:label "Pre-Promotion Gates And Staging Validation" ;
+    ac:practice_id "ACP-RPR-003" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_004 a ac:Practice ;
+    rdfs:label "End-to-End Deploy Traceability" ;
+    ac:practice_id "ACP-RPR-004" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_005 a ac:Practice ;
+    rdfs:label "Tested Rollback Discipline" ;
+    ac:practice_id "ACP-RPR-005" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_006 a ac:Practice ;
+    rdfs:label "Progressive Rollout And Containment" ;
+    ac:practice_id "ACP-RPR-006" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_008 a ac:Practice ;
+    rdfs:label "Secure Configuration Baseline Management" ;
+    ac:practice_id "ACP-RPR-008" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_009 a ac:Practice ;
+    rdfs:label "Review Security-Relevant Overrides Before Promotion Or Deployment" ;
+    ac:practice_id "ACP-RPR-009" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACP_RPR_010 a ac:Practice ;
+    rdfs:label "Record And Periodically Review Exceptions Against The Intended Baseline" ;
+    ac:practice_id "ACP-RPR-010" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_001 a ac:Mechanism ;
+    rdfs:label "Release Promotion Controls" ;
+    ac:mechanism_id "ACM-RPR-001" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_002 a ac:Mechanism ;
+    rdfs:label "Approval Gates And Separation Of Signal From Promotion Decision" ;
+    ac:mechanism_id "ACM-RPR-002" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_003 a ac:Mechanism ;
+    rdfs:label "Provenance And Signature Verification At Promotion" ;
+    ac:mechanism_id "ACM-RPR-003" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_004 a ac:Mechanism ;
+    rdfs:label "Rollback And Containment Controls" ;
+    ac:mechanism_id "ACM-RPR-004" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_005 a ac:Mechanism ;
+    rdfs:label "Deployment Pipeline Traceability And Audit Controls" ;
+    ac:mechanism_id "ACM-RPR-005" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_008 a ac:Mechanism ;
+    rdfs:label "Configuration Baseline Enforcement Controls" ;
+    ac:mechanism_id "ACM-RPR-008" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_009 a ac:Mechanism ;
+    rdfs:label "Gate Or Policy Check For Prohibited Or Unsafe Overrides" ;
+    ac:mechanism_id "ACM-RPR-009" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACM_RPR_010 a ac:Mechanism ;
+    rdfs:label "Change Review Control For Security-Relevant Baseline Deviations" ;
+    ac:mechanism_id "ACM-RPR-010" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_001 a ac:Artifact ;
+    rdfs:label "Approval Record" ;
+    ac:artifact_id "ACA-RPR-001" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_002 a ac:Artifact ;
+    rdfs:label "Release Gate" ;
+    ac:artifact_id "ACA-RPR-002" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_003 a ac:Artifact ;
+    rdfs:label "Artifact Provenance" ;
+    ac:artifact_id "ACA-RPR-003" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_004 a ac:Artifact ;
+    rdfs:label "Artifact Signature" ;
+    ac:artifact_id "ACA-RPR-004" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_005 a ac:Artifact ;
+    rdfs:label "Pipeline Config" ;
+    ac:artifact_id "ACA-RPR-005" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_006 a ac:Artifact ;
+    rdfs:label "Deployment Plan" ;
+    ac:artifact_id "ACA-RPR-006" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_007 a ac:Artifact ;
+    rdfs:label "Rollback Plan" ;
+    ac:artifact_id "ACA-RPR-007" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_008 a ac:Artifact ;
+    rdfs:label "Operational Evidence" ;
+    ac:artifact_id "ACA-RPR-008" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_009 a ac:Artifact ;
+    rdfs:label "Security baseline definition" ;
+    ac:artifact_id "ACA-RPR-009" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_010 a ac:Artifact ;
+    rdfs:label "Hardening standard or approved configuration profile" ;
+    ac:artifact_id "ACA-RPR-010" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_011 a ac:Artifact ;
+    rdfs:label "Security-relevant override or exception record" ;
+    ac:artifact_id "ACA-RPR-011" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACA_RPR_012 a ac:Artifact ;
+    rdfs:label "Baseline review evidence package" ;
+    ac:artifact_id "ACA-RPR-012" ;
+    ac:belongsToSlice ac:SliceASC09 .
+
+ac:ACO_SLG_001 a ac:ControlObjective ;
+    rdfs:label "Critical Security Event Coverage And Catalog Discipline" ;
+    ac:objective_id "ACO-SLG-001" ;
+    ac:belongsToSlice ac:SliceASC10 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_005 ;
+    ac:objective_expects_artifact ac:ACA_SLG_001 .
+
+ac:ACO_SLG_002 a ac:ControlObjective ;
+    rdfs:label "Structured Audit Fields And Machine-Readable Log Shape" ;
+    ac:objective_id "ACO-SLG-002" ;
+    ac:belongsToSlice ac:SliceASC10 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_002 ;
+    ac:objective_expects_artifact ac:ACA_SLG_001 .
+
+ac:ACO_SLG_003 a ac:ControlObjective ;
+    rdfs:label "Log Integrity Protection And Access Discipline" ;
+    ac:objective_id "ACO-SLG-003" ;
+    ac:belongsToSlice ac:SliceASC10 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_003 ;
+    ac:objective_expects_artifact ac:ACA_SLG_001 .
+
+ac:ACO_SLG_004 a ac:ControlObjective ;
+    rdfs:label "Audit Record Retention And Lifecycle Governance" ;
+    ac:objective_id "ACO-SLG-004" ;
+    ac:belongsToSlice ac:SliceASC10 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_006 ;
+    ac:objective_expects_artifact ac:ACA_SLG_001 .
+
+ac:ACO_SLG_005 a ac:ControlObjective ;
+    rdfs:label "Centralized Log Ingestion And Source Accountability" ;
+    ac:objective_id "ACO-SLG-005" ;
+    ac:belongsToSlice ac:SliceASC10 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_002 ;
+    ac:objective_expects_artifact ac:ACA_SLG_001 .
+
+ac:ACO_SLG_006 a ac:ControlObjective ;
+    rdfs:label "Logging Pipeline Health And Silent-Failure Visibility" ;
+    ac:objective_id "ACO-SLG-006" ;
+    ac:belongsToSlice ac:SliceASC10 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_004 ;
+    ac:objective_expects_artifact ac:ACA_SLG_002 .
+
+ac:ACO_SLG_007 a ac:ControlObjective ;
+    rdfs:label "Security Logging And Audit Trail Assurance" ;
+    ac:objective_id "ACO-SLG-007" ;
+    ac:belongsToSlice ac:SliceASC10 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_001 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_002 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_003 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_004 ;
+    ac:objective_realized_by_practice ac:ACP_SLG_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_001 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_002 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_003 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_004 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_005 ;
+    ac:objective_implemented_by_mechanism ac:ACM_SLG_006 ;
+    ac:objective_expects_artifact ac:ACA_SLG_001 ;
+    ac:objective_expects_artifact ac:ACA_SLG_002 .
+
+ac:ACP_SLG_001 a ac:Practice ;
+    rdfs:label "Critical Event Catalog Governance" ;
+    ac:practice_id "ACP-SLG-001" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACP_SLG_002 a ac:Practice ;
+    rdfs:label "Structured And Centralized Security Logging" ;
+    ac:practice_id "ACP-SLG-002" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACP_SLG_003 a ac:Practice ;
+    rdfs:label "Log Integrity And Protected Access" ;
+    ac:practice_id "ACP-SLG-003" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACP_SLG_004 a ac:Practice ;
+    rdfs:label "Log Retention And Lifecycle Governance" ;
+    ac:practice_id "ACP-SLG-004" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACP_SLG_005 a ac:Practice ;
+    rdfs:label "Logging Pipeline Health Visibility" ;
+    ac:practice_id "ACP-SLG-005" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACM_SLG_001 a ac:Mechanism ;
+    rdfs:label "Machine-Readable Structured Logging" ;
+    ac:mechanism_id "ACM-SLG-001" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACM_SLG_002 a ac:Mechanism ;
+    rdfs:label "Central Log Ingestion And Normalization" ;
+    ac:mechanism_id "ACM-SLG-002" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACM_SLG_003 a ac:Mechanism ;
+    rdfs:label "Log Integrity And Access Controls" ;
+    ac:mechanism_id "ACM-SLG-003" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACM_SLG_004 a ac:Mechanism ;
+    rdfs:label "Logging Failure Visibility Controls" ;
+    ac:mechanism_id "ACM-SLG-004" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACM_SLG_005 a ac:Mechanism ;
+    rdfs:label "Security Event Catalog And Coverage Verification" ;
+    ac:mechanism_id "ACM-SLG-005" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACM_SLG_006 a ac:Mechanism ;
+    rdfs:label "Log Retention Lifecycle Management Controls" ;
+    ac:mechanism_id "ACM-SLG-006" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACA_SLG_001 a ac:Artifact ;
+    rdfs:label "Log Stream" ;
+    ac:artifact_id "ACA-SLG-001" ;
+    ac:belongsToSlice ac:SliceASC10 .
+
+ac:ACA_SLG_002 a ac:Artifact ;
+    rdfs:label "Alert Policy" ;
+    ac:artifact_id "ACA-SLG-002" ;
+    ac:belongsToSlice ac:SliceASC10 .

@@ -1,0 +1,159 @@
+meta:
+  name: AppSec Core Slice Mapping Draft
+  version: '0.1'
+  status: working_draft
+  scope: security_event_logging_audit_trail_and_centralized_logging
+  description: >
+    Draft mapping layer between current SbD-ToE manual controls and requirements
+    and the normalized objectives proposed in the security-event-logging and
+    audit-trail AppSec core slice draft.
+  source_manual_ontology: ontology/sbdtoe-ontology.yaml
+  target_core_draft: ontology/appsec-core-security-event-logging-audit-trail-draft.yaml
+  source_notes:
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-10-candidate-evaluation.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-security-event-logging-audit-trail.md
+mapping_conventions:
+  primary:
+    meaning: The manual object is mainly explained by this normalized objective
+  secondary:
+    meaning: The manual object materially contributes to this objective but is not best treated as its main anchor
+  composite_target_usage:
+    meaning: Composite objectives may be primary landing zones for broad manual control clusters, but requirement-level mappings should prefer atomic objectives when a direct semantic fit exists
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+  slice_boundary_warning:
+    meaning: The slice models durable security logging and audit-trail assurance, not the full monitoring, alerting or incident-response program
+manual_control_mappings:
+  - source_control_id: CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    source_control_name: Monitorizacao e resposta operacional
+    target_objectives:
+      - objective_id: ACO-SLG-007
+        strength: primary
+        rationale: The broad current monitoring control is the clearest composite landing zone for the reusable logging and audit-trail sub-surface
+      - objective_id: ACO-SLG-001
+        strength: secondary
+        rationale: Critical-event coverage and cataloging are one direct meaning of the current control
+      - objective_id: ACO-SLG-002
+        strength: secondary
+        rationale: Structured centralized logging is one of the clearest reusable technical meanings of the current control
+      - objective_id: ACO-SLG-003
+        strength: secondary
+        rationale: Log integrity and access protection are explicit direct meanings of the current control
+      - objective_id: ACO-SLG-004
+        strength: secondary
+        rationale: Retention and lifecycle governance of logs remain inside the same logging sub-surface
+      - objective_id: ACO-SLG-005
+        strength: secondary
+        rationale: Central ingestion and source accountability are explicit direct meanings of the current control
+      - objective_id: ACO-SLG-006
+        strength: secondary
+        rationale: Visibility of logging pipeline failure is a necessary assurance property of the same sub-surface
+manual_requirement_mappings:
+  - source_requirement_id: LOG-001
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Registo de eventos criticos
+    target_objectives:
+      - objective_id: ACO-SLG-001
+        strength: primary
+        rationale: This is the clearest foundational anchor for intentional security event coverage
+  - source_requirement_id: OPS-002
+    source_bundle: 12-monitorizacao-operacoes
+    source_requirement_name: Catalogo de eventos criticos de seguranca definido e verificado
+    target_objectives:
+      - objective_id: ACO-SLG-001
+        strength: primary
+        rationale: This is the strongest operational anchor for explicit event-catalog discipline
+  - source_requirement_id: LOG-002
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Atributos minimos em logs
+    target_objectives:
+      - objective_id: ACO-SLG-002
+        strength: primary
+        rationale: Minimum required audit fields are the direct semantic center here
+  - source_requirement_id: OPS-001
+    source_bundle: 12-monitorizacao-operacoes
+    source_requirement_name: Logging estruturado e persistente para todos os componentes em producao
+    target_objectives:
+      - objective_id: ACO-SLG-002
+        strength: primary
+        rationale: Structured and persistent machine-readable logging is the clearest operational anchor for normalized log shape
+  - source_requirement_id: LOG-003
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Proteccao de integridade e acesso aos logs
+    target_objectives:
+      - objective_id: ACO-SLG-003
+        strength: primary
+        rationale: Tamper resistance and controlled access are the direct semantic center of this requirement
+  - source_requirement_id: LOG-005
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Retencao minima dos logs
+    target_objectives:
+      - objective_id: ACO-SLG-004
+        strength: primary
+        rationale: Foundational retention expectations belong directly to log lifecycle governance
+  - source_requirement_id: OPS-003
+    source_bundle: 12-monitorizacao-operacoes
+    source_requirement_name: Retencao de logs conforme politica e requisitos regulatorios
+    target_objectives:
+      - objective_id: ACO-SLG-004
+        strength: primary
+        rationale: This is the strongest operational anchor for explicit retention and log-lifecycle rules
+  - source_requirement_id: LOG-006
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Envio para sistema centralizado
+    target_objectives:
+      - objective_id: ACO-SLG-005
+        strength: primary
+        rationale: Central forwarding is the clearest foundational anchor for centralized ingestion
+  - source_requirement_id: OPS-004
+    source_bundle: 12-monitorizacao-operacoes
+    source_requirement_name: Centralizacao de logs em sistema SIEM ou equivalente
+    target_objectives:
+      - objective_id: ACO-SLG-005
+        strength: primary
+        rationale: This is the strongest operational anchor for centralized source-accountable log ingestion
+  - source_requirement_id: LOG-008
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Alarme em falhas do mecanismo de logging
+    target_objectives:
+      - objective_id: ACO-SLG-006
+        strength: primary
+        rationale: Silent-failure visibility of the logging pipeline is the direct semantic center here even if alerts remain a support mechanism rather than the slice center
+bridge_only_observations:
+  - source_reference: LOG-004
+    note: >
+      Periodic log review is useful, but it is better treated as adjacent
+      governance than as the primary center of the reusable audit-trail slice.
+  - source_reference: LOG-007
+    note: >
+      Anomaly-triggered alerting belongs more to broader alerting and
+      detection semantics than to the current durable-record center.
+  - source_reference: LOG-009
+    note: >
+      Incident reconstruction readiness remains important, but it sits too near
+      incident response and investigation semantics to define the slice center
+      now.
+  - source_reference: OPS-005
+    note: >
+      Automatic alerts for critical events are downstream consumers of good
+      security logging, not the primary center of this slice.
+  - source_reference: OPS-006
+    note: >
+      Response SLAs remain operational response semantics rather than durable
+      record semantics.
+  - source_reference: OPS-007
+    note: >
+      Integration with incident response belongs to a broader response track,
+      not to the reusable audit-trail center.
+  - source_reference: OPS-008
+    note: >
+      Correlation across multiple sources is useful, but it is a higher-order
+      analytics layer above the current logging slice.
+  - source_reference: OPS-009
+    note: >
+      Behavioral baselines and anomaly detection remain probabilistic
+      observability semantics and should not define the slice now.
+open_questions:
+  - Should periodic log review remain bridge-only, or later become a stronger audit-governance objective once the repo has a richer review artifact surface?
+  - Which future artifact should become the main anchor for event catalogs and source coverage once the artifact taxonomy expands beyond generic log streams?
+  - Should logging-pipeline health remain in this slice long-term, or later share part of its role with a future observability slice without collapsing into `V3`?

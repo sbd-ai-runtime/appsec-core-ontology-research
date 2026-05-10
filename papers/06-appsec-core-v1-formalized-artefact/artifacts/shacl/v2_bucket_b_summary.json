@@ -1,0 +1,92 @@
+{
+  "schema": "appsec-core-v1-consumer-conformance-report/1.0",
+  "conforms": false,
+  "n_violations_total": 7,
+  "n_violations_per_shape": {
+    "https://securitybydesign.dev/ontology/appsec-core/v1#ClaimTargetReferentialIntegrityShape": 1,
+    "https://securitybydesign.dev/ontology/appsec-core/v1#MechanismCOConsistencyShape": 1,
+    "https://securitybydesign.dev/ontology/appsec-core/v1#PracticeCOConsistencyShape": 1,
+    "https://securitybydesign.dev/ontology/appsec-core/v1#SliceCoherenceClaimShape": 3,
+    "n92ea1d3f56be4af4875c66a8fdee6e13b58": 1
+  },
+  "shape_labels": {
+    "https://securitybydesign.dev/ontology/appsec-core/v1#ClaimWellFormednessShape": "M4-card — Claim well-formedness (cardinalities + types)",
+    "https://securitybydesign.dev/ontology/appsec-core/v1#SliceCoherenceClaimShape": "M1' — Slice coherence on claim (subsumes M2 for CO-level)",
+    "https://securitybydesign.dev/ontology/appsec-core/v1#PracticeCOConsistencyShape": "M3 — Practice ∈ CO consistency (Practice-level claims)",
+    "https://securitybydesign.dev/ontology/appsec-core/v1#MechanismCOConsistencyShape": "M4 — Mechanism ∈ CO chain (Mechanism-level claims; gap 1)",
+    "https://securitybydesign.dev/ontology/appsec-core/v1#ClaimTargetReferentialIntegrityShape": "M4-card / referential integrity — claim target IRI resolves with matching level"
+  },
+  "violations": [
+    {
+      "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+      "source_shape": "https://securitybydesign.dev/ontology/appsec-core/v1#ClaimTargetReferentialIntegrityShape",
+      "severity": "http://www.w3.org/ns/shacl#Violation",
+      "focus_node": "https://example.test/v2-fixture/claim-bad-D",
+      "value": "https://example.test/v2-fixture/claim-bad-D",
+      "message": "M4-card / referential integrity violation: the claim's ac:target_core_entity IRI does not resolve to an ontology entity whose rdf:type matches the claim's ac:level. Either the IRI is unknown (typo or IRI-scheme drift — e.g., emitting ac:co-ACO-IVF-002 instead of the canonical ac:ACO_IVF_002) or the entity exists at a different ontology level than the claim declares."
+    },
+    {
+      "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+      "source_shape": "https://securitybydesign.dev/ontology/appsec-core/v1#MechanismCOConsistencyShape",
+      "severity": "http://www.w3.org/ns/shacl#Violation",
+      "focus_node": "https://example.test/v2-fixture/claim-bad-C",
+      "value": "https://example.test/v2-fixture/claim-bad-C",
+      "message": "M4 violation: a Mechanism-level claim names a Mechanism that no CO in the declared slice implements (no CO in claim.slice has ac:objective_implemented_by_mechanism pointing at this Mechanism). The Mechanism may be slice-coherent on its own (M1') but is structurally orphan from the slice's CO set."
+    },
+    {
+      "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+      "source_shape": "https://securitybydesign.dev/ontology/appsec-core/v1#PracticeCOConsistencyShape",
+      "severity": "http://www.w3.org/ns/shacl#Violation",
+      "focus_node": "https://example.test/v2-fixture/claim-bad-B",
+      "value": "https://example.test/v2-fixture/claim-bad-B",
+      "message": "M3 violation: a Practice-level claim names a Practice that no CO in the declared slice realizes (no CO in claim.slice has ac:objective_realized_by_practice pointing at this Practice). The Practice may be slice-coherent on its own (M1') but is structurally orphan from the slice's CO set."
+    },
+    {
+      "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+      "source_shape": "https://securitybydesign.dev/ontology/appsec-core/v1#SliceCoherenceClaimShape",
+      "severity": "http://www.w3.org/ns/shacl#Violation",
+      "focus_node": "https://example.test/v2-fixture/claim-bad-A",
+      "value": "https://example.test/v2-fixture/claim-bad-A",
+      "message": "M1' violation: claim ac:slice does not equal the ontology's ac:belongsToSlice for the claim's target. The substrate has emitted a claim whose target lives in a different slice than the one declared. (Either the slice classifier or the target picker is wrong; not a SHACL-fixable data issue. See Decision 0003 Amendment 1 §A.M1'.)"
+    },
+    {
+      "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+      "source_shape": "https://securitybydesign.dev/ontology/appsec-core/v1#SliceCoherenceClaimShape",
+      "severity": "http://www.w3.org/ns/shacl#Violation",
+      "focus_node": "https://example.test/v2-fixture/claim-bad-B",
+      "value": "https://example.test/v2-fixture/claim-bad-B",
+      "message": "M1' violation: claim ac:slice does not equal the ontology's ac:belongsToSlice for the claim's target. The substrate has emitted a claim whose target lives in a different slice than the one declared. (Either the slice classifier or the target picker is wrong; not a SHACL-fixable data issue. See Decision 0003 Amendment 1 §A.M1'.)"
+    },
+    {
+      "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+      "source_shape": "https://securitybydesign.dev/ontology/appsec-core/v1#SliceCoherenceClaimShape",
+      "severity": "http://www.w3.org/ns/shacl#Violation",
+      "focus_node": "https://example.test/v2-fixture/claim-bad-C",
+      "value": "https://example.test/v2-fixture/claim-bad-C",
+      "message": "M1' violation: claim ac:slice does not equal the ontology's ac:belongsToSlice for the claim's target. The substrate has emitted a claim whose target lives in a different slice than the one declared. (Either the slice classifier or the target picker is wrong; not a SHACL-fixable data issue. See Decision 0003 Amendment 1 §A.M1'.)"
+    },
+    {
+      "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+      "source_shape": "n92ea1d3f56be4af4875c66a8fdee6e13b58",
+      "severity": "http://www.w3.org/ns/shacl#Violation",
+      "focus_node": "https://example.test/v2-fixture/claim-bad-E",
+      "result_path": "https://securitybydesign.dev/ontology/appsec-core/v1#similarity_score",
+      "message": "M4-card: ac:Claim ac:similarity_score must be exactly one decimal in [0.0, 1.0]."
+    }
+  ],
+  "inputs": {
+    "data_graph": "/tmp/archon-2026-05-04-apparatus-v2/formal/appsec_core/05-validation/reports/appsec-core-v1-pyshacl-v2-bucket-b-fixture.ttl",
+    "shapes": "/tmp/archon-2026-05-04-apparatus-v2/formal/appsec_core/03-shacl/shapes/appsec-core-v0-shapes.ttl",
+    "ontology": "/tmp/archon-2026-05-04-apparatus-v2/packages/ontology/appsec-core/v1.0/formal/appsec-core-v0-bounded-v1.ttl",
+    "data_triples": "1879",
+    "shapes_triples": "398",
+    "ontology_triples": "1808"
+  },
+  "library_versions": {
+    "pyshacl": "0.31.0",
+    "rdflib": "7.6.0",
+    "python": "3.10.1"
+  },
+  "generated_at_utc": "2026-05-04T13:22:25.502663+00:00",
+  "apparatus_caveat": "Model-invariant shapes only (M1' / M2 subsumed / M3 / M4 via CO chain / M4-card). Process-side invariants (M5 semantic warrant, P1' grounded-implies-claim) are NOT enforced here; consumers guarantee them by construction (Pydantic + assertions + tests). Apparatus tag appsec-core-v0-shapes.ttl is NOT modified by this validator; this file ALONGSIDE it adds claim-targeted shapes without touching ontology-targeted apparatus shapes."
+}

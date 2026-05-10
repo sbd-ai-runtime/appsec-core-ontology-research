@@ -1,0 +1,292 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: integration_trust_and_service_to_service_security
+  description: >
+    Eighth narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    integration trust, service-to-service security and external interaction
+    assurance.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-integration-trust-service-security.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - end_user_identity_and_session
+    - full_api_product_governance
+    - full_runtime_monitoring_and_incident_response
+    - threat_and_signal_normalization
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - service_identity_trust
+    - transport_and_protocol_security
+    - message_integrity_and_peer_authorization
+    - boundary_mediation_and_exposure
+    - integration_review_and_contract_assurance
+    - interaction_auditability
+    - integration_trust_surface
+  included_manual_categories:
+    - API
+    - INT
+  included_companion_requirements:
+    - ARC-002
+    - ARC-006
+  excluded_for_now:
+    - end_user_identity_and_session
+    - full_architecture_governance
+    - full_runtime_monitoring_and_detection
+    - deploy_and_release_governance
+    - threat_and_signal_normalization
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-ITS-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[service_identity_trust, transport_and_protocol_security, message_integrity_and_peer_authorization, boundary_mediation_and_exposure, integration_review_and_contract_assurance, interaction_auditability, integration_trust_surface]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, identity_and_trust_control, rollout_recovery_and_runtime_records]
+      - local_practice_type: enum[boundary_review, mutual_auth, transport_hardening, integrity_verification, contract_review, audit_logging]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[governance_and_review, identity_and_trust_control, policy_and_gate_enforcement, rollout_recovery_and_runtime_records]
+      - local_mechanism_type: enum[gateway, mutual_auth, transport_control, integrity_control, allowlist_control, review_gate, logging_control]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[binding_record, review_record, approval_record, operational_record, evidence_package]
+      - local_role: enum[authorization_binding, checklist, approval_record, log_record, policy_evidence]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[binding_record, review_record, approval_record, operational_record, evidence_package]
+      - local_evidence_kind: enum[authorization_binding, checklist, approval_record, log_record, policy_evidence]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to integration-trust judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-ITS-001:
+    name: Authenticated Service Interaction And Machine Identity Binding
+    objective_kind: atomic
+    domain_key: service_identity_trust
+    objective_type: preventive
+    statement: Machine-to-machine interactions must authenticate peer services through explicit trusted identities, mutual authentication or secure bounded tokens at boundary entry points
+    expected_outcome: Cross-service calls are accepted only from authenticated peers with an explicit and reviewable trust basis
+    verification_posture: authenticated_machine_interaction
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af
+    current_manual_requirement_anchors:
+      - API-001
+      - INT-002
+    expected_artifacts:
+      - ART-identity-binding-f96a2a528c
+    open_artifact_gap:
+      - service_identity_policy_artifact
+      - mutual_auth_or_token_config_artifact
+      - trusted_peer_matrix_artifact
+  ACO-ITS-002:
+    name: Secure Transport And Insecure Protocol Exclusion
+    objective_kind: atomic
+    domain_key: transport_and_protocol_security
+    objective_type: preventive
+    statement: Service interactions must use secure transport with valid certificates and approved protocol versions, while insecure transport options are explicitly disabled or rejected
+    expected_outcome: Cross-system traffic remains protected in transit and insecure protocol fallback is not available by accident
+    verification_posture: secure_transport_is_enforced
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - API-005
+      - INT-003
+      - INT-004
+    expected_artifacts:
+      - ART-policy-report-7e52280504
+    open_artifact_gap:
+      - transport_security_policy_artifact
+      - certificate_inventory_artifact
+      - allowed_protocol_profile_artifact
+  ACO-ITS-003:
+    name: Message Integrity And Authorized Peer Validation
+    objective_kind: atomic
+    domain_key: message_integrity_and_peer_authorization
+    objective_type: preventive
+    statement: Sensitive or trusted interactions must verify message integrity and accept traffic only from explicitly authorized origins and destinations
+    expected_outcome: Messages cannot be trusted solely because they reached the receiver, and unauthorized peers are rejected with reviewable evidence
+    verification_posture: integrity_and_peer_validation_are_enforced
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af
+    current_manual_requirement_anchors:
+      - INT-005
+      - INT-006
+    expected_artifacts:
+      - ART-policy-report-7e52280504
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - message_signature_policy_artifact
+      - authorized_origin_destination_list_artifact
+  ACO-ITS-004:
+    name: Boundary-Mediated External Exposure And Integration Path Control
+    objective_kind: atomic
+    domain_key: boundary_mediation_and_exposure
+    objective_type: preventive
+    statement: Externally exposed endpoints and cross-boundary integration paths must be minimized, justified and mediated through explicit boundary controls rather than informal exposure
+    expected_outcome: Exposure exists only where justified, and interaction paths are controlled through gateways, proxies, ACLs, segmentation or equivalent boundary mediation
+    verification_posture: exposure_and_paths_are_boundary_controlled
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - API-002
+      - ARC-002
+      - ARC-006
+    expected_artifacts:
+      - ART-review-checklist-de29054201
+      - ART-policy-report-7e52280504
+    open_artifact_gap:
+      - external_endpoint_inventory_artifact
+      - boundary_mediation_config_artifact
+      - integration_review_artifact
+  ACO-ITS-005:
+    name: Integration Security Review And Contract Assurance
+    objective_kind: atomic
+    domain_key: integration_review_and_contract_assurance
+    objective_type: governance
+    statement: Material integrations must undergo explicit security review and carry reviewable interface and contractual security expectations proportional to risk
+    expected_outcome: New or changed integrations are not accepted on trust alone and their security expectations remain documented, reviewable and challengeable
+    verification_posture: integrations_are_reviewed_and_conditioned
+    current_manual_control_anchors:
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+    current_manual_requirement_anchors:
+      - INT-008
+    expected_artifacts:
+      - ART-review-checklist-de29054201
+      - ART-approval-record-6fe32eb803
+    open_artifact_gap:
+      - integration_contract_artifact
+      - interface_security_clause_artifact
+      - integration_assurance_record_artifact
+  ACO-ITS-006:
+    name: External Interaction Auditability
+    objective_kind: atomic
+    domain_key: interaction_auditability
+    objective_type: detective
+    statement: External calls and integration outcomes must be logged with enough trustworthy context to support review and accountability without turning the slice into full operational monitoring
+    expected_outcome: Material external interactions remain traceable enough to support AppSec review, troubleshooting and audit without requiring the whole monitoring stack to define the slice
+    verification_posture: external_interactions_are_traceable
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - API-007
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - external_call_audit_schema_artifact
+      - partner_interaction_trace_artifact
+  ACO-ITS-007:
+    name: Integration Trust And Service Interaction Assurance
+    objective_kind: composite
+    domain_key: integration_trust_surface
+    objective_type: preventive
+    statement: Service-to-service trust, secure transport, message integrity, boundary mediation, integration review and external interaction auditability must operate as one coherent interaction-trust surface
+    expected_outcome: Cross-boundary interactions are trusted only through explicit technical and reviewable controls rather than implicit network reachability or informal integration conventions
+    verification_posture: coherent_integration_trust_surface
+    composed_of:
+      - ACO-ITS-001
+      - ACO-ITS-002
+      - ACO-ITS-003
+      - ACO-ITS-004
+      - ACO-ITS-005
+      - ACO-ITS-006
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - API-001
+      - API-002
+      - API-005
+      - API-007
+      - INT-002
+      - INT-003
+      - INT-004
+      - INT-005
+      - INT-006
+      - INT-008
+      - ARC-002
+      - ARC-006
+    expected_artifacts:
+      - ART-identity-binding-f96a2a528c
+      - ART-policy-report-7e52280504
+      - ART-review-checklist-de29054201
+      - ART-approval-record-6fe32eb803
+      - ART-log-stream-b67ee06f7e

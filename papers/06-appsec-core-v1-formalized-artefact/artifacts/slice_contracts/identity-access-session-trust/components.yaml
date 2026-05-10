@@ -1,0 +1,193 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: identity_access_and_session_trust
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for identity, access and session trust.
+  target_core_draft: ontology/appsec-core-identity-access-session-trust-draft.yaml
+  target_mapping_draft: ontology/appsec-core-identity-access-session-trust-mapping-draft.yaml
+normalized_practices:
+  ACP-IAT-001:
+    name: Strong Authentication And Step-Up Enforcement
+    practice_family: identity_and_trust_control
+    local_practice_type: authentication
+    supports_objectives:
+      - ACO-IAT-001
+    description: Enforce strong authentication, adaptive challenge or reauthentication when access or action sensitivity increases
+  ACP-IAT-002:
+    name: Least-Privilege Authorization Governance
+    practice_family: identity_and_trust_control
+    local_practice_type: authorization
+    supports_objectives:
+      - ACO-IAT-002
+      - ACO-IAT-007
+    description: Keep permission models explicit, separated by role or attribute and bounded by least-privilege rules
+  ACP-IAT-003:
+    name: Access Review And Timely Revocation
+    practice_family: identity_and_trust_control
+    local_practice_type: revocation
+    supports_objectives:
+      - ACO-IAT-003
+      - ACO-IAT-007
+    description: Review granted access regularly and propagate revocation quickly across identities, permissions and active sessions
+  ACP-IAT-004:
+    name: Bounded Session And Token Management
+    practice_family: identity_and_trust_control
+    local_practice_type: session_management
+    supports_objectives:
+      - ACO-IAT-004
+    description: Keep session identifiers and tokens bounded by transport, scope, TTL and explicit invalidation rules
+  ACP-IAT-005:
+    name: Authenticated API Boundary Enforcement
+    practice_family: identity_and_trust_control
+    local_practice_type: gateway_enforcement
+    supports_objectives:
+      - ACO-IAT-005
+      - ACO-IAT-007
+    description: Authenticate callers and enforce authorization decisions consistently at API and service boundaries
+  ACP-IAT-006:
+    name: Access Abuse Monitoring And Audit Trail
+    practice_family: rollout_recovery_and_runtime_records
+    local_practice_type: audit
+    supports_objectives:
+      - ACO-IAT-006
+      - ACO-IAT-007
+    description: Make rejected access, abuse signals and externally visible calls auditable and operationally reviewable
+normalized_mechanisms:
+  ACM-IAT-001:
+    name: Authentication And Federation Protocols
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: identity_protocol
+    source_semantic_ids:
+      - sem:mechanism:autenticacao
+      - sem:mechanism:oidc
+    supports_practices:
+      - ACP-IAT-001
+      - ACP-IAT-005
+  ACM-IAT-002:
+    name: Access Policy Enforcement
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: policy_engine
+    source_semantic_ids:
+      - sem:mechanism:controlo-de-acesso
+    supports_practices:
+      - ACP-IAT-002
+      - ACP-IAT-005
+  ACM-IAT-003:
+    name: Periodic Review And Access Audit
+    mechanism_family: governance_and_review
+    local_mechanism_type: telemetry
+    source_semantic_ids:
+      - sem:mechanism:auditoria
+      - sem:mechanism:auditorias-periodicas
+    supports_practices:
+      - ACP-IAT-003
+      - ACP-IAT-006
+  ACM-IAT-004:
+    name: Short-Lived Token Controls
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: token_control
+    source_semantic_ids:
+      - sem:mechanism:tokens-de-curta-duracao
+    supports_practices:
+      - ACP-IAT-004
+    note: >
+      The current semantic anchor comes mostly from adjacent operational-identity
+      material, so this mechanism is useful but not yet a perfect manual fit for
+      user-session semantics.
+  ACM-IAT-005:
+    name: API Gateway Mutual Authentication
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: gateway
+    source_semantic_ids:
+      - sem:mechanism:api-gateway-com-autenticacao-mutua
+    supports_practices:
+      - ACP-IAT-005
+  ACM-IAT-006:
+    name: Structured Logging And Effective Configuration Recording
+    mechanism_family: rollout_recovery_and_runtime_records
+    local_mechanism_type: telemetry
+    source_semantic_ids:
+      - sem:mechanism:registo-de-configuracao-efetiva
+      - sem:mechanism:retencao-estruturada-de-logs-metadados-e-correlacoes-commit-pipeline-release
+      - sem:mechanism:logs-mascarados
+    supports_practices:
+      - ACP-IAT-006
+normalized_artifacts:
+  ACA-IAT-001:
+    source_artifact_id: ART-identity-binding-f96a2a528c
+    canonical_role: binding_record
+    local_role: authorization_binding
+    supports_objectives:
+      - ACO-IAT-002
+      - ACO-IAT-005
+      - ACO-IAT-007
+  ACA-IAT-002:
+    source_artifact_id: ART-access-review-e0648977e7
+    canonical_role: governance_record
+    local_role: governance_record
+    supports_objectives:
+      - ACO-IAT-002
+      - ACO-IAT-003
+      - ACO-IAT-007
+  ACA-IAT-003:
+    source_artifact_id: ART-log-stream-b67ee06f7e
+    canonical_role: operational_record
+    local_role: audit_trail
+    supports_objectives:
+      - ACO-IAT-001
+      - ACO-IAT-003
+      - ACO-IAT-004
+      - ACO-IAT-005
+      - ACO-IAT-006
+      - ACO-IAT-007
+  ACA-IAT-004:
+    source_artifact_id: ART-policy-report-7e52280504
+    canonical_role: evidence_package
+    local_role: policy_evidence
+    supports_objectives:
+      - ACO-IAT-005
+      - ACO-IAT-006
+  ACA-IAT-005:
+    source_artifact_id: ART-alert-policy-c55180d8ab
+    canonical_role: configuration
+    local_role: alert_policy
+    supports_objectives:
+      - ACO-IAT-006
+  ACA-IAT-006:
+    source_artifact_id: ART-approval-record-6fe32eb803
+    canonical_role: approval_record
+    local_role: governance_record
+    supports_objectives:
+      - ACO-IAT-003
+current_manual_practice_mappings:
+  - source_practice_id: 08-iac-infraestrutura:segregacao-de-ambientes-tagging-e-permissoes-minimas
+    target_practice_id: ACP-IAT-002
+  - source_practice_id: 08-iac-infraestrutura:enforcement-automatico-de-politicas
+    target_practice_id: ACP-IAT-005
+  - source_practice_id: 09-containers-imagens:rbac-minimo-e-serviceaccounts-dedicadas
+    target_practice_id: ACP-IAT-002
+  - source_practice_id: 14-governanca-contratacao:revisao-trimestral-de-acesso-de-contractors-least-privilege
+    target_practice_id: ACP-IAT-003
+  - source_practice_id: 12-monitorizacao-operacoes:seguranca-e-integridade-de-logs
+    target_practice_id: ACP-IAT-006
+notes:
+  practice_surface_limit:
+    note: >
+      This slice has a weaker and more mixed current practice surface than the
+      first slice, so the normalized practice subset is intentionally small.
+  session_gap:
+    note: >
+      No current practice record cleanly expresses user-session and JWT-lifetime
+      management yet, so `ACP-IAT-004` is mostly objective-led at this stage.
+  secrets_boundary:
+    note: >
+      Workload identity and OIDC-for-secrets material remains adjacent but is
+      not promoted here as the main practice anchor for the slice.
+open_questions:
+  - Should `ACP-IAT-004` wait for stronger practice evidence before being treated as a stable normalized practice?
+  - Should `ACA-IAT-004` and `ACA-IAT-005` remain separate artifacts, or later collapse into one policy-enforcement evidence family?
+  - Is `09-containers-imagens:rbac-minimo-e-serviceaccounts-dedicadas` a legitimate bridge practice for this slice, or too biased toward workload identity?
+  - Which future artifact should become the primary anchor for federation and MFA configuration once the artifact taxonomy is expanded?

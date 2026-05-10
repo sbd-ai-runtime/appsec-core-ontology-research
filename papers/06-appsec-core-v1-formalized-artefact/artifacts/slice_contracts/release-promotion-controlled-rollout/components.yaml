@@ -1,0 +1,303 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: release_promotion_controlled_rollout_and_rollback_readiness
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for release promotion, controlled
+    rollout and rollback readiness.
+  target_core_draft: ontology/appsec-core-release-promotion-controlled-rollout-draft.yaml
+  target_mapping_draft: ontology/appsec-core-release-promotion-controlled-rollout-mapping-draft.yaml
+normalized_practices:
+  ACP-RPR-001:
+    name: Accountable Release Approval
+    practice_family: governance_and_review
+    local_practice_type: approval_gate
+    supports_objectives:
+      - ACO-RPR-001
+      - ACO-RPR-007
+    description: Keep explicit human accountability for irreversible production promotion
+  ACP-RPR-002:
+    name: Verified Artifact Promotion
+    practice_family: integrity_traceability_and_records
+    local_practice_type: provenance_verification
+    supports_objectives:
+      - ACO-RPR-002
+      - ACO-RPR-007
+    description: Promote only artifacts whose identity, signature or provenance has been verified at release time
+  ACP-RPR-003:
+    name: Pre-Promotion Gates And Staging Validation
+    practice_family: policy_and_gate_enforcement
+    local_practice_type: gating
+    supports_objectives:
+      - ACO-RPR-003
+      - ACO-RPR-007
+    description: Block promotion until required security gates pass and staging validation is completed
+  ACP-RPR-004:
+    name: End-to-End Deploy Traceability
+    practice_family: integrity_traceability_and_records
+    local_practice_type: traceability
+    supports_objectives:
+      - ACO-RPR-004
+      - ACO-RPR-007
+    description: Keep release decisions, artifacts, environments and pipeline context traceable across every deployment
+  ACP-RPR-005:
+    name: Tested Rollback Discipline
+    practice_family: rollout_recovery_and_runtime_records
+    local_practice_type: rollback
+    supports_objectives:
+      - ACO-RPR-005
+      - ACO-RPR-007
+    description: Keep rollback procedures specific, tested and time-bounded before they are needed in production
+  ACP-RPR-006:
+    name: Progressive Rollout And Containment
+    practice_family: rollout_recovery_and_runtime_records
+    local_practice_type: controlled_rollout
+    supports_objectives:
+      - ACO-RPR-006
+      - ACO-RPR-007
+    description: Introduce high-impact change gradually and contain unsafe rollout without requiring immediate full rollback
+  ACP-RPR-008:
+    name: Define Hardened Baseline Profiles For Security-Relevant Components
+    practice_family: policy_and_gate_enforcement
+    local_practice_type: baseline_definition
+    supports_objectives:
+      - ACO-RPR-008
+    description: >
+      Define and maintain hardened baseline profiles for security-relevant
+      components so that new deployments start from a known secure posture.
+  ACP-RPR-009:
+    name: Review Security-Relevant Overrides Before Promotion Or Deployment
+    practice_family: governance_and_review
+    local_practice_type: override_control
+    supports_objectives:
+      - ACO-RPR-009
+      - ACO-RPR-010
+    description: >
+      Review security-relevant configuration overrides before promotion or
+      deployment to prevent uncontrolled change to security posture.
+  ACP-RPR-010:
+    name: Record And Periodically Review Exceptions Against The Intended Baseline
+    practice_family: integrity_traceability_and_records
+    local_practice_type: change_review
+    supports_objectives:
+      - ACO-RPR-010
+    description: >
+      Record approved deviations and periodically review whether the current
+      baseline still matches intended security posture.
+normalized_mechanisms:
+  ACM-RPR-001:
+    name: Release Promotion Controls
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: promotion_control
+    source_semantic_ids:
+      - sem:mechanism:promocao-de-releases
+    supports_practices:
+      - ACP-RPR-001
+      - ACP-RPR-002
+      - ACP-RPR-003
+  ACM-RPR-002:
+    name: Approval Gates And Separation Of Signal From Promotion Decision
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: approval_gate
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-RPR-001
+      - ACP-RPR-003
+    note: >
+      The requirement and practice surfaces are strong for approval gates, but
+      the current semantic mechanism catalog does not yet expose a stable gate
+      mechanism family here.
+  ACM-RPR-003:
+    name: Provenance And Signature Verification At Promotion
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: provenance_check
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-RPR-002
+    note: >
+      The repo has strong artifact support for provenance and signatures, but
+      the deploy-time verification mechanism is not yet cleanly separated in
+      the mechanism catalog.
+  ACM-RPR-004:
+    name: Rollback And Containment Controls
+    mechanism_family: rollout_recovery_and_runtime_records
+    local_mechanism_type: rollout_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-RPR-005
+      - ACP-RPR-006
+    note: >
+      Feature flags, rollback paths and controlled rollout strategies are clear
+      in practices, but still weakly materialized as reusable mechanisms.
+  ACM-RPR-005:
+    name: Deployment Pipeline Traceability And Audit Controls
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: pipeline_traceability
+    supports_practices:
+      - ACP-RPR-004
+    note: >
+      Pipeline instrumentation that records artifact provenance, environment
+      state, configuration applied, and approval decisions at each deployment
+      stage. Includes deploy manifests, environment snapshots, promotion logs.
+      Tools: CI/CD audit logs, Docker/K8s deploy manifests, GitOps state records.
+  ACM-RPR-008:
+    name: Baseline Configuration Template Or Policy Bundle
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: baseline_template
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-RPR-008
+    note: >
+      Reusable baseline configuration template or policy bundle that encodes
+      the intended hardened starting posture for security-relevant components.
+  ACM-RPR-009:
+    name: Gate Or Policy Check For Prohibited Or Unsafe Overrides
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: policy_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-RPR-009
+    note: >
+      Automated or gated policy check that blocks prohibited or unsafe
+      overrides of security-relevant configuration before promotion.
+  ACM-RPR-010:
+    name: Change Review Control For Security-Relevant Baseline Deviations
+    mechanism_family: integrity_traceability_and_records
+    local_mechanism_type: review_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-RPR-010
+    note: >
+      Change review control that ensures baseline deviations and approved
+      exceptions are visible, attributable and periodically reviewed.
+normalized_artifacts:
+  ACA-RPR-001:
+    source_artifact_id: ART-approval-record-6fe32eb803
+    canonical_role: approval_record
+    local_role: governance_record
+    supports_objectives:
+      - ACO-RPR-001
+      - ACO-RPR-004
+      - ACO-RPR-007
+  ACA-RPR-002:
+    source_artifact_id: ART-release-gate-57ec988cdb
+    canonical_role: gate_record
+    local_role: release_record
+    supports_objectives:
+      - ACO-RPR-001
+      - ACO-RPR-003
+      - ACO-RPR-007
+  ACA-RPR-003:
+    source_artifact_id: ART-artifact-provenance-8b1bffca3c
+    canonical_role: attestation
+    local_role: evidence
+    supports_objectives:
+      - ACO-RPR-002
+      - ACO-RPR-004
+      - ACO-RPR-007
+  ACA-RPR-004:
+    source_artifact_id: ART-artifact-signature-1d67811ec5
+    canonical_role: attestation
+    local_role: evidence
+    supports_objectives:
+      - ACO-RPR-002
+      - ACO-RPR-007
+  ACA-RPR-005:
+    source_artifact_id: ART-pipeline-config-f8f2ba893d
+    canonical_role: build_definition
+    local_role: pipeline_definition
+    supports_objectives:
+      - ACO-RPR-003
+      - ACO-RPR-006
+      - ACO-RPR-007
+  ACA-RPR-006:
+    source_artifact_id: ART-deployment-plan-945b804751
+    canonical_role: operational_record
+    local_role: deployment_record
+    supports_objectives:
+      - ACO-RPR-004
+      - ACO-RPR-006
+      - ACO-RPR-007
+  ACA-RPR-007:
+    source_artifact_id: ART-rollback-plan-4fbad982bb
+    canonical_role: operational_record
+    local_role: rollback_record
+    supports_objectives:
+      - ACO-RPR-005
+      - ACO-RPR-006
+      - ACO-RPR-007
+  ACA-RPR-008:
+    source_artifact_id: ART-operational-evidence-f5e852756f
+    canonical_role: evidence_package
+    local_role: evidence
+    supports_objectives:
+      - ACO-RPR-004
+      - ACO-RPR-005
+      - ACO-RPR-007
+  ACA-RPR-009:
+    name: Security baseline definition
+    canonical_role: configuration
+    local_role: baseline_definition
+    supports_objectives:
+      - ACO-RPR-008
+  ACA-RPR-010:
+    name: Hardening standard or approved configuration profile
+    canonical_role: governance_record
+    local_role: hardening_standard
+    supports_objectives:
+      - ACO-RPR-008
+      - ACO-RPR-009
+  ACA-RPR-011:
+    name: Security-relevant override or exception record
+    canonical_role: review_record
+    local_role: override_record
+    supports_objectives:
+      - ACO-RPR-009
+      - ACO-RPR-010
+  ACA-RPR-012:
+    name: Baseline review evidence package
+    canonical_role: evidence_package
+    local_role: config_review_evidence
+    supports_objectives:
+      - ACO-RPR-010
+current_manual_practice_mappings:
+  - source_practice_id: 11-deploy-seguro:gates-de-aprovacao-no-deploy
+    target_practice_id: ACP-RPR-001
+  - source_practice_id: 07-cicd-seguro:separacao-formal-entre-sinal-automatico-e-decisao-de-promocao
+    target_practice_id: ACP-RPR-001
+  - source_practice_id: 11-deploy-seguro:deploy-apenas-de-artefactos-assinados
+    target_practice_id: ACP-RPR-002
+  - source_practice_id: 11-deploy-seguro:validacoes-tecnicas-pre-deploy-com-gates-condicionais
+    target_practice_id: ACP-RPR-003
+  - source_practice_id: 11-deploy-seguro:validacao-em-staging-antes-da-promocao
+    target_practice_id: ACP-RPR-003
+  - source_practice_id: 11-deploy-seguro:rastreabilidade-end-to-end
+    target_practice_id: ACP-RPR-004
+  - source_practice_id: 11-deploy-seguro:rollback-rapido-e-testado
+    target_practice_id: ACP-RPR-005
+  - source_practice_id: 11-deploy-seguro:rollback-estruturado-por-tipo-binario-configuracao-bd-infra
+    target_practice_id: ACP-RPR-005
+  - source_practice_id: 11-deploy-seguro:deploy-progressivo-com-estrategias-canary-blue-green
+    target_practice_id: ACP-RPR-006
+  - source_practice_id: 11-deploy-seguro:separacao-entre-acao-automatica-e-autorizacao-irreversivel
+    target_practice_id: ACP-RPR-006
+notes:
+  practice_surface_strength:
+    note: >
+      This slice has one of the strongest current chapter-local practice
+      surfaces in the repo, which helps compensate for the thinner semantic
+      mechanism catalog.
+  mechanism_surface_limit:
+    note: >
+      Rollout-specific and rollback-specific mechanisms are still weaker than
+      the requirement, practice and artifact surfaces, so several mechanisms
+      remain explicitly objective-led.
+  boundary_read:
+    note: >
+      Deploy credentials and post-deploy monitoring remain explicit bridges,
+      not central slice semantics.
+open_questions:
+  - Which future mechanism should become the primary reusable anchor for progressive rollout strategies once the semantic mechanism catalog expands?
+  - Should `ACA-RPR-008` remain inside this slice as a rollback-evidence support artifact, or later share part of its role with a future observability slice without collapsing into runtime response semantics?

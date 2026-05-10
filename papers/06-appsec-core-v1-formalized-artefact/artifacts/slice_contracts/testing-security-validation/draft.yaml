@@ -1,0 +1,280 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: testing_security_validation_and_empirical_assurance
+  description: >
+    Fourth narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    testing, security validation and empirical assurance.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-testing-security-validation.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - broad_runtime_operations
+    - secure_development_as_primary_center
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - testing_strategy
+    - static_validation
+    - finding_governance
+    - reproducible_evidence
+    - staged_dynamic_validation
+    - specialized_empirical_testing
+    - testing_assurance_surface
+  included_manual_categories:
+    - TST
+  excluded_for_now:
+    - secure_development_as_primary_driver
+    - broad_runtime_monitoring
+    - persistent_findings_history
+    - threat_and_signal_normalization
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-TSV-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[testing_strategy, static_validation, finding_governance, reproducible_evidence, staged_dynamic_validation, specialized_empirical_testing, testing_assurance_surface]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis, integrity_traceability_and_records]
+      - local_practice_type: enum[strategy, static_analysis, finding_governance, evidence_management, dynamic_testing, specialized_testing, release_decision]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis]
+      - local_mechanism_type: enum[scanner, test_orchestrator, baseline, triage_workflow, gate, instrumentation]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[governance_record, report, build_definition, gate_record, approval_record, evidence_package]
+      - local_role: enum[strategy, report, register, pipeline_definition, gate_record, approval_record, evidence_package]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[governance_record, report, gate_record, approval_record, evidence_package]
+      - local_evidence_kind: enum[strategy, report, register, gate_record, evidence_package]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to security-testing judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-TSV-001:
+    name: Risk-Proportional Security Testing Strategy
+    objective_kind: atomic
+    domain_key: testing_strategy
+    objective_type: governance
+    statement: Maintain an explicit, risk-proportional security testing strategy that defines test types, cadence, ownership, coverage thresholds and acceptance criteria for each risk tier
+    expected_outcome: Security testing effort is selected deliberately by risk rather than ad hoc, and coverage deviations are visible enough to review and challenge
+    verification_posture: explicit_risk_based_testing_strategy
+    current_manual_control_anchors:
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - TST-001
+      - TST-007
+    expected_artifacts:
+      - ART-approval-record-6fe32eb803
+    open_artifact_gap:
+      - security_testing_strategy_artifact
+      - risk_based_coverage_matrix_artifact
+  ACO-TSV-002:
+    name: Static Analysis Signal Quality And Baseline Governance
+    objective_kind: atomic
+    domain_key: static_validation
+    objective_type: detective
+    statement: Operate static analysis with managed rule profiles, critical-surface coverage discipline and explicit false-positive baseline governance
+    expected_outcome: Static-analysis results remain useful enough to support release decisions because coverage, noise and rule scope are controlled deliberately
+    verification_posture: governed_static_analysis_signal
+    current_manual_control_anchors:
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - TST-002
+    expected_artifacts:
+      - ART-sast-report-0358e14566
+      - ART-pipeline-config-f8f2ba893d
+    open_artifact_gap:
+      - static_analysis_rule_profile_artifact
+      - false_positive_baseline_artifact
+      - critical_component_coverage_artifact
+  ACO-TSV-003:
+    name: Security Finding Triage And Correction Closure
+    objective_kind: atomic
+    domain_key: finding_governance
+    objective_type: governance
+    statement: Security-test findings must be triaged, tracked to correction, constrained by severity-based closure targets and revalidated or formally excepted when timely correction is not achieved
+    expected_outcome: Testing findings do not disappear into noise; they remain reviewable through correction, retest or explicit exception handling
+    verification_posture: governed_security_finding_closure
+    current_manual_control_anchors:
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - TST-003
+    expected_artifacts:
+      - ART-finding-register-b39d52b4e7
+      - ART-test-report-b11c5dfb8a
+      - ART-approval-record-6fe32eb803
+    open_artifact_gap:
+      - correction_sla_policy_artifact
+      - retest_closure_artifact
+      - exception_register_artifact
+  ACO-TSV-004:
+    name: Reproducible Security Test Evidence And Build Traceability
+    objective_kind: atomic
+    domain_key: reproducible_evidence
+    objective_type: governance
+    statement: Security-test evidence must remain reproducible, audit-ready and explicitly linked to the build, code state and execution context that produced it
+    expected_outcome: Reported test results can be reinterpreted and trusted later without relying on memory or ad hoc reruns
+    verification_posture: reproducible_build_linked_test_evidence
+    current_manual_control_anchors:
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - TST-004
+    expected_artifacts:
+      - ART-test-report-b11c5dfb8a
+      - ART-pipeline-config-f8f2ba893d
+    open_artifact_gap:
+      - build_linked_test_evidence_manifest_artifact
+      - reproducibility_recipe_artifact
+  ACO-TSV-005:
+    name: Staged Dynamic Validation And Release Gate Discipline
+    objective_kind: atomic
+    domain_key: staged_dynamic_validation
+    objective_type: preventive
+    statement: Dynamic and behavior-sensitive security testing in staging must run under explicit gate policy before promotion, with clear distinction between blocking conditions, alert-only signals and approved overrides
+    expected_outcome: Promotion decisions reflect deliberate interpretation of staged security-test results rather than unchecked pipeline completion alone
+    verification_posture: gated_staged_security_validation
+    current_manual_control_anchors:
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - TST-005
+      - TST-010
+    expected_artifacts:
+      - ART-test-report-b11c5dfb8a
+      - ART-release-gate-57ec988cdb
+      - ART-pipeline-config-f8f2ba893d
+      - ART-approval-record-6fe32eb803
+    open_artifact_gap:
+      - staging_security_test_execution_artifact
+      - gate_override_record_artifact
+      - staging_environment_representativeness_artifact
+  ACO-TSV-006:
+    name: Specialized Empirical Testing Depth And Regression Assurance
+    objective_kind: atomic
+    domain_key: specialized_empirical_testing
+    objective_type: detective
+    statement: Maintain security regression tests for corrected flaws and apply deeper empirical testing such as offensive testing and fuzzing where component risk or input complexity justifies it
+    expected_outcome: High-risk behaviors are not left to generic scanning alone, and corrected vulnerabilities are defended against recurrence through focused regression and specialized test depth
+    verification_posture: deep_empirical_security_testing
+    current_manual_control_anchors:
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - TST-006
+      - TST-008
+      - TST-009
+    expected_artifacts:
+      - ART-test-report-b11c5dfb8a
+      - ART-finding-register-b39d52b4e7
+      - ART-pipeline-config-f8f2ba893d
+    open_artifact_gap:
+      - security_regression_suite_artifact
+      - pentest_scope_and_method_artifact
+      - fuzzing_corpus_artifact
+      - fuzzing_execution_artifact
+  ACO-TSV-007:
+    name: Security Testing And Empirical Assurance Integrity
+    objective_kind: composite
+    domain_key: testing_assurance_surface
+    objective_type: governance
+    statement: Testing strategy, signal quality, finding closure, reproducible evidence, staged validation and specialized empirical testing must operate as one coherent security-assurance surface
+    expected_outcome: Security testing is risk-directed, reproducible and decision-relevant across build, staging and corrective feedback loops
+    verification_posture: coherent_security_testing_surface
+    composed_of:
+      - ACO-TSV-001
+      - ACO-TSV-002
+      - ACO-TSV-003
+      - ACO-TSV-004
+      - ACO-TSV-005
+      - ACO-TSV-006
+    current_manual_control_anchors:
+      - CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    current_manual_requirement_anchors:
+      - TST-001
+      - TST-002
+      - TST-003
+      - TST-004
+      - TST-005
+      - TST-006
+      - TST-007
+      - TST-008
+      - TST-009
+      - TST-010
+    expected_artifacts:
+      - ART-test-report-b11c5dfb8a
+      - ART-finding-register-b39d52b4e7
+      - ART-release-gate-57ec988cdb
+      - ART-pipeline-config-f8f2ba893d
+      - ART-approval-record-6fe32eb803

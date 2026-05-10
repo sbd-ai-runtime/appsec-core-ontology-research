@@ -1,0 +1,67 @@
+{
+  "status": "conforms",
+  "validator": "bounded_subset_validator",
+  "scope": "AppSec Core v0 bounded OWL/SHACL workbench",
+  "data_graph": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-ontology/formal/appsec_core/02-owl/exports/appsec-core-v0-bounded-v1.ttl",
+  "shapes_graph": "/Volumes/G-DRIVE/Shared/SecurityByDesign-TheoryOfEverything/sbd-toe-ontology/formal/appsec_core/03-shacl/shapes/appsec-core-v0-shapes.ttl",
+  "data_triple_count": 1970,
+  "shape_triple_count": 298,
+  "shape_count": 6,
+  "shape_summaries": [
+    {
+      "shape": "https://securitybydesign.dev/ontology/appsec-core/v1#SliceShape",
+      "shape_name": "SliceShape",
+      "target_class": "https://securitybydesign.dev/ontology/appsec-core/v1#Slice",
+      "target_node_count": 10,
+      "constraint_count": 8,
+      "violation_count": 0
+    },
+    {
+      "shape": "https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjectiveShape",
+      "shape_name": "ControlObjectiveShape",
+      "target_class": "https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective",
+      "target_node_count": 75,
+      "constraint_count": 11,
+      "violation_count": 0
+    },
+    {
+      "shape": "https://securitybydesign.dev/ontology/appsec-core/v1#PracticeShape",
+      "shape_name": "PracticeShape",
+      "target_class": "https://securitybydesign.dev/ontology/appsec-core/v1#Practice",
+      "target_node_count": 69,
+      "constraint_count": 6,
+      "violation_count": 0
+    },
+    {
+      "shape": "https://securitybydesign.dev/ontology/appsec-core/v1#MechanismShape",
+      "shape_name": "MechanismShape",
+      "target_class": "https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism",
+      "target_node_count": 58,
+      "constraint_count": 6,
+      "violation_count": 0
+    },
+    {
+      "shape": "https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactShape",
+      "shape_name": "ArtifactShape",
+      "target_class": "https://securitybydesign.dev/ontology/appsec-core/v1#Artifact",
+      "target_node_count": 57,
+      "constraint_count": 7,
+      "violation_count": 0
+    },
+    {
+      "shape": "https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePatternShape",
+      "shape_name": "EvidencePatternShape",
+      "target_class": "https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern",
+      "target_node_count": 0,
+      "constraint_count": 9,
+      "violation_count": 0
+    }
+  ],
+  "violation_count": 0,
+  "violations": [],
+  "notes": [
+    "This validator evaluates the SHACL subset emitted by the local workbench.",
+    "Supported constraints: sh:minCount, sh:maxCount, sh:datatype, sh:class, sh:pattern and sh:in.",
+    "It is sufficient for the bounded generated shape set, but it is not a general-purpose SHACL engine."
+  ]
+}

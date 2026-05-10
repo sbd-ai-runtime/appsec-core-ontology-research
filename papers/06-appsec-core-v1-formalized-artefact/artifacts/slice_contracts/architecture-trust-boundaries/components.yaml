@@ -1,0 +1,182 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: architecture_and_trust_boundaries
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for architecture, trust boundaries and
+    architectural segmentation.
+  target_core_draft: ontology/appsec-core-architecture-trust-boundaries-draft.yaml
+  target_mapping_draft: ontology/appsec-core-architecture-trust-boundaries-mapping-draft.yaml
+normalized_practices:
+  ACP-ATB-001:
+    name: Architecture Baseline Definition
+    practice_family: governance_and_review
+    local_practice_type: baseline
+    supports_objectives:
+      - ACO-ATB-001
+    description: Define and keep a secure architecture baseline explicit, versioned and reusable
+  ACP-ATB-002:
+    name: Architectural Decision And Solution Traceability
+    practice_family: governance_and_review
+    local_practice_type: documentation
+    supports_objectives:
+      - ACO-ATB-001
+      - ACO-ATB-007
+    description: Keep ADRs and solution-level control traceability attached to the architecture rather than implicit in implementation only
+  ACP-ATB-003:
+    name: Trust-Boundary And Flow Review
+    practice_family: governance_and_review
+    local_practice_type: review
+    supports_objectives:
+      - ACO-ATB-002
+      - ACO-ATB-004
+    description: Review trust boundaries, critical integrations and protected data flows explicitly during architecture work
+  ACP-ATB-004:
+    name: External Exposure And Boundary Mediation Design
+    practice_family: policy_and_gate_enforcement
+    local_practice_type: mediation
+    supports_objectives:
+      - ACO-ATB-003
+    description: Justify externally exposed surfaces and define the mediation controls that protect them
+  ACP-ATB-005:
+    name: Architecture Review And Approval Governance
+    practice_family: governance_and_review
+    local_practice_type: review
+    supports_objectives:
+      - ACO-ATB-005
+      - ACO-ATB-007
+    description: Run formal architecture review and approval with risk-proportional gates and evidence
+  ACP-ATB-006:
+    name: Architecture Change Trigger Discipline
+    practice_family: governance_and_review
+    local_practice_type: review
+    supports_objectives:
+      - ACO-ATB-005
+    description: Re-trigger architecture review when meaningful change thresholds are crossed
+  ACP-ATB-007:
+    name: Automatable Topology And Pattern Validation
+    practice_family: validation_and_analysis
+    local_practice_type: validation
+    supports_objectives:
+      - ACO-ATB-006
+      - ACO-ATB-007
+    description: Validate topology and architecture conformance automatically where patterns and constraints are explicit enough
+normalized_mechanisms:
+  ACM-ATB-001:
+    name: Versioned Diagrams And ADR Records
+    mechanism_family: governance_and_review
+    local_mechanism_type: documentation
+    source_semantic_ids:
+      - sem:mechanism:adrs-architecture-decision-records
+      - sem:mechanism:diagramas-versionados
+    supports_practices:
+      - ACP-ATB-001
+      - ACP-ATB-002
+  ACM-ATB-002:
+    name: Trust-Boundary And DFD Modeling
+    mechanism_family: governance_and_review
+    local_mechanism_type: boundary_model
+    source_semantic_ids:
+      - sem:mechanism:trust-boundaries
+      - sem:mechanism:dfds
+    supports_practices:
+      - ACP-ATB-003
+  ACM-ATB-003:
+    name: Boundary Mediation Controls
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: mediation
+    source_semantic_ids:
+      - sem:mechanism:api-gateway-com-autenticacao-mutua
+    supports_practices:
+      - ACP-ATB-004
+    note: >
+      The current semantic anchor is narrower than the full exposure-mediation
+      problem, but it is the clearest existing mechanism anchor in the repo.
+  ACM-ATB-004:
+    name: Architecture Review Gates
+    mechanism_family: governance_and_review
+    local_mechanism_type: review_gate
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-ATB-005
+      - ACP-ATB-006
+    note: >
+      Formal architecture review gates are visible in current requirements and
+      practices, but they are not yet materialized as a strong semantic
+      mechanism in the current mechanism catalog.
+  ACM-ATB-005:
+    name: Automated Topology Validation Jobs
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: automated_validation
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-ATB-007
+    note: >
+      The repo has direct requirement and practice support for automatable
+      topology validation, but no clean semantic mechanism entry for it yet.
+normalized_artifacts:
+  ACA-ATB-001:
+    source_artifact_id: ART-review-checklist-de29054201
+    canonical_role: review_record
+    local_role: checklist
+    supports_objectives:
+      - ACO-ATB-001
+      - ACO-ATB-005
+      - ACO-ATB-007
+  ACA-ATB-002:
+    source_artifact_id: ART-approval-record-6fe32eb803
+    canonical_role: approval_record
+    local_role: review_record
+    supports_objectives:
+      - ACO-ATB-005
+      - ACO-ATB-007
+  ACA-ATB-003:
+    source_artifact_id: ART-pipeline-config-f8f2ba893d
+    canonical_role: configuration
+    local_role: configuration
+    supports_objectives:
+      - ACO-ATB-006
+  ACA-ATB-004:
+    source_artifact_id: ART-policy-report-7e52280504
+    canonical_role: validation_output
+    local_role: validation_output
+    supports_objectives:
+      - ACO-ATB-003
+      - ACO-ATB-006
+current_manual_practice_mappings:
+  - source_practice_id: 04-arquitetura-segura:definicao-de-principios-e-baseline-de-arquitetura-segura
+    target_practice_id: ACP-ATB-001
+  - source_practice_id: 04-arquitetura-segura:gestao-de-decisoes-arquiteturais-adr
+    target_practice_id: ACP-ATB-002
+  - source_practice_id: 04-arquitetura-segura:ficha-de-solucao-com-controlos-e-rastreabilidade-arquitetural
+    target_practice_id: ACP-ATB-002
+  - source_practice_id: 04-arquitetura-segura:revisao-de-fronteiras-de-confianca-e-integracoes
+    target_practice_id: ACP-ATB-003
+  - source_practice_id: 04-arquitetura-segura:catalogo-de-padroes-de-arquitetura-segura-reutilizacao-governada
+    target_practice_id: ACP-ATB-004
+  - source_practice_id: 04-arquitetura-segura:revisao-formal-do-design-arquitetural
+    target_practice_id: ACP-ATB-005
+  - source_practice_id: 04-arquitetura-segura:gate-arquitetural-antes-do-go-live
+    target_practice_id: ACP-ATB-005
+  - source_practice_id: 04-arquitetura-segura:triggers-de-arquitetura-viva-e-disciplina-de-revisao
+    target_practice_id: ACP-ATB-006
+  - source_practice_id: 04-arquitetura-segura:validacao-arquitetural-automatizavel-no-ci-cd-quando-aplicavel
+    target_practice_id: ACP-ATB-007
+notes:
+  artifact_surface_limit:
+    note: >
+      The architecture slice is stronger at control-level artifact typing than
+      at current artifact-catalog materialization. Several architecture-specific
+      artifacts remain open gaps in the objective draft and are not forced into
+      this components draft.
+  bridge_boundary:
+    note: >
+      Threat-modeling and IaC remain bridge-only surfaces and are not promoted
+      here as the main practice or mechanism anchors for the slice.
+open_questions:
+  - Should `ACP-ATB-004` remain about exposure and mediation only, or later merge with trust-boundary review?
+  - Should `ACP-ATB-006` stay separate from `ACP-ATB-005`, or collapse into one broader architecture-review governance practice?
+  - Which future artifact should become the primary anchor for trust-boundary models and DFDs once the artifact catalog is expanded?
+  - Should `ACM-ATB-005` eventually move to a more generic validation capability shared with other slices?

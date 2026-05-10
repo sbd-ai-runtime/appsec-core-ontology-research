@@ -1,0 +1,451 @@
+@prefix ac:    <https://securitybydesign.dev/ontology/appsec-core/v1#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# ============================================================
+# AppSec Core V1 — Consumer Conformance Shapes (Part B, model invariants)
+# ============================================================
+#
+# ARCHITECTURAL COMMITMENT (programme-lead Pedro Farinha, 2026-05-05 — Option C)
+# ----------------------------------------------------------------------------
+#
+# This file is an ONTOLOGY-OWNED rule artefact. It encodes model invariants
+# that AppSec Core V1 imposes on any consumer's normalized claim emission.
+# The 5 shapes (M1' / M3 / M4 via CO chain / M4-card cardinality / referential
+# integrity) are derived from Decision 0003 + Amendment 1 invariants surfaced
+# empirically through Cartographer's substrate work (ESI). Identification
+# provenance is historical; OWNERSHIP IS ARCHON.
+#
+# Lifecycle and discipline:
+#
+#   1. MAINTAINED BY ARCHON. This file is hand-maintained from the formalised
+#      invariants. It is NOT derived from YAML schema and is NOT regenerated
+#      by build_shacl.py.
+#
+#   2. NOT TOUCHED by build_shacl.py. The build script regenerates ONLY
+#      appsec-core-v0-shapes.ttl (the 6 schema-derived ontology shapes:
+#      Slice / ControlObjective / Practice / Mechanism / Artifact /
+#      EvidencePattern). Re-running build_shacl.py must never modify this
+#      file. The regression in commit 7ee0373 (which regenerated
+#      appsec-core-v0-shapes.ttl from scratch and stripped the consolidated
+#      claim shapes) prompted the Option C architectural ratification on
+#      2026-05-05.
+#
+#   3. APPARATUS COMPOSITION. apparatus-shacl-pyshacl-vN tags declare
+#      composition explicitly: appsec-core-v0-shapes.ttl @ <commit> +
+#      consumer-conformance-shapes.ttl @ <commit>. Pyshacl runners load
+#      both files as merged shapes graph before validation. Single SHACL
+#      concern (ontology validation) preserved; the split is operational
+#      (schema-derived regenerable vs invariant-derived hand-maintained),
+#      not semantic.
+#
+#   4. CROSS-PERSONA UPDATE PROTOCOL. When Decision 0003 receives an
+#      amendment that alters model invariants, Cartographer/ESI emits a
+#      handover dispatcher to Archon at
+#      sbd-ai-runtime/handover/em-curso/YYYY-MM-DD-cartographer-archon-decision-0003-amendment-N-shapes-update.md
+#      Archon then updates THIS FILE in a dedicated commit. Apparatus tag
+#      refresh follows under programme-lead authority. Archon does NOT
+#      monitor ESI for amendments; receives via dispatcher per §0.5.
+#
+# Provenance:
+#
+#   Owner:        Archon (sbd-toe-ontology)
+#   Authority:    Decision 0003 Amendment 1 (ratified 2026-05-03 by programme-lead
+#                 Pedro Farinha) at
+#                 ExternalSourcesInventory/agentic/decisions/
+#                 0003-normalization-algorithm-redesign-2026-05-03-amendment-1-claims-not-chains.md
+#   Architectural ratification: programme-lead Pedro Farinha 2026-05-05 — Option C
+#                 (consumer-conformance-shapes.ttl declared ontology-owned)
+#   Brief:        ExternalSourcesInventory/agentic/briefs/
+#                 2026-05-03-archon-part-b-model-invariant-shacl.md
+#   Original:     This file shipped 2026-05-03 in commit f25eb48; consolidated
+#                 into appsec-core-v0-shapes.ttl on 2026-05-04 (apparatus-v2
+#                 at ee73c19). On 2026-05-05 the consolidation was reversed
+#                 (Option C) and this file restored as a separate ontology-
+#                 owned artefact.
+#   Companion artefact: AppSec Core V1 SBERT embeddings release artefact at
+#                 formal/appsec_core/08-embeddings/ (tag
+#                 appsec-core-embeddings-v1.0; same canonical IRI scheme; same
+#                 consumer contract).
+#
+# ============================================================
+# Purpose
+# ============================================================
+#
+# These shapes enforce the model-side invariants that any consumer of the
+# AppSec Core V1 ontology must satisfy when emitting normalized claims
+# against the model. They are deliberately consumer-agnostic: the same
+# shape graph evaluates Cartographer's PIPELINE 2 substrate (item + claim
+# nodes per Amendment 1 §D), a future Manual KG, an MCP plugin's emission,
+# and any other downstream artefact alike.
+#
+# The shapes target the `claim` node (per Amendment 1 §D), not the `item`
+# node. The seven-invariant pre-amendment catalogue collapses to:
+#
+#   M1' Slice coherence on claim   — SHACL (this file). Universal.
+#   M2  CO ∈ Slice                 — SHACL (this file). Subsumed by M1' for
+#                                    CO-level claims; documented but no
+#                                    additional shape; M1' covers it.
+#   M3  Practice ∈ CO consistency  — SHACL (this file).
+#   M4  Mechanism ∈ Practice       — SHACL (this file). NOTE: V1 OWL skin
+#                                    declares `objective_implemented_by_mechanism`
+#                                    as CO → Mechanism (NOT Practice → Mechanism);
+#                                    M4 is enforced via the CO chain, not via
+#                                    the YAML-only `supports_practices`
+#                                    relation. See ONTOLOGY GAP 1 below.
+#   M4-card Cardinalities V1 asserts — SHACL (this file). Encoded as
+#                                    referential-integrity + claim-schema
+#                                    cardinalities, since intrinsic ontology
+#                                    cardinalities are already enforced on
+#                                    ont_graph by the apparatus shapes.
+#   M5  Semantic warrant            — process-side, NOT in this file
+#                                    (Cartographer Pydantic + threshold check).
+#   P1' GROUNDED ⇒ ≥1 claim        — process-side, NOT in this file
+#                                    (Cartographer Pydantic + assertion).
+#
+# ============================================================
+# Inventory of V1 ontology relations consumed by these shapes
+# ============================================================
+#
+# All three relations are formally declared in the V1 OWL skin
+# (packages/ontology/appsec-core/v1.0/formal/appsec-core-v0-bounded-v1.ttl)
+# and have non-empty instance triples in the bounded export:
+#
+#   ac:belongsToSlice                       owl:ObjectProperty
+#                                           rdfs:domain ac:AppSecCoreEntity
+#                                           rdfs:range  ac:Slice
+#                                           triples: 257
+#                                           apparatus cardinality (intrinsic):
+#                                             sh:minCount 1 sh:maxCount 1
+#                                             on Slice / CO / Practice /
+#                                             Mechanism / Artifact /
+#                                             EvidencePattern shapes
+#
+#   ac:objective_realized_by_practice       owl:ObjectProperty
+#                                           rdfs:domain ac:ControlObjective
+#                                           rdfs:range  ac:Practice
+#                                           triples: 125
+#                                           apparatus cardinality: sh:minCount 1
+#                                             on ControlObjectiveShape
+#
+#   ac:objective_implemented_by_mechanism   owl:ObjectProperty
+#                                           rdfs:domain ac:ControlObjective
+#                                           rdfs:range  ac:Mechanism
+#                                           triples: 143
+#                                           apparatus cardinality: sh:minCount 1
+#                                             on ControlObjectiveShape
+#
+# ============================================================
+# Ontology gaps flagged for programme-lead (informational; not blocking)
+# ============================================================
+#
+# GAP 1 — V1 OWL skin declares no formal Practice ↔ Mechanism relation.
+#         The components-draft YAML carries `supports_practices` (Mechanism
+#         → list of Practices) but that relation is not promoted to the OWL
+#         skin. Decision 0003 Amendment 1 §A wording for M4 is "Mechanism ∈
+#         Practice", but the ontology actually asserts CO ↔ Mechanism
+#         directly. M4 is enforced here via the CO chain (charitable
+#         reading); a Mechanism appearing in a slice is valid iff some CO
+#         in that slice implements it. If programme-lead intends a stricter
+#         M4 (Mechanism's slice via its parent Practice), the V1 OWL skin
+#         must formally declare a Practice↔Mechanism relation first.
+#
+# GAP 2 (inherited from Part A inspection 2026-05-03) — EvidencePattern has
+#         zero normalized instances in V1. Claims of `level = "EvidencePattern"`
+#         cannot be validated until instances are authored. M5/M3/M4 do not
+#         currently apply at this level; this file does not target it.
+#
+# GAP 3 (inherited from Part A inspection 2026-05-03) — Artifact entities
+#         have no description prose (median 2 augmented-words). Artifact is
+#         not in the algorithm's claim levels (Amendment 1 §D restricts
+#         level ∈ {CO, Practice, Mechanism}); this file does not target it.
+#
+# Programme-lead decision required only for GAP 1 if a stricter M4 is
+# intended; GAPs 2-3 are paper-citable future-work entries.
+#
+# ============================================================
+# Canonical IRI scheme (mirrors Part A augmentation rule v1.0)
+# ============================================================
+#
+#   Slice              ac:SliceASC<NN>          e.g., ac:SliceASC07
+#   ControlObjective   ac:ACO_<FAM>_<NNN>       e.g., ac:ACO_IVF_002
+#   Practice           ac:ACP_<FAM>_<NNN>       e.g., ac:ACP_IVF_002
+#   Mechanism          ac:ACM_<FAM>_<NNN>       e.g., ac:ACM_IVF_002
+#
+# Consumer claims that join via ont_graph MUST emit `ac:target_core_entity`
+# values that are exactly these IRIs. Consumers that emit alternative IRI
+# schemes (e.g., `ac:co-ACO-IVF-002` as the v3.2/v4.x substrate did — see
+# the SHACL-SLICE-COMPLETENESS-DIAGNOSIS-2026-05-03.md Step 5 finding) WILL
+# fail referential integrity here, by construction.
+#
+# ============================================================
+# Consumer claim-node contract (from Decision 0003 Amendment 1 §D)
+# ============================================================
+#
+# Each claim node in a consumer's data graph carries:
+#
+#   rdf:type                ac:Claim
+#   ac:claim_id             xsd:string  (1)
+#   ac:target_core_entity   IRI matching the canonical scheme above (1)
+#   ac:level                xsd:string  (1; one of "CO" / "Practice" / "Mechanism")
+#   ac:slice                IRI of the form ac:SliceASC<NN> (1)
+#   ac:similarity_score     xsd:decimal (1; 0.0 .. 1.0)
+#   ac:disambiguation_margin xsd:decimal (1; 0.0 .. 1.0)
+#   ac:lifted_row_ref       xsd:string  (1)
+#   ac:item_ref             IRI of an ac:Item node (1)
+#
+# These cardinalities are encoded in `ClaimWellFormednessShape` below.
+# Any consumer that wants to extend the claim node with additional
+# diagnostic properties (e.g., `ac:rationale_snippet`,
+# `ac:ablation_baseline_score` per §D) is free to do so without violating
+# this shape file; sh:closed is NOT used here, so additive extensions are
+# admitted.
+#
+# ============================================================
+
+# ------------------------------------------------------------
+# Shape: ClaimWellFormednessShape (claim-schema cardinalities)
+# Catches malformed claim emissions before deeper join shapes evaluate.
+# Maps to the M4-card family for the claim node specifically (intrinsic
+# ontology cardinalities on entities are validated by the apparatus on
+# ont_graph; here we validate the claim-node schema the consumer emits).
+# ------------------------------------------------------------
+ac:ClaimWellFormednessShape
+    a sh:NodeShape ;
+    sh:targetClass ac:Claim ;
+    sh:name "Claim well-formedness" ;
+    sh:description "Every ac:Claim must carry exactly one target_core_entity, one level in {CO,Practice,Mechanism}, one slice IRI, one similarity_score, one disambiguation_margin, plus a claim_id and item_ref for traceability. Catches malformed claim emissions early." ;
+
+    sh:property [
+        sh:path ac:target_core_entity ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "M4-card: every ac:Claim must declare exactly one ac:target_core_entity (IRI of a CO / Practice / Mechanism in the AppSec Core V1 ontology)." ;
+    ] ;
+
+    sh:property [
+        sh:path ac:level ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "CO" "Practice" "Mechanism" ) ;
+        sh:severity sh:Violation ;
+        sh:message "M4-card: ac:Claim ac:level must be exactly one of \"CO\" / \"Practice\" / \"Mechanism\" (per Decision 0003 Amendment 1 §D)." ;
+    ] ;
+
+    sh:property [
+        sh:path ac:slice ;
+        sh:nodeKind sh:IRI ;
+        sh:class ac:Slice ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "M4-card: ac:Claim ac:slice must be exactly one IRI typed as ac:Slice in the ontology graph (ont_graph)." ;
+    ] ;
+
+    sh:property [
+        sh:path ac:similarity_score ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:maxInclusive 1.0 ;
+        sh:severity sh:Violation ;
+        sh:message "M4-card: ac:Claim ac:similarity_score must be exactly one decimal in [0.0, 1.0]." ;
+    ] ;
+
+    sh:property [
+        sh:path ac:disambiguation_margin ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:maxInclusive 1.0 ;
+        sh:severity sh:Violation ;
+        sh:message "M4-card: ac:Claim ac:disambiguation_margin must be exactly one decimal in [0.0, 1.0]." ;
+    ] ;
+
+    sh:property [
+        sh:path ac:claim_id ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "M4-card: ac:Claim ac:claim_id must be exactly one non-empty string for traceability." ;
+    ] ;
+
+    sh:property [
+        sh:path ac:item_ref ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "M4-card: ac:Claim ac:item_ref must be exactly one IRI pointing to the parent ac:Item node." ;
+    ] .
+
+
+# ------------------------------------------------------------
+# Shape: SliceCoherenceClaimShape  (M1' — universal, subsumes M2)
+# For every claim, the declared slice MUST equal the ontology's
+# belongsToSlice of the target entity. Joins via ont_graph.
+#
+# This is the single most load-bearing shape: it is the SHACL expression
+# of the slice-coherence invariant programme-lead ratified 2026-05-03
+# (and the failure-mode whose 769-violation count Cartographer's audit
+# enumerated on the v4.2 substrate).
+#
+# Subsumes M2: when claim.level = "CO", the target's belongsToSlice IS
+# the CO's slice membership; the join match enforces CO ∈ Slice
+# automatically. Documented; no separate M2 shape.
+# ------------------------------------------------------------
+ac:SliceCoherenceClaimShape
+    a sh:NodeShape ;
+    sh:targetClass ac:Claim ;
+    sh:name "Slice coherence on claim (M1')" ;
+    sh:description "Every claim's declared slice must equal the slice the AppSec Core V1 ontology asserts via ac:belongsToSlice for the claim's target entity. Universal across claim levels (CO / Practice / Mechanism). Subsumes M2 (CO ∈ Slice) for CO-level claims. Requires ont_graph non-null at validation time; the validator script enforces this." ;
+    sh:sparql [
+        sh:message "M1' violation: claim ac:slice does not equal the ontology's ac:belongsToSlice for the claim's target. The substrate has emitted a claim whose target lives in a different slice than the one declared. (Either the slice classifier or the target picker is wrong; not a SHACL-fixable data issue. See Decision 0003 Amendment 1 §A.M1'.)" ;
+        sh:prefixes ac: ;
+        sh:select """
+            PREFIX ac: <https://securitybydesign.dev/ontology/appsec-core/v1#>
+            SELECT $this ?declared_slice ?actual_slice ?target
+            WHERE {
+                $this ac:slice ?declared_slice .
+                $this ac:target_core_entity ?target .
+                ?target ac:belongsToSlice ?actual_slice .
+                FILTER (?declared_slice != ?actual_slice)
+            }
+        """ ;
+    ] .
+
+
+# ------------------------------------------------------------
+# Shape: PracticeCOConsistencyShape  (M3)
+# For Practice-level claims, the target Practice must be
+# objective_realized_by_practice of at least one CO whose belongsToSlice
+# equals claim.slice. This catches Practices declared in slice X that no
+# CO in slice X realizes — a Practice can satisfy M1' (its own
+# belongsToSlice matches the claim) and still violate M3 if no CO in that
+# slice picks it up (orphan-practice failure mode).
+# ------------------------------------------------------------
+ac:PracticeCOConsistencyShape
+    a sh:NodeShape ;
+    sh:targetClass ac:Claim ;
+    sh:name "Practice-in-CO consistency (M3)" ;
+    sh:description "For every claim where ac:level = \"Practice\", the target Practice must be objective_realized_by_practice of at least one CO whose ac:belongsToSlice equals the claim's ac:slice. Enforces that the Practice is reachable from the slice via the ontology's CO→Practice relation. Requires ont_graph non-null." ;
+    sh:sparql [
+        sh:message "M3 violation: a Practice-level claim names a Practice that no CO in the declared slice realizes (no CO in claim.slice has ac:objective_realized_by_practice pointing at this Practice). The Practice may be slice-coherent on its own (M1') but is structurally orphan from the slice's CO set." ;
+        sh:prefixes ac: ;
+        sh:select """
+            PREFIX ac: <https://securitybydesign.dev/ontology/appsec-core/v1#>
+            SELECT $this ?practice ?slice
+            WHERE {
+                $this ac:level "Practice" .
+                $this ac:slice ?slice .
+                $this ac:target_core_entity ?practice .
+                FILTER NOT EXISTS {
+                    ?co ac:objective_realized_by_practice ?practice .
+                    ?co ac:belongsToSlice ?slice .
+                }
+            }
+        """ ;
+    ] .
+
+
+# ------------------------------------------------------------
+# Shape: MechanismCOConsistencyShape  (M4 — charitable reading via CO chain)
+# For Mechanism-level claims, the target Mechanism must be
+# objective_implemented_by_mechanism of at least one CO whose
+# belongsToSlice equals claim.slice.
+#
+# IMPORTANT: per ontology gap 1 (top of file), V1 OWL declares
+# objective_implemented_by_mechanism as CO → Mechanism direct, not via
+# Practice. The brief's "Mechanism ∈ Practice" wording is implemented
+# here via the CO chain. If programme-lead later requires the strict
+# Mechanism ↔ Practice constraint, this shape needs revision after the
+# ontology is extended.
+# ------------------------------------------------------------
+ac:MechanismCOConsistencyShape
+    a sh:NodeShape ;
+    sh:targetClass ac:Claim ;
+    sh:name "Mechanism-in-CO consistency (M4 via CO chain)" ;
+    sh:description "For every claim where ac:level = \"Mechanism\", the target Mechanism must be objective_implemented_by_mechanism of at least one CO whose ac:belongsToSlice equals the claim's ac:slice. Enforces that the Mechanism is reachable from the slice via the ontology's CO→Mechanism relation. NOTE: V1 OWL skin asserts CO → Mechanism directly (not via Practice); see ontology gap 1. Requires ont_graph non-null." ;
+    sh:sparql [
+        sh:message "M4 violation: a Mechanism-level claim names a Mechanism that no CO in the declared slice implements (no CO in claim.slice has ac:objective_implemented_by_mechanism pointing at this Mechanism). The Mechanism may be slice-coherent on its own (M1') but is structurally orphan from the slice's CO set." ;
+        sh:prefixes ac: ;
+        sh:select """
+            PREFIX ac: <https://securitybydesign.dev/ontology/appsec-core/v1#>
+            SELECT $this ?mechanism ?slice
+            WHERE {
+                $this ac:level "Mechanism" .
+                $this ac:slice ?slice .
+                $this ac:target_core_entity ?mechanism .
+                FILTER NOT EXISTS {
+                    ?co ac:objective_implemented_by_mechanism ?mechanism .
+                    ?co ac:belongsToSlice ?slice .
+                }
+            }
+        """ ;
+    ] .
+
+
+# ------------------------------------------------------------
+# Shape: ClaimTargetReferentialIntegrityShape (M4-card — referential)
+# For every claim, the target IRI must resolve to an entity in the
+# ontology graph that is typed appropriately for the claim's level.
+# Catches typos and IRI-scheme drift (e.g., the v3.2/v4.x substrate's
+# ac:co-ACO-IVF-002 vs the canonical ac:ACO_IVF_002 — that mismatch
+# was the deepest failure layer diagnosed in
+# SHACL-SLICE-COMPLETENESS-DIAGNOSIS-2026-05-03.md Step 5).
+# ------------------------------------------------------------
+ac:ClaimTargetReferentialIntegrityShape
+    a sh:NodeShape ;
+    sh:targetClass ac:Claim ;
+    sh:name "Claim target referential integrity (M4-card)" ;
+    sh:description "For every claim, the target_core_entity IRI must resolve to a node in the ontology graph (ont_graph) whose rdf:type matches the claim's ac:level (CO ↔ ac:ControlObjective, Practice ↔ ac:Practice, Mechanism ↔ ac:Mechanism). Catches IRI typos, IRI-scheme drift, and consumer emission of targets the V1 ontology does not declare." ;
+    sh:sparql [
+        sh:message "M4-card / referential integrity violation: the claim's ac:target_core_entity IRI does not resolve to an ontology entity whose rdf:type matches the claim's ac:level. Either the IRI is unknown (typo or IRI-scheme drift — e.g., emitting ac:co-ACO-IVF-002 instead of the canonical ac:ACO_IVF_002) or the entity exists at a different ontology level than the claim declares." ;
+        sh:prefixes ac: ;
+        sh:select """
+            PREFIX ac:   <https://securitybydesign.dev/ontology/appsec-core/v1#>
+            PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            SELECT $this ?target ?level ?expected_type
+            WHERE {
+                $this ac:target_core_entity ?target .
+                $this ac:level ?level .
+                BIND ( IF ( ?level = "CO",        ac:ControlObjective,
+                       IF ( ?level = "Practice",  ac:Practice,
+                       IF ( ?level = "Mechanism", ac:Mechanism,
+                            ac:UnknownLevel ))) AS ?expected_type )
+                FILTER NOT EXISTS {
+                    ?target rdf:type ?expected_type .
+                }
+            }
+        """ ;
+    ] .
+
+
+# ============================================================
+# End of consumer-conformance-shapes.ttl
+# ============================================================
+#
+# Per-invariant coverage matrix:
+#
+#   M1' Slice coherence on claim     SliceCoherenceClaimShape
+#   M2  CO ∈ Slice                   subsumed by M1' for level=CO
+#   M3  Practice ∈ CO consistency    PracticeCOConsistencyShape
+#   M4  Mechanism ∈ CO chain         MechanismCOConsistencyShape (via CO; gap 1)
+#   M4-card  Cardinalities           ClaimWellFormednessShape +
+#                                    ClaimTargetReferentialIntegrityShape
+#
+# Out of scope (process-side, Cartographer enforces by construction):
+#   M5  Semantic warrant (similarity_score ≥ E2 ∧ disambiguation_margin ≥ E3)
+#   P1' GROUNDED ⇒ |claims[]| ≥ 1
+#
+# Validator: scripts/consumer_conformance_validator.py (parametric;
+# loads ont_graph non-null; runs pyshacl with all three graphs).

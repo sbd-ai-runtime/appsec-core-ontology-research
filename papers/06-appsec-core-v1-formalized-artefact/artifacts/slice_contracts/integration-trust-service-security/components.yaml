@@ -1,0 +1,185 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: integration_trust_and_service_to_service_security
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for integration trust and
+    service-to-service security.
+  target_core_draft: ontology/appsec-core-integration-trust-service-security-draft.yaml
+  target_mapping_draft: ontology/appsec-core-integration-trust-service-security-mapping-draft.yaml
+normalized_practices:
+  ACP-ITS-001:
+    name: Trust Boundary And Integration Review
+    practice_family: governance_and_review
+    local_practice_type: boundary_review
+    supports_objectives:
+      - ACO-ITS-004
+      - ACO-ITS-005
+      - ACO-ITS-007
+    description: Review trust boundaries and integration paths explicitly before accepting exposure or interface changes
+  ACP-ITS-002:
+    name: Machine Identity And Mutual Authentication Discipline
+    practice_family: identity_and_trust_control
+    local_practice_type: mutual_auth
+    supports_objectives:
+      - ACO-ITS-001
+      - ACO-ITS-007
+    description: Bind service interactions to explicit trusted identities through mutual authentication or bounded machine tokens
+  ACP-ITS-003:
+    name: Transport And Protocol Hardening
+    practice_family: identity_and_trust_control
+    local_practice_type: transport_hardening
+    supports_objectives:
+      - ACO-ITS-002
+      - ACO-ITS-007
+    description: Enforce secure transport, certificate hygiene and explicit protocol restrictions for integrations
+  ACP-ITS-004:
+    name: Message Integrity And Authorized Peer Validation
+    practice_family: identity_and_trust_control
+    local_practice_type: integrity_verification
+    supports_objectives:
+      - ACO-ITS-003
+      - ACO-ITS-007
+    description: Verify message integrity and accept traffic only from authorized origins and destinations
+  ACP-ITS-005:
+    name: Integration Contract And Change Assurance
+    practice_family: governance_and_review
+    local_practice_type: contract_review
+    supports_objectives:
+      - ACO-ITS-005
+      - ACO-ITS-007
+    description: Keep integration review, interface expectations and approval discipline explicit when trust boundaries change
+  ACP-ITS-006:
+    name: External Interaction Audit Logging
+    practice_family: rollout_recovery_and_runtime_records
+    local_practice_type: audit_logging
+    supports_objectives:
+      - ACO-ITS-006
+      - ACO-ITS-007
+    description: Record external calls with enough trustworthy context to support audit and review without turning into full monitoring
+normalized_mechanisms:
+  ACM-ITS-001:
+    name: API Gateway With Mutual Authentication
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: gateway
+    source_semantic_ids:
+      - sem:mechanism:api-gateway-com-autenticacao-mutua
+    supports_practices:
+      - ACP-ITS-001
+      - ACP-ITS-002
+      - ACP-ITS-003
+  ACM-ITS-002:
+    name: Trust Boundary Models
+    mechanism_family: governance_and_review
+    local_mechanism_type: review_gate
+    source_semantic_ids:
+      - sem:mechanism:trust-boundaries
+    supports_practices:
+      - ACP-ITS-001
+      - ACP-ITS-005
+  ACM-ITS-003:
+    name: Transport Security Controls
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: transport_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-ITS-003
+    note: >
+      The requirement surface is strong for TLS, certificates and protocol
+      restrictions, but the current semantic mechanism catalog does not yet
+      expose a clean reusable family for them.
+  ACM-ITS-004:
+    name: Message Integrity And Authorized Peer Policies
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: allowlist_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-ITS-004
+    note: >
+      Message signatures, integrity checks and authorized origin/destination
+      controls are materially present in requirements, but still weakly
+      materialized in the current mechanism catalog.
+  ACM-ITS-005:
+    name: Structured External Call Logging
+    mechanism_family: rollout_recovery_and_runtime_records
+    local_mechanism_type: logging_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-ITS-006
+    note: >
+      The repo clearly expresses interaction logging through requirements and
+      artifacts, but the current mechanism catalog does not yet expose a
+      stable interaction-logging mechanism family distinct from broader
+      monitoring.
+normalized_artifacts:
+  ACA-ITS-001:
+    source_artifact_id: ART-identity-binding-f96a2a528c
+    canonical_role: binding_record
+    local_role: authorization_binding
+    supports_objectives:
+      - ACO-ITS-001
+      - ACO-ITS-003
+      - ACO-ITS-007
+  ACA-ITS-002:
+    source_artifact_id: ART-policy-report-7e52280504
+    canonical_role: evidence_package
+    local_role: policy_evidence
+    supports_objectives:
+      - ACO-ITS-002
+      - ACO-ITS-003
+      - ACO-ITS-004
+      - ACO-ITS-007
+  ACA-ITS-003:
+    source_artifact_id: ART-review-checklist-de29054201
+    canonical_role: review_record
+    local_role: checklist
+    supports_objectives:
+      - ACO-ITS-004
+      - ACO-ITS-005
+      - ACO-ITS-007
+  ACA-ITS-004:
+    source_artifact_id: ART-approval-record-6fe32eb803
+    canonical_role: approval_record
+    local_role: approval_record
+    supports_objectives:
+      - ACO-ITS-005
+      - ACO-ITS-007
+  ACA-ITS-005:
+    source_artifact_id: ART-log-stream-b67ee06f7e
+    canonical_role: operational_record
+    local_role: log_record
+    supports_objectives:
+      - ACO-ITS-003
+      - ACO-ITS-006
+      - ACO-ITS-007
+current_manual_practice_mappings:
+  - source_practice_id: 04-arquitetura-segura:revisao-de-fronteiras-de-confianca-e-integracoes
+    target_practice_id: ACP-ITS-001
+  - source_practice_id: 04-arquitetura-segura:ficha-de-solucao-com-controlos-e-rastreabilidade-arquitetural
+    target_practice_id: ACP-ITS-005
+  - source_practice_id: 04-arquitetura-segura:revisao-formal-do-design-arquitetural
+    target_practice_id: ACP-ITS-005
+  - source_practice_id: 12-monitorizacao-operacoes:logging-estruturado-e-centralizado
+    target_practice_id: ACP-ITS-006
+notes:
+  practice_surface_strength:
+    note: >
+      The practice surface is architecture-heavy but still good enough to open
+      the slice because trust-boundary and integration-review practices are
+      already explicit.
+  mechanism_surface_limit:
+    note: >
+      The current semantic mechanism catalog is weaker than the requirement
+      surface for transport security, message-integrity and authorized-peer
+      controls, so several mechanisms remain explicitly objective-led.
+  observability_boundary:
+    note: >
+      Logging artifacts and monitoring practices support the slice, but the
+      slice should not expand into alerting, anomaly detection or incident
+      response semantics.
+open_questions:
+  - Which future mechanism should become the primary reusable anchor for mutual TLS, certificate posture and protocol restrictions once the semantic mechanism catalog expands?
+  - Should message-integrity controls later split into separate transport-integrity and payload-signature sub-families?
+  - Which future artifact should replace the current generic `policy_report` as the main evidence anchor for interaction-trust policy and transport posture?

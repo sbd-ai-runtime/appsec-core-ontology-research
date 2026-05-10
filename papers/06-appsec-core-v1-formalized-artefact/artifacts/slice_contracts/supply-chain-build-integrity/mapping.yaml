@@ -1,0 +1,187 @@
+meta:
+  name: AppSec Core Slice Mapping Draft
+  version: '0.1'
+  status: working_draft
+  scope: supply_chain_and_build_integrity
+  description: >
+    Draft mapping layer between current SbD-ToE manual controls and requirements
+    and the normalized objectives proposed in the AppSec core slice draft.
+  source_manual_ontology: ontology/sbdtoe-ontology.yaml
+  target_core_draft: ontology/appsec-core-supply-chain-build-integrity-draft.yaml
+  source_notes:
+    - docs/project/working-notes/2026-04-02-appsec-core-slice-supply-chain-build-integrity.md
+    - docs/project/working-notes/2026-04-03-evidence-pattern-supply-chain-status.md
+mapping_conventions:
+  primary:
+    meaning: The manual object is mainly explained by this normalized objective
+  secondary:
+    meaning: The manual object materially contributes to this objective but is not best treated as its main anchor
+  composite_target_usage:
+    meaning: Composite objectives may be primary landing zones for broad manual control clusters, but requirement-level mappings should prefer atomic objectives when a direct semantic fit exists
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+manual_control_mappings:
+  - source_control_id: CTRL-supply-chain-inventario-e-analise-de-dependencias-6b0fd9f7fb
+    source_control_name: Inventário e análise de dependências
+    target_objectives:
+      - objective_id: ACO-SCBI-001
+        strength: primary
+        rationale: The control directly anchors dependency inventory and SBOM traceability
+      - objective_id: ACO-SCBI-002
+        strength: primary
+        rationale: The control also anchors dependency risk analysis and policy gating
+      - objective_id: ACO-SCBI-003
+        strength: secondary
+        rationale: Approved dependency sources are part of this control surface but are narrower than the full control
+  - source_control_id: CTRL-code-integrity-integridade-e-governacao-de-pipelines-d5b14eeef2
+    source_control_name: Integridade e governação de pipelines
+    target_objectives:
+      - objective_id: ACO-SCBI-004
+        strength: primary
+        rationale: The control directly covers trusted build definition and execution integrity
+      - objective_id: ACO-SCBI-005
+        strength: primary
+        rationale: Promotion gates and approval governance are part of the same manual control cluster
+      - objective_id: ACO-SCBI-006
+        strength: primary
+        rationale: Artifact provenance and signature integrity emerge from this pipeline integrity cluster
+  - source_control_id: CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d
+    source_control_name: Supply chain segura de imagens e containers
+    target_objectives:
+      - objective_id: ACO-SCBI-007
+        strength: primary
+        rationale: The current wide image/container control is broader than one atomic concern, so the composite objective is the right primary landing zone at control level
+      - objective_id: ACO-SCBI-001
+        strength: secondary
+        rationale: Image SBOM traceability is a sub-surface of the current control
+      - objective_id: ACO-SCBI-002
+        strength: secondary
+        rationale: Image vulnerability scanning and gating also map into the same wide control
+      - objective_id: ACO-SCBI-003
+        strength: secondary
+        rationale: Base image origin approval belongs here but should normalize separately
+      - objective_id: ACO-SCBI-006
+        strength: secondary
+        rationale: Image signature and provenance verification are part of this cluster but not the whole story
+manual_requirement_mappings:
+  - source_requirement_id: DEP-001
+    source_bundle: 05-dependencias-sbom-sca
+    source_requirement_name: SBOM gerado por build, em formato standardizado
+    target_objectives:
+      - objective_id: ACO-SCBI-001
+        strength: primary
+        rationale: This is a direct SBOM generation and traceability requirement
+  - source_requirement_id: DEP-002
+    source_bundle: 05-dependencias-sbom-sca
+    source_requirement_name: SCA integrado em pipeline com bloqueio por política de severidade
+    target_objectives:
+      - objective_id: ACO-SCBI-002
+        strength: primary
+        rationale: This is the clearest direct anchor for dependency risk evaluation and gating
+  - source_requirement_id: DEP-005
+    source_bundle: 05-dependencias-sbom-sca
+    source_requirement_name: Registries e repositórios de origem controlados
+    target_objectives:
+      - objective_id: ACO-SCBI-003
+        strength: primary
+        rationale: This is the main source-control requirement for dependencies
+  - source_requirement_id: DEP-010
+    source_bundle: 05-dependencias-sbom-sca
+    source_requirement_name: Rastreabilidade SBOM → vulnerabilidade → correcção
+    target_objectives:
+      - objective_id: ACO-SCBI-001
+        strength: primary
+        rationale: The requirement depends on inventory and SBOM traceability as its main semantic anchor
+      - objective_id: ACO-SCBI-002
+        strength: secondary
+        rationale: Vulnerability evaluation and remediation flow also contribute materially
+  - source_requirement_id: DST-004
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Inclusão de SBOM nos artefactos
+    target_objectives:
+      - objective_id: ACO-SCBI-001
+        strength: primary
+        rationale: This is a direct artifact-level extension of SBOM traceability
+  - source_requirement_id: DST-006
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Deploy apenas via pipeline validado
+    target_objectives:
+      - objective_id: ACO-SCBI-004
+        strength: primary
+        rationale: The requirement is fundamentally about trusted pipeline execution as the deployment path
+  - source_requirement_id: CIC-001
+    source_bundle: 07-cicd-seguro
+    source_requirement_name: Pipelines como código, versionados e sujeitos a revisão
+    target_objectives:
+      - objective_id: ACO-SCBI-004
+        strength: primary
+        rationale: This is the core pipeline definition integrity requirement
+  - source_requirement_id: CIC-004
+    source_bundle: 07-cicd-seguro
+    source_requirement_name: Gates de segurança obrigatórios antes de promoção entre ambientes
+    target_objectives:
+      - objective_id: ACO-SCBI-005
+        strength: primary
+        rationale: The main meaning is governed promotion with mandatory gates
+      - objective_id: ACO-SCBI-002
+        strength: secondary
+        rationale: Security scanning gates are one contributing part of the same manual requirement
+  - source_requirement_id: CIC-005
+    source_bundle: 07-cicd-seguro
+    source_requirement_name: Rastreabilidade completa de cada execução de pipeline
+    target_objectives:
+      - objective_id: ACO-SCBI-006
+        strength: primary
+        rationale: Pipeline execution traceability is a prerequisite for provenance and attestation integrity
+  - source_requirement_id: CIC-007
+    source_bundle: 07-cicd-seguro
+    source_requirement_name: Integridade e proveniência verificável dos artefactos produzidos
+    target_objectives:
+      - objective_id: ACO-SCBI-006
+        strength: primary
+        rationale: This is the strongest manual requirement for artifact provenance and signature integrity
+  - source_requirement_id: CNT-001
+    source_bundle: 09-containers-imagens
+    source_requirement_name: Imagens base de origem confiável e aprovada
+    target_objectives:
+      - objective_id: ACO-SCBI-003
+        strength: primary
+        rationale: The direct requirement meaning is controlled and approved image source selection, which is better represented by the atomic source-control objective
+      - objective_id: ACO-SCBI-007
+        strength: secondary
+        rationale: The requirement still contributes to the wider composite image-supply envelope
+  - source_requirement_id: CNT-002
+    source_bundle: 09-containers-imagens
+    source_requirement_name: Scanning de vulnerabilidades em imagens no CI/CD
+    target_objectives:
+      - objective_id: ACO-SCBI-002
+        strength: primary
+        rationale: This is the image-side equivalent of vulnerability evaluation and gating
+      - objective_id: ACO-SCBI-007
+        strength: secondary
+        rationale: It also supports the wider trusted image supply objective
+  - source_requirement_id: CNT-007
+    source_bundle: 09-containers-imagens
+    source_requirement_name: Assinatura e verificação de proveniência de imagens
+    target_objectives:
+      - objective_id: ACO-SCBI-006
+        strength: primary
+        rationale: Signature and provenance are the direct semantic center of this requirement
+      - objective_id: ACO-SCBI-007
+        strength: secondary
+        rationale: The requirement also contributes to the wider trusted image supply objective
+  - source_requirement_id: CNT-008
+    source_bundle: 09-containers-imagens
+    source_requirement_name: SBOM por imagem publicada
+    target_objectives:
+      - objective_id: ACO-SCBI-001
+        strength: primary
+        rationale: Published-image SBOM is primarily an inventory and traceability requirement
+      - objective_id: ACO-SCBI-007
+        strength: secondary
+        rationale: It also contributes to trusted image supply as a whole
+open_questions:
+  - Should composite objectives ever be used as primary targets below control level, or should that be forbidden once the first slice stabilizes?
+  - Should `DST-006` also map secondarily to `ACO-SCBI-005` because deployment via validated pipeline implies promotion governance?
+  - Should `CIC-005` remain fully inside `ACO-SCBI-006`, or should a future objective split runtime traceability from attestation integrity?
+  - Should `CNT-001` eventually split further into base-image trust versus registry-origin trust?

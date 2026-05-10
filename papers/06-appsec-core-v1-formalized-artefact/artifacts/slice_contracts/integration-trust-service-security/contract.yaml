@@ -1,0 +1,175 @@
+meta:
+  name: AppSec Core Slice Contract
+  version: '0.1'
+  status: working_contract
+  scope: integration_trust_and_service_to_service_security
+  description: >
+    Consolidated contract for the eighth AppSec core slice. This file does not
+    replace the detailed drafts; it defines the current stable reading across
+    objectives, mapping rules, normalized components, confidence boundaries and
+    immediate continuation criteria.
+  related_artifacts:
+    objective_draft: ontology/appsec-core-integration-trust-service-security-draft.yaml
+    mapping_draft: ontology/appsec-core-integration-trust-service-security-mapping-draft.yaml
+    components_draft: ontology/appsec-core-integration-trust-service-security-components-draft.yaml
+    slice_note: docs/project/working-notes/2026-04-03-appsec-core-slice-integration-trust-service-security.md
+    candidate_evaluation: docs/project/working-notes/2026-04-03-appsec-core-slice-8-candidate-evaluation.md
+purpose:
+  current_goal: >
+    Stabilize an eighth reusable AppSec domain slice on a technical semantic
+    surface centered on trusted interaction between services and systems before
+    opening a ninth slice or broadening API, identity or observability
+    semantics prematurely.
+  non_goals:
+    - regulatory_overlay_expansion
+    - v3_audit_persistence
+    - source_provenance_transversal_layer
+    - end_user_identity_and_session_coverage
+    - full_architecture_governance_coverage
+    - ninth_appsec_slice
+module_position:
+  appsec_core:
+    included:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+    deferred_or_weak:
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    included:
+      - requirement_to_objective_mapping
+      - control_to_objective_mapping
+      - practice_to_normalized_practice_mapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM and SLSA stay out of this contract
+objective_set:
+  atomic_objectives:
+    - ACO-ITS-001
+    - ACO-ITS-002
+    - ACO-ITS-003
+    - ACO-ITS-004
+    - ACO-ITS-005
+    - ACO-ITS-006
+  composite_objectives:
+    - ACO-ITS-007
+  composite_rules:
+    ACO-ITS-007:
+      meaning: Composite landing zone for the current split control surface around trusted service interaction, boundary mediation and integration assurance
+      composed_of:
+        - ACO-ITS-001
+        - ACO-ITS-002
+        - ACO-ITS-003
+        - ACO-ITS-004
+        - ACO-ITS-005
+        - ACO-ITS-006
+      usage_rule: >
+        May remain a primary target for the broad technical boundary control,
+        while requirement-level mappings should prefer atomic objectives when a
+        direct semantic fit exists.
+mapping_rules:
+  control_level:
+    rule: >
+      The slice may use one primary technical control plus explicit adjacent
+      broad controls when the current manual does not yet expose one dedicated
+      integration-trust control family.
+    example:
+      source_control_id: CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      primary_target: ACO-ITS-007
+  requirement_level:
+    rule: Requirement mappings should prefer atomic objectives when the requirement is semantically narrow
+    examples:
+      - source_requirement_id: INT-002
+        primary_target: ACO-ITS-001
+      - source_requirement_id: INT-004
+        primary_target: ACO-ITS-002
+      - source_requirement_id: INT-008
+        primary_target: ACO-ITS-005
+  practice_level:
+    rule: >
+      Current trust-boundary and integration-review practices are strong
+      enough to support the slice, but slice construction still begins from
+      requirement and broad-control decomposition rather than from chapter
+      practices alone.
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+component_subset:
+  normalized_practices:
+    - ACP-ITS-001
+    - ACP-ITS-002
+    - ACP-ITS-003
+    - ACP-ITS-004
+    - ACP-ITS-005
+    - ACP-ITS-006
+  normalized_mechanisms:
+    - ACM-ITS-001
+    - ACM-ITS-002
+    - ACM-ITS-003
+    - ACM-ITS-004
+    - ACM-ITS-005
+  normalized_artifacts:
+    - ACA-ITS-001
+    - ACA-ITS-002
+    - ACA-ITS-003
+    - ACA-ITS-004
+    - ACA-ITS-005
+evidence_pattern_position:
+  current_status: supporting_inside_slice
+  meaning: >
+    EvidencePattern stays inside the slice for now as a supporting AppSec core
+    concept that helps deterministic review of trusted machine interaction,
+    secure transport, authorized peers and external-call traceability.
+  explicit_boundaries:
+    - it_is_not_the_v3_audit_layer
+    - it_is_not_the_primary_identity_slice
+    - it_is_not_the_primary_monitoring_slice
+  revisit_trigger: >
+    Revisit only after this slice stabilizes and before opening any broader API
+    governance or observability capability.
+confidence_boundaries:
+  strong_inputs:
+    - ontology/sbdtoe-ontology.yaml
+    - data/entities/canonical_requirements_s7.json
+    - data/entities/canonical_controls.json
+    - data/entities/practices.json
+    - data/entities/artifact_catalog.json
+    - data/publish/semantic/mechanisms.jsonl
+  useful_but_adjacent_inputs:
+    - ontology/appsec-core-identity-access-session-trust-slice-contract.yaml
+    - ontology/appsec-core-architecture-trust-boundaries-slice-contract.yaml
+    - ontology/appsec-core-testing-security-validation-slice-contract.yaml
+  weak_or_deferred_inputs:
+    - data/publish/semantic/requirement_control_links.jsonl
+    - data/publish/semantic/signals.jsonl
+    - dedicated_transport_and_message_integrity_mechanism_taxonomy
+    - broader_runtime_observability_semantics
+  adjacent_but_not_central:
+    - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    - INT-007
+    - API-004
+  rule: >
+    Normalize this slice from strong foundational requirements and explicit
+    boundary practices, trust the primary technical boundary control plus
+    adjacent identity and architecture controls, and do not let weak
+    auto-generated control links or broader monitoring semantics redefine the
+    center.
+acceptance_read:
+  stable_enough_now:
+    - the eighth slice has a coherent objective set
+    - the objective set distinguishes atomic and composite semantics
+    - the mapping layer makes the split control surface explicit
+    - a minimum component subset exists for practices, mechanisms and artifacts
+    - the slice records the boundary against end-user IAM and full monitoring explicitly
+  not_stable_enough_yet:
+    - richer transport-security mechanism taxonomy
+    - richer artifact taxonomy for interface contracts and integration review records
+    - signal-driven slice semantics
+    - external alignment for the slice
+next_step:
+  recommendation: >
+    Treat the first eight slices as the current reference set and review
+    whether the method invariants now need another explicit update before
+    opening a ninth slice.

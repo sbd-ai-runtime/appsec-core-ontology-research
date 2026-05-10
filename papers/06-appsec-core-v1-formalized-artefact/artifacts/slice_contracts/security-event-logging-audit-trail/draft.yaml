@@ -1,0 +1,277 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: security_event_logging_audit_trail_and_centralized_logging
+  description: >
+    Tenth narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    security event logging, audit trail integrity and centralized logging
+    assurance.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-security-event-logging-audit-trail.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - full_monitoring_and_response_program
+    - alerting_and_correlation_as_primary_center
+    - incident_response_integration_as_primary_center
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - event_coverage
+    - structured_log_schema
+    - log_integrity_and_access
+    - retention_and_log_lifecycle
+    - centralized_log_ingestion
+    - logging_pipeline_health
+    - security_logging_surface
+  included_manual_categories:
+    - LOG
+    - OPS
+  included_primary_requirements:
+    - LOG-001
+    - LOG-002
+    - LOG-003
+    - LOG-005
+    - LOG-006
+    - LOG-008
+    - OPS-001
+    - OPS-002
+    - OPS-003
+    - OPS-004
+  excluded_for_now:
+    - alerting_as_primary_center
+    - correlation_and_behavioral_detection
+    - incident_response_integration
+    - broader_runtime_operations
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-SLG-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[event_coverage, structured_log_schema, log_integrity_and_access, retention_and_log_lifecycle, centralized_log_ingestion, logging_pipeline_health, security_logging_surface]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, integrity_traceability_and_records, rollout_recovery_and_runtime_records, validation_and_analysis]
+      - local_practice_type: enum[event_definition, schema_normalization, integrity_protection, retention_governance, centralized_ingestion, pipeline_health]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[integrity_traceability_and_records, rollout_recovery_and_runtime_records, validation_and_analysis]
+      - local_mechanism_type: enum[format_control, integrity_control, ingestion_control, retention_control, health_control]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[operational_record, configuration, evidence_package]
+      - local_role: enum[log_record, alert_policy, evidence]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[operational_record, configuration, evidence_package]
+      - local_evidence_kind: enum[log_record, alert_policy, evidence]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to audit-trail and logging judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-SLG-001:
+    name: Critical Security Event Coverage And Catalog Discipline
+    objective_kind: atomic
+    domain_key: event_coverage
+    objective_type: governance
+    statement: Security-relevant events must be explicitly cataloged and actually emitted so that the audit trail covers material security activity
+    expected_outcome: Critical security events are defined, implemented and reviewable as a deliberate event set rather than as incidental logging
+    verification_posture: critical_events_are_defined_and_present
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - LOG-001
+      - OPS-002
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - critical_event_catalog_artifact
+      - source_coverage_inventory_artifact
+  ACO-SLG-002:
+    name: Structured Audit Fields And Machine-Readable Log Shape
+    objective_kind: atomic
+    domain_key: structured_log_schema
+    objective_type: preventive
+    statement: Security logs must use consistent structured fields and machine-readable formats so that audit records remain complete, parseable and comparable across sources
+    expected_outcome: Audit entries carry the minimum required fields and remain machine-consumable across components and environments
+    verification_posture: log_shape_is_structured_and_complete
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - LOG-002
+      - OPS-001
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - log_schema_standard_artifact
+      - field_mapping_profile_artifact
+  ACO-SLG-003:
+    name: Log Integrity Protection And Access Discipline
+    objective_kind: atomic
+    domain_key: log_integrity_and_access
+    objective_type: preventive
+    statement: Audit logs must be protected against tampering and direct casual alteration through access restrictions, integrity controls or equivalent verifiable safeguards
+    expected_outcome: Security records remain trustworthy enough that unauthorized alteration is blocked or made evident
+    verification_posture: logs_are_tamper_resistant
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - LOG-003
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - log_integrity_control_artifact
+      - log_access_policy_artifact
+  ACO-SLG-004:
+    name: Audit Record Retention And Lifecycle Governance
+    objective_kind: atomic
+    domain_key: retention_and_log_lifecycle
+    objective_type: governance
+    statement: Audit logs must be retained, archived and purged under explicit lifecycle rules that satisfy security and regulatory expectations
+    expected_outcome: Security records remain available for the required period and their lifecycle is governed rather than accidental
+    verification_posture: log_lifecycle_is_governed
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - LOG-005
+      - OPS-003
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - retention_policy_artifact
+      - archive_and_purge_record_artifact
+  ACO-SLG-005:
+    name: Centralized Log Ingestion And Source Accountability
+    objective_kind: atomic
+    domain_key: centralized_log_ingestion
+    objective_type: detective
+    statement: Security logs must be ingested centrally with source accountability so that review does not depend on fragile local host access or ad hoc collection
+    expected_outcome: Central log visibility exists by source and application, and ingestion becomes reviewable rather than implicit
+    verification_posture: centralized_ingestion_is_real
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - LOG-006
+      - OPS-004
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - ingestion_source_registry_artifact
+      - central_forwarding_config_artifact
+  ACO-SLG-006:
+    name: Logging Pipeline Health And Silent-Failure Visibility
+    objective_kind: atomic
+    domain_key: logging_pipeline_health
+    objective_type: detective
+    statement: Failures in log generation or forwarding must become visible so that absence of security records is itself reviewable rather than silently accepted
+    expected_outcome: Logging pipeline degradation is detectable and reviewable before it undermines auditability completely
+    verification_posture: logging_failures_are_visible
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - LOG-008
+    expected_artifacts:
+      - ART-alert-policy-c55180d8ab
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - logging_pipeline_health_record_artifact
+  ACO-SLG-007:
+    name: Security Logging And Audit Trail Assurance
+    objective_kind: composite
+    domain_key: security_logging_surface
+    objective_type: governance
+    statement: Security event coverage, structured audit records, tamper resistance, governed retention, centralized ingestion and logging-pipeline health must operate as one coherent security-logging surface
+    expected_outcome: Security-relevant records remain present, trustworthy and reviewable enough to support AppSec assurance without requiring the whole operational monitoring program to define the slice
+    verification_posture: coherent_security_logging_surface
+    composed_of:
+      - ACO-SLG-001
+      - ACO-SLG-002
+      - ACO-SLG-003
+      - ACO-SLG-004
+      - ACO-SLG-005
+      - ACO-SLG-006
+    current_manual_control_anchors:
+      - CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    current_manual_requirement_anchors:
+      - LOG-001
+      - LOG-002
+      - LOG-003
+      - LOG-005
+      - LOG-006
+      - LOG-008
+      - OPS-001
+      - OPS-002
+      - OPS-003
+      - OPS-004
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+      - ART-alert-policy-c55180d8ab

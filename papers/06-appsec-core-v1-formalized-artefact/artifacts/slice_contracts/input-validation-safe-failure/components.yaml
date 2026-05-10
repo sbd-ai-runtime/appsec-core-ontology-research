@@ -1,0 +1,225 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: input_validation_safe_parsing_and_controlled_failure
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for input validation, safe parsing and
+    controlled failure.
+  target_core_draft: ontology/appsec-core-input-validation-safe-failure-draft.yaml
+  target_mapping_draft: ontology/appsec-core-input-validation-safe-failure-mapping-draft.yaml
+normalized_practices:
+  ACP-IVF-001:
+    name: Boundary Input Validation
+    practice_family: validation_and_analysis
+    local_practice_type: contract_validation
+    supports_objectives:
+      - ACO-IVF-001
+      - ACO-IVF-007
+    description: Validate external inputs and malformed messages at entry points before processing continues
+  ACP-IVF-002:
+    name: Schema And Allowlist Enforcement
+    practice_family: validation_and_analysis
+    local_practice_type: schema_enforcement
+    supports_objectives:
+      - ACO-IVF-002
+      - ACO-IVF-007
+    description: Constrain structured payloads and accepted values through explicit schema, type and allowlist checks
+  ACP-IVF-003:
+    name: Dangerous Pattern Exclusion
+    practice_family: validation_and_analysis
+    local_practice_type: pattern_exclusion
+    supports_objectives:
+      - ACO-IVF-003
+      - ACO-IVF-007
+    description: Detect and block dangerous input-handling patterns such as permissive execution, unsafe rendering and injection-prone constructs
+  ACP-IVF-004:
+    name: Pre-Use Data Validation Discipline
+    practice_family: validation_and_analysis
+    local_practice_type: data_flow_guarding
+    supports_objectives:
+      - ACO-IVF-004
+      - ACO-IVF-007
+    description: Re-validate data before internal business use, persistence or downstream propagation instead of trusting it by arrival
+  ACP-IVF-005:
+    name: Non-Revealing Error Surface Control
+    practice_family: policy_and_gate_enforcement
+    local_practice_type: error_surface_control
+    supports_objectives:
+      - ACO-IVF-005
+      - ACO-IVF-007
+    description: Keep client-visible failures controlled, generic and resistant to information leakage or enumeration
+  ACP-IVF-006:
+    name: Centralized Error Governance
+    practice_family: governance_and_review
+    local_practice_type: error_governance
+    supports_objectives:
+      - ACO-IVF-006
+      - ACO-IVF-007
+    description: Centralize error handling, testing and sensitive-error logging discipline so that failures stay consistent and reviewable
+  ACP-IVF-007:
+    name: Context-Aware Output Encoding At Rendering Boundaries
+    practice_family: validation_and_analysis
+    local_practice_type: output_encoding
+    supports_objectives:
+      - ACO-IVF-008
+      - ACO-IVF-007
+    description: Apply encoding or escaping appropriate to the rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP headers) at the boundary where untrusted or composed data is emitted, so structure and semantics of the output cannot be altered by data
+    promotion_provenance:
+      acr_id: ACR-004
+      ratification_date: '2026-05-05'
+normalized_mechanisms:
+  ACM-IVF-001:
+    name: Code Review For Input And Error Discipline
+    mechanism_family: governance_and_review
+    local_mechanism_type: review
+    source_semantic_ids:
+      - sem:mechanism:code-review
+    supports_practices:
+      - ACP-IVF-003
+      - ACP-IVF-004
+      - ACP-IVF-005
+      - ACP-IVF-006
+  ACM-IVF-002:
+    name: Static Rulepacks And Security Linters
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: rulepack
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-IVF-002
+      - ACP-IVF-003
+    note: >
+      The repo clearly expresses dangerous-pattern detection and validation
+      automation through practices and evidence, but the semantic mechanism
+      catalog is still weak for this family.
+  ACM-IVF-003:
+    name: Schema And Contract Validators
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: schema_validator
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-IVF-001
+      - ACP-IVF-002
+      - ACP-IVF-004
+    note: >
+      Schema and payload-validation semantics are strong in the requirement and
+      evidence surfaces, but are not yet cleanly materialized in the current
+      semantic mechanism catalog.
+  ACM-IVF-004:
+    name: Centralized Error Translation And Redaction
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: centralized_handler
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-IVF-005
+      - ACP-IVF-006
+    note: >
+      The requirements strongly imply handler centralization and redaction
+      control, but the repo does not yet expose a stable reusable mechanism
+      family for them.
+  ACM-IVF-005:
+    name: Context-Aware Encoder Selection And Application
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: context_encoder
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-IVF-007
+    note: >
+      Encoder library or framework primitive that selects the encoder appropriate
+      to the rendering context (HTML element, attribute, JavaScript string, JSON
+      value, URL component, CSS, HTTP header) and applies it at the output
+      boundary. Includes safe-rendering DOM APIs (e.g., textContent,
+      createTextNode) and trusted-types / output-sink hardening.
+    promotion_provenance:
+      acr_id: ACR-004
+      ratification_date: '2026-05-05'
+normalized_artifacts:
+  ACA-IVF-001:
+    source_artifact_id: ART-guideline-catalog-5e53974142
+    canonical_role: governance_record
+    local_role: guidance
+    supports_objectives:
+      - ACO-IVF-002
+      - ACO-IVF-003
+      - ACO-IVF-007
+  ACA-IVF-002:
+    source_artifact_id: ART-sast-report-0358e14566
+    canonical_role: report
+    local_role: report
+    supports_objectives:
+      - ACO-IVF-003
+      - ACO-IVF-007
+  ACA-IVF-003:
+    source_artifact_id: ART-validation-evidence-79f6aaf0ec
+    canonical_role: evidence_package
+    local_role: evidence_package
+    supports_objectives:
+      - ACO-IVF-001
+      - ACO-IVF-002
+      - ACO-IVF-004
+      - ACO-IVF-005
+      - ACO-IVF-006
+      - ACO-IVF-007
+  ACA-IVF-004:
+    source_artifact_id: ART-test-report-b11c5dfb8a
+    canonical_role: report
+    local_role: report
+    supports_objectives:
+      - ACO-IVF-001
+      - ACO-IVF-003
+      - ACO-IVF-005
+      - ACO-IVF-007
+  ACA-IVF-005:
+    source_artifact_id: ART-review-checklist-de29054201
+    canonical_role: review_record
+    local_role: checklist
+    supports_objectives:
+      - ACO-IVF-003
+      - ACO-IVF-004
+      - ACO-IVF-006
+      - ACO-IVF-007
+  ACA-IVF-006:
+    source_artifact_id: ART-log-stream-b67ee06f7e
+    canonical_role: operational_record
+    local_role: log_record
+    supports_objectives:
+      - ACO-IVF-005
+      - ACO-IVF-006
+      - ACO-IVF-007
+current_manual_practice_mappings:
+  - source_practice_id: 02-requisitos-seguranca:definicao-de-criterios-de-validacao
+    target_practice_id: ACP-IVF-001
+  - source_practice_id: 06-desenvolvimento-seguro:validacoes-locais-obrigatorias-pre-commit
+    target_practice_id: ACP-IVF-001
+  - source_practice_id: 06-desenvolvimento-seguro:perfis-de-validacao-por-nivel-de-risco-l1l3
+    target_practice_id: ACP-IVF-002
+  - source_practice_id: 06-desenvolvimento-seguro:validacao-de-padroes-perigosos-e-anti-patterns
+    target_practice_id: ACP-IVF-003
+  - source_practice_id: 06-desenvolvimento-seguro:automatizacao-em-ci-cd-linters-sast
+    target_practice_id: ACP-IVF-003
+  - source_practice_id: 06-desenvolvimento-seguro:perfis-de-validacao-por-nivel-de-risco-l1l3
+    target_practice_id: ACP-IVF-004
+  - source_practice_id: 06-desenvolvimento-seguro:validacoes-locais-obrigatorias-pre-commit
+    target_practice_id: ACP-IVF-005
+  - source_practice_id: 06-desenvolvimento-seguro:arquivo-central-de-evidencias-de-validacao
+    target_practice_id: ACP-IVF-006
+notes:
+  practice_surface_strength:
+    note: >
+      This slice is practice-strong enough to stand apart from the broader
+      secure-development umbrella, but some practices remain more generic than
+      the narrower reusable slice semantics.
+  mechanism_surface_limit:
+    note: >
+      The current semantic mechanism catalog is weaker than the requirements,
+      practices and evidence-pattern surfaces for this slice, so several
+      mechanisms stay explicitly objective-led.
+  testing_boundary:
+    note: >
+      Test reports and adversarial input checks support the slice, but testing
+      governance remains primarily in the testing slice rather than here.
+open_questions:
+  - Should `ACP-IVF-004` later split internal business-use validation from downstream integration validation if a broader integration slice emerges?
+  - Which future mechanism should become the primary anchor for schema and parser discipline once the semantic mechanism catalog grows?
+  - Should `ACA-IVF-006` remain inside this slice as an error-log artifact, or later share part of its role with a future observability slice without collapsing into runtime semantics?

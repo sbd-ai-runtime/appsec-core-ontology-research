@@ -1,0 +1,2554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:ac="https://securitybydesign.dev/ontology/appsec-core/v1#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ITS_006">
+    <rdfs:label>External Interaction Auditability</rdfs:label>
+    <ac:objective_id>ACO-ITS-006</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08">
+        <rdfs:label>Integration trust and service-to-service security</rdfs:label>
+        <rdfs:comment>integration trust and service to service security</rdfs:comment>
+        <ac:slice_id>ASC-08</ac:slice_id>
+        <ac:scope_key>integration_trust_and_service_to_service_security</ac:scope_key>
+        <ac:objective_family_code>ACO-ITS</ac:objective_family_code>
+        <ac:current_control_mode>split_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-integration-trust-service-security-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Service-to-service trust</ac:shortLabel>
+        <ac:diagramLabel>S2S trust</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_006">
+        <rdfs:label>External Interaction Audit Logging</rdfs:label>
+        <ac:practice_id>ACP-ITS-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_005">
+        <rdfs:label>Structured External Call Logging</rdfs:label>
+        <ac:mechanism_id>ACM-ITS-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_005">
+        <rdfs:label>Log Stream</rdfs:label>
+        <ac:artifact_id>ACA-ITS-005</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ATB_007">
+    <rdfs:label>Secure Architecture Governance And Boundary Integrity</rdfs:label>
+    <ac:objective_id>ACO-ATB-007</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03">
+        <rdfs:label>Architecture and trust boundaries</rdfs:label>
+        <rdfs:comment>architecture and trust boundaries</rdfs:comment>
+        <ac:slice_id>ASC-03</ac:slice_id>
+        <ac:scope_key>architecture_and_trust_boundaries</ac:scope_key>
+        <ac:objective_family_code>ACO-ATB</ac:objective_family_code>
+        <ac:current_control_mode>dual_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-architecture-trust-boundaries-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Architecture and boundaries</ac:shortLabel>
+        <ac:diagramLabel>Architecture boundaries</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_002">
+        <rdfs:label>Architectural Decision And Solution Traceability</rdfs:label>
+        <ac:practice_id>ACP-ATB-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_005">
+        <rdfs:label>Architecture Review And Approval Governance</rdfs:label>
+        <ac:practice_id>ACP-ATB-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_007">
+        <rdfs:label>Automatable Topology And Pattern Validation</rdfs:label>
+        <ac:practice_id>ACP-ATB-007</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_001">
+        <rdfs:label>Versioned Diagrams And ADR Records</rdfs:label>
+        <ac:mechanism_id>ACM-ATB-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_004">
+        <rdfs:label>Architecture Review Gates</rdfs:label>
+        <ac:mechanism_id>ACM-ATB-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_005">
+        <rdfs:label>Automated Topology Validation Jobs</rdfs:label>
+        <ac:mechanism_id>ACM-ATB-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_001">
+        <rdfs:label>Review Checklist</rdfs:label>
+        <ac:artifact_id>ACA-ATB-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_002">
+        <rdfs:label>Approval Record</rdfs:label>
+        <ac:artifact_id>ACA-ATB-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ATB_005">
+    <rdfs:label>Architecture Review And Change Trigger Discipline</rdfs:label>
+    <ac:objective_id>ACO-ATB-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_005"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_006">
+        <rdfs:label>Architecture Change Trigger Discipline</rdfs:label>
+        <ac:practice_id>ACP-ATB-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ATB_003">
+    <rdfs:label>External Exposure Justification And Boundary Mediation</rdfs:label>
+    <ac:objective_id>ACO-ATB-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_004">
+        <rdfs:label>External Exposure And Boundary Mediation Design</rdfs:label>
+        <ac:practice_id>ACP-ATB-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_003">
+        <rdfs:label>Boundary Mediation Controls</rdfs:label>
+        <ac:mechanism_id>ACM-ATB-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_004">
+        <rdfs:label>Policy Report</rdfs:label>
+        <ac:artifact_id>ACA-ATB-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_007">
+    <rdfs:label>Release Promotion And Reversible Rollout Assurance</rdfs:label>
+    <ac:objective_id>ACO-RPR-007</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09">
+        <rdfs:label>Release promotion, controlled rollout and rollback readiness</rdfs:label>
+        <rdfs:comment>release promotion controlled rollout and rollback readiness</rdfs:comment>
+        <ac:slice_id>ASC-09</ac:slice_id>
+        <ac:scope_key>release_promotion_controlled_rollout_and_rollback_readiness</ac:scope_key>
+        <ac:objective_family_code>ACO-RPR</ac:objective_family_code>
+        <ac:current_control_mode>split_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-release-promotion-controlled-rollout-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Release rollout and rollback</ac:shortLabel>
+        <ac:diagramLabel>Rollout and rollback</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_001">
+        <rdfs:label>Accountable Release Approval</rdfs:label>
+        <ac:practice_id>ACP-RPR-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_002">
+        <rdfs:label>Verified Artifact Promotion</rdfs:label>
+        <ac:practice_id>ACP-RPR-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_003">
+        <rdfs:label>Pre-Promotion Gates And Staging Validation</rdfs:label>
+        <ac:practice_id>ACP-RPR-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_004">
+        <rdfs:label>End-to-End Deploy Traceability</rdfs:label>
+        <ac:practice_id>ACP-RPR-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_005">
+        <rdfs:label>Tested Rollback Discipline</rdfs:label>
+        <ac:practice_id>ACP-RPR-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_006">
+        <rdfs:label>Progressive Rollout And Containment</rdfs:label>
+        <ac:practice_id>ACP-RPR-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_001">
+        <rdfs:label>Release Promotion Controls</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_002">
+        <rdfs:label>Approval Gates And Separation Of Signal From Promotion Decision</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_003">
+        <rdfs:label>Provenance And Signature Verification At Promotion</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_004">
+        <rdfs:label>Rollback And Containment Controls</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_005">
+        <rdfs:label>Deployment Pipeline Traceability And Audit Controls</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_001">
+        <rdfs:label>Approval Record</rdfs:label>
+        <ac:artifact_id>ACA-RPR-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_002">
+        <rdfs:label>Release Gate</rdfs:label>
+        <ac:artifact_id>ACA-RPR-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_003">
+        <rdfs:label>Artifact Provenance</rdfs:label>
+        <ac:artifact_id>ACA-RPR-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_004">
+        <rdfs:label>Artifact Signature</rdfs:label>
+        <ac:artifact_id>ACA-RPR-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_005">
+        <rdfs:label>Pipeline Config</rdfs:label>
+        <ac:artifact_id>ACA-RPR-005</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_006">
+        <rdfs:label>Deployment Plan</rdfs:label>
+        <ac:artifact_id>ACA-RPR-006</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_007">
+        <rdfs:label>Rollback Plan</rdfs:label>
+        <ac:artifact_id>ACA-RPR-007</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_008">
+        <rdfs:label>Operational Evidence</rdfs:label>
+        <ac:artifact_id>ACA-RPR-008</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#local_practice_type">
+    <rdfs:label>local practice type</rdfs:label>
+    <rdfs:comment>Slice-local typing for a Practice (e.g. contract_validation, output_encoding).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Practice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ITS_007">
+    <rdfs:label>Integration Trust And Service Interaction Assurance</rdfs:label>
+    <ac:objective_id>ACO-ITS-007</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_001">
+        <rdfs:label>Trust Boundary And Integration Review</rdfs:label>
+        <ac:practice_id>ACP-ITS-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_002">
+        <rdfs:label>Machine Identity And Mutual Authentication Discipline</rdfs:label>
+        <ac:practice_id>ACP-ITS-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_003">
+        <rdfs:label>Transport And Protocol Hardening</rdfs:label>
+        <ac:practice_id>ACP-ITS-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_004">
+        <rdfs:label>Message Integrity And Authorized Peer Validation</rdfs:label>
+        <ac:practice_id>ACP-ITS-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_005">
+        <rdfs:label>Integration Contract And Change Assurance</rdfs:label>
+        <ac:practice_id>ACP-ITS-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_006"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_001">
+        <rdfs:label>API Gateway With Mutual Authentication</rdfs:label>
+        <ac:mechanism_id>ACM-ITS-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_002">
+        <rdfs:label>Trust Boundary Models</rdfs:label>
+        <ac:mechanism_id>ACM-ITS-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_003">
+        <rdfs:label>Transport Security Controls</rdfs:label>
+        <ac:mechanism_id>ACM-ITS-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_004">
+        <rdfs:label>Message Integrity And Authorized Peer Policies</rdfs:label>
+        <ac:mechanism_id>ACM-ITS-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_005"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_001">
+        <rdfs:label>Identity Binding</rdfs:label>
+        <ac:artifact_id>ACA-ITS-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_002">
+        <rdfs:label>Policy Report</rdfs:label>
+        <ac:artifact_id>ACA-ITS-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_003">
+        <rdfs:label>Review Checklist</rdfs:label>
+        <ac:artifact_id>ACA-ITS-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_004">
+        <rdfs:label>Approval Record</rdfs:label>
+        <ac:artifact_id>ACA-ITS-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_005"/>
+  </ac:ControlObjective>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleBindingRecord">
+    <rdfs:label>Binding Record</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_005">
+    <rdfs:label>Tested Rollback Readiness And Reversibility</rdfs:label>
+    <ac:objective_id>ACO-RPR-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_007"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_008"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#hasObjectiveKind">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveKind"/>
+    <rdfs:label>has objective kind</rdfs:label>
+    <rdfs:comment>Relates a ControlObjective to its kind (atomic or composite).</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#isObjectiveKindOf">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveKind"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+        <rdfs:label>is objective kind of</rdfs:label>
+        <rdfs:comment>Inverse of ac:hasObjectiveKind; relates an ObjectiveKind value to ControlObjective instances that have it.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#belongsToSlice">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Slice"/>
+    <rdfs:label>belongs to slice</rdfs:label>
+    <rdfs:comment>Membership relation from an AppSec Core entity instance to its methodological slice (ASC-NN).</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#hasMember">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Slice"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+        <rdfs:label>has member</rdfs:label>
+        <rdfs:comment>Inverse of ac:belongsToSlice; relates a Slice to the AppSec Core entity instances it contains.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SCBI_001">
+    <rdfs:label>Dependency Inventory And SBOM Traceability</rdfs:label>
+    <ac:objective_id>ACO-SCBI-001</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01">
+        <rdfs:label>Supply chain and build integrity</rdfs:label>
+        <rdfs:comment>supply chain and build integrity</rdfs:comment>
+        <ac:slice_id>ASC-01</ac:slice_id>
+        <ac:scope_key>supply_chain_and_build_integrity</ac:scope_key>
+        <ac:objective_family_code>ACO-SCBI</ac:objective_family_code>
+        <ac:current_control_mode>multi_control_convergent_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-supply-chain-build-integrity-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Supply chain integrity</ac:shortLabel>
+        <ac:diagramLabel>SC integrity</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_001">
+        <rdfs:label>Build-Linked SBOM Generation</rdfs:label>
+        <ac:practice_id>ACP-SCBI-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_005">
+        <rdfs:label>Build And Image Inventory Generation</rdfs:label>
+        <ac:mechanism_id>ACM-SCBI-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_001">
+        <rdfs:label>SBOM</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_002">
+        <rdfs:label>Dependency Inventory</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_010">
+        <rdfs:label>Container Image</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-010</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SPC_003">
+    <rdfs:label>Secret Rotation And Expiry Discipline</rdfs:label>
+    <ac:objective_id>ACO-SPC-003</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06">
+        <rdfs:label>Secret handling, protected configuration and operational identities</rdfs:label>
+        <rdfs:comment>secret handling protected configuration and operational identities</rdfs:comment>
+        <ac:slice_id>ASC-06</ac:slice_id>
+        <ac:scope_key>secret_handling_protected_configuration_and_operational_identities</ac:scope_key>
+        <ac:objective_family_code>ACO-SPC</ac:objective_family_code>
+        <ac:current_control_mode>single_broad_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-secrets-protected-config-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Secrets and protected configuration</ac:shortLabel>
+        <ac:diagramLabel>Secrets and config</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_003">
+        <rdfs:label>Secret Rotation And Renewal Discipline</rdfs:label>
+        <ac:practice_id>ACP-SPC-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_003">
+        <rdfs:label>Short-Lived Credential Controls</rdfs:label>
+        <ac:mechanism_id>ACM-SPC-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_001">
+        <rdfs:label>Secret Config</rdfs:label>
+        <ac:artifact_id>ACA-SPC-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <owl:Ontology rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreV1">
+    <rdfs:label>AppSec Core v1.1 bounded ontology cut</rdfs:label>
+    <rdfs:comment>Bounded AppSec Core v1.0 OWL cut generated from the canonical surface contract, entity schema, cross-slice vocabulary, slice registry, global instance index, human-readable label catalog and source slice drafts. This cut covers first-class v1.0 entities, constitutive CO-Practice and CO-Mechanism relations, stable controlled vocabularies, ten slices and the full indexed instance set (74 COs, 68 Practices, 57 Mechanisms, 57 Artifacts).</rdfs:comment>
+    <dcterms:title>AppSec Core V1 — Application Security Control Objective Ontology</dcterms:title>
+    <dcterms:description>Bounded AppSec Core v1.0 OWL cut generated from the canonical surface contract, entity schema, cross-slice vocabulary, slice registry, global instance index, human-readable label catalog and source slice drafts. This cut covers first-class v1.0 entities, constitutive CO-Practice and CO-Mechanism relations, stable controlled vocabularies, ten slices and the full indexed instance set (74 COs, 68 Practices, 57 Mechanisms, 57 Artifacts).</dcterms:description>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1.1"/>
+    <vann:preferredNamespacePrefix>ac</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://securitybydesign.dev/ontology/appsec-core/v1#</vann:preferredNamespaceUri>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:rights>Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). See LICENSE in source repository.</dcterms:rights>
+    <dcterms:creator>Pedro Farinha (programme-lead, SecurityByDesign-TheoryOfEverything)</dcterms:creator>
+    <dcterms:publisher>SecurityByDesign-TheoryOfEverything programme</dcterms:publisher>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-15</dcterms:created>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-08</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-10</dcterms:modified>
+    <dcterms:bibliographicCitation>Farinha, P. (2026). AppSec Core V1: A Normalization Ontology for Application Security Control Objectives. SecurityByDesign-TheoryOfEverything programme.</dcterms:bibliographicCitation>
+    <foaf:depiction rdf:resource="https://securitybydesign.dev/assets/appsec-core-v1-logo.svg"/>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <dcterms:source>canonical AppSec Core YAML surfaces in sbd-toe-ontology</dcterms:source>
+  </owl:Ontology>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SPC_007">
+    <rdfs:label>Secret Handling And Operational Identity Integrity</rdfs:label>
+    <ac:objective_id>ACO-SPC-007</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_001">
+        <rdfs:label>Secret Leak Prevention In Source And Pipeline</rdfs:label>
+        <ac:practice_id>ACP-SPC-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_002">
+        <rdfs:label>Vault-Backed Secret Storage</rdfs:label>
+        <ac:practice_id>ACP-SPC-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_004">
+        <rdfs:label>Operational Identity Binding And OIDC Use</rdfs:label>
+        <ac:practice_id>ACP-SPC-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_005">
+        <rdfs:label>Secret Isolation Across Technical Surfaces</rdfs:label>
+        <ac:practice_id>ACP-SPC-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_001">
+        <rdfs:label>Secret Management Systems</rdfs:label>
+        <ac:mechanism_id>ACM-SPC-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_002">
+        <rdfs:label>OIDC-Based Operational Identity</rdfs:label>
+        <ac:mechanism_id>ACM-SPC-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_003"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_004">
+        <rdfs:label>Secret Scope And Binding Controls</rdfs:label>
+        <ac:mechanism_id>ACM-SPC-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_001"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_002">
+        <rdfs:label>Identity Binding</rdfs:label>
+        <ac:artifact_id>ACA-SPC-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_003">
+    <rdfs:label>Injection-Resistant Input Handling And Dangerous Pattern Exclusion</rdfs:label>
+    <ac:objective_id>ACO-IVF-003</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07">
+        <rdfs:label>Input validation, safe parsing and controlled failure</rdfs:label>
+        <rdfs:comment>input validation safe parsing and controlled failure</rdfs:comment>
+        <ac:slice_id>ASC-07</ac:slice_id>
+        <ac:scope_key>input_validation_safe_parsing_and_controlled_failure</ac:scope_key>
+        <ac:objective_family_code>ACO-IVF</ac:objective_family_code>
+        <ac:current_control_mode>single_broad_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-input-validation-safe-failure-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Input validation and controlled failure</ac:shortLabel>
+        <ac:diagramLabel>Input validation</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_003">
+        <rdfs:label>Dangerous Pattern Exclusion</rdfs:label>
+        <ac:practice_id>ACP-IVF-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_001">
+        <rdfs:label>Code Review For Input And Error Discipline</rdfs:label>
+        <ac:mechanism_id>ACM-IVF-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_002">
+        <rdfs:label>Static Rulepacks And Security Linters</rdfs:label>
+        <ac:mechanism_id>ACM-IVF-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_001">
+        <rdfs:label>Guideline Catalog</rdfs:label>
+        <ac:artifact_id>ACA-IVF-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_002">
+        <rdfs:label>SAST Report</rdfs:label>
+        <ac:artifact_id>ACA-IVF-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_004">
+        <rdfs:label>Test Report</rdfs:label>
+        <ac:artifact_id>ACA-IVF-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_005">
+        <rdfs:label>Review Checklist</rdfs:label>
+        <ac:artifact_id>ACA-IVF-005</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#validation_method">
+    <rdfs:label>validation method</rdfs:label>
+    <rdfs:comment>Method describing how an EvidencePattern is interpreted (not its execution binding).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_006">
+    <rdfs:label>Controlled Rollout And Blast-Radius Containment</rdfs:label>
+    <ac:objective_id>ACO-RPR-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_006"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_006"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_007"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SPC_001">
+    <rdfs:label>Secret Leak Prevention And Hardcoded-Secret Exclusion</rdfs:label>
+    <ac:objective_id>ACO-SPC-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_001"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_001">
+    <rdfs:label>External Input Contract Validation</rdfs:label>
+    <ac:objective_id>ACO-IVF-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_001">
+        <rdfs:label>Boundary Input Validation</rdfs:label>
+        <ac:practice_id>ACP-IVF-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_003">
+        <rdfs:label>Schema And Contract Validators</rdfs:label>
+        <ac:mechanism_id>ACM-IVF-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_003">
+        <rdfs:label>Validation Evidence</rdfs:label>
+        <ac:artifact_id>ACA-IVF-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_004"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_003">
+    <rdfs:label>Pre-Promotion Security Gates And Staging Assurance</rdfs:label>
+    <ac:objective_id>ACO-RPR-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_005"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_007">
+    <rdfs:label>Input Validation And Safe Failure Integrity</rdfs:label>
+    <ac:objective_id>ACO-IVF-007</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_001"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_002">
+        <rdfs:label>Schema And Allowlist Enforcement</rdfs:label>
+        <ac:practice_id>ACP-IVF-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_003"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_004">
+        <rdfs:label>Pre-Use Data Validation Discipline</rdfs:label>
+        <ac:practice_id>ACP-IVF-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_005">
+        <rdfs:label>Non-Revealing Error Surface Control</rdfs:label>
+        <ac:practice_id>ACP-IVF-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_006">
+        <rdfs:label>Centralized Error Governance</rdfs:label>
+        <ac:practice_id>ACP-IVF-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_007">
+        <rdfs:label>Context-Aware Output Encoding At Rendering Boundaries</rdfs:label>
+        <ac:practice_id>ACP-IVF-007</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_003"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_004">
+        <rdfs:label>Centralized Error Translation And Redaction</rdfs:label>
+        <ac:mechanism_id>ACM-IVF-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_005">
+        <rdfs:label>Context-Aware Encoder Selection And Application</rdfs:label>
+        <ac:mechanism_id>ACM-IVF-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_005"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_006">
+        <rdfs:label>Log Stream</rdfs:label>
+        <ac:artifact_id>ACA-IVF-006</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#objective_expects_artifact">
+    <rdfs:label>objective expects artifact</rdfs:label>
+    <rdfs:comment>Relates a ControlObjective to an Artifact whose presence is expected as evidence of the objective.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#artifact_supports_objective">
+        <rdfs:label>artifact supports objective</rdfs:label>
+        <rdfs:comment>Inverse of ac:objective_expects_artifact; relates a controlobjective to an artifact whose presence is expected as evidence of the objective.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TSV_004">
+    <rdfs:label>Reproducible Security Test Evidence And Build Traceability</rdfs:label>
+    <ac:objective_id>ACO-TSV-004</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04">
+        <rdfs:label>Testing, security validation and empirical assurance</rdfs:label>
+        <rdfs:comment>testing security validation and empirical assurance</rdfs:comment>
+        <ac:slice_id>ASC-04</ac:slice_id>
+        <ac:scope_key>testing_security_validation_and_empirical_assurance</ac:scope_key>
+        <ac:objective_family_code>ACO-TSV</ac:objective_family_code>
+        <ac:current_control_mode>single_broad_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-testing-security-validation-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Security validation and assurance</ac:shortLabel>
+        <ac:diagramLabel>Security validation</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_004">
+        <rdfs:label>Reproducible Test Evidence Management</rdfs:label>
+        <ac:practice_id>ACP-TSV-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_003">
+        <rdfs:label>CI/CD Gate And Release Promotion</rdfs:label>
+        <ac:mechanism_id>ACM-TSV-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_002">
+        <rdfs:label>Test Report</rdfs:label>
+        <ac:artifact_id>ACA-TSV-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_006">
+        <rdfs:label>Pipeline Config</rdfs:label>
+        <ac:artifact_id>ACA-TSV-006</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ATB_001">
+    <rdfs:label>Architecture Baseline And Decision Traceability</rdfs:label>
+    <ac:objective_id>ACO-ATB-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_001">
+        <rdfs:label>Architecture Baseline Definition</rdfs:label>
+        <ac:practice_id>ACP-ATB-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_001"/>
+  </ac:ControlObjective>
+  <ac:PracticeFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamilyIdentityAndTrustControl">
+    <rdfs:label>Identity and Trust Control</rdfs:label>
+  </ac:PracticeFamily>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SLG_007">
+    <rdfs:label>Security Logging And Audit Trail Assurance</rdfs:label>
+    <ac:objective_id>ACO-SLG-007</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10">
+        <rdfs:label>Security event logging, audit trail and centralized logging</rdfs:label>
+        <rdfs:comment>security event logging audit trail and centralized logging</rdfs:comment>
+        <ac:slice_id>ASC-10</ac:slice_id>
+        <ac:scope_key>security_event_logging_audit_trail_and_centralized_logging</ac:scope_key>
+        <ac:objective_family_code>ACO-SLG</ac:objective_family_code>
+        <ac:current_control_mode>single_broad_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-security-event-logging-audit-trail-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Security logging and audit trail</ac:shortLabel>
+        <ac:diagramLabel>Logging and audit</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_001">
+        <rdfs:label>Critical Event Catalog Governance</rdfs:label>
+        <ac:practice_id>ACP-SLG-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_002">
+        <rdfs:label>Structured And Centralized Security Logging</rdfs:label>
+        <ac:practice_id>ACP-SLG-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_003">
+        <rdfs:label>Log Integrity And Protected Access</rdfs:label>
+        <ac:practice_id>ACP-SLG-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_004">
+        <rdfs:label>Log Retention And Lifecycle Governance</rdfs:label>
+        <ac:practice_id>ACP-SLG-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_005">
+        <rdfs:label>Logging Pipeline Health Visibility</rdfs:label>
+        <ac:practice_id>ACP-SLG-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_001">
+        <rdfs:label>Machine-Readable Structured Logging</rdfs:label>
+        <ac:mechanism_id>ACM-SLG-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_002">
+        <rdfs:label>Central Log Ingestion And Normalization</rdfs:label>
+        <ac:mechanism_id>ACM-SLG-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_003">
+        <rdfs:label>Log Integrity And Access Controls</rdfs:label>
+        <ac:mechanism_id>ACM-SLG-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_004">
+        <rdfs:label>Logging Failure Visibility Controls</rdfs:label>
+        <ac:mechanism_id>ACM-SLG-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_005">
+        <rdfs:label>Security Event Catalog And Coverage Verification</rdfs:label>
+        <ac:mechanism_id>ACM-SLG-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_006">
+        <rdfs:label>Log Retention Lifecycle Management Controls</rdfs:label>
+        <ac:mechanism_id>ACM-SLG-006</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_001">
+        <rdfs:label>Log Stream</rdfs:label>
+        <ac:artifact_id>ACA-SLG-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_002">
+        <rdfs:label>Alert Policy</rdfs:label>
+        <ac:artifact_id>ACA-SLG-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ATB_004">
+    <rdfs:label>Technical Segmentation And Sensitive Domain Isolation</rdfs:label>
+    <ac:objective_id>ACO-ATB-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_003">
+        <rdfs:label>Trust-Boundary And Flow Review</rdfs:label>
+        <ac:practice_id>ACP-ATB-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_002">
+        <rdfs:label>Trust-Boundary And DFD Modeling</rdfs:label>
+        <ac:mechanism_id>ACM-ATB-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IAT_007">
+    <rdfs:label>Identity And Access Control Integrity</rdfs:label>
+    <ac:objective_id>ACO-IAT-007</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02">
+        <rdfs:label>Identity, access and session trust</rdfs:label>
+        <rdfs:comment>identity access and session trust</rdfs:comment>
+        <ac:slice_id>ASC-02</ac:slice_id>
+        <ac:scope_key>identity_access_and_session_trust</ac:scope_key>
+        <ac:objective_family_code>ACO-IAT</ac:objective_family_code>
+        <ac:current_control_mode>single_broad_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-identity-access-session-trust-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Identity and access trust</ac:shortLabel>
+        <ac:diagramLabel>Identity trust</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_002">
+        <rdfs:label>Least-Privilege Authorization Governance</rdfs:label>
+        <ac:practice_id>ACP-IAT-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_003">
+        <rdfs:label>Access Review And Timely Revocation</rdfs:label>
+        <ac:practice_id>ACP-IAT-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_005">
+        <rdfs:label>Authenticated API Boundary Enforcement</rdfs:label>
+        <ac:practice_id>ACP-IAT-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_006">
+        <rdfs:label>Access Abuse Monitoring And Audit Trail</rdfs:label>
+        <ac:practice_id>ACP-IAT-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_001">
+        <rdfs:label>Authentication And Federation Protocols</rdfs:label>
+        <ac:mechanism_id>ACM-IAT-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_002">
+        <rdfs:label>Access Policy Enforcement</rdfs:label>
+        <ac:mechanism_id>ACM-IAT-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_003">
+        <rdfs:label>Periodic Review And Access Audit</rdfs:label>
+        <ac:mechanism_id>ACM-IAT-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_005">
+        <rdfs:label>API Gateway Mutual Authentication</rdfs:label>
+        <ac:mechanism_id>ACM-IAT-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_006">
+        <rdfs:label>Structured Logging And Effective Configuration Recording</rdfs:label>
+        <ac:mechanism_id>ACM-IAT-006</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_001">
+        <rdfs:label>Identity Binding</rdfs:label>
+        <ac:artifact_id>ACA-IAT-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_002">
+        <rdfs:label>Access Review</rdfs:label>
+        <ac:artifact_id>ACA-IAT-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_003">
+        <rdfs:label>Log Stream</rdfs:label>
+        <ac:artifact_id>ACA-IAT-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:MechanismFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamilyRolloutRecoveryAndRuntimeRecords">
+    <rdfs:label>Rollout Recovery and Runtime Records</rdfs:label>
+  </ac:MechanismFamily>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#current_control_mode">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Slice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>current control mode</rdfs:label>
+    <rdfs:comment>Slice control-mode descriptor at the current AppSec Core release (e.g. single_broad_control_surface).</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#expected_outcome">
+    <rdfs:label>expected outcome</rdfs:label>
+    <rdfs:comment>Behavioural outcome that a ControlObjective expects to observe when satisfied.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_006">
+    <rdfs:label>Independent Review And Threat Model Lifecycle Governance</rdfs:label>
+    <ac:objective_id>ACO-TMR-006</ac:objective_id>
+    <ac:belongsToSlice>
+      <ac:Slice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05">
+        <rdfs:label>Threat modeling, risk disposition and mitigation traceability</rdfs:label>
+        <rdfs:comment>threat modeling risk disposition and mitigation traceability</rdfs:comment>
+        <ac:slice_id>ASC-05</ac:slice_id>
+        <ac:scope_key>threat_modeling_risk_disposition_and_mitigation_traceability</ac:scope_key>
+        <ac:objective_family_code>ACO-TMR</ac:objective_family_code>
+        <ac:current_control_mode>single_broad_control_surface</ac:current_control_mode>
+        <ac:contract_path>ontology/appsec-core-threat-modeling-risk-disposition-slice-contract.yaml</ac:contract_path>
+        <ac:shortLabel>Threat modeling and risk traceability</ac:shortLabel>
+        <ac:diagramLabel>Threat and risk</ac:diagramLabel>
+      </ac:Slice>
+    </ac:belongsToSlice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_001">
+        <rdfs:label>Threat Model Creation And Triggered Refresh</rdfs:label>
+        <ac:practice_id>ACP-TMR-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_006">
+        <rdfs:label>Independent Review And Threat Model Approval</rdfs:label>
+        <ac:practice_id>ACP-TMR-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_007">
+        <rdfs:label>Threat Model Artifact Governance</rdfs:label>
+        <ac:practice_id>ACP-TMR-007</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_003">
+        <rdfs:label>Threat Model Versioning Controls</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_006">
+        <rdfs:label>Reviewer Accountability And Consistency Gates</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-006</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_001">
+        <rdfs:label>Threat Model</rdfs:label>
+        <ac:artifact_id>ACA-TMR-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_002">
+        <rdfs:label>Risk Acceptance Record</rdfs:label>
+        <ac:artifact_id>ACA-TMR-002</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_004">
+        <rdfs:label>Pipeline Config</rdfs:label>
+        <ac:artifact_id>ACA-TMR-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SCBI_006">
+    <rdfs:label>Artifact Attestation And Provenance Integrity</rdfs:label>
+    <ac:objective_id>ACO-SCBI-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_006">
+        <rdfs:label>Artifact Signature And Provenance Validation</rdfs:label>
+        <ac:practice_id>ACP-SCBI-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_004">
+        <rdfs:label>Artifact Signing And Attestation</rdfs:label>
+        <ac:mechanism_id>ACM-SCBI-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_007">
+        <rdfs:label>Artifact Signature</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-007</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_008">
+        <rdfs:label>Signature Attestation</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-008</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_009">
+        <rdfs:label>Artifact Provenance</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-009</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_002">
+    <rdfs:label>Verified Artifact Promotion</rdfs:label>
+    <ac:objective_id>ACO-RPR-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_004"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_004">
+    <rdfs:label>Validation Before Internal Use And Trust Crossing</rdfs:label>
+    <ac:objective_id>ACO-IVF-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_004"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_005"/>
+  </ac:ControlObjective>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleConfiguration">
+    <rdfs:label>Configuration</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_004">
+    <rdfs:label>End-to-End Deployment Traceability</rdfs:label>
+    <ac:objective_id>ACO-RPR-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_004"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_006"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_008"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ATB_002">
+    <rdfs:label>Trust Boundary Clarity And Protected Data Flows</rdfs:label>
+    <ac:objective_id>ACO-ATB-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_005">
+    <rdfs:label>Controlled Failure And Non-Revealing Client Error Surface</rdfs:label>
+    <ac:objective_id>ACO-IVF-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_006"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#detectableInSurface">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#DetectableSurface"/>
+    <rdfs:label>detectable in surface</rdfs:label>
+    <rdfs:comment>Relates an EvidencePattern to the detectable surface where the evidence is expected to manifest.</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#surfaceOfDetectableEvidencePattern">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#DetectableSurface"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+        <rdfs:label>surface of detectable evidence pattern</rdfs:label>
+        <rdfs:comment>Inverse of ac:detectableInSurface; relates a DetectableSurface to EvidencePattern instances detectable on it.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TSV_003">
+    <rdfs:label>Security Finding Triage And Correction Closure</rdfs:label>
+    <ac:objective_id>ACO-TSV-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_003">
+        <rdfs:label>Findings Triage, SLA And Retest Closure</rdfs:label>
+        <ac:practice_id>ACP-TSV-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_007">
+        <rdfs:label>Human Review Of Security Test Signals</rdfs:label>
+        <ac:practice_id>ACP-TSV-007</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_003"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_004">
+        <rdfs:label>Findings Workflow And Exception Governance</rdfs:label>
+        <ac:mechanism_id>ACM-TSV-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_002"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_003">
+        <rdfs:label>Finding Register</rdfs:label>
+        <ac:artifact_id>ACA-TSV-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_005">
+        <rdfs:label>Approval Record</rdfs:label>
+        <ac:artifact_id>ACA-TSV-005</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IAT_005">
+    <rdfs:label>API Caller Trust And Service Boundary Enforcement</rdfs:label>
+    <ac:objective_id>ACO-IAT-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_003"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_004">
+        <rdfs:label>Policy Report</rdfs:label>
+        <ac:artifact_id>ACA-IAT-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#scope_key">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Slice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>scope key</rdfs:label>
+    <rdfs:comment>Canonical scope label for the slice (e.g. input_output_data_safety_and_controlled_failure).</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#statement">
+    <rdfs:label>statement</rdfs:label>
+    <rdfs:comment>Normative statement of what a ControlObjective requires to hold true in the application security domain.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SLG_001">
+    <rdfs:label>Critical Security Event Coverage And Catalog Discipline</rdfs:label>
+    <ac:objective_id>ACO-SLG-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_001"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TSV_007">
+    <rdfs:label>Security Testing And Empirical Assurance Integrity</rdfs:label>
+    <ac:objective_id>ACO-TSV-007</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_002">
+        <rdfs:label>Governed Static Analysis Execution</rdfs:label>
+        <ac:practice_id>ACP-TSV-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_003"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_004"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_005">
+        <rdfs:label>Staged Dynamic Testing And Gate Enforcement</rdfs:label>
+        <ac:practice_id>ACP-TSV-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_006">
+        <rdfs:label>Specialized Empirical Testing</rdfs:label>
+        <ac:practice_id>ACP-TSV-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_007"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_001">
+        <rdfs:label>Integrated Security Scanners</rdfs:label>
+        <ac:mechanism_id>ACM-TSV-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_002">
+        <rdfs:label>Test Execution Surfaces</rdfs:label>
+        <ac:mechanism_id>ACM-TSV-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_004"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_005">
+        <rdfs:label>Static Analysis Profile Management</rdfs:label>
+        <ac:mechanism_id>ACM-TSV-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_001">
+        <rdfs:label>SAST Report</rdfs:label>
+        <ac:artifact_id>ACA-TSV-001</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_003"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_004">
+        <rdfs:label>Release Gate</rdfs:label>
+        <ac:artifact_id>ACA-TSV-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_005"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#local_mechanism_type">
+    <rdfs:label>local mechanism type</rdfs:label>
+    <rdfs:comment>Slice-local typing for a Mechanism (e.g. rulepack, context_encoder).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SPC_002">
+    <rdfs:label>Protected Secret Storage And Controlled Retrieval</rdfs:label>
+    <ac:objective_id>ACO-SPC-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_002"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_006">
+        <rdfs:label>Secret Configuration Governance</rdfs:label>
+        <ac:practice_id>ACP-SPC-006</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_001"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#evidence_pattern_id">
+    <rdfs:label>evidence pattern ID</rdfs:label>
+    <rdfs:comment>Stable identifier for an EvidencePattern instance.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:DetectableSurface rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#DetectableSurfaceDocumentation">
+    <rdfs:label>Documentation</rdfs:label>
+  </ac:DetectableSurface>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TSV_002">
+    <rdfs:label>Static Analysis Signal Quality And Baseline Governance</rdfs:label>
+    <ac:objective_id>ACO-TSV-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_006"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_008">
+    <rdfs:label>Secure Configuration Baseline Integrity</rdfs:label>
+    <ac:objective_id>ACO-RPR-008</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_008">
+        <rdfs:label>Secure Configuration Baseline Management</rdfs:label>
+        <ac:practice_id>ACP-RPR-008</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_008">
+        <rdfs:label>Configuration Baseline Enforcement Controls</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-008</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_009">
+        <rdfs:label>Security baseline definition</rdfs:label>
+        <ac:artifact_id>ACA-RPR-009</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_010">
+        <rdfs:label>Hardening standard or approved configuration profile</rdfs:label>
+        <ac:artifact_id>ACA-RPR-010</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SLG_004">
+    <rdfs:label>Audit Record Retention And Lifecycle Governance</rdfs:label>
+    <ac:objective_id>ACO-SLG-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_004"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_006"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_001"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ATB_006">
+    <rdfs:label>Architectural Topology Validation And Pattern Conformance</rdfs:label>
+    <ac:objective_id>ACO-ATB-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ATB_007"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ATB_005"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_003">
+        <rdfs:label>Pipeline Config</rdfs:label>
+        <ac:artifact_id>ACA-ATB-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC03"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ATB_004"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#hasMechanismFamily">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamily"/>
+    <rdfs:label>has mechanism family</rdfs:label>
+    <rdfs:comment>Relates a Mechanism to its cross-slice mechanism family qualifier.</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#isMechanismFamilyOf">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamily"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism"/>
+        <rdfs:label>is mechanism family of</rdfs:label>
+        <rdfs:comment>Inverse of ac:hasMechanismFamily; relates a MechanismFamily value to Mechanism instances that have it.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:MechanismFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamilyIntegrityTraceabilityAndRecords">
+    <rdfs:label>Integrity Traceability and Records</rdfs:label>
+  </ac:MechanismFamily>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IAT_006">
+    <rdfs:label>Access Abuse Detection And Auditability</rdfs:label>
+    <ac:objective_id>ACO-IAT-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_006"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_006"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_004"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_005">
+        <rdfs:label>Alert Policy</rdfs:label>
+        <ac:artifact_id>ACA-IAT-005</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SLG_005">
+    <rdfs:label>Centralized Log Ingestion And Source Accountability</rdfs:label>
+    <ac:objective_id>ACO-SLG-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_001"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#verification_posture">
+    <rdfs:label>verification posture</rdfs:label>
+    <rdfs:comment>Assurance stance qualifier indicating how a ControlObjective is verified.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_002">
+    <rdfs:label>Schema, Type And Allowlist Discipline</rdfs:label>
+    <ac:objective_id>ACO-IVF-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_003"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_005">
+    <rdfs:label>Threat-To-Mitigation And Validation Traceability</rdfs:label>
+    <ac:objective_id>ACO-TMR-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_005">
+        <rdfs:label>Threat Traceability Into Requirements And Validation</rdfs:label>
+        <ac:practice_id>ACP-TMR-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_005">
+        <rdfs:label>Threat Mitigation Linkage Controls</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-005</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_001"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_003">
+        <rdfs:label>Validation Evidence</rdfs:label>
+        <ac:artifact_id>ACA-TMR-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_001">
+    <rdfs:label>Release Authorization And Irreversible Change Accountability</rdfs:label>
+    <ac:objective_id>ACO-RPR-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_004">
+    <rdfs:label>Threat Disposition, Risk Acceptance And Ownership</rdfs:label>
+    <ac:objective_id>ACO-TMR-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_004">
+        <rdfs:label>Threat Disposition And Accepted Risk Governance</rdfs:label>
+        <ac:practice_id>ACP-TMR-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_004">
+        <rdfs:label>Explicit Threat Disposition Register</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ITS_001">
+    <rdfs:label>Authenticated Service Interaction And Machine Identity Binding</rdfs:label>
+    <ac:objective_id>ACO-ITS-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_001"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_006">
+    <rdfs:label>Centralized Error Handling And Sensitive Error Logging Hygiene</rdfs:label>
+    <ac:objective_id>ACO-IVF-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_006"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IVF_006"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#hasCanonicalEvidenceKind">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRole"/>
+    <rdfs:label>has canonical evidence kind</rdfs:label>
+    <rdfs:comment>Relates an EvidencePattern to the canonical evidence kind (typically reusing an ArtifactRole value).</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#isCanonicalEvidenceKindOf">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRole"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+        <rdfs:label>is canonical evidence kind of</rdfs:label>
+        <rdfs:comment>Inverse of ac:hasCanonicalEvidenceKind; relates an ArtifactRole value used as canonical evidence kind to the EvidencePattern that adopts it.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IAT_002">
+    <rdfs:label>Authorization Policy Integrity And Least Privilege</rdfs:label>
+    <ac:objective_id>ACO-IAT-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ITS_002">
+    <rdfs:label>Secure Transport And Insecure Protocol Exclusion</rdfs:label>
+    <ac:objective_id>ACO-ITS-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_007">
+    <rdfs:label>Threat Modeling And Risk Governance Integrity</rdfs:label>
+    <ac:objective_id>ACO-TMR-007</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_002">
+        <rdfs:label>DFD And Trust-Boundary Grounding</rdfs:label>
+        <ac:practice_id>ACP-TMR-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_003">
+        <rdfs:label>Structured Threat Analysis Method Selection</rdfs:label>
+        <ac:practice_id>ACP-TMR-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_004"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_005"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_006"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_001">
+        <rdfs:label>Threat Representation Models</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_002">
+        <rdfs:label>Structured Threat Analysis Frameworks</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_004"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_006"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_002"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#expectation">
+    <rdfs:label>expectation</rdfs:label>
+    <rdfs:comment>Expected evidence shape that supports deterministic review of an EvidencePattern.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SPC_005">
+    <rdfs:label>Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces</rdfs:label>
+    <ac:objective_id>ACO-SPC-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_004"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SCBI_005">
+    <rdfs:label>Release Promotion And Human Approval Integrity</rdfs:label>
+    <ac:objective_id>ACO-SCBI-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_005">
+        <rdfs:label>Governed Promotion And Release Approval</rdfs:label>
+        <ac:practice_id>ACP-SCBI-005</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_003">
+        <rdfs:label>Release Promotion Gates</rdfs:label>
+        <ac:mechanism_id>ACM-SCBI-003</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_003">
+        <rdfs:label>SCA Report</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-003</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_005">
+        <rdfs:label>Release Gate</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-005</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_006">
+        <rdfs:label>Approval Record</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-006</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IAT_004">
+    <rdfs:label>Session And Token Trust Boundaries</rdfs:label>
+    <ac:objective_id>ACO-IAT-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_004">
+        <rdfs:label>Bounded Session And Token Management</rdfs:label>
+        <ac:practice_id>ACP-IAT-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_004">
+        <rdfs:label>Short-Lived Token Controls</rdfs:label>
+        <ac:mechanism_id>ACM-IAT-004</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_003"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_008">
+    <rdfs:label>Security Requirements Lifecycle Management</rdfs:label>
+    <ac:objective_id>ACO-TMR-008</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_008">
+        <rdfs:label>Security Requirements Identification And Derivation</rdfs:label>
+        <ac:practice_id>ACP-TMR-008</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_009">
+        <rdfs:label>Requirements Communication And Compliance Monitoring</rdfs:label>
+        <ac:practice_id>ACP-TMR-009</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_007">
+        <rdfs:label>Requirements Registry And Derivation Traceability</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-007</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_008">
+        <rdfs:label>Compliance Monitoring And Regulatory Change Feeds</rdfs:label>
+        <ac:mechanism_id>ACM-TMR-008</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SLG_006">
+    <rdfs:label>Logging Pipeline Health And Silent-Failure Visibility</rdfs:label>
+    <ac:objective_id>ACO-SLG-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_002"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SCBI_003">
+    <rdfs:label>Controlled Dependency And Image Sources</rdfs:label>
+    <ac:objective_id>ACO-SCBI-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_003">
+        <rdfs:label>Approved Source And Registry Governance</rdfs:label>
+        <ac:practice_id>ACP-SCBI-003</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_006">
+        <rdfs:label>Registry Allowlisting And Approved Source Enforcement</rdfs:label>
+        <ac:mechanism_id>ACM-SCBI-006</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_006"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ITS_003">
+    <rdfs:label>Message Integrity And Authorized Peer Validation</rdfs:label>
+    <ac:objective_id>ACO-ITS-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_004"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_005"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IVF_008">
+    <rdfs:label>Context-Aware Output Encoding And Rendering Safety</rdfs:label>
+    <ac:objective_id>ACO-IVF-008</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC07"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IVF_007"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IVF_005"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#artifact_supports_evidence_pattern">
+    <rdfs:label>artifact supports evidence pattern</rdfs:label>
+    <rdfs:comment>Relates an Artifact to an EvidencePattern it supports as evidence.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#evidence_pattern_supported_by_artifact">
+        <rdfs:label>evidence pattern supported by artifact</rdfs:label>
+        <rdfs:comment>Inverse of ac:artifact_supports_evidence_pattern; relates an artifact to an evidencepattern it supports as evidence.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ObjectiveType rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveTypeDetective">
+    <rdfs:label>Detective</rdfs:label>
+  </ac:ObjectiveType>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#name">
+    <rdfs:label>name</rdfs:label>
+    <rdfs:comment>Human-readable name for the AppSec Core entity instance.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleBuildDefinition">
+    <rdfs:label>Build Definition</rdfs:label>
+  </ac:ArtifactRole>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#objective_verified_by_evidence_pattern">
+    <rdfs:label>objective verified by evidence pattern</rdfs:label>
+    <rdfs:comment>Relates a ControlObjective to an EvidencePattern that supports its deterministic review.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#evidence_pattern_verifies_objective">
+        <rdfs:label>evidence pattern verifies objective</rdfs:label>
+        <rdfs:comment>Inverse of ac:objective_verified_by_evidence_pattern; relates a controlobjective to an evidencepattern that supports its deterministic review.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TSV_005">
+    <rdfs:label>Staged Dynamic Validation And Release Gate Discipline</rdfs:label>
+    <ac:objective_id>ACO-TSV-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_005"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_007"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_005"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_006"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#mechanism_id">
+    <rdfs:label>mechanism ID</rdfs:label>
+    <rdfs:comment><![CDATA[Stable identifier for a Mechanism instance (matches ACM-<SLICE>-<NNN> pattern).]]></rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ITS_004">
+    <rdfs:label>Boundary-Mediated External Exposure And Integration Path Control</rdfs:label>
+    <ac:objective_id>ACO-ITS-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_003"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#contract_path">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Slice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>contract path</rdfs:label>
+    <rdfs:comment>Repository-relative path to the slice contract YAML in sbd-toe-ontology.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SCBI_004">
+    <rdfs:label>Build Definition And Execution Integrity</rdfs:label>
+    <ac:objective_id>ACO-SCBI-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_004">
+        <rdfs:label>Pipeline Definition As Reviewed Code</rdfs:label>
+        <ac:practice_id>ACP-SCBI-004</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_001">
+        <rdfs:label>Versioned Pipelines</rdfs:label>
+        <ac:mechanism_id>ACM-SCBI-001</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_004">
+        <rdfs:label>Pipeline Config</rdfs:label>
+        <ac:artifact_id>ACA-SCBI-004</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#hasPracticeFamily">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Practice"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamily"/>
+    <rdfs:label>has practice family</rdfs:label>
+    <rdfs:comment>Relates a Practice to its cross-slice practice family qualifier.</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#isPracticeFamilyOf">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamily"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Practice"/>
+        <rdfs:label>is practice family of</rdfs:label>
+        <rdfs:comment>Inverse of ac:hasPracticeFamily; relates a PracticeFamily value to Practice instances that have it.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#artifact_id">
+    <rdfs:label>artifact ID</rdfs:label>
+    <rdfs:comment><![CDATA[Stable identifier for an Artifact instance (matches ACA-<SLICE>-<NNN> pattern).]]></rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SPC_004">
+    <rdfs:label>Operational Identity Binding And Short-Lived Credentials</rdfs:label>
+    <ac:objective_id>ACO-SPC-004</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_004"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_002"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#slice_id">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Slice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>slice ID</rdfs:label>
+    <rdfs:comment>Stable identifier for an AppSec Core Slice (matches ASC-NN pattern).</rdfs:comment>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IAT_001">
+    <rdfs:label>Authentication Strength And Identity Assurance</rdfs:label>
+    <ac:objective_id>ACO-IAT-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_001">
+        <rdfs:label>Strong Authentication And Step-Up Enforcement</rdfs:label>
+        <ac:practice_id>ACP-IAT-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_003"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_009">
+    <rdfs:label>Security-Relevant Configuration Integrity And Override Control</rdfs:label>
+    <ac:objective_id>ACO-RPR-009</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_009">
+        <rdfs:label>Review Security-Relevant Overrides Before Promotion Or Deployment</rdfs:label>
+        <ac:practice_id>ACP-RPR-009</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_009">
+        <rdfs:label>Gate Or Policy Check For Prohibited Or Unsafe Overrides</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-009</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_010"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_011">
+        <rdfs:label>Security-relevant override or exception record</rdfs:label>
+        <ac:artifact_id>ACA-RPR-011</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <owl:AnnotationProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#diagramLabel">
+    <rdfs:label>diagram label</rdfs:label>
+    <rdfs:comment>Compact label intended for diagrams or tight visual layouts.</rdfs:comment>
+  </owl:AnnotationProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TSV_006">
+    <rdfs:label>Specialized Empirical Testing Depth And Regression Assurance</rdfs:label>
+    <ac:objective_id>ACO-TSV-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_006"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_006"/>
+  </ac:ControlObjective>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#practice_id">
+    <rdfs:label>practice ID</rdfs:label>
+    <rdfs:comment><![CDATA[Stable identifier for a Practice instance (matches ACP-<SLICE>-<NNN> pattern).]]></rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Practice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TSV_001">
+    <rdfs:label>Risk-Proportional Security Testing Strategy</rdfs:label>
+    <ac:objective_id>ACO-TSV-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TSV_001">
+        <rdfs:label>Risk-Based Security Test Planning</rdfs:label>
+        <ac:practice_id>ACP-TSV-001</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC04"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TSV_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TSV_005"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#hasObjectiveType">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveType"/>
+    <rdfs:label>has objective type</rdfs:label>
+    <rdfs:comment>Relates a ControlObjective to its objective type (governance/preventive/detective/corrective).</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#isObjectiveTypeOf">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveType"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+        <rdfs:label>is objective type of</rdfs:label>
+        <rdfs:comment>Inverse of ac:hasObjectiveType; relates an ObjectiveType value to ControlObjective instances that have it.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SLG_002">
+    <rdfs:label>Structured Audit Fields And Machine-Readable Log Shape</rdfs:label>
+    <ac:objective_id>ACO-SLG-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_001"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#objective_realized_by_practice">
+    <rdfs:label>objective realized by practice</rdfs:label>
+    <rdfs:comment>Relates a ControlObjective to a Practice that realises it operationally.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Practice"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#practice_realizes_objective">
+        <rdfs:label>practice realizes objective</rdfs:label>
+        <rdfs:comment>Inverse of ac:objective_realized_by_practice; relates a controlobjective to a practice that realises it operationally.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Practice"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:PracticeFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamilyRolloutRecoveryAndRuntimeRecords">
+    <rdfs:label>Rollout Recovery and Runtime Records</rdfs:label>
+  </ac:PracticeFamily>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_001">
+    <rdfs:label>Threat Modeling Scope And Trigger Discipline</rdfs:label>
+    <ac:objective_id>ACO-TMR-001</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_001"/>
+  </ac:ControlObjective>
+  <ac:ObjectiveKind rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveKindAtomic">
+    <rdfs:label>Atomic</rdfs:label>
+  </ac:ObjectiveKind>
+  <owl:AllDisjointClasses rdf:nodeID="nbd0012bfd9bf466495b21876ebf7bf50b1">
+    <owl:members rdf:parseType="Collection">
+      <rdf:Description rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+      <rdf:Description rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#Practice"/>
+      <rdf:Description rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism"/>
+      <rdf:Description rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+      <rdf:Description rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#objective_implemented_by_mechanism">
+    <rdfs:label>objective implemented by mechanism</rdfs:label>
+    <rdfs:comment>Relates a ControlObjective to a Mechanism that implements it technically.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#mechanism_implements_objective">
+        <rdfs:label>mechanism implements objective</rdfs:label>
+        <rdfs:comment>Inverse of ac:objective_implemented_by_mechanism; relates a controlobjective to a mechanism that implements it technically.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SCBI_007">
+    <rdfs:label>Container Image Supply Integrity</rdfs:label>
+    <ac:objective_id>ACO-SCBI-007</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_003"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_006"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_007">
+        <rdfs:label>Trusted Container Image Supply</rdfs:label>
+        <ac:practice_id>ACP-SCBI-007</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_002">
+        <rdfs:label>Automated Security Scanners</rdfs:label>
+        <ac:mechanism_id>ACM-SCBI-002</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_004"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_006"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_007"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_009"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_010"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_RPR_010">
+    <rdfs:label>Baseline Review, Exception Visibility And Change Discipline</rdfs:label>
+    <ac:objective_id>ACO-RPR-010</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_009"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_RPR_010">
+        <rdfs:label>Record And Periodically Review Exceptions Against The Intended Baseline</rdfs:label>
+        <ac:practice_id>ACP-RPR-010</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_009"/>
+    <ac:objective_implemented_by_mechanism>
+      <ac:Mechanism rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_RPR_010">
+        <rdfs:label>Change Review Control For Security-Relevant Baseline Deviations</rdfs:label>
+        <ac:mechanism_id>ACM-RPR-010</ac:mechanism_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Mechanism>
+    </ac:objective_implemented_by_mechanism>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_011"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_RPR_012">
+        <rdfs:label>Baseline review evidence package</rdfs:label>
+        <ac:artifact_id>ACA-RPR-012</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC09"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_ITS_005">
+    <rdfs:label>Integration Security Review And Contract Assurance</rdfs:label>
+    <ac:objective_id>ACO-ITS-005</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC08"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_001"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_ITS_005"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_ITS_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_ITS_004"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_002">
+    <rdfs:label>Architecture-Grounded Threat Representation</rdfs:label>
+    <ac:objective_id>ACO-TMR-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_002"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_001"/>
+  </ac:ControlObjective>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SCBI_002">
+    <rdfs:label>Dependency Risk Evaluation And Policy Gating</rdfs:label>
+    <ac:objective_id>ACO-SCBI-002</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+    <ac:objective_realized_by_practice>
+      <ac:Practice rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SCBI_002">
+        <rdfs:label>Automated Dependency And Image Risk Gating</rdfs:label>
+        <ac:practice_id>ACP-SCBI-002</ac:practice_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC01"/>
+      </ac:Practice>
+    </ac:objective_realized_by_practice>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SCBI_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SCBI_004"/>
+  </ac:ControlObjective>
+  <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#hasCanonicalArtifactRole">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+    <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRole"/>
+    <rdfs:label>has canonical artifact role</rdfs:label>
+    <rdfs:comment>Relates an Artifact to its canonical role in the AppSec Core taxonomy.</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#isCanonicalArtifactRoleOf">
+        <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRole"/>
+        <rdfs:range rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact"/>
+        <rdfs:label>is canonical artifact role of</rdfs:label>
+        <rdfs:comment>Inverse of ac:hasCanonicalArtifactRole; relates an ArtifactRole value to Artifact instances that have it.</rdfs:comment>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#objective_id">
+    <rdfs:label>objective ID</rdfs:label>
+    <rdfs:comment><![CDATA[Stable identifier for a ControlObjective instance (matches ACO-<SLICE>-<NNN> pattern).]]></rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SLG_003">
+    <rdfs:label>Log Integrity Protection And Access Discipline</rdfs:label>
+    <ac:objective_id>ACO-SLG-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC10"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SLG_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SLG_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SLG_001"/>
+  </ac:ControlObjective>
+  <ac:PracticeFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamilyIntegrityTraceabilityAndRecords">
+    <rdfs:label>Integrity Traceability and Records</rdfs:label>
+  </ac:PracticeFamily>
+  <ac:ObjectiveType rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveTypeCorrective">
+    <rdfs:label>Corrective</rdfs:label>
+  </ac:ObjectiveType>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_SPC_006">
+    <rdfs:label>Secret Change Auditability And Governance</rdfs:label>
+    <ac:objective_id>ACO-SPC-006</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC06"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_003"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_SPC_006"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_001"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_SPC_004"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_001"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_SPC_002"/>
+  </ac:ControlObjective>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleApprovalRecord">
+    <rdfs:label>Approval Record</rdfs:label>
+  </ac:ArtifactRole>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#domain_key">
+    <rdfs:label>domain key</rdfs:label>
+    <rdfs:comment>Slice-local domain key categorising a ControlObjective.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleAttestation">
+    <rdfs:label>Attestation</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:MechanismFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamilyGovernanceAndReview">
+    <rdfs:label>Governance and Review</rdfs:label>
+  </ac:MechanismFamily>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleGateRecord">
+    <rdfs:label>Gate Record</rdfs:label>
+  </ac:ArtifactRole>
+  <owl:DatatypeProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#objective_family_code">
+    <rdfs:domain rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#Slice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>objective family code</rdfs:label>
+    <rdfs:comment>Family code shared by all ControlObjective instances inside the slice (e.g. ACO-IVF).</rdfs:comment>
+  </owl:DatatypeProperty>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleReviewRecord">
+    <rdfs:label>Review Record</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_TMR_003">
+    <rdfs:label>Structured Threat Analysis Method Discipline</rdfs:label>
+    <ac:objective_id>ACO-TMR-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC05"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_TMR_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_TMR_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_TMR_001"/>
+  </ac:ControlObjective>
+  <ac:ObjectiveKind rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveKindComposite">
+    <rdfs:label>Composite</rdfs:label>
+  </ac:ObjectiveKind>
+  <ac:DetectableSurface rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#DetectableSurfaceConfig">
+    <rdfs:label>Config</rdfs:label>
+  </ac:DetectableSurface>
+  <ac:ControlObjective rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACO_IAT_003">
+    <rdfs:label>Access Revocation And Privilege Lifecycle Integrity</rdfs:label>
+    <ac:objective_id>ACO-IAT-003</ac:objective_id>
+    <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+    <ac:objective_realized_by_practice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACP_IAT_003"/>
+    <ac:objective_implemented_by_mechanism rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACM_IAT_003"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_002"/>
+    <ac:objective_expects_artifact rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_003"/>
+    <ac:objective_expects_artifact>
+      <ac:Artifact rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ACA_IAT_006">
+        <rdfs:label>Approval Record</rdfs:label>
+        <ac:artifact_id>ACA-IAT-006</ac:artifact_id>
+        <ac:belongsToSlice rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#SliceASC02"/>
+      </ac:Artifact>
+    </ac:objective_expects_artifact>
+  </ac:ControlObjective>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleModel">
+    <rdfs:label>Model</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:PracticeFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamilyPolicyAndGateEnforcement">
+    <rdfs:label>Policy and Gate Enforcement</rdfs:label>
+  </ac:PracticeFamily>
+  <ac:MechanismFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamilyPolicyAndGateEnforcement">
+    <rdfs:label>Policy and Gate Enforcement</rdfs:label>
+  </ac:MechanismFamily>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleGovernanceRecord">
+    <rdfs:label>Governance Record</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleReleaseArtifact">
+    <rdfs:label>Release Artifact</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleValidationOutput">
+    <rdfs:label>Validation Output</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleEvidencePackage">
+    <rdfs:label>Evidence Package</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:DetectableSurface rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#DetectableSurfaceCiCd">
+    <rdfs:label>CI/CD</rdfs:label>
+  </ac:DetectableSurface>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleReport">
+    <rdfs:label>Report</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:PracticeFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamilyValidationAndAnalysis">
+    <rdfs:label>Validation and Analysis</rdfs:label>
+  </ac:PracticeFamily>
+  <owl:AnnotationProperty rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#shortLabel">
+    <rdfs:label>short label</rdfs:label>
+    <rdfs:comment>Human-friendly short label for compact views.</rdfs:comment>
+  </owl:AnnotationProperty>
+  <ac:MechanismFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamilyIdentityAndTrustControl">
+    <rdfs:label>Identity and Trust Control</rdfs:label>
+  </ac:MechanismFamily>
+  <ac:MechanismFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamilyValidationAndAnalysis">
+    <rdfs:label>Validation and Analysis</rdfs:label>
+  </ac:MechanismFamily>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleOperationalRecord">
+    <rdfs:label>Operational Record</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:PracticeFamily rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamilyGovernanceAndReview">
+    <rdfs:label>Governance and Review</rdfs:label>
+  </ac:PracticeFamily>
+  <ac:ArtifactRole rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRoleInventory">
+    <rdfs:label>Inventory</rdfs:label>
+  </ac:ArtifactRole>
+  <ac:DetectableSurface rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#DetectableSurfaceLogs">
+    <rdfs:label>Logs</rdfs:label>
+  </ac:DetectableSurface>
+  <ac:ObjectiveType rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveTypePreventive">
+    <rdfs:label>Preventive</rdfs:label>
+  </ac:ObjectiveType>
+  <ac:ObjectiveType rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveTypeGovernance">
+    <rdfs:label>Governance</rdfs:label>
+  </ac:ObjectiveType>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#Artifact">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+    <rdfs:label>Artifact</rdfs:label>
+    <rdfs:comment>Control-relevant or evidence-bearing output used for review, traceability and assurance against AppSec Core ControlObjective instances.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#MechanismFamily">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlledVocabularyValue"/>
+    <rdfs:label>Mechanism family</rdfs:label>
+    <rdfs:comment>Cross-slice family qualifiers for Mechanism instances (e.g. policy_and_gate_enforcement, validation_and_analysis).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ControlledVocabularyValue">
+    <rdfs:label>Controlled vocabulary value</rdfs:label>
+    <rdfs:comment>Superclass for stable controlled vocabulary values explicitly modeled in the bounded formal cut.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveKind">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlledVocabularyValue"/>
+    <rdfs:label>Objective kind</rdfs:label>
+    <rdfs:comment>Enumeration of ControlObjective kinds (atomic or composite).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#DetectableSurface">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlledVocabularyValue"/>
+    <rdfs:label>Detectable surface</rdfs:label>
+    <rdfs:comment>Operational surface where an EvidencePattern is expected to be detectable.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity">
+    <rdfs:label>AppSec Core entity</rdfs:label>
+    <rdfs:comment>Superclass for first-class AppSec Core v0 entities in the bounded formal cut.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#PracticeFamily">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlledVocabularyValue"/>
+    <rdfs:label>Practice family</rdfs:label>
+    <rdfs:comment>Cross-slice family qualifiers for Practice instances (e.g. governance_and_review, validation_and_analysis).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ArtifactRole">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlledVocabularyValue"/>
+    <rdfs:label>Artifact role</rdfs:label>
+    <rdfs:comment>Cross-slice canonical roles for Artifact instances (e.g. configuration, governance_record, report).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#EvidencePattern">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+    <rdfs:label>Evidence pattern</rdfs:label>
+    <rdfs:comment>Expected evidence shape used for deterministic review support of AppSec Core ControlObjective satisfaction; declarative first-class class with no populated instances in the bounded V1 cut (target_node_count=0 at V1 release).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ControlObjective">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+    <rdfs:label>Control objective</rdfs:label>
+    <rdfs:comment>Reusable AppSec domain constraint or assurance goal that expresses what must hold true in the application security domain, without carrying SbD-ToE manual chapter or requirement structure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#Mechanism">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+    <rdfs:label>Mechanism</rdfs:label>
+    <rdfs:comment>Concrete technical or enforceable means used to implement Practice instances or to directly realise ControlObjective instances.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#ObjectiveType">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#ControlledVocabularyValue"/>
+    <rdfs:label>Objective type</rdfs:label>
+    <rdfs:comment>Enumeration of ControlObjective types (governance/preventive/detective/corrective).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#Slice">
+    <rdfs:label>Slice</rdfs:label>
+    <rdfs:comment>Methodological slice in the AppSec Core v0 reference set.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://securitybydesign.dev/ontology/appsec-core/v1#Practice">
+    <rdfs:subClassOf rdf:resource="https://securitybydesign.dev/ontology/appsec-core/v1#AppSecCoreEntity"/>
+    <rdfs:label>Practice</rdfs:label>
+    <rdfs:comment>Reusable human or process discipline that should exist independently of a specific tool or runtime product choice, and that helps realise one or more ControlObjective instances.</rdfs:comment>
+  </owl:Class>
+</rdf:RDF>

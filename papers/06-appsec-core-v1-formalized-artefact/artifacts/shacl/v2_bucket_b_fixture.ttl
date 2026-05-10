@@ -1,0 +1,73 @@
+@prefix ac:  <https://securitybydesign.dev/ontology/appsec-core/v1#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:  <https://example.test/v2-fixture/> .
+
+# 3 well-formed positive claims (one per level).
+ex:claim-001 a ac:Claim ;
+    ac:claim_id "claim-001" ; ac:item_ref ex:item-A ;
+    ac:lifted_row_ref "lifted-001" ;
+    ac:target_core_entity ac:ACO_IVF_002 ;
+    ac:level "CO" ; ac:slice ac:SliceASC07 ;
+    ac:similarity_score "0.91"^^xsd:decimal ;
+    ac:disambiguation_margin "0.18"^^xsd:decimal .
+
+ex:claim-002 a ac:Claim ;
+    ac:claim_id "claim-002" ; ac:item_ref ex:item-B ;
+    ac:lifted_row_ref "lifted-002" ;
+    ac:target_core_entity ac:ACP_IVF_002 ;
+    ac:level "Practice" ; ac:slice ac:SliceASC07 ;
+    ac:similarity_score "0.83"^^xsd:decimal ;
+    ac:disambiguation_margin "0.12"^^xsd:decimal .
+
+ex:claim-003 a ac:Claim ;
+    ac:claim_id "claim-003" ; ac:item_ref ex:item-C ;
+    ac:lifted_row_ref "lifted-003" ;
+    ac:target_core_entity ac:ACM_IVF_002 ;
+    ac:level "Mechanism" ; ac:slice ac:SliceASC07 ;
+    ac:similarity_score "0.77"^^xsd:decimal ;
+    ac:disambiguation_margin "0.10"^^xsd:decimal .
+
+# 5 deliberately broken claims, one violation family each.
+# A — M1' slice mismatch (CO is in ASC07, claim says ASC02)
+ex:claim-bad-A a ac:Claim ;
+    ac:claim_id "claim-bad-A" ; ac:item_ref ex:item-A ;
+    ac:lifted_row_ref "lifted-bad-A" ;
+    ac:target_core_entity ac:ACO_IVF_002 ; ac:level "CO" ;
+    ac:slice ac:SliceASC02 ;
+    ac:similarity_score "0.91"^^xsd:decimal ;
+    ac:disambiguation_margin "0.18"^^xsd:decimal .
+
+# B — M3 orphan Practice (Practice ASC07; claim says ASC03)
+ex:claim-bad-B a ac:Claim ;
+    ac:claim_id "claim-bad-B" ; ac:item_ref ex:item-B ;
+    ac:lifted_row_ref "lifted-bad-B" ;
+    ac:target_core_entity ac:ACP_IVF_002 ; ac:level "Practice" ;
+    ac:slice ac:SliceASC03 ;
+    ac:similarity_score "0.83"^^xsd:decimal ;
+    ac:disambiguation_margin "0.12"^^xsd:decimal .
+
+# C — M4 orphan Mechanism
+ex:claim-bad-C a ac:Claim ;
+    ac:claim_id "claim-bad-C" ; ac:item_ref ex:item-C ;
+    ac:lifted_row_ref "lifted-bad-C" ;
+    ac:target_core_entity ac:ACM_IVF_002 ; ac:level "Mechanism" ;
+    ac:slice ac:SliceASC03 ;
+    ac:similarity_score "0.77"^^xsd:decimal ;
+    ac:disambiguation_margin "0.10"^^xsd:decimal .
+
+# D — referential integrity (broken IRI scheme)
+ex:claim-bad-D a ac:Claim ;
+    ac:claim_id "claim-bad-D" ; ac:item_ref ex:item-D ;
+    ac:lifted_row_ref "lifted-bad-D" ;
+    ac:target_core_entity <https://securitybydesign.dev/ontology/appsec-core/v1#co-ACO-IVF-002> ;
+    ac:level "CO" ; ac:slice ac:SliceASC07 ;
+    ac:similarity_score "0.91"^^xsd:decimal ;
+    ac:disambiguation_margin "0.18"^^xsd:decimal .
+
+# E — cardinality (missing similarity_score)
+ex:claim-bad-E a ac:Claim ;
+    ac:claim_id "claim-bad-E" ; ac:item_ref ex:item-E ;
+    ac:lifted_row_ref "lifted-bad-E" ;
+    ac:target_core_entity ac:ACO_IVF_002 ; ac:level "CO" ;
+    ac:slice ac:SliceASC07 ;
+    ac:disambiguation_margin "0.18"^^xsd:decimal .

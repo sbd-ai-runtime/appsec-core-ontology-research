@@ -1,0 +1,196 @@
+meta:
+  name: AppSec Core Slice Mapping Draft
+  version: '0.1'
+  status: working_draft
+  scope: input_validation_safe_parsing_and_controlled_failure
+  description: >
+    Draft mapping layer between current SbD-ToE manual controls and requirements
+    and the normalized objectives proposed in the input-validation/safe-failure
+    AppSec core slice draft.
+  source_manual_ontology: ontology/sbdtoe-ontology.yaml
+  target_core_draft: ontology/appsec-core-input-validation-safe-failure-draft.yaml
+  source_notes:
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-7-candidate-evaluation.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-input-validation-safe-failure.md
+mapping_conventions:
+  primary:
+    meaning: The manual object is mainly explained by this normalized objective
+  secondary:
+    meaning: The manual object materially contributes to this objective but is not best treated as its main anchor
+  composite_target_usage:
+    meaning: Composite objectives may be primary landing zones for broad manual control clusters, but requirement-level mappings should prefer atomic objectives when a direct semantic fit exists
+  many_to_one_allowed: true
+  one_to_many_allowed: true
+  slice_boundary_warning:
+    meaning: The slice models input handling and safe failure semantics, not the full secure-development chapter and not runtime observability
+manual_control_mappings:
+  - source_control_id: CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    source_control_name: Desenvolvimento seguro e validacao de codigo
+    target_objectives:
+      - objective_id: ACO-IVF-007
+        strength: primary
+        rationale: The current secure-development control is broad enough to require a composite landing zone at control level for this narrower slice
+      - objective_id: ACO-IVF-001
+        strength: secondary
+        rationale: Entry-point input validation is one direct sub-surface of the broader control
+      - objective_id: ACO-IVF-002
+        strength: secondary
+        rationale: Schema, type and allowlist discipline are part of the same control envelope
+      - objective_id: ACO-IVF-003
+        strength: secondary
+        rationale: Dangerous-pattern exclusion and injection-resistant handling are one of the clearest meanings of the current control
+      - objective_id: ACO-IVF-004
+        strength: secondary
+        rationale: Validation before internal use belongs inside the same code-validation cluster
+      - objective_id: ACO-IVF-005
+        strength: secondary
+        rationale: Safe validation failure and non-revealing client errors are a major downstream consequence of secure input handling
+      - objective_id: ACO-IVF-006
+        strength: secondary
+        rationale: Centralized error governance and redacted error logging remain part of the same broader code-validation surface
+manual_requirement_mappings:
+  - source_requirement_id: VAL-001
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Validacao geral de entradas externas
+    target_objectives:
+      - objective_id: ACO-IVF-001
+        strength: primary
+        rationale: This is the strongest direct anchor for entry-point input contract validation
+  - source_requirement_id: API-003
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Validacao de input em APIs
+    target_objectives:
+      - objective_id: ACO-IVF-001
+        strength: primary
+        rationale: API malformed-input rejection is a direct boundary specialization of external input contract validation
+  - source_requirement_id: INT-001
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Validacao de mensagens entre sistemas
+    target_objectives:
+      - objective_id: ACO-IVF-001
+        strength: primary
+        rationale: This is the clearest integration-facing anchor for rejecting malformed or blindly processed messages
+      - objective_id: ACO-IVF-004
+        strength: secondary
+        rationale: Message validation also materially reinforces the rule that data must not become trusted merely by crossing one boundary
+  - source_requirement_id: VAL-002
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Uso de whitelists em vez de blacklists
+    target_objectives:
+      - objective_id: ACO-IVF-002
+        strength: primary
+        rationale: Explicit allowlist discipline is the direct semantic center of this requirement
+  - source_requirement_id: VAL-003
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Validadores de esquema JSON XML schema
+    target_objectives:
+      - objective_id: ACO-IVF-002
+        strength: primary
+        rationale: Structured schema and type enforcement are the main meaning of this requirement
+  - source_requirement_id: VAL-004
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Sanitizacao contra injecoes
+    target_objectives:
+      - objective_id: ACO-IVF-003
+        strength: primary
+        rationale: Injection resistance and dangerous-pattern exclusion are the direct semantic center here
+  - source_requirement_id: VAL-005
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Validacao antes do uso interno
+    target_objectives:
+      - objective_id: ACO-IVF-004
+        strength: primary
+        rationale: This requirement is directly about not trusting data before business use or downstream crossing
+  - source_requirement_id: VAL-006
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Mensagens de erro seguras na validacao
+    target_objectives:
+      - objective_id: ACO-IVF-005
+        strength: primary
+        rationale: This is the strongest direct anchor for safe validation failure and non-revealing client errors
+  - source_requirement_id: VAL-007
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Testes automaticos contra entradas maliciosas
+    target_objectives:
+      - objective_id: ACO-IVF-003
+        strength: primary
+        rationale: Automated adversarial inputs most directly validate injection resistance and dangerous-pattern exclusion
+      - objective_id: ACO-IVF-005
+        strength: secondary
+        rationale: The same test surface also materially checks whether failures stay controlled and non-revealing
+  - source_requirement_id: ERR-001
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Erros nao expoem dados sensiveis
+    target_objectives:
+      - objective_id: ACO-IVF-005
+        strength: primary
+        rationale: This is a direct anchor for non-revealing client-facing failure behavior
+  - source_requirement_id: ERR-002
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Mensagens genericas no cliente
+    target_objectives:
+      - objective_id: ACO-IVF-005
+        strength: primary
+        rationale: Generic client-side error behavior belongs directly to controlled failure semantics
+  - source_requirement_id: ERR-003
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Nao revelar existencia de recursos
+    target_objectives:
+      - objective_id: ACO-IVF-005
+        strength: primary
+        rationale: Enumeration resistance is a direct safe-failure and non-revealing-error concern
+  - source_requirement_id: ERR-004
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Mensagens localizadas e seguras
+    target_objectives:
+      - objective_id: ACO-IVF-005
+        strength: primary
+        rationale: Localization safety remains part of the same safe client error surface
+  - source_requirement_id: ERR-005
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Gestao padronizada e centralizada
+    target_objectives:
+      - objective_id: ACO-IVF-006
+        strength: primary
+        rationale: Centralized error handling is the clearest direct anchor for this objective
+  - source_requirement_id: ERR-006
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Testes automaticos para erros excessivos
+    target_objectives:
+      - objective_id: ACO-IVF-006
+        strength: primary
+        rationale: This requirement most directly reinforces governed error-handling discipline
+      - objective_id: ACO-IVF-005
+        strength: secondary
+        rationale: The same tests also check whether failure remains safe and non-revealing
+  - source_requirement_id: ERR-007
+    source_bundle: 02-requisitos-seguranca
+    source_requirement_name: Logs de erro com contexto pseudonimizado
+    target_objectives:
+      - objective_id: ACO-IVF-006
+        strength: primary
+        rationale: Pseudonymized error logging is the clearest direct anchor for sensitive-error logging hygiene
+bridge_only_observations:
+  - source_reference: INT-005
+    note: >
+      Message signature and integrity verification are important adjacent
+      integration semantics, but they belong to a broader integration-trust
+      surface than this input-validation slice.
+  - source_reference: INT-006
+    note: >
+      Origin and destination authorization remain a useful adjacency, but they
+      should not redefine this slice into a broader integration-auth model.
+  - source_reference: CTRL-testing-testes-de-seguranca-baseados-em-risco-55dcb62d34
+    note: >
+      Security testing is a strong consumer of this slice and materially helps
+      validate it, but testing governance is not the semantic center here.
+  - source_reference: CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70
+    note: >
+      Error logging touches operational monitoring, but runtime observability
+      remains a downstream consumer rather than the primary center of this
+      slice.
+open_questions:
+  - Should `VAL-007` remain mainly inside injection-resistance semantics, or later split adversarial-input regression into a reusable cross-slice validation capability?
+  - Should `ACO-IVF-004` remain narrowly about pre-use validation, or later absorb stronger downstream contract-check semantics once integration trust surfaces are modeled more explicitly?
+  - Which future artifact should become the primary anchor for schema definitions and centralized error-handler policy once the artifact taxonomy expands?
+  - Should pseudonymized error logs remain inside this slice, or later become partly shared with a future observability surface without collapsing into `V3`?

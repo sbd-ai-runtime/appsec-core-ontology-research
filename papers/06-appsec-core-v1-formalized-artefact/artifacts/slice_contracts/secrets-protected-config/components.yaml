@@ -1,0 +1,155 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: secret_handling_protected_configuration_and_operational_identities
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for secret handling, protected
+    configuration and operational identities.
+  target_core_draft: ontology/appsec-core-secrets-protected-config-draft.yaml
+  target_mapping_draft: ontology/appsec-core-secrets-protected-config-mapping-draft.yaml
+normalized_practices:
+  ACP-SPC-001:
+    name: Secret Leak Prevention In Source And Pipeline
+    practice_family: validation_and_analysis
+    local_practice_type: discovery_prevention
+    supports_objectives:
+      - ACO-SPC-001
+      - ACO-SPC-007
+    description: Prevent secrets from entering source code, repositories and promotion paths through scanning and explicit anti-hardcoding discipline
+  ACP-SPC-002:
+    name: Vault-Backed Secret Storage
+    practice_family: identity_and_trust_control
+    local_practice_type: storage
+    supports_objectives:
+      - ACO-SPC-002
+      - ACO-SPC-007
+    description: Keep secret material in protected secret-management systems rather than in ordinary configuration or embedded code
+  ACP-SPC-003:
+    name: Secret Rotation And Renewal Discipline
+    practice_family: identity_and_trust_control
+    local_practice_type: rotation
+    supports_objectives:
+      - ACO-SPC-003
+      - ACO-SPC-006
+    description: Rotate, expire and renew secret material on defined cadence or trigger with attributable governance
+  ACP-SPC-004:
+    name: Operational Identity Binding And OIDC Use
+    practice_family: identity_and_trust_control
+    local_practice_type: identity_binding
+    supports_objectives:
+      - ACO-SPC-004
+      - ACO-SPC-005
+      - ACO-SPC-007
+    description: Bind pipeline, workload and deploy actions to explicit operational identities and prefer federated or short-lived credentials where possible
+  ACP-SPC-005:
+    name: Secret Isolation Across Technical Surfaces
+    practice_family: identity_and_trust_control
+    local_practice_type: isolation
+    supports_objectives:
+      - ACO-SPC-005
+      - ACO-SPC-007
+    description: Separate secret use by environment, workload and execution surface so compromise does not propagate broadly
+  ACP-SPC-006:
+    name: Secret Configuration Governance
+    practice_family: governance_and_review
+    local_practice_type: governance
+    supports_objectives:
+      - ACO-SPC-002
+      - ACO-SPC-006
+    description: Keep secret-bearing configuration reviewable, permissioned and attributable through controlled governance
+normalized_mechanisms:
+  ACM-SPC-001:
+    name: Secret Management Systems
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: vault
+    source_semantic_ids:
+      - sem:mechanism:gestao-de-segredos
+    supports_practices:
+      - ACP-SPC-001
+      - ACP-SPC-002
+      - ACP-SPC-006
+  ACM-SPC-002:
+    name: OIDC-Based Operational Identity
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: workload_identity
+    source_semantic_ids:
+      - sem:mechanism:oidc
+      - sem:mechanism:configuracao-de-oidc-e-ttl-curto-para-segredos
+    supports_practices:
+      - ACP-SPC-004
+      - ACP-SPC-005
+  ACM-SPC-003:
+    name: Short-Lived Credential Controls
+    mechanism_family: identity_and_trust_control
+    local_mechanism_type: short_lived_credential
+    source_semantic_ids:
+      - sem:mechanism:tokens-de-curta-duracao
+    supports_practices:
+      - ACP-SPC-003
+      - ACP-SPC-004
+  ACM-SPC-004:
+    name: Secret Scope And Binding Controls
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: policy_control
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-SPC-004
+      - ACP-SPC-005
+      - ACP-SPC-006
+    note: >
+      The repo has strong requirement and practice support for scoped secret use
+      and operational identity binding, but this still exceeds the current
+      semantic mechanism catalog.
+normalized_artifacts:
+  ACA-SPC-001:
+    source_artifact_id: ART-secret-config-a2bbf228fe
+    canonical_role: configuration
+    local_role: configuration
+    supports_objectives:
+      - ACO-SPC-001
+      - ACO-SPC-002
+      - ACO-SPC-003
+      - ACO-SPC-004
+      - ACO-SPC-005
+      - ACO-SPC-006
+      - ACO-SPC-007
+  ACA-SPC-002:
+    source_artifact_id: ART-identity-binding-f96a2a528c
+    canonical_role: binding_record
+    local_role: binding_record
+    supports_objectives:
+      - ACO-SPC-004
+      - ACO-SPC-005
+      - ACO-SPC-006
+      - ACO-SPC-007
+current_manual_practice_mappings:
+  - source_practice_id: 07-cicd-seguro:gestao-de-segredos
+    target_practice_id: ACP-SPC-002
+  - source_practice_id: 08-iac-infraestrutura:gestao-de-segredos-e-identidades-para-iac
+    target_practice_id: ACP-SPC-004
+  - source_practice_id: 09-containers-imagens:gestao-de-segredos-fora-da-imagem-com-oidc-e-workload-identity
+    target_practice_id: ACP-SPC-004
+  - source_practice_id: 11-deploy-seguro:gestao-segura-de-segredos-no-deploy
+    target_practice_id: ACP-SPC-005
+notes:
+  cross_chapter_surface:
+    note: >
+      This slice is more cross-chapter than most previous slices. That is
+      acceptable here because the current broad control and the current
+      practices still converge on one coherent technical surface.
+  artifact_surface_limit:
+    note: >
+      The current artifact surface is intentionally small. Secret scanning,
+      rotation and access-audit outputs remain open gaps rather than being
+      invented in this draft.
+  crypto_boundary:
+    note: >
+      This slice is not a full cryptography slice. Broader encryption and
+      primitive-selection semantics stay outside the center here.
+open_questions:
+  - Should `ACP-SPC-006` remain separate from vault-backed storage, or later collapse into one broader secret-governance practice?
+  - Should `ACM-SPC-004` wait for stronger semantic grounding before being treated as stable?
+  - Which future artifact should become the primary anchor for secret-scanning evidence?
+  - Which future artifact should become the primary anchor for rotation execution and access audit trails?

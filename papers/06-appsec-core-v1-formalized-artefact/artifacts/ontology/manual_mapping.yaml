@@ -1,0 +1,160 @@
+meta:
+  name: AppSec Core Manual Mapping v0 Draft
+  version: '0.1'
+  status: working_draft
+  maturity: consolidation_entry
+  description: >
+    Shared draft for the SbD-ToE manual-to-core projection layer after ten
+    AppSec Core slices. This file consolidates the mapping conventions already
+    repeated across the slice mapping drafts without replacing the slice-local
+    mappings themselves.
+  related_artifacts:
+    core_v0_draft: ontology/appsec-core-v0-draft.yaml
+    source_manual_ontology: ontology/sbdtoe-ontology.yaml
+    provisional_conclusion_note: docs/project/working-notes/2026-04-05-appsec-core-provisional-conclusion.md
+    validated_adjunct_anchors:
+      - ontology/appsec-core-secure-configuration-baseline-integrity-draft.yaml
+      - ontology/appsec-core-security-requirements-governance-draft.yaml
+    slice_mapping_drafts:
+      - ontology/appsec-core-supply-chain-build-integrity-mapping-draft.yaml
+      - ontology/appsec-core-identity-access-session-trust-mapping-draft.yaml
+      - ontology/appsec-core-architecture-trust-boundaries-mapping-draft.yaml
+      - ontology/appsec-core-testing-security-validation-mapping-draft.yaml
+      - ontology/appsec-core-threat-modeling-risk-disposition-mapping-draft.yaml
+      - ontology/appsec-core-secrets-protected-config-mapping-draft.yaml
+      - ontology/appsec-core-input-validation-safe-failure-mapping-draft.yaml
+      - ontology/appsec-core-integration-trust-service-security-mapping-draft.yaml
+      - ontology/appsec-core-release-promotion-controlled-rollout-mapping-draft.yaml
+      - ontology/appsec-core-security-event-logging-audit-trail-mapping-draft.yaml
+purpose:
+  current_goal: >
+    Provide one shared contract for how SbD-ToE manual requirements and broad
+    controls project into the AppSec Core objective space, keeping the
+    official ten-slice v0 set as the primary landing surface while allowing
+    explicit use of validated adjunct anchors outside current v0 when they
+    are the cleanest current fit.
+  non_goals:
+    - replacing_slice_local_mapping_detail
+    - external_alignment_mapping
+    - v3_finding_or_runtime_mapping
+    - source_provenance_transversal_layer
+    - implicit_promotion_of_adjuncts_into_v0
+mapping_entities:
+  RequirementMapping:
+    description: >
+      Projects one manual requirement into one or more normalized AppSec core
+      objectives.
+    required_fields:
+      - source_requirement_id
+      - source_bundle
+      - source_requirement_name
+      - target_objectives
+  ControlMapping:
+    description: >
+      Projects one broad current manual control surface into one or more
+      normalized AppSec core objectives.
+    required_fields:
+      - source_control_id
+      - source_control_name
+      - target_objectives
+  BridgeObservation:
+    description: >
+      Records adjacent manual requirements, controls or slice contracts that
+      materially inform a slice but should not redefine its primary semantic
+      center.
+    required_fields:
+      - source_reference
+      - note
+    note: >
+      `source_reference` should be used uniformly whether the bridge points to
+      a manual requirement id, a manual control id or another slice contract.
+mapping_conventions:
+  strength_vocabulary:
+    primary:
+      meaning: The manual object is mainly explained by this normalized objective
+    secondary:
+      meaning: The manual object materially contributes to this objective but is not its best main anchor
+    bridge_only:
+      meaning: The manual object is adjacent and informative, but should remain outside the slice center
+  landing_order:
+    first:
+      meaning: Use the official ten-slice v0 objective families when the semantic fit is already clean
+    second:
+      meaning: Use one validated adjunct anchor outside current v0 when repeated pressure is already materialized and forcing a slice fit would distort the mapping
+    third:
+      meaning: Record bridge, comparison or overlay pressure explicitly when neither slice nor validated adjunct anchors provide a clean landing
+  core_rules:
+    - requirement_level_mapping_is_atomic_first
+    - control_level_mapping_may_land_on_composite_objectives
+    - many_to_one_allowed
+    - one_to_many_allowed
+    - manual_structure_is_not_copied_wholesale_into_core
+    - bridge_only_material_must_remain_explicit_when_it_is_not_central
+  adjunct_anchor_rules:
+    - ACR_001_and_ACR_002_are_currently_the_only_validated_non_v0_mapping_anchors
+    - mapping_to_a_validated_adjunct_does_not_change_the_official_v0_slice_count
+    - mapping_to_a_validated_adjunct_does_not_imply_promotion_or_public_packaging
+    - adjunct_anchor_usage_must_be_called_out_explicitly_in_mapping_rationale_or_notes
+  rationale_rule: Every target objective should carry a short semantic rationale
+shared_relations:
+  stable_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  auxiliary_relation_pattern:
+    - manual_requirement_bridges_to_slice_context
+reference_slice_set:
+  count: 10
+  objective_families:
+    - ACO-SCBI
+    - ACO-IAT
+    - ACO-ATB
+    - ACO-TSV
+    - ACO-TMR
+    - ACO-SPC
+    - ACO-IVF
+    - ACO-ITS
+    - ACO-RPR
+    - ACO-SLG
+auxiliary_adjunct_anchor_set:
+  count: 2
+  status: validated_non_v0_mapping_anchors
+  anchors:
+    - anchor_id: ACR-001
+      objective_family: ACO-CBI
+      scope: secure_configuration_baseline_integrity
+      role: reusable_secure_configuration_and_hardening_anchor_outside_current_v0
+    - anchor_id: ACR-002
+      objective_family: ACO-SRQ
+      scope: security_requirements_governance_and_traceability
+      role: reusable_security_requirements_governance_anchor_outside_current_v0
+current_boundaries:
+  keep_out_of_primary_mapping:
+    - external_framework_alignment
+    - persistent_finding_history
+    - runtime_response_governance
+    - source_provenance_and_attestation
+  keep_explicit_as_adjacent_when_needed:
+    - cross_slice_inputs_consumed_but_not_centered
+    - broader_runtime_or_operational_semantics
+    - weak_taxonomies_driven_by_canon_material
+    - maturity_or_capability_overlay_pressure_not_yet_modeled_as_primary_mapping_target
+acceptance_read:
+  stable_enough_now:
+    - the ten slice mapping drafts already share one common mapping grammar
+    - requirement-level atomic-first behavior is materially consistent
+    - control-level composite landing zones are materially consistent
+    - bridge-only observations are useful and should be standardized
+    - bridge-only observations can now converge on one source_reference key
+    - the shared mapping layer can now recognize two explicit non_v0 adjunct anchors without reopening_v0_packaging
+  not_stable_enough_yet:
+    - one merged instance set for all requirement mappings
+    - one merged instance set for all control mappings
+    - final decision on whether bridge_only should become a first-class relation or remain note-level
+    - broader_adjunct_registry_or_generic_maturity_overlay
+next_step:
+  recommendation: >
+    Use this shared draft as the manual-mapping layer for AppSec Core v0
+    consolidation, keeping slice-local mapping drafts as the detailed source
+    artifacts and using ACR-001 or ACR-002 only when one clean reusable
+    landing cannot be expressed faithfully through the official ten-slice
+    objective families.

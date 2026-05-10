@@ -1,0 +1,354 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: input_validation_safe_parsing_and_controlled_failure
+  description: >
+    Seventh narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    input validation, safe parsing and controlled failure.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-input-validation-safe-failure.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - broad_secure_development_surface
+    - runtime_monitoring_and_detection
+    - full_api_governance
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - external_input_contracts
+    - schema_and_allowlist_discipline
+    - injection_resistance
+    - validated_internal_use
+    - controlled_failure_surface
+    - error_handling_and_sensitive_logging
+    - input_handling_surface
+    - output_rendering_safety
+  included_manual_categories:
+    - VAL
+    - ERR
+  included_companion_requirements:
+    - API-003
+    - INT-001
+  excluded_for_now:
+    - full_secure_development_chapter_normalization
+    - broader_api_governance
+    - broader_integration_trust_and_transport_security
+    - runtime_observability_semantics
+    - threat_and_signal_normalization
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-IVF-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[external_input_contracts, schema_and_allowlist_discipline, injection_resistance, validated_internal_use, controlled_failure_surface, error_handling_and_sensitive_logging, input_handling_surface, output_rendering_safety]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis]
+      - local_practice_type: enum[contract_validation, schema_enforcement, pattern_exclusion, data_flow_guarding, error_surface_control, error_governance, output_encoding]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis]
+      - local_mechanism_type: enum[review, rulepack, schema_validator, parser_guard, centralized_handler, redaction_control, context_encoder]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[configuration, governance_record, report, evidence_package, review_record, operational_record]
+      - local_role: enum[guidance, report, evidence_package, checklist, log_record, configuration]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[governance_record, report, evidence_package, review_record, operational_record]
+      - local_evidence_kind: enum[guidance, report, evidence_package, checklist, log_record]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to input-validation and safe-failure judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-IVF-001:
+    name: External Input Contract Validation
+    objective_kind: atomic
+    domain_key: external_input_contracts
+    objective_type: preventive
+    statement: Validate external inputs for presence, type, format and minimum contract conformance at application and integration entry points before processing begins
+    expected_outcome: Malformed or unexpected external inputs are rejected early and consistently rather than being processed optimistically
+    verification_posture: external_input_contracts_are_enforced
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors:
+      - VAL-001
+      - API-003
+      - INT-001
+    expected_artifacts:
+      - ART-validation-evidence-79f6aaf0ec
+      - ART-test-report-b11c5dfb8a
+    open_artifact_gap:
+      - request_contract_catalog_artifact
+      - rejected_input_case_pack_artifact
+  ACO-IVF-002:
+    name: Schema, Type And Allowlist Discipline
+    objective_kind: atomic
+    domain_key: schema_and_allowlist_discipline
+    objective_type: preventive
+    statement: Constrain structured payloads and enumerated parameters through explicit schema, type and allowlist semantics rather than permissive parsing or blacklist-only defenses
+    expected_outcome: Only explicitly accepted shapes and values are processed, and malformed structured inputs fail deterministically
+    verification_posture: schema_and_allowlist_controls_are_explicit
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors:
+      - VAL-002
+      - VAL-003
+    expected_artifacts:
+      - ART-guideline-catalog-5e53974142
+      - ART-validation-evidence-79f6aaf0ec
+    open_artifact_gap:
+      - schema_definition_artifact
+      - allowlist_policy_artifact
+  ACO-IVF-003:
+    name: Injection-Resistant Input Handling And Dangerous Pattern Exclusion
+    objective_kind: atomic
+    domain_key: injection_resistance
+    objective_type: preventive
+    statement: Input-handling paths must avoid dangerous execution and injection patterns and use safe query, rendering and parsing primitives instead of permissive or context-blind constructs
+    expected_outcome: Injection-prone and dangerous input-handling constructs are blocked or replaced before they become production behavior
+    verification_posture: dangerous_input_patterns_are_excluded
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors:
+      - VAL-004
+      - VAL-007
+    expected_artifacts:
+      - ART-guideline-catalog-5e53974142
+      - ART-sast-report-0358e14566
+      - ART-test-report-b11c5dfb8a
+      - ART-review-checklist-de29054201
+    open_artifact_gap:
+      - dangerous_pattern_rulepack_artifact
+      - safe_query_standard_artifact
+  ACO-IVF-004:
+    name: Validation Before Internal Use And Trust Crossing
+    objective_kind: atomic
+    domain_key: validated_internal_use
+    objective_type: preventive
+    statement: Validate data before business logic, persistence or downstream invocation so that internally consumed or forwarded data never becomes trusted merely by arrival
+    expected_outcome: Data is not treated as trusted just because it crossed one boundary successfully; downstream use still depends on explicit validation discipline
+    verification_posture: pre_use_validation_is_enforced
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors:
+      - VAL-005
+    expected_artifacts:
+      - ART-validation-evidence-79f6aaf0ec
+      - ART-review-checklist-de29054201
+    open_artifact_gap:
+      - trust_crossing_validation_map_artifact
+      - validated_data_flow_annotation_artifact
+  ACO-IVF-005:
+    name: Controlled Failure And Non-Revealing Client Error Surface
+    objective_kind: atomic
+    domain_key: controlled_failure_surface
+    objective_type: preventive
+    statement: Validation and processing failures must fail closed with non-revealing client responses that avoid stack traces, resource enumeration and internal detail leakage
+    expected_outcome: Error behavior blocks unsafe continuation without teaching attackers about internal implementation, resource state or sensitive context
+    verification_posture: failures_are_controlled_and_non_revealing
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors:
+      - VAL-006
+      - ERR-001
+      - ERR-002
+      - ERR-003
+      - ERR-004
+    expected_artifacts:
+      - ART-validation-evidence-79f6aaf0ec
+      - ART-test-report-b11c5dfb8a
+      - ART-log-stream-b67ee06f7e
+    open_artifact_gap:
+      - client_error_contract_artifact
+      - enumeration_resistance_test_artifact
+  ACO-IVF-006:
+    name: Centralized Error Handling And Sensitive Error Logging Hygiene
+    objective_kind: atomic
+    domain_key: error_handling_and_sensitive_logging
+    objective_type: governance
+    statement: Error handling must be centralized enough to enforce consistent translation, testing and pseudonymized logging without leaking secrets or sensitive data in error records
+    expected_outcome: Error handling behaves consistently across the system and error logs retain operational value without exposing sensitive information
+    verification_posture: centralized_error_governance_is_effective
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors:
+      - ERR-005
+      - ERR-006
+      - ERR-007
+    expected_artifacts:
+      - ART-log-stream-b67ee06f7e
+      - ART-validation-evidence-79f6aaf0ec
+      - ART-review-checklist-de29054201
+    open_artifact_gap:
+      - centralized_error_handler_artifact
+      - error_logging_redaction_rules_artifact
+  ACO-IVF-007:
+    name: Input Validation And Safe Failure Integrity
+    objective_kind: composite
+    domain_key: input_handling_surface
+    objective_type: preventive
+    statement: External input validation, schema discipline, injection resistance, pre-use validation, controlled failure, centralized safe error handling and context-aware output rendering must operate as one coherent input/output trust-boundary surface
+    expected_outcome: Untrusted inputs are constrained, dangerous handling patterns are excluded, failures remain safe enough to support resilient AppSec behavior without overexposure, and outputs are rendered safely for their consumption context
+    verification_posture: coherent_input_output_trust_boundary_surface
+    composed_of:
+      - ACO-IVF-001
+      - ACO-IVF-002
+      - ACO-IVF-003
+      - ACO-IVF-004
+      - ACO-IVF-005
+      - ACO-IVF-006
+      - ACO-IVF-008
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors:
+      - VAL-001
+      - VAL-002
+      - VAL-003
+      - VAL-004
+      - VAL-005
+      - VAL-006
+      - VAL-007
+      - ERR-001
+      - ERR-002
+      - ERR-003
+      - ERR-004
+      - ERR-005
+      - ERR-006
+      - ERR-007
+      - API-003
+      - INT-001
+    expected_artifacts:
+      - ART-guideline-catalog-5e53974142
+      - ART-sast-report-0358e14566
+      - ART-validation-evidence-79f6aaf0ec
+      - ART-test-report-b11c5dfb8a
+      - ART-review-checklist-de29054201
+      - ART-log-stream-b67ee06f7e
+  ACO-IVF-008:
+    name: Context-Aware Output Encoding And Rendering Safety
+    objective_kind: atomic
+    domain_key: output_rendering_safety
+    objective_type: preventive
+    statement: Untrusted or dynamically composed data emitted to a rendering, transport or interpretation context (HTML, attributes, JavaScript, JSON, URL, CSS, HTTP headers) must be encoded or escaped according to that context so that data cannot change the structure, semantics or trust posture of the output
+    expected_outcome: Output boundaries do not allow data to escape its intended interpretation context; cross-site scripting, JSON/JS injection, URL-protocol abuse, header injection and content-sniffing-based interpretation drift are blocked at the rendering surface
+    verification_posture: context_aware_output_encoding_is_applied_at_rendering_boundaries
+    current_manual_control_anchors:
+      - CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo-63dedd7460
+    current_manual_requirement_anchors: []
+    pending_manual_anchor:
+      reason: >
+        ACR-004 has external multi-source convergence (5 sources STRONG, 69 items)
+        but no canonical SbD-ToE Manual requirement currently exists for output
+        rendering safety. Manual-internal inconsistency detected during
+        promotion: addon/07-validacao-requisitos.md:167 attributes XSS output
+        verification to VAL-005, but addon/02-lista-requisitos-base.md:164
+        (canonical list) defines VAL-005 as "Validação antes do uso interno"
+        (pre-use validation) — addon §07 verification action is mis-attributed.
+        VAL-005 therefore remains anchored to ACO-IVF-004 (pre-use validation).
+      curator_handover_required:
+        - resolve manual-internal inconsistency in addon/07-validacao-requisitos.md
+        - decide whether to introduce a new VAL-NNN for output rendering safety
+        - or move XSS verification action to a different existing requirement
+        - on resolution, anchor the appropriate VAL-NNN to ACO-IVF-008
+      flagged_at: '2026-05-05 during ACR-004 execution sprint per AGENTS §6.6'
+    expected_artifacts:
+      - ART-guideline-catalog-5e53974142
+      - ART-sast-report-0358e14566
+      - ART-test-report-b11c5dfb8a
+      - ART-review-checklist-de29054201
+    open_artifact_gap:
+      - context_aware_encoder_inventory_artifact
+      - rendering_boundary_audit_artifact
+    external_overlay_anchors:
+      asvs_v5_0_0:
+        - ASVS-REQ-V1.2.1
+        - ASVS-REQ-V1.2.2
+        - ASVS-REQ-V1.2.3
+        - ASVS-REQ-V3.2.1
+        - ASVS-REQ-V3.2.2
+      cwe_software_development_view_v4_19_1:
+        - CWE-79
+      capec_v3_9:
+        - CAPEC-63
+        - CAPEC-242
+      mcp_official_security_foundations_2025:
+        - rendering_injection_in_agent_contexts
+      owasp_dsomm:
+        - security_testing_for_output_encoding
+    promotion_provenance:
+      acr_id: ACR-004
+      ratification_date: '2026-05-05'
+      authority: programme-lead Pedro Farinha (Orchestrator dispatcher 2026-05-05)
+      evidence_cluster: CID-26 (LDP analysis substrate v5; 69 items; 5 sources STRONG)
+      brief: agentic/briefs/2026-05-05-acr004-output-rendering-slice-boundary.md

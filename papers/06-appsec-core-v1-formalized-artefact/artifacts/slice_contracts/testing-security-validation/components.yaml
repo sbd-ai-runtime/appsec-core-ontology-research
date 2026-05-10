@@ -1,0 +1,227 @@
+meta:
+  name: AppSec Core Slice Components Draft
+  version: '0.1'
+  status: working_draft
+  scope: testing_security_validation_and_empirical_assurance
+  description: >
+    Minimal normalized subset of practices, mechanisms and artifacts used to
+    validate the AppSec core slice draft for testing, security validation and
+    empirical assurance.
+  target_core_draft: ontology/appsec-core-testing-security-validation-draft.yaml
+  target_mapping_draft: ontology/appsec-core-testing-security-validation-mapping-draft.yaml
+normalized_practices:
+  ACP-TSV-001:
+    name: Risk-Based Security Test Planning
+    practice_family: governance_and_review
+    local_practice_type: strategy
+    supports_objectives:
+      - ACO-TSV-001
+    description: Define testing scope, frequency, owners and coverage thresholds by application risk and critical surface
+  ACP-TSV-002:
+    name: Governed Static Analysis Execution
+    practice_family: validation_and_analysis
+    local_practice_type: static_analysis
+    supports_objectives:
+      - ACO-TSV-002
+      - ACO-TSV-007
+    description: Run static analysis with managed rule profiles, controlled noise and explicit critical-surface coverage expectations
+  ACP-TSV-003:
+    name: Findings Triage, SLA And Retest Closure
+    practice_family: governance_and_review
+    local_practice_type: finding_governance
+    supports_objectives:
+      - ACO-TSV-003
+      - ACO-TSV-007
+    description: Triage testing findings, track them to correction and close them only through retest or formal exception
+  ACP-TSV-004:
+    name: Reproducible Test Evidence Management
+    practice_family: integrity_traceability_and_records
+    local_practice_type: evidence_management
+    supports_objectives:
+      - ACO-TSV-004
+      - ACO-TSV-007
+    description: Keep reports, execution context and build linkage reproducible enough for later review and audit
+  ACP-TSV-005:
+    name: Staged Dynamic Testing And Gate Enforcement
+    practice_family: validation_and_analysis
+    local_practice_type: dynamic_testing
+    supports_objectives:
+      - ACO-TSV-005
+      - ACO-TSV-007
+    description: Run dynamic security testing in staging and connect its outcomes to explicit promotion gates
+  ACP-TSV-006:
+    name: Specialized Empirical Testing
+    practice_family: validation_and_analysis
+    local_practice_type: specialized_testing
+    supports_objectives:
+      - ACO-TSV-006
+      - ACO-TSV-007
+    description: Apply regression tests, offensive testing and fuzzing where deeper empirical validation is justified
+  ACP-TSV-007:
+    name: Human Review Of Security Test Signals
+    practice_family: governance_and_review
+    local_practice_type: release_decision
+    supports_objectives:
+      - ACO-TSV-003
+      - ACO-TSV-005
+      - ACO-TSV-007
+    description: Separate raw automated signal from final release or correction decision through explicit human review and acceptance criteria
+normalized_mechanisms:
+  ACM-TSV-001:
+    name: Integrated Security Scanners
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: scanner
+    source_semantic_ids:
+      - sem:mechanism:scanners-de-seguranca-integrados
+      - sem:mechanism:scanners-automaticos
+    supports_practices:
+      - ACP-TSV-002
+      - ACP-TSV-005
+      - ACP-TSV-006
+  ACM-TSV-002:
+    name: Test Execution Surfaces
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: test_orchestrator
+    source_semantic_ids:
+      - sem:mechanism:testes
+    supports_practices:
+      - ACP-TSV-005
+      - ACP-TSV-006
+  ACM-TSV-003:
+    name: CI/CD Gate And Release Promotion
+    mechanism_family: policy_and_gate_enforcement
+    local_mechanism_type: gate
+    source_semantic_ids:
+      - sem:mechanism:pipelines-ci-cd
+      - sem:mechanism:promocao-de-releases
+    supports_practices:
+      - ACP-TSV-001
+      - ACP-TSV-004
+      - ACP-TSV-005
+      - ACP-TSV-007
+  ACM-TSV-004:
+    name: Findings Workflow And Exception Governance
+    mechanism_family: governance_and_review
+    local_mechanism_type: triage_workflow
+    source_semantic_ids: []
+    supports_practices:
+      - ACP-TSV-003
+      - ACP-TSV-007
+    note: >
+      The repo clearly expresses findings triage, exception handling and
+      decision review in requirements and practices, but not yet as a clean
+      semantic mechanism family.
+  ACM-TSV-005:
+    name: Static Analysis Profile Management
+    mechanism_family: validation_and_analysis
+    local_mechanism_type: baseline
+    source_semantic_ids:
+      - sem:mechanism:scanners-obrigatorios
+    supports_practices:
+      - ACP-TSV-002
+    note: >
+      This anchor is narrower than the full problem of baseline governance and
+      false-positive management, but it is the closest current semantic fit.
+normalized_artifacts:
+  ACA-TSV-001:
+    source_artifact_id: ART-sast-report-0358e14566
+    canonical_role: report
+    local_role: report
+    supports_objectives:
+      - ACO-TSV-002
+      - ACO-TSV-007
+  ACA-TSV-002:
+    source_artifact_id: ART-test-report-b11c5dfb8a
+    canonical_role: report
+    local_role: report
+    supports_objectives:
+      - ACO-TSV-003
+      - ACO-TSV-004
+      - ACO-TSV-005
+      - ACO-TSV-006
+      - ACO-TSV-007
+  ACA-TSV-003:
+    source_artifact_id: ART-finding-register-b39d52b4e7
+    canonical_role: governance_record
+    local_role: register
+    supports_objectives:
+      - ACO-TSV-003
+      - ACO-TSV-006
+      - ACO-TSV-007
+  ACA-TSV-004:
+    source_artifact_id: ART-release-gate-57ec988cdb
+    canonical_role: gate_record
+    local_role: gate_record
+    supports_objectives:
+      - ACO-TSV-005
+      - ACO-TSV-007
+  ACA-TSV-005:
+    source_artifact_id: ART-approval-record-6fe32eb803
+    canonical_role: approval_record
+    local_role: approval_record
+    supports_objectives:
+      - ACO-TSV-001
+      - ACO-TSV-003
+      - ACO-TSV-005
+      - ACO-TSV-007
+  ACA-TSV-006:
+    source_artifact_id: ART-pipeline-config-f8f2ba893d
+    canonical_role: build_definition
+    local_role: pipeline_definition
+    supports_objectives:
+      - ACO-TSV-002
+      - ACO-TSV-004
+      - ACO-TSV-005
+      - ACO-TSV-006
+current_manual_practice_mappings:
+  - source_practice_id: 10-testes-seguranca:estrategia-formal-de-testes-por-aplicacao
+    target_practice_id: ACP-TSV-001
+  - source_practice_id: 10-testes-seguranca:sast-obrigatorio-em-pull-request
+    target_practice_id: ACP-TSV-002
+  - source_practice_id: 10-testes-seguranca:gestao-centralizada-de-findings-com-triagem-e-sla
+    target_practice_id: ACP-TSV-003
+  - source_practice_id: 10-testes-seguranca:feedback-automatico-de-findings-as-equipas
+    target_practice_id: ACP-TSV-003
+  - source_practice_id: 10-testes-seguranca:reprodutibilidade-de-resultados-criticos-de-testes-de-seguranca
+    target_practice_id: ACP-TSV-004
+  - source_practice_id: 10-testes-seguranca:dast-autenticado-em-staging
+    target_practice_id: ACP-TSV-005
+  - source_practice_id: 10-testes-seguranca:iast-com-instrumentacao-em-staging
+    target_practice_id: ACP-TSV-005
+  - source_practice_id: 10-testes-seguranca:gates-de-seguranca-no-ci-cd
+    target_practice_id: ACP-TSV-005
+  - source_practice_id: 10-testes-seguranca:regressoes-de-seguranca-automatizadas
+    target_practice_id: ACP-TSV-006
+  - source_practice_id: 10-testes-seguranca:pentesting-ofensivo-baseado-em-risco
+    target_practice_id: ACP-TSV-006
+  - source_practice_id: 10-testes-seguranca:fuzzing-dirigido-a-apis-criticas
+    target_practice_id: ACP-TSV-006
+  - source_practice_id: 10-testes-seguranca:validacao-empirica-de-exploitabilidade-de-findings
+    target_practice_id: ACP-TSV-006
+  - source_practice_id: 10-testes-seguranca:criterios-de-release-e-aceitacao-de-risco
+    target_practice_id: ACP-TSV-007
+  - source_practice_id: 10-testes-seguranca:decisao-assistida-para-findings-de-testes-de-seguranca
+    target_practice_id: ACP-TSV-007
+  - source_practice_id: 10-testes-seguranca:validacao-humana-da-interpretacao-final-dos-resultados
+    target_practice_id: ACP-TSV-007
+notes:
+  practice_surface_strength:
+    note: >
+      This slice has a stronger chapter-local practice surface than slices 2
+      and 3, so the normalized practice subset can be slightly richer without
+      becoming speculative.
+  v3_boundary:
+    note: >
+      Findings history, persistent audit state and operational response remain
+      outside this slice even though findings triage and retest closure are
+      included as testing-governance semantics.
+  mechanism_surface_limit:
+    note: >
+      The current semantic mechanism catalog is still weaker than the practice
+      and artifact surfaces for testing, so some mechanisms stay partially
+      objective-led.
+open_questions:
+  - Should `ACP-TSV-007` remain separate from `ACP-TSV-005`, or later collapse into one broader release-decision practice?
+  - Should `ACM-TSV-004` wait for stronger semantic grounding before being treated as stable?
+  - Which future artifact should become the primary anchor for exception handling and retest closure once the artifact taxonomy expands?
+  - Should `ACA-TSV-001` and `ACA-TSV-002` remain distinct report families, or later merge into a broader security-test evidence family?

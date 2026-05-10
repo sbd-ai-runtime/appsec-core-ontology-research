@@ -1,0 +1,292 @@
+meta:
+  name: AppSec Core Slice Draft
+  version: '0.1'
+  status: working_draft
+  scope: architecture_and_trust_boundaries
+  description: >
+    Third narrow draft for a future reusable AppSec Core derived from the
+    SbD-ToE V2 ontology. This draft intentionally models only one slice:
+    architecture, trust boundaries and architectural segmentation.
+  derived_from:
+    - ontology/sbdtoe-ontology.yaml
+    - docs/project/working-notes/2026-04-02-ontology-editorial-vs-domain-inventory.md
+    - docs/project/working-notes/2026-04-02-appsec-core-track-prep.md
+    - docs/project/working-notes/2026-04-03-appsec-core-slice-architecture-trust-boundaries.md
+    - docs/project/working-notes/2026-04-03-appsec-core-method-invariants.md
+  non_goals:
+    - regulatory_overlay
+    - source_provenance_transversal_layer
+    - v3_audit_and_findings
+    - threat_modeling_as_primary_center
+    - iac_or_deploy_colonization
+    - full_domain_coverage
+module_split:
+  appsec_core:
+    description: Reusable AppSec domain semantics independent from the SbD-ToE editorial structure
+    entities:
+      - ControlObjective
+      - Practice
+      - Mechanism
+      - Artifact
+      - EvidencePattern
+      - Threat
+      - Signal
+  sbdtoe_manual_mapping:
+    description: Keeps SbD-ToE-specific requirement/control structures outside the core
+    entities:
+      - RequirementMapping
+      - ControlMapping
+  external_alignment:
+    status: deferred
+    note: SSDF, SAMM, SLSA and similar frameworks should align here later, not in this slice draft
+scope:
+  domains:
+    - architecture_governance
+    - trust_boundary
+    - exposure_control
+    - segmentation
+    - architecture_review
+    - topology_validation
+    - architecture_surface
+  included_manual_categories:
+    - ARC
+  excluded_for_now:
+    - threat_modeling_as_primary_driver
+    - infrastructure_execution
+    - runtime_monitoring
+    - secrets_and_identity
+core_entities:
+  ControlObjective:
+    description: >
+      Reusable AppSec objective that expresses what must hold true in the
+      domain, without carrying SbD-ToE chapter or requirement structure.
+    id_pattern: ACO-ATB-###
+    attributes:
+      - objective_id: string
+      - name: string
+      - objective_kind: enum[atomic, composite]
+      - domain_key: enum[architecture_governance, trust_boundary, exposure_control, segmentation, architecture_review, topology_validation, architecture_surface]
+      - objective_type: enum[governance, preventive, detective]
+      - statement: string
+      - expected_outcome: string
+      - verification_posture: string
+  Practice:
+    description: Reusable implementation or operating practice that helps realize a control objective
+    attributes:
+      - practice_id: string
+      - name: string
+      - practice_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis]
+      - local_practice_type: enum[baseline, review, documentation, segmentation, mediation, validation]
+  Mechanism:
+    description: Concrete means used to realize or enforce a control objective
+    attributes:
+      - mechanism_id: string
+      - name: string
+      - mechanism_family: enum[governance_and_review, policy_and_gate_enforcement, validation_and_analysis]
+      - local_mechanism_type: enum[documentation, boundary_model, mediation, isolation, review_gate, automated_validation]
+  Artifact:
+    description: Domain artifact or evidence-bearing output used in this slice
+    attributes:
+      - artifact_id: string
+      - name: string
+      - canonical_role: enum[governance_record, review_record, approval_record, validation_output, configuration]
+      - local_role: enum[baseline, diagram, review_record, decision_record, checklist, validation_output, configuration]
+  EvidencePattern:
+    description: Expected evidence shape that supports deterministic review of an objective
+    attributes:
+      - evidence_pattern_id: string
+      - canonical_evidence_kind: enum[review_record, validation_output, configuration]
+      - local_evidence_kind: enum[diagram, review_record, checklist, validation_output, configuration]
+      - expectation: string
+  Threat:
+    description: Security failure mode mitigated by one or more objectives in the slice
+    attributes:
+      - threat_id: string
+      - name: string
+  Signal:
+    description: Observable review signal relevant to architecture and trust-boundary judgement
+    attributes:
+      - signal_id: string
+      - name: string
+relations:
+  core_relations:
+    - objective_realized_by_practice
+    - objective_implemented_by_mechanism
+    - objective_expects_artifact
+    - objective_verified_by_evidence_pattern
+    - artifact_supports_evidence_pattern
+    - signal_supports_evidence_pattern
+    - threat_mitigated_by_objective
+  manual_mapping_relations:
+    - manual_requirement_maps_to_objective
+    - manual_control_maps_to_objective
+  deferred_relations:
+    - external_requirement_maps_to_objective
+    - finding_challenges_objective
+normalized_objectives:
+  ACO-ATB-001:
+    name: Architecture Baseline And Decision Traceability
+    objective_kind: atomic
+    domain_key: architecture_governance
+    objective_type: governance
+    statement: Maintain a versioned architecture baseline, explicit architectural decisions and approved reusable patterns so that the intended design remains traceable over time
+    expected_outcome: Material architectural choices are documented, reviewable and linked to the current architecture baseline rather than living only in implicit team memory
+    verification_posture: traceable_architecture_baseline
+    current_manual_control_anchors:
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - ARC-004
+      - ARC-007
+      - ARC-010
+    expected_artifacts:
+      - ART-review-checklist-de29054201
+    open_artifact_gap:
+      - architecture_baseline_artifact
+      - architecture_decision_record_artifact
+      - approved_architecture_pattern_catalog_artifact
+  ACO-ATB-002:
+    name: Trust Boundary Clarity And Protected Data Flows
+    objective_kind: atomic
+    domain_key: trust_boundary
+    objective_type: preventive
+    statement: Define trust zones and data flows explicitly, with protected boundaries and visible controls at each crossing point
+    expected_outcome: Trust boundaries and critical flows are made explicit enough that boundary assumptions and protection points can be reviewed and challenged
+    verification_posture: explicit_trust_boundaries
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - ARC-001
+      - ARC-008
+    expected_artifacts: []
+    open_artifact_gap:
+      - trust_boundary_model_artifact
+      - data_flow_diagram_artifact
+      - boundary_control_annotation_artifact
+  ACO-ATB-003:
+    name: External Exposure Justification And Boundary Mediation
+    objective_kind: atomic
+    domain_key: exposure_control
+    objective_type: preventive
+    statement: Minimize externally exposed components and require explicit technical justification and mediation controls for every remaining exposure
+    expected_outcome: Public or cross-boundary exposure exists only when justified and is protected through explicit gateway, proxy, WAF, ACL or equivalent mediation controls
+    verification_posture: justified_external_exposure
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - ARC-002
+    expected_artifacts: []
+    open_artifact_gap:
+      - exposure_inventory_artifact
+      - boundary_mediation_control_artifact
+  ACO-ATB-004:
+    name: Technical Segmentation And Sensitive Domain Isolation
+    objective_kind: atomic
+    domain_key: segmentation
+    objective_type: preventive
+    statement: Separate sensitive domains, environments and integration paths through technical isolation controls that are documented and reviewable
+    expected_outcome: Movement and interaction between sensitive zones are constrained by architecture-level segmentation rather than by informal convention alone
+    verification_posture: enforceable_domain_isolation
+    current_manual_control_anchors:
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - ARC-006
+      - ARC-011
+    expected_artifacts: []
+    open_artifact_gap:
+      - segmentation_policy_artifact
+      - environment_isolation_artifact
+      - integration_review_artifact
+  ACO-ATB-005:
+    name: Architecture Review And Change Trigger Discipline
+    objective_kind: atomic
+    domain_key: architecture_review
+    objective_type: governance
+    statement: Subject meaningful architecture changes to explicit review, risk-proportional approval and disciplined change-trigger criteria
+    expected_outcome: Architecture review is repeatable, proportionate and re-triggered when significant change occurs, rather than being a one-time ceremony
+    verification_posture: disciplined_architecture_review
+    current_manual_control_anchors:
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - ARC-003
+      - ARC-009
+      - ARC-012
+    expected_artifacts:
+      - ART-review-checklist-de29054201
+      - ART-approval-record-6fe32eb803
+    open_artifact_gap:
+      - architecture_review_record_artifact
+      - change_trigger_policy_artifact
+  ACO-ATB-006:
+    name: Architectural Topology Validation And Pattern Conformance
+    objective_kind: atomic
+    domain_key: topology_validation
+    objective_type: detective
+    statement: Validate topology and architecture conformance automatically where feasible, using checks that compare the intended structure with approved patterns and constraints
+    expected_outcome: Architecture drift or invalid topology can be detected through repeatable validation rather than only through manual interpretation
+    verification_posture: automatable_architecture_validation
+    current_manual_control_anchors:
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+    current_manual_requirement_anchors:
+      - ARC-013
+      - ARC-007
+    expected_artifacts:
+      - ART-pipeline-config-f8f2ba893d
+      - ART-policy-report-7e52280504
+    open_artifact_gap:
+      - topology_validation_output_artifact
+  ACO-ATB-007:
+    name: Secure Architecture Governance And Boundary Integrity
+    objective_kind: composite
+    domain_key: architecture_surface
+    objective_type: governance
+    statement: Architecture baseline, trust boundaries, exposure control, segmentation and review discipline must operate as one coherent secure-architecture surface
+    expected_outcome: The architecture remains explicit, reviewable, justified and technically bounded as the system evolves
+    verification_posture: coherent_secure_architecture_surface
+    composed_of:
+      - ACO-ATB-001
+      - ACO-ATB-002
+      - ACO-ATB-003
+      - ACO-ATB-004
+      - ACO-ATB-005
+      - ACO-ATB-006
+    current_manual_control_anchors:
+      - CTRL-governance-arquitetura-segura-e-rastreavel-74562442c4
+      - CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b
+    current_manual_requirement_anchors:
+      - ARC-001
+      - ARC-002
+      - ARC-006
+      - ARC-010
+      - ARC-013
+    expected_artifacts:
+      - ART-review-checklist-de29054201
+      - ART-pipeline-config-f8f2ba893d
+    open_artifact_gap:
+      - coherent_architecture_baseline_bundle
+mapping_policy:
+  requirement_mapping:
+    cardinality: many_to_one_allowed
+    note: SbD-ToE requirements stay in the manual layer and project into fewer reusable objectives
+  control_mapping:
+    cardinality: many_to_one_allowed
+    note: >
+      The current architecture governance control is wider than this future core
+      slice and must decompose rather than be copied unchanged into the core.
+  practice_mapping:
+    note: >
+      The current architecture practice surface is strong enough to help
+      normalization, but the slice should still begin from requirements and
+      control decomposition first.
+  current_link_warning:
+    note: >
+      Current autogenerated requirement_control_links should remain secondary
+      input for this slice as well; they are not the main source of semantic
+      truth.
+deferred_questions:
+  - Should reusable architecture patterns remain inside `ACO-ATB-001`, or later become their own objective or even a higher-level capability?
+  - Should `ACO-ATB-006` stay inside the slice core, or later move into a broader cross-slice validation capability?
+  - Should the technical segmentation objective eventually absorb some of the current IaC-governance material, or should that remain only adjacent?
+  - When source grounding improves, should threat-model synchronization remain bridge-only, or become a formal mapping surface into this slice?
