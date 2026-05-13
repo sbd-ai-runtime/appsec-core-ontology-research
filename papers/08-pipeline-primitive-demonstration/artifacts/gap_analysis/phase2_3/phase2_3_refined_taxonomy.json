@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "phase": "2_3_augment",
+    "generated_at": "2026-05-11T09:25:41Z",
+    "method": "deterministic keyword-based; LLM-free; reproducible",
+    "thresholds": {
+      "strong_kw_threshold": 3,
+      "strong_occurrence_threshold": 5,
+      "min_token_len": 4,
+      "max_keywords_per_entity": 12
+    },
+    "discipline_note": "Cartographer deterministic keyword search FLAGS candidates for refined classification + emits evidence trail. Per dispatcher §discipline (LLM as query interface; human inspection for final decisions per P2 v0 Pass 3), refined classifications labelled 'candidate_*' or 'confirmed_*' to distinguish automated heuristic from final human verdict. Cartographer output is decision-grade evidence; final classification post-human-review.",
+    "n_phase1_content_gaps": 38,
+    "refined_classifications": {
+      "candidate_claim_gap": 31,
+      "candidate_cross_reference_gap": 6,
+      "confirmed_content_gap": 1
+    },
+    "by_match_strength": {
+      "strong_expected": 31,
+      "strong_other": 6,
+      "weak": 1
+    },
+    "n_manual_chapters_searched": 15
+  },
+  "phase1_baseline": {
+    "content_gap": 38,
+    "scope_exclusion": 57
+  },
+  "phase2_3_refined": {
+    "candidate_claim_gap": 31,
+    "candidate_cross_reference_gap": 6,
+    "confirmed_content_gap": 1,
+    "scope_exclusion": 57
+  },
+  "total_v1_gaps_unchanged": 95,
+  "candidate_claim_gap_entities": [
+    "ACP-SCBI-005",
+    "ACP-SCBI-007",
+    "ACM-SCBI-006",
+    "ACM-IAT-005",
+    "ACP-ATB-006",
+    "ACP-TSV-007",
+    "ACP-TMR-006",
+    "ACP-TMR-007",
+    "ACP-TMR-008",
+    "ACP-TMR-009",
+    "ACP-IVF-002",
+    "ACP-IVF-007",
+    "ACM-IVF-005",
+    "ACP-ITS-005",
+    "ACP-ITS-006",
+    "ACM-ITS-005",
+    "ACP-RPR-002",
+    "ACP-RPR-003",
+    "ACP-RPR-005",
+    "ACP-RPR-006",
+    "ACP-RPR-008",
+    "ACP-RPR-009",
+    "ACP-RPR-010",
+    "ACM-RPR-002",
+    "ACM-RPR-003",
+    "ACM-RPR-005",
+    "ACM-RPR-010",
+    "ACP-SLG-005",
+    "ACM-SLG-002",
+    "ACM-SLG-005",
+    "ACM-SLG-006"
+  ],
+  "candidate_cross_reference_gap_entities": [
+    "ACM-IAT-006",
+    "ACP-ATB-007",
+    "ACP-SPC-005",
+    "ACP-SPC-006",
+    "ACP-IVF-006",
+    "ACM-ITS-003"
+  ],
+  "confirmed_content_gap_entities": [
+    "ACM-IVF-004"
+  ]
+}

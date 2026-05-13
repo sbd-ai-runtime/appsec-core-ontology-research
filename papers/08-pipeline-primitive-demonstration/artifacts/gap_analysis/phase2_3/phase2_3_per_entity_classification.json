@@ -1,0 +1,6194 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "phase": "2_3_augment",
+    "generated_at": "2026-05-11T09:25:41Z",
+    "method": "deterministic keyword-based; LLM-free; reproducible",
+    "thresholds": {
+      "strong_kw_threshold": 3,
+      "strong_occurrence_threshold": 5,
+      "min_token_len": 4,
+      "max_keywords_per_entity": 12
+    },
+    "discipline_note": "Cartographer deterministic keyword search FLAGS candidates for refined classification + emits evidence trail. Per dispatcher §discipline (LLM as query interface; human inspection for final decisions per P2 v0 Pass 3), refined classifications labelled 'candidate_*' or 'confirmed_*' to distinguish automated heuristic from final human verdict. Cartographer output is decision-grade evidence; final classification post-human-review.",
+    "n_phase1_content_gaps": 38,
+    "refined_classifications": {
+      "candidate_claim_gap": 31,
+      "candidate_cross_reference_gap": 6,
+      "confirmed_content_gap": 1
+    },
+    "by_match_strength": {
+      "strong_expected": 31,
+      "strong_other": 6,
+      "weak": 1
+    },
+    "n_manual_chapters_searched": 15
+  },
+  "per_entity_refined_classifications": [
+    {
+      "entity_id": "ACP-SCBI-005",
+      "entity_type": "Practice",
+      "slice_id": "ASC-01",
+      "slice_abbreviation": "SCBI",
+      "expected_chapter": "05-dependencias-sbom-sca",
+      "keywords_extracted": [
+        "approval",
+        "release",
+        "governed",
+        "promotion",
+        "separate",
+        "signal",
+        "generation",
+        "decisions",
+        "enforce",
+        "explicit",
+        "gates",
+        "policy"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 41
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "approval",
+            "enforce",
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 45
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 71
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "decisions",
+            "gates",
+            "generation",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 36
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "gates",
+            "generation",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 45
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "approval",
+            "enforce",
+            "gates",
+            "generation",
+            "policy",
+            "promotion",
+            "release"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 89
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 49
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "approval",
+            "enforce",
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 122
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "approval",
+            "explicit",
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 92
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "approval",
+            "enforce",
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 61
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 125
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "gates",
+            "policy",
+            "promotion",
+            "release"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 166
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 21
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "approval",
+            "gates",
+            "generation",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 24
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "approval",
+            "enforce",
+            "gates",
+            "policy",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 54
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `05-dependencias-sbom-sca` (7 distinct keywords; 89 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-SCBI-007",
+      "entity_type": "Practice",
+      "slice_id": "ASC-01",
+      "slice_abbreviation": "SCBI",
+      "expected_chapter": "05-dependencias-sbom-sca",
+      "keywords_extracted": [
+        "trusted",
+        "supply",
+        "container",
+        "image",
+        "build",
+        "select",
+        "promote",
+        "images",
+        "traceable",
+        "policy-governed",
+        "paths",
+        "policy"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "build",
+            "images",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 21
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "image",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 22
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 32
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "build",
+            "policy",
+            "select",
+            "supply"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 17
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "build",
+            "paths",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 20
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 164
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "build",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 42
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "image",
+            "images",
+            "policy",
+            "supply",
+            "trusted"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 101
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "build",
+            "paths",
+            "policy",
+            "supply",
+            "trusted"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 91
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "image",
+            "images",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 204
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 51
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 34
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "paths",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 20
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "policy",
+            "select",
+            "supply"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 26
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "build",
+            "container",
+            "images",
+            "policy",
+            "supply"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 34
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `05-dependencias-sbom-sca` (4 distinct keywords; 164 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-SCBI-006",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-01",
+      "slice_abbreviation": "SCBI",
+      "expected_chapter": "05-dependencias-sbom-sca",
+      "keywords_extracted": [
+        "approved",
+        "enforcement",
+        "registry",
+        "allowlisting",
+        "source",
+        "acquisition",
+        "repositories",
+        "registries",
+        "sources",
+        "proxy",
+        "admission",
+        "limit"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "enforcement",
+            "registries",
+            "source",
+            "sources"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 10
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "enforcement",
+            "registry"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "enforcement",
+            "proxy",
+            "registry"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 6
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "proxy",
+            "registries",
+            "source"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 3
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "admission",
+            "enforcement",
+            "proxy"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 3
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "enforcement",
+            "proxy",
+            "registries",
+            "registry",
+            "source"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 29
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "approved",
+            "enforcement",
+            "source"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 7
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "admission",
+            "enforcement",
+            "registries",
+            "registry"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 11
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "admission",
+            "enforcement",
+            "registry",
+            "source"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 62
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "admission",
+            "enforcement",
+            "registries",
+            "registry",
+            "source"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 135
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "enforcement",
+            "proxy"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "enforcement",
+            "source"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "source"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "enforcement",
+            "proxy"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "admission",
+            "approved",
+            "enforcement",
+            "proxy",
+            "registry",
+            "repositories"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 18
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `05-dependencias-sbom-sca` (5 distinct keywords; 29 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-IAT-005",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-02",
+      "slice_abbreviation": "IAT",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "gateway",
+        "mutual",
+        "authentication",
+        "authenticate",
+        "callers",
+        "enforce",
+        "authorization",
+        "decisions",
+        "consistently",
+        "service",
+        "boundaries",
+        "identity"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "authentication",
+            "boundaries",
+            "identity"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 4
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "boundaries",
+            "enforce",
+            "service"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 4
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "authorization",
+            "boundaries",
+            "decisions",
+            "gateway",
+            "service"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 33
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "boundaries",
+            "gateway",
+            "identity",
+            "service"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 35
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "enforce"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "enforce"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "boundaries",
+            "identity",
+            "service"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 8
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "enforce",
+            "identity",
+            "service"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 16
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "service"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "identity",
+            "service"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "gateway",
+            "identity",
+            "service"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 7
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "authentication",
+            "gateway"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 8
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "authentication",
+            "enforce",
+            "identity",
+            "service"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 7
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `04-arquitetura-segura` (4 distinct keywords; 35 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-IAT-006",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-02",
+      "slice_abbreviation": "IAT",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "structured",
+        "logging",
+        "effective",
+        "configuration",
+        "recording",
+        "make",
+        "rejected",
+        "access",
+        "abuse",
+        "signals",
+        "externally",
+        "visible"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "access",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 14
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "access",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "access",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 16
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "abuse",
+            "access",
+            "logging"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 16
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 8
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "logging",
+            "make"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 6
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 15
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "access",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 9
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 7
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 5
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 10
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "abuse",
+            "access",
+            "configuration",
+            "logging"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 112
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "access",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "access",
+            "logging",
+            "rejected",
+            "visible"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 34
+        }
+      },
+      "match_strength": "strong_other",
+      "refined_classification": "candidate_cross_reference_gap",
+      "classification_rationale": "Strong keyword match in NON-EXPECTED chapter(s): 03-threat-modeling, 12-monitorizacao-operacoes, 14-governanca-contratacao. Expected chapter: `04-arquitetura-segura`. Manual content may cover entity area in wrong chapter; rastreabilidade not exposing + chapter mismatch. Human inspection: verify whether content semantically maps."
+    },
+    {
+      "entity_id": "ACP-ATB-006",
+      "entity_type": "Practice",
+      "slice_id": "ASC-03",
+      "slice_abbreviation": "ATB",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "review",
+        "architecture",
+        "change",
+        "trigger",
+        "discipline",
+        "re-trigger",
+        "meaningful",
+        "thresholds",
+        "crossed",
+        "governance"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "change",
+            "governance",
+            "review",
+            "thresholds"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 14
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "change",
+            "governance",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 38
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "architecture",
+            "change",
+            "re-trigger",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 37
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "architecture",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 22
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "architecture",
+            "governance",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 76
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "governance",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 27
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 27
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "change",
+            "governance",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 13
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "change",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 18
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "governance",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 26
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "governance",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 39
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "change",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 30
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "change",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 37
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "governance",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 42
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "architecture",
+            "change",
+            "governance",
+            "review",
+            "thresholds",
+            "trigger"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 42
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `04-arquitetura-segura` (5 distinct keywords; 76 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-ATB-007",
+      "entity_type": "Practice",
+      "slice_id": "ASC-03",
+      "slice_abbreviation": "ATB",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "validation",
+        "topology",
+        "automatable",
+        "pattern",
+        "validate",
+        "architecture",
+        "conformance",
+        "automatically",
+        "patterns",
+        "constraints",
+        "explicit",
+        "enough"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "pattern"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "architecture",
+            "validation"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "architecture",
+            "pattern",
+            "validation"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 5
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "architecture",
+            "validate"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 33
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "validate"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "patterns",
+            "validation"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 8
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "validation"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "explicit",
+            "topology",
+            "validate"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 13
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "constraints",
+            "validate"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "validate"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "pattern",
+            "patterns"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "pattern",
+            "patterns",
+            "validation"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 7
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "architecture"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        }
+      },
+      "match_strength": "strong_other",
+      "refined_classification": "candidate_cross_reference_gap",
+      "classification_rationale": "Strong keyword match in NON-EXPECTED chapter(s): 03-threat-modeling, 08-iac-infraestrutura, 13-formacao-onboarding. Expected chapter: `04-arquitetura-segura`. Manual content may cover entity area in wrong chapter; rastreabilidade not exposing + chapter mismatch. Human inspection: verify whether content semantically maps."
+    },
+    {
+      "entity_id": "ACP-TSV-007",
+      "entity_type": "Practice",
+      "slice_id": "ASC-04",
+      "slice_abbreviation": "TSV",
+      "expected_chapter": "10-testes-seguranca",
+      "keywords_extracted": [
+        "review",
+        "human",
+        "release",
+        "decision",
+        "test",
+        "signals",
+        "separate",
+        "automated",
+        "signal",
+        "final",
+        "correction",
+        "explicit"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "automated",
+            "final",
+            "release",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 20
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "automated",
+            "final",
+            "release",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 42
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 65
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "decision",
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 29
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "decision",
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 60
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "final",
+            "human",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 59
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 44
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 49
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "explicit",
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 28
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "final",
+            "release"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 16
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 100
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 112
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "release",
+            "test"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "automated",
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 26
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "final",
+            "release",
+            "review",
+            "test"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 44
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `10-testes-seguranca` (4 distinct keywords; 100 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-TMR-006",
+      "entity_type": "Practice",
+      "slice_id": "ASC-05",
+      "slice_abbreviation": "TMR",
+      "expected_chapter": "03-threat-modeling",
+      "keywords_extracted": [
+        "review",
+        "independent",
+        "threat",
+        "approval",
+        "governance",
+        "model",
+        "subject",
+        "models",
+        "go-live",
+        "required"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "go-live",
+            "governance",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 79
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "approval",
+            "go-live",
+            "governance",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 36
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "go-live",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 31
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "go-live",
+            "model",
+            "models",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 381
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "go-live",
+            "governance",
+            "model",
+            "models",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 93
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "approval",
+            "go-live",
+            "governance",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 15
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "go-live",
+            "models",
+            "required",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 12
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "approval",
+            "governance",
+            "model",
+            "required",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 20
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "approval",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 11
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "approval",
+            "go-live",
+            "governance",
+            "required"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 12
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "go-live",
+            "governance",
+            "model",
+            "required",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 36
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "go-live",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 6
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "go-live",
+            "model",
+            "threat"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 6
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "approval",
+            "governance",
+            "model",
+            "models",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 61
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "approval",
+            "go-live",
+            "governance",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 43
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `03-threat-modeling` (5 distinct keywords; 381 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-TMR-007",
+      "entity_type": "Practice",
+      "slice_id": "ASC-05",
+      "slice_abbreviation": "TMR",
+      "expected_chapter": "03-threat-modeling",
+      "keywords_extracted": [
+        "governance",
+        "review",
+        "threat",
+        "model",
+        "artifact",
+        "access",
+        "classification",
+        "retention",
+        "threat-model",
+        "artifacts",
+        "lifecycle",
+        "remains"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "access",
+            "governance",
+            "lifecycle",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 289
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "access",
+            "artifacts",
+            "classification",
+            "governance",
+            "lifecycle",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 32
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "access",
+            "artifact",
+            "lifecycle",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 40
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "access",
+            "artifacts",
+            "lifecycle",
+            "model",
+            "review",
+            "threat",
+            "threat-model"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 391
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "artifacts",
+            "governance",
+            "lifecycle",
+            "model",
+            "review",
+            "threat",
+            "threat-model"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 92
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "artifacts",
+            "governance",
+            "lifecycle",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 20
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "lifecycle",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "artifact",
+            "artifacts",
+            "governance",
+            "lifecycle",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 19
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "access",
+            "lifecycle",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 16
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "artifacts",
+            "governance",
+            "lifecycle",
+            "retention"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 14
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "governance",
+            "lifecycle",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 33
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "artifact",
+            "lifecycle",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 7
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "access",
+            "lifecycle",
+            "model",
+            "threat"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 9
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "access",
+            "classification",
+            "governance",
+            "lifecycle",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 66
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "access",
+            "artifacts",
+            "governance",
+            "lifecycle",
+            "model",
+            "review",
+            "threat"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 86
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `03-threat-modeling` (7 distinct keywords; 391 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-TMR-008",
+      "entity_type": "Practice",
+      "slice_id": "ASC-05",
+      "slice_abbreviation": "TMR",
+      "expected_chapter": "03-threat-modeling",
+      "keywords_extracted": [
+        "requirements",
+        "sources",
+        "governance",
+        "identification",
+        "derivation",
+        "identifying",
+        "internal",
+        "policies",
+        "risk",
+        "assessments",
+        "threat",
+        "models"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "governance",
+            "policies",
+            "risk",
+            "sources",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 71
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "governance",
+            "policies",
+            "requirements",
+            "risk",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 58
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "policies",
+            "requirements",
+            "risk",
+            "threat"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 38
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "models",
+            "policies",
+            "requirements",
+            "risk",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 305
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "governance",
+            "models",
+            "policies",
+            "requirements",
+            "risk",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 78
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "governance",
+            "internal",
+            "policies",
+            "requirements",
+            "risk",
+            "threat"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 31
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "models",
+            "policies",
+            "requirements"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 13
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "governance",
+            "policies",
+            "risk",
+            "threat"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 28
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "policies",
+            "threat"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 38
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "governance",
+            "policies"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 77
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "governance",
+            "policies",
+            "threat"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 37
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "policies",
+            "requirements"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 14
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "policies",
+            "threat"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 15
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "governance",
+            "internal",
+            "models",
+            "policies",
+            "threat"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 62
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "governance",
+            "policies",
+            "risk",
+            "threat"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 49
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `03-threat-modeling` (5 distinct keywords; 305 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-TMR-009",
+      "entity_type": "Practice",
+      "slice_id": "ASC-05",
+      "slice_abbreviation": "TMR",
+      "expected_chapter": "03-threat-modeling",
+      "keywords_extracted": [
+        "requirements",
+        "compliance",
+        "monitoring",
+        "regulatory",
+        "governance",
+        "communication",
+        "communicating",
+        "relevant",
+        "stakeholders",
+        "development",
+        "teams",
+        "third-party"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "compliance",
+            "governance",
+            "monitoring"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 25
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "compliance",
+            "governance",
+            "requirements",
+            "stakeholders"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 49
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "compliance",
+            "development",
+            "requirements"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 21
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "compliance",
+            "development",
+            "requirements"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 13
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "governance",
+            "requirements"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 6
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "compliance",
+            "governance",
+            "requirements",
+            "stakeholders"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 13
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "compliance",
+            "development",
+            "requirements"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 11
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "compliance",
+            "governance",
+            "teams"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "compliance",
+            "development"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 13
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "compliance",
+            "governance",
+            "monitoring"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 13
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "compliance",
+            "development",
+            "governance",
+            "teams",
+            "third-party"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 13
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "development",
+            "requirements"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "compliance",
+            "monitoring",
+            "stakeholders"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 5
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "compliance",
+            "governance",
+            "monitoring",
+            "stakeholders",
+            "teams"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 18
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "compliance",
+            "governance",
+            "monitoring",
+            "stakeholders",
+            "third-party"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 43
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `03-threat-modeling` (3 distinct keywords; 13 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-SPC-005",
+      "entity_type": "Practice",
+      "slice_id": "ASC-06",
+      "slice_abbreviation": "SPC",
+      "expected_chapter": "06-desenvolvimento-seguro",
+      "keywords_extracted": [
+        "secret",
+        "isolation",
+        "technical",
+        "surfaces",
+        "separate",
+        "environment",
+        "workload",
+        "execution",
+        "surface",
+        "compromise",
+        "does",
+        "propagate"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "secret",
+            "surface",
+            "workload"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 4
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "execution"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "compromise",
+            "execution"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "environment",
+            "isolation"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "compromise",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "secret"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "environment",
+            "isolation",
+            "secret"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "environment",
+            "secret",
+            "workload"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 32
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "secret",
+            "workload"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 36
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "environment",
+            "technical"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "environment",
+            "secret",
+            "workload"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "compromise",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "environment",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 8
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "execution",
+            "secret",
+            "workload"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 4
+        }
+      },
+      "match_strength": "strong_other",
+      "refined_classification": "candidate_cross_reference_gap",
+      "classification_rationale": "Strong keyword match in NON-EXPECTED chapter(s): 07-cicd-seguro, 08-iac-infraestrutura, 11-deploy-seguro. Expected chapter: `06-desenvolvimento-seguro`. Manual content may cover entity area in wrong chapter; rastreabilidade not exposing + chapter mismatch. Human inspection: verify whether content semantically maps."
+    },
+    {
+      "entity_id": "ACP-SPC-006",
+      "entity_type": "Practice",
+      "slice_id": "ASC-06",
+      "slice_abbreviation": "SPC",
+      "expected_chapter": "06-desenvolvimento-seguro",
+      "keywords_extracted": [
+        "governance",
+        "configuration",
+        "secret",
+        "keep",
+        "secret-bearing",
+        "reviewable",
+        "permissioned",
+        "attributable",
+        "controlled",
+        "review"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "governance",
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 10
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "governance",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 12
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "review"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 12
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "review"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 6
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "governance",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 18
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "governance",
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 10
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 8
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "governance",
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 10
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 15
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "governance",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "governance",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 8
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "configuration",
+            "secret"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "governance",
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 22
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "governance",
+            "keep",
+            "review",
+            "secret"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 28
+        }
+      },
+      "match_strength": "strong_other",
+      "refined_classification": "candidate_cross_reference_gap",
+      "classification_rationale": "Strong keyword match in NON-EXPECTED chapter(s): 00-fundamentos, 05-dependencias-sbom-sca, 07-cicd-seguro, 13-formacao-onboarding, 14-governanca-contratacao. Expected chapter: `06-desenvolvimento-seguro`. Manual content may cover entity area in wrong chapter; rastreabilidade not exposing + chapter mismatch. Human inspection: verify whether content semantically maps."
+    },
+    {
+      "entity_id": "ACP-IVF-002",
+      "entity_type": "Practice",
+      "slice_id": "ASC-07",
+      "slice_abbreviation": "IVF",
+      "expected_chapter": "06-desenvolvimento-seguro",
+      "keywords_extracted": [
+        "schema",
+        "allowlist",
+        "enforcement",
+        "constrain",
+        "structured",
+        "payloads",
+        "accepted",
+        "values",
+        "explicit",
+        "type",
+        "checks",
+        "validation"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "allowlist",
+            "enforcement"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 7
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "enforcement"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "checks",
+            "enforcement",
+            "payloads",
+            "schema",
+            "type",
+            "validation"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 15
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "validation"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "allowlist",
+            "enforcement"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "allowlist",
+            "enforcement",
+            "type"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 11
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "accepted",
+            "allowlist",
+            "enforcement",
+            "validation"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 13
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "allowlist",
+            "checks",
+            "enforcement",
+            "validation"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 14
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "allowlist",
+            "checks",
+            "enforcement",
+            "explicit",
+            "type"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 74
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "allowlist",
+            "checks",
+            "enforcement"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 61
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "checks",
+            "enforcement",
+            "payloads"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "enforcement"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "schema"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "checks",
+            "enforcement",
+            "schema",
+            "validation",
+            "values"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 12
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "accepted",
+            "enforcement",
+            "schema"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 6
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `06-desenvolvimento-seguro` (4 distinct keywords; 13 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-IVF-006",
+      "entity_type": "Practice",
+      "slice_id": "ASC-07",
+      "slice_abbreviation": "IVF",
+      "expected_chapter": "06-desenvolvimento-seguro",
+      "keywords_extracted": [
+        "error",
+        "governance",
+        "centralized",
+        "centralize",
+        "handling",
+        "testing",
+        "sensitive-error",
+        "logging",
+        "discipline",
+        "failures",
+        "stay",
+        "consistent"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "failures",
+            "governance",
+            "logging",
+            "testing"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 24
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "governance",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 12
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "logging",
+            "testing"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 16
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 10
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "governance",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "governance"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 6
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "error",
+            "governance",
+            "logging",
+            "testing"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 21
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "logging"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 8
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "governance",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 10
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "governance",
+            "logging",
+            "testing"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 35
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "logging",
+            "testing"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 12
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "error",
+            "failures",
+            "logging"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 110
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "error",
+            "governance",
+            "logging",
+            "testing"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 18
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "error",
+            "governance",
+            "logging"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 23
+        }
+      },
+      "match_strength": "strong_other",
+      "refined_classification": "candidate_cross_reference_gap",
+      "classification_rationale": "Strong keyword match in NON-EXPECTED chapter(s): 00-fundamentos, 07-cicd-seguro, 10-testes-seguranca, 12-monitorizacao-operacoes, 13-formacao-onboarding, 14-governanca-contratacao. Expected chapter: `06-desenvolvimento-seguro`. Manual content may cover entity area in wrong chapter; rastreabilidade not exposing + chapter mismatch. Human inspection: verify whether content semantically maps."
+    },
+    {
+      "entity_id": "ACP-IVF-007",
+      "entity_type": "Practice",
+      "slice_id": "ASC-07",
+      "slice_abbreviation": "IVF",
+      "expected_chapter": "06-desenvolvimento-seguro",
+      "keywords_extracted": [
+        "output",
+        "encoding",
+        "rendering",
+        "context-aware",
+        "boundaries",
+        "apply",
+        "escaping",
+        "appropriate",
+        "transport",
+        "interpretation",
+        "context",
+        "html"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "apply",
+            "boundaries"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "boundaries",
+            "output"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 6
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "encoding",
+            "escaping",
+            "html",
+            "output",
+            "transport"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 22
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "boundaries",
+            "context",
+            "context-aware",
+            "html",
+            "output",
+            "rendering"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 24
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "boundaries",
+            "context",
+            "context-aware",
+            "output"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 33
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "html",
+            "output"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 5
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "encoding",
+            "escaping",
+            "html",
+            "output"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 14
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "apply",
+            "output"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "apply",
+            "boundaries",
+            "output"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 89
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "output"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "encoding",
+            "html",
+            "output"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "output"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "apply",
+            "html",
+            "output"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 6
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "apply"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 4
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `06-desenvolvimento-seguro` (4 distinct keywords; 14 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-IVF-004",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-07",
+      "slice_abbreviation": "IVF",
+      "expected_chapter": "06-desenvolvimento-seguro",
+      "keywords_extracted": [
+        "centralized",
+        "error",
+        "redaction",
+        "failures",
+        "handler",
+        "translation",
+        "keep",
+        "client-visible",
+        "controlled",
+        "generic",
+        "resistant",
+        "information"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "failures",
+            "information"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 5
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "information"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "handler"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "information"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 4
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "information"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 3
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "information"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "error",
+            "information"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "information",
+            "redaction"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 9
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "information"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "error",
+            "failures"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "error",
+            "generic"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "error",
+            "keep"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        }
+      },
+      "match_strength": "weak",
+      "refined_classification": "confirmed_content_gap",
+      "classification_rationale": "Weak keyword matches in 12 chapter(s) (below strong threshold 3 keywords + 5 occurrences). Likely content_gap; matches insufficient for claim_gap upgrade. Human inspection: marginal candidate for review."
+    },
+    {
+      "entity_id": "ACM-IVF-005",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-07",
+      "slice_abbreviation": "IVF",
+      "expected_chapter": "06-desenvolvimento-seguro",
+      "keywords_extracted": [
+        "encoder",
+        "context",
+        "appropriate",
+        "rendering",
+        "html",
+        "javascript",
+        "json",
+        "http",
+        "boundary",
+        "output",
+        "context-aware",
+        "selection"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "boundary",
+            "json"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 5
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "output"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 5
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "html",
+            "http",
+            "javascript",
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 24
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "boundary",
+            "context",
+            "context-aware",
+            "html",
+            "json",
+            "output",
+            "rendering"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 24
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "boundary",
+            "context",
+            "context-aware",
+            "output"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 18
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "boundary",
+            "html",
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 45
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "html",
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 19
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 5
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 16
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 23
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "boundary",
+            "html",
+            "http",
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 23
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "http",
+            "json"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 14
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "html",
+            "http",
+            "json",
+            "output"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 9
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "json"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 4
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `06-desenvolvimento-seguro` (3 distinct keywords; 19 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-ITS-005",
+      "entity_type": "Practice",
+      "slice_id": "ASC-08",
+      "slice_abbreviation": "ITS",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "review",
+        "integration",
+        "contract",
+        "change",
+        "assurance",
+        "keep",
+        "interface",
+        "expectations",
+        "approval",
+        "discipline",
+        "explicit",
+        "trust"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "assurance",
+            "change",
+            "contract",
+            "review",
+            "trust"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 12
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "approval",
+            "change",
+            "interface",
+            "review",
+            "trust"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 8
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "change",
+            "interface",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 15
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "interface",
+            "review",
+            "trust"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 25
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "integration",
+            "interface",
+            "review",
+            "trust"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 49
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "approval",
+            "integration",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 5
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "assurance",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 15
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "approval",
+            "change",
+            "review",
+            "trust"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 12
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "approval",
+            "assurance",
+            "change",
+            "explicit",
+            "review",
+            "trust"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 17
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "approval",
+            "trust"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 17
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "integration",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "change",
+            "contract",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 13
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "change"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 3
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "approval",
+            "assurance",
+            "integration",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 15
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "approval",
+            "change",
+            "keep",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 10
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `04-arquitetura-segura` (4 distinct keywords; 49 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-ITS-006",
+      "entity_type": "Practice",
+      "slice_id": "ASC-08",
+      "slice_abbreviation": "ITS",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "audit",
+        "external",
+        "logging",
+        "interaction",
+        "record",
+        "calls",
+        "enough",
+        "trustworthy",
+        "context",
+        "review",
+        "turning",
+        "full"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "audit",
+            "external",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 18
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "audit",
+            "full",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 20
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 27
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "context",
+            "external",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 21
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "calls",
+            "context",
+            "logging",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 33
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "audit",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 9
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "calls",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 20
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 15
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "audit",
+            "logging"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 15
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "full",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 8
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 16
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "audit",
+            "calls",
+            "logging"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 112
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "audit",
+            "calls",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 23
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "audit",
+            "calls",
+            "external",
+            "full",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 25
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `04-arquitetura-segura` (5 distinct keywords; 33 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-ITS-003",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-08",
+      "slice_abbreviation": "ITS",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "transport",
+        "protocol",
+        "restrictions",
+        "enforce",
+        "certificate",
+        "hygiene",
+        "explicit",
+        "integrations",
+        "requirement",
+        "surface",
+        "strong",
+        "certificates"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "surface"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "enforce"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "transport"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "hygiene"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "enforce",
+            "hygiene"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "enforce",
+            "restrictions"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "explicit"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "enforce"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 9
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "restrictions"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "certificate",
+            "certificates",
+            "enforce",
+            "requirement"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 10
+        }
+      },
+      "match_strength": "strong_other",
+      "refined_classification": "candidate_cross_reference_gap",
+      "classification_rationale": "Strong keyword match in NON-EXPECTED chapter(s): 14-governanca-contratacao. Expected chapter: `04-arquitetura-segura`. Manual content may cover entity area in wrong chapter; rastreabilidade not exposing + chapter mismatch. Human inspection: verify whether content semantically maps."
+    },
+    {
+      "entity_id": "ACM-ITS-005",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-08",
+      "slice_abbreviation": "ITS",
+      "expected_chapter": "04-arquitetura-segura",
+      "keywords_extracted": [
+        "logging",
+        "external",
+        "monitoring",
+        "structured",
+        "call",
+        "record",
+        "calls",
+        "enough",
+        "trustworthy",
+        "context",
+        "audit",
+        "review"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "audit",
+            "external",
+            "logging",
+            "monitoring",
+            "review"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 23
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 19
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 27
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "context",
+            "external",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 21
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "calls",
+            "context",
+            "logging",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 33
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "audit",
+            "call",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 10
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "calls",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 20
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 15
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "monitoring"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 19
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "logging",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 7
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "audit",
+            "logging",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 16
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "audit",
+            "call",
+            "calls",
+            "logging",
+            "monitoring"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 116
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "audit",
+            "calls",
+            "logging",
+            "monitoring",
+            "review"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 25
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "audit",
+            "calls",
+            "external",
+            "logging",
+            "monitoring",
+            "review"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 27
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `04-arquitetura-segura` (5 distinct keywords; 33 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-RPR-002",
+      "entity_type": "Practice",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "verified",
+        "provenance",
+        "artifact",
+        "promotion",
+        "promote",
+        "artifacts",
+        "whose",
+        "identity",
+        "signature",
+        "been",
+        "release",
+        "time"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "identity",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "artifacts",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 37
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "artifact",
+            "release"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 42
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "artifacts",
+            "provenance",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 19
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "artifacts",
+            "identity",
+            "provenance",
+            "release",
+            "signature",
+            "time"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 39
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "artifacts",
+            "promotion",
+            "provenance",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 54
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "provenance",
+            "release"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 28
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "artifact",
+            "artifacts",
+            "provenance",
+            "release",
+            "signature",
+            "time",
+            "verified"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 53
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "identity",
+            "provenance",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 20
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "artifacts",
+            "identity",
+            "provenance",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 22
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "release",
+            "signature",
+            "time"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 81
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "artifact",
+            "identity",
+            "promotion",
+            "provenance",
+            "release"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 108
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "identity",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 18
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "release"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 5
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "artifacts",
+            "identity",
+            "release",
+            "verified"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 34
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (5 distinct keywords; 108 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-RPR-003",
+      "entity_type": "Practice",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "gates",
+        "staging",
+        "validation",
+        "pre-promotion",
+        "block",
+        "promotion",
+        "until",
+        "required",
+        "pass",
+        "completed",
+        "policy",
+        "gate"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "staging"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 45
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "staging"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 35
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "block",
+            "gate",
+            "gates",
+            "policy",
+            "staging",
+            "validation"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 38
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "staging",
+            "validation"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 25
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "pass",
+            "policy",
+            "staging"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 28
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "promotion",
+            "staging"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 42
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "required",
+            "validation"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 47
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "pass",
+            "policy",
+            "required",
+            "staging",
+            "validation"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 100
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "block",
+            "gate",
+            "gates",
+            "policy",
+            "staging"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 105
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "required"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 44
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "pass",
+            "policy",
+            "required",
+            "staging"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 105
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "promotion",
+            "staging"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 117
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "gates",
+            "policy",
+            "staging"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 18
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "policy",
+            "staging",
+            "validation"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 31
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "completed",
+            "gate",
+            "gates",
+            "pass",
+            "policy",
+            "staging"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 30
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (5 distinct keywords; 117 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-RPR-005",
+      "entity_type": "Practice",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "rollback",
+        "tested",
+        "discipline",
+        "keep",
+        "procedures",
+        "specific",
+        "time-bounded",
+        "needed",
+        "production",
+        "rollout",
+        "recovery",
+        "runtime"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "rollback",
+            "runtime"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 24
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "recovery",
+            "rollback",
+            "runtime"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 11
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "runtime"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 6
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "specific"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "runtime"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 3
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "rollback",
+            "rollout",
+            "runtime"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 22
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "runtime"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "rollback",
+            "runtime"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 3
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "production",
+            "rollback",
+            "rollout",
+            "runtime"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 24
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "production",
+            "rollback",
+            "rollout",
+            "runtime"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 92
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "runtime"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 15
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "production",
+            "rollback",
+            "rollout",
+            "runtime"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 198
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "rollback",
+            "runtime"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "rollback",
+            "rollout",
+            "runtime",
+            "specific"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 18
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "keep",
+            "rollback",
+            "runtime"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (4 distinct keywords; 198 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-RPR-006",
+      "entity_type": "Practice",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "rollout",
+        "progressive",
+        "containment",
+        "introduce",
+        "high-impact",
+        "change",
+        "gradually",
+        "contain",
+        "unsafe",
+        "requiring",
+        "immediate",
+        "full"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "change"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "change",
+            "full"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 2
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "change"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "rollout"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "change"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "change",
+            "rollout",
+            "unsafe"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "rollout"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "full"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "change",
+            "progressive",
+            "rollout"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 29
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "change"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 3
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "rollout"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 2
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "change",
+            "full",
+            "immediate"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 4
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (3 distinct keywords; 29 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-RPR-008",
+      "entity_type": "Practice",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "baseline",
+        "define",
+        "hardened",
+        "profiles",
+        "security-relevant",
+        "components",
+        "maintain",
+        "deployments",
+        "start",
+        "known",
+        "posture",
+        "policy"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 28
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 34
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy",
+            "start"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 34
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 22
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 55
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "hardened",
+            "known",
+            "policy"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 39
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 27
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "hardened",
+            "policy"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 33
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 97
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "hardened",
+            "policy"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 60
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy",
+            "profiles"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 50
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 27
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy",
+            "start"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 37
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "deployments",
+            "hardened",
+            "policy",
+            "start"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 36
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "baseline",
+            "components",
+            "define",
+            "policy"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 33
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (4 distinct keywords; 27 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-RPR-009",
+      "entity_type": "Practice",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "review",
+        "security-relevant",
+        "overrides",
+        "promotion",
+        "deployment",
+        "configuration",
+        "prevent",
+        "uncontrolled",
+        "change",
+        "posture",
+        "governance",
+        "override"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "change",
+            "deployment",
+            "governance",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 11
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "change",
+            "governance",
+            "override",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 14
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "change",
+            "deployment",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "review"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 6
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "governance",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 18
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "governance",
+            "promotion",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "review"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 6
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "change",
+            "deployment",
+            "governance",
+            "override",
+            "review"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 9
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "change",
+            "deployment",
+            "overrides",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 15
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "deployment",
+            "governance"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 6
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "governance",
+            "override",
+            "overrides",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 14
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "change",
+            "deployment",
+            "promotion",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 16
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "change",
+            "configuration"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "deployment",
+            "governance",
+            "prevent",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 22
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "change",
+            "governance",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 26
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (4 distinct keywords; 16 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-RPR-010",
+      "entity_type": "Practice",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "review",
+        "record",
+        "periodically",
+        "intended",
+        "baseline",
+        "exceptions",
+        "against",
+        "approved",
+        "deviations",
+        "whether",
+        "current",
+        "still"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 22
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 9
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 21
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 20
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "baseline",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 49
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "baseline",
+            "exceptions",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 12
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "approved",
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 4
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "baseline",
+            "exceptions",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 28
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "baseline",
+            "exceptions"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 12
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "baseline",
+            "exceptions",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "baseline",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 9
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "baseline"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 11
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 15
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "approved",
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 16
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (3 distinct keywords; 9 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-RPR-002",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "approval",
+        "gates",
+        "promotion",
+        "gate",
+        "separation",
+        "signal",
+        "decision",
+        "keep",
+        "explicit",
+        "human",
+        "accountability",
+        "irreversible"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "accountability",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 34
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "approval",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 22
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 21
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "decision",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 20
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "decision",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 20
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "approval",
+            "gate",
+            "gates",
+            "human",
+            "promotion"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 26
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "accountability",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 25
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "approval",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 76
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "accountability",
+            "approval",
+            "explicit",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 33
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "approval",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 8
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "accountability",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 39
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "gate",
+            "gates",
+            "promotion"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 58
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "gates"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 1
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "approval",
+            "gate",
+            "gates"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 11
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "accountability",
+            "approval",
+            "gate",
+            "gates",
+            "keep"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 13
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (3 distinct keywords; 58 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-RPR-003",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "provenance",
+        "signature",
+        "verification",
+        "promotion",
+        "promote",
+        "artifacts",
+        "whose",
+        "identity",
+        "been",
+        "verified",
+        "release",
+        "time"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "identity",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "artifacts",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 37
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "release",
+            "verification"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 46
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "artifacts",
+            "provenance",
+            "release",
+            "time",
+            "verification"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 20
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "artifacts",
+            "identity",
+            "provenance",
+            "release",
+            "signature",
+            "time"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 39
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "artifacts",
+            "promotion",
+            "provenance",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 54
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "provenance",
+            "release",
+            "verification"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 29
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "artifacts",
+            "provenance",
+            "release",
+            "signature",
+            "time",
+            "verified"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 52
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "identity",
+            "provenance",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 20
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "artifacts",
+            "identity",
+            "provenance",
+            "release",
+            "time",
+            "verification"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 25
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "release",
+            "signature",
+            "time",
+            "verification"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 83
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "identity",
+            "promotion",
+            "provenance",
+            "release",
+            "verification"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 109
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "identity",
+            "release",
+            "time"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 18
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "release"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 5
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "artifacts",
+            "identity",
+            "release",
+            "verified"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 34
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (5 distinct keywords; 109 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-RPR-005",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "pipeline",
+        "deployment",
+        "traceability",
+        "records",
+        "audit",
+        "decisions",
+        "environment",
+        "state",
+        "deploy",
+        "manifests",
+        "logs",
+        "keep"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "deployment",
+            "logs",
+            "pipeline"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 84
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "logs",
+            "pipeline"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 43
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "deploy",
+            "deployment",
+            "logs",
+            "pipeline",
+            "traceability"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 111
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "decisions",
+            "logs",
+            "pipeline",
+            "traceability"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 30
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "deploy",
+            "environment",
+            "logs",
+            "pipeline",
+            "records"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 35
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "logs",
+            "manifests",
+            "pipeline",
+            "traceability"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 67
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "deploy",
+            "logs",
+            "pipeline"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 45
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "deployment",
+            "environment",
+            "logs",
+            "pipeline"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 359
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "deployment",
+            "environment",
+            "logs",
+            "manifests",
+            "pipeline",
+            "state"
+          ],
+          "n_keywords_matched": 8,
+          "total_occurrences": 156
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "deployment",
+            "logs",
+            "manifests",
+            "pipeline"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 172
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "deploy",
+            "environment",
+            "logs",
+            "pipeline"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 85
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "deployment",
+            "environment",
+            "logs",
+            "pipeline"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 332
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "logs",
+            "pipeline"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 154
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "deployment",
+            "environment",
+            "logs",
+            "manifests",
+            "pipeline"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 52
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "audit",
+            "deploy",
+            "keep",
+            "logs",
+            "pipeline",
+            "records"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 84
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (6 distinct keywords; 332 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-RPR-010",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-09",
+      "slice_abbreviation": "RPR",
+      "expected_chapter": "11-deploy-seguro",
+      "keywords_extracted": [
+        "review",
+        "baseline",
+        "deviations",
+        "change",
+        "approved",
+        "periodically",
+        "security-relevant",
+        "record",
+        "whether",
+        "current",
+        "still",
+        "matches"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "baseline",
+            "change",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 23
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "baseline",
+            "change",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 10
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "baseline",
+            "change",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 22
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 20
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "baseline",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 49
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "approved",
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "baseline",
+            "change",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 5
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "baseline",
+            "change",
+            "review"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 33
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "baseline"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 11
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 13
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "baseline",
+            "change",
+            "record",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 18
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "baseline",
+            "change"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 14
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "baseline",
+            "review"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 15
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "approved",
+            "baseline",
+            "change",
+            "review"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 17
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `11-deploy-seguro` (4 distinct keywords; 18 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACP-SLG-005",
+      "entity_type": "Practice",
+      "slice_id": "ASC-10",
+      "slice_abbreviation": "SLG",
+      "expected_chapter": "12-monitorizacao-operacoes",
+      "keywords_extracted": [
+        "logging",
+        "pipeline",
+        "health",
+        "records",
+        "visibility",
+        "detect",
+        "stops",
+        "working",
+        "absence",
+        "cannot",
+        "silently",
+        "destroy"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "destroy",
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 31
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 21
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "detect",
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 45
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 21
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "logging",
+            "pipeline",
+            "records"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 27
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "pipeline"
+          ],
+          "n_keywords_matched": 1,
+          "total_occurrences": 34
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "detect",
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 37
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "detect",
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 246
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "destroy",
+            "detect",
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 79
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "destroy",
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 70
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 48
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 44
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "detect",
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 129
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "logging",
+            "pipeline"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 14
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "cannot",
+            "health",
+            "logging",
+            "pipeline",
+            "records"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 42
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `12-monitorizacao-operacoes` (3 distinct keywords; 129 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-SLG-002",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-10",
+      "slice_abbreviation": "SLG",
+      "expected_chapter": "12-monitorizacao-operacoes",
+      "keywords_extracted": [
+        "ingestion",
+        "central",
+        "forwarding",
+        "records",
+        "normalization",
+        "emit",
+        "structured",
+        "logs",
+        "consistent",
+        "fields",
+        "rather",
+        "fragmented"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "central",
+            "logs"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 11
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 8
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "central",
+            "forwarding",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 80
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 10
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "ingestion",
+            "logs",
+            "normalization",
+            "records"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 14
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 13
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 15
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 91
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 55
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 43
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 37
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 34
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "central",
+            "forwarding",
+            "ingestion",
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 134
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "logs",
+            "normalization"
+          ],
+          "n_keywords_matched": 2,
+          "total_occurrences": 21
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "central",
+            "logs",
+            "normalization",
+            "records"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 32
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `12-monitorizacao-operacoes` (5 distinct keywords; 134 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-SLG-005",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-10",
+      "slice_abbreviation": "SLG",
+      "expected_chapter": "12-monitorizacao-operacoes",
+      "keywords_extracted": [
+        "event",
+        "catalog",
+        "coverage",
+        "verification",
+        "define",
+        "maintain",
+        "security-relevant",
+        "always",
+        "present",
+        "audit",
+        "trail",
+        "documented"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "audit",
+            "define",
+            "event"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 7
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define",
+            "event",
+            "trail"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 44
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "coverage",
+            "define",
+            "verification"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 19
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "catalog",
+            "coverage",
+            "define",
+            "event",
+            "verification"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 10
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "coverage",
+            "define",
+            "event"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 14
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define",
+            "event"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 15
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "coverage",
+            "define",
+            "verification"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 7
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define",
+            "trail"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 18
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 17
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "audit",
+            "catalog",
+            "coverage",
+            "define",
+            "event",
+            "verification"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 31
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "coverage",
+            "define",
+            "verification"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 28
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define",
+            "trail",
+            "verification"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 15
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define",
+            "event",
+            "trail"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 21
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 18
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "audit",
+            "coverage",
+            "define",
+            "event",
+            "trail"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 29
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `12-monitorizacao-operacoes` (5 distinct keywords; 21 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    },
+    {
+      "entity_id": "ACM-SLG-006",
+      "entity_type": "Mechanism",
+      "slice_id": "ASC-10",
+      "slice_abbreviation": "SLG",
+      "expected_chapter": "12-monitorizacao-operacoes",
+      "keywords_extracted": [
+        "retention",
+        "lifecycle",
+        "management",
+        "archive",
+        "purge",
+        "security-relevant",
+        "logs",
+        "automated",
+        "policies",
+        "siem",
+        "rules",
+        "storage"
+      ],
+      "per_chapter_matches": {
+        "00-fundamentos": {
+          "keywords_matched": [
+            "automated",
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "siem"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 234
+        },
+        "01-classificacao-aplicacoes": {
+          "keywords_matched": [
+            "automated",
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "siem"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 37
+        },
+        "02-requisitos-seguranca": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "siem",
+            "storage"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 100
+        },
+        "03-threat-modeling": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "siem"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 26
+        },
+        "04-arquitetura-segura": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "policies"
+          ],
+          "n_keywords_matched": 3,
+          "total_occurrences": 34
+        },
+        "05-dependencias-sbom-sca": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "siem"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 41
+        },
+        "06-desenvolvimento-seguro": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "policies",
+            "rules"
+          ],
+          "n_keywords_matched": 4,
+          "total_occurrences": 31
+        },
+        "07-cicd-seguro": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "rules"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 111
+        },
+        "08-iac-infraestrutura": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "storage"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 92
+        },
+        "09-containers-imagens": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "policies",
+            "retention",
+            "siem",
+            "storage"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 133
+        },
+        "10-testes-seguranca": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "policies",
+            "rules",
+            "siem"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 56
+        },
+        "11-deploy-seguro": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "siem"
+          ],
+          "n_keywords_matched": 5,
+          "total_occurrences": 62
+        },
+        "12-monitorizacao-operacoes": {
+          "keywords_matched": [
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "rules",
+            "siem"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 223
+        },
+        "13-formacao-onboarding": {
+          "keywords_matched": [
+            "automated",
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "storage"
+          ],
+          "n_keywords_matched": 6,
+          "total_occurrences": 47
+        },
+        "14-governanca-contratacao": {
+          "keywords_matched": [
+            "archive",
+            "lifecycle",
+            "logs",
+            "management",
+            "policies",
+            "siem",
+            "storage"
+          ],
+          "n_keywords_matched": 7,
+          "total_occurrences": 81
+        }
+      },
+      "match_strength": "strong_expected",
+      "refined_classification": "candidate_claim_gap",
+      "classification_rationale": "Strong keyword match in EXPECTED chapter `12-monitorizacao-operacoes` (6 distinct keywords; 223 occurrences). Manual prose covers entity area but rastreabilidade does not expose it. Human inspection: verify whether prose semantically maps to this entity."
+    }
+  ]
+}

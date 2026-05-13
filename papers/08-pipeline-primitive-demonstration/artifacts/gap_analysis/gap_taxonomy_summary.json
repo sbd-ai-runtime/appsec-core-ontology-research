@@ -1,0 +1,1069 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-05-11T08:10:17Z",
+    "v1_anchor_tag": "ontology-v1.1-fair-baseline",
+    "v1_anchor_commit_declared": "84fe8bf",
+    "v1_anchor_commit_observed": "a9dde33",
+    "substrate_anchor_tag": "cycle-a-frozen-2026-05-08",
+    "substrate_anchor_commit_declared": "0a1b897",
+    "substrate_supplier_sha256": "596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04",
+    "manual_anchor_commit_declared": "b1d129f0",
+    "manual_anchor_commit_observed": "b1d129f0",
+    "codex_kg_commit_observed": "c450c4c",
+    "per_entity_map_commit": "aa3c13c",
+    "n_v1_entities": 259,
+    "n_codex_linkage_records": 2835,
+    "n_manual_sections": 322
+  },
+  "v1_entity_total": 259,
+  "v1_entity_covered": 164,
+  "v1_entity_coverage_pct": 0.6332046332046332,
+  "v1_covered_specific": 89,
+  "v1_covered_via_slice": 75,
+  "v1_entity_gap": 95,
+  "gap_taxonomy": {
+    "content_gap": 38,
+    "scope_exclusion": 57
+  },
+  "per_slice_breakdown": {
+    "ASC-01": {
+      "total": 30,
+      "covered_specific": 10,
+      "covered_via_slice": 7,
+      "gap": 13,
+      "gap_classifications": {
+        "content_gap": 3,
+        "scope_exclusion": 10
+      },
+      "by_type": {
+        "ControlObjective": 7,
+        "Practice": 7,
+        "Mechanism": 6,
+        "Artifact": 10
+      },
+      "by_type_covered": {
+        "ControlObjective": 7,
+        "Practice": 5,
+        "Mechanism": 5,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.5666666666666667
+    },
+    "ASC-02": {
+      "total": 25,
+      "covered_specific": 10,
+      "covered_via_slice": 7,
+      "gap": 8,
+      "gap_classifications": {
+        "content_gap": 2,
+        "scope_exclusion": 6
+      },
+      "by_type": {
+        "ControlObjective": 7,
+        "Practice": 6,
+        "Mechanism": 6,
+        "Artifact": 6
+      },
+      "by_type_covered": {
+        "ControlObjective": 7,
+        "Practice": 6,
+        "Mechanism": 4,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.68
+    },
+    "ASC-03": {
+      "total": 23,
+      "covered_specific": 10,
+      "covered_via_slice": 7,
+      "gap": 6,
+      "gap_classifications": {
+        "content_gap": 2,
+        "scope_exclusion": 4
+      },
+      "by_type": {
+        "ControlObjective": 7,
+        "Practice": 7,
+        "Mechanism": 5,
+        "Artifact": 4
+      },
+      "by_type_covered": {
+        "ControlObjective": 7,
+        "Practice": 5,
+        "Mechanism": 5,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.7391304347826086
+    },
+    "ASC-04": {
+      "total": 25,
+      "covered_specific": 11,
+      "covered_via_slice": 7,
+      "gap": 7,
+      "gap_classifications": {
+        "content_gap": 1,
+        "scope_exclusion": 6
+      },
+      "by_type": {
+        "ControlObjective": 7,
+        "Practice": 7,
+        "Mechanism": 5,
+        "Artifact": 6
+      },
+      "by_type_covered": {
+        "ControlObjective": 7,
+        "Practice": 6,
+        "Mechanism": 5,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.72
+    },
+    "ASC-05": {
+      "total": 29,
+      "covered_specific": 13,
+      "covered_via_slice": 8,
+      "gap": 8,
+      "gap_classifications": {
+        "content_gap": 4,
+        "scope_exclusion": 4
+      },
+      "by_type": {
+        "ControlObjective": 8,
+        "Practice": 9,
+        "Mechanism": 8,
+        "Artifact": 4
+      },
+      "by_type_covered": {
+        "ControlObjective": 8,
+        "Practice": 5,
+        "Mechanism": 8,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.7241379310344828
+    },
+    "ASC-06": {
+      "total": 19,
+      "covered_specific": 8,
+      "covered_via_slice": 7,
+      "gap": 4,
+      "gap_classifications": {
+        "content_gap": 2,
+        "scope_exclusion": 2
+      },
+      "by_type": {
+        "ControlObjective": 7,
+        "Practice": 6,
+        "Mechanism": 4,
+        "Artifact": 2
+      },
+      "by_type_covered": {
+        "ControlObjective": 7,
+        "Practice": 4,
+        "Mechanism": 4,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.7894736842105263
+    },
+    "ASC-07": {
+      "total": 26,
+      "covered_specific": 7,
+      "covered_via_slice": 8,
+      "gap": 11,
+      "gap_classifications": {
+        "content_gap": 5,
+        "scope_exclusion": 6
+      },
+      "by_type": {
+        "ControlObjective": 8,
+        "Practice": 7,
+        "Mechanism": 5,
+        "Artifact": 6
+      },
+      "by_type_covered": {
+        "ControlObjective": 8,
+        "Practice": 4,
+        "Mechanism": 3,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.5769230769230769
+    },
+    "ASC-08": {
+      "total": 23,
+      "covered_specific": 7,
+      "covered_via_slice": 7,
+      "gap": 9,
+      "gap_classifications": {
+        "content_gap": 4,
+        "scope_exclusion": 5
+      },
+      "by_type": {
+        "ControlObjective": 7,
+        "Practice": 6,
+        "Mechanism": 5,
+        "Artifact": 5
+      },
+      "by_type_covered": {
+        "ControlObjective": 7,
+        "Practice": 4,
+        "Mechanism": 3,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.6086956521739131
+    },
+    "ASC-09": {
+      "total": 39,
+      "covered_specific": 6,
+      "covered_via_slice": 10,
+      "gap": 23,
+      "gap_classifications": {
+        "content_gap": 11,
+        "scope_exclusion": 12
+      },
+      "by_type": {
+        "ControlObjective": 10,
+        "Practice": 9,
+        "Mechanism": 8,
+        "Artifact": 12
+      },
+      "by_type_covered": {
+        "ControlObjective": 10,
+        "Practice": 2,
+        "Mechanism": 4,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.41025641025641024
+    },
+    "ASC-10": {
+      "total": 20,
+      "covered_specific": 7,
+      "covered_via_slice": 7,
+      "gap": 6,
+      "gap_classifications": {
+        "content_gap": 4,
+        "scope_exclusion": 2
+      },
+      "by_type": {
+        "ControlObjective": 7,
+        "Practice": 5,
+        "Mechanism": 6,
+        "Artifact": 2
+      },
+      "by_type_covered": {
+        "ControlObjective": 7,
+        "Practice": 4,
+        "Mechanism": 3,
+        "Artifact": 0
+      },
+      "coverage_pct": 0.7
+    }
+  },
+  "per_substrate_source_breakdown": {
+    "cis_controls": {
+      "n_linkage_records": 148,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-ATB-001",
+        "ACM-ATB-002",
+        "ACM-IAT-001",
+        "ACM-IAT-002",
+        "ACM-IAT-003",
+        "ACM-IAT-004",
+        "ACM-ITS-001",
+        "ACM-ITS-002",
+        "ACM-IVF-003",
+        "ACM-RPR-008",
+        "ACM-SCBI-002",
+        "ACM-SCBI-005",
+        "ACM-SLG-001",
+        "ACM-SPC-001",
+        "ACM-SPC-002",
+        "ACM-TMR-002",
+        "ACM-TMR-003",
+        "ACM-TMR-004",
+        "ACM-TMR-005",
+        "ACM-TMR-006",
+        "ACM-TSV-001",
+        "ACM-TSV-003",
+        "ACM-TSV-004",
+        "ACO-ATB",
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SLG",
+        "ACO-SPC",
+        "ACO-TMR",
+        "ACP-RPR-004",
+        "ACP-SCBI-003",
+        "ACP-SLG-001",
+        "ACP-SLG-004",
+        "ACP-TMR-005"
+      ],
+      "n_v1_anchors_supported": 36
+    },
+    "enisa_ai_multilayer": {
+      "n_linkage_records": 4,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "11-deploy-seguro"
+      ],
+      "n_manual_chapters_supported": 3,
+      "v1_anchors_supported": [
+        "ACM-TMR-004",
+        "ACM-TMR-006",
+        "ACO-ATB",
+        "ACO-TMR"
+      ],
+      "n_v1_anchors_supported": 4
+    },
+    "eu_cra": {
+      "n_linkage_records": 4,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca"
+      ],
+      "n_manual_chapters_supported": 3,
+      "v1_anchors_supported": [
+        "ACM-SCBI-005",
+        "ACM-TMR-003",
+        "ACM-TSV-003",
+        "ACO-SCBI"
+      ],
+      "n_v1_anchors_supported": 4
+    },
+    "eu_dora": {
+      "n_linkage_records": 11,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 5,
+      "v1_anchors_supported": [
+        "ACM-RPR-001",
+        "ACM-SLG-004",
+        "ACM-SPC-002",
+        "ACM-TMR-001",
+        "ACM-TSV-001",
+        "ACM-TSV-003",
+        "ACP-SLG-001"
+      ],
+      "n_v1_anchors_supported": 7
+    },
+    "eu_nis2": {
+      "n_linkage_records": 4,
+      "manual_chapters_supported": [
+        "03-threat-modeling"
+      ],
+      "n_manual_chapters_supported": 1,
+      "v1_anchors_supported": [
+        "ACM-ATB-005",
+        "ACM-TMR-001",
+        "ACM-TSV-001",
+        "ACP-SLG-001"
+      ],
+      "n_v1_anchors_supported": 4
+    },
+    "gdpr": {
+      "n_linkage_records": 3,
+      "manual_chapters_supported": [
+        "04-arquitetura-segura",
+        "06-desenvolvimento-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 3,
+      "v1_anchors_supported": [
+        "ACM-SPC-001",
+        "ACM-TMR-001"
+      ],
+      "n_v1_anchors_supported": 2
+    },
+    "hipaa": {
+      "n_linkage_records": 19,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 5,
+      "v1_anchors_supported": [
+        "ACM-IAT-001",
+        "ACM-IAT-003",
+        "ACM-IVF-003",
+        "ACM-SCBI-004",
+        "ACM-SLG-003",
+        "ACM-SPC-001",
+        "ACM-TMR-003",
+        "ACM-TSV-001",
+        "ACO-IAT",
+        "ACO-RPR",
+        "ACO-SLG",
+        "ACP-SLG-004"
+      ],
+      "n_v1_anchors_supported": 12
+    },
+    "mitre_atlas": {
+      "n_linkage_records": 180,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACO-ATB",
+        "ACO-IAT",
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SLG",
+        "ACO-SPC",
+        "ACO-TMR",
+        "ACO-TSV"
+      ],
+      "n_v1_anchors_supported": 10
+    },
+    "mitre_capec": {
+      "n_linkage_records": 355,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-ATB-002",
+        "ACM-IAT-001",
+        "ACM-IAT-002",
+        "ACM-IAT-004",
+        "ACM-ITS-001",
+        "ACM-ITS-004",
+        "ACM-IVF-001",
+        "ACM-IVF-002",
+        "ACM-IVF-003",
+        "ACM-SCBI-001",
+        "ACM-SCBI-004",
+        "ACM-SPC-001",
+        "ACM-TSV-001",
+        "ACO-ATB",
+        "ACO-IAT",
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SPC",
+        "ACO-TMR",
+        "ACO-TSV",
+        "ACP-RPR-004",
+        "ACP-SCBI-003"
+      ],
+      "n_v1_anchors_supported": 24
+    },
+    "mitre_cwe": {
+      "n_linkage_records": 152,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-ATB-002",
+        "ACM-IAT-001",
+        "ACM-IAT-002",
+        "ACM-ITS-001",
+        "ACM-IVF-001",
+        "ACM-IVF-002",
+        "ACM-IVF-003",
+        "ACM-RPR-001",
+        "ACM-RPR-008",
+        "ACM-SPC-001",
+        "ACM-SPC-003",
+        "ACO-ATB",
+        "ACO-IAT",
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SLG",
+        "ACO-SPC",
+        "ACO-TMR",
+        "ACO-TSV",
+        "ACP-SCBI-003",
+        "ACP-SLG-001"
+      ],
+      "n_v1_anchors_supported": 23
+    },
+    "nist_ai_100_2": {
+      "n_linkage_records": 38,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro"
+      ],
+      "n_manual_chapters_supported": 6,
+      "v1_anchors_supported": [
+        "ACO-ATB",
+        "ACO-IAT",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SPC",
+        "ACO-TMR",
+        "ACO-TSV"
+      ],
+      "n_v1_anchors_supported": 8
+    },
+    "nist_ai_rmf": {
+      "n_linkage_records": 31,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro"
+      ],
+      "n_manual_chapters_supported": 6,
+      "v1_anchors_supported": [
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SPC",
+        "ACO-TMR",
+        "ACO-TSV"
+      ],
+      "n_v1_anchors_supported": 7
+    },
+    "nist_sp_800_53": {
+      "n_linkage_records": 989,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACO-ATB",
+        "ACO-IAT",
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SLG",
+        "ACO-SPC",
+        "ACO-TMR",
+        "ACO-TSV",
+        "ACP-ATB-001",
+        "ACP-ATB-002",
+        "ACP-ATB-003",
+        "ACP-ATB-004",
+        "ACP-ATB-005",
+        "ACP-IAT-001",
+        "ACP-IAT-002",
+        "ACP-IAT-003",
+        "ACP-IAT-004",
+        "ACP-IAT-005",
+        "ACP-IAT-006",
+        "ACP-ITS-001",
+        "ACP-ITS-002",
+        "ACP-ITS-003",
+        "ACP-ITS-004",
+        "ACP-IVF-001",
+        "ACP-IVF-003",
+        "ACP-IVF-004",
+        "ACP-IVF-005",
+        "ACP-RPR-001",
+        "ACP-RPR-004",
+        "ACP-SCBI-001",
+        "ACP-SCBI-002",
+        "ACP-SCBI-003",
+        "ACP-SCBI-004",
+        "ACP-SCBI-006",
+        "ACP-SLG-001",
+        "ACP-SLG-002",
+        "ACP-SLG-003",
+        "ACP-SLG-004",
+        "ACP-SPC-001",
+        "ACP-SPC-002",
+        "ACP-SPC-003",
+        "ACP-SPC-004",
+        "ACP-TMR-001",
+        "ACP-TMR-002",
+        "ACP-TMR-003",
+        "ACP-TMR-004",
+        "ACP-TMR-005",
+        "ACP-TSV-001",
+        "ACP-TSV-002",
+        "ACP-TSV-003",
+        "ACP-TSV-004",
+        "ACP-TSV-005",
+        "ACP-TSV-006"
+      ],
+      "n_v1_anchors_supported": 55
+    },
+    "nist_ssdf": {
+      "n_linkage_records": 55,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-ATB-004",
+        "ACM-IAT-002",
+        "ACM-IVF-003",
+        "ACM-RPR-008",
+        "ACM-SCBI-001",
+        "ACM-SCBI-004",
+        "ACM-TMR-001",
+        "ACM-TMR-002",
+        "ACM-TMR-003",
+        "ACM-TMR-004",
+        "ACM-TMR-006",
+        "ACM-TMR-007",
+        "ACM-TMR-008",
+        "ACM-TSV-001",
+        "ACM-TSV-003",
+        "ACM-TSV-004",
+        "ACP-RPR-004",
+        "ACP-SCBI-003"
+      ],
+      "n_v1_anchors_supported": 18
+    },
+    "owasp_asvs": {
+      "n_linkage_records": 250,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 6,
+      "v1_anchors_supported": [
+        "ACM-ATB-001",
+        "ACM-ATB-003",
+        "ACM-IAT-001",
+        "ACM-IAT-002",
+        "ACM-IAT-003",
+        "ACM-IAT-004",
+        "ACM-ITS-001",
+        "ACM-ITS-002",
+        "ACM-IVF-001",
+        "ACM-IVF-002",
+        "ACM-IVF-003",
+        "ACM-RPR-008",
+        "ACM-SCBI-002",
+        "ACM-SLG-001",
+        "ACM-SLG-003",
+        "ACM-SPC-001",
+        "ACM-SPC-002",
+        "ACO-IAT",
+        "ACO-ITS",
+        "ACO-RPR",
+        "ACO-SLG",
+        "ACO-SPC",
+        "ACP-SLG-001"
+      ],
+      "n_v1_anchors_supported": 23
+    },
+    "owasp_dsomm": {
+      "n_linkage_records": 170,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-ATB-002",
+        "ACM-ATB-003",
+        "ACM-IAT-001",
+        "ACM-IAT-002",
+        "ACM-ITS-001",
+        "ACM-ITS-002",
+        "ACM-IVF-001",
+        "ACM-IVF-002",
+        "ACM-IVF-003",
+        "ACM-RPR-001",
+        "ACM-RPR-004",
+        "ACM-SCBI-001",
+        "ACM-SCBI-002",
+        "ACM-SCBI-003",
+        "ACM-SCBI-004",
+        "ACM-SCBI-005",
+        "ACM-SLG-001",
+        "ACM-SLG-003",
+        "ACM-SPC-001",
+        "ACM-TMR-001",
+        "ACM-TMR-002",
+        "ACM-TMR-003",
+        "ACM-TMR-004",
+        "ACM-TMR-005",
+        "ACM-TMR-006",
+        "ACM-TMR-007",
+        "ACM-TSV-001",
+        "ACM-TSV-003",
+        "ACM-TSV-004",
+        "ACP-RPR-004",
+        "ACP-SLG-001"
+      ],
+      "n_v1_anchors_supported": 31
+    },
+    "owasp_llm_top_10": {
+      "n_linkage_records": 9,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro"
+      ],
+      "n_manual_chapters_supported": 4,
+      "v1_anchors_supported": [
+        "ACO-IAT",
+        "ACO-IVF",
+        "ACO-SCBI",
+        "ACO-SPC",
+        "ACO-TMR"
+      ],
+      "n_v1_anchors_supported": 5
+    },
+    "owasp_mcp": {
+      "n_linkage_records": 23,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca"
+      ],
+      "n_manual_chapters_supported": 5,
+      "v1_anchors_supported": [
+        "ACM-ATB-002",
+        "ACM-IAT-001",
+        "ACM-IAT-002",
+        "ACM-IVF-001",
+        "ACM-SCBI-002",
+        "ACM-SCBI-004",
+        "ACM-SLG-001",
+        "ACM-SPC-001",
+        "ACM-SPC-002",
+        "ACO-IAT",
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-SCBI",
+        "ACO-SPC",
+        "ACO-TSV",
+        "ACP-SCBI-003"
+      ],
+      "n_v1_anchors_supported": 16
+    },
+    "owasp_ml_top_10": {
+      "n_linkage_records": 9,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "10-testes-seguranca",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 4,
+      "v1_anchors_supported": [
+        "ACO-IAT",
+        "ACO-SLG",
+        "ACO-TMR",
+        "ACO-TSV"
+      ],
+      "n_v1_anchors_supported": 4
+    },
+    "owasp_proactive_controls": {
+      "n_linkage_records": 10,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "06-desenvolvimento-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 4,
+      "v1_anchors_supported": [
+        "ACM-TMR-007",
+        "ACO-IAT",
+        "ACO-IVF",
+        "ACO-SLG",
+        "ACO-TMR"
+      ],
+      "n_v1_anchors_supported": 5
+    },
+    "owasp_samm": {
+      "n_linkage_records": 90,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-ATB-001",
+        "ACM-ATB-004",
+        "ACM-RPR-001",
+        "ACM-RPR-008",
+        "ACM-RPR-009",
+        "ACM-SCBI-001",
+        "ACM-SCBI-002",
+        "ACM-SPC-001",
+        "ACM-SPC-002",
+        "ACM-TMR-001",
+        "ACM-TMR-002",
+        "ACM-TMR-003",
+        "ACM-TMR-004",
+        "ACM-TMR-005",
+        "ACM-TMR-006",
+        "ACM-TMR-007",
+        "ACM-TMR-008",
+        "ACM-TSV-001",
+        "ACM-TSV-003",
+        "ACM-TSV-004",
+        "ACO-TMR",
+        "ACP-SLG-001"
+      ],
+      "n_v1_anchors_supported": 22
+    },
+    "owasp_top_10": {
+      "n_linkage_records": 9,
+      "manual_chapters_supported": [
+        "04-arquitetura-segura",
+        "06-desenvolvimento-seguro",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 4,
+      "v1_anchors_supported": [
+        "ACO-IAT",
+        "ACO-ITS",
+        "ACO-IVF",
+        "ACO-RPR",
+        "ACO-SLG"
+      ],
+      "n_v1_anchors_supported": 5
+    },
+    "pci_dss": {
+      "n_linkage_records": 165,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-ATB-001",
+        "ACM-ATB-002",
+        "ACM-ATB-003",
+        "ACM-ATB-004",
+        "ACM-IAT-001",
+        "ACM-IAT-003",
+        "ACM-IVF-001",
+        "ACM-IVF-003",
+        "ACM-RPR-001",
+        "ACM-RPR-004",
+        "ACM-SCBI-001",
+        "ACM-SCBI-002",
+        "ACM-SCBI-005",
+        "ACM-SLG-001",
+        "ACM-SLG-003",
+        "ACM-SPC-001",
+        "ACM-SPC-002",
+        "ACM-TMR-001",
+        "ACM-TMR-002",
+        "ACM-TMR-003",
+        "ACM-TMR-004",
+        "ACM-TMR-005",
+        "ACM-TSV-001",
+        "ACM-TSV-003",
+        "ACO-IAT",
+        "ACO-RPR",
+        "ACO-SCBI",
+        "ACO-SLG",
+        "ACO-TSV",
+        "ACP-SLG-001",
+        "ACP-SLG-004"
+      ],
+      "n_v1_anchors_supported": 31
+    },
+    "pci_secure_slc": {
+      "n_linkage_records": 28,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-RPR-004",
+        "ACM-SCBI-004",
+        "ACM-SCBI-005",
+        "ACM-SPC-004",
+        "ACM-TMR-001",
+        "ACM-TMR-002",
+        "ACM-TMR-003",
+        "ACM-TMR-008",
+        "ACM-TSV-001",
+        "ACM-TSV-002",
+        "ACM-TSV-003",
+        "ACP-RPR-004",
+        "ACP-TMR-004"
+      ],
+      "n_v1_anchors_supported": 13
+    },
+    "safecode": {
+      "n_linkage_records": 55,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "04-arquitetura-segura",
+        "05-dependencias-sbom-sca",
+        "06-desenvolvimento-seguro",
+        "10-testes-seguranca",
+        "11-deploy-seguro",
+        "12-monitorizacao-operacoes"
+      ],
+      "n_manual_chapters_supported": 7,
+      "v1_anchors_supported": [
+        "ACM-IAT-001",
+        "ACM-ITS-002",
+        "ACM-ITS-004",
+        "ACM-IVF-002",
+        "ACM-RPR-004",
+        "ACM-SCBI-001",
+        "ACM-SCBI-002",
+        "ACM-SCBI-004",
+        "ACM-SCBI-005",
+        "ACM-SPC-001",
+        "ACM-TMR-002",
+        "ACM-TMR-003",
+        "ACM-TMR-004",
+        "ACM-TMR-007",
+        "ACM-TSV-001",
+        "ACM-TSV-002",
+        "ACM-TSV-003",
+        "ACM-TSV-005",
+        "ACP-ATB-005",
+        "ACP-SCBI-003",
+        "ACP-SLG-001",
+        "ACP-TMR-004",
+        "ACP-TMR-005"
+      ],
+      "n_v1_anchors_supported": 23
+    },
+    "slsa": {
+      "n_linkage_records": 13,
+      "manual_chapters_supported": [
+        "03-threat-modeling",
+        "05-dependencias-sbom-sca",
+        "10-testes-seguranca",
+        "11-deploy-seguro"
+      ],
+      "n_manual_chapters_supported": 4,
+      "v1_anchors_supported": [
+        "ACM-SCBI-001",
+        "ACM-SCBI-002",
+        "ACM-SCBI-004"
+      ],
+      "n_v1_anchors_supported": 3
+    },
+    "unknown": {
+      "n_linkage_records": 6,
+      "manual_chapters_supported": [
+        "04-arquitetura-segura",
+        "06-desenvolvimento-seguro"
+      ],
+      "n_manual_chapters_supported": 2,
+      "v1_anchors_supported": [
+        "ACM-IAT-001",
+        "ACM-IAT-004",
+        "ACM-IVF-001"
+      ],
+      "n_v1_anchors_supported": 3
+    }
+  },
+  "n_manual_sections_total": 322,
+  "manual_section_routing_distribution": {
+    "manual_only": 315,
+    "core_mapped": 7
+  },
+  "empirical_delta": {
+    "manual_sections_total": 322,
+    "manual_sections_core_mapped": 7,
+    "manual_sections_manual_only": 315,
+    "manual_sections_out_of_appsec": 0,
+    "manual_only_sections_sample": [
+      "03-threat-modeling/addon/00-catalogo-requisitos.md",
+      "04-arquitetura-segura/addon/01-catalogo-requisitos.md",
+      "05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md",
+      "06-desenvolvimento-seguro/recomendacoes-avancadas.md",
+      "12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md",
+      "00-fundamentos/baseline.md",
+      "00-fundamentos/canon/25-rastreabilidade.md",
+      "00-fundamentos/canon/26-metodologia-validacao-claims.md",
+      "00-fundamentos/intro.md",
+      "00-fundamentos/roles-responsabilidades/appsec-engineer.md"
+    ]
+  }
+}
