@@ -2684,7 +2684,7 @@
     },
     {
       "id": "paper8",
-      "description": "Pipeline primitive demonstration paper (P8) — joint Manual + knowledge-graph snapshot at cycle-b-frozen-2026-05-12. Three of the four artefact classes deposited here (KG runtime v1.2 with 1,964 linkage records; substrate-grounding gap-analysis outputs including per-entity source map + Phase 1 coverage + Phase 2/3 refined closure-mechanism taxonomy; DevGov closure brief). The fourth artefact class (Manual prose corpus) is deposited independently at the public Manual repository SbD-ToE/sbd-toe-manual at the same closure tag. Substrate v7 (3,861 items, 18,673 GROUNDED claims) is cited via paper7's deposit chain (v2.0.0-construction-p7) and is not re-included. Cycle B is the second execution of the coverage-preserving compilation method of paper7; one instantiation of the pipeline against 31 sources, V1 ontology (10 slices, 259 typed instances), and the practitioner Manual. Substantive empirical finding (manuscript §6.5): of 38 candidate gaps flagged by initial coverage detection, deterministic keyword-based refinement reclassifies 37 (97.4%) as false positives — 31 Semantic (Manual prose existed in the expected chapter; closure via traceability exposure) and 6 Partial (prose existed in a different chapter; closure via cross-chapter pointer) — and 1 (2.6%; ACM-IVF-004) as a content-authoring deficit candidate registered for the future-work surface under the anti-rush content discipline and §10.7 independent-validation caveat.",
+      "description": "Pipeline primitive demonstration paper (P8) — joint Manual + knowledge-graph snapshot at cycle-b-frozen-2026-05-12. Three of the four artefact classes deposited here: (1) KG runtime v1.2 — 11 entity/linkage tables (1,964 linkage records: 1,105 rastreabilidade + 336 maturity + 523 threat_mitigation) plus 6 publish/indexes chunks (3 dispatcher-named JSONL + 3 cartographer-chosen substitutes in the same KG indexes layer; 2026-05-14 extension); (2) substrate-grounding gap-analysis outputs including per-entity source map + Phase 1 coverage + Phase 2/3 refined closure-mechanism taxonomy; (3) DevGov closure brief. The fourth artefact class (Manual prose corpus) is deposited independently at the public Manual repository SbD-ToE/sbd-toe-manual at the same closure tag; this bundle includes a Codex-authored KG-canonical locator artefact (`manual_freeze_ref.json` at knowledge_graph:data/publish/runtime/v1/) pointing to that independent deposit. Substrate v7 (3,861 items, 18,673 GROUNDED claims) is cited via paper7's deposit chain (v2.0.0-construction-p7) and is not re-included. Cycle B is the second execution of the coverage-preserving compilation method of paper7; one instantiation of the pipeline against 31 sources, V1 ontology (10 slices, 259 typed instances), and the practitioner Manual. Substantive empirical finding (manuscript §6.5): of 38 candidate gaps flagged by initial coverage detection, deterministic keyword-based refinement reclassifies 37 (97.4%) as false positives — 31 Semantic (Manual prose existed in the expected chapter; closure via traceability exposure) and 6 Partial (prose existed in a different chapter; closure via cross-chapter pointer) — and 1 (2.6%; ACM-IVF-004) as a content-authoring deficit candidate registered for the future-work surface under the anti-rush content discipline and §10.7 independent-validation caveat. Manual freeze ref is Codex-canonical (KG-derivative) and pinned at kg-v1-cycle-b-manual-ref-2026-05-14, not at the multi-repo cycle-b-frozen anchor.",
       "files": [
         {
           "source_repo": "knowledge_graph",
@@ -2740,6 +2740,41 @@
           "source_repo": "knowledge_graph",
           "source": "data/publish/runtime/v1/evidence_patterns_v1_annotation.json",
           "dest": "papers/08-pipeline-primitive-demonstration/artifacts/kg_v1_2/evidence_patterns_v1_annotation.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/indexes/canonical_chunks.jsonl",
+          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/kg_indexes/canonical_chunks.jsonl"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/indexes/mcp_chunks.jsonl",
+          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/kg_indexes/mcp_chunks.jsonl"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/indexes/vector_chunks.jsonl",
+          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/kg_indexes/vector_chunks.jsonl"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/indexes/chunk_entity_mentions.jsonl",
+          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/kg_indexes/chunk_entity_mentions.jsonl"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/indexes/chunk_relation_hints.jsonl",
+          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/kg_indexes/chunk_relation_hints.jsonl"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/indexes/publication_manifest.json",
+          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/kg_indexes/publication_manifest.json"
+        },
+        {
+          "source_repo": "knowledge_graph",
+          "source": "data/publish/runtime/v1/manual_freeze_ref.json",
+          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/manual_freeze/manual_freeze_ref.json"
         },
         {
           "source_repo": "external_sources_inventory",

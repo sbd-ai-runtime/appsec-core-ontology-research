@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """build_paper8_bundle.py — Generate paper8 bundle JSON for publish_artifacts.json.
 
-Cartographer 2026-05-13 — programme-lead Pedro Farinha.
+Cartographer 2026-05-13 (initial) + 2026-05-14 (extension) — programme-lead Pedro Farinha.
 
 Paper 8 (Pipeline Primitive Demonstration) is a multi-repo deposit. Per the
-Pass 7.1 manuscript §11.5 deposit chain, three of the four artefact classes
+Pass 8 manuscript §11.5 deposit chain, three of the four artefact classes
 mirror into `appsec-core-ontology-research/papers/08-pipeline-primitive-demonstration/artifacts/`
 because their origin repositories are not publicly accessible:
 
@@ -14,16 +14,35 @@ because their origin repositories are not publicly accessible:
 
 The fourth artefact class (Manual prose corpus) is deposited at the public
 Manual repository SbD-ToE/sbd-toe-manual at the same closure tag and is NOT
-mirrored into the paper8 bundle.
+mirrored into the paper8 bundle. A locator artefact (`manual_freeze_ref.{json,md}`,
+authored by Cartographer 2026-05-14) is included to give a paper8 reader the
+canonical pointer to that independent Manual deposit.
 
 The substrate v7 itself (3,861 items, 18,673 GROUNDED claims, SUPPLIER SHA
 596783ed…) is deposited under paper7 (`v2.0.0-construction-p7`) and cited via
 the manuscript's cross-paper reference [4]; it is not re-included here.
 
+EXTENSION HISTORY:
+
+  - 2026-05-13 (b32166b): initial 21 entries (kg_v1_2 + gap_analysis + closure_brief + scripts)
+    shipped at public tag v2.0.0-construction-p8-final-draft (@49fc452, preserved immutable).
+  - 2026-05-14 (14d3be6): +8 entries (6 kg_indexes + 2 manual_freeze, ESI-Cartographer-authored)
+    per 2026-05-14-orchestrator-cartographer-paper8-bundle-extension-dispatch.md.
+    Cartographer surfaced 5 hallucinated `data/reports/*_summary.json` paths in
+    the dispatcher (none exist at KG cycle-b-frozen tag); programme-lead
+    ratified Cartographer substitution (3 dispatcher-named chunks JSONL +
+    3 cartographer-chosen substitutes from data/publish/indexes/).
+  - 2026-05-14 (this): −2 ESI-Cartographer manual_freeze artefacts + 1 KG-Codex
+    canonical manual_freeze_ref.json pinned at tag kg-v1-cycle-b-manual-ref-2026-05-14.
+    Net: 29 → 28 entries. Programme-lead Pedro Farinha 2026-05-14 ratified
+    KG-derivative architecture: Codex owns Manual freeze ref in KG repo at its
+    own programme tag. Cartographer's prior manual_freeze_ref.{json,md} in ESI
+    superseded + deleted from ESI per persona-ownership cleanup discipline.
+
 LAYOUT:
 
   papers/08-pipeline-primitive-demonstration/artifacts/
-  ├── kg_v1_2/                ← KG runtime v1.2 (11 files)
+  ├── kg_v1_2/                ← KG runtime v1.2 (11 files; unchanged since baseline)
   │   ├── v1_manifest.json
   │   ├── manual_rastreabilidade.jsonl       (1,105 records; §26 5-section)
   │   ├── manual_maturity_progression.jsonl  (336 records; SAMM/DSOMM/SLSA)
@@ -35,7 +54,17 @@ LAYOUT:
   │   ├── slices.json                        (10 ASC slices)
   │   ├── relations.jsonl                    (structural)
   │   └── evidence_patterns_v1_annotation.json
-  ├── gap_analysis/           ← ESI Phase 1 + Phase 2/3 outputs (8 files)
+  ├── kg_indexes/             ← NEW 2026-05-14: KG publish/indexes chunks layer (6 files)
+  │   ├── canonical_chunks.jsonl             (canonical chunks index)
+  │   ├── mcp_chunks.jsonl                   (MCP-facing chunks projection)
+  │   ├── vector_chunks.jsonl                (vector-backend chunks projection)
+  │   ├── chunk_entity_mentions.jsonl        (per-chunk entity mention records)
+  │   ├── chunk_relation_hints.jsonl         (per-chunk relation hints)
+  │   └── publication_manifest.json          (indexes-layer publication manifest)
+  ├── manual_freeze/          ← AMENDED 2026-05-14: Codex-canonical KG-derivative (1 file)
+  │   └── manual_freeze_ref.json             (Codex KG canonical; pinned at
+  │                                          kg-v1-cycle-b-manual-ref-2026-05-14)
+  ├── gap_analysis/           ← ESI Phase 1 + Phase 2/3 outputs (8 files; unchanged since baseline)
   │   ├── per_entity_source_map.json         (Phase 1 input: per-entity source map)
   │   ├── coverage_manual_to_v1.json         (Phase 1: Manual → V1 direction)
   │   ├── coverage_v1_to_manual.json         (Phase 1: V1 → Manual direction)
@@ -45,20 +74,27 @@ LAYOUT:
   │       ├── phase2_3_brief.md
   │       ├── phase2_3_per_entity_classification.json
   │       └── phase2_3_refined_taxonomy.json (31 Sem / 6 Partial / 1 Gap closure mechanism breakdown)
-  ├── closure_brief/          ← DevGov consolidated brief (1 file)
+  ├── closure_brief/          ← DevGov consolidated brief (1 file; unchanged since baseline)
   │   └── cycle-b-frozen-state-consolidated.md
-  └── scripts/                ← reproducibility (1 file)
+  └── scripts/                ← reproducibility (1 file; updated 2026-05-14)
       └── build_paper8_bundle.py             (this script — self-reference)
 
-Authority: programme-lead Pedro Farinha 2026-05-13. Decisions ratified for
-this paper8 bundle:
+Authority: programme-lead Pedro Farinha 2026-05-13 + 2026-05-14. Decisions ratified:
   - exclude Manual prose (manuscript §11.5 places Manual at public Manual repo)
   - cross-cite paper7 for substrate v7 (manuscript §11.2 Stage 3)
   - register new source_root `development_governance` for cycle-b closure brief
+  - chunks belong to paper8 ("publica o KG"; ratified 2026-05-14)
+  - Manual represented by commitish ref artefact — authored by Codex
+    in KG repo (KG-derivative architecture; ratified 2026-05-14 amend);
+    Manual prose itself stays in independent Manual repo + site channels
+  - Cartographer substitution for 5 hallucinated `*_summary.json` paths
+    (ratified 2026-05-14 — substitute with actual JSONL siblings in same KG layer)
 
 Verification model: each entry's source path is verified to exist at
 `cycle-b-frozen-2026-05-12` in its origin repository via `git ls-tree`. The
 script aborts (non-zero exit) if any expected file is absent at the tag.
+Cartographer-authored artefacts (helper script + manual freeze ref) are flagged
+via SELF_REFERENCED and skip verify-at-tag (they post-date the closure tag).
 """
 
 from __future__ import annotations
@@ -85,6 +121,11 @@ ESI_MAIN = _esi_main_checkout()
 WORKSPACE_ROOT = ESI_MAIN.parent
 CLOSURE_TAG = "cycle-b-frozen-2026-05-12"
 
+# Per-artefact tag overrides (entries pinned at tags other than CLOSURE_TAG).
+# 2026-05-14 amend: Manual freeze ref is Codex-canonical in KG repo, pinned at
+# its own programme tag — not at the multi-repo cycle-b-frozen anchor.
+MANUAL_FREEZE_TAG = "kg-v1-cycle-b-manual-ref-2026-05-14"
+
 DEST_PREFIX = "papers/08-pipeline-primitive-demonstration/artifacts"
 OUTPUT_PATH = REPO_ROOT / "data" / "p8_publish_bundle" / "paper8_bundle.json"
 
@@ -94,10 +135,9 @@ REPO_KEYS = {
     "development_governance": WORKSPACE_ROOT / "DevelopmentGovernance",
 }
 
-# Self-reference: this script is new in the paper8 branch, not yet in the
-# cycle-b-frozen tag. Skip verify-at-tag for these paths; resolution at
-# sync_artifacts time happens against whichever tag Curator checks out
-# (expected to be the paper8 construction tag once authorised).
+# Cartographer-authored artefact post-dating the closure tag. Skip
+# verify-at-tag; resolution at sync_artifacts time happens against whichever
+# tag Curator checks out (expected: paper8 construction tag).
 SELF_REFERENCED = {
     ("external_sources_inventory", "scripts/build_paper8_bundle.py"),
 }
@@ -110,11 +150,11 @@ class Entry:
     dest: str
 
 
-def verify_at_tag(repo_key: str, source_path: str) -> bool:
-    """Return True if source_path exists in repo @ CLOSURE_TAG."""
+def verify_at_tag(repo_key: str, source_path: str, tag: str = CLOSURE_TAG) -> bool:
+    """Return True if source_path exists in repo @ tag (default CLOSURE_TAG)."""
     repo_root = REPO_KEYS[repo_key]
     result = subprocess.run(
-        ["git", "-C", str(repo_root), "ls-tree", CLOSURE_TAG, "--", source_path],
+        ["git", "-C", str(repo_root), "ls-tree", tag, "--", source_path],
         capture_output=True,
         text=True,
     )
@@ -122,8 +162,9 @@ def verify_at_tag(repo_key: str, source_path: str) -> bool:
 
 
 def add_entry(entries: list[Entry], absences: list[tuple[str, str]],
-              repo_key: str, source: str, dest: str) -> None:
-    if (repo_key, source) in SELF_REFERENCED or verify_at_tag(repo_key, source):
+              repo_key: str, source: str, dest: str,
+              tag: str = CLOSURE_TAG) -> None:
+    if (repo_key, source) in SELF_REFERENCED or verify_at_tag(repo_key, source, tag):
         entries.append(Entry(
             source_repo=repo_key,
             source=source,
@@ -159,6 +200,53 @@ def add_kg_runtime(entries: list[Entry], absences: list[tuple[str, str]]) -> Non
     ]
     for source, dest in items:
         add_entry(entries, absences, "knowledge_graph", source, f"kg_v1_2/{dest}")
+
+
+def add_kg_indexes(entries: list[Entry], absences: list[tuple[str, str]]) -> None:
+    """kg_indexes/ — KG publish/indexes chunks layer from sbd-toe-knowledge-graph
+    @ cycle-b-frozen-2026-05-12.
+
+    2026-05-14 extension. Three dispatcher-named chunks JSONL + three
+    cartographer-chosen substitutes for hallucinated `data/reports/*_summary.json`
+    paths (none of which exist at the KG closure tag). Substitutes are the
+    actual JSONL siblings in the same `data/publish/indexes/` layer.
+    """
+    items = [
+        # Dispatcher-named (verified exist at cycle-b-frozen)
+        ("data/publish/indexes/canonical_chunks.jsonl", "canonical_chunks.jsonl"),
+        ("data/publish/indexes/mcp_chunks.jsonl", "mcp_chunks.jsonl"),
+        ("data/publish/indexes/vector_chunks.jsonl", "vector_chunks.jsonl"),
+        # Cartographer substitutes (ratified 2026-05-14)
+        ("data/publish/indexes/chunk_entity_mentions.jsonl",
+         "chunk_entity_mentions.jsonl"),
+        ("data/publish/indexes/chunk_relation_hints.jsonl",
+         "chunk_relation_hints.jsonl"),
+        ("data/publish/indexes/publication_manifest.json",
+         "publication_manifest.json"),
+    ]
+    for source, dest in items:
+        add_entry(entries, absences, "knowledge_graph", source, f"kg_indexes/{dest}")
+
+
+def add_manual_freeze(entries: list[Entry], absences: list[tuple[str, str]]) -> None:
+    """manual_freeze/ — Codex-canonical locator for the fourth artefact class.
+
+    2026-05-14 amended (canonical): the Manual freeze ref lives in the
+    knowledge_graph repo at its own programme tag
+    `kg-v1-cycle-b-manual-ref-2026-05-14`, NOT at the multi-repo cycle-b-frozen
+    anchor. Codex owns this artefact as KG-derivative authoring (Manual
+    repository identifier + tag SHAs + ontology V2 pointer + figshare DOI
+    placeholder). Cartographer's prior ESI-authored manual_freeze_ref.{json,md}
+    were superseded by this Codex output per programme-lead ratification
+    2026-05-14 (KG-derivative architecture; Cartographer's removed from bundle
+    + deleted from ESI).
+    """
+    add_entry(
+        entries, absences, "knowledge_graph",
+        "data/publish/runtime/v1/manual_freeze_ref.json",
+        "manual_freeze/manual_freeze_ref.json",
+        tag=MANUAL_FREEZE_TAG,
+    )
 
 
 def add_gap_analysis(entries: list[Entry], absences: list[tuple[str, str]]) -> None:
@@ -206,6 +294,8 @@ def main() -> int:
     absences: list[tuple[str, str]] = []
 
     add_kg_runtime(entries, absences)
+    add_kg_indexes(entries, absences)
+    add_manual_freeze(entries, absences)
     add_gap_analysis(entries, absences)
     add_closure_brief(entries, absences)
     add_scripts(entries, absences)
@@ -222,20 +312,30 @@ def main() -> int:
         "description": (
             "Pipeline primitive demonstration paper (P8) — joint Manual + "
             "knowledge-graph snapshot at cycle-b-frozen-2026-05-12. Three of "
-            "the four artefact classes deposited here (KG runtime v1.2 with "
-            "1,964 linkage records; substrate-grounding gap-analysis outputs "
-            "including per-entity source map + Phase 1 coverage + Phase 2/3 "
-            "refined closure-mechanism taxonomy; DevGov closure brief). The "
-            "fourth artefact class (Manual prose corpus) is deposited "
-            "independently at the public Manual repository SbD-ToE/sbd-toe-manual "
-            "at the same closure tag. Substrate v7 (3,861 items, 18,673 GROUNDED "
+            "the four artefact classes deposited here: (1) KG runtime v1.2 — "
+            "11 entity/linkage tables (1,964 linkage records: 1,105 "
+            "rastreabilidade + 336 maturity + 523 threat_mitigation) plus "
+            "6 publish/indexes chunks (3 dispatcher-named JSONL + 3 cartographer-"
+            "chosen substitutes in the same KG indexes layer; 2026-05-14 "
+            "extension); (2) substrate-grounding gap-analysis outputs including "
+            "per-entity source map + Phase 1 coverage + Phase 2/3 refined "
+            "closure-mechanism taxonomy; (3) DevGov closure brief. The fourth "
+            "artefact class (Manual prose corpus) is deposited independently at "
+            "the public Manual repository SbD-ToE/sbd-toe-manual at the same "
+            "closure tag; this bundle includes a Codex-authored KG-canonical "
+            "locator artefact (`manual_freeze_ref.json` at "
+            "knowledge_graph:data/publish/runtime/v1/) pointing to that "
+            "independent deposit. Substrate v7 (3,861 items, 18,673 GROUNDED "
             "claims) is cited via paper7's deposit chain (v2.0.0-construction-p7) "
             "and is not re-included. Cycle B = Iteration 2 of the coverage-"
             "preserving compilation method of paper7; one instantiation of the "
             "pipeline against 31 sources, V1 ontology (10 slices, 259 typed "
             "instances), and the practitioner Manual. 38/38 detected gaps "
             "resolved via three closure mechanisms (31 Semantic + 6 Partial + 1 "
-            "Gap registered for future-work surface)."
+            "Gap registered for future-work surface). Manual freeze ref is "
+            "Codex-canonical (KG-derivative) and pinned at "
+            "kg-v1-cycle-b-manual-ref-2026-05-14, not at the multi-repo "
+            "cycle-b-frozen anchor."
         ),
         "files": [asdict(e) for e in entries],
     }
