@@ -7,7 +7,7 @@ This directory contains the **pre-release** source manuscript and supporting art
 | Surface | Status |
 |---|---|
 | `source/manuscript.md` | **Pre-release** — current state is P6 Pass 5 (Archon validation gate absorbed: §3.1 disjointness declaration; §6.1 additive OWL-level structural rigour; §10.7 NEW external-tool validation OOPS! and FOOPS!; §12 bibliography extended with Poveda-Villalón 2014 OOPS! + Garijo 2021 FOOPS!). Subject to revision before final v2.0.0 tag. |
-| `artifacts/` | **TO BE POPULATED** — paper6 bundle preparation pending. When `scripts/sync_artifacts.py paper6` is invoked (post-paper6-bundle-spec integration), the directory will be populated from canonical source repository `sbd-toe-ontology` at tag `ontology-v1.1-fair-baseline` @ `84fe8bf` (FAIR-baseline refinement; OOPS! 0/0/2 + FOOPS! 13/15; bounded SHACL + pyshacl 0.31.0 composed v3 both conforms=True / 0 violations; entity counts 75 CO / 69 P / 58 M / 57 A = 259). |
+| `artifacts/` | **STABLE** — populated by `scripts/sync_artifacts.py paper6` from canonical source repository `sbd-toe-ontology` at tag `ontology-v1.1-fair-baseline` @ `84fe8bf` (FAIR-baseline refinement; OOPS! 0/0/2 + FOOPS! 13/15; bounded SHACL + pyshacl 0.31.0 composed v3 both conforms=True / 0 violations; entity counts 75 CO / 69 P / 58 M / 57 A = 259). Subtrees: `audit_trail/`, `decisions/`, `embeddings/`, `evidence_patterns/`, `governance/`, `ontology/`, `owl/` (incl. `alt_formats/`), `schema/`, `scripts/`, `shacl/`, `slice_contracts/` (10 per-slice subdirs); 106 files total. |
 | `pdf/` · `arxiv/` · `arxiv_preview/` | Empty — populated when paper finalises (PDF compile, arXiv source bundle, arXiv preview). |
 
 ## v1.0.0 lineage
@@ -25,20 +25,20 @@ Each paper is readable independently; the cross-references (P6 §5 cites P7 [4] 
 
 ## Construction-stage tag history
 
-- (To be assigned) **`v2.0.0-construction-p6-final-draft`** — paper folder + Pass 5 manuscript + Archon-emitted `paper6` bundle integration complete. Lands post-bundle scaffold + sync execution.
+- **`v2.0.0-construction-p6-final-draft`** @ `d40aed5` (2026-05-09) — paper folder + Pass 5 manuscript + Archon-emitted `paper6` bundle integration complete; post-sync `artifacts/` populated from `ontology-v1.1-fair-baseline` @ `84fe8bf`.
 
 ## Final v2.0.0 tag
 
 Final `v2.0.0` is assigned when the complete bundle (P6 + P7 + optional P8) is ready for figshare archive. Until then, construction-stage tags `v2.0.0-construction-p<N>` anchor per-paper milestones; root-level `MANIFEST-v2.0.md` / `RELEASE-NOTES-v2.0.md` / `CHANGELOG.md` updates are deferred until the full bundle is ready (per the v1.0.0 release-discipline pattern).
 
-## Integration sequence
+## Integration sequence (completed)
 
-The paper6 bundle is integrated into the public repo via the existing v1.0.0 publishing model:
+The paper6 bundle was integrated into the public repo via the existing v1.0.0 publishing model:
 
-1. **Archon** emits a deterministic `publish_artifacts.json` `paper6` bundle fragment enumerating the canonical source paths for the V1 ontology + slice contracts + OWL TTL exports + SHACL apparatus (schema-derived + consumer-conformance) + embeddings v1.1 + ACR decision records + build scripts at `sbd-toe-ontology` `ontology-v1.1-fair-baseline` @ `84fe8bf`.
-2. **Curator** integrates the Archon-emitted fragment into the root `publish_artifacts.json`.
-3. **Programme-lead Session** invokes `scripts/sync_artifacts.py --bundle paper6 [--source-root sbd_toe_ontology=<path>]` to populate this `artifacts/` directory from the canonical source repository.
-4. **Construction-stage tag `v2.0.0-construction-p6-final-draft`** is created at the post-sync commit on this repo.
+1. **Archon** emitted a deterministic `publish_artifacts.json` `paper6` bundle fragment enumerating the canonical source paths for the V1 ontology + slice contracts + OWL TTL exports + SHACL apparatus (schema-derived + consumer-conformance) + embeddings v1.1 + ACR decision records + build scripts at `sbd-toe-ontology` `ontology-v1.1-fair-baseline` @ `84fe8bf`.
+2. **Curator** integrated the Archon-emitted fragment into the root `publish_artifacts.json`.
+3. **Programme-lead Session** invoked `scripts/sync_artifacts.py --bundle paper6 [--source-root sbd_toe_ontology=<path>]` and populated this `artifacts/` directory (106 files) from the canonical source repository.
+4. **Construction-stage tag `v2.0.0-construction-p6-final-draft`** was applied at commit `d40aed5` (2026-05-09).
 
 ## Reproducibility anchor
 

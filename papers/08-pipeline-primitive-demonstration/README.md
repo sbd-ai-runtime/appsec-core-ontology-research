@@ -6,8 +6,8 @@ This directory contains the **pre-release** source manuscript and supporting art
 
 | Surface | Status |
 |---|---|
-| `source/manuscript.md` | **Pre-release** — current state is P8 Pass 8 (Phase 3 review absorption complete: substantive items 1–5 + editorial 6–8 + sub-substantive items §3.2 / §6.4 / §7.2 + second-pass polish items + third-pass Stage 7 / §9 title / Table 5 visibility column + external-bibliography anchoring [12]–[20] including Reimers & Gurevych Sentence-BERT, Wilkinson FAIR principles, Noy semantic integration, Manning IR base, Cimiano ontology learning, Buckland & Gey recall-precision, Noy & Klein ontology evolution, Euzenat & Shvaiko ontology matching, Isaac & Summers SKOS Primer; 13,287 words; 20 references). Subject to revision before final v2.0.0 tag. |
-| `artifacts/` | **STABLE** — frozen at Cycle B closure state (cross-repo closure ledger anchor `cycle-b-frozen-2026-05-12`). Artefacts populated by `scripts/sync_artifacts.py paper8` from canonical source repositories (`sbd-toe-knowledge-graph` at the cycle's closure commit `dacfaca5`; `ExternalSourcesInventory` at `d5da1a0`; `DevelopmentGovernance` at `db60b1b`). 21 file entries spanning three peer repositories. |
+| `source/manuscript.md` | **Pre-release** — current state is P8 Pass 8 (Phase 3 review absorption complete: substantive items 1–5 + editorial 6–8 + sub-substantive items §3.2 / §6.4 / §7.2 + second-pass polish items + third-pass Stage 7 / §9 title / Table 5 visibility column + external-bibliography anchoring [13]–[21] including Reimers & Gurevych Sentence-BERT, Wilkinson FAIR principles, Noy semantic integration, Manning IR base, Cimiano ontology learning, Buckland & Gey recall-precision, Noy & Klein ontology evolution, Euzenat & Shvaiko ontology matching, Isaac & Summers SKOS Primer; Wave 1 closure adds P0 Programme Prospectus as ref [3] with cross-paper coherent renumbering [3]–[21]; 13,298 words; 21 references). Subject to revision before final v2.0.0 tag. |
+| `artifacts/` | **STABLE** — frozen at Cycle B closure state (cross-repo closure ledger anchor `cycle-b-frozen-2026-05-12` + KG-canonical Manual freeze ref at `kg-v1-cycle-b-manual-ref-2026-05-14`). Artefacts populated by `scripts/sync_artifacts.py paper8` from canonical source repositories (`sbd-toe-knowledge-graph` at the cycle's closure commit `dacfaca5` plus the Manual-freeze-ref tag descendant; `ExternalSourcesInventory` at `d5da1a0`; `DevelopmentGovernance` at `db60b1b`). **28 file entries** spanning three peer repositories across 6 subtrees: `kg_v1_2/` (11) + `kg_indexes/` (6) + `manual_freeze/` (1, Codex KG-canonical) + `gap_analysis/` (8, including `phase2_3/`) + `closure_brief/` (1) + `scripts/` (1, self-referenced helper). |
 | `pdf/` · `arxiv/` · `arxiv_preview/` | Empty — populated when paper finalises (PDF compile, arXiv source bundle, arXiv preview). |
 
 ## Public deposit framing (manuscript §11)
@@ -31,7 +31,8 @@ Substrate v7 (3,861 items; 18,673 GROUNDED claims) is the cycle-close deliverabl
 
 ## Construction-stage tag history
 
-- `v2.0.0-construction-p8-final-draft` — paper folder + supporting artefacts scaffolded; source manuscript at Pass 8 state; artefacts at Cycle B closure state. Lands when scaffold + Cartographer-emitted `paper8` bundle integration (in root `publish_artifacts.json`) + programme-lead-Session sync execution complete.
+- **`v2.0.0-construction-p8-final-draft`** @ `49fc452` (2026-05-13) — paper folder + Pass 8 manuscript + initial 21-entry `paper8` bundle integration in root `publish_artifacts.json`; `development_governance` source_root added; first sync populated `artifacts/` from `cycle-b-frozen-2026-05-12` state across KG / ESI / DevGov.
+- **`v2.0.0-construction-p8-bundle-complete`** @ `7b7da64` (2026-05-14) — bundle extension milestone: 21 → 28 file entries (+6 `kg_indexes/` chunks layer; +1 `manual_freeze/manual_freeze_ref.json` Codex KG-canonical at programme tag `kg-v1-cycle-b-manual-ref-2026-05-14`); Pass 6.2 description re-aligned to honest framing (37/38 false positives finding; manuscript §6.5).
 
 ## Final v2.0.0 tag
 
@@ -41,10 +42,10 @@ Final `v2.0.0` is assigned when the complete bundle (P6 + P7 + P8) is ready for 
 
 The paper8 bundle is integrated into the public repo via the existing v1.0.0 publishing model:
 
-1. **Cartographer** emits a deterministic `publish_artifacts.json` `paper8` bundle fragment enumerating the canonical source paths across three peer repositories at `cycle-b-frozen-2026-05-12` (21 entries: 11 KG runtime + 9 ESI gap-analysis + 1 DevGov closure brief; the helper script `build_paper8_bundle.py` is self-referenced as a 22nd-deposit-target entry).
-2. **Curator** integrates the Cartographer-emitted fragment into the root `publish_artifacts.json` and adds the new `development_governance` source_root entry (the fourth `source_roots` key, alongside `knowledge_graph`, `external_sources_inventory`, and `sbd_toe_ontology`).
-3. **Programme-lead** runs `scripts/sync_artifacts.py --bundle paper8 --dry-run` first for verification, then `scripts/sync_artifacts.py --bundle paper8` for actual sync to populate `artifacts/` from the canonical source repositories.
-4. **Curator** mirrors integration delivery handover.
+1. **Cartographer** emitted a deterministic `publish_artifacts.json` `paper8` bundle fragment enumerating the canonical source paths across three peer repositories. Initial (`v2.0.0-construction-p8-final-draft`): 21 entries (11 KG runtime + 9 ESI gap-analysis + 1 DevGov closure brief; helper script `build_paper8_bundle.py` self-referenced). Extension (`v2.0.0-construction-p8-bundle-complete`): 28 entries (+6 KG indexes `kg_indexes/` + 1 KG-canonical Manual freeze ref at programme tag `kg-v1-cycle-b-manual-ref-2026-05-14`).
+2. **Curator** integrated both bundle revisions into the root `publish_artifacts.json` and added the `development_governance` source_root entry (the fourth `source_roots` key, alongside `knowledge_graph`, `external_sources_inventory`, and `sbd_toe_ontology`).
+3. **Programme-lead** ran `scripts/sync_artifacts.py --bundle paper8 [--source-root external_sources_inventory=<worktree>]` to populate `artifacts/` from the canonical source repositories.
+4. **Curator** mirrored integration delivery handovers (2026-05-13 initial + 2026-05-14 delta).
 
 Until step 3 completes, the `artifacts/` subdirectories under this folder are empty placeholders — the canonical artefacts live at the source-repository closure commits listed in manuscript §9.1 Table 5 and are not duplicated here. The Manual prose corpus is deposited separately at the public Manual repository (see deposit-framing table above).
 

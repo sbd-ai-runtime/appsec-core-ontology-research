@@ -6,7 +6,7 @@ This directory contains the **pre-release** source manuscript and supporting art
 
 | Surface | Status |
 |---|---|
-| `source/manuscript.md` | **Pre-release** — current state is P7 Pass 10 (manuscript-side OLIR substantiation propagated; NIST OLIR JSON Schema 1.1 31/31 PASS reflected in §1.5 Contribution 4 + §12.1 + §12.4 + §13.5). Subject to revision before final v2.0.0 tag. |
+| `source/manuscript.md` | **Pre-release** — current state is P7 Pass 16 (cumulative integration of Passes 11–16 on top of Pass 10's OLIR substantiation; k-way intersection + null-model baseline (Phase A.5) materially evaluated; four evidence pillars at §8.2; title-rename propagated; cross-paper coherence with P6 [4] and P8 [5]). Subject to revision before final v2.0.0 tag. |
 | `artifacts/` | **STABLE** — frozen at Cycle A frozen substrate v7 state (cross-repo peer tag `cycle-a-frozen-2026-05-08`). Artefacts populated by `scripts/sync_artifacts.py paper7` from canonical source repositories (`ExternalSourcesInventory` at `cycle-a-frozen-2026-05-08`; OLIR track at `olir-conversion-cycle-a-validated`). |
 | `pdf/` · `arxiv/` · `arxiv_preview/` | Empty — populated when paper finalises (PDF compile, arXiv source bundle, arXiv preview). |
 
@@ -16,7 +16,9 @@ P7 evolves the coverage-preserving knowledge compilation thesis from `papers/02-
 
 ## Construction-stage tag history
 
-- `v2.0.0-construction-p7` — paper folder + supporting artefacts scaffolded; source manuscript at Pass 10 state; artefacts at Cycle A frozen substrate v7. Lands when scaffold + Cartographer-emitted `paper7` bundle integration complete.
+- **`v2.0.0-construction-p7`** @ `6a42141` (2026-05-09) — paper folder + supporting artefacts scaffolded; Pass 10 manuscript; Cartographer-emitted `paper7` bundle (340 entries) integrated; `artifacts/` populated from `ExternalSourcesInventory` at `cycle-a-frozen-2026-05-08` + OLIR track at `olir-conversion-cycle-a-validated`.
+- **`v2.0.0-construction-p7-graph`** @ `15ce6bb` — k-way intersection + null-model baseline (Phase A.5) milestone; Pillar 4 evidence materialised.
+- **`v2.0.0-construction-p7-final-draft`** @ `fab7317` (2026-05-10) — Pass 16 manuscript ship (cumulative Passes 11–16 integration); title-rename propagated at `fceacdc`.
 
 ## Final v2.0.0 tag
 

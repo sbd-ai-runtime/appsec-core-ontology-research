@@ -5,7 +5,7 @@ This directory contains the **pre-release** source manuscript for Paper 6 (AppSe
 ## Stability
 
 - `source/manuscript.md` — **pre-release**; subject to revision before final v2.0.0 tag
-- `../artifacts/` — **TO BE POPULATED** via `scripts/sync_artifacts.py paper6` from canonical source repository `sbd-toe-ontology` at tag `ontology-v1.1-fair-baseline` @ `84fe8bf`
+- `../artifacts/` — **STABLE** (populated 106 files via `scripts/sync_artifacts.py paper6` from canonical source repository `sbd-toe-ontology` at tag `ontology-v1.1-fair-baseline` @ `84fe8bf`)
 
 ## v1.0.0 lineage
 
