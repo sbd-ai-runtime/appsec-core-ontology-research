@@ -522,7 +522,7 @@ The public deposits are mandatory prerequisites for the paper's reproducibility 
 
 [4] P. Farinha. AppSec Core v1: A Formalized Normalization Ontology for Application Security. Independent research preprint, 2026. doi:10.17605/OSF.IO/U9CRD. Canonical via construction tag `v2.0.0-construction-p6-final-draft`.
 
-[5] P. Farinha. Pressure-Testing AppSec Core: A Design Science Cycle for Bounded-Ontology Evolution Under Heterogeneous Application-Security Sources. Independent research preprint, 2026 [in preparation; canonical via construction tag `v2.0.0-construction-p7-final-draft`].
+[5] P. Farinha. Pressure-Testing AppSec Core: A Design Science Cycle for Bounded-Ontology Evolution Under Heterogeneous Application-Security Sources. Independent research preprint, 2026. doi:10.17605/OSF.IO/3E8G5. Canonical via construction tag `v2.0.0-construction-p7-final-draft`.
 
 [6] A. R. Hevner, S. T. March, J. Park, and S. Ram. "Design Science in Information Systems Research". *MIS Quarterly*, 28(1):75–105, 2004. doi:10.2307/25148625.
 
