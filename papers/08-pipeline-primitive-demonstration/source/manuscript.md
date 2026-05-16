@@ -88,7 +88,7 @@ The relationship between AppSec Core v1 and Manual ontology V2 is the subject of
 
 The pipeline composes seven stages from external-source ingest through cycle-closure deposit chain. Figure 1 shows the architecture; Sections 3.1–3.3 specify the stages, the architectural surfaces emitted by the V1 ontology, and the integration points at which the V1 ontology binds into the pipeline.
 
-![Figure 1 — Pipeline Primitive Architecture. External-source corpus (31 sources) is normalized via the claim-centric two-stage pipeline into the normalized substrate (3,861 items, 18,673 GROUNDED claims). The normalized substrate binds against the AppSec Core V1 ontology (259 entities across 10 slices). The Manual coverage-analysis stage classifies per-entity Manual coverage and routes closure through three mechanisms (Section 6). Manual content surfaces and the KG runtime v1.2 (1,964 linkage records) are deposited at the cycle's closure state `cycle-b-frozen-2026-05-12` (Section 11).](figures/figure-1-pipeline-architecture.svg){#fig:pipeline width=100%}
+![Pipeline Primitive Architecture. External-source corpus (31 sources) is normalized via the claim-centric two-stage pipeline into the normalized substrate (3,861 items, 18,673 GROUNDED claims). The normalized substrate binds against the AppSec Core V1 ontology (259 entities across 10 slices). The Manual coverage-analysis stage classifies per-entity Manual coverage and routes closure through three mechanisms (Section 6). Manual content surfaces and the KG runtime v1.2 (1,964 linkage records) are deposited at the cycle's closure state `cycle-b-frozen-2026-05-12` (Section 11).](figures/figure-1-pipeline-architecture.svg){#fig:pipeline width=100%}
 
 ### 3.1 Pipeline stages
 

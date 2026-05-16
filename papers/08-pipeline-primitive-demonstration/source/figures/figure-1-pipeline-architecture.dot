@@ -1,52 +1,57 @@
 // Figure 1 — Pipeline Primitive Architecture
 // Source: P8 manuscript §3
-// Anchor: Cartographer P8 Phase 2 packet 2026-05-13, .dot draft adopted with palette adjustment
 // Render: dot -Tsvg figure-1-pipeline-architecture.dot -o figure-1-pipeline-architecture.svg
 //         dot -Tpdf figure-1-pipeline-architecture.dot -o figure-1-pipeline-architecture.pdf
-// Layout: left-to-right pipeline flow, vertical stack within each stage
+// Layout: top-to-bottom pipeline flow with feeder branch and closure anchors.
+//   Re-authored 2026-05-16 for legibility: TB rankdir, fontsize +3pt,
+//   simplified labels (long parentheticals moved to caption), cleaner closure
+//   anchor cluster.
 
 digraph p8_pipeline_architecture {
-  rankdir=LR;
+  rankdir=TB;
   fontname="STIX Two Text";
   bgcolor="white";
-  node [shape=box, style="rounded,filled", fontname="STIX Two Text", color="#2c3e50", fillcolor="white", fontsize=11];
-  edge [fontname="STIX Two Text", color="#2c3e50", fontsize=10];
+  // Constrain layout to roughly letter-textwidth aspect so the figure does
+  // not shrink dramatically when embedded at width=\linewidth.
+  size="6.5,7.0!";
+  ratio=compress;
+  nodesep=0.30;
+  ranksep=0.45;
+  splines=true;
+  node [shape=box, style="rounded,filled", fontname="STIX Two Text", color="#2c3e50", fillcolor="white", fontsize=14, margin="0.16,0.10"];
+  edge [fontname="STIX Two Text", color="#2c3e50", fontsize=11];
 
-  // Stage 1: External-source ingest
-  ES [label="External-source corpus\n31 sources\n(26 baseline + 5 AI/ML extension)"];
+  // Main pipeline stages (vertical spine)
+  ES   [label="Stage 1 — External-source corpus\n31 sources"];
+  P7   [label="Stage 2 — Normalization pipeline\nclaim-centric two-stage"];
+  SUB  [label="Stage 3 — Normalized substrate\n3,861 items · 18,673 GROUNDED claims", fillcolor="#e8f4f8"];
+  V1   [label="Stage 4 — AppSec Core V1 ontology\n259 entities · 10 slices", fillcolor="#e8f4f8"];
+  COV  [label="Stage 5 — Manual coverage analysis\n202 / 202 substantive · 38 reclassified via §26", fillcolor="#fff3e0"];
+  FROZ [label="Stage 7 — Cycle B frozen snapshot\ntag cycle-b-frozen-2026-05-12", fillcolor="#dceadc"];
 
-  // Stage 2: Normalization pipeline
-  P7 [label="Normalization pipeline\nclaim-centric two-stage\n(lifting + grounding)"];
+  // Stage 6 feeders (stacked vertically alongside V1 → COV portion of the spine)
+  MAN  [label="Stage 6a — Manual content surfaces\n15 chapters · 322 .md files", fillcolor="#fff3e0"];
+  KG   [label="Stage 6b — KG runtime v1.2\n1,964 linkage records", fillcolor="#fff3e0"];
 
-  // Stage 3: Normalized substrate
-  SUB [label="Normalized substrate\n3,861 items\n18,673 GROUNDED claims\n74.4% item-level GROUNDED", fillcolor="#e8f4f8"];
+  // Main flow (solid edges, vertical spine)
+  ES   -> P7   [label="  lift + ground"];
+  P7   -> SUB  [label="  claim-centric"];
+  SUB  -> V1   [label="  bind via slice + entity IRI"];
+  V1   -> COV  [label="  V1 → Manual analysis"];
+  COV  -> FROZ [label="  empirical findings"];
 
-  // Stage 4: V1 ontology binding
-  V1 [label="AppSec Core V1 ontology\n259 entities\n(75 CO + 69 P + 58 M + 57 A)\n10 slices ASC-01..10", fillcolor="#e8f4f8"];
+  // Stage 6 feeders into COV
+  MAN  -> COV  [label="  prose + traceability"];
+  KG   -> COV  [label="  linkage records"];
 
-  // Stage 5: Manual coverage analysis
-  COV [label="Manual coverage analysis\n202 / 202 substantive\nentities surfaced\n38 Phase-1 ambiguous\nclassified via §26 vocab"];
+  // Stack MAN above KG to the right of the spine, both feeding into COV.
+  // Place MAN at the same rank as V1, KG one rank below.
+  { rank=same; V1; MAN; }
 
-  // Stage 6a: Manual content surfaces
-  MAN [label="Manual content surfaces\n15 chapters × 4 doc families\n(traceability + maturity\n+ threats + checklist)\n322 .md files", fillcolor="#fff3e0"];
-
-  // Stage 6b: KG runtime
-  KG [label="KG runtime v1.2\n1,964 linkage records\n(1,105 traceability + 336 maturity\n+ 523 threats)", fillcolor="#fff3e0"];
-
-  // Stage 7: Frozen joint snapshot
-  FROZ [label="Cycle B frozen joint snapshot\ntag cycle-b-frozen-2026-05-12\nManual + KG + DG + ESI\n(4 peer cross-repo tags)", fillcolor="#dceadc"];
-
-  // Pipeline flow
-  ES -> P7 [label="lift + ground"];
-  P7 -> SUB [label="claim-centric"];
-  SUB -> V1 [label="bind via slice\n+ entity IRI"];
-  V1 -> COV [label="V1 -> Manual\nanalysis"];
-  MAN -> COV [label="traceability\n+ prose corpus"];
-  KG -> COV [label="linkage records"];
-  COV -> FROZ [label="empirical findings"];
-
-  // Cross-repository ratification edges (dashed)
-  V1 -> FROZ [style=dashed, label="V1 anchor"];
-  MAN -> FROZ [style=dashed, label="Manual anchor"];
-  KG -> FROZ [style=dashed, label="KG anchor"];
+  // Cross-repository closure anchors (dashed edges into FROZ),
+  // de-emphasised in grey to keep visual weight on the main flow.
+  edge [style=dashed, color="#7f8c8d", fontcolor="#7f8c8d"];
+  V1  -> FROZ [label="V1 anchor"];
+  MAN -> FROZ [label="Manual anchor"];
+  KG  -> FROZ [label="KG anchor"];
 }
