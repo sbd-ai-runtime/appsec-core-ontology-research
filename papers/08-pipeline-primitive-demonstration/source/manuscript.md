@@ -520,7 +520,7 @@ The public deposits are mandatory prerequisites for the paper's reproducibility 
 
 [3] P. Farinha. *Research Programme Prospectus*. Independent research preprint, 2026. doi:10.17605/OSF.IO/7T849.
 
-[4] P. Farinha. AppSec Core v1: A Formalized Normalization Ontology for Application Security. Independent research preprint, 2026 [in preparation; canonical via construction tag `v2.0.0-construction-p6-final-draft`].
+[4] P. Farinha. AppSec Core v1: A Formalized Normalization Ontology for Application Security. Independent research preprint, 2026. doi:10.17605/OSF.IO/U9CRD. Canonical via construction tag `v2.0.0-construction-p6-final-draft`.
 
 [5] P. Farinha. Pressure-Testing AppSec Core: A Design Science Cycle for Bounded-Ontology Evolution Under Heterogeneous Application-Security Sources. Independent research preprint, 2026 [in preparation; canonical via construction tag `v2.0.0-construction-p7-final-draft`].
 
