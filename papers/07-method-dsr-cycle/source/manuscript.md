@@ -802,7 +802,7 @@ Generative-language-model tools were used by the author during the preparation o
 
 [4] P. Farinha. *AppSec Core v1: A Formalized Normalization Ontology for Application Security*. Independent research preprint (companion to this paper), 2026. DOI: 10.17605/OSF.IO/U9CRD. Canonical via construction tag v2.0.0-construction-p6-final-draft.
 
-[5] P. Farinha. *Demonstrating an Ontology-Grounded Pipeline as Programme Primitive: Joint Manual and Knowledge-Graph Production for Security-by-Design at 31-Source Scale*. Independent research preprint, 2026 [in preparation; canonical via construction tag v2.0.0-construction-p8-bundle-complete].
+[5] P. Farinha. *Coverage-Preserving Compilation v2: A 31-Source Pipeline with Joint Manual and Knowledge-Graph Production*. Independent research preprint (succeeds [2] at 31-source scale), 2026 [in preparation; canonical via construction tag v2.0.0-construction-p8-bundle-complete].
 
 [6] P. Farinha. *Ontology-Grounded Retrieval for Auditable LLM-Assisted Secure Code Generation*. Independent research preprint, 2026. DOI: 10.17605/OSF.IO/S3HET.
 

@@ -1,6 +1,6 @@
-# P8 — Pipeline Primitive Demonstration (pre-release)
+# P8 — Coverage-Preserving Compilation v2 (pre-release)
 
-This directory contains the **pre-release** source manuscript for Paper 8 (Demonstrating an Ontology-Grounded Pipeline as Programme Primitive: Joint Manual and Knowledge-Graph Production for Security-by-Design at 31-Source Scale). The paper itself may undergo revisions until the `v2.0.0` final tag is assigned to the public-repo bundle.
+This directory contains the **pre-release** source manuscript for Paper 8 (Coverage-Preserving Compilation v2: A 31-Source Pipeline with Joint Manual and Knowledge-Graph Production). The paper succeeds Paper 2 (Coverage-Preserving Knowledge Compilation) at 31-source scale and extends the output to joint Manual + Knowledge-Graph production. The paper itself may undergo revisions until the `v2.0.0` final tag is assigned to the public-repo bundle.
 
 ## Stability
 
