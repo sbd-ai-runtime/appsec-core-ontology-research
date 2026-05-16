@@ -1,0 +1,52 @@
+// Figure 1 — Pipeline Primitive Architecture
+// Source: P8 manuscript §3
+// Anchor: Cartographer P8 Phase 2 packet 2026-05-13, .dot draft adopted with palette adjustment
+// Render: dot -Tsvg figure-1-pipeline-architecture.dot -o figure-1-pipeline-architecture.svg
+//         dot -Tpdf figure-1-pipeline-architecture.dot -o figure-1-pipeline-architecture.pdf
+// Layout: left-to-right pipeline flow, vertical stack within each stage
+
+digraph p8_pipeline_architecture {
+  rankdir=LR;
+  fontname="STIX Two Text";
+  bgcolor="white";
+  node [shape=box, style="rounded,filled", fontname="STIX Two Text", color="#2c3e50", fillcolor="white", fontsize=11];
+  edge [fontname="STIX Two Text", color="#2c3e50", fontsize=10];
+
+  // Stage 1: External-source ingest
+  ES [label="External-source corpus\n31 sources\n(26 baseline + 5 AI/ML extension)"];
+
+  // Stage 2: Normalization pipeline
+  P7 [label="Normalization pipeline\nclaim-centric two-stage\n(lifting + grounding)"];
+
+  // Stage 3: Normalized substrate
+  SUB [label="Normalized substrate\n3,861 items\n18,673 GROUNDED claims\n74.4% item-level GROUNDED", fillcolor="#e8f4f8"];
+
+  // Stage 4: V1 ontology binding
+  V1 [label="AppSec Core V1 ontology\n259 entities\n(75 CO + 69 P + 58 M + 57 A)\n10 slices ASC-01..10", fillcolor="#e8f4f8"];
+
+  // Stage 5: Manual coverage analysis
+  COV [label="Manual coverage analysis\n202 / 202 substantive\nentities surfaced\n38 Phase-1 ambiguous\nclassified via §26 vocab"];
+
+  // Stage 6a: Manual content surfaces
+  MAN [label="Manual content surfaces\n15 chapters × 4 doc families\n(traceability + maturity\n+ threats + checklist)\n322 .md files", fillcolor="#fff3e0"];
+
+  // Stage 6b: KG runtime
+  KG [label="KG runtime v1.2\n1,964 linkage records\n(1,105 traceability + 336 maturity\n+ 523 threats)", fillcolor="#fff3e0"];
+
+  // Stage 7: Frozen joint snapshot
+  FROZ [label="Cycle B frozen joint snapshot\ntag cycle-b-frozen-2026-05-12\nManual + KG + DG + ESI\n(4 peer cross-repo tags)", fillcolor="#dceadc"];
+
+  // Pipeline flow
+  ES -> P7 [label="lift + ground"];
+  P7 -> SUB [label="claim-centric"];
+  SUB -> V1 [label="bind via slice\n+ entity IRI"];
+  V1 -> COV [label="V1 -> Manual\nanalysis"];
+  MAN -> COV [label="traceability\n+ prose corpus"];
+  KG -> COV [label="linkage records"];
+  COV -> FROZ [label="empirical findings"];
+
+  // Cross-repository ratification edges (dashed)
+  V1 -> FROZ [style=dashed, label="V1 anchor"];
+  MAN -> FROZ [style=dashed, label="Manual anchor"];
+  KG -> FROZ [style=dashed, label="KG anchor"];
+}

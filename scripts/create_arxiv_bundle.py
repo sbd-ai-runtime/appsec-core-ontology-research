@@ -172,6 +172,31 @@ def generate_tex(
     return main_tex
 
 
+def copy_source_assets(entry: ExportEntry, bundle_dir: Path) -> None:
+    """Copy figure/image asset directories from source into the bundle (preserving subdir structure) so TeX compilation resolves \\includegraphics{images/...} and \\includegraphics{figures/...} references."""
+    source_root = entry.source.parent
+    for asset_dir_name in ("figures", "images"):
+        asset_dir = source_root / asset_dir_name
+        if asset_dir.is_dir():
+            dest_dir = bundle_dir / asset_dir_name
+            dest_dir.mkdir(parents=True, exist_ok=True)
+            for asset in asset_dir.iterdir():
+                if asset.is_file() and not asset.name.startswith("."):
+                    shutil.copy2(asset, dest_dir / asset.name)
+
+
+def replace_svg_with_pdf(main_tex: Path) -> None:
+    """Replace \\includesvg{...svg} with \\includegraphics{...pdf} since inkscape is not assumed available at TeX compile time; PDF counterparts of figures are provided in the bundle by copy_source_assets."""
+    text = main_tex.read_text(encoding="utf-8")
+    import re
+    text = re.sub(
+        r"\\includesvg(\[[^\]]*\])?\{([^}]+)\.svg\}",
+        r"\\includegraphics\1{\2.pdf}",
+        text,
+    )
+    main_tex.write_text(text, encoding="utf-8")
+
+
 def verify_tex(bundle_dir: Path, defaults: ExportDefaults) -> None:
     if not shutil.which(defaults.tex_engine):
         raise RuntimeError(
@@ -291,6 +316,8 @@ def main() -> int:
                 repo_root=repo_root,
                 output_root=output_root,
             )
+            copy_source_assets(entry, main_tex.parent)
+            replace_svg_with_pdf(main_tex)
             if not args.skip_verify:
                 verify_tex(main_tex.parent, defaults)
             if args.write_preview:

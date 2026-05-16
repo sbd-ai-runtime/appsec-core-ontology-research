@@ -30,6 +30,35 @@
       "source": "papers/03-ontology-grounded-retrieval/source/manuscript.md",
       "output_dir": "papers/03-ontology-grounded-retrieval/arxiv",
       "archive_name": "ontology_grounded_retrieval-arxiv.tar.gz"
+    },
+    {
+      "id": "paper6",
+      "title": "AppSec Core v1: A Formalized Normalization Ontology for Application Security",
+      "source": "papers/06-appsec-core-v1-formalized-artefact/source/manuscript.md",
+      "output_dir": "papers/06-appsec-core-v1-formalized-artefact/arxiv",
+      "archive_name": "appsec_core_v1_formalized_artefact-arxiv.tar.gz"
+    },
+    {
+      "id": "paper7",
+      "title": "Pressure-Testing AppSec Core: A Design Science Cycle for Bounded-Ontology Evolution Under Heterogeneous Application-Security Sources",
+      "source": "papers/07-method-dsr-cycle/source/manuscript.md",
+      "output_dir": "papers/07-method-dsr-cycle/arxiv",
+      "archive_name": "method_dsr_cycle-arxiv.tar.gz",
+      "pandoc_args": [
+        "--resource-path",
+        ".:papers/07-method-dsr-cycle/source"
+      ]
+    },
+    {
+      "id": "paper8",
+      "title": "Demonstrating an Ontology-Grounded Pipeline as Programme Primitive: Joint Manual and Knowledge-Graph Production for Security-by-Design at 31-Source Scale",
+      "source": "papers/08-pipeline-primitive-demonstration/source/manuscript.md",
+      "output_dir": "papers/08-pipeline-primitive-demonstration/arxiv",
+      "archive_name": "pipeline_primitive_demonstration-arxiv.tar.gz",
+      "pandoc_args": [
+        "--resource-path",
+        ".:papers/08-pipeline-primitive-demonstration/source"
+      ]
     }
   ]
 }
