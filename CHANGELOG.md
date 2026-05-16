@@ -4,6 +4,25 @@ All notable changes to this curated public research repository should be documen
 
 The format is based on Keep a Changelog, adapted for artifact-first academic releases.
 
+## [v2.0.1] - 2026-05-17
+
+### Added
+
+- figshare archive DOI back-stamp for v2.0.0 snapshot: `10.6084/m9.figshare.32307669`
+- `CITATION.cff` updated:
+  - version → v2.0.1
+  - identifiers list extended with the new figshare DOI as primary
+  - preferred-citation DOI updated from programme-level placeholder (P0) to the assigned figshare bundle DOI
+  - abstract reflects assigned DOI (previous text said "to be assigned")
+- title bumped to "v2.0.1" reflecting back-stamp release per v1.0.x precedent (v1.0.0 → v1.0.1 figshare → v1.0.2 B2SHARE)
+
+### Publication Notes
+
+- v2.0.1 is a metadata-only release: repository content matches v2.0.0 except for the CITATION.cff DOI fields + CHANGELOG entry
+- v2.0.0 figshare deposit registered as a new item (Approach A — separate DOI from v1.0.0), not as new version of `10.6084/m9.figshare.32043771` (figshare web UI restricts new-version flow to institutional accounts)
+- v1.0.x predecessor DOIs preserved in `identifiers` list for historical anchor
+- B2SHARE mirror for v2.0.0 pending; v2.0.2 back-stamp if pursued
+
 ## [v2.0.0] - 2026-05-16
 
 ### Added
