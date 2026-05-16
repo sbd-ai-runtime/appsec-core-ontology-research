@@ -4,6 +4,59 @@ All notable changes to this curated public research repository should be documen
 
 The format is based on Keep a Changelog, adapted for artifact-first academic releases.
 
+## [v2.0.0] - 2026-05-16
+
+### Added
+
+- second research wave: P6 + P7 + P8 paper folders + supporting bundles
+  - P6 (AppSec Core v1: A Formalized Normalization Ontology for Application Security) — OSF DOI `10.17605/OSF.IO/U9CRD`
+  - P7 (Pressure-Testing AppSec Core: A Design Science Cycle for Bounded-Ontology Evolution Under Heterogeneous Application-Security Sources) — OSF DOI `10.17605/OSF.IO/3E8G5`
+  - P8 (Coverage-Preserving Compilation v2: A 31-Source Pipeline with Joint Manual and Knowledge-Graph Production) — OSF DOI `10.17605/OSF.IO/TXW8P`
+- paper6 supporting bundle: 106 files (ontology v1 OWL + SHACL apparatus + embeddings + decisions + schema + slice contracts + governance) @ `cycle-a-frozen-2026-05-08`
+- paper7 supporting bundle: 340 files + 5 k-way analysis entries (substrate v7 + cross-validation + OLIR exports + figures + scripts + DSR-HISTORY + Decision 0003 + LLM-assist provenance) @ `cycle-a-frozen-2026-05-08`
+- paper8 supporting bundle: 28 files (KG runtime v1.2 + chunks + gap analysis + closure brief + scripts + KG-canonical Manual freeze ref) @ `cycle-b-frozen-2026-05-12` + `kg-v1-cycle-b-manual-ref-2026-05-14`
+- repository metadata updates: `CITATION.cff` (8 paper DOIs); `MANIFEST-v2.0.md`; `RELEASE-NOTES-v2.0.md`
+- `publish_artifacts.json` extended: paper6/7/8 bundles + `development_governance` source_root (4 source_roots total)
+- `publish_docs.json` + `publish_arxiv.json` extended: paper6/7/8 build entries
+- `scripts/create_arxiv_bundle.py` extended: `copy_source_assets()` helper + SVG-to-PDF post-processor
+
+### Programme cycle milestones
+
+- Cycle A frozen 2026-05-08 (ontology v1 formalisation; substrate v7 first-wave) — supports P6 + P7
+- Cycle B frozen 2026-05-12 (KG runtime v1.2 + Manual joint state) — supports P8
+- Manual published 2026-05-14: v1.2.0 + programme-v2.0.0-aligned tags on `SbD-ToE/sbd-toe-manual` master
+- Audit closure: 47/47 audit items resolved (11 BLOCKING + 22 SHOULD-FIX + 14 NICE-TO-HAVE)
+- Fase 1 build complete: 3 PDF preprints + 3 arxiv source bundles + render fixes (longtables + SHA prefix discipline + Figure 1 re-author)
+- Fase 2 OSF deposit complete: 3 preprint DOIs assigned + cross-citation matrix coherent (P6/P7/P8 mutual citations carry real DOIs, zero placeholders)
+
+### Construction tag chain (v2.0.0 wave trajectory)
+
+- `v2.0.0-construction-p6-final-draft` @ `d40aed5`
+- `v2.0.0-construction-p7` @ `6a42141`
+- `v2.0.0-construction-p7-graph` @ `15ce6bb`
+- `v2.0.0-construction-p7-final-draft` @ `fab7317`
+- `v2.0.0-construction-p8-final-draft` @ `49fc452`
+- `v2.0.0-construction-p8-bundle-complete` @ `7b7da64`
+
+All construction tags immutable per Programme Preservation Protocol §3.2.
+
+### Publication Notes
+
+- v2.0.0 continues the v1.0.0 single-curated-repository topology decision
+- figshare archive DOI for v2.0.0 bundle is assigned at deposit; back-stamped via `v2.0.1` patch tag
+- B2SHARE secondary mirror optional (per v1.0.x precedent) via `v2.0.2`
+- Zenodo remains blocked at programme level (legacy orphan deposition pending cleanup)
+- v1.0.x carry-over surfaces (P1+P2+P3+P4+P5) preserved unchanged
+- Public-facing prose convention adopted: short SHA prefix (8-12 chars) in paper body; full SHA-256 strings in bundle manifests / CHECKSUMS / archive deliverables
+
+### Deferred
+
+- Zenodo bundle DOI (programme-level block; orphan deposition `19469818` pending cleanup)
+- per-paper figshare mirrors (only cross-cutting v2.0.0 bundle deposit at this release)
+- B2SHARE mirror deposit (optional; `v2.0.2` patch if pursued)
+- OSF preprint v2 PDF updates post-arxiv submission (separate workflow)
+- v3.0 wave scope (programme cycles after Cycle B)
+
 ## [v1.0.0] - 2026-04-05
 
 ### Added
