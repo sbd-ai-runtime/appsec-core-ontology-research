@@ -1,6 +1,6 @@
-# P7 — Method DSR Cycle (pre-release)
+# P7 — Pressure-Testing AppSec Core (pre-release source)
 
-This directory contains the **pre-release** source manuscript for Paper 7 (Method DSR Cycle). The paper itself may undergo revisions until the `v2.0.0` final tag is assigned to the public-repo bundle.
+This directory contains the **pre-release** source manuscript for Paper 7 (Pressure-Testing AppSec Core: A Design Science Cycle for Bounded-Ontology Evolution Under Heterogeneous Application-Security Sources). The paper itself may undergo revisions until the `v2.0.0` final tag is assigned to the public-repo bundle.
 
 ## Stability
 
