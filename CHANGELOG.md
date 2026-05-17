@@ -4,6 +4,24 @@ All notable changes to this curated public research repository should be documen
 
 The format is based on Keep a Changelog, adapted for artifact-first academic releases.
 
+## [v2.0.2] - 2026-05-17
+
+### Added
+
+- B2SHARE archive DOI back-stamp for v2.0.0 snapshot (secondary mirror): `10.23728/b2share.p2kzz-hpk37`
+- `CITATION.cff` updated:
+  - version → v2.0.2
+  - title bumped to "v2.0.2"
+  - identifiers list extended with the new B2SHARE DOI (positioned right after figshare v2.0.0 as logical pairing — primary + secondary mirrors of the same snapshot)
+  - abstract reflects both archives
+  - preferred-citation note clarifies primary (figshare) + secondary (B2SHARE) split
+
+### Publication Notes
+
+- v2.0.2 is a metadata-only release: repository content matches v2.0.1
+- B2SHARE upload via GitHub Release import was attempted but blocked by platform-side `issubclass() arg 1 must be a class` TypeError (EUDAT B2SHARE backend bug); fallback to manual `.zip` upload + manual metadata fill succeeded
+- v2.0.x archival mirror set now complete (figshare primary + B2SHARE secondary; per v1.0.x precedent of v1.0.1 figshare + v1.0.2 B2SHARE)
+
 ## [v2.0.1] - 2026-05-17
 
 ### Added

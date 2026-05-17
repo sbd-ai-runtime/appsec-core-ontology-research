@@ -4,7 +4,7 @@
 **Programme:** Security-by-Design Theory of Everything (SbD-ToE)
 **Programme DOI:** [10.17605/OSF.IO/7T849](https://doi.org/10.17605/OSF.IO/7T849)
 **figshare DOI:** [10.6084/m9.figshare.32307669](https://doi.org/10.6084/m9.figshare.32307669) (assigned 2026-05-17; back-stamped via v2.0.1 patch tag)
-**B2SHARE DOI:** *(to be assigned at deposit; back-stamped via v2.0.2 patch tag)*
+**B2SHARE DOI:** [10.23728/b2share.p2kzz-hpk37](https://doi.org/10.23728/b2share.p2kzz-hpk37) (assigned 2026-05-17; back-stamped via v2.0.2 patch tag)
 **License:** CC-BY-4.0 (CITATION.cff declaration)
 **Date:** 2026-05-16 (v2.0.0 final tag)
 **Bundle identifier:** `v2.0.0`

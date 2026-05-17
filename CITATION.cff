@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "AppSec Core Ontology Research v2.0.1: Curated Research Program Release (P6+P7+P8 Wave; figshare DOI back-stamp)"
+title: "AppSec Core Ontology Research v2.0.2: Curated Research Program Release (P6+P7+P8 Wave; figshare + B2SHARE DOI back-stamp)"
 message: "If you use this repository, please cite the repository release DOI and the relevant paper."
 type: software
 authors:
@@ -13,7 +13,10 @@ url: "https://github.com/sbd-ai-runtime/appsec-core-ontology-research"
 identifiers:
   - type: doi
     value: "10.6084/m9.figshare.32307669"
-    description: "figshare archive DOI (v2.0.0 snapshot — P6+P7+P8 wave)"
+    description: "figshare archive DOI (v2.0.0 snapshot — P6+P7+P8 wave; primary)"
+  - type: doi
+    value: "10.23728/b2share.p2kzz-hpk37"
+    description: "B2SHARE archive DOI (v2.0.0 snapshot — P6+P7+P8 wave; secondary mirror)"
   - type: doi
     value: "10.6084/m9.figshare.32043771"
     description: "figshare archive DOI (v1.0.0 snapshot — P1+P2+P3 wave, predecessor)"
@@ -21,20 +24,21 @@ identifiers:
     value: "10.23728/b2share.b2wc1-tf049"
     description: "B2SHARE archive DOI (v1.0.1 snapshot — P1+P2+P3 wave, predecessor)"
 license: "CC-BY-4.0"
-version: "v2.0.1"
+version: "v2.0.2"
 date-released: 2026-05-17
 abstract: >
-  Curated public repository for the AppSec Core research programme, v2.0.1
-  release (figshare DOI back-stamp of v2.0.0). v2.0.0 extends the v1.0.x
-  foundation (P1+P2+P3) with the second research wave — P6 (AppSec Core v1
-  Formalized Ontology), P7 (Pressure-Testing the ontology via Design Science
-  Cycle at 31-source scale), and P8 (Coverage-Preserving Compilation v2:
-  31-source Pipeline with Joint Manual and Knowledge-Graph Production) —
+  Curated public repository for the AppSec Core research programme, v2.0.2
+  release (figshare + B2SHARE DOI back-stamp of v2.0.0). v2.0.0 extends the
+  v1.0.x foundation (P1+P2+P3) with the second research wave — P6 (AppSec
+  Core v1 Formalized Ontology), P7 (Pressure-Testing the ontology via Design
+  Science Cycle at 31-source scale), and P8 (Coverage-Preserving Compilation
+  v2: 31-source Pipeline with Joint Manual and Knowledge-Graph Production) —
   together with their supporting bundle artifacts (ontology v1 OWL + SHACL
   apparatus, design-science evidence bundles, knowledge-graph runtime v1.2,
   gap-analysis outputs, Cycle B closure brief). Each paper carries its own
   OSF preprint DOI; the v2.0.0 repository snapshot is archived via figshare
-  at DOI 10.6084/m9.figshare.32307669.
+  at DOI 10.6084/m9.figshare.32307669 (primary) and mirrored at B2SHARE DOI
+  10.23728/b2share.p2kzz-hpk37 (secondary).
 keywords:
   - application security
   - ontology
@@ -60,8 +64,10 @@ preferred-citation:
   url: "https://github.com/sbd-ai-runtime/appsec-core-ontology-research"
   doi: "10.6084/m9.figshare.32307669"
   note: >
-    Cite this figshare bundle DOI for the v2.0.0 repository snapshot. For
-    individual paper contributions, cite the corresponding OSF preprint DOI.
+    Cite this figshare bundle DOI for the v2.0.0 repository snapshot (primary
+    archive). Secondary mirror at B2SHARE DOI 10.23728/b2share.p2kzz-hpk37.
+    For individual paper contributions, cite the corresponding OSF preprint
+    DOI.
 
     Individual paper DOIs:
       P1 = 10.17605/OSF.IO/WG8PV  (AppSec Core v0 — Normalized Ontology)
