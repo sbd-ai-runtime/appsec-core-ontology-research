@@ -4,6 +4,23 @@ All notable changes to this curated public research repository should be documen
 
 The format is based on Keep a Changelog, adapted for artifact-first academic releases.
 
+## [v2.0.3] - 2026-06-04
+
+First **content** patch of the v2.0 wave (v2.0.1/v2.0.2 were metadata-only DOI back-stamps of the v2.0.0 snapshot).
+
+### Changed
+
+- **P6 and P7 — ACR promotion-threshold correction** (per ADR 0004). The promotion bar is stated as the applied canonical threshold: **≥3 independent sources** (Tier B — new Core entities) / **≥4 + structural inadequacy** (Tier C — new slice), with **no organisational-authorities gate**. Reported evidence is promotion-time (ACR-001 = 4, ACR-002 = 5, ACR-004 = 5 independent sources; all Tier B), replacing the prior "≥5 sources / ≥3 organisational authorities" statement substantiated with cycle-close counts (27 / 21 / 8). P7 Table 4 detection criteria (B = ≥3 / C = ≥4) were already correct and are preserved. Manuscripts, PDFs, and arXiv bundles for P6 and P7 were rebuilt. KEOD paper-draft-v4 §6 is the value reference; P6, P7, and KEOD are now mutually consistent on the threshold.
+
+### Removed
+
+- **Research-process documents purged from the public bundles** (per ADR 0005 / programme ADR 0011 — "public = report + produced artefacts only"): 43 mappings removed from `publish_artifacts.json` and their synced files deleted — agent-coordination briefs, internal decision records, done-logs, handover notes, `AGENTS.md`, the Preservation Protocol copy, per-source pilot briefs, and a phase-close narrative. Distribution: P6 ×17, P7 ×18, P2 ×5, P8 ×3. The stale "ACR-002 deferred" bundle artefacts are resolved by removal (the ontology source already records ACR-002 as promoted to `ACO-TMR-008`). Produced artefacts (ontology, SHACL, substrate/data, embeddings, validation outputs, P7 DSR-HISTORY) are retained.
+
+### Notes
+
+- v2.0.0 / v2.0.1 / v2.0.2 tags and deposits are unchanged — no history rewrite (Programme Preservation Protocol).
+- P8 (`10.17605/OSF.IO/TXW8P`) manuscript untouched; only its 3 process-doc bundle mappings were purged.
+
 ## [v2.0.2] - 2026-05-17
 
 ### Added

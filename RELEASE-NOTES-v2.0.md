@@ -1,5 +1,14 @@
 # Release Notes: v2.0.0
 
+## v2.0.3 — content patch (2026-06-04)
+
+First **content** patch of the v2.0 wave (v2.0.1/v2.0.2 were metadata-only DOI back-stamps). Two coordinated changes shipped in one re-deposit:
+
+1. **ACR threshold correction (P6, P7)** — aligned to the applied canonical threshold **≥3 independent sources** (Tier B) / **≥4 + structural inadequacy** (Tier C), with **no organisational-authorities gate**; evidence reported at promotion time (ACR-001 = 4, ACR-002 = 5, ACR-004 = 5; all Tier B). Per ADR 0004; consistent with KEOD paper-draft-v4 §6. P7 Table 4 (B = ≥3 / C = ≥4) preserved. P6/P7 manuscripts, PDFs, and arXiv bundles rebuilt.
+2. **Bundle curation (P6, P7, P2, P8)** — 43 research-process mappings removed from `publish_artifacts.json` per ADR 0005 / programme ADR 0011 ("public = report + produced artefacts only").
+
+v2.0.0 / v2.0.1 / v2.0.2 remain immutable (no history rewrite). This patch is deposited as a **new figshare item + new DOI** and a **new B2SHARE deposit** (not a version bump of the v2.0.0 figshare item); OSF preprints **P6 (U9CRD)** and **P7 (3E8G5)** are re-versioned; **P8 (TXW8P)** untouched.
+
 ## Summary
 
 `v2.0.0` is the second curated public release of the AppSec Core research programme. It extends the v1.0.x foundation (P1+P2+P3) with the **second research wave** — papers P6, P7, and P8 — together with their supporting artefact bundles.

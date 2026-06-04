@@ -171,14 +171,13 @@ entity-count delta consists exclusively of additive instance population
 governed by an explicit protocol. \textbf{(3) The AppSec Core Change
 Request (ACR) protocol with its explicit four-condition promotion
 threshold} --- the protocol is published with its threshold
-(multi-source convergence at ≥5 independent sources from ≥3
-organisational authorities; multi-method convergence;
-practitioner-Manual content backing; slice fit) and is demonstrated
-through symmetric application across four worked decisions: ACR-001
-\emph{Secure Configuration Baseline Integrity} (promoted), ACR-002
-\emph{Security Requirements Lifecycle Management} (promoted), ACR-003
-\emph{Multi-anchor adjacency candidate batch} (not admitted), and
-ACR-004 \emph{Output Rendering Safety / Context-Aware Encoding}
+(multi-source convergence at ≥3 independent sources; multi-method
+convergence; practitioner-Manual content backing; slice fit) and is
+demonstrated through symmetric application across four worked decisions:
+ACR-001 \emph{Secure Configuration Baseline Integrity} (promoted),
+ACR-002 \emph{Security Requirements Lifecycle Management} (promoted),
+ACR-003 \emph{Multi-anchor adjacency candidate batch} (not admitted),
+and ACR-004 \emph{Output Rendering Safety / Context-Aware Encoding}
 (promoted). Three promotions and one non-admission decided under the
 same threshold provide initial evidence that the protocol produces
 falsifiable governance decisions rather than retrofitting outcomes; the
@@ -324,12 +323,11 @@ admitted or refused. It is published in this paper because it governs
 the v0→v1 entity-count delta documented under C2 and because the four
 worked decisions are part of v1's published content. The protocol's
 threshold (§7) is stated in four conditions: (i) \textbf{multi-source
-convergence} --- the candidate's substance appears across at least five
-independent sources drawn from at least three distinct organisational
-authorities; (ii) \textbf{multi-method convergence} --- the candidate is
-detected by independent normalization signals during the cycle's
-re-application {[}4{]}; (iii) \textbf{practitioner-Manual content
-backing} --- the candidate's substance has a counterpart in the
+convergence} --- the candidate's substance appears across at least three
+independent sources; (ii) \textbf{multi-method convergence} --- the
+candidate is detected by independent normalization signals during the
+cycle's re-application {[}4{]}; (iii) \textbf{practitioner-Manual
+content backing} --- the candidate's substance has a counterpart in the
 prescriptive practitioner Manual that complements the ontology; (iv)
 \textbf{slice fit} --- the candidate fits within an existing slice's
 contract or under a defensible additive amendment to that contract.
@@ -1279,12 +1277,12 @@ release-promotion slice without expanding scope; ACM-SCBI-006 refines
 existing scope in supply-chain-and-build-integrity; ACM-SLG-005 and
 ACM-SLG-006 refine the security-event-logging slice. None of the four
 required ACR review under §7's threshold because none was
-cross-source-convergent at the protocol's bar (≥5 independent sources
-from ≥3 organisational authorities) and none was scope-amending at the
-slice level --- each refines within existing contract scope and
-population. Their authority for inclusion is the slice's existing
-per-slice contract; the cycle's per-source curation {[}4{]} surfaced
-them as instance-level refinements consistent with those contracts.
+cross-source-convergent at the protocol's bar (≥3 independent sources)
+and none was scope-amending at the slice level --- each refines within
+existing contract scope and population. Their authority for inclusion is
+the slice's existing per-slice contract; the cycle's per-source curation
+{[}4{]} surfaced them as instance-level refinements consistent with
+those contracts.
 
 \textbf{Within-slice refinement governance discipline.} Within-slice
 refinements that do not meet the ACR threshold (§7.2) are admitted under
@@ -1339,15 +1337,16 @@ family --- ASVS, SAMM, DSOMM, Proactive Controls, and the OWASP Top-10
 specialisations --- shares editorial framing and convergent vocabulary
 even where individual documents target distinct surfaces. The NIST
 family (SSDF, SP 800-53, AI 100-2, AI RMF) is similarly co-authored
-within a single organisational authority. The ACR protocol's
-\texttt{≥3\ organisational\ authorities} qualifier (§7.2 Condition 1)
-mitigates but does not eliminate this dependency: it ensures convergence
-is not carried by a single authority's editorial framing, but partial
-vocabulary co-evolution within and across authorities remains a property
-of the corpus. The substantive claim of C2 is therefore that the v0
-schema absorbed the corpus's \emph{partially-overlapping} multi-source
-pressure as additive instance population, not that it absorbed
-thirty-one independent semantic systems.
+within a single organisational authority. The ACR protocol imposes no
+organisational-authority gate --- authority spread is a descriptive
+property of the corpus, not a promotion condition (§7.2 Condition 1) ---
+so the threshold does not mitigate this dependency: partial vocabulary
+co-evolution within and across authorities remains a property of the
+corpus that multi-source convergence does not eliminate. The substantive
+claim of C2 is therefore that the v0 schema absorbed the corpus's
+\emph{partially-overlapping} multi-source pressure as additive instance
+population, not that it absorbed thirty-one independent semantic
+systems.
 
 \textbf{Regulatory horizontal sources in the cycle-close corpus.} The
 corpus includes horizontal regulatory frameworks alongside the
@@ -1484,25 +1483,33 @@ The protocol's threshold for promotion is stated as four conditions, all
 of which must be met for a candidate to be admitted to the ontology:
 
 \textbf{Condition 1 --- Multi-source convergence.} The candidate's
-substance appears across \textbf{at least five independent sources drawn
-from at least three distinct organisational authorities}. The
-five-source threshold is calibrated against the cycle's first-wave
-bounding test {[}2{]}: at five sources from independent authorities,
-convergence on the same substance establishes that the candidate is not
-idiosyncratic to a single team's interpretation. Lower thresholds (three
-or four sources) are detection-level signals that may motivate further
-investigation but do not on their own meet the promotion bar. The
-``three organisational authorities'' qualifier prevents a candidate from
-being inflated by multiple publications of a single authority counting
-as multiple sources. The five-source / three-authorities threshold is
-\textbf{governance-calibrated rather than mathematically optimal}: it
-operationalises the trade-off between admitting clusters carried by
-single-pattern editorial framing across few authorities (a lower
+substance appears across \textbf{at least three independent sources}.
+The burden is asymmetric in the strength of the claim the change
+asserts: a promotion that introduces new Core entities (a
+ControlObjective and its realizing chain, or Practices and Mechanisms,
+optionally with an additive contract amendment) carries the burden of
+\textbf{≥3 independent sources}; a change that would open a new
+engineering slice carries the \textbf{extraordinary} burden of
+\textbf{≥4 independent sources plus a demonstration of structural
+inadequacy} in the existing partition --- the partition-level case
+routed under Condition 4 to a separate governance exercise. The
+three-source bar is calibrated against the cycle's first-wave bounding
+test {[}2{]}: at three independent sources, convergence on the same
+substance establishes that the candidate is not idiosyncratic to a
+single team's interpretation. Convergence below three sources is a
+detection-level signal that may motivate further investigation but does
+not on its own meet the promotion bar. Organisational-authority spread
+is a \textbf{descriptive property of the corpus, not a promotion
+condition}: the threshold counts independent sources, and authority
+diversity is reported where it bears on interpretation but never gates
+admission. The threshold is \textbf{governance-calibrated rather than
+mathematically optimal}: it operationalises the trade-off between
+admitting clusters carried by single-pattern editorial framing (a lower
 threshold would do this) and excluding substantively important but
 distinctively-framed concepts (a higher threshold would do this), at a
 heuristic balance point anchored to the first-wave bounding test.
-Sensitivity analysis under alternative thresholds (three-source minimum;
-seven-source higher bar) is registered as future work (§10).
+Sensitivity analysis under alternative thresholds (a two-source minimum;
+a higher-source bar) is registered as future work (§10).
 
 \textbf{Condition 2 --- Multi-method convergence.} The candidate is
 detected by independent normalization signals during the cycle's
@@ -1604,18 +1611,13 @@ first-class ControlObjective status under an explicit governance
 protocol.
 
 \textbf{Per-condition evidence.} - \emph{Condition 1 (multi-source
-convergence at ≥5 sources / ≥3 organisational authorities).} At
-substrate cycle close, \textbf{27 of the 31 corpus sources} carry at
-least one normalized claim targeting one of the three promoted
-ControlObjectives (ACO-RPR-008/009/010); the 27 sources span \textbf{8
-distinct organisational authorities} --- NIST, OWASP, MITRE, CIS, PCI
-SSC, SAFECode, EU regulatory wave, and US HHS --- substantially
-exceeding the §7 four-condition threshold of ≥5 sources from ≥3
-authorities. Configuration baseline integrity is a near-universal AppSec
-topic across the corpus; the per-source claim distribution concentrates
-in NIST SP 800-53, MITRE CAPEC, PCI DSS, OWASP SAMM, CIS Controls, OWASP
-ASVS, OWASP DSOMM, and NIST SSDF (top eight by claim count), with the
-remaining 19 sources carrying smaller per-source claim sets. The full
+convergence at ≥3 independent sources).} At promotion time the substance
+converges across \textbf{4 independent sources} --- NIST SSDF PW.9,
+OWASP ASVS V13, CIS Control 4, and MITRE CWE-1188/276/426--428 ---
+meeting the protocol's ≥3-source bar for a new-Core-entity promotion.
+Configuration baseline integrity is a near-universal AppSec topic and
+the broader corpus carries it widely, but promotion rests on the four
+named convergent sources rather than on corpus-wide spread. The full
 per-source claim distribution is preserved in the substrate's per-pilot
 configuration files at the cycle-close release tag (see {[}4 §15.2{]}).
 - \emph{Condition 2 (multi-method convergence).} The cycle's
@@ -1671,29 +1673,26 @@ prose into the bounded ontology under the ACR protocol's four-condition
 discipline --- rather than a discovery of new substance unaccounted for
 in the v0-era programme.
 
-\textbf{Per-condition evidence.} - \emph{Condition 1.} At substrate
-cycle close, \textbf{21 of the 31 corpus sources} carry at least one
-normalized claim targeting one of the five promoted entities
-(ACO-TMR-008 + ACP-TMR-008/009 + ACM-TMR-007/008); the 21 sources span
-\textbf{9 distinct organisational authorities} --- NIST, OWASP, MITRE,
-CIS, PCI SSC, SAFECode, SLSA, EU regulatory wave, and US HHS ---
-exceeding the §7 four-condition threshold of ≥5 sources from ≥3
-authorities. Top backing sources by claim count include NIST SP 800-53,
-OWASP SAMM Security Requirements practice {[}16{]}, PCI DSS, NIST SSDF
-{[}9{]} practice group PS, CIS Critical Security Controls, and OWASP
-ASVS {[}10{]}. The full per-source claim distribution is preserved in
-the substrate's per-pilot configuration files at the cycle-close release
-tag (see {[}4 §15.2{]}). - \emph{Condition 2.} Multi-stage method
-convergence: the structural-hierarchy stage places the candidate within
-the TMR slice; the embedding-similarity stage returns coherent
-top-anchor cluster across the convergent sources; the override-mechanism
-record concurs with the method signal. - \emph{Condition 3.} Substance
-present in the practitioner Manual under the threat-modeling chapter of
-the Manual's prose layer. - \emph{Condition 4.} The candidate motivates
-an additive amendment to the TMR slice's per-slice contract scope,
-declaring the requirements-as-living-artefacts dimension as within scope
-alongside the existing threat-side substance. The amendment is additive:
-prior scope, non-goals, and acceptance conditions are preserved.
+\textbf{Per-condition evidence.} - \emph{Condition 1.} At promotion time
+the substance converges across \textbf{5 independent sources} --- NIST
+SSDF, OWASP SAMM (Security Requirements practice {[}16{]}), PCI SSLC,
+NIST SP 800-53, and SAFECode Fundamental Practices for Secure Software
+Development --- meeting the protocol's ≥3-source bar for a
+new-Core-entity promotion. The broader corpus carries the substance more
+widely, but promotion rests on the five named convergent sources. The
+full per-source claim distribution is preserved in the substrate's
+per-pilot configuration files at the cycle-close release tag (see {[}4
+§15.2{]}). - \emph{Condition 2.} Multi-stage method convergence: the
+structural-hierarchy stage places the candidate within the TMR slice;
+the embedding-similarity stage returns coherent top-anchor cluster
+across the convergent sources; the override-mechanism record concurs
+with the method signal. - \emph{Condition 3.} Substance present in the
+practitioner Manual under the threat-modeling chapter of the Manual's
+prose layer. - \emph{Condition 4.} The candidate motivates an additive
+amendment to the TMR slice's per-slice contract scope, declaring the
+requirements-as-living-artefacts dimension as within scope alongside the
+existing threat-side substance. The amendment is additive: prior scope,
+non-goals, and acceptance conditions are preserved.
 
 \textbf{Substantive question raised by the candidate.} \emph{Does
 ACR-002 duplicate scope already in the TMR slice?} The TMR slice at v0
@@ -1803,32 +1802,28 @@ controlled failure'' to ``input/output validation and controlled
 failure''; it is not a discovery of new substance unaccounted for in the
 v0-era programme.
 
-\textbf{Per-condition evidence.} - \emph{Condition 1.} At substrate
-cycle close, \textbf{8 of the 31 corpus sources} carry at least one
-normalized claim targeting one of the three promoted entities
-(ACO-IVF-008 + ACP-IVF-007 + ACM-IVF-005); the 8 sources span \textbf{3
-distinct organisational authorities} --- MITRE (via CAPEC {[}13{]}, CWE
-{[}14{]}, and ATLAS), OWASP (via ASVS V5 {[}10{]}, DSOMM {[}17{]},
-Proactive Controls, and OWASP Top-10 for LLMs), and NIST (via SP
-800-53). The candidate hits the §7 four-condition threshold at exact
-minimum (3 organisational authorities); explicit disclosure of the
-minimum-threshold case is reviewer-defensible --- the cycle ran close to
-but met the threshold, demonstrating the protocol's testability rather
-than retrofitting. The per-source claim distribution is preserved in the
-substrate's per-pilot configuration files at the cycle-close release tag
-(see {[}4 §15.2{]}). - \emph{Condition 2.} Multi-stage method
-convergence: the structural-hierarchy stage places the candidate within
-the IVF slice with the slice-contract amendment proposed; the
-embedding-similarity stage returns coherent top-anchor cluster across
-the convergent sources; the override-mechanism record concurs with the
-method signal. - \emph{Condition 3.} Substance present in the
-practitioner Manual under the validation chapter of the Manual's prose
-layer. - \emph{Condition 4.} The candidate motivates an additive
-amendment to the IVF slice's per-slice contract scope, expanding from
-``input validation and controlled failure'' to ``input/output validation
-and controlled failure''. The amendment is additive: prior scope (input
-validation, controlled failure under hostile or malformed input) is
-preserved; the candidate adds the output-side substance.
+\textbf{Per-condition evidence.} - \emph{Condition 1.} At promotion time
+the substance converges across \textbf{5 independent sources} --- OWASP
+ASVS V5 {[}10{]}, MITRE CWE-79 {[}14{]}, MITRE CAPEC-63/242 {[}13{]},
+OWASP MCP guidance, and OWASP DSOMM {[}17{]} --- meeting the protocol's
+≥3-source bar for a new-Core-entity promotion. The promotion introduces
+new Core entities and an additive contract amendment but does not open a
+new slice, so the ≥3-source burden applies. The per-source claim
+distribution is preserved in the substrate's per-pilot configuration
+files at the cycle-close release tag (see {[}4 §15.2{]}). -
+\emph{Condition 2.} Multi-stage method convergence: the
+structural-hierarchy stage places the candidate within the IVF slice
+with the slice-contract amendment proposed; the embedding-similarity
+stage returns coherent top-anchor cluster across the convergent sources;
+the override-mechanism record concurs with the method signal. -
+\emph{Condition 3.} Substance present in the practitioner Manual under
+the validation chapter of the Manual's prose layer. - \emph{Condition
+4.} The candidate motivates an additive amendment to the IVF slice's
+per-slice contract scope, expanding from ``input validation and
+controlled failure'' to ``input/output validation and controlled
+failure''. The amendment is additive: prior scope (input validation,
+controlled failure under hostile or malformed input) is preserved; the
+candidate adds the output-side substance.
 
 \textbf{Disposition.} Promoted. The substance is admitted to the
 ontology as one new ControlObjective + one new Practice + one new
@@ -1979,23 +1974,22 @@ is testable rather than retrofitted. The four worked decisions do
 \textbf{not} include a \emph{near-miss non-admission} --- a candidate
 that failed a single condition by a marginal amount (for example, a
 candidate meeting Conditions 2, 3, and 4 but missing Condition 1 by
-carrying convergent substance across only four sources or two distinct
-organisational authorities, or meeting Conditions 1, 2, and 3 but
-failing Condition 4 by motivating a slice-contract amendment that could
-not be defended without sibling-slice restructuring). ACR-003's
-non-admission was a \emph{framing-level failure} (batch of approximately
-thirty-five candidate items without a unifying substantive concept
-across the batch, §9.1), categorically different from a single-condition
-marginal failure. ACR-004's promotion at exact minimum threshold (8
-sources / 3 organisational authorities, §9.2) demonstrates that the
-protocol accepts close to the boundary but does not demonstrate that it
-rejects close to the boundary. The protocol's discriminative power
-against single-condition marginal failures is therefore established by
-the threshold's specification, not by empirical worked decisions; an
-empirically grounded near-miss non-admission case is registered as
-future programme work under the cycle's reusable workflow {[}4{]}, to
-surface in subsequent cycle iterations when a candidate of that profile
-arises.
+carrying convergent substance across only two sources, one below the
+three-source bar, or meeting Conditions 1, 2, and 3 but failing
+Condition 4 by motivating a slice-contract amendment that could not be
+defended without sibling-slice restructuring). ACR-003's non-admission
+was a \emph{framing-level failure} (batch of approximately thirty-five
+candidate items without a unifying substantive concept across the batch,
+§9.1), categorically different from a single-condition marginal failure.
+The three promotions clear the three-source bar (ACR-001 at four
+sources, ACR-002 and ACR-004 at five, §§8--9), so the cycle exercised
+admission above the bar but never rejection just below it. The
+protocol's discriminative power against single-condition marginal
+failures is therefore established by the threshold's specification, not
+by empirical worked decisions; an empirically grounded near-miss
+non-admission case is registered as future programme work under the
+cycle's reusable workflow {[}4{]}, to surface in subsequent cycle
+iterations when a candidate of that profile arises.
 
 \textbf{Conservative-bias-by-design.} The four-condition threshold is
 calibrated as \textbf{conservative-by-design}: it favours a low

@@ -99,11 +99,6 @@
       "files": [
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/ssdf_sp800_218_v1_1/brief.md",
-          "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/ssdf_sp800_218_v1_1/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/ssdf_sp800_218_v1_1/source_manifest.yaml",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/ssdf_sp800_218_v1_1/source_manifest.yaml"
         },
@@ -141,11 +136,6 @@
           "source_repo": "external_sources_inventory",
           "source": "data/ssdf_sp800_218_v1_1/stubs/traceability_publication_candidates.json",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/ssdf_sp800_218_v1_1/traceability_publication_candidates.json"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "pilots/asvs_v5_0_0/brief.md",
-          "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/asvs_v5_0_0/brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -194,11 +184,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/slsa_spec_v1_0_build_track/brief.md",
-          "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/slsa_spec_v1_0_build_track/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/slsa_spec_v1_0_build_track/source_manifest.yaml",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/slsa_spec_v1_0_build_track/source_manifest.yaml"
         },
@@ -231,11 +216,6 @@
           "source_repo": "external_sources_inventory",
           "source": "data/slsa_spec_v1_0_build_track/stubs/manual_gap_analysis.json",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/slsa_spec_v1_0_build_track/manual_gap_analysis.json"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "pilots/cis_controls_v8_1/brief.md",
-          "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/cis_controls_v8_1/brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -281,11 +261,6 @@
           "source_repo": "external_sources_inventory",
           "source": "data/cis_controls_v8_1/stubs/published_manual_traceability_control_comparison.md",
           "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_outputs/cis_controls_v8_1/published_manual_traceability_control_comparison.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "pilots/capec_supply_chain_risks_v3_9/brief.md",
-          "dest": "papers/02-coverage-preserving-knowledge-compilation/artifacts/pilot_manifests/capec_supply_chain_risks_v3_9/brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -426,11 +401,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/asvs_v5_0_0/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/asvs_v5_0_0/indexing_contract.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/asvs_v5_0_0/indexing_contract.yaml"
         },
@@ -551,11 +521,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/cwe_software_development_view_v4_19_1/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/cwe_software_development_view_v4_19_1/indexing_contract.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/cwe_software_development_view_v4_19_1/indexing_contract.yaml"
         },
@@ -603,11 +568,6 @@
           "source_repo": "external_sources_inventory",
           "source": "pilots/enisa_multilayer_ai_cybersecurity_practices_2023/source_manifest.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/manifest.yaml"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "pilots/enisa_multilayer_ai_cybersecurity_practices_2023/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/enisa_multilayer_ai_cybersecurity_practices_2023/brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -856,11 +816,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/mcp_official_security_foundations_2025/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/mcp_official_security_foundations_2025/indexing_contract.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/mcp_official_security_foundations_2025/indexing_contract.yaml"
         },
@@ -1081,11 +1036,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/owasp_dsomm/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/owasp_dsomm/indexing_contract.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_dsomm/indexing_contract.yaml"
         },
@@ -1181,11 +1131,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/owasp_mcp_secure_server_development_v1_0/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/owasp_mcp_secure_server_development_v1_0/indexing_contract.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_secure_server_development_v1_0/indexing_contract.yaml"
         },
@@ -1236,11 +1181,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/owasp_mcp_third_party_servers_v1_0/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/owasp_mcp_third_party_servers_v1_0/indexing_contract.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_third_party_servers_v1_0/indexing_contract.yaml"
         },
@@ -1288,11 +1228,6 @@
           "source_repo": "external_sources_inventory",
           "source": "pilots/owasp_mcp_top_10_v0_1_2025_beta/source_manifest.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/manifest.yaml"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "pilots/owasp_mcp_top_10_v0_1_2025_beta/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_mcp_top_10_v0_1_2025_beta/brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -1423,11 +1358,6 @@
           "source_repo": "external_sources_inventory",
           "source": "pilots/owasp_samm_v2_1/source_manifest.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/manifest.yaml"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "pilots/owasp_samm_v2_1/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/owasp_samm_v2_1/brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -1671,11 +1601,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "pilots/slsa_spec_v1_0_build_track/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "pilots/slsa_spec_v1_0_build_track/indexing_contract.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/slsa_spec_v1_0_build_track/indexing_contract.yaml"
         },
@@ -1723,11 +1648,6 @@
           "source_repo": "external_sources_inventory",
           "source": "pilots/ssdf_sp800_218_v1_1/source_manifest.yaml",
           "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/manifest.yaml"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "pilots/ssdf_sp800_218_v1_1/brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/sources/ssdf_sp800_218_v1_1/brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -1881,21 +1801,6 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/method/decision_0003_main.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03-amendment-1-claims-not-chains.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/method/decision_0003_amendment_1.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "agentic/decisions/0003-normalization-algorithm-redesign-2026-05-03-amendment-1-appendix-thresholds.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/method/decision_0003_amendment_1_appendix_thresholds.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "docs/DSR-HISTORY/cycle-a-iter-2-substrate-v6-2026-05-05.md",
           "dest": "papers/07-method-dsr-cycle/artifacts/method/dsr_history/iter_2.md"
         },
@@ -1913,21 +1818,6 @@
           "source_repo": "external_sources_inventory",
           "source": "data/p7_olir_audit/p7_v2_corrected/v7/reports/llm_assist_provenance_v7_addendum.md",
           "dest": "papers/07-method-dsr-cycle/artifacts/method/llm_assist_provenance.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "agentic/briefs/2026-05-08-iteration-3-evidence-package.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/method/iteration_3_evidence_package.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "agentic/briefs/2026-05-09-olir-conversion-methodology.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/method/olir_conversion_methodology.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "agentic/briefs/2026-05-08-figshare-substrate-inventory.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/method/figshare_substrate_inventory.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -2118,11 +2008,6 @@
           "source_repo": "external_sources_inventory",
           "source": "scripts/build_paper7_bundle.py",
           "dest": "papers/07-method-dsr-cycle/artifacts/scripts/build_paper7_bundle.py"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "data/p7_olir_audit/p7_v2_corrected/v7/k_way_analysis/k_way_brief.md",
-          "dest": "papers/07-method-dsr-cycle/artifacts/cross_validation/k_way_analysis/k_way_brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -2582,93 +2467,8 @@
         },
         {
           "source_repo": "sbd_toe_ontology",
-          "source": "agentic/decisions/0001-consumer-conformance-shapes-ontology-owned.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/0001_consumer_conformance_shapes_option_c.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "docs/handover/2026-04-14-acr002-tmr008-promotion.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_002_security_requirements_lifecycle.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "docs/handover/2026-04-13-v0-freeze-v1-draft.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_001_v0_freeze_v1_draft.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "docs/handover/2026-04-15-v1.0-coherence-release.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_001_v1_coherence_release.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/briefs/2026-05-05-acr004-output-rendering-slice-boundary.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_004_output_rendering_brief.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/done/2026-05-05-acr004-output-rendering-execution-close.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_004_execution_close.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/done/2026-05-05-acr004-shapes-regression-remediation.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/acr_004_shapes_regression_remediation.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/decisions/README.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/decisions/README.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/briefs/2026-05-08-p7-pass-6-ontology-audit-delivery.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/v0_to_v1_attribution_audit.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/briefs/2026-05-08-figshare-ontology-inventory.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/figshare_ontology_inventory.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/briefs/2026-05-10-p6-ontology-validation-phase-a.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/ontology_validation_phase_a.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/done/2026-05-10-p6-ontology-validation-phase-c-close.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/ontology_validation_phase_c_close.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/done/2026-05-10-p6-ontology-validation-phase-d-close.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/ontology_validation_phase_d_close.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "agentic/briefs/2026-04-17-archon-3-paper-supply.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/audit_trail/archon_3_paper_supply_framing.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
           "source": "ontology/v1.0/CHANGELOG.md",
           "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/CHANGELOG.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "FREEZE-REGISTRY.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/FREEZE-REGISTRY.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "AGENTS.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/AGENTS.md"
-        },
-        {
-          "source_repo": "sbd_toe_ontology",
-          "source": "PROGRAMME-PRESERVATION-PROTOCOL.md",
-          "dest": "papers/06-appsec-core-v1-formalized-artefact/artifacts/governance/PROGRAMME-PRESERVATION-PROTOCOL.md"
         },
         {
           "source_repo": "sbd_toe_ontology",
@@ -2793,18 +2593,8 @@
         },
         {
           "source_repo": "external_sources_inventory",
-          "source": "data/p8_gap_analysis/gap_analysis_brief.md",
-          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/gap_analysis/gap_analysis_brief.md"
-        },
-        {
-          "source_repo": "external_sources_inventory",
           "source": "data/p8_gap_analysis/gap_taxonomy_summary.json",
           "dest": "papers/08-pipeline-primitive-demonstration/artifacts/gap_analysis/gap_taxonomy_summary.json"
-        },
-        {
-          "source_repo": "external_sources_inventory",
-          "source": "data/p8_gap_analysis/phase2_3/phase2_3_brief.md",
-          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/gap_analysis/phase2_3/phase2_3_brief.md"
         },
         {
           "source_repo": "external_sources_inventory",
@@ -2815,11 +2605,6 @@
           "source_repo": "external_sources_inventory",
           "source": "data/p8_gap_analysis/phase2_3/phase2_3_refined_taxonomy.json",
           "dest": "papers/08-pipeline-primitive-demonstration/artifacts/gap_analysis/phase2_3/phase2_3_refined_taxonomy.json"
-        },
-        {
-          "source_repo": "development_governance",
-          "source": "docs/cycle-b-frozen-state-consolidated.md",
-          "dest": "papers/08-pipeline-primitive-demonstration/artifacts/closure_brief/cycle-b-frozen-state-consolidated.md"
         },
         {
           "source_repo": "external_sources_inventory",
