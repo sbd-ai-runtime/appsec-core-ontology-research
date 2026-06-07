@@ -4,6 +4,27 @@ All notable changes to this curated public research repository should be documen
 
 The format is based on Keep a Changelog, adapted for artifact-first academic releases.
 
+## [v2.0.4] - 2026-06-07
+
+**First venue submission surfaced publicly — ICSME 2026 Tool Demonstration.**
+
+### Added
+
+- `submitted-peer-reviewed/icsme-2026/tool-demonstration/` — manuscript of the ICSME 2026 Tool Demonstration submission ("SbD-ToE MCP: Coverage-Preserving, Ontology-Grounded Retrieval for Security-by-Design Code Generation"; single-anonymous, submitted 2026-05-28), as `manuscript.pdf` + `manuscript.md` + `manuscript.tex` with SHA-256 verification in the folder README. Manuscript only — screencast and tool artefact live at OSF DOI 10.17605/OSF.IO/PGDR6; the tool has its own public repository.
+- `SUBMITTED-PEER-REVIEWED.md` (root) — index of venue submissions surfaced publicly, inclusion rule, and honest accounting of what is retained (RR in review; double-anonymous cycles; JOWO pending submission).
+- `FREEZE-REGISTRY.md` — first commit of the preservation registry (existed at root since 2026-04-17, never versioned; v2.0.0–v2.0.3 were cut without it — Class B discipline item, documented in the registry).
+
+### Changed
+
+- `CITATION.cff` — version → v2.0.4 (was still v2.0.2 through the v2.0.3 content patch), `date-released` → 2026-06-07, title updated.
+- `README.md` § DOI Model — updated from the stale v1.0-only model to the full programme model: P0–P8 OSF DOIs and the v2.0.0 + v1.0.x repository archive DOIs (kept in lockstep with the authoring repository).
+- `.github/CODEOWNERS` — read-only rule added for `submitted-peer-reviewed/**`.
+
+### Notes
+
+- Repository content of the v2.0.x papers and artefacts is untouched; this is an additive release.
+- v2.0.0–v2.0.3 tags and deposits unchanged — no history rewrite (Programme Preservation Protocol).
+
 ## [v2.0.3] - 2026-06-04
 
 First **content** patch of the v2.0 wave (v2.0.1/v2.0.2 were metadata-only DOI back-stamps of the v2.0.0 snapshot).

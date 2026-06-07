@@ -58,31 +58,35 @@ In short:
 
 ## DOI Model
 
-For `v1.0.0`, the publication model is:
+The publication model is **one repository archive DOI per release snapshot** plus **one OSF DOI per paper**:
 
-- **one Zenodo DOI for the repository release** *(pending — Zenodo archival in progress)*
-- **a three-paper core release with additional frozen design mirrors for companion study artifacts**
+- The repository archive DOI resolves to the curated repository snapshot as a whole, not to separate records per paper or mirror artifact. Papers and frozen mirrors in a release are part of the same research-program release and should cite the shared release DOI alongside any paper-specific bibliographic reference.
+- Each paper carries its own OSF DOI for the individual contribution.
 
-The DOI resolves to the curated repository snapshot as a whole, not to separate Zenodo records per paper or mirror artifact. The three core papers and any additional frozen design mirrors in the release are part of the same research-program release and should cite the shared repository release alongside any paper-specific bibliographic reference.
+Individual paper DOIs (OSF, citable now):
 
-For the current public mirrors:
+- Paper 0 — Research programme prospectus: `10.17605/OSF.IO/7T849`
+- Paper 1 — AppSec Core ontology (v0): `10.17605/OSF.IO/WG8PV`
+- Paper 2 — Coverage-preserving compilation: `10.17605/OSF.IO/A6ZFJ`
+- Paper 3 — Ontology-grounded retrieval: `10.17605/OSF.IO/S3HET`
+- Paper 4 — Empirical evaluation design (pre-registered; registration, not preprint): `10.17605/OSF.IO/H5AJE`
+- Paper 5 — Apparatus specification (frozen companion): `10.17605/OSF.IO/KH8Y7`
+- Paper 6 — AppSec Core v1, formalized artefact: `10.17605/OSF.IO/U9CRD`
+- Paper 7 — Pressure-testing AppSec Core (DSR cycle): `10.17605/OSF.IO/3E8G5`
+- Paper 8 — Coverage-preserving compilation v2: `10.17605/OSF.IO/TXW8P`
+
+For the frozen public mirrors:
 
 - Paper 4 study design: cite the OSF registration DOI `10.17605/OSF.IO/H5AJE` when referring to the registered study design
 - Paper 5 apparatus companion: cite the OSF component DOI `10.17605/OSF.IO/KH8Y7` when referring to the frozen apparatus-specification companion
 
-Individual paper preprint DOIs (OSF, citable now):
-
-- Paper 1 — AppSec Core ontology: `10.17605/OSF.IO/WG8PV`
-- Paper 2 — Coverage-preserving compilation: `10.17605/OSF.IO/A6ZFJ`
-- Paper 3 — Ontology-grounded retrieval: `10.17605/OSF.IO/S3HET`
-- Paper 4 — Empirical evaluation design (registered): `10.17605/OSF.IO/H5AJE`
-- Paper 5 — Apparatus specification (frozen): `10.17605/OSF.IO/KH8Y7`
-
 Repository archive DOIs:
 
-- figshare (v1.0.0): 10.6084/m9.figshare.32043771
-- B2SHARE (v1.0.1): 10.23728/b2share.b2wc1-tf049
-- Zenodo: pending
+- figshare (v2.0.0 snapshot — P6+P7+P8 wave; primary): 10.6084/m9.figshare.32307669
+- B2SHARE (v2.0.0 snapshot — secondary mirror): 10.23728/b2share.p2kzz-hpk37
+- figshare (v1.0.0 snapshot — P1+P2+P3 wave, predecessor): 10.6084/m9.figshare.32043771
+- B2SHARE (v1.0.1 snapshot — predecessor): 10.23728/b2share.b2wc1-tf049
+- Zenodo: pending (account unblock)
 
 ## Current Repository Topology Decision
 

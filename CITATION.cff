@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "AppSec Core Ontology Research v2.0.2: Curated Research Program Release (P6+P7+P8 Wave; figshare + B2SHARE DOI back-stamp)"
+title: "AppSec Core Ontology Research v2.0.4: Curated Research Program Release (P6+P7+P8 Wave; ICSME 2026 Tool Demonstration submission surfaced)"
 message: "If you use this repository, please cite the repository release DOI and the relevant paper."
 type: software
 authors:
@@ -24,11 +24,14 @@ identifiers:
     value: "10.23728/b2share.b2wc1-tf049"
     description: "B2SHARE archive DOI (v1.0.1 snapshot — P1+P2+P3 wave, predecessor)"
 license: "CC-BY-4.0"
-version: "v2.0.2"
-date-released: 2026-05-17
+version: "v2.0.4"
+date-released: 2026-06-07
 abstract: >
-  Curated public repository for the AppSec Core research programme, v2.0.2
-  release (figshare + B2SHARE DOI back-stamp of v2.0.0). v2.0.0 extends the
+  Curated public repository for the AppSec Core research programme, v2.0.4
+  release (adds the publicly surfaced ICSME 2026 Tool Demonstration
+  submission under submitted-peer-reviewed/; v2.0.3 corrected the P6/P7 ACR
+  promotion-threshold statement and purged research-process bundle mappings;
+  v2.0.1/v2.0.2 back-stamped the v2.0.0 archive DOIs). v2.0.0 extends the
   v1.0.x foundation (P1+P2+P3) with the second research wave — P6 (AppSec
   Core v1 Formalized Ontology), P7 (Pressure-Testing the ontology via Design
   Science Cycle at 31-source scale), and P8 (Coverage-Preserving Compilation

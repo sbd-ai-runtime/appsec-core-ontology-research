@@ -112,3 +112,17 @@ For citations involving v2.0.0 wave papers, cite:
 2. The versioned figshare-archived repository release DOI (assigned at v2.0.0 → v2.0.1 patch tag after figshare deposit)
 
 Until the v2.0.0 figshare bundle DOI is assigned, cite the SbD-ToE Programme Prospectus OSF DOI (`10.17605/OSF.IO/7T849`) as the programme-level anchor + per-paper OSF DOIs for individual contributions.
+
+## Addendum — v2.0.4 (2026-06-07)
+
+Additive scope extension; v2.0.0–v2.0.3 surfaces untouched:
+
+```text
+  SUBMITTED-PEER-REVIEWED.md           # NEW — index of venue submissions surfaced publicly
+  RELEASE-NOTES-v2.0.4.md              # NEW
+  FREEZE-REGISTRY.md                   # NEW in version control (existed at root since 2026-04-17)
+  submitted-peer-reviewed/             # NEW — venue-submission distillation mirrors
+    icsme-2026/tool-demonstration/     # ICSME 2026 Tool Demonstration manuscript (.pdf/.md/.tex + README w/ SHA-256)
+```
+
+Exclusions for this addendum: screencast and tool artefact (OSF DOI 10.17605/OSF.IO/PGDR6; tool has its own public repository), Registered Report in review, papers in double-anonymous review cycles, JOWO papers pending submission.
